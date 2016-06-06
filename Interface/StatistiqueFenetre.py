@@ -120,7 +120,7 @@ class Statistique(QDialog, AbstractWindow):
         # on met les titres des colonnes
         self.table.setHorizontalHeaderLabels(["Categorie equipement", "Quantite"])
         self.table.resize(300, 300)
-
+        self.table.resizeRowsToContents()
         # remplissage du tableau
         for i, (name, color) in enumerate(tableData):
             # Creation des QTableWidgetItem
@@ -133,7 +133,6 @@ class Statistique(QDialog, AbstractWindow):
         self.table.resizeRowsToContents()
         # On fait en sorte que la table prend la largeur de la fenetre
         self.table.horizontalHeader().setStretchLastSection(True)
-
 
 
         # Window sera le layout vertical principal qui contiendra les autres layout

@@ -3,9 +3,10 @@
 #importation pour une fenetre simple
 from AjouterEquipementFenetre import *
 from ConsultationModificationEquipementFenetre import *
+from RechercheBdT import RechercheBdT
 from RechercherEquipementFenetre import *
-from Statistique import *
-from Support import *
+from StatistiqueFenetre import *
+from SupportFenetre import *
 
 
 class Main(QDialog):
@@ -32,58 +33,64 @@ class Main(QDialog):
         AddEq_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         AddEq_Btn.move(75,150)
         AddEq_Btn.resize(150,100)
-        AddEq_Btn.setIcon(QIcon('Images\PdC-Bouton_Ajouter.png'))
+        AddEq_Btn.setIcon(QIcon('Images/PdC-Bouton_Ajouter.png'))
         AddEq_Btn.setIconSize(QtCore.QSize(40, 40))
-
         AddEq_Btn.clicked.connect(self.AddEqForm)
+        AddEq_Btn.setObjectName("AddEq_Btn")
 
 
         AddBTD_Btn = QPushButton('Ajouter un \nbon de travail', self)
         AddBTD_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         AddBTD_Btn.move(250,150)
         AddBTD_Btn.resize(150, 100)
-        AddBTD_Btn.setIcon(QIcon('Images\PdC_Bouton_BdT2.png'))
+        AddBTD_Btn.setIcon(QIcon('Images/PdC_Bouton_BdT2.png'))
         AddBTD_Btn.setIconSize(QtCore.QSize(40, 40))
         AddBTD_Btn.clicked.connect(self.ouvrirFenetreAjoutBdT)
+        AddBTD_Btn.setObjectName("AddBTD_Btn")
 
 
         ConsulterEq_Btn = QPushButton('Consulter ou \nmodifier \nun équipement', self)
         ConsulterEq_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         ConsulterEq_Btn.move(75, 300)
         ConsulterEq_Btn.resize(150,100)
-        ConsulterEq_Btn.setIcon(QIcon('Images\PdC-crayon.png'))
+        ConsulterEq_Btn.setIcon(QIcon('Images/PdC-crayon.png'))
         ConsulterEq_Btn.setIconSize(QtCore.QSize(40, 40))
         ConsulterEq_Btn.clicked.connect(self.ouvrirFenetreConsultationEquipement)
+        ConsulterEq_Btn.setObjectName("ConsulterEq_Btn")
+
 
         SeachEq_Btn = QPushButton('Rechercher un \néquipement', self)
         SeachEq_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         SeachEq_Btn.move(250, 300)
         SeachEq_Btn.resize(150,100)
-        SeachEq_Btn.setIcon(QIcon('Images\PdC_Bouton_Rechercher2.png'))
+        SeachEq_Btn.setIcon(QIcon('Images/PdC_Bouton_Rechercher2.png'))
         SeachEq_Btn.setIconSize(QtCore.QSize(40,40))
         SeachEq_Btn.clicked.connect(self.ouvrirFenetreRechercheEquipement)
+        SeachEq_Btn.setObjectName("SeachEq_Btn")
 
         SeachBDT_Btn = QPushButton('Rechercher un\nbon de travail', self)
         SeachBDT_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         SeachBDT_Btn.move(75, 450)
         SeachBDT_Btn.setMaximumSize(300, 300)
-        SeachBDT_Btn.setIcon(QIcon('Images\PdC-Bouton_Recherche_BdT.png'))
+        SeachBDT_Btn.setIcon(QIcon('Images/PdC-Bouton_Recherche_BdT.png'))
         SeachBDT_Btn.setIconSize(QtCore.QSize(40,40))
+        SeachBDT_Btn.setObjectName("SeachBDT_Btn")
+        SeachBDT_Btn.clicked.connect(self.ouvrirRechercheBdT)
 
         Stats_Btn = QPushButton('Voir les \nstatistiques', self)
         Stats_Btn.setFont(QFont('SansSerif', 8, QFont.Bold))
         Stats_Btn.move(250, 450)
         Stats_Btn.setMaximumSize(300, 300)
-        Stats_Btn.setIcon(QIcon('Images\PdC-Bouton-stats.png'))
+        Stats_Btn.setIcon(QIcon('Images/PdC-Bouton-stats.png'))
         Stats_Btn.setIconSize(QtCore.QSize(40,40))
         Stats_Btn.clicked.connect(self.ouvrirStatistique)
-
+        Stats_Btn.setObjectName("Stats_Btn")
 
         SupportPC2_Btn = QPushButton('Support \n technique', self)
         SupportPC2_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         SupportPC2_Btn.move(480,390)
         SupportPC2_Btn.setMaximumSize(300, 300)
-        SupportPC2_Btn.setIcon(QIcon('Images\PC2.png'))
+        SupportPC2_Btn.setIcon(QIcon('Images/PC2.png'))
         SupportPC2_Btn.setIconSize(QtCore.QSize(150,150))
         # SupportPC2_Btn.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
         SupportPC2_Btn.clicked.connect(self.ouvrirFenetreSupport)
@@ -93,6 +100,7 @@ class Main(QDialog):
         PrintInventaire_Btn.setFont(QFont( 'SansSerif', 8, QFont.Bold ))
         PrintInventaire_Btn.move(450, 150)
         PrintInventaire_Btn.resize(210, 70)
+        PrintInventaire_Btn.setObjectName("PrintInventaire_Btn")
 
         #initialisation  fenetre du panneau de controle
         #Les déclaration des écritures dans la fenetre
@@ -111,7 +119,7 @@ class Main(QDialog):
         #Size of the window
         self.setGeometry(400, 175, 720, 700)
         self.setWindowTitle('SIMM 2.0 : Panneau de controle')
-        self.setWindowIcon(QIcon('Images\PC2.png'))
+        self.setWindowIcon(QIcon('Images/PC2.png'))
 
 
         layoutFond = QVBoxLayout()
@@ -150,6 +158,7 @@ class Main(QDialog):
 
 
         #Définir la couleur de l'arriere plan de la fenêtre principale
+        self.setObjectName("PanneauControle")
         self.setLayout(layoutFond)
         self.setStyleSheet((open("style.qss", "r").read()))
         backG = self.palette()
@@ -228,6 +237,9 @@ class Main(QDialog):
 
     def ouvrirStatistique(self):
         self.estPresent(Statistique(self))
+
+    def ouvrirRechercheBdT(self):
+        self.estPresent(RechercheBdT())
 
     def estPresent(self,type, fenetre = 0):
         present = False

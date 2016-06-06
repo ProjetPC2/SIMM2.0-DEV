@@ -17,8 +17,7 @@ import Formulaire
 import FormulaireRempli
 import Stockage
 from AbstractWindow import AbstractWindow
-from BDD import EquipementManager
-from BDD.EquipementManager import *
+
 
 class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
     """La classe AjouterEquipementFenetre est la classe qui est va servir a creer la fenetre principal
@@ -38,7 +37,7 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         # Création des differents éléments
         self.titre = QLabel("Formulaire - Ajout d'un equipement")
         self.logo = QLabel()
-        self.logo.setPixmap(QPixmap('Images\PdC-Bouton_Ajouter.png'))
+        self.logo.setPixmap(QPixmap('Images/PdC-Bouton_Ajouter.png'))
         self.titre.setFont((QFont('SansSerif', 24)))
         self.statusBar().showMessage("Ajout d'un equipement")
         #Creation des differents composants de la fenetre
@@ -47,7 +46,6 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         self.formulaire.widgetList[0].textEdited.connect(self.miseAJourStatutBar)
         self.stockage = Stockage.Stockage()
         self.listeTemp = list()
-        self.equipementManager = EquipementManager("BDD\DataBase_Equipement.json")
         # creation du menu
         menubar = self.menuBar()
         # Créations de l'action quitter dans le menu
@@ -109,7 +107,7 @@ class AjouterEquipementFenetre(QMainWindow, AbstractWindow):
         self.setGeometry(200, 200, 300, 300)
         self.resize(1000,1000)
         self.setWindowTitle("SIMM 2.0")
-        self.setWindowIcon(QIcon('Images\PC2.png'))
+        self.setWindowIcon(QIcon('Images/PC2.png'))
 
 
     def valider(self):

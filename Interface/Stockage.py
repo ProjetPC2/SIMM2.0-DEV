@@ -35,7 +35,6 @@ class Stockage():
 
 
         def remplissage(self):
-            self.dictionnaire["id"] = ""
             self.dictionnaire["categorieEquipement"] = ""
             self.dictionnaire["marque"] = ""
             self.dictionnaire["modele"] = ""
