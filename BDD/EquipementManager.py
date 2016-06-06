@@ -1,4 +1,5 @@
 # coding=utf-8
+import yaml
 from tinydb import *
 from yamlStorage import YAMLStorage
 import re
@@ -25,13 +26,9 @@ class EquipementManager:
     def AjouterEquipement(self, dictio):
         db1 = TinyDB(self._pathname, storage=YAMLStorage)        # data base des équipements
         # Verifier que tout ce qui est dans dictio est conforme à la forme d'un équipement et COMPLET
-        if (self._VerifierDict(dictio)):
-            id_eq = self._ObtenirProchainID()                                   # id du nouvel équipement
-            dictio['ID'] = id_eq
-            db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
-        else:
-            print('An error occured')
-
+        id_eq = self._ObtenirProchainID()
+        dictio['ID'] = id_eq
+        db1.insert(dictio)
 
     def SupprimerEquipement(self, id_supp):                     # id_supp en int
         Equipement = Query()
@@ -60,13 +57,16 @@ class EquipementManager:
         db.update(dict_modif, Equipement['ID'] == id_modif)     # modif du dict associé à l'équipement
 
     def _ObtenirProchainID(self):
-        db = TinyDB('fichier_conf.json')
-        #print(db.all())
-        dernier_ID = db.all()[0]['dernier_ID_distribue']
-        #print('dernierID', dernier_ID)
+        with open('fichier_conf.yaml', 'r') as fichierConf:
+            conf = yaml.load(fichierConf)
+
+        dernier_ID = conf['ID']
         prochain_ID = int(dernier_ID) + 1
-        #print('nextID', prochain_ID)
-        db.update({'dernier_ID_distribue': prochain_ID}, Query()['dernier_ID_distribue'] == dernier_ID)
+        conf['ID'] = prochain_ID
+
+        with open('fichier_conf.yaml', 'w') as fichierConf:
+            fichierConf.write(yaml.dump(conf, default_flow_style=False))
+        
         return prochain_ID
 
 
