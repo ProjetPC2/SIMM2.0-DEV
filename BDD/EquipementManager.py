@@ -1,4 +1,5 @@
 # coding=utf-8
+import yaml
 from tinydb import *
 from yamlStorage import YAMLStorage
 import re
@@ -23,14 +24,14 @@ class EquipementManager:
         # nextID à mettre dans le fichier de configuration
 
     def AjouterEquipement(self, dictio):
-        db1 = TinyDB(self._pathname, storage=YAMLStorage)        # data base des équipements
-        # Verifier que tout ce qui est dans dictio est conforme à la forme d'un équipement et COMPLET
-        if (self._VerifierDict(dictio)):
-            id_eq = self._ObtenirProchainID()                                   # id du nouvel équipement
-            dictio['ID'] = id_eq
-            db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
-        else:
-            print('An error occured')
+        db1 = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
+
+        # if (self._VerifierDict(dictio)):   # ARRANGER FONCTION AVANT
+        id_eq = self._ObtenirProchainID()                       # id du nouvel équipement
+        dictio['ID'] = id_eq
+        db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
+        #else:
+        #    print('An error occured')
 
 
     def SupprimerEquipement(self, id_supp):                     # id_supp en int
@@ -60,21 +61,39 @@ class EquipementManager:
         db.update(dict_modif, Equipement['ID'] == id_modif)     # modif du dict associé à l'équipement
 
     def _ObtenirProchainID(self):
-        db = TinyDB('fichier_conf.json')
-        #print(db.all())
-        dernier_ID = db.all()[0]['dernier_ID_distribue']
+        with open('fichier_conf.yaml', 'r') as fichierConf:
+            db = yaml.load(fichierConf)
+
+        print(db)
+        dernier_ID = db['ID']
         #print('dernierID', dernier_ID)
         prochain_ID = int(dernier_ID) + 1
+        db['ID'] = prochain_ID
         #print('nextID', prochain_ID)
-        db.update({'dernier_ID_distribue': prochain_ID}, Query()['dernier_ID_distribue'] == dernier_ID)
+
+        with open('fichier_conf.yaml', 'w') as outfile:
+            outfile.write( yaml.dump(db, default_flow_style=True) )
+
         return prochain_ID
 
+    def configParser(configFile):
+        config = yaml.load(configFile)
+
+        for k in ['swsets']:
+            if k in config:
+                tup = ()
+                for v in config[k]:
+                    tup += (v,)
+                config[k] = tup
+
+        return config
 
     # À COMPLÉTER
     def _verifierChamps(self, dictio):
-        length_normal_dictio = 5
+        length_normal_dictio = 6            # À REVOIR
         conforme = True
-        if len(dictio) is not length_normal_dictio:
+        if len(dictio) is not length_normal_dictio:  # Il faudrait toujours vérifier tous les champs, pas seulement la
+                                                     # longueur du dictionnaire
             conforme = False
         else:
             if 'CategorieEquipement' not in dictio:
@@ -83,7 +102,13 @@ class EquipementManager:
                 conforme = False
             elif 'Modele' not in dictio:
                 conforme = False
+            elif 'Nombre de bons de travail' not in dictio:                  # À revoir après discussion Alex et Cath
+                conforme = False
         return conforme
+
+    # Deux étapes :
+    # Étape 1: Vérifier que tous les champs attendus sont là
+    # Étape 2: Vérifier qu'il n'y a pas un champ non attendu qui est là
 
     def _VerifierDict(self, dictio):
         conforme = self._verifierChamps(dictio)
@@ -92,22 +117,22 @@ class EquipementManager:
             if key == 'CategorieEquipement':
                 if (value not in list_categorie):
                     conforme = False
-            elif key == 'Marque':
-                if(isinstance(value, str) is False):
+            if key == 'Marque':
+                if not isinstance(value, str):
                     print('Hello')
                     conforme = False
         return conforme
                 
         
 
-"""
+
 # TESTS
 manager = EquipementManager('DataBase_Equipement.json')
 
-data = {'CategorieEquipement': 'Equip-modif',
-        'Marque': 'Test-modif',
-        'Modele': 'Modifie',
-        'Nombre de bons de travail': 0}
+data = {'CategorieEquipement': 'Equip',
+        'Marque': 'Test',
+        'Modele': 'blabla',
+        'Nombre de bons de travail': 0}                     # À revoir après discussion Alex et Cath
 
 #dic_request = {'CategorieEquipement': 'ECG',
 #               'Marque': 'PierreSavard',
@@ -117,11 +142,11 @@ dic_request = {'CategorieEquipement': 'ECG'}
 
 
 manager.AjouterEquipement(data)
-#manager.SupprimerEquipement(6)                     # id_supp en int
+#manager.SupprimerEquipement(2)                     # id_supp en int
 #print(manager.RechercherEquipement(dic_request))
-#manager.ModifierEquipement(4, data)                 # id_modif en int
+#manager.ModifierEquipement(1, data)                 # id_modif en int
 
-"""
+
 
 
 
