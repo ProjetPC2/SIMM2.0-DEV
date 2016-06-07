@@ -33,7 +33,6 @@ class EquipementManager:
         #else:
         #    print('An error occured')
 
-
     def SupprimerEquipement(self, id_supp):                     # id_supp en int
         Equipement = Query()
         db = TinyDB(self._pathname, storage=YAMLStorage)        # data base des équipements
@@ -62,18 +61,13 @@ class EquipementManager:
 
     def _ObtenirProchainID(self):
         with open('fichier_conf.yaml', 'r') as fichierConf:
-            db = yaml.load(fichierConf)
-
-        print(db)
-        dernier_ID = db['ID']
-        #print('dernierID', dernier_ID)
+        conf = yaml.load(fichierConf)
+        dernier_ID = conf['ID']
         prochain_ID = int(dernier_ID) + 1
-        db['ID'] = prochain_ID
-        #print('nextID', prochain_ID)
+        conf['ID'] = prochain_ID
 
-        with open('fichier_conf.yaml', 'w') as outfile:
-            outfile.write( yaml.dump(db, default_flow_style=True) )
-
+        with open('fichier_conf.yaml', 'w') as fichierConf:
+            fichierConf.write(yaml.dump(conf, default_flow_style=False))
         return prochain_ID
 
     def configParser(configFile):

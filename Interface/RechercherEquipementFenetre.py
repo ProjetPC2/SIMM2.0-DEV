@@ -109,7 +109,7 @@ class RerchercherEquipementFenetre(QDialog, AbstractWindow):
            # on met les titres des colonnes
         table.setHorizontalHeaderLabels(["ID", "Catégorie d'équipement", "Marque"])
         table.resize(300, 100)
-
+        table.resizeColumnsToContents()
         # remplissage du tableau
         for i, (name, color, lettre) in enumerate(tableData):
                 #Creation des QTableWidgetItem

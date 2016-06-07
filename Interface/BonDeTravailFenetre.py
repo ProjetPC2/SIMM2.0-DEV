@@ -131,7 +131,7 @@ class BonDeTravailFenetre(QDialog):
 
         self.setGeometry(300, 300, 700, 600)
         self.setWindowTitle('PC2')
-        self.setWindowIcon(QIcon('Images\PC2_logo.png'))
+        self.setWindowIcon(QIcon('Images/PC2_logo.png'))
         self.show()
 
 
@@ -140,7 +140,7 @@ class BonDeTravailFenetre(QDialog):
 
 
         self.ajoutBdT = QPushButton('')
-        self.ajoutBdT.setIcon(QtGui.QIcon("Images\Bouton_Sauvegarde.gif"))
+        self.ajoutBdT.setIcon(QtGui.QIcon("Images/Bouton_Sauvegarde.gif"))
         self.ajoutBdT.setIconSize(QtCore.QSize(50, 50))
         grid.addWidget(self.ajoutBdT,9, 2)
 
@@ -184,12 +184,12 @@ class BonDeTravailFenetre(QDialog):
             self.close()
 
     def quitter(self):
-        reply = QMessageBox.question(self, 'Message',
-                                     "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
-                                     QMessageBox.No, QMessageBox.No)
-        if reply == QMessageBox.Yes:
-            # self.hide()
-            # self.close()
+        # reply = QMessageBox.question(self, 'Message',
+        #                              "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
+        #                              QMessageBox.No, QMessageBox.No)
+        # if reply == QMessageBox.Yes:
+        #     # self.hide()
+        #     # self.close()
             self.destroy()
 
 if __name__ == '__main__':

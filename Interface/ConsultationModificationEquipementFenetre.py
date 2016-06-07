@@ -78,15 +78,15 @@ class ConsultationModificationEquipement(AbstractWindow):
 
         #Création des boutons
         self.nouveauBonDeTravailButton = QPushButton("Nouveau bon de travail")
-        self.nouveauBonDeTravailButton.setIcon(QtGui.QIcon("Images\Add-icon.png"))
+        self.nouveauBonDeTravailButton.setIcon(QtGui.QIcon("Images/Add-icon.png"))
         self.nouveauBonDeTravailButton.setIconSize(QtCore.QSize(50, 50))
 
         self.modifierEquipementButton = QPushButton("Modifier l'équipement")
-        self.modifierEquipementButton.setIcon(QtGui.QIcon("Images\Modify-icon.png"))
+        self.modifierEquipementButton.setIcon(QtGui.QIcon("Images/Modify-icon.png"))
         self.modifierEquipementButton.setIconSize(QtCore.QSize(50, 50))
 
         self.afficherBonDeTravailButton = QPushButton("Afficher le bon de travail sélectionné")
-        self.afficherBonDeTravailButton.setIcon(QtGui.QIcon("Images\View-icon2.png"))
+        self.afficherBonDeTravailButton.setIcon(QtGui.QIcon("Images/View-icon2.png"))
         self.afficherBonDeTravailButton.setIconSize(QtCore.QSize(50, 50))
 
         #Création d'un layout horizontal
@@ -162,7 +162,7 @@ class ConsultationModificationEquipement(AbstractWindow):
         self.setGeometry(200, 100, 200, 1000)
         self.resize(1000, 1000)
         self.setWindowTitle("SIMM 2.0")
-        self.setWindowIcon(QIcon('Images\PC2.png'))
+        self.setWindowIcon(QIcon('Images/PC2.png'))
 
         # Connection des differents actions au click d'un bouton
         self.nouveauBonDeTravailButton.clicked.connect(self.ouvrirNouveauBonDeTravail)
@@ -184,7 +184,7 @@ class ConsultationModificationEquipement(AbstractWindow):
         """Methode affichant une fenetre de confirmation pour l'ajout d'un bon de travail"""
 
         message = QMessageBox()
-        message.setWindowIcon(QIcon('Images\PC2.png'))
+        message.setWindowIcon(QIcon('Images/PC2.png'))
         # On met le texte en gras avec les bases <b> </b>
         message.setText("<b>Sauvegarde de l'equipement</b>")
         message.setInformativeText("Vous allez ajouter un nouveau bon de travail.")
@@ -206,11 +206,11 @@ class ConsultationModificationEquipement(AbstractWindow):
     def valider(self):
         """Methode affichant une fenetre de confirmation pour quiter"""
         message = QMessageBox()
-        message.setWindowIcon(QIcon('Images\PC2.png'))
+        message.setWindowIcon(QIcon('Images/PC2.png'))
         # On met le texte en gras avec les bases <b> </b>
         message.setText("<b>Sauvegarde de l'equipement</b>")
         message.setInformativeText("Le formulaire de bon de travail n'est pas encore connecté!"
-                                   "\nIl le sera sous peu.\nAppuyez sur OK pour quitter.")
+                                   "/nIl le sera sous peu./nAppuyez sur OK pour quitter.")
         message.setWindowTitle("Message")
         message.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
         message.buttonClicked.connect(self.close)

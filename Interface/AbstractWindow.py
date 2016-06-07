@@ -16,13 +16,13 @@ class AbstractWindow(QWidget):
 
 
     def quitter(self):
-        reply = QMessageBox.question(self, 'Message',
-                                     "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
-                                     QMessageBox.No, QMessageBox.No)
-        if reply == QMessageBox.Yes:
-            # self.hide()
-            # self.close()
-            self.destroy()
+        # reply = QMessageBox.question(self, 'Message',
+        #                              "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
+        #                              QMessageBox.No, QMessageBox.No)
+        # if reply == QMessageBox.Yes:
+        #     # self.hide()
+        #     # self.close()
+        self.destroy()
 
     def center(self):
         """Methode permettant de centrer la fenetre"""
