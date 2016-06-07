@@ -3,10 +3,11 @@ from tinydb import *
 from tinydb.operations import increment
 from yamlStorage import YAMLStorage
 import datetime
-import re
 
 
 class BonTravailManager:
+    listOfLegalKeys_BDT = ['Date', 'Temps estime', 'Description de la situation']  # Champs possibles pour BDT
+
     def __init__(self, bdt_pathname, equip_pathname):
         self._pathname = bdt_pathname                           # pathname de la base de données des bons de travail
         self._equip_pathname = equip_pathname
@@ -15,15 +16,18 @@ class BonTravailManager:
         # Ajout du bon de travail dans la base de données
         db = TinyDB(self._pathname, storage=YAMLStorage)        # data base des bons de travail
         id_bdt = self._ObtenirProchainIDdeBDT(id_equipement)    # id du nouveau bon de travail
-        dictio['ID-EQ'] = id_equipement
-        dictio['ID-BDT'] = id_bdt
-        db.insert(dictio)                                       # ajout du nouveau bdt dans la db
 
-        # Mise à jour du nombre de bons de travail pour cet équipement dans la base de données des équipements
-        db_equip = TinyDB(self._equip_pathname, storage=YAMLStorage)
-        Equipement = Query()
-        db_equip.update(increment('Nombre de bons de travail'), Equipement['ID'] == id_equipement)
+        if self._verifierChamps(dictio):
+            dictio['ID-EQ'] = id_equipement
+            dictio['ID-BDT'] = id_bdt
+            db.insert(dictio)                                       # ajout du nouveau bdt dans la db
 
+            # Mise à jour du nombre de bons de travail pour cet équipement dans la base de données des équipements
+            db_equip = TinyDB(self._equip_pathname, storage=YAMLStorage)
+            Equipement = Query()
+            db_equip.update(increment('Nombre de bons de travail'), Equipement['ID'] == id_equipement)
+        else:
+            print('Erreur dans la vérification des champs')
 
     def SupprimerBonTravail(self, id_eq_supp, id_bdt_supp):
         BonTravail = Query()
@@ -62,19 +66,45 @@ class BonTravailManager:
             new_id_bdt = nb_bdt_pour_eq + 1                         # nouvel id de bdt
         return new_id_bdt
 
+    def _verifierChamps(self, dictio):
+        conforme = True
+        listeOfLegalKeys_temp = self.listOfLegalKeys_BDT            # Enregistrer les champs possibles
+        for key, value in dictio.items():                           # Vérifier pour chaque champ sa présence dans dictio
+            if key in listeOfLegalKeys_temp:                        # Si champ présent dans champs possibles
+                listeOfLegalKeys_temp.remove(key)                   # Le retirer de la liste temporaire
+                print(key)
+                print('Nouvelle liste keys', listeOfLegalKeys_temp)
+                print('Liste BDT:', self.listOfLegalKeys_BDT)
+            else:                                                   # Sinon afficher erreur pour ce champ
+                print('Erreur : %s n''est pas un champ valide', key)
+                conforme = False                                    # Le dictionnaire n'est pas conforme
+        return conforme
+    # Je fais la copie de la listeOfLegalKeys_BDT pour pouvoir retirer les champs lorsqu'on les trouve sans toutefois
+    # les retirer complètement de la classe. Comme ça, si on veut ajouter deux équipements de suite, les champs
+    # possibles seront encore enregistrés. Par contre, pour une raison que j'ignore, quand j'ajoute deux équipements de
+    # suite, ça ne fonctionne pas. La deuxième fois, ça m'indique que self.listOfLegalKeys_BDT est vide. Donc la
+    # fonction remove, même si elle est faite sur listeOfLegalKeys_temp, retirer aussi la valeur de
+    # self.listOfLegalKeys_BDT et je ne comprends pas pourquoi... Quelqu'un peut m'éclairer?
+    # - CL
+
+
 
 # TESTS
 manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
 
-data = {'Date': datetime.date.today(),                              # format de la date à vérifier
-        'Temps estime': '2-modif',
-        'Description de la situation': 'test-modif'}
+data1 = {'Date': datetime.date.today(),                              # format de la date à vérifier
+        'Temps estime': '1',
+        'Description de la situation': 'test1'}
+data2 = {'Date': datetime.date.today(),                              # format de la date à vérifier
+        'Temps estime': '2',
+        'Description de la situation': 'test2'}
 
 dic_request = {'Description de la situation': 'test',               # VÉRIFIER LA RECHERCHE POUR LES DATES...
                'Temps estime': '2'}
 
 
-#manager.AjouterBonTravail(1, data)
+manager.AjouterBonTravail(1, data1)                                 # Ajout de 2 équipements de suite (pour tester...
+manager.AjouterBonTravail(1, data2)                                 # ... la vérification des champs)
 #manager.SupprimerBonTravail(1, 2)                  # id_supp en int
 #print(manager.RechercherBonTravail(dic_request))
 #manager.ModifierBonTravail(1, 2, data)                # id_modif en int
