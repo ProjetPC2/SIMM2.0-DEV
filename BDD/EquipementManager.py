@@ -17,15 +17,6 @@ class EquipementManager:
 
     def AjouterEquipement(self, dictio):
         db1 = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
-        id_eq = self._ObtenirProchainID()                       # id du nouvel équipement
-        dictio['ID'] = id_eq
-        # Verifier que tout ce qui est dans dictio est conforme à la forme d'un équipement et COMPLET
-        db1.insert(dictio)                                      # ajout du nouvel équipement dans la base de données
-        #self._nextID = 1   # pathname de la base de données de l'archive des équip.
-        # nextID à mettre dans le fichier de configuration
-
-    def AjouterEquipement(self, dictio):
-        db1 = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
 
         # if (self._VerifierDict(dictio)):   # ARRANGER FONCTION AVANT
         id_eq = self._ObtenirProchainID()                       # id du nouvel équipement
