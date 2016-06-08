@@ -6,7 +6,7 @@ import datetime
 
 
 class BonTravailManager:
-    listOfLegalKeys_BDT = ['Date', 'Temps estime', 'Description de la situation']  # Champs possibles pour BDT
+    _listOfLegalKeys_BDT = ['Date', 'Temps estime', 'Description de la situation']  # Champs possibles pour BDT
 
     def __init__(self, bdt_pathname, equip_pathname):
         self._pathname = bdt_pathname                           # pathname de la base de données des bons de travail
@@ -17,7 +17,7 @@ class BonTravailManager:
         db = TinyDB(self._pathname, storage=YAMLStorage)        # data base des bons de travail
         id_bdt = self._ObtenirProchainIDdeBDT(id_equipement)    # id du nouveau bon de travail
 
-        if self._verifierChamps(dictio):
+        if self._verifierDict(dictio):
             dictio['ID-EQ'] = id_equipement
             dictio['ID-BDT'] = id_bdt
             db.insert(dictio)                                       # ajout du nouveau bdt dans la db
@@ -27,7 +27,7 @@ class BonTravailManager:
             Equipement = Query()
             db_equip.update(increment('Nombre de bons de travail'), Equipement['ID'] == id_equipement)
         else:
-            print('Erreur dans la vérification des champs')
+            print('Erreur dans le dictionnaire')
 
     def SupprimerBonTravail(self, id_eq_supp, id_bdt_supp):
         BonTravail = Query()
@@ -68,7 +68,7 @@ class BonTravailManager:
 
     def _verifierChamps(self, dictio):
         conforme = True
-        listeOfLegalKeys_temp = list(self.listOfLegalKeys_BDT)      # Enregistrer les champs possibles
+        listeOfLegalKeys_temp = list(self._listOfLegalKeys_BDT)      # Enregistrer les champs possibles
         for key, value in dictio.items():                           # Vérifier pour chaque champ sa présence dans dictio
             if key in listeOfLegalKeys_temp:                        # Si champ présent dans champs possibles
                 listeOfLegalKeys_temp.remove(key)                   # Le retirer de la liste temporaire
@@ -79,24 +79,39 @@ class BonTravailManager:
         else:
             return True
 
+    def _verifierDict(self, dictio):
+        conforme = self._verifierChamps(dictio)
+        #print('Verification champs', conforme)
+        for key, value in dictio.items():
+            if key == 'Date':
+                if not isinstance(value, datetime.date):
+                    conforme = False
+            if (key == 'Temps estime') or \
+               (key == 'Description de la situation'):
+                if not isinstance(value, str):
+                    conforme = False
+        #print('Verification Dict', conforme)
+        return conforme
+
 
 
 # TESTS
 manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
 
-data1 = {'Date': datetime.date.today(),                              # format de la date à vérifier
-        'Temps estime': '1',
-        'Description de la situation': 'test1'}
-data2 = {'Date': datetime.date.today(),                              # format de la date à vérifier
+data1 = {'Date': datetime.date(2016, 02, 22),                              # format de la date à vérifier
+        'Temps estime': '1 semaine',
+        'Description de la situation': 'tesst'}
+
+"""data2 = {'Date': datetime.date.today(),                              # format de la date à vérifier
         'Temps estime': '2',
-        'Description de la situation': 'test2'}
+        'Description de la situation': 'test2'}"""
 
 dic_request = {'Description de la situation': 'test',               # VÉRIFIER LA RECHERCHE POUR LES DATES...
                'Temps estime': '2'}
 
 
 manager.AjouterBonTravail(1, data1)                                 # Ajout de 2 équipements de suite (pour tester...
-manager.AjouterBonTravail(1, data2)                                 # ... la vérification des champs)
+#manager.AjouterBonTravail(1, data2)                                 # ... la vérification des champs)
 #manager.SupprimerBonTravail(1, 2)                  # id_supp en int
 #print(manager.RechercherBonTravail(dic_request))
 #manager.ModifierBonTravail(1, 2, data)                # id_modif en int
