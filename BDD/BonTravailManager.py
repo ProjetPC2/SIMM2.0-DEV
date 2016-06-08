@@ -68,24 +68,16 @@ class BonTravailManager:
 
     def _verifierChamps(self, dictio):
         conforme = True
-        listeOfLegalKeys_temp = self.listOfLegalKeys_BDT            # Enregistrer les champs possibles
+        listeOfLegalKeys_temp = list(self.listOfLegalKeys_BDT)      # Enregistrer les champs possibles
         for key, value in dictio.items():                           # Vérifier pour chaque champ sa présence dans dictio
             if key in listeOfLegalKeys_temp:                        # Si champ présent dans champs possibles
                 listeOfLegalKeys_temp.remove(key)                   # Le retirer de la liste temporaire
-                print(key)
-                print('Nouvelle liste keys', listeOfLegalKeys_temp)
-                print('Liste BDT:', self.listOfLegalKeys_BDT)
             else:                                                   # Sinon afficher erreur pour ce champ
-                print('Erreur : %s n''est pas un champ valide', key)
                 conforme = False                                    # Le dictionnaire n'est pas conforme
-        return conforme
-    # Je fais la copie de la listeOfLegalKeys_BDT pour pouvoir retirer les champs lorsqu'on les trouve sans toutefois
-    # les retirer complètement de la classe. Comme ça, si on veut ajouter deux équipements de suite, les champs
-    # possibles seront encore enregistrés. Par contre, pour une raison que j'ignore, quand j'ajoute deux équipements de
-    # suite, ça ne fonctionne pas. La deuxième fois, ça m'indique que self.listOfLegalKeys_BDT est vide. Donc la
-    # fonction remove, même si elle est faite sur listeOfLegalKeys_temp, retirer aussi la valeur de
-    # self.listOfLegalKeys_BDT et je ne comprends pas pourquoi... Quelqu'un peut m'éclairer?
-    # - CL
+        if (not conforme) or (len(listeOfLegalKeys_temp) is not 0):
+            return False
+        else:
+            return True
 
 
 
