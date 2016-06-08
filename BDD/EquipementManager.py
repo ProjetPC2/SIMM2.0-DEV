@@ -6,6 +6,7 @@ import re
 
 
 list_categorie = ['ECG', 'IRM', 'oxymetre', 'dialyse']
+list_accepted_key = ['CategorieEquipement', 'Marque', 'Modele', 'NbBonTravail']
 
 class EquipementManager:
     def __init__(self, pathname):
@@ -61,7 +62,7 @@ class EquipementManager:
 
     def _ObtenirProchainID(self):
         with open('fichier_conf.yaml', 'r') as fichierConf:
-        conf = yaml.load(fichierConf)
+            conf = yaml.load(fichierConf)
         dernier_ID = conf['ID']
         prochain_ID = int(dernier_ID) + 1
         conf['ID'] = prochain_ID
@@ -83,7 +84,21 @@ class EquipementManager:
         return config
 
     # À COMPLÉTER
+
     def _verifierChamps(self, dictio):
+        conforme = True
+        list_accepted_key = ['CategorieEquipement', 'Marque', 'Modele', 'NbBonTravail']
+        for key, value in dictio.items():
+            if key in list_accepted_key:
+                list_accepted_key.remove(key)
+            else:
+                conforme = False
+        if (not conforme) or (len(list_accepted_key) is not 0):
+            return False
+        else:
+            return True
+
+    """def _verifierChamps(self, dictio):
         length_normal_dictio = 6            # À REVOIR
         conforme = True
         if len(dictio) is not length_normal_dictio:  # Il faudrait toujours vérifier tous les champs, pas seulement la
@@ -98,7 +113,7 @@ class EquipementManager:
                 conforme = False
             elif 'Nombre de bons de travail' not in dictio:                  # À revoir après discussion Alex et Cath
                 conforme = False
-        return conforme
+        return conforme"""
 
     # Deux étapes :
     # Étape 1: Vérifier que tous les champs attendus sont là
@@ -123,18 +138,18 @@ class EquipementManager:
 # TESTS
 manager = EquipementManager('DataBase_Equipement.json')
 
-data = {'CategorieEquipement': 'Equip',
+data = {'CategorieEquipement': 'ECG',
         'Marque': 'Test',
         'Modele': 'blabla',
-        'Nombre de bons de travail': 0}                     # À revoir après discussion Alex et Cath
+        'NbBonTravail': 0}                     # À revoir après discussion Alex et Cath
+
+
+print(manager._VerifierDict(data))
 
 #dic_request = {'CategorieEquipement': 'ECG',
-#               'Marque': 'PierreSavard',
+#               'Marque': 'Peter',
 #               'Modele': 'blabla'}
-
 dic_request = {'CategorieEquipement': 'ECG'}
-
-
 manager.AjouterEquipement(data)
 #manager.SupprimerEquipement(2)                     # id_supp en int
 #print(manager.RechercherEquipement(dic_request))
