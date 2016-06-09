@@ -1,3 +1,15 @@
+############################################################################################################
+# NOM : Projet PC2
+# DATE DE LA DERNIÈRE MODIFICATION : 9 juin 2016
+#
+# DESCRIPTION : CLASSE BON_TRAVAIL_MANAGER
+# Permet la gestion de bons de travails dans une base de données. Ces bons de travail sont associés à des
+# équipements d'une autre base de données (voir la classe EquipementManager).
+# Les fonctions possibles sont : AjouterBonTravail, SupprimerBonTravail, ModificerBonTravail,
+# RechercherBonTravail.
+# Un fichier de configuration est nécessaire au bon fonctionnement de cette classe (fichier_conf.yaml). *À compléter
+############################################################################################################
+
 # coding=utf-8
 from tinydb import *
 from tinydb.operations import increment
@@ -6,7 +18,15 @@ import datetime
 
 
 class BonTravailManager:
+    ##################################### A METTRE DANS FICHIER CONF #####################################
     _listOfLegalKeys_BDT = ['Date', 'Temps estime', 'Description de la situation']  # Champs possibles pour BDT
+    """_listOfLegalKeys_BDT = ['Date',
+                            'Temps estime',
+                            'DescriptionSituation',
+                            'DescriptionIntervention',
+                            'EtatBDT']"""               # voir list_etatBDT
+    # list_etatBDT = ['Ouvert', 'Ferme']
+    ######################################################################################################
 
     def __init__(self, bdt_pathname, equip_pathname):
         self._pathname = bdt_pathname                           # pathname de la base de données des bons de travail
@@ -81,7 +101,6 @@ class BonTravailManager:
 
     def _verifierDict(self, dictio):
         conforme = self._verifierChamps(dictio)
-        #print('Verification champs', conforme)
         for key, value in dictio.items():
             if key == 'Date':
                 if not isinstance(value, datetime.date):
@@ -90,7 +109,6 @@ class BonTravailManager:
                (key == 'Description de la situation'):
                 if not isinstance(value, str):
                     conforme = False
-        #print('Verification Dict', conforme)
         return conforme
 
 

@@ -1,12 +1,42 @@
+############################################################################################################
+# NOM : Projet PC2
+# DATE DE LA DERNIÈRE  MODIFICATION : 9 juin 2016
+#
+# DESCRIPTION : CLASSE EQUIPEMENT_MANAGER
+# Permet la gestion d'une base de données d'Équipements à partir de dictionnaires.
+# Les fonctions possibles sont : AjouterEquipement, SupprimerEquipement, ModificerEquipement,
+# RechercherEquipement.
+# Un fichier de configuration est nécessaire au bon fonctionnement de cette classe (fichier_conf.yaml). *À compléter
+############################################################################################################
+
 # coding=utf-8
 import yaml
 from tinydb import *
 from yamlStorage import YAMLStorage
 import re
 
-
-list_categorie = ['ECG', 'IRM', 'oxymetre', 'dialyse']
+#################################### A METTRE DANS FICHIER CONF ############################################
 list_accepted_key = ['CategorieEquipement', 'Marque', 'Modele', 'NbBonTravail']
+"""list_accepted_key = ['CategorieEquipement',      # voir list_catergorie
+                     'Marque',
+                     'Modele',
+                     'NumeroSerie',
+                     'Salle',                       # voir list_salle + autres entrees
+                     'CentreService',               # voir list_centre_service + autres entrees
+                     'DateAcquisition',
+                     'DateDernierEntretien',
+                     'Provenance',
+                     'EtatService',                 # voir list_etat_service
+                     'EtatConservation',            # voir list_etat_conservation
+                     'Commentaires',
+                     'NbBonTravail']"""
+list_categorie = ['ECG', 'IRM', 'oxymetre', 'dialyse']
+# list_salle = []
+# list_centre_service = []
+# list_etat_service = ['En service', 'En maintenance', 'Au rebut']
+# list_etat_conservation = ['Quasi neuf', 'Acceptable', 'En fin de vie', 'Desuet']
+############################################################################################################
+
 
 class EquipementManager:
     def __init__(self, pathname):
@@ -75,16 +105,15 @@ class EquipementManager:
         return config
 
     # À COMPLÉTER
-
     def _verifierChamps(self, dictio):
         conforme = True
-        list_accepted_key = ['CategorieEquipement', 'Marque', 'Modele', 'NbBonTravail']
+        list_accepted_key_temp = list(list_accepted_key)
         for key, value in dictio.items():
-            if key in list_accepted_key:
-                list_accepted_key.remove(key)
+            if key in list_accepted_key_temp:
+                list_accepted_key_temp.remove(key)
             else:
                 conforme = False
-        if (not conforme) or (len(list_accepted_key) is not 0):
+        if (not conforme) or (len(list_accepted_key_temp) is not 0):
             return False
         else:
             return True
