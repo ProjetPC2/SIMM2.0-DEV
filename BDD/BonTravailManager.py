@@ -116,7 +116,7 @@ class BonTravailManager:
 # TESTS
 manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
 
-data1 = {'Date': datetime.date(2016, 02, 22),                              # format de la date à vérifier
+data1 = {'Date': datetime.date(2016, 2, 22),                              # format de la date à vérifier
         'Temps estime': '1 semaine',
         'Description de la situation': 'tesst'}
 
