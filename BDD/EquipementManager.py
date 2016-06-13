@@ -10,7 +10,14 @@
 ############################################################################################################
 
 # Ajouter fonction ActualiserConfiguration qui ecrit dans le fichier de configuration la configuration actualisee
-# Cette fonction devra etre appelee apres chaque fonction pour etre surs que la configuration est toujours maintenu a jour
+# Cette fonction devra etre appelee apres chaque fonction suivante :
+# AjouterEquipement
+# SupprimerEquipement
+# ModifierEquipement
+# pour etre surs que la configuration est toujours maintenu a jour
+
+# Pour les fonctions qui dialoguent avec l'interface, renvoyer un dictionnaire
+# avec le champ Reussite a True ou False selon la reussite de la fonction
 
 # coding=utf-8
 import yaml
@@ -57,6 +64,8 @@ class EquipementManager:
         db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
         #else:
         #    print('An error occured')
+        
+        # Renvoyer ID de l'equipement ajoute en plus dans le dictionnaire renvoye a l'interface
 
     def SupprimerEquipement(self, id_supp):                     # id_supp en int
         Equipement = Query()
@@ -121,27 +130,11 @@ class EquipementManager:
         else:
             return True
 
-    """def _verifierChamps(self, dictio):
-        length_normal_dictio = 6            # À REVOIR
-        conforme = True
-        if len(dictio) is not length_normal_dictio:  # Il faudrait toujours vérifier tous les champs, pas seulement la
-                                                     # longueur du dictionnaire
-            conforme = False
-        else:
-            if 'CategorieEquipement' not in dictio:
-                conforme = False
-            elif 'Marque' not in dictio:
-                conforme = False
-            elif 'Modele' not in dictio:
-                conforme = False
-            elif 'Nombre de bons de travail' not in dictio:                  # À revoir après discussion Alex et Cath
-                conforme = False
-        return conforme"""
-
     # Deux étapes :
     # Étape 1: Vérifier que tous les champs attendus sont là
     # Étape 2: Vérifier qu'il n'y a pas un champ non attendu qui est là
 
+    # Verifier si les valeurs des champs sont dans la configuration, si non ajouter la nouvelle valeur au dictionnaire
     def _VerifierDict(self, dictio):
         conforme = self._verifierChamps(dictio)
         # Vérifier que le contenu de chaque champ est conforme à ce qui est attendu
