@@ -113,26 +113,27 @@ class BonTravailManager:
 
 
 
-# TESTS
-manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
+if __name__ == "__main__":#Execution lorsque le fichier est lance
+    # TESTS
+    manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
 
-data1 = {'Date': datetime.date(2016, 02, 22),                              # format de la date à vérifier
-        'Temps estime': '1 semaine',
-        'Description de la situation': 'tesst'}
+    data1 = {'Date': datetime.date(2016, 2, 22),                              # format de la date à vérifier
+            'Temps estime': '1 semaine',
+            'Description de la situation': 'tesst'}
 
-"""data2 = {'Date': datetime.date.today(),                              # format de la date à vérifier
-        'Temps estime': '2',
-        'Description de la situation': 'test2'}"""
+    """data2 = {'Date': datetime.date.today(),                              # format de la date à vérifier
+            'Temps estime': '2',
+            'Description de la situation': 'test2'}"""
 
-dic_request = {'Description de la situation': 'test',               # VÉRIFIER LA RECHERCHE POUR LES DATES...
-               'Temps estime': '2'}
+    dic_request = {'Description de la situation': 'test',               # VÉRIFIER LA RECHERCHE POUR LES DATES...
+                   'Temps estime': '2'}
 
 
-manager.AjouterBonTravail(1, data1)                                 # Ajout de 2 équipements de suite (pour tester...
-#manager.AjouterBonTravail(1, data2)                                 # ... la vérification des champs)
-#manager.SupprimerBonTravail(1, 2)                  # id_supp en int
-#print(manager.RechercherBonTravail(dic_request))
-#manager.ModifierBonTravail(1, 2, data)                # id_modif en int
+    manager.AjouterBonTravail(1, data1)                                 # Ajout de 2 équipements de suite (pour tester...
+    #manager.AjouterBonTravail(1, data2)                                 # ... la vérification des champs)
+    #manager.SupprimerBonTravail(1, 2)                  # id_supp en int
+    # print(manager.RechercherBonTravail(dic_request))
+    #manager.ModifierBonTravail(1, 2, data)                # id_modif en int
 
 
 

@@ -151,29 +151,29 @@ class EquipementManager:
                     print('Hello')
                     conforme = False
         return conforme
-                
-        
 
 
-# TESTS
-manager = EquipementManager('DataBase_Equipement.json')
 
-data = {'CategorieEquipement': 'ECG',
-        'Marque': 'Test',
-        'Modele': 'blabla',
-        'NbBonTravail': 0}                     # À revoir après discussion Alex et Cath
+if __name__ == "__main__":#Execution lorsque le fichier est lance
+    #  TESTS
+    manager = EquipementManager('DataBase_Equipement.json')
+
+    data = {'CategorieEquipement': 'ECG',
+            'Marque': 'Test',
+            'Modele': 'blabla',
+            'NbBonTravail': 0}                     # À revoir après discussion Alex et Cath
 
 
-print(manager._VerifierDict(data))
+    print(manager._VerifierDict(data))
 
-#dic_request = {'CategorieEquipement': 'ECG',
-#               'Marque': 'Peter',
-#               'Modele': 'blabla'}
-dic_request = {'CategorieEquipement': 'ECG'}
-manager.AjouterEquipement(data)
-#manager.SupprimerEquipement(2)                     # id_supp en int
-#print(manager.RechercherEquipement(dic_request))
-#manager.ModifierEquipement(1, data)                 # id_modif en int
+    #dic_request = {'CategorieEquipement': 'ECG',
+    #               'Marque': 'Peter',
+    #               'Modele': 'blabla'}
+    dic_request = {'CategorieEquipement': 'ECG'}
+    manager.AjouterEquipement(data)
+    #manager.SupprimerEquipement(2)                     # id_supp en int
+    #print(manager.RechercherEquipement(dic_request))
+    #manager.ModifierEquipement(1, data)                 # id_modif en int
 
 
 
