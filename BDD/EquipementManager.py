@@ -9,6 +9,9 @@
 # Un fichier de configuration est nécessaire au bon fonctionnement de cette classe (fichier_conf.yaml). *À compléter
 ############################################################################################################
 
+# Ajouter fonction ActualiserConfiguration qui ecrit dans le fichier de configuration la configuration actualisee
+# Cette fonction devra etre appelee apres chaque fonction pour etre surs que la configuration est toujours maintenu a jour
+
 # coding=utf-8
 import yaml
 from tinydb import *
