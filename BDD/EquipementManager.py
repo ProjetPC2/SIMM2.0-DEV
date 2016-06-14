@@ -1,3 +1,4 @@
+# coding=utf-8
 ############################################################################################################
 # NOM : Projet PC2
 # DATE DE LA DERNIÈRE  MODIFICATION : 9 juin 2016
@@ -19,51 +20,28 @@
 # Pour les fonctions qui dialoguent avec l'interface, renvoyer un dictionnaire
 # avec le champ Reussite a True ou False selon la reussite de la fonction
 
-# coding=utf-8
 import yaml
 from tinydb import *
 from yamlStorage import YAMLStorage
 import re
 
-#################################### A METTRE DANS FICHIER CONF ############################################
-list_accepted_key = ['CategorieEquipement', 'Marque', 'Modele', 'NbBonTravail']
-"""list_accepted_key = ['CategorieEquipement',      # voir list_catergorie
-                     'Marque',
-                     'Modele',
-                     'NumeroSerie',
-                     'Salle',                       # voir list_salle + autres entrees
-                     'CentreService',               # voir list_centre_service + autres entrees
-                     'DateAcquisition',
-                     'DateDernierEntretien',
-                     'Provenance',
-                     'EtatService',                 # voir list_etat_service
-                     'EtatConservation',            # voir list_etat_conservation
-                     'Commentaires',
-                     'NbBonTravail']"""
-list_categorie = ['ECG', 'IRM', 'oxymetre', 'dialyse']
-# list_salle = []
-# list_centre_service = []
-# list_etat_service = ['En service', 'En maintenance', 'Au rebut']
-# list_etat_conservation = ['Quasi neuf', 'Acceptable', 'En fin de vie', 'Desuet']
-############################################################################################################
-
 
 class EquipementManager:
     def __init__(self, pathname):
         self._pathname = pathname                               # pathname de la base de données des équipements
-        # self._nextID = 1   # pathname de la base de données de l'archive des équip.
-
-        # nextID à mettre dans le fichier de configuration
+        with open('fichier_conf.yaml', 'r') as fichierConf:
+            self._conf = yaml.load(fichierConf)
 
     def AjouterEquipement(self, dictio):
         db1 = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
 
-        # if (self._VerifierDict(dictio)):   # ARRANGER FONCTION AVANT
-        id_eq = self._ObtenirProchainID()                       # id du nouvel équipement
-        dictio['ID'] = id_eq
-        db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
-        #else:
-        #    print('An error occured')
+        if (self._VerifierDict(dictio)):   # ARRANGER FONCTION AVANT
+            id_eq = self._ObtenirProchainID()                       # id du nouvel équipement
+            dictio['ID'] = str(id_eq)
+            db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
+            self._ActualiserConfiguration()
+        else:
+            print('An error occured')
         
         # Renvoyer ID de l'equipement ajoute en plus dans le dictionnaire renvoye a l'interface
 
@@ -71,6 +49,7 @@ class EquipementManager:
         Equipement = Query()
         db = TinyDB(self._pathname, storage=YAMLStorage)        # data base des équipements
         result = db.remove(Equipement['ID'] == id_supp)         # suppression de l'équipement
+        self._ActualiserConfiguration()
         return result
 
     def RechercherEquipement(self, regex_dict):
@@ -86,40 +65,34 @@ class EquipementManager:
         result = db.search(queryUser)
         return result
 
-
     def ModifierEquipement(self, id_modif, dict_modif):
         Equipement = Query()
         db = TinyDB(self._pathname, storage=YAMLStorage)        # data base des équipements
         # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
         db.update(dict_modif, Equipement['ID'] == id_modif)     # modif du dict associé à l'équipement
+        self._ActualiserConfiguration()
 
     def _ObtenirProchainID(self):
-        with open('fichier_conf.yaml', 'r') as fichierConf:
-            conf = yaml.load(fichierConf)
-        dernier_ID = conf['ID']
+        dernier_ID = self._conf['dernierID-Equipement']
         prochain_ID = int(dernier_ID) + 1
-        conf['ID'] = prochain_ID
-
-        with open('fichier_conf.yaml', 'w') as fichierConf:
-            fichierConf.write(yaml.dump(conf, default_flow_style=False))
+        ##### QUESTION ???? ##### ------------------------------- \/
+        self._conf['dernierID-Equipement'] = prochain_ID        # À mettre directement dans AjouterEquipement??
         return prochain_ID
 
     def configParser(configFile):
         config = yaml.load(configFile)
-
         for k in ['swsets']:
             if k in config:
                 tup = ()
                 for v in config[k]:
                     tup += (v,)
                 config[k] = tup
-
         return config
 
     # À COMPLÉTER
     def _verifierChamps(self, dictio):
         conforme = True
-        list_accepted_key_temp = list(list_accepted_key)
+        list_accepted_key_temp = list(self._conf['champsAcceptes-Equipement'])
         for key, value in dictio.items():
             if key in list_accepted_key_temp:
                 list_accepted_key_temp.remove(key)
@@ -137,6 +110,7 @@ class EquipementManager:
     # Verifier si les valeurs des champs sont dans la configuration, si non ajouter la nouvelle valeur au dictionnaire
     def _VerifierDict(self, dictio):
         conforme = self._verifierChamps(dictio)
+        list_categorie = list(self._conf['listeValeurs-categorieEquipement'])
         # Vérifier que le contenu de chaque champ est conforme à ce qui est attendu
         for key, value in dictio.items():
             if key == 'CategorieEquipement':
@@ -148,28 +122,40 @@ class EquipementManager:
                     conforme = False
         return conforme
 
+    def _ActualiserConfiguration(self):
+        with open('fichier_conf.yaml', 'w') as fichierConf:
+            fichierConf.write(yaml.dump(self._conf, default_flow_style=False))
 
-
-if __name__ == "__main__":#Execution lorsque le fichier est lance
+#if __name__ == "__main__":#Execution lorsque le fichier est lance
+if True:
     #  TESTS
     manager = EquipementManager('DataBase_Equipement.json')
 
-    data = {'CategorieEquipement': 'ECG',
-            'Marque': 'Test',
-            'Modele': 'blabla',
-            'NbBonTravail': 0}                     # À revoir après discussion Alex et Cath
+    data = {'CategorieEquipement': 'IRM',
+            'Marque': 'blabla',
+            'Modele': '23434',
+            'NumeroSerie': None,
+            'Salle': None,
+            'CentreService': None,
+            'DateAcquisition': None,
+            'DateDernierEntretien': None,
+            'Provenance': None,
+            'EtatService': None,
+            'EtatConservation': None,
+            'Commentaires': None,
+            'NbBonTravail': 0}
 
-
-    print(manager._VerifierDict(data))
+    #manager._ObtenirProchainID()
+    #print(manager._VerifierDict(data))
 
     #dic_request = {'CategorieEquipement': 'ECG',
     #               'Marque': 'Peter',
     #               'Modele': 'blabla'}
-    dic_request = {'CategorieEquipement': 'ECG'}
+    #dic_request = {'CategorieEquipement': 'ECG'}
     manager.AjouterEquipement(data)
-    #manager.SupprimerEquipement(2)                     # id_supp en int
+    #manager.SupprimerEquipement('3')                     # id_supp en int
     #print(manager.RechercherEquipement(dic_request))
-    #manager.ModifierEquipement(1, data)                 # id_modif en int
+    #manager.ModifierEquipement('1', data)                 # id_modif en int
 
 
 

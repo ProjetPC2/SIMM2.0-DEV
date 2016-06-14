@@ -1,1 +1,40 @@
-ID: 1
+champsAcceptes-BDT:
+- Date
+- TempsEstime
+- DescriptionSituation
+- DescriptionIntervention
+- EtatBDT
+champsAcceptes-Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- NumeroSerie
+- Salle
+- CentreService
+- DateAcquisition
+- DateDernierEntretien
+- Provenance
+- EtatService
+- EtatConservation
+- Commentaires
+- NbBonTravail
+dernierID-Equipement: 20
+listeValeurs-categorieEquipement:
+- ECG
+- IRM
+- Oxymetre
+- Dialyse
+listeValeurs-centreService: null
+listeValeurs-etatBDT:
+- Ouvert
+- Ferme
+listeValeurs-etatConservation:
+- Quasi neuf
+- Acceptable
+- En fin de vie
+- Desuet
+listeValeurs-etatService:
+- En service
+- En maintenance
+- Au rebut
+listeValeurs-salle: null
