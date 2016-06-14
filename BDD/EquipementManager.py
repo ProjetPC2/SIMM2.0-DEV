@@ -19,6 +19,10 @@
 
 # Pour les fonctions qui dialoguent avec l'interface, renvoyer un dictionnaire
 # avec le champ Reussite a True ou False selon la reussite de la fonction
+# - Ajouter équipement
+# - Modifier équipement
+
+
 
 import yaml
 from tinydb import *
@@ -40,8 +44,10 @@ class EquipementManager:
             dictio['ID'] = str(id_eq)
             db1.insert(dictio)           # ajout du nouvel équipement dans la base de données
             self._ActualiserConfiguration()
+            # Return dictio avec true ['Réussite' : True]
         else:
             print('An error occured')
+            # Return dictio avec False
         
         # Renvoyer ID de l'equipement ajoute en plus dans le dictionnaire renvoye a l'interface
 
