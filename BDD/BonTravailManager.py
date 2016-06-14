@@ -17,6 +17,8 @@ from tinydb.operations import increment
 from yamlStorage import YAMLStorage
 import datetime
 
+# vérifier l'ouverture du fichier de conf, fichier de BDD equipement, fichier BDD BdT avec des exceptions
+
 
 class BonTravailManager:
     def __init__(self, bdt_pathname, equip_pathname):
@@ -29,6 +31,8 @@ class BonTravailManager:
         # Ajout du bon de travail dans la base de données
         db = TinyDB(self._pathname, storage=YAMLStorage)        # data base des bons de travail
         id_bdt = self._ObtenirProchainIDdeBDT(id_equipement)    # id du nouveau bon de travail
+        
+        # vérifier que l'équipement existe avant de l'ajouter
 
         if self._verifierChamps(dictio):
             dictio['ID-EQ'] = str(id_equipement)
@@ -55,11 +59,17 @@ class BonTravailManager:
         recherche = Query()
         firstEntry = True
         for key, value in regex_dict.items():
+            # if is not Qdate
             if firstEntry:
                 queryUser = (recherche[key].matches(value))
                 firstEntry = False
             else:
                 queryUser = (queryUser) & (recherche[key].matches(value))
+            #else:
+            #   if FirstEntry:
+                    # queryUser = recherche[key] >= value
+                    # il faudra peut-être regarder la valeur de la clée pour savoir si on doit faire une recherche >= ou <=
+            #   else
         result = db.search(queryUser)
         return result
 
