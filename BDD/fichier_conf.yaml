@@ -1,3 +1,40 @@
+CategorieEquipement:
+- ECG
+- IRM
+- Oxymetre
+- Dialyse
+- JEROME
+CentreService:
+- Urgence
+- "Maternit\xE9"
+- "Atelier de g\xE9nie biom\xE9dical"
+- Soins intensifs
+Equipement_ChampAjoutNonPermis:
+- EtatConservation
+- EtatService
+Equipement_ChampAjoutPermis:
+- CategorieEquipement
+- Salle
+- CentreService
+Equipement_ChampFormatPrecis:
+- DateAcquisition
+- DateDernierEntretien
+EtatBDT:
+- Ouvert
+- Ferme
+EtatConservation:
+- Quasi neuf
+- Acceptable
+- En fin de vie
+- Desuet
+EtatService:
+- En service
+- En maintenance
+- Au rebut
+Salle:
+- A123
+- B518
+- A867
 champsAcceptes-BDT:
 - Date
 - TempsEstime
@@ -17,24 +54,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-- NbBonTravail
 dernierID-Equipement: 20
-listeValeurs-categorieEquipement:
-- ECG
-- IRM
-- Oxymetre
-- Dialyse
-listeValeurs-centreService: null
-listeValeurs-etatBDT:
-- Ouvert
-- Ferme
-listeValeurs-etatConservation:
-- Quasi neuf
-- Acceptable
-- En fin de vie
-- Desuet
-listeValeurs-etatService:
-- En service
-- En maintenance
-- Au rebut
-listeValeurs-salle: null
