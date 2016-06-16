@@ -34,7 +34,7 @@
      <rect>
       <x>60</x>
       <y>30</y>
-      <width>371</width>
+      <width>442</width>
       <height>66</height>
      </rect>
     </property>
@@ -466,7 +466,7 @@ background:rgb(247, 247, 247)</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../../../../../../Downloads/refresh-button-2.png</normaloff>../../../../../../../Downloads/refresh-button-2.png</iconset>
+      <normaloff>../Images/refresh-button-2.png</normaloff>../Images/refresh-button-2.png</iconset>
     </property>
     <property name="iconSize">
      <size>
