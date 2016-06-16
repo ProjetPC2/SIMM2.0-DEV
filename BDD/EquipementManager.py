@@ -56,7 +56,7 @@ class EquipementManager:
         if self._verifierChamps(dictio) and self._verifierDict(dictio):   # ARRANGER FONCTION AVANT
             id_eq = self._ObtenirProchainID()               # id du nouvel équipement
             dictio['ID'] = str(id_eq)                       # ajout de l'ID au dictionnaire
-            dictio['NbBontravail'] = 0                      # ajout du nombre de bon de travail qui est toujours 0 pour un nouvel équipement
+            dictio['NbBonTravail'] = 0                      # ajout du nombre de bon de travail qui est toujours 0 pour un nouvel équipement
             if db.insert(dictio) != list([]):
                 dict_renvoi['Reussite'] = True              # ajout du nouvel équipement dans la base de données
             self._conf['dernierID-Equipement'] = id_eq      # mise à jour du champ dernierID-equipement dans le fichier de conf

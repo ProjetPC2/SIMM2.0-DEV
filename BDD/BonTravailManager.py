@@ -84,19 +84,28 @@ class BonTravailManager:
         db = TinyDB(self._pathname, storage=YAMLStorage)
         recherche = Query()
         firstEntry = True
-        for key, value in regex_dict.items():
-            # if is not Qdate
-            if firstEntry:
-                queryUser = (recherche[key].matches(value))
-                firstEntry = False
-            else:
-                queryUser = (queryUser) & (recherche[key].matches(value))
-            #else:
-            #   if FirstEntry:
-                    # queryUser = recherche[key] >= value
-                    # il faudra peut-être regarder la valeur de la clée pour savoir si on doit faire une recherche >= ou <=
-            #   else
-        result = db.search(queryUser)
+        for key, value in regex_dict.items():                   # Pour chaque champ de la recherche
+            if not isinstance(value, datetime.date):            # S'il ne s'agit pas d'une date
+                if firstEntry:                                  # Si c'est la première recherche
+                    queryUser = (recherche[key].matches(value))  # Trouver dans la base de données la valeur correspondante
+                    firstEntry = False
+                else:
+                    queryUser = (queryUser) & (recherche[key].matches(value))
+            else:                                               # S'il s'agit d'une date
+                if key == 'ApresLe':                            # Chercher après la date
+                    if firstEntry:                              # Si c'est la première recherche
+                        queryUser = (recherche['Date'] >= value)
+                        firstEntry = False
+                    else:
+                        queryUser = (queryUser) & (recherche['Date'] >= value)
+                if key == 'AvantLe':                            # Chercher avant la date
+                    if firstEntry:                              # Si c'est la première recherche
+                        queryUser = (recherche['Date'] <= value)
+                        firstEntry = False
+                    else:
+                        queryUser = (queryUser) & (recherche['Date'] <= value)
+
+        result = db.search(queryUser)                           # Rechercher la combinaison de chaque champ de recherche
         return result
 
     def ModifierBonTravail(self, id_eq_modif, id_bdt_modif, dict_modif):
@@ -112,7 +121,7 @@ class BonTravailManager:
 
         if self._verifierChamps(dict_modif) and self._verifierDict(dict_modif):
             if db.update(dict_modif, (BonTravail['ID-EQ'] == id_eq_modif) & (BonTravail['ID-BDT'] == id_bdt_modif)) != []:
-                dict_renvoi['Reussite'] = True                      # Mise à jour de l'équipement réussie
+                dict_renvoi['Reussite'] = True                  # Mise à jour de l'équipement réussie
         self._ActualiserConfiguration()                         # Actualiser le fichier de configuration
         return dict_renvoi
 
@@ -184,26 +193,27 @@ class BonTravailManager:
             fichierConf.write(yaml.dump(self._conf, default_flow_style=False))
 
 
-#if __name__ == "__main__":  # Execution lorsque le fichier est lance
-if True:
+if __name__ == "__main__":  # Execution lorsque le fichier est lance
+#if True:
     # TESTS
     manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
 
-    data1 = {'Date': datetime.date.today(),
+    data1 = {'Date': datetime.date(2016, 02, 22),
              'TempsEstime': 'Cam-modif',
              'DescriptionSituation': 'Larose-modif',
              'DescriptionIntervention': 'Blablabla-modif',
              'EtatBDT': 'Ferme'}
 
 
-    #dic_request = {'Description de la situation': 'test',       # VÉRIFIER LA RECHERCHE POUR LES DATES...
-     #              'Temps estime': '2'}
+    #dic_request = {'AvantLe': datetime.date(2016, 03, 12)}
+                   #'ApresLe': datetime.date(2016, 06, 10)}
 
 
     #print(manager.AjouterBonTravail('1', data1))                       # Ajout de 2 équipements de suite (pour tester...
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
-    # print(manager.RechercherBonTravail(dic_request))
+    #print(len(manager.RechercherBonTravail(dic_request)))
+    #print(manager.RechercherBonTravail(dic_request))
     #print(manager.ModifierBonTravail('1', '2', data1))                     # id_modif en int
 
 
