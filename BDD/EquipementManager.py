@@ -33,13 +33,13 @@ import datetime
 
 class EquipementManager:
     def __init__(self, pathname):
-        self._pathname = pathname             # pathname de la base de données des équipements
-        conf_file = 'fichier_conf.yaml'             # pathname du fichier de configuration
+        self._pathname = pathname                           # pathname de la base de données des équipements
+        conf_file = 'fichier_conf.yaml'                     # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')         # try: ouvrir le fichier et le lire
+            fichierConf = open(conf_file, 'r')              # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
-        except IOError:                                 # attrape l'erreur IOError si elle se présente et renvoie
+        except IOError:                                     # attrape l'erreur IOError si elle se présente et renvoie
             print("Could not read file: ", conf_file)       # définir ce qu'il faut faire pour corriger
 
     def AjouterEquipement(self, dictio):
@@ -48,17 +48,17 @@ class EquipementManager:
             if not os.path.exists(self._pathname):
                 raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
             else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
+                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
         except OSError as e:
             print(e)
 
         dict_renvoi = {'Reussite': False}
         if self._verifierChamps(dictio) and self._verifierDict(dictio):   # ARRANGER FONCTION AVANT
-            id_eq = self._ObtenirProchainID()                       # id du nouvel équipement
+            id_eq = self._ObtenirProchainID()               # id du nouvel équipement
             dictio['ID'] = str(id_eq)                       # ajout de l'ID au dictionnaire
             dictio['NbBontravail'] = 0                      # ajout du nombre de bon de travail qui est toujours 0 pour un nouvel équipement
             if db.insert(dictio) != list([]):
-                dict_renvoi['Reussite'] = True                              # ajout du nouvel équipement dans la base de données
+                dict_renvoi['Reussite'] = True              # ajout du nouvel équipement dans la base de données
             self._conf['dernierID-Equipement'] = id_eq      # mise à jour du champ dernierID-equipement dans le fichier de conf
             self._ActualiserConfiguration()
             return dict_renvoi
@@ -68,28 +68,28 @@ class EquipementManager:
         
         # Renvoyer ID de l'equipement ajoute en plus dans le dictionnaire renvoye a l'interface
 
-    def SupprimerEquipement(self, id_supp):                     # id_supp en int
+    def SupprimerEquipement(self, id_supp):                 # id_supp en int
         Equipement = Query()
         dict_renvoi = {'Reussite': False}
         # ouverture de la base des données contenant les équipements
         try:
             if not os.path.exists(self._pathname):
-                raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
+                raise OSError("Oups nous ne trouvons plus la bdd équipements!")  # erreur si le path n'existe pas
             else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
+                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
         except OSError as e:
             print(e)
         if db.remove(Equipement['ID'] == id_supp) != list():
-            dict_renvoi['Reussite'] = True         # suppression de l'équipement, renvoie True seulement si l'équipement a été trouvé
+            dict_renvoi['Reussite'] = True                  # suppression de l'équipement, renvoie True seulement si l'équipement a été trouvé
         self._ActualiserConfiguration()
         return dict_renvoi
 
     def RechercherEquipement(self, regex_dict):
         try:
             if not os.path.exists(self._pathname):
-                raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
+                raise OSError("Oups nous ne trouvons plus la bdd équipements!")  # erreur si le path n'existe pas
             else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
+                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
         except OSError as e:
             print(e)
         recherche = Query()
@@ -110,13 +110,13 @@ class EquipementManager:
             if not os.path.exists(self._pathname):
                 raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
             else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)       # data base des équipements
+                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
         except OSError as e:
             print(e)
         # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
         if self._verifierChamps(dict_modif) and self._verifierDict(dict_modif):
             if db.update(dict_modif, Equipement['ID'] == id_modif) != []:
-                dict_renvoi['Reussite'] = True     # modif du dict associé à l'équipement
+                dict_renvoi['Reussite'] = True              # modif du dict associé à l'équipement
         self._ActualiserConfiguration()
         return dict_renvoi
 
@@ -137,14 +137,14 @@ class EquipementManager:
 
     def _verifierChamps(self, dictio):
         conforme = True
-        list_accepted_key_temp = list(self._conf['champsAcceptes-Equipement'])   # récupère la liste des 'accepted keys' dans le fichier de configuration
+        list_accepted_key_temp = list(self._conf['champsAcceptes-Equipement'])  # récupère la liste des 'accepted keys' dans le fichier de configuration
         for key, value in dictio.items():
             if key in list_accepted_key_temp:
-                list_accepted_key_temp.remove(key)                     # retire la clée du dictionnaire si elle est présente
+                list_accepted_key_temp.remove(key)          # retire la clée du dictionnaire si elle est présente
             else:
-                conforme = False                                       # si on rencontre une clée non-attendue, le dictionnaire n'est pas conforme
+                conforme = False                            # si on rencontre une clée non-attendue, le dictionnaire n'est pas conforme
         if (not conforme) or (len(list_accepted_key_temp) != 0):   # on renvoit Faux si la liste n'est pas vide (tous les champs attendus ne
-            return False                                               # sont pas présents) ou si on a un champ en trop
+            return False                                    # sont pas présents) ou si on a un champ en trop
         else:
             return True
 
@@ -192,7 +192,7 @@ if True:
     #  TESTS
     manager = EquipementManager('DataBase_Equipement.json')
 
-    data = {'CategorieEquipement': 'JEROME',
+    data = {'CategorieEquipement': 'JEROME-test',
             'Marque': 'HARRISON',
             'Modele': 'IS',
             'NumeroSerie': 'NICE',
@@ -210,15 +210,15 @@ if True:
     #dic_request = {'CategorieEquipement': 'ECG',
     #               'Marque': 'Peter',
     #               'Modele': 'blabla'}
-    dic_request = {'CategorieEquipement': '',
-                   'Salle': 'B',
-                   'CentreService': '',
-                   'NumeroSerie': '',
-                   'Provenance': '',
-                   'EtatService': '',
-                   'EtatConservation': ''}
+    #dic_request = {'CategorieEquipement': '',
+    #               'Salle': 'B',
+    #               'CentreService': '',
+    #               'NumeroSerie': '',
+    #               'Provenance': '',
+    #               'EtatService': '',
+    #               'EtatConservation': ''}
 
-    #print(manager.AjouterEquipement(data))
+    print(manager.AjouterEquipement(data))
     #print(manager.SupprimerEquipement('9'))                     # id_supp en int
     #print(manager.RechercherEquipement(dic_request))
     #print(manager.ModifierEquipement('20', data))               # id_modif en int
