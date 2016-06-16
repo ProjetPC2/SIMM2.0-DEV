@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QVBoxLayout
 
 
 class Ui_MainWindow(object):
@@ -49,7 +50,7 @@ class Ui_MainWindow(object):
 "border-radius: 4px;\n"
 "background:rgb(247,247,247)\n"
 "}")
-        MainWindow.setIconSize(QtCore.QSize(200, 200))
+        # MainWindow.setIconSize(QtCore.QSize(200, 200))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -57,7 +58,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.labelTitre = QtWidgets.QLabel(self.centralwidget)
-        self.labelTitre.setMaximumSize(QtCore.QSize(500, 100))
+        self.labelTitre.setMaximumSize(QtCore.QSize(1500, 100))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(18)
@@ -434,13 +435,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_8 = QtWidgets.QVBoxLayout()
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.verticalLayout_3.addLayout(self.verticalLayout_8)
-        MainWindow.setCentralWidget(self.centralwidget)
+        layoutVertical = QVBoxLayout()
+        layoutVertical.addWidget(self.centralwidget)
+        MainWindow.setLayout(layoutVertical)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        # MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        # QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'AjoutEquipementUI.ui'
+# Form implementation generated from reading ui file 'ModificationEquipementUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -18,7 +18,7 @@ from BDD.EquipementManager import EquipementManager
 from Interface.Stockage import Equipement
 
 
-class AjoutEquipementUI(object):
+class ModificationEquipementUI(object):
     def setupUi(self, MainFrame):
         MainFrame.setObjectName("MainFrame")
         MainFrame.resize(781, 765)
@@ -116,7 +116,7 @@ class AjoutEquipementUI(object):
         self.formLayout.setObjectName("formLayout")
         self.layoutTitre = QtWidgets.QHBoxLayout()
         self.layoutTitre.setObjectName("layoutTitre")
-        self.titreAjoutEquipementUI = QtWidgets.QLabel(MainFrame)
+        self.titreModificationEquipementUI = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(18)
@@ -124,9 +124,9 @@ class AjoutEquipementUI(object):
         font.setItalic(False)
         font.setUnderline(False)
         font.setWeight(75)
-        self.titreAjoutEquipementUI.setFont(font)
-        self.titreAjoutEquipementUI.setObjectName("titreAjoutEquipementUI")
-        self.layoutTitre.addWidget(self.titreAjoutEquipementUI)
+        self.titreModificationEquipementUI.setFont(font)
+        self.titreModificationEquipementUI.setObjectName("titreModificationEquipementUI")
+        self.layoutTitre.addWidget(self.titreModificationEquipementUI)
         self.label = QtWidgets.QLabel(MainFrame)
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/plus (2).png"))
@@ -371,7 +371,7 @@ class AjoutEquipementUI(object):
     def retranslateUi(self, MainFrame):
         _translate = QtCore.QCoreApplication.translate
         MainFrame.setWindowTitle(_translate("MainFrame", "Form"))
-        self.titreAjoutEquipementUI.setText(_translate("MainFrame", "Ajout d\'équipement"))
+        self.titreModificationEquipementUI.setText(_translate("MainFrame", "Modification d\'équipement"))
         self.label_34.setText(_translate("MainFrame", "ID : "))
         self.label_37.setText(_translate("MainFrame", "Catégorie : "))
         self.label_36.setText(_translate("MainFrame", "Marque : "))
@@ -382,7 +382,7 @@ class AjoutEquipementUI(object):
         self.label_29.setText(_translate("MainFrame", "Date d\'aquisition : "))
         self.label_27.setText(_translate("MainFrame", "Date du dernier entretien : "))
         self.label_26.setText(_translate("MainFrame", "Provenance : "))
-        self.labelId.setText(_translate("MainFrame", "27"))
+        self.labelId.setText(_translate("MainFrame", "1"))
         self.comboBoxCategorie.setItemText(0, _translate("MainFrame", "Catégorie 1"))
         self.comboBoxCategorie.setItemText(1, _translate("MainFrame", "Catégorie 2"))
         self.comboBoxCategorie.setItemText(2, _translate("MainFrame", "Catégorie 3"))
@@ -458,14 +458,14 @@ class AjoutEquipementUI(object):
         self.listeSalle = list(self._conf['Salle'])
         # self.listeProvenance = list(self._conf['Provenance'])
 
-        #Chargement des differentes listes deroulantes
+        # Chargement des differentes listes deroulantes
+        #A mettre a jour selon le choix et le dictionnaire qui aura ete envoye
         self.comboBoxCategorie.clear()
         self.comboBoxCategorie.addItems(self.listeCategorieEquipement)
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItems(self.listeSalle)
         self.comboBoxCentreDeService.clear()
         self.comboBoxCentreDeService.addItems(self.listeCentreService)
-
 
         self.boutonValider.clicked.connect(self.sauvegarderEquipement)
 
@@ -515,14 +515,14 @@ class AjoutEquipementUI(object):
             self.equipement.listeMethodes[i](donnees)
             i += 1
         self.equipementManager = EquipementManager('DataBase_Equipement.json')
-        print(self.equipementManager.AjouterEquipement(self.equipement.dictionnaire))
+        print(self.equipementManager.ModifierEquipement(self.labelId.text(), self.equipement.dictionnaire))
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    ajoutEquipement = QtWidgets.QWidget()
-    ajoutEquipementUI = AjoutEquipementUI()
-    ajoutEquipementUI.setupUi(ajoutEquipement)
-    ajoutEquipement.show()
+    modificationEquipement = QtWidgets.QWidget()
+    modificationEquipementUI = ModificationEquipementUI()
+    modificationEquipementUI.setupUi(modificationEquipement)
+    modificationEquipement.show()
     sys.exit(app.exec_())
 

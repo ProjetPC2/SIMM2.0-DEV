@@ -5,10 +5,15 @@
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
-
+import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QVBoxLayout
 
-class Ui_MainFrame(object):
+from BDD.EquipementManager import EquipementManager
+from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquipementUI
+
+
+class ConsultationEquipementUI(object):
     def setupUi(self, MainFrame):
         MainFrame.setObjectName("MainFrame")
         MainFrame.resize(876, 703)
@@ -108,6 +113,11 @@ class Ui_MainFrame(object):
 "}")
         self.gridLayout = QtWidgets.QGridLayout(MainFrame)
         self.gridLayout.setObjectName("gridLayout")
+
+        #inutle pour l'instant
+        self.layoutPrincipal = QVBoxLayout()
+        self.layoutPrincipal.addWidget(MainFrame)
+
         self.titreLayout = QtWidgets.QHBoxLayout()
         self.titreLayout.setObjectName("titreLayout")
         self.labelTitreConsultationEquipement = QtWidgets.QLabel(MainFrame)
@@ -430,13 +440,86 @@ class Ui_MainFrame(object):
         self.labelTitreBons.setText(_translate("MainFrame", "Bons : "))
         self.labelTitreCommentaires.setText(_translate("MainFrame", "Commentaires : "))
 
+        self.listeLabel = list()
+        self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelMarque)
+        self.listeLabel.append(self.labelModele)
+        self.listeLabel.append(self.labelNoDeSerie)
+        self.listeLabel.append(self.labelSalle)
+        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelDateDaquisition)
+        self.listeLabel.append(self.labelDateDuDernierEntretien)
+        self.listeLabel.append(self.labelProvenance)
+        self.listeLabel.append(self.labelEtatDeService)
+        self.listeLabel.append(self.labelEtatDeConservation)
+        # A voir pour les bons de travaux
+        self.listeLabel.append(self.labelCommentaires)
+
+        #Recuperation des differents attributs d''un equipement
+        self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        # self.listeCleDonnees = list()
+        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
+        try:
+            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            with fichierConf:
+                self._conf = yaml.load(fichierConf)
+        except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
+            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+        # récupère la liste des 'accepted keys' dans le fichier de configuration
+        self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
+        print("liste des cles : ", self.listeCleDonnees)
+        fichierConf.close()
+
+
+        self.listeEdit = list()
+        # self.
+        # self.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
+        self.widget = MainFrame
+
+        self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
+
+    def rechercherEquipement(self):
+        equipement = dict()
+        equipement["ID"] = self.lineEditId.text()
+        listeEquipement = self.equipementManager.RechercherEquipement(equipement)
+
+        if(any(listeEquipement)):
+            equipement = listeEquipement[0]
+            print(equipement)
+            i = 0
+            for cle in self.listeCleDonnees:
+                #Recuperation des donnees sous forme de string
+                self.listeLabel[i].setText(str(equipement[cle]))
+                i += 1
+        else:
+            print("equipement non existant")
+
+    def modifierEquipement(self):
+        #Fonction inutle pour l'instant
+        print("Appuie sur bouton modification Equipement")
+        self.modificationEquipement = QtWidgets.QWidget()
+        self.modificationEquipementUI = ModificationEquipementUI()
+        self.modificationEquipementUI.setupUi(self.modificationEquipement)
+        self.modificationEquipement.setStyleSheet("background: white;")
+        self.layoutPrincipal.addWidget(self.modificationEquipement)
+        # MainFrame = (self.modificationEquipement)
+        print(self.gridLayout.children())
+    # def modifierEquipement(self):
+    #     pass
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainFrame = QtWidgets.QWidget()
-    ui = Ui_MainFrame()
-    ui.setupUi(MainFrame)
-    MainFrame.show()
+    consultationEquipement = QtWidgets.QWidget()
+    consultationEquipementUI = ConsultationEquipementUI()
+    consultationEquipementUI.setupUi(consultationEquipement)
+    consultationEquipement.show()
     sys.exit(app.exec_())
 

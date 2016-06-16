@@ -26,7 +26,7 @@
 
 import yaml
 from tinydb import *
-from yamlStorage import YAMLStorage
+from BDD.yamlStorage import YAMLStorage
 import os
 import datetime
 
@@ -95,11 +95,15 @@ class EquipementManager:
         recherche = Query()
         firstEntry = True
         for key, value in regex_dict.items():
-            if firstEntry:
-                queryUser = (recherche[key].matches(value))
-                firstEntry = False
+            if (key == "ID"):
+                # Dans le cas de la recherche par ID
+                queryUser = recherche.ID == value
             else:
-                queryUser = (queryUser) & (recherche[key].matches(value))
+                if firstEntry:
+                    queryUser = (recherche[key].matches(value))
+                    firstEntry = False
+                else:
+                    queryUser = (queryUser) & (recherche[key].matches(value))
         result = db.search(queryUser)
         return result
 
@@ -280,45 +284,45 @@ class EquipementManager:
         return dictRenvoiCentreServiceCategorie
 
 
-# if __name__ == "__main__":#Execution lorsque le fichier est lance
-if True:
-    #  TESTS
-    manager = EquipementManager('DataBase_Equipement.json')
+if __name__ == "__main__":#Execution lorsque le fichier est lance
+    if True:
+        #  TESTS
+        manager = EquipementManager('DataBase_Equipement.json')
 
-    data = {'CategorieEquipement': 'IRM',
-            'Marque': 'HARRISON',
-            'Modele': 'IS',
-            'NumeroSerie': 'NICE',
-            'Salle': 'A867',
-            'CentreService': 'Urgence',
-            'DateAcquisition': datetime.date(2010, 7, 12),
-            'DateDernierEntretien': datetime.date(2011, 2, 27),
-            'Provenance': 'CHU Ste-Justine',
-            'EtatService': 'En maintenance',
-            'EtatConservation': 'En fin de vie',
-            'Commentaires': 'NONE'}
+        data = {'CategorieEquipement': 'IRM',
+                'Marque': 'HARRISON',
+                'Modele': 'IS',
+                'NumeroSerie': 'NICE',
+                'Salle': 'A867',
+                'CentreService': 'Urgence',
+                'DateAcquisition': datetime.date(2010, 7, 12),
+                'DateDernierEntretien': datetime.date(2011, 2, 27),
+                'Provenance': 'CHU Ste-Justine',
+                'EtatService': 'En maintenance',
+                'EtatConservation': 'En fin de vie',
+                'Commentaires': 'NONE'}
 
-    #manager._ObtenirProchainID()
-    #print(manager._VerifierDict(data))
-    #dic_request = {'CategorieEquipement': 'ECG',
-    #               'Marque': 'Peter',
-    #               'Modele': 'blabla'}
-    #dic_request = {'CategorieEquipement': '',
-    #               'Salle': 'B',
-    #               'CentreService': '',
-    #               'NumeroSerie': '',
-    #               'Provenance': '',
-    #               'EtatService': '',
-    #               'EtatConservation': ''}
+        #manager._ObtenirProchainID()
+        #print(manager._VerifierDict(data))
+        #dic_request = {'CategorieEquipement': 'ECG',
+        #               'Marque': 'Peter',
+        #               'Modele': 'blabla'}
+        #dic_request = {'CategorieEquipement': '',
+        #               'Salle': 'B',
+        #               'CentreService': '',
+        #               'NumeroSerie': '',
+        #               'Provenance': '',
+        #               'EtatService': '',
+        #               'EtatConservation': ''}
 
-    #print(manager.AjouterEquipement(data))
-    #print(manager.SupprimerEquipement('9'))                     # id_supp en int
-    #print(manager.RechercherEquipement(dic_request))
-    #print(manager.ModifierEquipement('20', data))               # id_modif en int
+        #print(manager.AjouterEquipement(data))
+        #print(manager.SupprimerEquipement('9'))                     # id_supp en int
+        #print(manager.RechercherEquipement(dic_request))
+        #print(manager.ModifierEquipement('20', data))               # id_modif en int
 
-    # Stats
-    #print(manager._statsNbTotalEquipement())
-    #print(manager._statsNbEquipementEtatService()
-    #print(manager._statsNbEquipementEtatConservation())
-    #print(manager._statsNbEquipementProvenance())
-    #print(manager._statsNbEquipementCentreServiceCategorie())
+        # Stats
+        print(manager._statsNbTotalEquipement())
+        print(manager._statsNbEquipementEtatService())
+        print(manager._statsNbEquipementEtatConservation())
+        print(manager._statsNbEquipementProvenance())
+        print(manager._statsNbEquipementCentreServiceCategorie())

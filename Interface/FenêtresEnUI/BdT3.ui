@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>868</width>
-    <height>746</height>
+    <width>1518</width>
+    <height>1183</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -72,7 +72,7 @@ background:rgb(247,247,247)
        <widget class="QLabel" name="labelTitre">
         <property name="maximumSize">
          <size>
-          <width>500</width>
+          <width>20000</width>
           <height>100</height>
          </size>
         </property>
@@ -83,6 +83,9 @@ background:rgb(247,247,247)
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
         </property>
         <property name="styleSheet">
          <string notr="true"/>
@@ -615,7 +618,7 @@ background:rgb(247,247,247;)
             <property name="maximumSize">
              <size>
               <width>220</width>
-              <height>20</height>
+              <height>50</height>
              </size>
             </property>
             <property name="font">
@@ -804,7 +807,7 @@ background:rgb(247,247,247)
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>110</height>
+            <height>220</height>
            </size>
           </property>
           <property name="font">
@@ -850,7 +853,7 @@ background:rgb(247,247,247)
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>110</height>
+            <height>220</height>
            </size>
           </property>
           <property name="font">
@@ -948,13 +951,8 @@ background:rgb(247,247,247)
       </item>
      </layout>
     </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_8"/>
-    </item>
    </layout>
-   <zorder>verticalSpacer_2</zorder>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

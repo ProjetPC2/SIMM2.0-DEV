@@ -14,7 +14,7 @@
 import yaml
 from tinydb import *
 from tinydb.operations import increment
-from yamlStorage import YAMLStorage
+from BDD.yamlStorage import YAMLStorage
 import datetime
 import os
 
@@ -84,26 +84,31 @@ class BonTravailManager:
         db = TinyDB(self._pathname, storage=YAMLStorage)
         recherche = Query()
         firstEntry = True
-        for key, value in regex_dict.items():                   # Pour chaque champ de la recherche
-            if not isinstance(value, datetime.date):            # S'il ne s'agit pas d'une date
-                if firstEntry:                                  # Si c'est la première recherche
-                    queryUser = (recherche[key].matches(value))  # Trouver dans la base de données la valeur correspondante
-                    firstEntry = False
-                else:
-                    queryUser = (queryUser) & (recherche[key].matches(value))
-            else:                                               # S'il s'agit d'une date
-                if key == 'ApresLe':                            # Chercher après la date
-                    if firstEntry:                              # Si c'est la première recherche
-                        queryUser = (recherche['Date'] >= value)
+        for key, value in regex_dict.items():
+            # Pour chaque champ de la recherche
+            if (key == "ID-EQ"):
+                # Dans le cas de la recherche par ID
+                queryUser = recherche["ID-EQ"] == value
+            else:
+                if not isinstance(value, datetime.date):            # S'il ne s'agit pas d'une date
+                    if firstEntry:                                  # Si c'est la première recherche
+                        queryUser = (recherche[key].matches(value))  # Trouver dans la base de données la valeur correspondante
                         firstEntry = False
                     else:
-                        queryUser = (queryUser) & (recherche['Date'] >= value)
-                if key == 'AvantLe':                            # Chercher avant la date
-                    if firstEntry:                              # Si c'est la première recherche
-                        queryUser = (recherche['Date'] <= value)
-                        firstEntry = False
-                    else:
-                        queryUser = (queryUser) & (recherche['Date'] <= value)
+                        queryUser = (queryUser) & (recherche[key].matches(value))
+                else:                                               # S'il s'agit d'une date
+                    if key == 'ApresLe':                            # Chercher après la date
+                        if firstEntry:                              # Si c'est la première recherche
+                            queryUser = (recherche['Date'] >= value)
+                            firstEntry = False
+                        else:
+                            queryUser = (queryUser) & (recherche['Date'] >= value)
+                    if key == 'AvantLe':                            # Chercher avant la date
+                        if firstEntry:                              # Si c'est la première recherche
+                            queryUser = (recherche['Date'] <= value)
+                            firstEntry = False
+                        else:
+                            queryUser = (queryUser) & (recherche['Date'] <= value)
 
         result = db.search(queryUser)                           # Rechercher la combinaison de chaque champ de recherche
         return result
@@ -198,7 +203,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     # TESTS
     manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
 
-    data1 = {'Date': datetime.date(2016, 02, 22),
+    data1 = {'Date': datetime.date(2016, 2, 22),
              'TempsEstime': 'Cam-modif',
              'DescriptionSituation': 'Larose-modif',
              'DescriptionIntervention': 'Blablabla-modif',

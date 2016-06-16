@@ -1,0 +1,67 @@
+BDT_ChampAjoutNonPermis:
+- EtatBDT
+BDT_ChampAjoutPermis:
+- null
+BDT_ChampFormatPrecis:
+- Date
+CategorieEquipement:
+- ECG
+- IRM
+- Oxymetre
+- Dialyse
+- JEROME
+- JEROME-test
+- "Cat\xE9gorie 1"
+CentreService:
+- Urgence
+- "Maternit\xE9"
+- "Atelier de g\xE9nie biom\xE9dical"
+- Soins intensifs
+- Centre de service X
+Equipement_ChampAjoutNonPermis:
+- EtatConservation
+- EtatService
+Equipement_ChampAjoutPermis:
+- CategorieEquipement
+- Salle
+- CentreService
+Equipement_ChampFormatPrecis:
+- DateAcquisition
+- DateDernierEntretien
+EtatBDT:
+- Ouvert
+- Ferme
+EtatConservation:
+- Quasi neuf
+- Acceptable
+- En fin de vie
+- Desuet
+EtatService:
+- En service
+- En maintenance
+- Au rebus
+Salle:
+- A123
+- B518
+- A867
+- Salle 1
+champsAcceptes-BDT:
+- Date
+- TempsEstime
+- DescriptionSituation
+- DescriptionIntervention
+- EtatBDT
+champsAcceptes-Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- NumeroSerie
+- Salle
+- CentreService
+- DateAcquisition
+- DateDernierEntretien
+- Provenance
+- EtatService
+- EtatConservation
+- Commentaires
+dernierID-Equipement: 16
