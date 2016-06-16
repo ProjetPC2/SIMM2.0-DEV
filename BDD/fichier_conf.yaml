@@ -23,6 +23,7 @@ Equipement_ChampAjoutPermis:
 - CategorieEquipement
 - Salle
 - CentreService
+- Provenance
 Equipement_ChampFormatPrecis:
 - DateAcquisition
 - DateDernierEntretien
@@ -38,6 +39,10 @@ EtatService:
 - En service
 - En maintenance
 - Au rebut
+Provenance:
+- CSI
+- POLY
+- CHU Ste-Justine
 Salle:
 - A123
 - B518
@@ -61,4 +66,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 23
+dernierID-Equipement: 33
