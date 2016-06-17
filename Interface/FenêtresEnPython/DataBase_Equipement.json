@@ -287,3 +287,18 @@ _default:
       Salle: A123
     state:
       eid: 16
+  17:
+    CategorieEquipement: ECG
+    CentreService: Urgence
+    Commentaires: ''
+    DateAcquisition: 2000-01-01
+    DateDernierEntretien: 2000-01-01
+    EtatConservation: Quasi neuf
+    EtatService: En maintenance
+    ID: '17'
+    Marque: ''
+    Modele: ''
+    NbBonTravail: 0
+    NumeroSerie: ''
+    Provenance: CSI
+    Salle: A123

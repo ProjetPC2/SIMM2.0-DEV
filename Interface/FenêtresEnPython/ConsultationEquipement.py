@@ -475,24 +475,29 @@ class ConsultationEquipementUI(object):
         # self.
         # self.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
         self.widget = MainFrame
-
+        self.equipement = None
         self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
+        self.boutonModifierEquipement.setEnabled(False)
+
 
     def rechercherEquipement(self):
-        equipement = dict()
-        equipement["ID"] = self.lineEditId.text()
-        listeEquipement = self.equipementManager.RechercherEquipement(equipement)
+        equipementRecherche = dict()
+        equipementRecherche["ID"] = self.lineEditId.text()
+        listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
 
         if(any(listeEquipement)):
-            equipement = listeEquipement[0]
-            print(equipement)
+            self.boutonModifierEquipement.setEnabled(True)
+            self.equipement = listeEquipement[0]
+            print(self.equipement)
             i = 0
             for cle in self.listeCleDonnees:
                 #Recuperation des donnees sous forme de string
-                self.listeLabel[i].setText(str(equipement[cle]))
+                self.listeLabel[i].setText(str(self.equipement[cle]))
                 i += 1
         else:
             print("equipement non existant")
+            self.boutonModifierEquipement.setEnabled(False)
+
 
     def modifierEquipement(self):
         #Fonction inutle pour l'instant

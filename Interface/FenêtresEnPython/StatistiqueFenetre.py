@@ -177,7 +177,7 @@ class Statistique(QWidget):
 
         self.table.clear()
         self.table.setHorizontalHeaderLabels(["Categorie equipement", "Quantite"])
-        self.table.setWordWrap(True)    
+        self.table.setWordWrap(True)
         self.table.resizeColumnToContents(0)
         self.table.resizeRowsToContents()
         self.table.horizontalHeader().setStretchLastSection(True)

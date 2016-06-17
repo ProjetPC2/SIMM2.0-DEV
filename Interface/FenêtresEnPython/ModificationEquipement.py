@@ -19,104 +19,106 @@ from Interface.Stockage import Equipement
 
 
 class ModificationEquipementUI(object):
-    def setupUi(self, MainFrame):
+    def setupUi(self, MainFrame, equipement):
+        self.equipementRecherche = equipement
+
         MainFrame.setObjectName("MainFrame")
         MainFrame.resize(781, 765)
         MainFrame.setStyleSheet("#MainFrame {\n"
-"\n"
-"background: white;\n"
-"}\n"
-"QLineEdit {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 2px solid gray;\n"
-"border-radius: 8px;\n"
-"min-width: 50px;\n"
-"max-width: 150px;\n"
-"}\n"
-"\n"
-"QDateEdit {\n"
-"max-width: 105px\n"
-"}\n"
-"\n"
-"QPushButton {\n"
-"color: black;\n"
-"background-color: rgb(240, 240, 240);\n"
-"border-width: 2px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 16px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 130px;\n"
-"max-width:150px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"\n"
-"\n"
-"QComboBox {\n"
-"    border: 1px solid gray;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 8em;\n"
-"    max-width: 200px;\n"
-"    \n"
-"}\n"
-"\n"
-"QComboBox:editable {\n"
-"    background: white;\n"
-"}\n"
-"\n"
-"QComboBox:!editable, QComboBox::drop-down:editable {\n"
-"     background:rgb(241, 241, 241);\n"
-"}\n"
-"\n"
-"/* QComboBox gets the \"on\" state when the popup is open */\n"
-"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-"   \n"
-"}\n"
-"\n"
-"QComboBox:on { /* shift the text when the popup opens */\n"
-"    padding-top: 3px;\n"
-"    padding-left: 4px;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    width: 15px;\n"
-"\n"
-"    border-left-width: 1px;\n"
-"    border-left-color: darkgrey;\n"
-"    border-left-style: solid; /* just a single line */\n"
-"    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
-"    border-bottom-right-radius: 3px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow {\n"
-"    image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png);\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
-"    top: 1px;\n"
-"    left: 1px;\n"
-"}")
+                                "\n"
+                                "background: white;\n"
+                                "}\n"
+                                "QLineEdit {\n"
+                                "padding: 1px;\n"
+                                "border-style: solid;\n"
+                                "border: 2px solid gray;\n"
+                                "border-radius: 8px;\n"
+                                "min-width: 50px;\n"
+                                "max-width: 150px;\n"
+                                "}\n"
+                                "\n"
+                                "QDateEdit {\n"
+                                "max-width: 105px\n"
+                                "}\n"
+                                "\n"
+                                "QPushButton {\n"
+                                "color: black;\n"
+                                "background-color: rgb(240, 240, 240);\n"
+                                "border-width: 2px;\n"
+                                "border-color: grey;\n"
+                                "border-style: solid;\n"
+                                "border-radius: 4px;\n"
+                                "padding: 3px;\n"
+                                "font: bold 16px;\n"
+                                "padding-left: 5px;\n"
+                                "padding-right: 5px;\n"
+                                "min-width: 130px;\n"
+                                "max-width:150px;\n"
+                                "min-height: 30px;\n"
+                                "max-height: 30px;\n"
+                                "}\n"
+                                "\n"
+                                "QPushButton:hover {\n"
+                                "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+                                "}\n"
+                                "\n"
+                                "QPushButton:pressed {\n"
+                                "background-color: rgb(193, 213, 243);\n"
+                                "}\n"
+                                "\n"
+                                "\n"
+                                "QComboBox {\n"
+                                "    border: 1px solid gray;\n"
+                                "    border-radius: 3px;\n"
+                                "    padding: 1px 18px 1px 3px;\n"
+                                "    min-width: 8em;\n"
+                                "    max-width: 200px;\n"
+                                "    \n"
+                                "}\n"
+                                "\n"
+                                "QComboBox:editable {\n"
+                                "    background: white;\n"
+                                "}\n"
+                                "\n"
+                                "QComboBox:!editable, QComboBox::drop-down:editable {\n"
+                                "     background:rgb(241, 241, 241);\n"
+                                "}\n"
+                                "\n"
+                                "/* QComboBox gets the \"on\" state when the popup is open */\n"
+                                "QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
+                                "   \n"
+                                "}\n"
+                                "\n"
+                                "QComboBox:on { /* shift the text when the popup opens */\n"
+                                "    padding-top: 3px;\n"
+                                "    padding-left: 4px;\n"
+                                "}\n"
+                                "\n"
+                                "QComboBox::drop-down {\n"
+                                "    subcontrol-origin: padding;\n"
+                                "    subcontrol-position: top right;\n"
+                                "    width: 15px;\n"
+                                "\n"
+                                "    border-left-width: 1px;\n"
+                                "    border-left-color: darkgrey;\n"
+                                "    border-left-style: solid; /* just a single line */\n"
+                                "    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
+                                "    border-bottom-right-radius: 3px;\n"
+                                "}\n"
+                                "\n"
+                                "QComboBox::down-arrow {\n"
+                                "    image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png);\n"
+                                "}\n"
+                                "\n"
+                                "QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
+                                "    top: 1px;\n"
+                                "    left: 1px;\n"
+                                "}")
         self.formLayout = QtWidgets.QFormLayout(MainFrame)
         self.formLayout.setObjectName("formLayout")
         self.layoutTitre = QtWidgets.QHBoxLayout()
         self.layoutTitre.setObjectName("layoutTitre")
-        self.titreModificationEquipementUI = QtWidgets.QLabel(MainFrame)
+        self.titreAjoutEquipementUI = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(18)
@@ -124,12 +126,13 @@ class ModificationEquipementUI(object):
         font.setItalic(False)
         font.setUnderline(False)
         font.setWeight(75)
-        self.titreModificationEquipementUI.setFont(font)
-        self.titreModificationEquipementUI.setObjectName("titreModificationEquipementUI")
-        self.layoutTitre.addWidget(self.titreModificationEquipementUI)
+        self.titreAjoutEquipementUI.setFont(font)
+        self.titreAjoutEquipementUI.setObjectName("titreAjoutEquipementUI")
+        self.layoutTitre.addWidget(self.titreAjoutEquipementUI)
         self.label = QtWidgets.QLabel(MainFrame)
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/plus (2).png"))
+        self.label.setPixmap(
+            QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/plus (2).png"))
         self.label.setScaledContents(False)
         self.label.setObjectName("label")
         self.layoutTitre.addWidget(self.label)
@@ -142,70 +145,70 @@ class ModificationEquipementUI(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_34.setFont(font)
-        self.label_34.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_34.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_34.setObjectName("label_34")
         self.layoutTitreLables.addWidget(self.label_34)
         self.label_37 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_37.setFont(font)
-        self.label_37.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_37.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_37.setObjectName("label_37")
         self.layoutTitreLables.addWidget(self.label_37)
         self.label_36 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_36.setFont(font)
-        self.label_36.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_36.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_36.setObjectName("label_36")
         self.layoutTitreLables.addWidget(self.label_36)
         self.label_35 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_35.setFont(font)
-        self.label_35.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_35.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_35.setObjectName("label_35")
         self.layoutTitreLables.addWidget(self.label_35)
         self.label_30 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_30.setFont(font)
-        self.label_30.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_30.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_30.setObjectName("label_30")
         self.layoutTitreLables.addWidget(self.label_30)
         self.label_31 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_31.setFont(font)
-        self.label_31.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_31.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_31.setObjectName("label_31")
         self.layoutTitreLables.addWidget(self.label_31)
         self.label_33 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_33.setFont(font)
-        self.label_33.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_33.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_33.setObjectName("label_33")
         self.layoutTitreLables.addWidget(self.label_33)
         self.label_29 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_29.setFont(font)
-        self.label_29.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_29.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_29.setObjectName("label_29")
         self.layoutTitreLables.addWidget(self.label_29)
         self.label_27 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_27.setFont(font)
-        self.label_27.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_27.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_27.setObjectName("label_27")
         self.layoutTitreLables.addWidget(self.label_27)
         self.label_26 = QtWidgets.QLabel(MainFrame)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_26.setFont(font)
-        self.label_26.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_26.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_26.setObjectName("label_26")
         self.layoutTitreLables.addWidget(self.label_26)
         self.formLayout.setLayout(1, QtWidgets.QFormLayout.LabelRole, self.layoutTitreLables)
@@ -268,9 +271,21 @@ class ModificationEquipementUI(object):
         self.dateEditDateDuDernierEntretien = QtWidgets.QDateEdit(MainFrame)
         self.dateEditDateDuDernierEntretien.setObjectName("dateEditDateDuDernierEntretien")
         self.layoutChamps.addWidget(self.dateEditDateDuDernierEntretien)
-        self.lineEditProvenance = QtWidgets.QLineEdit(MainFrame)
-        self.lineEditProvenance.setObjectName("lineEditProvenance")
-        self.layoutChamps.addWidget(self.lineEditProvenance)
+
+        self.comboBoxProvenance = QtWidgets.QComboBox(MainFrame)
+
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        self.comboBoxProvenance.setFont(font)
+        self.comboBoxProvenance.setMaxCount(2147483645)
+        self.comboBoxProvenance.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.comboBoxProvenance.setObjectName("comboBoxProvenance")
+        self.comboBoxProvenance.addItem("")
+        self.comboBoxProvenance.addItem("")
+        self.comboBoxProvenance.addItem("")
+
+        self.layoutChamps.addWidget(self.comboBoxProvenance)
         self.formLayout.setLayout(1, QtWidgets.QFormLayout.FieldRole, self.layoutChamps)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
@@ -298,7 +313,6 @@ class ModificationEquipementUI(object):
         self.verticalLayout_3.addWidget(self.radioButtonEnMaintenance)
         self.radioButtonAuRebus = QtWidgets.QRadioButton(self.frame)
         self.radioButtonAuRebus.setObjectName("radioButtonAuRebus")
-
 
         self.verticalLayout_3.addWidget(self.radioButtonAuRebus)
         self.horizontalLayout_4.addLayout(self.verticalLayout_3)
@@ -349,9 +363,11 @@ class ModificationEquipementUI(object):
         self.boutonValider.setFont(font)
         self.boutonValider.setObjectName("boutonValider")
         self.horizontalLayout_8.addWidget(self.boutonValider)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_8.addItem(spacerItem2)
+        # spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        # self.horizontalLayout_8.addItem(spacerItem2)
+
         self.formLayout.setLayout(4, QtWidgets.QFormLayout.SpanningRole, self.horizontalLayout_8)
+
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.labelTitreCommentaires = QtWidgets.QLabel(MainFrame)
@@ -366,12 +382,13 @@ class ModificationEquipementUI(object):
         self.formLayout.setLayout(3, QtWidgets.QFormLayout.SpanningRole, self.horizontalLayout_3)
 
         self.retranslateUi(MainFrame)
+        self.ajout()
         QtCore.QMetaObject.connectSlotsByName(MainFrame)
 
     def retranslateUi(self, MainFrame):
         _translate = QtCore.QCoreApplication.translate
         MainFrame.setWindowTitle(_translate("MainFrame", "Form"))
-        self.titreModificationEquipementUI.setText(_translate("MainFrame", "Modification d\'équipement"))
+        self.titreAjoutEquipementUI.setText(_translate("MainFrame", "Modification d\'équipement"))
         self.label_34.setText(_translate("MainFrame", "ID : "))
         self.label_37.setText(_translate("MainFrame", "Catégorie : "))
         self.label_36.setText(_translate("MainFrame", "Marque : "))
@@ -382,7 +399,7 @@ class ModificationEquipementUI(object):
         self.label_29.setText(_translate("MainFrame", "Date d\'aquisition : "))
         self.label_27.setText(_translate("MainFrame", "Date du dernier entretien : "))
         self.label_26.setText(_translate("MainFrame", "Provenance : "))
-        self.labelId.setText(_translate("MainFrame", "1"))
+        # self.labelId.setText(_translate("MainFrame", "27"))
         self.comboBoxCategorie.setItemText(0, _translate("MainFrame", "Catégorie 1"))
         self.comboBoxCategorie.setItemText(1, _translate("MainFrame", "Catégorie 2"))
         self.comboBoxCategorie.setItemText(2, _translate("MainFrame", "Catégorie 3"))
@@ -404,13 +421,13 @@ class ModificationEquipementUI(object):
         self.boutonValider.setText(_translate("MainFrame", "Valider"))
         self.labelTitreCommentaires.setText(_translate("MainFrame", "Commentaires : "))
 
+    def ajout(self):
 
-        #Recuperation des choix radios
+        # Recuperation des choix radios
         self.groupeBoutonEtatService = QButtonGroup()
         self.groupeBoutonEtatService.addButton(self.radioButtonEnService)
         self.groupeBoutonEtatService.addButton(self.radioButtonEnMaintenance)
         self.groupeBoutonEtatService.addButton(self.radioButtonAuRebus)
-
 
         self.groupeBoutonEtatConservation = QButtonGroup()
         self.groupeBoutonEtatConservation.addButton(self.radioButtonQuasiNeuf)
@@ -418,8 +435,7 @@ class ModificationEquipementUI(object):
         self.groupeBoutonEtatConservation.addButton(self.radioButtonEnFinDeVie)
         self.groupeBoutonEtatConservation.addButton(self.radioButtonDesuet)
 
-
-        #Recuperation des widgets dans une liste
+        # Recuperation des widgets dans une liste
         self.listeWidgets = list()
         self.listeWidgets.append(self.comboBoxCategorie)
         self.listeWidgets.append(self.lineEditMarque)
@@ -429,7 +445,7 @@ class ModificationEquipementUI(object):
         self.listeWidgets.append(self.comboBoxCentreDeService)
         self.listeWidgets.append(self.dateEditDateDaquisition)
         self.listeWidgets.append(self.dateEditDateDuDernierEntretien)
-        self.listeWidgets.append(self.lineEditProvenance)
+        self.listeWidgets.append(self.comboBoxProvenance)
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
@@ -456,18 +472,91 @@ class ModificationEquipementUI(object):
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
         self.listeSalle = list(self._conf['Salle'])
-        # self.listeProvenance = list(self._conf['Provenance'])
+        self.listeProvenance = list(self._conf['Provenance'])
 
         # Chargement des differentes listes deroulantes
-        #A mettre a jour selon le choix et le dictionnaire qui aura ete envoye
         self.comboBoxCategorie.clear()
         self.comboBoxCategorie.addItems(self.listeCategorieEquipement)
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItems(self.listeSalle)
         self.comboBoxCentreDeService.clear()
         self.comboBoxCentreDeService.addItems(self.listeCentreService)
+        self.comboBoxProvenance.clear()
+        self.comboBoxProvenance.addItems(self.listeProvenance)
 
-        self.boutonValider.clicked.connect(self.sauvegarderEquipement)
+        self.boutonValider.clicked.connect(self.verificationEquipement)
+
+        self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
+        self.marqueLabel = QLabel("Ici marque")
+        self.modeleLabel = QLabel("Ici Modele ")
+        self.numSerieLabel = QLabel("Ici No. de serie ")
+        self.salleLabel = QLabel("Ici Label ")
+        self.centreServiceLabel = QLabel("Ici Centre de service ")
+        self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
+        self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
+        self.provenanceLabel = QLabel()
+        self.etatServiceLabel = QLabel("Ici Etat de service ")
+        self.etatConservationLabel = QLabel("Ici Etat de conservation ")
+        self.commentaire = QLabel("Ici commentaires ")
+
+        self.listeLabel = list()
+        self.listeLabel.append(self.categorieEquipementLabel)
+        self.listeLabel.append(self.marqueLabel)
+        self.listeLabel.append(self.modeleLabel)
+        self.listeLabel.append(self.numSerieLabel)
+        self.listeLabel.append(self.salleLabel)
+        self.listeLabel.append(self.centreServiceLabel)
+        self.listeLabel.append(self.dateAcquisitionLabel)
+        self.listeLabel.append(self.dateEntretienLabel)
+        self.listeLabel.append(self.provenanceLabel)
+        self.listeLabel.append(self.etatServiceLabel)
+        self.listeLabel.append(self.etatConservationLabel)
+
+        for label in self.listeLabel:
+            self.layoutChamps.addWidget(label)
+            label.hide()
+
+        self.listeLabel.append(self.commentaire)
+        self.horizontalLayout_3.addWidget(self.commentaire)
+        self.commentaire.hide()
+
+        self.dateEditDateDaquisition.setMinimumWidth(200)
+        self.dateEditDateDuDernierEntretien.setMinimumWidth(200)
+
+        self.boutonModifier = QtWidgets.QPushButton()
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.boutonModifier.setFont(font)
+        self.boutonModifier.setObjectName("boutonModifier")
+        self.horizontalLayout_8.addWidget(self.boutonModifier)
+        self.boutonModifier.setText("Modifier")
+
+        self.boutonEnregister = QtWidgets.QPushButton()
+        self.boutonEnregister.setFont(font)
+        self.boutonEnregister.setObjectName("boutonEnregister")
+        self.horizontalLayout_8.addWidget(self.boutonEnregister)
+        self.boutonEnregister.setText("Enregistrer")
+
+        self.boutonEnregister.hide()
+        self.boutonModifier.hide()
+
+        self.boutonEnregister.clicked.connect(self.sauvegarderEquipement)
+        self.boutonModifier.clicked.connect(self.modifierEquipement)
+
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem2)
+
+        self.radioButtonEnService.setChecked(True)
+        self.radioButtonQuasiNeuf.setChecked(True)
+        self.comboBoxSalle.setEditable(True)
+        self.comboBoxProvenance.setEditable(True)
+        self.comboBoxCentreDeService.setEditable(True)
+
+        if self.equipementRecherche is not None:
+            self.remplirEquipement()
 
     def obtenirEtatDeService(self, groupeBoutton):
         """Methode permettant d'obtenir le choix selectionne parmi le groupe
@@ -482,34 +571,35 @@ class ModificationEquipementUI(object):
         Les informations sont recuperees de facon specifique selon le type du widget"""
         self.listeDonnees.clear()
         for widget in self.listeWidgets:
-                # self.stockage.dictionnaire
-                if type(widget) is QLineEdit:
-                        self.listeDonnees.append(widget.text())
-                elif type(widget) is QDateEdit:
-                        self.listeDonnees.append(widget.date().toPyDate())
-                        if isinstance(widget.date().toPyDate(), datetime.date):
-                            print("format date correct")
-                        else:
-                            print("probleme avec format date")
-                        print(widget.date().toPyDate())
-                        print(QDate.currentDate())
-                elif type(widget) is QComboBox:
-                        self.listeDonnees.append(widget.currentText())
-                        print(widget.currentText())
-                elif type(widget) is QButtonGroup:
-                        bouton = widget.checkedButton()
-                        etatDeService = bouton.text()
-                        print(etatDeService)
-                        self.listeDonnees.append(etatDeService)
+            # self.stockage.dictionnaire
+            if type(widget) is QLineEdit:
+                self.listeDonnees.append(widget.text())
+            elif type(widget) is QDateEdit:
+                self.listeDonnees.append(widget.date().toPyDate())
+                if isinstance(widget.date().toPyDate(), datetime.date):
+                    print("format date correct")
                 else:
-                        self.listeDonnees.append(widget.toPlainText())
-                        print(widget.toPlainText())
-        print (self.listeDonnees)
+                    print("probleme avec format date")
+                print(widget.date().toPyDate())
+                print(QDate.currentDate())
+            elif type(widget) is QComboBox:
+                self.listeDonnees.append(widget.currentText())
+                print(widget.currentText())
+            elif type(widget) is QButtonGroup:
+                bouton = widget.checkedButton()
+                etatDeService = bouton.text()
+                print(etatDeService)
+                self.listeDonnees.append(etatDeService)
+            else:
+                self.listeDonnees.append(widget.toPlainText())
+                print(widget.toPlainText())
+        print(self.listeDonnees)
+
 
     def sauvegarderEquipement(self):
         """Methode permettant l'enregristrement de l'equipement dans la BDD"""
 
-        self.donnees()
+        # self.donnees()
         i = 0
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
@@ -517,12 +607,71 @@ class ModificationEquipementUI(object):
         self.equipementManager = EquipementManager('DataBase_Equipement.json')
         print(self.equipementManager.ModifierEquipement(self.labelId.text(), self.equipement.dictionnaire))
 
+    def verificationEquipement(self):
+        "Methode affichant le recapitulatif de l'equipement"
+        self.donnees()
+        indice = 0
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        for text in self.listeDonnees:
+            if type(self.listeWidgets[indice]) is QButtonGroup:
+                for radioBouton in self.listeWidgets[indice].buttons():
+                    if not radioBouton.isChecked():
+                        radioBouton.hide()
+            else:
+                self.listeLabel[indice].setFont(font)
+                self.listeLabel[indice].setText(str(text))
+                self.listeLabel[indice].show()
+                self.listeWidgets[indice].hide()
+            indice += 1
+        self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
+        self.boutonEnregister.show()
+        self.boutonModifier.show()
+        self.boutonValider.hide()
+
+    def modifierEquipement(self):
+        indice = 0
+        for text in self.listeDonnees:
+            if type(self.listeWidgets[indice]) is QButtonGroup:
+                for radioBouton in self.listeWidgets[indice].buttons():
+                    radioBouton.show()
+            else:
+                self.listeLabel[indice].hide()
+                self.listeWidgets[indice].show()
+            indice += 1
+        self.labelId.setText("")
+        self.boutonEnregister.hide()
+        self.boutonValider.show()
+        self.boutonModifier.hide()
+
+
+    def remplirEquipement(self):
+        equipement = self.equipementRecherche
+        indice = 0
+        for widget in self.listeWidgets:
+            # self.stockage.dictionnaire
+            if type(widget) is QLineEdit:
+                widget.setText(equipement[self.listeCleDonnees[indice]])
+            elif type(widget) is QDateEdit:
+                widget.setDate(equipement[self.listeCleDonnees[indice]])
+            elif type(widget) is QComboBox:
+                widget.setCurrentText(equipement[self.listeCleDonnees[indice]])
+            elif type(widget) is QButtonGroup:
+                for radioBouton in widget.buttons():
+                    if radioBouton.text() == equipement[self.listeCleDonnees[indice]]:
+                        radioBouton.setChecked(True)
+            else:
+                widget.setText(equipement[self.listeCleDonnees[indice]])
+            indice += 1
+        self.labelId.setText(self.equipementRecherche["ID"])
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     modificationEquipement = QtWidgets.QWidget()
     modificationEquipementUI = ModificationEquipementUI()
-    modificationEquipementUI.setupUi(modificationEquipement)
+    modificationEquipementUI.setupUi(modificationEquipement, None)
     modificationEquipement.show()
     sys.exit(app.exec_())
 

@@ -471,16 +471,19 @@ class Ui_MainWindow(object):
 
     def modifierEquipement(self):
         self.masquerElementGraphique()
+        equipement = self.consultationEquipementUI.equipement
         if self.modificationEquipement is None:
             self.modificationEquipement = QtWidgets.QWidget()
             self.modificationEquipementUI = ModificationEquipementUI()
-            self.modificationEquipementUI.setupUi(self.modificationEquipement)
+            self.modificationEquipementUI.setupUi(self.modificationEquipement, equipement)
             self.modificationEquipement.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.modificationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipement)
         else:
             self.modificationEquipement.show()
+            self.modificationEquipementUI.equipementRecherche = equipement
+            self.modificationEquipementUI.remplirEquipement()
 
 
 if __name__ == "__main__":

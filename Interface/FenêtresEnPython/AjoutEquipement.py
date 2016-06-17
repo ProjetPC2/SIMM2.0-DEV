@@ -268,9 +268,21 @@ class AjoutEquipementUI(object):
         self.dateEditDateDuDernierEntretien = QtWidgets.QDateEdit(MainFrame)
         self.dateEditDateDuDernierEntretien.setObjectName("dateEditDateDuDernierEntretien")
         self.layoutChamps.addWidget(self.dateEditDateDuDernierEntretien)
-        self.lineEditProvenance = QtWidgets.QLineEdit(MainFrame)
-        self.lineEditProvenance.setObjectName("lineEditProvenance")
-        self.layoutChamps.addWidget(self.lineEditProvenance)
+
+        self.comboBoxProvenance = QtWidgets.QComboBox(MainFrame)
+
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        self.comboBoxProvenance.setFont(font)
+        self.comboBoxProvenance.setMaxCount(2147483645)
+        self.comboBoxProvenance.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.comboBoxProvenance.setObjectName("comboBoxProvenance")
+        self.comboBoxProvenance.addItem("")
+        self.comboBoxProvenance.addItem("")
+        self.comboBoxProvenance.addItem("")
+
+        self.layoutChamps.addWidget(self.comboBoxProvenance)
         self.formLayout.setLayout(1, QtWidgets.QFormLayout.FieldRole, self.layoutChamps)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
@@ -349,9 +361,12 @@ class AjoutEquipementUI(object):
         self.boutonValider.setFont(font)
         self.boutonValider.setObjectName("boutonValider")
         self.horizontalLayout_8.addWidget(self.boutonValider)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_8.addItem(spacerItem2)
+        # spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        # self.horizontalLayout_8.addItem(spacerItem2)
+
         self.formLayout.setLayout(4, QtWidgets.QFormLayout.SpanningRole, self.horizontalLayout_8)
+
+
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.labelTitreCommentaires = QtWidgets.QLabel(MainFrame)
@@ -366,6 +381,7 @@ class AjoutEquipementUI(object):
         self.formLayout.setLayout(3, QtWidgets.QFormLayout.SpanningRole, self.horizontalLayout_3)
 
         self.retranslateUi(MainFrame)
+        self.ajout()
         QtCore.QMetaObject.connectSlotsByName(MainFrame)
 
     def retranslateUi(self, MainFrame):
@@ -382,7 +398,7 @@ class AjoutEquipementUI(object):
         self.label_29.setText(_translate("MainFrame", "Date d\'aquisition : "))
         self.label_27.setText(_translate("MainFrame", "Date du dernier entretien : "))
         self.label_26.setText(_translate("MainFrame", "Provenance : "))
-        self.labelId.setText(_translate("MainFrame", "27"))
+        # self.labelId.setText(_translate("MainFrame", "27"))
         self.comboBoxCategorie.setItemText(0, _translate("MainFrame", "Catégorie 1"))
         self.comboBoxCategorie.setItemText(1, _translate("MainFrame", "Catégorie 2"))
         self.comboBoxCategorie.setItemText(2, _translate("MainFrame", "Catégorie 3"))
@@ -404,6 +420,7 @@ class AjoutEquipementUI(object):
         self.boutonValider.setText(_translate("MainFrame", "Valider"))
         self.labelTitreCommentaires.setText(_translate("MainFrame", "Commentaires : "))
 
+    def ajout(self):
 
         #Recuperation des choix radios
         self.groupeBoutonEtatService = QButtonGroup()
@@ -429,7 +446,7 @@ class AjoutEquipementUI(object):
         self.listeWidgets.append(self.comboBoxCentreDeService)
         self.listeWidgets.append(self.dateEditDateDaquisition)
         self.listeWidgets.append(self.dateEditDateDuDernierEntretien)
-        self.listeWidgets.append(self.lineEditProvenance)
+        self.listeWidgets.append(self.comboBoxProvenance)
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
@@ -456,7 +473,7 @@ class AjoutEquipementUI(object):
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
         self.listeSalle = list(self._conf['Salle'])
-        # self.listeProvenance = list(self._conf['Provenance'])
+        self.listeProvenance = list(self._conf['Provenance'])
 
         #Chargement des differentes listes deroulantes
         self.comboBoxCategorie.clear()
@@ -465,9 +482,79 @@ class AjoutEquipementUI(object):
         self.comboBoxSalle.addItems(self.listeSalle)
         self.comboBoxCentreDeService.clear()
         self.comboBoxCentreDeService.addItems(self.listeCentreService)
+        self.comboBoxProvenance.clear()
+        self.comboBoxProvenance.addItems(self.listeProvenance)
 
+        self.boutonValider.clicked.connect(self.verificationEquipement)
 
-        self.boutonValider.clicked.connect(self.sauvegarderEquipement)
+        self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
+        self.marqueLabel = QLabel("Ici marque")
+        self.modeleLabel = QLabel("Ici Modele ")
+        self.numSerieLabel = QLabel("Ici No. de serie ")
+        self.salleLabel = QLabel("Ici Label ")
+        self.centreServiceLabel = QLabel("Ici Centre de service ")
+        self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
+        self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
+        self.provenanceLabel = QLabel()
+        self.etatServiceLabel = QLabel("Ici Etat de service ")
+        self.etatConservationLabel = QLabel("Ici Etat de conservation ")
+        self.commentaire = QLabel("Ici commentaires ")
+
+        self.listeLabel = list()
+        self.listeLabel.append(self.categorieEquipementLabel)
+        self.listeLabel.append(self.marqueLabel)
+        self.listeLabel.append(self.modeleLabel)
+        self.listeLabel.append(self.numSerieLabel)
+        self.listeLabel.append(self.salleLabel)
+        self.listeLabel.append(self.centreServiceLabel)
+        self.listeLabel.append(self.dateAcquisitionLabel)
+        self.listeLabel.append(self.dateEntretienLabel)
+        self.listeLabel.append(self.provenanceLabel)
+        self.listeLabel.append(self.etatServiceLabel)
+        self.listeLabel.append(self.etatConservationLabel)
+
+        for label in self.listeLabel:
+            self.layoutChamps.addWidget(label)
+            label.hide()
+
+        self.listeLabel.append(self.commentaire)
+        self.horizontalLayout_3.addWidget(self.commentaire)
+        self.commentaire.hide()
+
+        self.dateEditDateDaquisition.setMinimumWidth(200)
+        self.dateEditDateDuDernierEntretien.setMinimumWidth(200)
+
+        self.boutonModifier = QtWidgets.QPushButton()
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.boutonModifier.setFont(font)
+        self.boutonModifier.setObjectName("boutonModifier")
+        self.horizontalLayout_8.addWidget(self.boutonModifier)
+        self.boutonModifier.setText("Modifier")
+
+        self.boutonEnregister = QtWidgets.QPushButton()
+        self.boutonEnregister.setFont(font)
+        self.boutonEnregister.setObjectName("boutonEnregister")
+        self.horizontalLayout_8.addWidget(self.boutonEnregister)
+        self.boutonEnregister.setText("Enregistrer")
+
+        self.boutonEnregister.hide()
+        self.boutonModifier.hide()
+
+        self.boutonEnregister.clicked.connect(self.sauvegarderEquipement)
+        self.boutonModifier.clicked.connect(self.modifierEquipement)
+
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem2)
+
+        self.radioButtonEnService.setChecked(True)
+        self.radioButtonQuasiNeuf.setChecked(True)
+        self.comboBoxSalle.setEditable(True)
+        self.comboBoxProvenance.setEditable(True)
+        self.comboBoxCentreDeService.setEditable(True)
 
     def obtenirEtatDeService(self, groupeBoutton):
         """Methode permettant d'obtenir le choix selectionne parmi le groupe
@@ -509,7 +596,7 @@ class AjoutEquipementUI(object):
     def sauvegarderEquipement(self):
         """Methode permettant l'enregristrement de l'equipement dans la BDD"""
 
-        self.donnees()
+        # self.donnees()
         i = 0
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
@@ -517,6 +604,62 @@ class AjoutEquipementUI(object):
         self.equipementManager = EquipementManager('DataBase_Equipement.json')
         print(self.equipementManager.AjouterEquipement(self.equipement.dictionnaire))
 
+    def verificationEquipement(self):
+        "Methode affichant le recapitulatif de l'equipement"
+        self.donnees()
+        indice = 0
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        for text in self.listeDonnees:
+            if type(self.listeWidgets[indice]) is QButtonGroup:
+                for radioBouton in self.listeWidgets[indice].buttons():
+                    if not radioBouton.isChecked():
+                        radioBouton.hide()
+            else:
+                self.listeLabel[indice].setFont(font)
+                self.listeLabel[indice].setText(str(text))
+                self.listeLabel[indice].show()
+                self.listeWidgets[indice].hide()
+            indice += 1
+        self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
+        self.boutonEnregister.show()
+        self.boutonModifier.show()
+        self.boutonValider.hide()
+
+    def modifierEquipement(self):
+        indice = 0
+        for text in self.listeDonnees:
+            if type(self.listeWidgets[indice]) is QButtonGroup:
+                for radioBouton in self.listeWidgets[indice].buttons():
+                        radioBouton.show()
+            else:
+                self.listeLabel[indice].hide()
+                self.listeWidgets[indice].show()
+            indice += 1
+        self.labelId.setText("")
+        self.boutonEnregister.hide()
+        self.boutonValider.show()
+        self.boutonModifier.hide()
+
+    def remplirEquipement(self):
+        equipement = self.equipementRecherche
+        indice = 0
+        for widget in self.listeWidgets:
+            # self.stockage.dictionnaire
+            if type(widget) is QLineEdit:
+                widget.setText(equipement[self.listeCleDonnees[indice]])
+            elif type(widget) is QDateEdit:
+                widget.setDate(equipement[self.listeCleDonnees[indice]])
+            elif type(widget) is QComboBox:
+                widget.setCurrentText(equipement[self.listeCleDonnees[indice]])
+            elif type(widget) is QButtonGroup:
+                for radioBouton in widget.buttons():
+                    if radioBouton.text() == equipement[self.listeCleDonnees[indice]]:
+                        radioBouton.setChecked(True)
+            else:
+                widget.setText(equipement[self.listeCleDonnees[indice]])
+            indice += 1
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
