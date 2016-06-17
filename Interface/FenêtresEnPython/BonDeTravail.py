@@ -471,7 +471,7 @@ class BonDeTravailUI(object):
         self.labelEcritureBonTravail.setText("")
 
         self.lineEditID.returnPressed.connect(self.chercherEquipement)
-        self.equipementManager = EquipementManager('DataBase_Equipement.yaml')
+        self.equipementManager = EquipementManager('DataBase_Equipement.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         self.equipementDictionnaire = dict()
         self.listeBonDeTravail = list()

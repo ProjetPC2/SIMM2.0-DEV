@@ -9,6 +9,7 @@ Dans cette exemple vous pourrez voir comment :
 
 import sys
 
+import yaml
 from PyQt5.QtCore import QDate
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon, QFont
@@ -89,15 +90,15 @@ class Statistique(QWidget):
         provenance = QHBoxLayout()
         provenanceLabel = QLabel("Provenance choix ")
         self.listeComboProvenance = QComboBox()
-        self.listeComboProvenance.addItem("provenance1")
-        self.listeComboProvenance.addItem("provenance2")
-        self.listeComboProvenance.addItem("provenance3")
+        # self.listeComboProvenance.addItem("provenance1")
+        # self.listeComboProvenance.addItem("provenance2")
+        # self.listeComboProvenance.addItem("provenance3")
 
         provenance.addWidget(provenanceLabel)
         provenance.addWidget(self.listeComboProvenance)
 
-        nombreEquipementProvenance = 90
-        self.nombreEquipementProvenanceChoisi = QLabel("Nombre d'equipement de cette provenance : %d" %nombreEquipementProvenance)
+        self.nombreEquipementProvenance = 0
+        self.nombreEquipementProvenanceChoisi = QLabel("Nombre d'equipement de cette provenance : %d" %self.nombreEquipementProvenance)
 
         resume = QHBoxLayout()
         resumeLabel = QLabel("<b>Resume d'inventaire par centre de Service</b>")
@@ -116,23 +117,22 @@ class Statistique(QWidget):
         ]
 
         # creation d'une table widget de taille 3x2
-        self.table = QTableWidget(3, 2)
+        self.table = QTableWidget(0,2)
         # on met les titres des colonnes
-        self.table.setHorizontalHeaderLabels(["Categorie equipement", "Quantite"])
         self.table.setMinimumHeight(500)
-        self.table.resizeRowsToContents()
         # remplissage du tableau
-        for i, (name, color) in enumerate(tableData):
-            # Creation des QTableWidgetItem
-            nameItem = QTableWidgetItem(name)
-            colorItem = QTableWidgetItem(color)
-            # Insertion des elements
-            self.table.setItem(i, 0, nameItem)
-            self.table.setItem(i, 1, colorItem)
+        # for i, (name, color) in enumerate(tableData):
+        #     # Creation des QTableWidgetItem
+        #     nameItem = QTableWidgetItem(name)
+        #     colorItem = QTableWidgetItem(color)
+        #     # Insertion des elements
+        #     self.table.setItem(i, 0, nameItem)
+        #     self.table.setItem(i, 1, colorItem)
         self.table.resizeColumnToContents(0)
         self.table.resizeRowsToContents()
+
         # On fait en sorte que la table prend la largeur de la fenetre
-        self.table.horizontalHeader().setStretchLastSection(True)
+        # self.table.horizontalHeader().setStretchLastSection(True)
 
 
         # Window sera le layout vertical principal qui contiendra les autres layout
@@ -152,8 +152,41 @@ class Statistique(QWidget):
         self.setLayout(window)
         # self.setGeometry(200, 100, 200, 1000)
 
+        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
+        try:
+            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            with fichierConf:
+                self._conf = yaml.load(fichierConf)
+        except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
+            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+        # récupère la liste des 'accepted keys' dans le fichier de configuration
+        # self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
+        # print("liste des cles : ", self.listeCleDonnees)
+        self.listeProvenance = list(self._conf['Provenance'])
+        # self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
+        # self.listeEtatService = list(self._conf['EtatService'])
+        self.listeCentreService = list(self._conf['CentreService'])
+        # self.listeSalle = list(self._conf['Salle'])
 
+        self.listeComboProvenance.addItem("")
+        self.listeComboProvenance.addItem("Tous")
+        self.listeComboProvenance.addItems(self.listeProvenance)
+        self.listeComboService.clear()
+        self.listeComboService.addItem("")
+        self.listeComboService.addItems(self.listeCentreService)
 
+        self.table.clear()
+        self.table.setHorizontalHeaderLabels(["Categorie equipement", "Quantite"])
+        self.table.setWordWrap(True)    
+        self.table.resizeColumnToContents(0)
+        self.table.resizeRowsToContents()
+        self.table.horizontalHeader().setStretchLastSection(True)
+
+        self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
+        self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
+
+        self.listeComboProvenance.currentTextChanged.connect(self.affichageProvenance)
+        self.listeComboService.currentTextChanged.connect(self.affichageCenreService)
 
     def center(self):
         """Methode permettant de centrer la fenetre"""
@@ -270,6 +303,43 @@ class Statistique(QWidget):
         self.desuet = dictionnaire["Desuet"]
 
         print(self.nombreEquipement)
+
+    def affichageProvenance(self):
+        if(self.listeComboProvenance.currentText() is not ""):
+            if(self.listeComboProvenance.currentText() == "Tous"):
+                total = 0
+                for value in self.statsProvenance.values():
+                    total += value
+                self.nombreEquipementProvenance = total
+            else:
+                self.nombreEquipementProvenance = self.statsProvenance[self.listeComboProvenance.currentText()]
+        else:
+            self.nombreEquipementProvenance = 0
+        self.nombreEquipementProvenanceChoisi.setText((
+            "Nombre d'equipement de cette provenance : %d" % self.nombreEquipementProvenance))
+
+    def affichageCenreService(self):
+        if(self.listeComboService.currentText() == ""):
+            dictionnaireResultat = dict()
+            for dictionnaire in self.statsCategorie.values():
+                for cle, valeur in dictionnaire.items():
+                    if cle in dictionnaireResultat:
+                        dictionnaireResultat[cle] += valeur
+                    else:
+                        dictionnaireResultat[cle] = valeur
+            self.table.setRowCount(len(dictionnaireResultat))
+            ligne = 0
+            for cle,valeur in dictionnaireResultat.items():
+                self.table.setItem(ligne, 0, QTableWidgetItem(cle))
+                self.table.setItem(ligne, 1, QTableWidgetItem(valeur))
+                ligne += 1
+        else:
+            ligne = 0
+            self.table.setRowCount(len(self.statsCategorie[self.listeComboService.currentText()]))
+            for cle, valeur in self.statsCategorie[self.listeComboService.currentText()].items():
+                self.table.setItem(ligne, 0, QTableWidgetItem(cle))
+                self.table.setItem(ligne, 1, QTableWidgetItem(valeur))
+                ligne += 1
 
 if __name__ == "__main__": #Si le fichier est lancé tout seul
 

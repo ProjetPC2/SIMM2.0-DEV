@@ -40,6 +40,10 @@ EtatService:
 - En service
 - En maintenance
 - Au rebus
+Provenance:
+- CSI
+- POLY
+- CHU Ste-Justine
 Salle:
 - A123
 - B518

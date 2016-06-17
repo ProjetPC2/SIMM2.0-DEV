@@ -13,7 +13,7 @@ _default:
       Modele: ''
       NbBonTravail: 7
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 1
@@ -67,7 +67,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 4
@@ -85,7 +85,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 5
@@ -103,7 +103,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 6
@@ -121,7 +121,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 7
@@ -139,7 +139,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 8
@@ -157,7 +157,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 9
@@ -175,7 +175,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 10
@@ -193,7 +193,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 11
@@ -211,7 +211,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 12
@@ -229,7 +229,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 13
@@ -247,7 +247,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 14
@@ -265,7 +265,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: POLY
       Salle: Salle 1
     state:
       eid: 15
