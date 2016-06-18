@@ -304,8 +304,6 @@ class RechercheEquipementUI(object):
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
-        print("liste des cles : ", self.listeCleDonnees)
-
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
@@ -397,7 +395,6 @@ class RechercheEquipementUI(object):
 
     def remplirTableau(self):
         if(any(self.dictionnaireRecherche)):
-            print(self.equipementManager.RechercherEquipement(self.dictionnaireRecherche))
             liste = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
             self.tableResultats.setRowCount(len(liste))
             for i, dictionnaire in enumerate(liste):

@@ -333,7 +333,6 @@ class RechercheBonDeTravailUI(object):
 
     def rechercheDescriptionSituation(self):
         if (self.lineEdit.text() is not ""):
-            print(self.lineEdit.text())
             self.dictionnaireRechercheBDT["DescriptionSituation"] = self.lineEdit.text()
 
 
@@ -366,7 +365,6 @@ class RechercheBonDeTravailUI(object):
 
     def remplirTableau(self):
         if (any(self.dictionnaireRecherche)):
-            print(self.equipementManager.RechercherEquipement(self.dictionnaireRecherche))
             liste = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
             listeBonTravail = list()
             listeDonnees = list()
@@ -395,7 +393,6 @@ class RechercheBonDeTravailUI(object):
         else:
             if (any(self.dictionnaireRechercheBDT)):
                 liste = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRechercheBDT)
-                print(liste)
                 listeDonnees = list()
                 for bdt in liste :
                         equipement = self.equipementManager.RechercherEquipement({"ID": bdt["ID-EQ"]})[0]

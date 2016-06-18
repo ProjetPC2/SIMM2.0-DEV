@@ -467,7 +467,6 @@ class ConsultationEquipementUI(object):
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
-        print("liste des cles : ", self.listeCleDonnees)
         fichierConf.close()
 
 
@@ -488,35 +487,22 @@ class ConsultationEquipementUI(object):
         if(any(listeEquipement)):
             self.boutonModifierEquipement.setEnabled(True)
             self.equipement = listeEquipement[0]
-            print(self.equipement)
             i = 0
             for cle in self.listeCleDonnees:
                 #Recuperation des donnees sous forme de string
                 self.listeLabel[i].setText(str(self.equipement[cle]))
                 i += 1
         else:
-            print("equipement non existant")
             self.boutonModifierEquipement.setEnabled(False)
 
 
     def modifierEquipement(self):
         #Fonction inutle pour l'instant
-        print("Appuie sur bouton modification Equipement")
         self.modificationEquipement = QtWidgets.QWidget()
         self.modificationEquipementUI = ModificationEquipementUI()
         self.modificationEquipementUI.setupUi(self.modificationEquipement)
         self.modificationEquipement.setStyleSheet("background: white;")
         self.layoutPrincipal.addWidget(self.modificationEquipement)
-        # MainFrame = (self.modificationEquipement)
-        print(self.gridLayout.children())
-    # def modifierEquipement(self):
-    #     pass
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

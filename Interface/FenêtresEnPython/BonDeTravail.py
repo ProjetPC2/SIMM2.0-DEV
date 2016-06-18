@@ -507,7 +507,6 @@ class BonDeTravailUI(object):
             self.labelEcritureSalle.setText("")
             self.labelEcritureModele.setText("")
             self.listeBonDeTravail.clear()
-        print(self.listeBonDeTravail)
 
 
     def sauvegarderBonDeTravail(self):

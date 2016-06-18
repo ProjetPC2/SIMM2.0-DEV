@@ -467,7 +467,6 @@ class AjoutEquipementUI(object):
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
-        print("liste des cles : ", self.listeCleDonnees)
 
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
@@ -561,7 +560,6 @@ class AjoutEquipementUI(object):
         de radio bouton"""
         bouton = self.groupeBoutonEtatService.checkedButton()
         self.etatDeService = bouton.text()
-        print(self.etatDeService)
 
     def donnees(self):
         """Methode permettant la recuperation des donnees dans les differents widgets
@@ -578,20 +576,14 @@ class AjoutEquipementUI(object):
                             print("format date correct")
                         else:
                             print("probleme avec format date")
-                        print(widget.date().toPyDate())
-                        print(QDate.currentDate())
                 elif type(widget) is QComboBox:
                         self.listeDonnees.append(widget.currentText())
-                        print(widget.currentText())
                 elif type(widget) is QButtonGroup:
                         bouton = widget.checkedButton()
                         etatDeService = bouton.text()
-                        print(etatDeService)
                         self.listeDonnees.append(etatDeService)
                 else:
                         self.listeDonnees.append(widget.toPlainText())
-                        print(widget.toPlainText())
-        print (self.listeDonnees)
 
     def sauvegarderEquipement(self):
         """Methode permettant l'enregristrement de l'equipement dans la BDD"""
@@ -602,7 +594,6 @@ class AjoutEquipementUI(object):
             self.equipement.listeMethodes[i](donnees)
             i += 1
         self.equipementManager = EquipementManager('DataBase_Equipement.json')
-        print(self.equipementManager.AjouterEquipement(self.equipement.dictionnaire))
 
     def verificationEquipement(self):
         "Methode affichant le recapitulatif de l'equipement"

@@ -342,7 +342,7 @@ class Ui_MainWindow(object):
         self.BoutonRechercherBonTravail.clicked.connect(self.afficherRechercheBonDeTravail)
 
         self.statistique = None
-        self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
+        # self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
 
         self.support = None
         self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
@@ -363,7 +363,6 @@ class Ui_MainWindow(object):
         self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
 
     def afficherAjoutEquipement(self):
-        print("Appuie sur bouton Ajouter Equipement")
         self.masquerElementGraphique()
 
         if self.ajoutEquipement is None :
@@ -378,7 +377,6 @@ class Ui_MainWindow(object):
             self.ajoutEquipement.show()
 
     def afficherConsultationEquipement(self):
-        print("Appuie sur bouton Consultation Equipement")
         self.masquerElementGraphique()
         if self.consultationEquipement is None:
             self.consultationEquipement = QtWidgets.QWidget()
@@ -394,7 +392,6 @@ class Ui_MainWindow(object):
             self.consultationEquipement.show()
 
     def afficherRechercheEquipement(self):
-        print("Appuie sur bouton Recherche Equipement")
         self.masquerElementGraphique()
         if self.rechercheEquipement is None:
             self.rechercheEquipement = QtWidgets.QWidget()
@@ -408,7 +405,6 @@ class Ui_MainWindow(object):
 
 
     def afficherAjoutBonDeTravail(self):
-        print("Appuie sur bouton ajout Equipement")
         self.masquerElementGraphique()
         if self.ajoutBonDeTravail is None:
             self.ajoutBonDeTravail = QtWidgets.QWidget()
@@ -423,7 +419,6 @@ class Ui_MainWindow(object):
             self.ajoutBonDeTravail.show()
 
     def afficherRechercheBonDeTravail(self):
-        print("Appuie sur bouton ajout RechercheBonDeTravail")
         self.masquerElementGraphique()
         if self.rechercheBonDeTravail is None:
             self.rechercheBonDeTravail = QtWidgets.QWidget()
@@ -437,7 +432,6 @@ class Ui_MainWindow(object):
             self.rechercheBonDeTravail.show()
 
     def afficherStatistique(self):
-        print("Appuie sur bouton ajout Statistique")
         self.masquerElementGraphique()
 
         if self.statistique is None:
@@ -452,7 +446,6 @@ class Ui_MainWindow(object):
 
 
     def afficherSupport(self):
-        print("Appuie sur bouton ajout Support")
         self.masquerElementGraphique()
         if self.support is None:
             self.support = QtWidgets.QWidget()
