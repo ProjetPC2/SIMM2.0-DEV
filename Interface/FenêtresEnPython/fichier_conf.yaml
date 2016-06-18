@@ -84,7 +84,7 @@ Equipement_ChampFormatPrecis:
 - DateDernierEntretien
 EtatBDT:
 - Ouvert
-- Ferme
+- "Ferm\xC3\xA9"
 EtatConservation:
 - Quasi neuf
 - Acceptable
