@@ -505,7 +505,7 @@ class ConsultationEquipementUI(object):
         dictionnaireBDTRecherche = dict()
         dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
         listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
-
+        self.comboBoxBons.clear()
         if(any(listeBonDeTravail)):
             icon2 = QtGui.QIcon()
             icon2.addPixmap(
