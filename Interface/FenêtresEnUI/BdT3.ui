@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1518</width>
-    <height>1183</height>
+    <width>924</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -123,7 +123,7 @@ background:rgb(247,247,247)
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../../../GitHub/SIMM2.0-DEV/Interface/Images/plus.png</pixmap>
+         <pixmap>../Images/plus.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
@@ -183,7 +183,7 @@ background:rgb(247,247,247)
              <string notr="true">QLineEdit {
 padding: 1px;
 border-style: solid;
-border: 1px solid gray;
+border: 2px solid rgb(145, 220, 90);
 border-radius: 4px;
 background:rgb(247,247,247);
 }
@@ -204,12 +204,14 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247;)
+background:rgb(247,247,247);
+color: rgb(81, 81, 81);
 }
+
 </string>
             </property>
             <property name="text">
-             <string>Respirateur</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -281,12 +283,13 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247;)
+background:rgb(247,247,247);
+color: rgb(81, 81, 81);
 }
 </string>
             </property>
             <property name="text">
-             <string>GE</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -303,12 +306,13 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247)
+background:rgb(247,247,247);
+color: rgb(81, 81, 81);
 }
 </string>
             </property>
             <property name="text">
-             <string>2.0</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -337,12 +341,13 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247;)
+background:rgb(247,247,247);
+color: rgb(81, 81, 81);
 }
 </string>
             </property>
             <property name="text">
-             <string>xxx</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -359,47 +364,19 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247;)
+background:rgb(247,247,247);
+color: rgb(81, 81, 81);
 }
 </string>
             </property>
             <property name="text">
-             <string>Urgence</string>
+             <string/>
             </property>
            </widget>
           </item>
          </layout>
         </item>
        </layout>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Maximum</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>60</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="labelPhotoOutils">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../../../GitHub/SIMM2.0-DEV/Interface/Images/repair-tools (1).png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>false</bool>
-        </property>
-       </widget>
       </item>
       <item>
        <spacer name="horizontalSpacer_7">
@@ -460,6 +437,29 @@ background:rgb(247,247,247;)
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
+             <widget class="QPushButton" name="boutonAjout">
+              <property name="maximumSize">
+               <size>
+                <width>50</width>
+                <height>180</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../Images/plus_64.png</normaloff>../Images/plus_64.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QPushButton" name="boutonSauvegarde">
               <property name="maximumSize">
                <size>
@@ -481,7 +481,7 @@ background:rgb(247,247,247;)
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/save (1).png</normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/save (1).png</iconset>
+                <normaloff>../Images/save (1).png</normaloff>../Images/save (1).png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -510,7 +510,7 @@ background:rgb(247,247,247;)
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/double-left-chevron.png</normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/double-left-chevron.png</iconset>
+                <normaloff>../Images/double-left-chevron.png</normaloff>../Images/double-left-chevron.png</iconset>
               </property>
              </widget>
             </item>
@@ -533,7 +533,7 @@ background:rgb(247,247,247;)
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/angle-pointing-to-left (1).png</normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/angle-pointing-to-left (1).png</iconset>
+                <normaloff>../Images/angle-pointing-to-left (1).png</normaloff>../Images/angle-pointing-to-left (1).png</iconset>
               </property>
              </widget>
             </item>
@@ -556,7 +556,7 @@ background:rgb(247,247,247;)
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/angle-arrow-pointing-to-right.png</normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/angle-arrow-pointing-to-right.png</iconset>
+                <normaloff>../Images/angle-arrow-pointing-to-right.png</normaloff>../Images/angle-arrow-pointing-to-right.png</iconset>
               </property>
              </widget>
             </item>
@@ -579,7 +579,7 @@ background:rgb(247,247,247;)
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/double-angle-pointing-to-right.png</normaloff>../../../GitHub/SIMM-2.0/Fenetre avec Qt designer/Bdt/double-angle-pointing-to-right.png</iconset>
+                <normaloff>../Images/double-angle-pointing-to-right.png</normaloff>../Images/double-angle-pointing-to-right.png</iconset>
               </property>
              </widget>
             </item>
@@ -632,12 +632,13 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247;)
+background:rgb(247,247,247);
+color: rgb(81, 81, 81);
 }
 </string>
             </property>
             <property name="text">
-             <string>62-2</string>
+             <string/>
             </property>
            </widget>
           </item>
