@@ -9,6 +9,7 @@ import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QVBoxLayout
 
+from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquipementUI
 
@@ -457,6 +458,7 @@ class ConsultationEquipementUI(object):
 
         #Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -478,6 +480,9 @@ class ConsultationEquipementUI(object):
         self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
         self.boutonModifierEquipement.setEnabled(False)
 
+        self.comboBoxBons.clear()
+
+        # self.comboBoxBons.addItem(icon2, "")
 
     def rechercherEquipement(self):
         equipementRecherche = dict()
@@ -492,8 +497,24 @@ class ConsultationEquipementUI(object):
                 #Recuperation des donnees sous forme de string
                 self.listeLabel[i].setText(str(self.equipement[cle]))
                 i += 1
+            self.rechercherBonDeTravailAssocie()
         else:
             self.boutonModifierEquipement.setEnabled(False)
+
+    def rechercherBonDeTravailAssocie(self):
+        dictionnaireBDTRecherche = dict()
+        dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
+        listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
+
+        if(any(listeBonDeTravail)):
+            icon2 = QtGui.QIcon()
+            icon2.addPixmap(
+                QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png"),
+                QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            for bdt in listeBonDeTravail:
+                affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
+                self.comboBoxBons.addItem(icon2, affichage)
+
 
 
     def modifierEquipement(self):
