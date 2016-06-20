@@ -114,7 +114,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       <widget class="QLabel" name="titreAjoutEquipement">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>MS Shell Dlg 2</family>
          <pointsize>18</pointsize>
          <weight>75</weight>
          <italic>false</italic>
