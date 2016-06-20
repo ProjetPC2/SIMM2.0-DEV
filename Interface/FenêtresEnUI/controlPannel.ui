@@ -72,6 +72,39 @@
            </spacer>
           </item>
           <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}
+
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);
+}
+QPushButton:pressed{ background-color: #cccccc; }</string>
+            </property>
+            <property name="text">
+             <string>Accueil</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../../../../Downloads/home.png</normaloff>../../../../../Downloads/home.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="BoutonAjouterEquipement">
             <property name="font">
              <font>
