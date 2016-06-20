@@ -422,13 +422,13 @@ class AjoutEquipementUI(object):
 
     def ajout(self):
 
-        #Recuperation des choix radios
+        #Creation du groupe contenant le choix pour l'etat de service
         self.groupeBoutonEtatService = QButtonGroup()
         self.groupeBoutonEtatService.addButton(self.radioButtonEnService)
         self.groupeBoutonEtatService.addButton(self.radioButtonEnMaintenance)
         self.groupeBoutonEtatService.addButton(self.radioButtonAuRebus)
 
-
+        #Creation du groupe contenant le choix pour l'etat de conservation
         self.groupeBoutonEtatConservation = QButtonGroup()
         self.groupeBoutonEtatConservation.addButton(self.radioButtonQuasiNeuf)
         self.groupeBoutonEtatConservation.addButton(self.radioButtonAcceptable)
@@ -436,7 +436,7 @@ class AjoutEquipementUI(object):
         self.groupeBoutonEtatConservation.addButton(self.radioButtonDesuet)
 
 
-        #Recuperation des widgets dans une liste
+        #Recuperation des differents elements utiles de la fenetre dans une liste
         self.listeWidgets = list()
         self.listeWidgets.append(self.comboBoxCategorie)
         self.listeWidgets.append(self.lineEditMarque)
@@ -451,7 +451,7 @@ class AjoutEquipementUI(object):
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
 
-        self.listeDonnees = list()
+        #Creation de la variable equipement qui servira a l'enregistrement dans la BDD
         self.equipement = Equipement()
         self.equipement.ajoutListeMethodes()
 
@@ -468,6 +468,7 @@ class AjoutEquipementUI(object):
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
 
+        #Recuperation des differents elements des listes deroulantes
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
@@ -484,8 +485,10 @@ class AjoutEquipementUI(object):
         self.comboBoxProvenance.clear()
         self.comboBoxProvenance.addItems(self.listeProvenance)
 
+        #Connexion du bouton valider
         self.boutonValider.clicked.connect(self.verificationEquipement)
 
+        #Creation des differents labels pour la verification
         self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
         self.marqueLabel = QLabel("Ici marque")
         self.modeleLabel = QLabel("Ici Modele ")
@@ -499,6 +502,8 @@ class AjoutEquipementUI(object):
         self.etatConservationLabel = QLabel("Ici Etat de conservation ")
         self.commentaire = QLabel("Ici commentaires ")
 
+        #Creation du liste pour manipuler plus facilement ces differents labels
+        #--ATTETION-- L'ordre est donc important
         self.listeLabel = list()
         self.listeLabel.append(self.categorieEquipementLabel)
         self.listeLabel.append(self.marqueLabel)
@@ -512,17 +517,21 @@ class AjoutEquipementUI(object):
         self.listeLabel.append(self.etatServiceLabel)
         self.listeLabel.append(self.etatConservationLabel)
 
+        #Masquage des differents labels
         for label in self.listeLabel:
             self.layoutChamps.addWidget(label)
             label.hide()
 
+        #Traitement de la partie commentaires
         self.listeLabel.append(self.commentaire)
         self.horizontalLayout_3.addWidget(self.commentaire)
         self.commentaire.hide()
 
+        #Redefinition de la taille des champs d'entree de date
         self.dateEditDateDaquisition.setMinimumWidth(200)
         self.dateEditDateDuDernierEntretien.setMinimumWidth(200)
 
+        #Creation des boutons de modification et d'enregistrement
         self.boutonModifier = QtWidgets.QPushButton()
         font = QtGui.QFont()
         font.setPointSize(-1)
@@ -549,8 +558,10 @@ class AjoutEquipementUI(object):
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem2)
 
+        #Selection des choix par defaut pour les radio boutons
         self.radioButtonEnService.setChecked(True)
         self.radioButtonQuasiNeuf.setChecked(True)
+        #Mise en place de la modification des champs deroulants
         self.comboBoxSalle.setEditable(True)
         self.comboBoxProvenance.setEditable(True)
         self.comboBoxCentreDeService.setEditable(True)
@@ -596,7 +607,7 @@ class AjoutEquipementUI(object):
         self.equipementManager = EquipementManager('DataBase_Equipement.json')
 
     def verificationEquipement(self):
-        "Methode affichant le recapitulatif de l'equipement"
+        """Methode affichant le recapitulatif de l'equipement"""
         self.donnees()
         indice = 0
         font = QtGui.QFont()
@@ -619,6 +630,8 @@ class AjoutEquipementUI(object):
         self.boutonValider.hide()
 
     def modifierEquipement(self):
+        """Action lors de l'appuie sur le bouton modifier
+        On repasse sur l'ajout d'un equipement avec les champs modifiables"""
         indice = 0
         for text in self.listeDonnees:
             if type(self.listeWidgets[indice]) is QButtonGroup:
@@ -651,6 +664,9 @@ class AjoutEquipementUI(object):
             else:
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             indice += 1
+
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
