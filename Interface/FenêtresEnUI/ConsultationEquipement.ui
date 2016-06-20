@@ -135,7 +135,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/pencil-edit-button.png</pixmap>
+        <pixmap>pencil-edit-button_Hatim.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -703,7 +703,7 @@ nous sommes programmés ainsi.</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../Downloads/navigation.png</normaloff>../../../../../Downloads/navigation.png</iconset>
+         <normaloff>navigation.png</normaloff>navigation.png</iconset>
        </property>
       </widget>
      </item>
