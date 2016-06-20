@@ -315,7 +315,7 @@ class Ui_MainWindow(object):
 "Hôpital Saint-Michel "))
         self.LabelDefinitionSIMM.setText(_translate("MainWindow", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 
-
+        self.ajoutAccueil()
 
     def ajoutAccueil(self):
         '''
