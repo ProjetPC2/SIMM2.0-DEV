@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>876</width>
-    <height>703</height>
+    <width>938</width>
+    <height>738</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -233,6 +233,36 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <size>
          <width>42</width>
          <height>42</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="boutonAjouterUnBon">
+       <property name="text">
+        <string>Ajouter un Bon </string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>plus.png</normaloff>plus.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
         </size>
        </property>
       </widget>
