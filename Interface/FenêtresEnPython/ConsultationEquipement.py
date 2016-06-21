@@ -540,7 +540,6 @@ class ConsultationEquipementUI(object):
                 self.comboBoxBons.addItem(icon2, affichage)
 
 
-
     def modifierEquipement(self):
         #Fonction inutle pour l'instant
         self.modificationEquipement = QtWidgets.QWidget()

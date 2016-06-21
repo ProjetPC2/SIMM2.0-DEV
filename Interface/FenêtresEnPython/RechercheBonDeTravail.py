@@ -272,6 +272,9 @@ class RechercheBonDeTravailUI(object):
         item = self.tableResultats.horizontalHeaderItem(6)
         item.setText(_translate("PC2", "Description"))
 
+        self.ajoutRechercheBonDeTravail()
+
+    def ajoutRechercheBonDeTravail(self):
         # Recuperation des differents attributs
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
@@ -292,6 +295,7 @@ class RechercheBonDeTravailUI(object):
         self.listeEtatService = list(self._conf['EtatService'])
         # self.listeProvenance = list(self._conf['Provenance'])
 
+        #Mise a jour des differentes listes deroulantes
         self.buttonCategorie.clear()
         self.buttonCategorie.addItem("")
         self.buttonCategorie.addItems(self.listeCategorieEquipement)
@@ -305,6 +309,7 @@ class RechercheBonDeTravailUI(object):
 
         fichierConf.close()
 
+        #Creation des differents colonnes pour le tableau de resultat
         self.listeCleDonnees = list(["ID", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "ID-BDT", "DescriptionSituation"])
 
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
@@ -314,6 +319,7 @@ class RechercheBonDeTravailUI(object):
         self.dictionnaireRecherche = dict()
         self.dictionnaireRechercheBDT = dict()
 
+        #Connexion des differentes recherches pour la mise a jour automatique
         self.buttonCategorie.currentTextChanged.connect(self.rechercheCategorieEquipement)
         self.buttonAvant.currentTextChanged.connect(self.rechercheEtatDeService)
         self.buttonCdS.currentTextChanged.connect(self.rechercheCentreService)
@@ -324,22 +330,42 @@ class RechercheBonDeTravailUI(object):
 
 
     def rechercheDateAvant(self):
+        '''
+            Recuperation des bons de travails qui sont anterieurs a la date indique
+            :param: None
+            :return:
+        '''
         self.dictionnaireRechercheBDT["AvantLe"] = self.calendrierAvant.date().toPyDate()
         self.remplirTableau()
 
     def rechercheDateApres(self):
+        '''
+            Recuperation des bons de travails qui sont posterieurs a la date indique
+            :param: None
+            :return:
+        '''
         self.dictionnaireRechercheBDT["ApresLe"] = self.calendrierApres.date().toPyDate()
         self.remplirTableau()
 
     def rechercheDescriptionSituation(self):
-        if (self.lineEdit.text() is not ""):
+        '''
+            Recuperation des bons de travails correspondant a la description
+            :param: None
+            :return:
+        '''
+        if (self.lineEdit.text() == ""):
             self.dictionnaireRechercheBDT["DescriptionSituation"] = self.lineEdit.text()
 
 
     def rechercheCategorieEquipement(self):
+        '''
+            Recuperation des bons de travails associe a une categorie d'equipement
+            :param: None
+            :return:
+        '''
         """Methode permettant la recherche par rapport au champ de recherche
         de categorie d'equipement"""
-        if (self.buttonCategorie.currentText() is not ""):
+        if (self.buttonCategorie.currentText() == ""):
             self.dictionnaireRecherche["CategorieEquipement"] = self.buttonCategorie.currentText()
 
         else:
@@ -348,7 +374,12 @@ class RechercheBonDeTravailUI(object):
 
 
     def rechercheEtatDeService(self):
-        if (self.buttonAvant.currentText() is not ""):
+        '''
+            Recuperation des bons de travails associe a un etat de service
+            :param: None
+            :return:
+        '''
+        if (self.buttonAvant.currentText() == ""):
             self.dictionnaireRecherche["EtatService"] = self.buttonAvant.currentText()
 
         else:
@@ -356,7 +387,12 @@ class RechercheBonDeTravailUI(object):
         self.remplirTableau()
 
     def rechercheCentreService(self):
-        if (self.buttonCdS.currentText() is not ""):
+        '''
+            Recuperation des bons de travails associe a un centre de service
+            :param: None
+            :return:
+        '''
+        if (self.buttonCdS.currentText() == ""):
             self.dictionnaireRecherche["CentreService"] = self.buttonCdS.currentText()
 
         else:
@@ -364,11 +400,17 @@ class RechercheBonDeTravailUI(object):
         self.remplirTableau()
 
     def remplirTableau(self):
+        '''
+            Remplissage du tableau de resultat avec les eventuels bons de travail trouves
+            :param: None
+            :return:
+        '''
         if (any(self.dictionnaireRecherche)):
             liste = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
             listeBonTravail = list()
             listeDonnees = list()
             for element in liste:
+                #Recherche a partir des attributs des equipements
                 for bonTravail in self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": element["ID"]}):
                     #Recuperation des bons de travail associe a un equipement
                     listeBonTravail.append(bonTravail)
@@ -391,6 +433,7 @@ class RechercheBonDeTravailUI(object):
                     colonne += 1
 
         else:
+            #Recherche parmi les coordonnes
             if (any(self.dictionnaireRechercheBDT)):
                 liste = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRechercheBDT)
                 listeDonnees = list()
