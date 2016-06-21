@@ -491,11 +491,19 @@ class ConsultationEquipementUI(object):
         # self.comboBoxBons.addItem(icon2, "")
 
     def rechercherEquipement(self):
+        '''
+            Methode permettant la recherche de l'equipement par son ID
+            Affichage des informations de l'equipement dans les labels correspondants
+            :param: None
+            :return:
+        '''
+        #Recuperation du dictionnaire de resultat
         equipementRecherche = dict()
         equipementRecherche["ID"] = self.lineEditId.text()
         listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
 
         if(any(listeEquipement)):
+            #Cas ou l'equipement existe
             self.boutonModifierEquipement.setEnabled(True)
             self.equipement = listeEquipement[0]
             i = 0
@@ -505,14 +513,24 @@ class ConsultationEquipementUI(object):
                 i += 1
             self.rechercherBonDeTravailAssocie()
         else:
+            #Cas ou l'equipement n'existe pas
             self.boutonModifierEquipement.setEnabled(False)
 
     def rechercherBonDeTravailAssocie(self):
+        '''
+            Recuperation des bons de travails associe a un equipement
+            Affichage des numeros des bons dans la liste deroulantes
+            :param: None
+            :return:
+        '''
+        #Recuperation des bons associees a l'equipement
         dictionnaireBDTRecherche = dict()
+        #TODO : verifier que l'ID-EQ recupere bien que cet ID
         dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
         listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
         self.comboBoxBons.clear()
         if(any(listeBonDeTravail)):
+            #Dans le cas ou on a trouve des bons de travail, on les affiche
             icon2 = QtGui.QIcon()
             icon2.addPixmap(
                 QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png"),
