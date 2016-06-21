@@ -457,7 +457,7 @@ class AjoutEquipementUI(object):
 
         # Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
-        # self.listeCleDonnees = list()
+        self.listeDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
             fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
@@ -647,6 +647,9 @@ class AjoutEquipementUI(object):
         self.boutonModifier.hide()
 
     def remplirEquipement(self):
+        """Methode permettant le remplissage des differents labels
+         Utilisation des donnees entrees par l'utilisateur pour les labels
+         """
         equipement = self.equipementRecherche
         indice = 0
         for widget in self.listeWidgets:
