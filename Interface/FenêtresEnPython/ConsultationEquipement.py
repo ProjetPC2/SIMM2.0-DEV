@@ -16,6 +16,10 @@ from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquip
 
 class ConsultationEquipementUI(object):
     def setupUi(self, MainFrame):
+
+        self.widget = MainFrame
+
+
         MainFrame.setObjectName("MainFrame")
         MainFrame.resize(876, 703)
         MainFrame.setStyleSheet("#MainFrame {\n"
@@ -440,7 +444,10 @@ class ConsultationEquipementUI(object):
         self.labelEtatDeConservation.setText(_translate("MainFrame", "Non-Périmable"))
         self.labelTitreBons.setText(_translate("MainFrame", "Bons : "))
         self.labelTitreCommentaires.setText(_translate("MainFrame", "Commentaires : "))
+        self.ajoutConsultationEquipement()
 
+    def ajoutConsultationEquipement(self):
+        #Creation de la liste pour manipuler les labels
         self.listeLabel = list()
         self.listeLabel.append(self.labelCategorie)
         self.listeLabel.append(self.labelMarque)
@@ -475,7 +482,6 @@ class ConsultationEquipementUI(object):
         self.listeEdit = list()
         # self.
         # self.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
-        self.widget = MainFrame
         self.equipement = None
         self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
         self.boutonModifierEquipement.setEnabled(False)
