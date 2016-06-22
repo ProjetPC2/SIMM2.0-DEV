@@ -251,7 +251,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="BoutonAjouterUnBon">
+      <widget class="QPushButton" name="boutonAjouterUnBon">
        <property name="text">
         <string>Ajouter un Bon </string>
        </property>
@@ -727,7 +727,7 @@ nous sommes programmés ainsi.</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="BoutonConsulterLeBon">
+      <widget class="QPushButton" name="boutonConsulterLeBon">
        <property name="text">
         <string>Consulter le Bon</string>
        </property>
