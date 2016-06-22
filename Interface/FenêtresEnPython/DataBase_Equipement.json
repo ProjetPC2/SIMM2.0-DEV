@@ -287,18 +287,36 @@ _default:
       Salle: A123
     state:
       eid: 16
-  17:
-    CategorieEquipement: ECG
-    CentreService: Urgence
-    Commentaires: ''
-    DateAcquisition: 2000-01-01
+  17: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: ECG
+      CentreService: Urgence
+      Commentaires: ''
+      DateAcquisition: 2000-01-01
+      DateDernierEntretien: 2000-01-01
+      EtatConservation: Quasi neuf
+      EtatService: En maintenance
+      ID: '17'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: CSI
+      Salle: A123
+    state:
+      eid: 17
+  18:
+    CategorieEquipement: "Cat\xE9gorie 1"
+    CentreService: Centre de service X
+    Commentaires: erwerwr
+    DateAcquisition: 2008-01-01
     DateDernierEntretien: 2000-01-01
-    EtatConservation: Quasi neuf
+    EtatConservation: En fin de vie
     EtatService: En maintenance
-    ID: '17'
-    Marque: ''
-    Modele: ''
+    ID: '18'
+    Marque: dsff
+    Modele: sf
     NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: CSI
-    Salle: A123
+    NumeroSerie: sf
+    Provenance: POLY
+    Salle: B518
