@@ -569,7 +569,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="boutonValider">
+      <widget class="QPushButton" name="BoutonValider">
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
