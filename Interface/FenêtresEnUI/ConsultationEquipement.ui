@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>876</width>
-    <height>703</height>
+    <width>938</width>
+    <height>738</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -135,12 +135,36 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/pencil-edit-button.png</pixmap>
+        <pixmap>pencil-edit-button_Hatim.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
        </property>
       </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <layout class="QHBoxLayout" name="idLayout">
+     <item>
+      <widget class="QLabel" name="labelId">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>  Entrez le numéro d'ID :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditId"/>
      </item>
     </layout>
    </item>
@@ -214,7 +238,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="horizontalSpacer_2">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -226,29 +250,35 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
       </spacer>
      </item>
-    </layout>
-   </item>
-   <item row="1" column="0" colspan="3">
-    <layout class="QHBoxLayout" name="idLayout">
      <item>
-      <widget class="QLabel" name="labelId">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
+      <widget class="QPushButton" name="boutonAjouterUnBon">
        <property name="text">
-        <string>  Entrez le numéro d'ID :</string>
+        <string>Ajouter un Bon </string>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="icon">
+        <iconset>
+         <normaloff>plus.png</normaloff>plus.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditId"/>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>
@@ -416,76 +446,6 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="4" column="1" colspan="2">
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
-     <item alignment="Qt::AlignLeft">
-      <widget class="QComboBox" name="comboBoxBons">
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="maxCount">
-        <number>2147483645</number>
-       </property>
-       <property name="sizeAdjustPolicy">
-        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-       </property>
-       <item>
-        <property name="text">
-         <string>Bon 2016-01-22</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Bon 2016-03-07</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Bon 2016-05-12</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</iconset>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="3" column="1" colspan="3">
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
-     <item>
-      <widget class="QLabel" name="labelCommentaires">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Ici se trouveront des commentaires consernant
-l'équipement en question et pourront être de toute nature.
-Le commentaire peut être assez long, comme vous pouvez le constater, mais
-vous ne pouvez vous arrêter de le lire, car
-nous sommes programmés ainsi.</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -660,6 +620,48 @@ nous sommes programmés ainsi.</string>
      </item>
     </layout>
    </item>
+   <item row="3" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item alignment="Qt::AlignRight">
+      <widget class="QLabel" name="labelTitreCommentaires">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Commentaires : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="1" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="labelCommentaires">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Ici se trouveront des commentaires consernant
+l'équipement en question et pourront être de toute nature.
+Le commentaire peut être assez long, comme vous pouvez le constater, mais
+vous ne pouvez vous arrêter de le lire, car
+nous sommes programmés ainsi.</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="4" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_8">
      <item>
@@ -679,22 +681,74 @@ nous sommes programmés ainsi.</string>
      </item>
     </layout>
    </item>
-   <item row="3" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_7">
-     <item alignment="Qt::AlignRight">
-      <widget class="QLabel" name="labelTitreCommentaires">
+   <item row="4" column="1" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item alignment="Qt::AlignLeft">
+      <widget class="QComboBox" name="comboBoxBons">
        <property name="font">
         <font>
+         <family>Times New Roman</family>
          <pointsize>10</pointsize>
         </font>
        </property>
-       <property name="text">
-        <string>Commentaires : </string>
+       <property name="maxCount">
+        <number>2147483645</number>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="sizeAdjustPolicy">
+        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>Bon 2016-01-22</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bon 2016-03-07</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bon 2016-05-12</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png</iconset>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="boutonConsulterLeBon">
+       <property name="text">
+        <string>Consulter le Bon</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>navigation.png</normaloff>navigation.png</iconset>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>

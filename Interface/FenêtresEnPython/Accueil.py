@@ -8,6 +8,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+import sys
+
 from Interface.FenêtresEnPython import BonDeTravail
 from Interface.FenêtresEnPython.AjoutEquipement import AjoutEquipementUI
 from Interface.FenêtresEnPython.BonDeTravail import BonDeTravailUI
@@ -311,45 +313,58 @@ class Ui_MainWindow(object):
 "technique"))
         self.LabelSIMM20HopitalSaintMichel.setText(_translate("MainWindow", "S.I.M.M. 2.0\n"
 "Hôpital Saint-Michel "))
-        # self.LabelSIMM20HopitalSaintMichel.hide()
         self.LabelDefinitionSIMM.setText(_translate("MainWindow", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 
-        #Creation d'une liste pour le contenu par defaut
+        self.ajoutAccueil()
+
+    def ajoutAccueil(self):
+        '''
+            Ajout des differents elements a la page d'accueil
+            :param:
+            :return:
+        '''
+        #Creation d'une liste contenant les elements destines
+        #A l'affichage dans la partie centrale
         self.listeElementParDefaut = list()
         self.listeElementParDefaut.append(self.LabelSIMM20HopitalSaintMichel)
         # Rajouter le logo de SIMM
         self.listeElementParDefaut.append(self.graphicsView)
         self.listeElementParDefaut.append(self.LabelDefinitionSIMM)
 
-        self.ajoutEquipement = QtWidgets.QWidget()
-        self.ajoutEquipementUI = AjoutEquipementUI()
-        self.ajoutEquipementUI.setupUi(self.ajoutEquipement)
-
+        #Connexion des actions aux cliques des boutons de la partie Equipement
         self.BoutonAjouterEquipement.clicked.connect(self.afficherAjoutEquipement)
         self.BoutonModifierConsulterEquipement.clicked.connect(self.afficherConsultationEquipement)
         self.BoutonRechercherEquipement.clicked.connect(self.afficherRechercheEquipement)
 
-
+        #Creation des differents conteneur pour les widgets a afficher
+        #Partie Equipement
         self.ajoutEquipement = None
         self.consultationEquipement = None
         self.rechercheEquipement = None
         self.modificationEquipement = None
-
+        #Partie Bon de Travail
         self.ajoutBonDeTravail = None
         self.rechercheBonDeTravail = None
 
+        #Connexion des actions aux cliques des boutons de la partie Bon de Travail
         self.BoutonAjouterBonTravail.clicked.connect(self.afficherAjoutBonDeTravail)
         self.BoutonRechercherBonTravail.clicked.connect(self.afficherRechercheBonDeTravail)
 
+        #Creation du conteneur de la page statistique
         self.statistique = None
-        self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
+        # self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
 
+        #Creation de la partie Support
         self.support = None
         self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
 
 
     def connectionBouton(self):
-        #Connection a faire
+        '''
+            Methode qui va faire la connection des differents boutons
+            :param:
+            :return:
+        '''
         self.BoutonAjouterEquipement.clicked.connect(self.afficherAjoutEquipement)
         self.BoutonModifierConsulterEquipement.clicked.connect(self.afficherConsultationEquipement)
         self.BoutonRechercherEquipement.clicked.connect(self.afficherRechercheEquipement)
@@ -363,10 +378,17 @@ class Ui_MainWindow(object):
         self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
 
     def afficherAjoutEquipement(self):
-        print("Appuie sur bouton Ajouter Equipement")
+        '''
+            Affichage du widget permet l'ajout d'un equipement
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        #On masque les autres elements
         self.masquerElementGraphique()
 
         if self.ajoutEquipement is None :
+            #Creation du widget s'il n'existe pas deja
             self.ajoutEquipement = QtWidgets.QWidget()
             self.ajoutEquipementUI = AjoutEquipementUI()
             self.ajoutEquipementUI.setupUi(self.ajoutEquipement)
@@ -375,28 +397,45 @@ class Ui_MainWindow(object):
             self.listeElementParDefaut.append(self.ajoutEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutEquipement)
         else:
+            #Affichage du widget s'il existe deja
             self.ajoutEquipement.show()
 
     def afficherConsultationEquipement(self):
-        print("Appuie sur bouton Consultation Equipement")
+        '''
+            Affichage du widget permet la consultation d'un equipement
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         self.masquerElementGraphique()
         if self.consultationEquipement is None:
+            #Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
             self.consultationEquipementUI = ConsultationEquipementUI()
             self.consultationEquipementUI.setupUi(self.consultationEquipement)
             self.consultationEquipement.setStyleSheet("background: white;")
 
+            #connexion de l'action a l'appuye du bouton modification equipement
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
 
             self.listeElementParDefaut.append(self.consultationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.consultationEquipement)
         else:
+            #Affichage de l'element s'il existe deja
             self.consultationEquipement.show()
 
     def afficherRechercheEquipement(self):
-        print("Appuie sur bouton Recherche Equipement")
+        '''
+            Affichage du widget permet la recherche d'un equipement
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         self.masquerElementGraphique()
         if self.rechercheEquipement is None:
+            #Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget()
             self.rechercheEquipementUI = RechercheEquipementUI()
             self.rechercheEquipementUI.setupUi(self.rechercheEquipement)
@@ -404,28 +443,43 @@ class Ui_MainWindow(object):
             self.listeElementParDefaut.append(self.rechercheEquipement)
             self.layoutAffichagePrincipal.addWidget(self.rechercheEquipement)
         else:
+            #Affichage du widget s'il existe deja
             self.rechercheEquipement.show()
 
 
     def afficherAjoutBonDeTravail(self):
-        print("Appuie sur bouton ajout Equipement")
+        '''
+            Affichage du widget permet l'ajout d'un bon de travail
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         self.masquerElementGraphique()
         if self.ajoutBonDeTravail is None:
+            #Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
             self.bonDeTravailUI = BonDeTravailUI()
             self.bonDeTravailUI.setupUi(self.ajoutBonDeTravail)
             self.ajoutBonDeTravail.setStyleSheet("background: white;")
 
-
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
         else:
+            #Affichage de l'element s'il existe deja
             self.ajoutBonDeTravail.show()
 
     def afficherRechercheBonDeTravail(self):
-        print("Appuie sur bouton ajout RechercheBonDeTravail")
+        '''
+            Affichage du widget permet la recherche d'un bon de travail
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         self.masquerElementGraphique()
         if self.rechercheBonDeTravail is None:
+            #Creation du widget s'il n'existe pas
             self.rechercheBonDeTravail = QtWidgets.QWidget()
             self.rechercheBonDeTravailUI = RechercheBonDeTravailUI()
             self.rechercheBonDeTravailUI.setupUi(self.rechercheBonDeTravail)
@@ -434,27 +488,42 @@ class Ui_MainWindow(object):
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.rechercheBonDeTravail)
         else:
+            #Affichage du widget s'il existe deja
             self.rechercheBonDeTravail.show()
 
     def afficherStatistique(self):
-        print("Appuie sur bouton ajout Statistique")
+        '''
+            Affichage du widget Statistique
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         self.masquerElementGraphique()
 
         if self.statistique is None:
-
+            #Creation du widget Statistique s'il n'existe pas
             self.statistique = QtWidgets.QWidget()
             statistique = Statistique(self.statistique)
             self.statistique.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.statistique)
             self.layoutAffichagePrincipal.addWidget(self.statistique)
         else:
+            #Affichage du widget s'il existe deja
             self.statistique.show()
 
 
     def afficherSupport(self):
-        print("Appuie sur bouton ajout Support")
+        '''
+            Affichage du widget Support
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         self.masquerElementGraphique()
         if self.support is None:
+            #Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
             self.supportPC2UI = SupportPC2UI()
             self.supportPC2UI.setupUi(self.support)
@@ -463,16 +532,31 @@ class Ui_MainWindow(object):
             self.listeElementParDefaut.append(self.support)
             self.layoutAffichagePrincipal.addWidget(self.support)
         else:
+            #Affichage du widget support
             self.support.show()
 
     def masquerElementGraphique(self):
+        '''
+            Masquage les elements graphiques de listeELementParDefaut
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         for elementGraphique in self.listeElementParDefaut:
             elementGraphique.hide()
 
     def modifierEquipement(self):
+        '''
+            Affichage du widget recapitulant l'equipement que l'on souhaite ajouter
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
         self.masquerElementGraphique()
         equipement = self.consultationEquipementUI.equipement
         if self.modificationEquipement is None:
+            #Creation du widget s'il n'existe pas
             self.modificationEquipement = QtWidgets.QWidget()
             self.modificationEquipementUI = ModificationEquipementUI()
             self.modificationEquipementUI.setupUi(self.modificationEquipement, equipement)
@@ -481,16 +565,25 @@ class Ui_MainWindow(object):
             self.listeElementParDefaut.append(self.modificationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipement)
         else:
+            #Affichage du widget s'il existe deja
             self.modificationEquipement.show()
             self.modificationEquipementUI.equipementRecherche = equipement
             self.modificationEquipementUI.remplirEquipement()
 
-
-if __name__ == "__main__":
-    import sys
+def SIMM():
+    '''
+        Fonction de lancement de la page d'accueil de SIMM
+        :param: None
+        :return:
+    '''
+    # On masque les autres elements
     app = QtWidgets.QApplication(sys.argv)
     MainFrame = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainFrame)
     MainFrame.show()
     sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    SIMM()
+

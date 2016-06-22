@@ -219,30 +219,6 @@ class Statistique(QWidget):
             # self.close()
             self.destroy()
 
-
-    def valider(self):
-        """Methode valider qui va changer le contenu de la fenetre une fois l'equipement valider
-        Cette methode va tout d'abord declancher une fenetre de confirmation
-        Puis si la confirmation est valide, elle va mettre les informations sous forme de Qlabel
-        Les informations ne seront donc plus modifiables, on passe en mode consultatble"""
-        self.formulaire.hide()
-        self.validerBouton.hide()
-        self.formulaireRempli.show()
-        self.modifierBouton.show()
-        self.donnees()
-        self.remplissageFormulaire()
-        self.listeTemp.clear()
-        self.resize(1000,1000)
-
-    def modifier(self):
-        """Methode modifier permet de passer du mode consultable au mode modifiable
-        Cette methode donne la possibilite a l'utilisateur de changer les differents champs
-        On retourne dans le meme version que l'ajout d'un equipement"""
-        self.formulaireRempli.hide()
-        self.modifierBouton.hide()
-        self.formulaire.show()
-        self.validerBouton.show()
-
     def afficheMessage(self, event):
         """Methode affichant une fenetre de confirmation pour l'ajout d'un equipement
         Cette fenetre va nous faire passer dans le mode consultable
@@ -261,34 +237,6 @@ class Statistique(QWidget):
         #Cette methode est appelee une fois que l'ajout d'un element a ete confirme
         if i.text() == "OK":
             self.valider()
-
-    def donnees(self):
-        """Methode permettant la recuperation des donnees dans les differents widgets
-        On parcours la liste des widgets et on recupere les differentes informations utiles
-        Les informations sont recuperees de facon specifique selon le type du widget"""
-        for widget in self.formulaire.widgetList:
-            # self.stockage.dictionnaire
-            if type(widget) is QLineEdit:
-                self.listeTemp.append(widget.text())
-            elif type(widget) is QDateEdit:
-                self.listeTemp.append(str(widget.date()))
-                print(widget.date())
-                print(QDate.currentDate())
-            elif type(widget) is QComboBox:
-                self.listeTemp.append(widget.currentText())
-                print(widget.currentText())
-            elif type(widget) is QGroupBox:
-                self.listeTemp.append(self.formulaire.etatService)
-            else:
-                self.listeTemp.append(widget.toPlainText())
-                print(widget.toPlainText())
-
-    def remplissageFormulaire(self):
-        """Methode permettant de remplir le formulaire dans le mode consultable"""
-        i = 0
-        for text in self.listeTemp:
-            self.formulaireRempli.widgetList[i].setText(text)
-            i += 1
 
     def miseAJourDonnees(self):
         self.nombreEquipement = self.equipementManager._statsNbTotalEquipement()

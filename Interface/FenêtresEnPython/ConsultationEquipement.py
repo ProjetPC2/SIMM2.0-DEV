@@ -9,12 +9,17 @@ import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QVBoxLayout
 
+from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquipementUI
 
 
 class ConsultationEquipementUI(object):
     def setupUi(self, MainFrame):
+
+        self.widget = MainFrame
+
+
         MainFrame.setObjectName("MainFrame")
         MainFrame.resize(876, 703)
         MainFrame.setStyleSheet("#MainFrame {\n"
@@ -439,7 +444,10 @@ class ConsultationEquipementUI(object):
         self.labelEtatDeConservation.setText(_translate("MainFrame", "Non-Périmable"))
         self.labelTitreBons.setText(_translate("MainFrame", "Bons : "))
         self.labelTitreCommentaires.setText(_translate("MainFrame", "Commentaires : "))
+        self.ajoutConsultationEquipement()
 
+    def ajoutConsultationEquipement(self):
+        #Creation de la liste pour manipuler les labels
         self.listeLabel = list()
         self.listeLabel.append(self.labelCategorie)
         self.listeLabel.append(self.labelMarque)
@@ -457,6 +465,7 @@ class ConsultationEquipementUI(object):
 
         #Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -467,56 +476,77 @@ class ConsultationEquipementUI(object):
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
-        print("liste des cles : ", self.listeCleDonnees)
         fichierConf.close()
 
 
         self.listeEdit = list()
         # self.
         # self.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
-        self.widget = MainFrame
         self.equipement = None
         self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
         self.boutonModifierEquipement.setEnabled(False)
 
+        self.comboBoxBons.clear()
+
+        # self.comboBoxBons.addItem(icon2, "")
 
     def rechercherEquipement(self):
+        '''
+            Methode permettant la recherche de l'equipement par son ID
+            Affichage des informations de l'equipement dans les labels correspondants
+            :param: None
+            :return:
+        '''
+        #Recuperation du dictionnaire de resultat
         equipementRecherche = dict()
         equipementRecherche["ID"] = self.lineEditId.text()
         listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
 
         if(any(listeEquipement)):
+            #Cas ou l'equipement existe
             self.boutonModifierEquipement.setEnabled(True)
             self.equipement = listeEquipement[0]
-            print(self.equipement)
             i = 0
             for cle in self.listeCleDonnees:
                 #Recuperation des donnees sous forme de string
                 self.listeLabel[i].setText(str(self.equipement[cle]))
                 i += 1
+            self.rechercherBonDeTravailAssocie()
         else:
-            print("equipement non existant")
+            #Cas ou l'equipement n'existe pas
             self.boutonModifierEquipement.setEnabled(False)
+
+    def rechercherBonDeTravailAssocie(self):
+        '''
+            Recuperation des bons de travails associe a un equipement
+            Affichage des numeros des bons dans la liste deroulantes
+            :param: None
+            :return:
+        '''
+        #Recuperation des bons associees a l'equipement
+        dictionnaireBDTRecherche = dict()
+        #TODO : verifier que l'ID-EQ recupere bien que cet ID
+        dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
+        listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
+        self.comboBoxBons.clear()
+        if(any(listeBonDeTravail)):
+            #Dans le cas ou on a trouve des bons de travail, on les affiche
+            icon2 = QtGui.QIcon()
+            icon2.addPixmap(
+                QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png"),
+                QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            for bdt in listeBonDeTravail:
+                affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
+                self.comboBoxBons.addItem(icon2, affichage)
 
 
     def modifierEquipement(self):
         #Fonction inutle pour l'instant
-        print("Appuie sur bouton modification Equipement")
         self.modificationEquipement = QtWidgets.QWidget()
         self.modificationEquipementUI = ModificationEquipementUI()
         self.modificationEquipementUI.setupUi(self.modificationEquipement)
         self.modificationEquipement.setStyleSheet("background: white;")
         self.layoutPrincipal.addWidget(self.modificationEquipement)
-        # MainFrame = (self.modificationEquipement)
-        print(self.gridLayout.children())
-    # def modifierEquipement(self):
-    #     pass
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

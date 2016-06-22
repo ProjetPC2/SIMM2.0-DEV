@@ -114,7 +114,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       <widget class="QLabel" name="titreAjoutEquipement">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>MS Shell Dlg 2</family>
          <pointsize>18</pointsize>
          <weight>75</weight>
          <italic>false</italic>
@@ -133,7 +133,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/plus (2).png</pixmap>
+        <pixmap>add1.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>

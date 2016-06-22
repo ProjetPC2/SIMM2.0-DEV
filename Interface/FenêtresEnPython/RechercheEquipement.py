@@ -292,7 +292,10 @@ class RechercheEquipementUI(object):
         item = self.tableResultats.horizontalHeaderItem(2)
         item.setText(_translate("Form", "Marque"))
 
-        #Recuperation des differents attributs d''un equipement
+        self.ajoutRechercheBonDeTravail()
+
+    def ajoutRechercheBonDeTravail(self):
+        #Recuperation des differents attributs d'un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
         # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
@@ -304,14 +307,13 @@ class RechercheEquipementUI(object):
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
-        print("liste des cles : ", self.listeCleDonnees)
-
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
         self.listeSalle = list(self._conf['Salle'])
-        # self.listeProvenance = list(self._conf['Provenance'])
+        self.listeProvenance = list(self._conf['Provenance'])
 
+        #Mise a jour des listes avec les bons elements
         self.comboBoxCategorieEquipement_2.clear()
         self.comboBoxCategorieEquipement_2.addItem("")
         self.comboBoxCategorieEquipement_2.addItems(self.listeCategorieEquipement)
@@ -324,18 +326,19 @@ class RechercheEquipementUI(object):
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItem("")
         self.comboBoxSalle.addItems(self.listeSalle)
-        # self.comboBoxProvenance.clear()
-        # self.comboBoxProvenance.addItems(self.listeProvenance)
+        self.comboBoxProvenance.clear()
+        self.comboBoxProvenance.addItems(self.listeProvenance)
 
         fichierConf.close()
 
-
+        #Mise en forme de la page d'accueil
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.resizeColumnsToContents()
 
         self.dictionnaireRecherche = dict()
 
+        #Connexion des differents champs de selections
         self.comboBoxCategorieEquipement_2.currentTextChanged.connect(self.rechercheCategorieEquipement)
         self.comboBoxEtatService.currentTextChanged.connect(self.rechercheEtatDeService)
         self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
@@ -347,7 +350,7 @@ class RechercheEquipementUI(object):
     def rechercheCategorieEquipement(self):
         """Methode permettant la recherche par rapport au champ de recherche
         de categorie d'equipement"""
-        if(self.comboBoxCategorieEquipement_2.currentText() is not ""):
+        if(self.comboBoxCategorieEquipement_2.currentText() == ""):
             self.dictionnaireRecherche["CategorieEquipement"] = self.comboBoxCategorieEquipement_2.currentText()
 
         else:
@@ -356,7 +359,9 @@ class RechercheEquipementUI(object):
 
 
     def rechercheEtatDeService(self):
-        if (self.comboBoxEtatService.currentText() is not ""):
+        """Methode permettant la recherche par rapport au champ de recherche
+            d'etat de service d'equipement"""
+        if (self.comboBoxEtatService.currentText() == ""):
             self.dictionnaireRecherche["EtatService"] = self.comboBoxEtatService.currentText()
 
         else:
@@ -364,7 +369,9 @@ class RechercheEquipementUI(object):
         self.remplirTableau()
 
     def rechercheCentreService(self):
-        if (self.comboBoxCentreService.currentText() is not ""):
+        """Methode permettant la recherche par rapport au champ de recherche
+            d'etat de centre de service d'equipement"""
+        if (self.comboBoxCentreService.currentText() == ""):
             self.dictionnaireRecherche["CentreService"] = self.comboBoxCentreService.currentText()
 
         else:
@@ -372,7 +379,9 @@ class RechercheEquipementUI(object):
         self.remplirTableau()
 
     def rechercheSalle(self):
-        if (self.comboBoxSalle.currentText() is not ""):
+        """Methode permettant la recherche par rapport au champ de recherche
+            de salle """
+        if (self.comboBoxSalle.currentText() == ""):
             self.dictionnaireRecherche["Salle"] = self.comboBoxSalle.currentText()
 
         else:
@@ -380,7 +389,9 @@ class RechercheEquipementUI(object):
         self.remplirTableau()
 
     def rechercheProvenance(self):
-        if (self.comboBoxProvenance.currentText() is not ""):
+        """Methode permettant la recherche par rapport au champ de recherche
+           Provenance"""
+        if (self.comboBoxProvenance.currentText() == ""):
             self.dictionnaireRecherche["Provenance"] = self.comboBoxProvenance.currentText()
 
         else:
@@ -388,7 +399,9 @@ class RechercheEquipementUI(object):
         self.remplirTableau()
 
     def rechercheNumeroSerie(self):
-        if (self.textEditNumeroSerie_2.toPlainText() is not ""):
+        """Methode permettant la recherche par rapport au champ de recherche
+            Numero de Serie"""
+        if (self.textEditNumeroSerie_2.toPlainText() == ""):
             self.dictionnaireRecherche["NumeroSerie"] = self.textEditNumeroSerie_2.toPlainText()
 
         else:
@@ -396,8 +409,9 @@ class RechercheEquipementUI(object):
         self.remplirTableau()
 
     def remplirTableau(self):
+        """Methode permettant de remplir la table des resultats
+        Le remplissage se fait avec le resultat des donnees"""
         if(any(self.dictionnaireRecherche)):
-            print(self.equipementManager.RechercherEquipement(self.dictionnaireRecherche))
             liste = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
             self.tableResultats.setRowCount(len(liste))
             for i, dictionnaire in enumerate(liste):
