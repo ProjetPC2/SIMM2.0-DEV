@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1725</width>
-    <height>1283</height>
+    <width>1023</width>
+    <height>798</height>
    </rect>
   </property>
   <property name="font">
@@ -94,7 +94,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../../../../Downloads/home.png</normaloff>../../../../../Downloads/home.png</iconset>
+              <normaloff>home.png</normaloff>home.png</iconset>
             </property>
             <property name="iconSize">
              <size>
