@@ -66,32 +66,32 @@ class RechercheBonDeTravailUI(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.Labelcategorie = QtWidgets.QLabel(PC2)
-        self.Labelcategorie.setMaximumSize(QtCore.QSize(500, 500))
+        self.LabelCategorie = QtWidgets.QLabel(PC2)
+        self.LabelCategorie.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
-        self.Labelcategorie.setFont(font)
-        self.Labelcategorie.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.Labelcategorie.setObjectName("Labelcategorie")
-        self.verticalLayout_4.addWidget(self.Labelcategorie)
-        self.buttonCategorie = QtWidgets.QComboBox(PC2)
-        self.buttonCategorie.setMaximumSize(QtCore.QSize(500, 500))
+        self.LabelCategorie.setFont(font)
+        self.LabelCategorie.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.LabelCategorie.setObjectName("LabelCategorie")
+        self.verticalLayout_4.addWidget(self.LabelCategorie)
+        self.boutonCategorie = QtWidgets.QComboBox(PC2)
+        self.boutonCategorie.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
-        self.buttonCategorie.setFont(font)
-        self.buttonCategorie.setObjectName("buttonCategorie")
-        self.verticalLayout_4.addWidget(self.buttonCategorie)
+        self.boutonCategorie.setFont(font)
+        self.boutonCategorie.setObjectName("boutonCategorie")
+        self.verticalLayout_4.addWidget(self.boutonCategorie)
         self.horizontalLayout.addLayout(self.verticalLayout_4)
         self.verticalLayout_7 = QtWidgets.QVBoxLayout()
         self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.Labelavant = QtWidgets.QLabel(PC2)
-        self.Labelavant.setMaximumSize(QtCore.QSize(500, 500))
+        self.LabelAvant = QtWidgets.QLabel(PC2)
+        self.LabelAvant.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
-        self.Labelavant.setFont(font)
-        self.Labelavant.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.Labelavant.setObjectName("Labelavant")
-        self.verticalLayout_7.addWidget(self.Labelavant)
+        self.LabelAvant.setFont(font)
+        self.LabelAvant.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.LabelAvant.setObjectName("LabelAvant")
+        self.verticalLayout_7.addWidget(self.LabelAvant)
         self.calendrierAvant = QtWidgets.QDateEdit(PC2)
         self.calendrierAvant.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
@@ -104,13 +104,13 @@ class RechercheBonDeTravailUI(object):
         self.horizontalLayout.addLayout(self.verticalLayout_7)
         self.verticalLayout_5 = QtWidgets.QVBoxLayout()
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        self.Labelapres = QtWidgets.QLabel(PC2)
-        self.Labelapres.setMaximumSize(QtCore.QSize(500, 500))
+        self.LabelApres = QtWidgets.QLabel(PC2)
+        self.LabelApres.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
-        self.Labelapres.setFont(font)
-        self.Labelapres.setObjectName("Labelapres")
-        self.verticalLayout_5.addWidget(self.Labelapres)
+        self.LabelApres.setFont(font)
+        self.LabelApres.setObjectName("LabelApres")
+        self.verticalLayout_5.addWidget(self.LabelApres)
         self.calendrierApres = QtWidgets.QDateEdit(PC2)
         self.calendrierApres.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
@@ -131,13 +131,13 @@ class RechercheBonDeTravailUI(object):
         self.Labeletat.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.Labeletat.setObjectName("Labeletat")
         self.verticalLayout_8.addWidget(self.Labeletat)
-        self.buttonAvant = QtWidgets.QComboBox(PC2)
-        self.buttonAvant.setMaximumSize(QtCore.QSize(500, 500))
+        self.boutonAvant = QtWidgets.QComboBox(PC2)
+        self.boutonAvant.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
-        self.buttonAvant.setFont(font)
-        self.buttonAvant.setObjectName("buttonAvant")
-        self.verticalLayout_8.addWidget(self.buttonAvant)
+        self.boutonAvant.setFont(font)
+        self.boutonAvant.setObjectName("boutonAvant")
+        self.verticalLayout_8.addWidget(self.boutonAvant)
         self.horizontalLayout.addLayout(self.verticalLayout_8)
         self.verticalLayout_3.addLayout(self.horizontalLayout)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
@@ -151,13 +151,13 @@ class RechercheBonDeTravailUI(object):
         self.LabelCdS.setFont(font)
         self.LabelCdS.setObjectName("LabelCdS")
         self.verticalLayout_2.addWidget(self.LabelCdS)
-        self.buttonCdS = QtWidgets.QComboBox(PC2)
-        self.buttonCdS.setMaximumSize(QtCore.QSize(500, 500))
+        self.boutonCdS = QtWidgets.QComboBox(PC2)
+        self.boutonCdS.setMaximumSize(QtCore.QSize(500, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
-        self.buttonCdS.setFont(font)
-        self.buttonCdS.setObjectName("buttonCdS")
-        self.verticalLayout_2.addWidget(self.buttonCdS)
+        self.boutonCdS.setFont(font)
+        self.boutonCdS.setObjectName("boutonCdS")
+        self.verticalLayout_2.addWidget(self.boutonCdS)
         self.horizontalLayout_2.addLayout(self.verticalLayout_2)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem1)
@@ -243,9 +243,9 @@ class RechercheBonDeTravailUI(object):
         _translate = QtCore.QCoreApplication.translate
         PC2.setWindowTitle(_translate("PC2", "PC2"))
         self.LabelTitre.setText(_translate("PC2", "Assistant de Recherche-Bon de travail"))
-        self.Labelcategorie.setText(_translate("PC2", "Catégorie d\'équipement"))
-        self.Labelavant.setText(_translate("PC2", "Avant le"))
-        self.Labelapres.setText(_translate("PC2", "Après le"))
+        self.LabelCategorie.setText(_translate("PC2", "Catégorie d\'équipement"))
+        self.LabelAvant.setText(_translate("PC2", "Avant le"))
+        self.LabelApres.setText(_translate("PC2", "Après le"))
         self.calendrierApres.setDisplayFormat(_translate("PC2", "dd-MM-yyyy"))
         self.Labeletat.setText(_translate("PC2", "État"))
         self.LabelCdS.setText(_translate("PC2", "Centre de service"))
@@ -296,15 +296,15 @@ class RechercheBonDeTravailUI(object):
         # self.listeProvenance = list(self._conf['Provenance'])
 
         #Mise a jour des differentes listes deroulantes
-        self.buttonCategorie.clear()
-        self.buttonCategorie.addItem("")
-        self.buttonCategorie.addItems(self.listeCategorieEquipement)
-        self.buttonAvant.clear()
-        self.buttonAvant.addItem("")
-        self.buttonAvant.addItems(self.listeEtatService)
-        self.buttonCdS.clear()
-        self.buttonCdS.addItem("")
-        self.buttonCdS.addItems(self.listeCentreService)
+        self.boutonCategorie.clear()
+        self.boutonCategorie.addItem("")
+        self.boutonCategorie.addItems(self.listeCategorieEquipement)
+        self.boutonAvant.clear()
+        self.boutonAvant.addItem("")
+        self.boutonAvant.addItems(self.listeEtatService)
+        self.boutonCdS.clear()
+        self.boutonCdS.addItem("")
+        self.boutonCdS.addItems(self.listeCentreService)
 
 
         fichierConf.close()
@@ -320,9 +320,9 @@ class RechercheBonDeTravailUI(object):
         self.dictionnaireRechercheBDT = dict()
 
         #Connexion des differentes recherches pour la mise a jour automatique
-        self.buttonCategorie.currentTextChanged.connect(self.rechercheCategorieEquipement)
-        self.buttonAvant.currentTextChanged.connect(self.rechercheEtatDeService)
-        self.buttonCdS.currentTextChanged.connect(self.rechercheCentreService)
+        self.boutonCategorie.currentTextChanged.connect(self.rechercheCategorieEquipement)
+        self.boutonAvant.currentTextChanged.connect(self.rechercheEtatDeService)
+        self.boutonCdS.currentTextChanged.connect(self.rechercheCentreService)
         # self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
         # self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
         self.calendrierAvant.dateChanged.connect(self.rechercheDateAvant)
@@ -365,8 +365,8 @@ class RechercheBonDeTravailUI(object):
         '''
         """Methode permettant la recherche par rapport au champ de recherche
         de categorie d'equipement"""
-        if (self.buttonCategorie.currentText() == ""):
-            self.dictionnaireRecherche["CategorieEquipement"] = self.buttonCategorie.currentText()
+        if (self.boutonCategorie.currentText() == ""):
+            self.dictionnaireRecherche["CategorieEquipement"] = self.boutonCategorie.currentText()
 
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
@@ -379,8 +379,8 @@ class RechercheBonDeTravailUI(object):
             :param: None
             :return:
         '''
-        if (self.buttonAvant.currentText() == ""):
-            self.dictionnaireRecherche["EtatService"] = self.buttonAvant.currentText()
+        if (self.boutonAvant.currentText() == ""):
+            self.dictionnaireRecherche["EtatService"] = self.boutonAvant.currentText()
 
         else:
             self.dictionnaireRecherche.pop("EtatService")
@@ -392,8 +392,8 @@ class RechercheBonDeTravailUI(object):
             :param: None
             :return:
         '''
-        if (self.buttonCdS.currentText() == ""):
-            self.dictionnaireRecherche["CentreService"] = self.buttonCdS.currentText()
+        if (self.boutonCdS.currentText() == ""):
+            self.dictionnaireRecherche["CentreService"] = self.boutonCdS.currentText()
 
         else:
             self.dictionnaireRecherche.pop("CentreService")
