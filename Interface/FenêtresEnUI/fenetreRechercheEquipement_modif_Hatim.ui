@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>841</width>
+    <height>464</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background: white;
+</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>100</width>
+    <height>100</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0" colspan="3">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="labelTitre">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>340</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Assistant de recherche - Équipement</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../Images/magnifier.png</pixmap>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QLabel" name="labelCategorieEquipement">
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Catégorie d'équipement</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxCategorieEquipement">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Catégorie 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Catégorie 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Catégorie 3</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QLabel" name="labelNumeroSerie">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Numéro de série</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEditNumeroSerie">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="labelEtatService">
+        <property name="font">
+         <font>
+          <family>MS Sans Serif</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>État de service</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxEtatService">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>En service</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>En maintenance</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Au rebus</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="labelCentreService">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Centre de service</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxCentreService">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Centre 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Centre 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Centre 3</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="labelSalle">
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Salle</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxSalle">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Chambre patient</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Salle d'opération</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Salle de réunion</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="labelProvenance">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Provenance</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxProvenance">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Provenance 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Provenance 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Provenance 3</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="boutonActualiser">
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Images/refresh-button-2.png</normaloff>../Images/refresh-button-2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QTableWidget" name="tableResultats">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)</string>
+        </property>
+        <property name="lineWidth">
+         <number>10</number>
+        </property>
+        <property name="midLineWidth">
+         <number>9</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>250</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>20</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>20</number>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>MS Reference Sans Serif</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>MS Reference Sans Serif</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Catégorie d'équipement</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Marque</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>841</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
