@@ -113,6 +113,19 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
    <item row="0" column="0" colspan="4">
     <layout class="QHBoxLayout" name="titreLayout">
      <item>
+      <widget class="QLabel" name="iconConsultationEquipement">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>pencil-edit-button_Hatim.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="labelTitreConsultationEquipement">
        <property name="font">
         <font>
@@ -130,17 +143,17 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="iconConsultationEquipement">
-       <property name="text">
-        <string/>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <property name="pixmap">
-        <pixmap>pencil-edit-button_Hatim.png</pixmap>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
        </property>
-       <property name="scaledContents">
-        <bool>false</bool>
-       </property>
-      </widget>
+      </spacer>
      </item>
     </layout>
    </item>
@@ -187,7 +200,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/Refresh2.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/Refresh2.png</iconset>
+           <normaloff>Refresh2.png</normaloff>Refresh2.png</iconset>
          </property>
          <property name="iconSize">
           <size>

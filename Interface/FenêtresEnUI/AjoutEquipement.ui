@@ -111,6 +111,19 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
    <item row="0" column="0" colspan="2">
     <layout class="QHBoxLayout" name="layoutTitre">
      <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>add1.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="titreAjoutEquipement">
        <property name="font">
         <font>
@@ -124,19 +137,6 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="text">
         <string>Ajout d'équipement</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>add1.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
        </property>
       </widget>
      </item>
