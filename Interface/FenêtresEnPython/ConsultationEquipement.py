@@ -460,9 +460,13 @@ class ConsultationEquipementUI(object):
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
+
+
         # A voir pour les bons de travaux
         self.listeLabel.append(self.labelCommentaires)
-
+        #Efface le contenu des differents champs par defaut
+        for label in self.listeLabel:
+            label.clear()
         #Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')

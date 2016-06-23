@@ -69,3 +69,6 @@ champsAcceptes-Equipement:
 - EtatConservation
 - Commentaires
 dernierID-Equipement: 18
+StatsAjoutFichier:
+- Provenance
+- CategorieEquipement

@@ -10,7 +10,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 import sys
 
-from Interface.FenêtresEnPython import BonDeTravail
 from Interface.FenêtresEnPython.AjoutEquipement import AjoutEquipementUI
 from Interface.FenêtresEnPython.BonDeTravail import BonDeTravailUI
 from Interface.FenêtresEnPython.ConsultationEquipement import ConsultationEquipementUI
@@ -570,19 +569,21 @@ class Ui_MainWindow(object):
             self.modificationEquipementUI.equipementRecherche = equipement
             self.modificationEquipementUI.remplirEquipement()
 
-def SIMM():
+class SIMM():
     '''
         Fonction de lancement de la page d'accueil de SIMM
         :param: None
         :return:
     '''
     # On masque les autres elements
-    app = QtWidgets.QApplication(sys.argv)
-    MainFrame = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainFrame)
-    MainFrame.show()
-    sys.exit(app.exec_())
+    def __init__(self):
+        app = QtWidgets.QApplication(sys.argv)
+        MainFrame = QtWidgets.QMainWindow()
+        ui = Ui_MainWindow()
+        ui.setupUi(MainFrame)
+        MainFrame.show()
+        sys.exit(app.exec_())
+        os.system("pause")
 
 if __name__ == "__main__":
     SIMM()

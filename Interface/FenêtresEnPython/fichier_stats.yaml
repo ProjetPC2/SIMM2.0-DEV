@@ -1,0 +1,12 @@
+nbEquipement: 0
+nbEquipementCentreService: {}
+nbEquipementEtatConservation:
+  Acceptable: 0
+  Desuet: 0
+  En fin de vie: 0
+  Quasi neuf: 0
+nbEquipementEtatService:
+  Au rebut: 0
+  En maintenance: 0
+  En service: 0
+nbEquipementProvenance: {}
