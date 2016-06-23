@@ -34,14 +34,8 @@ import copy
 
 class EquipementManager:
     def __init__(self, pathname):
-        self._pathname = pathname                           # pathname de la base de données des équipements
-        conf_file = 'fichier_conf.yaml'                     # pathname du fichier de configuration
-        try:
-            fichierConf = open(conf_file, 'r')              # try: ouvrir le fichier et le lire
-            with fichierConf:
-                self._conf = yaml.load(fichierConf)
-        except IOError:                                     # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)       # définir ce qu'il faut faire pour corriger
+        self._pathname = pathname                               # pathname de la base de données des équipements
+        self.conf_file = 'fichier_conf.yaml'                    # pathname du fichier de configuration
 
         stats_file = 'fichier_stats.yaml'
         try:
@@ -53,6 +47,7 @@ class EquipementManager:
 
     def AjouterEquipement(self, dictio):
         # ouverture de la base des données contenant les équipements
+        conf = self._getConf()
         try:
             if not os.path.exists(self._pathname):
                 raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
@@ -68,11 +63,12 @@ class EquipementManager:
             dictio['NbBonTravail'] = 0                      # ajout du nombre de bon de travail qui est toujours 0 pour un nouvel équipement
             if db.insert(dictio) != list([]):
                 dict_renvoi['Reussite'] = True              # ajout du nouvel équipement dans la base de données
-                self._conf['dernierID-Equipement'] = id_eq      # mise à jour du champ dernierID-equipement dans le fichier de conf
+                conf['dernierID-Equipement'] = id_eq      # mise à jour du champ dernierID-equipement dans le fichier de conf
                 # mise à jour des données dans le fichier de stats pour l'ajout d'un nouvel équipement
                 self._miseAJourStats(ancien_dict=None, nouveau_dict=dictio)
             self._ActualiserConfiguration()
             self._ActualiserStats()
+            self._saveConf(conf)
             return dict_renvoi
         else:
             print('An error occured')
@@ -148,16 +144,6 @@ class EquipementManager:
         prochain_ID = int(dernier_ID) + 1
         return prochain_ID
 
-    def configParser(configFile):
-        config = yaml.load(configFile)
-        for k in ['swsets']:
-            if k in config:
-                tup = ()
-                for v in config[k]:
-                    tup += (v,)
-                config[k] = tup
-        return config
-
     def _verifierChamps(self, dictio):
         conforme = True
         list_accepted_key_temp = list(self._conf['champsAcceptes-Equipement'])  # récupère la liste des 'accepted keys' dans le fichier de configuration
@@ -210,14 +196,13 @@ class EquipementManager:
         self._ActualiserStats()
         return conforme                       # retourne un booléen qui indique si le dictionnaire est conforme ou non
 
-    def _ActualiserConfiguration(self):
-        conf_file = 'fichier_conf.yaml'         # pathname du fichier de configuration
+    def _ActualiserConfiguration(self, conf):
         try:
-            if not os.path.exists(conf_file):   # vérifie si le fichier de configuration existe
+            if not os.path.exists(self.conf_file):                                      # vérifie si le fichier de configuration existe
                 raise OSError
             else:
-                fichierConf = open(conf_file, 'w')      # ouvre le fichier et l'actualise
-                fichierConf.write(yaml.dump(self._conf, default_flow_style=False))
+                with open(conf_file, 'w') as fichierConf:                               # ouvre le fichier et l'actualise
+                    fichierConf.write(yaml.dump(conf, default_flow_style=False))
         except OSError:
             print("Could not update: ", conf_file)
 
@@ -340,6 +325,16 @@ class EquipementManager:
                 fichierStat.write(yaml.dump(self._stats, default_flow_style=False))
         except OSError:
             print("Could not update: ", stats_file)
+    
+    def _getConf(self):
+        try:
+            with open(self.conf_file, 'r') as fichierConf:            # try: ouvrir le fichier et le lire
+                conf = yaml.load(fichierConf)
+        except IOError:                                                             # attrape l'erreur IOError si elle se présente et renvoie
+            print("Could not read file: ", self.conf_file)                          # définir ce qu'il faut faire pour corriger
+
+        return conf
+
 
 if __name__ == "__main__":#Execution lorsque le fichier est lance
     if True:
