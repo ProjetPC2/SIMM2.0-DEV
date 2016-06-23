@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>851</width>
-    <height>555</height>
+    <width>1083</width>
+    <height>634</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -80,6 +80,16 @@ background: white;
      <property name="bottomMargin">
       <number>2</number>
      </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>pie-chart (1).png</pixmap>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QLabel" name="Labeltitre">
        <property name="maximumSize">
