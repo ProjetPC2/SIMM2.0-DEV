@@ -141,7 +141,7 @@ background: white;
         </font>
        </property>
        <property name="text">
-        <string>Nombre total d'équipement</string>
+        <string>Nombre total d'équipements</string>
        </property>
       </widget>
      </item>
@@ -181,7 +181,7 @@ p, li { white-space: pre-wrap; }
         </font>
        </property>
        <property name="text">
-        <string>Résume d'inventaire par centre de service</string>
+        <string>Résume de l'inventaire par centre de service</string>
        </property>
       </widget>
      </item>
@@ -300,7 +300,7 @@ background:rgb(247, 247, 247)</string>
               </font>
              </property>
              <property name="text">
-              <string>Nombre d'équipement par état de service</string>
+              <string>Nombre d'équipements par état de service</string>
              </property>
             </widget>
            </item>
@@ -459,7 +459,7 @@ p, li { white-space: pre-wrap; }
             </font>
            </property>
            <property name="text">
-            <string>Nombre d'équipement par état de conservation</string>
+            <string>Nombre d'équipements par état de conservation</string>
            </property>
           </widget>
          </item>
@@ -661,7 +661,7 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>Nombre d'équipement par provenance</string>
+          <string>Nombre d'équipements par provenance</string>
          </property>
         </widget>
        </item>
