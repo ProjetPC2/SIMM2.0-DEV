@@ -29,7 +29,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>SIMM_LOGO_300.png</pixmap>
+      <pixmap>PC2.png</pixmap>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
