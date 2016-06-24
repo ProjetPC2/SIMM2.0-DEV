@@ -351,6 +351,9 @@ class RechercheEquipementUI(object):
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
         self.colonneClique = None
         self.nombreClique = 0
+        #Empeche la modification de la table
+        self.tableResultats.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers );
+        self.tableResultats.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
 
     def trier(self, numeroColonne):
         """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
