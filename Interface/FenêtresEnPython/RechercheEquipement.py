@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.EquipementManager import EquipementManager
@@ -345,7 +346,27 @@ class RechercheEquipementUI(object):
         self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
         self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
         # self.textEditNumeroSerie_2.returnPressed.connect(self.rechercheNumeroSerie)
+        # self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
 
+        self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
+        self.colonneClique = None
+        self.nombreClique = 0
+
+    def trier(self, numeroColonne):
+        """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
+        Un clic fait un tri croisssant
+        Un second clic fera un tri decroissant"""
+        print(numeroColonne)
+        if numeroColonne == self.colonneClique:
+            if self.nombreClique % 2 == 0:
+                self.tableResultats.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            else:
+                self.tableResultats.sortByColumn(numeroColonne, Qt.DescendingOrder)
+            self.nombreClique += 1
+        else:
+            self.nombreClique = 1
+            self.tableResultats.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            self.colonneClique = numeroColonne
 
     def rechercheCategorieEquipement(self):
         """Methode permettant la recherche par rapport au champ de recherche
@@ -416,8 +437,8 @@ class RechercheEquipementUI(object):
             for i, dictionnaire in enumerate(liste):
                 # Creation des QTableWidgetItem
                 colonne = 0
-                print(dictionnaire)
-                print(self.listeCleDonnees)
+                # print(dictionnaire)
+                # print(self.listeCleDonnees)
                 for cle in self.listeCleDonnees:
                     self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                     colonne += 1
