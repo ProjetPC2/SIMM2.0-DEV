@@ -201,10 +201,10 @@ class EquipementManager:
             if not os.path.exists(self.conf_file):                                      # vérifie si le fichier de configuration existe
                 raise OSError
             else:
-                with open(conf_file, 'w') as fichierConf:                               # ouvre le fichier et l'actualise
+                with open(self.conf_file, 'w') as fichierConf:                               # ouvre le fichier et l'actualise
                     fichierConf.write(yaml.dump(conf, default_flow_style=False))
         except OSError:
-            print("Could not update: ", conf_file)
+            print("Could not update: ", self.conf_file)
 
     # Cette méthode renvoie le nombre d'équipements contenus dans la base de données
     def _statsNbTotalEquipement(self):

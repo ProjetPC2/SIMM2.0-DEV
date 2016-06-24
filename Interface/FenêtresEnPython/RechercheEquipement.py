@@ -350,7 +350,7 @@ class RechercheEquipementUI(object):
     def rechercheCategorieEquipement(self):
         """Methode permettant la recherche par rapport au champ de recherche
         de categorie d'equipement"""
-        if(self.comboBoxCategorieEquipement_2.currentText() == ""):
+        if(self.comboBoxCategorieEquipement_2.currentText() != ""):
             self.dictionnaireRecherche["CategorieEquipement"] = self.comboBoxCategorieEquipement_2.currentText()
 
         else:
@@ -361,7 +361,7 @@ class RechercheEquipementUI(object):
     def rechercheEtatDeService(self):
         """Methode permettant la recherche par rapport au champ de recherche
             d'etat de service d'equipement"""
-        if (self.comboBoxEtatService.currentText() == ""):
+        if (self.comboBoxEtatService.currentText() != ""):
             self.dictionnaireRecherche["EtatService"] = self.comboBoxEtatService.currentText()
 
         else:
@@ -371,7 +371,7 @@ class RechercheEquipementUI(object):
     def rechercheCentreService(self):
         """Methode permettant la recherche par rapport au champ de recherche
             d'etat de centre de service d'equipement"""
-        if (self.comboBoxCentreService.currentText() == ""):
+        if (self.comboBoxCentreService.currentText() != ""):
             self.dictionnaireRecherche["CentreService"] = self.comboBoxCentreService.currentText()
 
         else:
@@ -381,7 +381,7 @@ class RechercheEquipementUI(object):
     def rechercheSalle(self):
         """Methode permettant la recherche par rapport au champ de recherche
             de salle """
-        if (self.comboBoxSalle.currentText() == ""):
+        if (self.comboBoxSalle.currentText() != ""):
             self.dictionnaireRecherche["Salle"] = self.comboBoxSalle.currentText()
 
         else:
@@ -391,9 +391,8 @@ class RechercheEquipementUI(object):
     def rechercheProvenance(self):
         """Methode permettant la recherche par rapport au champ de recherche
            Provenance"""
-        if (self.comboBoxProvenance.currentText() == ""):
+        if (self.comboBoxProvenance.currentText() != ""):
             self.dictionnaireRecherche["Provenance"] = self.comboBoxProvenance.currentText()
-
         else:
             self.dictionnaireRecherche.pop("Provenance")
         self.remplirTableau()
@@ -401,7 +400,7 @@ class RechercheEquipementUI(object):
     def rechercheNumeroSerie(self):
         """Methode permettant la recherche par rapport au champ de recherche
             Numero de Serie"""
-        if (self.textEditNumeroSerie_2.toPlainText() == ""):
+        if (self.textEditNumeroSerie_2.toPlainText() != ""):
             self.dictionnaireRecherche["NumeroSerie"] = self.textEditNumeroSerie_2.toPlainText()
 
         else:
@@ -417,11 +416,14 @@ class RechercheEquipementUI(object):
             for i, dictionnaire in enumerate(liste):
                 # Creation des QTableWidgetItem
                 colonne = 0
+                print(dictionnaire)
+                print(self.listeCleDonnees)
                 for cle in self.listeCleDonnees:
                     self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                     colonne += 1
         else:
             print("dictionnaire de recherche vide")
+
 
 
 if __name__ == "__main__":

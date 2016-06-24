@@ -488,6 +488,7 @@ class BonDeTravailUI(object):
         self.boutonFlecheDroite.clicked.connect(self.bonTravailSuivant)
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
+        self.comboBoxOuvertFerme.currentTextChanged(self.editionBonDeTravail)
 
     def chercherEquipement(self):
         '''
@@ -601,6 +602,20 @@ class BonDeTravailUI(object):
          '''
         self.indiceBonDeTravail = len(self.listeBonDeTravail) - 1
         self.chargerBonTravail()
+
+    def editionBonDeTravail(self):
+        print("edition")
+        if(self.comboBoxOuvertFerme.currentText() == "Ouvert"):
+            self.dateEdit.setDisabled(False)
+            self.timeEditTempsEstime.setDisabled(False)
+            self.textEditDescSituation.setDisabled(False)
+            self.textEditDescIntervention.setDisabled(False)
+        else:
+            self.dateEdit.setDisabled(True)
+            self.timeEditTempsEstime.setDisabled(True)
+            self.textEditDescSituation.setDisabled(True)
+            self.textEditDescIntervention.setDisabled(True)
+
 
 
 if __name__ == "__main__":

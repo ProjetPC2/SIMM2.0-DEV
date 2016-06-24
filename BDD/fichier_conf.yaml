@@ -38,7 +38,7 @@ EtatConservation:
 EtatService:
 - En service
 - En maintenance
-- Au rebut
+- Au rebus
 Provenance:
 - CSI
 - POLY

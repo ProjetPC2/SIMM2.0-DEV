@@ -327,7 +327,7 @@ class RechercheBonDeTravailUI(object):
         # self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
         self.calendrierAvant.dateChanged.connect(self.rechercheDateAvant)
         self.lineEdit.returnPressed.connect(self.rechercheDescriptionSituation)
-
+        self.calendrierApres.dateChanged.connect(self.rechercheDateApres)
 
     def rechercheDateAvant(self):
         '''
@@ -353,9 +353,9 @@ class RechercheBonDeTravailUI(object):
             :param: None
             :return:
         '''
-        if (self.lineEdit.text() == ""):
+        if (self.lineEdit.text() != ""):
             self.dictionnaireRechercheBDT["DescriptionSituation"] = self.lineEdit.text()
-
+        self.remplirTableau()
 
     def rechercheCategorieEquipement(self):
         '''
@@ -363,9 +363,7 @@ class RechercheBonDeTravailUI(object):
             :param: None
             :return:
         '''
-        """Methode permettant la recherche par rapport au champ de recherche
-        de categorie d'equipement"""
-        if (self.boutonCategorie.currentText() == ""):
+        if (self.boutonCategorie.currentText() != ""):
             self.dictionnaireRecherche["CategorieEquipement"] = self.boutonCategorie.currentText()
 
         else:
@@ -379,7 +377,7 @@ class RechercheBonDeTravailUI(object):
             :param: None
             :return:
         '''
-        if (self.boutonAvant.currentText() == ""):
+        if (self.boutonAvant.currentText() != ""):
             self.dictionnaireRecherche["EtatService"] = self.boutonAvant.currentText()
 
         else:
@@ -392,7 +390,7 @@ class RechercheBonDeTravailUI(object):
             :param: None
             :return:
         '''
-        if (self.boutonCdS.currentText() == ""):
+        if (self.boutonCdS.currentText() != ""):
             self.dictionnaireRecherche["CentreService"] = self.boutonCdS.currentText()
 
         else:
@@ -411,7 +409,8 @@ class RechercheBonDeTravailUI(object):
             listeDonnees = list()
             for element in liste:
                 #Recherche a partir des attributs des equipements
-                for bonTravail in self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": element["ID"]}):
+                listeBDT = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": element["ID"]})
+                for bonTravail in listeBDT:
                     #Recuperation des bons de travail associe a un equipement
                     listeBonTravail.append(bonTravail)
                     dictDonnees = dict()
@@ -437,25 +436,36 @@ class RechercheBonDeTravailUI(object):
             if (any(self.dictionnaireRechercheBDT)):
                 liste = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRechercheBDT)
                 listeDonnees = list()
-                for bdt in liste :
-                        equipement = self.equipementManager.RechercherEquipement({"ID": bdt["ID-EQ"]})[0]
-                        dictDonnees = dict()
-                        dictDonnees["ID"] = equipement["ID"]
-                        dictDonnees["CategorieEquipement"] = equipement["CategorieEquipement"]
-                        dictDonnees["Modele"] = equipement["Modele"]
-                        dictDonnees["CentreService"] = equipement["CentreService"]
-                        dictDonnees["EtatBDT"] = bdt["EtatBDT"]
-                        dictDonnees["Date"] = bdt["Date"]
-                        dictDonnees["ID-BDT"] = bdt["ID-BDT"]
-                        dictDonnees["DescriptionSituation"] = bdt["DescriptionSituation"]
-                        listeDonnees.append(dictDonnees)
-                self.tableResultats.setRowCount(len(listeDonnees))
-                for i, dictionnaire in enumerate(listeDonnees):
-                    # Creation des QTableWidgetItem
-                    colonne = 0
-                    for cle in self.listeCleDonnees:
-                        self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
-                        colonne += 1
+                dictionnaireEquipementAssocie = dict()
+                indice = 0
+                if(len(liste) > 0):
+                    for bdt in liste :
+                            print(bdt["ID-EQ"])
+                            if bdt["ID-EQ"] in dictionnaireEquipementAssocie:
+                                equipement = dictionnaireEquipementAssocie["ID-EQ"]
+                            else:
+                                equipement = self.equipementManager.RechercherEquipement({"ID": bdt["ID-EQ"]})[0]
+                                dictionnaireEquipementAssocie["ID-EQ"] = equipement
+                            print(equipement)
+                            dictDonnees = dict()
+                            dictDonnees["ID"] = equipement["ID"]
+                            dictDonnees["CategorieEquipement"] = equipement["CategorieEquipement"]
+                            dictDonnees["Modele"] = equipement["Modele"]
+                            dictDonnees["CentreService"] = equipement["CentreService"]
+                            dictDonnees["EtatBDT"] = bdt["EtatBDT"]
+                            dictDonnees["Date"] = bdt["Date"]
+                            dictDonnees["ID-BDT"] = bdt["ID-BDT"]
+                            dictDonnees["DescriptionSituation"] = bdt["DescriptionSituation"]
+                            listeDonnees.append(dictDonnees)
+                    self.tableResultats.setRowCount(len(listeDonnees))
+                    for i, dictionnaire in enumerate(listeDonnees):
+                        # Creation des QTableWidgetItem
+                        colonne = 0
+                        for cle in self.listeCleDonnees:
+                            self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
+                            colonne += 1
+                else:
+                    print("Aucun resultat")
             else:
                 print("dictionnaire de recherche vide")
 

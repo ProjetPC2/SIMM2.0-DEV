@@ -6,7 +6,7 @@ nbEquipementEtatConservation:
   En fin de vie: 0
   Quasi neuf: 0
 nbEquipementEtatService:
-  Au rebut: 0
+  Au rebus: 0
   En maintenance: 0
   En service: 0
 nbEquipementProvenance: {}

@@ -5,19 +5,72 @@ BDT_ChampAjoutPermis:
 BDT_ChampFormatPrecis:
 - Date
 CategorieEquipement:
-- ECG
-- IRM
-- Oxymetre
-- Dialyse
-- JEROME
-- JEROME-test
-- "Cat\xE9gorie 1"
+- Defibrilateur
+- Incubateur
+- Concentrateur d'oxygene
+- Negatoscope (moniteur de radiographie)
+- Four e orthese
+- Sterilisateur e vapeur
+- Moniteur physiologique
+- Autre
+- Nebulisateur
+- Centrifugeuse
+- Incubateur neonatal
+- Sonographe (Echographe)
+- Table d'examen
+- Appareil e succion
+- Appareil de radiographie
+- Analyseur CD4 (VIH)
+- UPS
+- Analyseur hematologie
+- Melangeur
+- Analyseur biochimie
+- Ordinateur
+- Refrigerateur
+- Imprimante
+- Table d'instruments
+- Sechoir
+- Tensiometre
+- Saturometre (Oxymetre)
+- Microscope
+- Plaque chauffante
+- Bain chauffant
+- Spectrophotometre
+- Lit
+- Table de chevet
+- Balance
+- Chaise roulante
+- Support e solutes
+- Table de chirurgie
+- Appareil d'electrochirurgie
+- Lampe d'examen
+- Civiere de transport
+- Sterilisateur portable
+- Appareil d'anesthesie
+- Table de soins neonataux
+- Balance pediatrique
+- Toise
+- Thermometre
+- electrocardiographe
+- Autoscope
+- Chaise dentiste
+- Chaise de prelevement
+- Moniteur fetal
 CentreService:
-- Urgence
-- "Maternit\xE9"
-- "Atelier de g\xE9nie biom\xE9dical"
-- Soins intensifs
-- Centre de service X
+- Urgences
+- Laboratoire
+- Inconnu
+- Radiologie
+- Pediatrie
+- Maternite
+- Readaptation
+- Medecine interne
+- Bloc operatoire
+- Centre Prenatal
+- Archives
+- Clinique externe
+- Don de sang
+- Pharmacie
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -25,6 +78,7 @@ Equipement_ChampAjoutPermis:
 - CategorieEquipement
 - Salle
 - CentreService
+- Provenance
 Equipement_ChampFormatPrecis:
 - DateAcquisition
 - DateDernierEntretien
@@ -41,14 +95,42 @@ EtatService:
 - En maintenance
 - Au rebus
 Provenance:
-- CSI
-- POLY
-- CHU Ste-Justine
+- ''
+- SMS
+- I-TECH
+- SCMS
+- UGP
+- CHU Sainte-Justine
+- CDC
+- UNFPA
+- UNICEF
+- Croix-Rouge Haitienne
+- MSPP
+- PNS
 Salle:
-- A123
-- B518
-- A867
-- Salle 1
+- ''
+- Observation
+- Lab 1
+- Lab 2
+- SOP
+- Salle sterilisateur
+- Salle de recuperation
+- Salle de travail
+- Salle d'isolation
+- Hospitalisation
+- Salle d'accouchement
+- Salle de consultation
+- Salle d'hospitalisation
+- Acceuil
+- Pansement
+- Vaccination
+- BOX 1
+- Consuling
+- BOX 2
+- BOX 3
+- BOX 4
+- IST
+- BOX 5
 champsAcceptes-BDT:
 - Date
 - TempsEstime
@@ -68,7 +150,7 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 18
+dernierID-Equipement: '505'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
