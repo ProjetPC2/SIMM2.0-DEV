@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>841</width>
+    <width>833</width>
     <height>464</height>
    </rect>
   </property>
@@ -14,8 +14,9 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#MainWindow{
-background:white;
+   <string notr="true">QMainWindow{
+
+background: rgb(255, 255, 255);
 }
 
 
@@ -30,7 +31,7 @@ padding: 3px;
 font: bold 14px;
 padding-left: 5px;
 padding-right: 5px;
-min-width: 40px;
+min-width: 35px;
 max-width:220px;
 min-height: 40px;
 max-height: 40px;
@@ -42,6 +43,37 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
 
 QPushButton:pressed {
 background-color: rgb(193, 213, 243);
+}
+
+QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+min-width: 50px;
+max-width: 150px;
+}
+
+
+QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+	background:white;
+	
+}
+
+QComboBox::down-arrow {
+    image: navigation.png;
+    width: 20px;
+    height: 20px;
+}
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
 }</string>
   </property>
   <property name="iconSize">
@@ -51,14 +83,30 @@ background-color: rgb(193, 213, 243);
    </size>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0" colspan="3">
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="1" alignment="Qt::AlignLeft">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="6">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>garbage (2).png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLabel" name="labelTitre">
         <property name="minimumSize">
          <size>
-          <width>400</width>
+          <width>570</width>
           <height>0</height>
          </size>
         </property>
@@ -74,26 +122,26 @@ background-color: rgb(193, 213, 243);
           <pointsize>18</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
-         <string>Assistant de recherche - Équipement</string>
+         <string>Assistant de recherche - Suppression d'équipements</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="maximumSize">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
          <size>
-          <width>100</width>
-          <height>16777215</height>
+          <width>40</width>
+          <height>20</height>
          </size>
         </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../Images/magnifier.png</pixmap>
-        </property>
-       </widget>
+       </spacer>
       </item>
      </layout>
     </item>
@@ -116,13 +164,13 @@ background-color: rgb(193, 213, 243);
        <widget class="QComboBox" name="comboBoxCategorieEquipement">
         <property name="minimumSize">
          <size>
-          <width>200</width>
+          <width>108</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>200</width>
+          <width>204</width>
           <height>16777215</height>
          </size>
         </property>
@@ -158,7 +206,7 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
-    <item row="1" column="1">
+    <item row="1" column="1" colspan="2">
      <layout class="QVBoxLayout" name="verticalLayout_6">
       <item>
        <widget class="QLabel" name="labelNumeroSerie">
@@ -194,11 +242,79 @@ background:rgb(247, 247, 247)</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247, 247, 247)</string>
+         <string notr="true">
+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="3">
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>ID</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="4">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="boutonActualiser">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Images/refresh-button-2.png</normaloff>../Images/refresh-button-2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="5">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
       </item>
@@ -223,13 +339,13 @@ background:rgb(247, 247, 247)</string>
        <widget class="QComboBox" name="comboBoxEtatService">
         <property name="minimumSize">
          <size>
-          <width>200</width>
+          <width>108</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>200</width>
+          <width>204</width>
           <height>16777215</height>
          </size>
         </property>
@@ -290,7 +406,7 @@ background:rgb(247, 247, 247)</string>
        <widget class="QComboBox" name="comboBoxCentreService">
         <property name="maximumSize">
          <size>
-          <width>200</width>
+          <width>204</width>
           <height>16777215</height>
          </size>
         </property>
@@ -326,6 +442,9 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
+    <item row="2" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+    </item>
     <item row="3" column="0">
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
@@ -345,13 +464,13 @@ background:rgb(247, 247, 247)</string>
        <widget class="QComboBox" name="comboBoxSalle">
         <property name="minimumSize">
          <size>
-          <width>200</width>
+          <width>108</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>200</width>
+          <width>204</width>
           <height>16777215</height>
          </size>
         </property>
@@ -412,7 +531,7 @@ background:rgb(247, 247, 247)</string>
        <widget class="QComboBox" name="comboBoxProvenance">
         <property name="maximumSize">
          <size>
-          <width>200</width>
+          <width>204</width>
           <height>16777215</height>
          </size>
         </property>
@@ -449,9 +568,9 @@ background:rgb(247, 247, 247)</string>
      </layout>
     </item>
     <item row="3" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QPushButton" name="boutonActualiser">
+       <widget class="QPushButton" name="pushButton">
         <property name="styleSheet">
          <string notr="true">
 </string>
@@ -461,32 +580,19 @@ background:rgb(247, 247, 247)</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../Images/refresh-button-2.png</normaloff>../Images/refresh-button-2.png</iconset>
+          <normaloff>garbage (1).png</normaloff>garbage (1).png</iconset>
         </property>
         <property name="iconSize">
          <size>
-          <width>50</width>
-          <height>50</height>
+          <width>32</width>
+          <height>32</height>
          </size>
         </property>
        </widget>
       </item>
-      <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
      </layout>
     </item>
-    <item row="4" column="0" colspan="3">
+    <item row="4" column="0" colspan="6">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QTableWidget" name="tableResultats">
@@ -586,7 +692,7 @@ background:rgb(247, 247, 247)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>841</width>
+     <width>833</width>
      <height>21</height>
     </rect>
    </property>
