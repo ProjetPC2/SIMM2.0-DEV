@@ -20,37 +20,25 @@ import os
 
 # vérifier l'ouverture du fichier de conf, fichier de BDD equipement, fichier BDD BdT avec des exceptions
 
-
 class BonTravailManager:
     def __init__(self, bdt_pathname, equip_pathname):
         self._pathname = bdt_pathname                           # pathname de la base de données des bons de travail
         self._equip_pathname = equip_pathname                   # pathname de la base de données associées des équipements
-        conf_file = 'fichier_conf.yaml'                         # nom du fichier de configuration
-        try:                                                    # essaie d'ouvrir le fichier et de le lire
-            with open(conf_file, 'r') as fichierConf:
-                self._conf = yaml.load(fichierConf)
-        except IOError:                                         # Si une erreur est détectée lors de l'ouverture du fichier
-            print('Could not read the file', conf_file)         # Message d'erreur
+        self.conf_file = 'fichier_conf.yaml'                         # nom du fichier de configuration
+
 
     def AjouterBonTravail(self, id_equipement, dictio):
         # Ajout du bon de travail dans la base de données
-        try:
-            if not os.path.exists(self._pathname):              # erreur si le path n'existe pas
-                raise OSError("Oups nous ne trouvons plus la bdd des bons de travail!")
-            if not os.path.exists(self._equip_pathname):
-                raise OSError("Oups nous ne trouvons plus la bdd des equipements!")
-            else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des bons de travail
-                db_equip = TinyDB(self._equip_pathname, storage=YAMLStorage)
-        except OSError as e:
-            print(e)
+        conf = self._getConf()
+        db = self._getDB()
+        db_equip = self._getEquipDB()
 
         dict_renvoi = {'Reussite': False}                       # Initialisation du dictionnaire de renvoie
         id_bdt = self._ObtenirProchainIDdeBDT(id_equipement)    # id du nouveau bon de travail
         if id_bdt == -1:                                        # Equipement non existant
             print("The equipment doesn't exist. ID :", id_equipement)
             return dict_renvoi
-        elif self._verifierChamps(dictio) and self._verifierDict(dictio):   # Vérification du dictionnaire
+        elif self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf):   # Vérification du dictionnaire
             dictio['ID-EQ'] = str(id_equipement)
             dictio['ID-BDT'] = str(id_bdt)
             if db.insert(dictio) != list([]):                   # ajout du nouveau bdt dans la db
@@ -58,30 +46,26 @@ class BonTravailManager:
                 Equipement = Query()
                 db_equip.update(increment('NbBonTravail'), Equipement['ID'] == id_equipement)
                 dict_renvoi['Reussite'] = True                  # Ajout réalisé
-                self._ActualiserConfiguration()                 # Actualisation du fichier conf
-                return dict_renvoi
+                self._ActualiserConfiguration(conf)                 # Actualisation du fichier conf
         else:
             print('An error occured')
-            return dict_renvoi
+        
+        return dict_renvoi
+
 
     def SupprimerBonTravail(self, id_eq_supp, id_bdt_supp):
         BonTravail = Query()
         dict_renvoi = {'Reussite': False}                       # Initialisation du dictionnaire de renvoi à false
-        try:
-            if not os.path.exists(self._pathname):              # erreur si le path n'existe pas
-                raise OSError("Oups nous ne trouvons plus la bdd des bons de travail!")
-            else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des bons de travail
-        except OSError as e:
-            print(e)
+        db = self._getDB()
 
         if db.remove((BonTravail['ID-EQ'] == id_eq_supp) & (BonTravail['ID-BDT'] == id_bdt_supp)) != list([]):  # suppression du bdt
             dict_renvoi['Reussite'] = True                      # Suppression réussie
-        self._ActualiserConfiguration()                         # Actualiser le fichier de configuration
+        
         return dict_renvoi
 
+
     def RechercherBonTravail(self, regex_dict):
-        db = TinyDB(self._pathname, storage=YAMLStorage)
+        db = self._getDB()
         recherche = Query()
         firstEntry = True
         for key, value in regex_dict.items():
@@ -113,26 +97,24 @@ class BonTravailManager:
         result = db.search(queryUser)                           # Rechercher la combinaison de chaque champ de recherche
         return result
 
+
     def ModifierBonTravail(self, id_eq_modif, id_bdt_modif, dict_modif):
         BonTravail = Query()
         dict_renvoi = {'Reussite': False}                       # Initialisation du dictionnaire de renvoie à false
-        try:
-            if not os.path.exists(self._pathname):              # erreur si le path n'existe pas
-                raise OSError("Oups nous ne trouvons plus la bdd des bons de travail!")
-            else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des bons de travail
-        except OSError as e:
-            print(e)
+        db = self._getDB()
+        conf = self._getConf()
 
-        if self._verifierChamps(dict_modif) and self._verifierDict(dict_modif):
+        if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf):
             if db.update(dict_modif, (BonTravail['ID-EQ'] == id_eq_modif) & (BonTravail['ID-BDT'] == id_bdt_modif)) != []:
                 dict_renvoi['Reussite'] = True                  # Mise à jour de l'équipement réussie
-        self._ActualiserConfiguration()                         # Actualiser le fichier de configuration
+        
+        self._ActualiserConfiguration(conf)                         # Actualiser le fichier de configuration
         return dict_renvoi
+
 
     def _ObtenirProchainIDdeBDT(self, id_equip):
         Equipement = Query()
-        db = TinyDB(self._equip_pathname, storage=YAMLStorage)
+        db = self._getDB()
         equipement_ = db.get((Equipement['ID'] == id_equip))    # Aller chercher l'équipement associé au bon de travail
         if equipement_ is None:                                 # Si l'équipement n'existe pas
             return -1
@@ -144,19 +126,10 @@ class BonTravailManager:
                 new_id_bdt = nb_bdt_pour_eq + 1                 # nouvel id de bdt
             return new_id_bdt
 
-    def configParser(configFile):
-        config = yaml.load(configFile)
-        for k in ['swsets']:
-            if k in config:
-                tup = ()
-                for v in config[k]:
-                    tup += (v,)
-                config[k] = tup
-        return config
 
-    def _verifierChamps(self, dictio):
+    def _verifierChamps(self, dictio, conf):
         conforme = True
-        listeOfLegalKeys_temp = list(self._conf['champsAcceptes-BDT'])  # Enregistrer les champs possibles à partir du fichier de configuration
+        listeOfLegalKeys_temp = list(conf['champsAcceptes-BDT'])  # Enregistrer les champs possibles à partir du fichier de configuration
         for key, value in dictio.items():                       # Vérifier pour chaque champ sa présence dans dictio
             if key in listeOfLegalKeys_temp:                    # Si champ présent dans champs possibles
                 listeOfLegalKeys_temp.remove(key)               # Le retirer de la liste temporaire
@@ -167,35 +140,70 @@ class BonTravailManager:
         else:
             return True
 
-    def _verifierDict(self, dictio):
+
+    def _verifierDict(self, dictio, conf):
         conforme = True
 
         # Récupérer la liste des champs auxquels on peut ajouter des valeurs
-        list_champ_ajout = list(self._conf['BDT_ChampAjoutPermis'])
+        list_champ_ajout = list(conf['BDT_ChampAjoutPermis'])
         # Récupérer la liste des champs auxquels on ne peut pas ajouter des valeurs
-        list_champ_pas_ajout = list(self._conf['BDT_ChampAjoutNonPermis'])
+        list_champ_pas_ajout = list(conf['BDT_ChampAjoutNonPermis'])
         # Récupérer la liste des champs qui doivent avoir des valeurs avec un format précis
-        list_champ_format_precis = list(self._conf['BDT_ChampFormatPrecis'])
+        list_champ_format_precis = list(conf['BDT_ChampFormatPrecis'])
 
         for key, value in dictio.items():
             if key in list_champ_ajout:                         # Si le champ permet des ajouts de valeurs
-                list_temp = list(self._conf[key])
+                list_temp = list(conf[key])
                 if value not in list_temp:                      # Et que la valeur n'est pas dans la liste
-                    self._conf[key].append(value)               # Ajouter la valeur
+                    conf[key].append(value)               # Ajouter la valeur
             elif key in list_champ_pas_ajout:                   # Si le champ ne permet pas d'ajout
-                list_temp = list(self._conf[key])
+                list_temp = list(conf[key])
                 if value not in list_temp:                      # Et que la valeur n'est pas dans la liste
                     conforme = False                            # Le dictionnaire n'est pas conforme
             elif key in list_champ_format_precis:               # Si le champ doit avoir une valeur avec un format précis
                 if not isinstance(value, datetime.date):        # Vérifier le format de datetime.date()
                     conforme = False
 
-        self._ActualiserConfiguration()                         # Actualiser le fichier de configuration avec les nouvelles valeurs
+        self._ActualiserConfiguration(conf)                         # Actualiser le fichier de configuration avec les nouvelles valeurs
         return conforme
 
-    def _ActualiserConfiguration(self):
+
+    def _ActualiserConfiguration(self, conf):
         with open('fichier_conf.yaml', 'w') as fichierConf:
-            fichierConf.write(yaml.dump(self._conf, default_flow_style=False))
+            fichierConf.write(yaml.dump(conf, default_flow_style=False))
+
+
+    def _getConf(self):
+        try:
+            with open(self.conf_file, 'r') as fichierConf:            # try: ouvrir le fichier et le lire
+                conf = yaml.load(fichierConf)
+        except IOError:                                                             # attrape l'erreur IOError si elle se présente et renvoie
+            print("Could not read file: ", self.conf_file)                          # définir ce qu'il faut faire pour corriger
+
+        return conf
+
+
+    def _getDB(self):
+        try:
+            if not os.path.exists(self._pathname):
+                raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
+            else:
+                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
+        except OSError as e:
+            print(e)
+        
+        return db
+
+    def _getEquipDB(self):
+        try:
+            if not os.path.exists(self._equip_pathname):
+                raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
+            else:
+                db = TinyDB(self._equip_pathname, storage=YAMLStorage)  # data base des équipements
+        except OSError as e:
+            print(e)
+        
+        return db
 
 
 if __name__ == "__main__":  # Execution lorsque le fichier est lance
