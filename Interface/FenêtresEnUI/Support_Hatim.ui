@@ -42,10 +42,10 @@ padding: 3px;
 font: bold 16px;
 padding-left: 5px;
 padding-right: 5px;
-min-width: 130px;
-max-width:150px;
-min-height: 30px;
-max-height: 30px;
+min-width: 160px;
+max-width:160px;
+min-height: 40px;
+max-height: 40px;
 }
 
 QPushButton:hover {
@@ -181,22 +181,24 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         </font>
        </property>
        <property name="text">
-        <string>Valider</string>
+        <string>Supprimer un
+Équipement</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>check-symbol.png</normaloff>check-symbol.png</iconset>
+         <normaloff>garbage (2).png</normaloff>garbage (2).png</iconset>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Modifier</string>
+        <string>Supprimer un
+Bon de Travail</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>Modify-icon.png</normaloff>Modify-icon.png</iconset>
+         <normaloff>garbage.png</normaloff>garbage.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -209,11 +211,12 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>Enregistrer</string>
+        <string>Réinitialisier les
+Statistiques</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/save (1).png</normaloff>../Images/save (1).png</iconset>
+         <normaloff>../Images/refresh-button-2.png</normaloff>../Images/refresh-button-2.png</iconset>
        </property>
       </widget>
      </item>
