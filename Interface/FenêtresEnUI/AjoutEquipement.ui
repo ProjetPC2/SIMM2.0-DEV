@@ -581,6 +581,38 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        <property name="text">
         <string>Valider</string>
        </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>check-symbol.png</normaloff>check-symbol.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Modify-icon.png</normaloff>Modify-icon.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Enregistrer</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../Images/save (1).png</normaloff>../Images/save (1).png</iconset>
+       </property>
       </widget>
      </item>
      <item>
