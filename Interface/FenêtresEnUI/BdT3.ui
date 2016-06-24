@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>588</width>
-    <height>675</height>
+    <width>963</width>
+    <height>908</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -78,8 +78,8 @@ background:rgb(247,247,247)
    </size>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_3">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="labelTitre">
@@ -161,7 +161,20 @@ background:rgb(247,247,247)
       </item>
      </layout>
     </item>
-    <item>
+    <item row="1" column="1">
+     <spacer name="verticalSpacer_6">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>10</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -457,7 +470,7 @@ color: rgb(81, 81, 81);
       </item>
      </layout>
     </item>
-    <item>
+    <item row="3" column="0">
      <spacer name="verticalSpacer_2">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -473,7 +486,7 @@ color: rgb(81, 81, 81);
       </property>
      </spacer>
     </item>
-    <item>
+    <item row="4" column="0" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_7">
