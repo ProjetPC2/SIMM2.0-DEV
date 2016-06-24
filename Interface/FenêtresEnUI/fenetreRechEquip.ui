@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>940</width>
-    <height>713</height>
+    <width>1006</width>
+    <height>613</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,40 +19,14 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <layout class="QGridLayout" name="gridLayout_6">
-        <item row="0" column="1">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="0">
-         <spacer name="horizontalSpacer_8">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="2">
+        <item row="0" column="0">
          <widget class="QLabel" name="label_2">
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>80</height>
+           </size>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -61,20 +35,7 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="QLabel" name="label">
-          <property name="font">
-           <font>
-            <family>MS Reference Sans Serif</family>
-            <pointsize>18</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Assistant de recherche - Équipement</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="3">
+        <item row="0" column="3">
          <spacer name="horizontalSpacer_9">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -89,6 +50,21 @@
            </size>
           </property>
          </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>18</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Assistant de recherche - Équipement</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -108,22 +84,29 @@
             <height>60</height>
            </size>
           </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="styleSheet">
-           <string notr="true">padding: 1px;
+           <string notr="true">QPushButton {
+padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
 background: rgb(247,247,247)
-QPushButton#pushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
 }
-QPushButton#pushButton:pressed{
+
+QPushButton::pressed {
 padding: 1px;
 color: black;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 8px;
 background:rgb(169, 167, 170)
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
 }</string>
           </property>
           <property name="text">
@@ -143,12 +126,12 @@ background:rgb(169, 167, 170)
         </item>
         <item row="0" column="3">
          <layout class="QGridLayout" name="gridLayout_9">
-          <item row="0" column="1">
+          <item row="0" column="0">
            <widget class="QLabel" name="label_3">
             <property name="font">
              <font>
               <family>MS Reference Sans Serif</family>
-              <pointsize>12</pointsize>
+              <pointsize>10</pointsize>
              </font>
             </property>
             <property name="text">
@@ -156,26 +139,18 @@ background:rgb(169, 167, 170)
             </property>
            </widget>
           </item>
-          <item row="0" column="3">
-           <widget class="QLabel" name="label_4">
-            <property name="font">
-             <font>
-              <family>MS Reference Sans Serif</family>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Numéro de série</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
+          <item row="1" column="2">
            <widget class="QLineEdit" name="lineEdit">
             <property name="maximumSize">
              <size>
               <width>300</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">padding: 1px;
@@ -186,13 +161,18 @@ background:rgb(247,247,247);</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="1" column="0">
            <widget class="QComboBox" name="comboBox">
             <property name="maximumSize">
              <size>
               <width>300</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">padding: 1px;
@@ -223,7 +203,7 @@ background:rgb(247,247,247);</string>
             </item>
            </widget>
           </item>
-          <item row="1" column="2">
+          <item row="1" column="1">
            <spacer name="horizontalSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -239,21 +219,18 @@ background:rgb(247,247,247);</string>
             </property>
            </spacer>
           </item>
-          <item row="1" column="0">
-           <spacer name="horizontalSpacer_7">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <family>MS Reference Sans Serif</family>
+              <pointsize>10</pointsize>
+             </font>
             </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
+            <property name="text">
+             <string>Numéro de série</string>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
+           </widget>
           </item>
          </layout>
         </item>
@@ -274,25 +251,32 @@ background:rgb(247,247,247);</string>
           <property name="font">
            <font>
             <family>MS Reference Sans Serif</family>
-            <pointsize>11</pointsize>
+            <pointsize>7</pointsize>
            </font>
           </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="styleSheet">
-           <string notr="true">padding: 1px;
+           <string notr="true">QPushButton {
+padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
 background: rgb(247,247,247)
-QPushButton#pushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
 }
-QPushButton#pushButton:pressed{
+
+QPushButton::pressed {
 padding: 1px;
 color: black;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 8px;
 background:rgb(169, 167, 170)
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
 }</string>
           </property>
           <property name="text">
@@ -311,7 +295,7 @@ background:rgb(169, 167, 170)
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>50</width>
+            <width>80</width>
             <height>20</height>
            </size>
           </property>
@@ -328,6 +312,11 @@ background:rgb(169, 167, 170)
             <width>300</width>
             <height>16777215</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
           </property>
           <property name="styleSheet">
            <string notr="true">padding: 1px;
@@ -358,7 +347,7 @@ background:rgb(247,247,247);</string>
           <property name="font">
            <font>
             <family>MS Reference Sans Serif</family>
-            <pointsize>12</pointsize>
+            <pointsize>10</pointsize>
            </font>
           </property>
           <property name="text">
@@ -390,6 +379,11 @@ background:rgb(247,247,247);</string>
             <height>16777215</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">padding: 1px;
 border-style: solid;
@@ -419,7 +413,7 @@ background:rgb(247,247,247);</string>
           <property name="font">
            <font>
             <family>MS Reference Sans Serif</family>
-            <pointsize>12</pointsize>
+            <pointsize>10</pointsize>
            </font>
           </property>
           <property name="text">
@@ -447,19 +441,6 @@ background:rgb(247,247,247);</string>
       </item>
       <item>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_7">
-          <property name="font">
-           <font>
-            <family>MS Reference Sans Serif</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Salle</string>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="2">
          <widget class="QComboBox" name="comboBox_5">
           <property name="maximumSize">
@@ -467,6 +448,11 @@ background:rgb(247,247,247);</string>
             <width>300</width>
             <height>16777215</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
           </property>
           <property name="styleSheet">
            <string notr="true">padding: 1px;
@@ -499,6 +485,11 @@ background:rgb(247,247,247);</string>
             <width>300</width>
             <height>16777215</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
           </property>
           <property name="styleSheet">
            <string notr="true">padding: 1px;
@@ -545,7 +536,7 @@ background:rgb(247,247,247);</string>
           <property name="font">
            <font>
             <family>MS Reference Sans Serif</family>
-            <pointsize>12</pointsize>
+            <pointsize>10</pointsize>
            </font>
           </property>
           <property name="text">
@@ -568,6 +559,19 @@ background:rgb(247,247,247);</string>
            </size>
           </property>
          </spacer>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <family>MS Reference Sans Serif</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Salle</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
