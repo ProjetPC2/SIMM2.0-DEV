@@ -125,7 +125,7 @@ background:rgb(169, 167, 170)
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../../../../../Downloads/refresh-button-2.png</normaloff>../../../../../../../Downloads/refresh-button-2.png</iconset>
+            <normaloff>../Images/refresh-button-2.png</normaloff>../Images/refresh-button-2.png</iconset>
           </property>
           <property name="iconSize">
            <size>
