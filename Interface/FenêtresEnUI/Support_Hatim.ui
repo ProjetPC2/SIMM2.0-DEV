@@ -171,7 +171,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="BoutonValider">
+      <widget class="QPushButton" name="boutonSupprimerEquipement">
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
@@ -191,7 +191,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="boutonSupprimerBon">
        <property name="text">
         <string>Supprimer un
 Bon de Travail</string>
@@ -209,7 +209,7 @@ Bon de Travail</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="boutonRinitialiserStatistiques">
        <property name="text">
         <string>Réinitialisier les
 Statistiques</string>

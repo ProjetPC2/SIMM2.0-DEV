@@ -253,7 +253,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/edit.png</normaloff>../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/edit.png</iconset>
+         <normaloff>edit.png</normaloff>edit.png</iconset>
        </property>
        <property name="iconSize">
         <size>
