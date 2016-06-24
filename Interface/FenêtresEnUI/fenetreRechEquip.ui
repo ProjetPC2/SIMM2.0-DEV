@@ -96,10 +96,16 @@
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="0" column="4">
          <widget class="QPushButton" name="pushButton">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
-            <width>80</width>
-            <height>200</height>
+            <width>60</width>
+            <height>60</height>
            </size>
           </property>
           <property name="styleSheet">
@@ -253,16 +259,22 @@ background:rgb(247,247,247);</string>
         </item>
         <item row="0" column="5">
          <widget class="QPushButton" name="pushButton_2">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
-            <width>90</width>
-            <height>200</height>
+            <width>60</width>
+            <height>60</height>
            </size>
           </property>
           <property name="font">
            <font>
             <family>MS Reference Sans Serif</family>
-            <pointsize>12</pointsize>
+            <pointsize>11</pointsize>
            </font>
           </property>
           <property name="styleSheet">
