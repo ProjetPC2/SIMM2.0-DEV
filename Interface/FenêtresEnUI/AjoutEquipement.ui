@@ -21,7 +21,7 @@ background: white;
 QLineEdit {
 padding: 1px;
 border-style: solid;
-border: 2px solid gray;
+border: 1px solid gray;
 border-radius: 8px;
 min-width: 50px;
 max-width: 150px;
@@ -34,7 +34,7 @@ max-width: 105px
 QPushButton {
 color: black;
 background-color: rgb(240, 240, 240);
-border-width: 2px;
+border-width: 1px;
 border-color: grey;
 border-style: solid;
 border-radius: 4px;
@@ -319,7 +319,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         </font>
        </property>
        <property name="text">
-        <string>27</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -327,7 +327,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       <widget class="QComboBox" name="comboBoxCategorie">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>MS Shell Dlg 2</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -355,19 +355,37 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditMarque"/>
+      <widget class="QLineEdit" name="lineEditMarque">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditModele"/>
+      <widget class="QLineEdit" name="lineEditModele">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditNoDeSerie"/>
+      <widget class="QLineEdit" name="lineEditNoDeSerie">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QComboBox" name="comboBoxSalle">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>MS Shell Dlg 2</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -398,7 +416,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       <widget class="QComboBox" name="comboBoxCentreDeService">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>MS Shell Dlg 2</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -426,13 +444,43 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QDateEdit" name="dateEditDateDaquisition"/>
+      <widget class="QDateEdit" name="dateEditDateDaquisition">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="displayFormat">
+        <string>dd-MM-yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QDateEdit" name="dateEditDateDuDernierEntretien"/>
+      <widget class="QDateEdit" name="dateEditDateDuDernierEntretien">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="displayFormat">
+        <string>dd-MM-yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditProvenance"/>
+      <widget class="QLineEdit" name="lineEditProvenance">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -578,6 +626,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string>Valider</string>
        </property>
@@ -589,6 +640,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string>Modifier</string>
        </property>
@@ -606,6 +660,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string>Enregistrer</string>
        </property>
@@ -645,7 +702,13 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="textEditCommentaires"/>
+      <widget class="QTextEdit" name="textEditCommentaires">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
