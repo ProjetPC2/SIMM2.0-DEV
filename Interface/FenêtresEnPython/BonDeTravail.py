@@ -468,6 +468,7 @@ class BonDeTravailUI(object):
         self.comboBoxOuvertFerme.setItemText(0, _translate("MainWindow", "Ouvert"))
         self.comboBoxOuvertFerme.setItemText(1, _translate("MainWindow", "Fermé"))
 
+        self.ajoutBonDeTravail()
 
     def ajoutBonDeTravail(self):
 
@@ -488,7 +489,7 @@ class BonDeTravailUI(object):
         self.boutonFlecheDroite.clicked.connect(self.bonTravailSuivant)
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
-        self.comboBoxOuvertFerme.currentTextChanged(self.editionBonDeTravail)
+        self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
 
     def chercherEquipement(self):
         '''
@@ -499,6 +500,7 @@ class BonDeTravailUI(object):
             :return:
         '''
         #On fait la requete a la BDD
+        print("recherche equipement")
         dic_request = dict()
         dic_request['ID'] = self.lineEditID.text()
         listeTrouve = self.equipementManager.RechercherEquipement(dic_request)
@@ -560,8 +562,9 @@ class BonDeTravailUI(object):
             self.textEditDescIntervention.wordWrapMode()
             #Remplir le temps estime
             #TODO: Remplir la date associe au bon de travail
-            #self.timeEditTempsEstime.setTime("")
-            self.comboBoxOuvertFerme.setCurrentText(self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"])
+            # self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
+            if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
+                self.comboBoxOuvertFerme.setCurrentText("Fermé")
             idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
             self.labelEcritureBonTravail.setText(idBDT)
 

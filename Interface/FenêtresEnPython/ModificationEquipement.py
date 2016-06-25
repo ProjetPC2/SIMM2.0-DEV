@@ -655,7 +655,7 @@ class ModificationEquipementUI(object):
             else:
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             indice += 1
-        self.labelId.setText(self.equipementRecherche["ID"])
+        self.labelId.setText(str(self.equipementRecherche["ID"]))
 
 if __name__ == "__main__":
     import sys

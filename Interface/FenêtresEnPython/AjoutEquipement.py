@@ -605,6 +605,7 @@ class AjoutEquipementUI(object):
             self.equipement.listeMethodes[i](donnees)
             i += 1
         self.equipementManager = EquipementManager('DataBase_Equipement.json')
+        self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
 
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement"""

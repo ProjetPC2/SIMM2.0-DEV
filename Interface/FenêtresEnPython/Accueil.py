@@ -5,7 +5,7 @@
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
-
+import datetime
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 import sys
@@ -344,7 +344,7 @@ class Ui_MainWindow(object):
         #Partie Bon de Travail
         self.ajoutBonDeTravail = None
         self.rechercheBonDeTravail = None
-
+        self.modificationEquipementRecherche = None
         #Connexion des actions aux cliques des boutons de la partie Bon de Travail
         self.BoutonAjouterBonTravail.clicked.connect(self.afficherAjoutBonDeTravail)
         self.BoutonRechercherBonTravail.clicked.connect(self.afficherRechercheBonDeTravail)
@@ -441,10 +441,43 @@ class Ui_MainWindow(object):
             self.rechercheEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.rechercheEquipement)
             self.layoutAffichagePrincipal.addWidget(self.rechercheEquipement)
+            self.rechercheEquipementUI.tableResultats.doubleClicked.connect(self.choisirEquipement)
         else:
             #Affichage du widget s'il existe deja
             self.rechercheEquipement.show()
 
+    def choisirEquipement(self):
+        # print("ligne", ligne)
+        # print("colonne", colonne)
+        # print(self.tableResultats.item(ligne, 0).data(0))
+        # equipement = dict()
+        # indice = 0
+        # for cle in self.listeCleDonnees:
+        #     if (cle == "ID"):
+        #         equipement[cle] = int(self.tableResultats.item(ligne, indice).data(0))
+        #     elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
+        #         equipement[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne, indice).data(0),
+        #                                                      '%Y-%m-%d')
+        #     else:
+        #         equipement[cle] = self.tableResultats.item(ligne, indice).data(0)
+        #     indice += 1
+        # On masque les autres elements
+        self.masquerElementGraphique()
+        equipement = self.rechercheEquipementUI.equipementSelectionne
+        if self.modificationEquipementRecherche is None:
+            # Creation du widget s'il n'existe pas
+            self.modificationEquipementRecherche = QtWidgets.QWidget()
+            self.modificationEquipementRechercheUI = ModificationEquipementUI()
+            self.modificationEquipementRechercheUI.setupUi(self.modificationEquipementRecherche, equipement)
+            self.modificationEquipementRecherche.setStyleSheet("background: white;")
+
+            self.listeElementParDefaut.append(self.modificationEquipementRecherche)
+            self.layoutAffichagePrincipal.addWidget(self.modificationEquipementRecherche)
+        else:
+            # Affichage du widget s'il existe deja
+            self.modificationEquipementRecherche.show()
+            self.modificationEquipementRechercheUI.equipementRecherche = equipement
+            self.modificationEquipementRechercheUI.remplirEquipement()
 
     def afficherAjoutBonDeTravail(self):
         '''

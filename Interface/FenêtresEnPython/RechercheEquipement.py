@@ -5,12 +5,15 @@
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
+import datetime
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.EquipementManager import EquipementManager
+from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquipementUI
+from Interface.Stockage import Equipement
 
 
 class RechercheEquipementUI(object):
@@ -40,7 +43,7 @@ class RechercheEquipementUI(object):
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        self.textEditNumeroSerie_2 = QtWidgets.QTextEdit(Form)
+        self.textEditNumeroSerie_2 = QtWidgets.QLineEdit(Form)
         self.textEditNumeroSerie_2.setMaximumSize(QtCore.QSize(200, 25))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -298,7 +301,7 @@ class RechercheEquipementUI(object):
     def ajoutRechercheBonDeTravail(self):
         #Recuperation des differents attributs d'un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
-        # self.listeCleDonnees = list()
+        self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
             fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
@@ -307,7 +310,10 @@ class RechercheEquipementUI(object):
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
-        self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
+        self.listeCleDonnees.append("ID")
+        for element in self._conf['champsAcceptes-Equipement']:
+            self.listeCleDonnees.append(element)
+        # self.listeCleDonnees = ()
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
@@ -334,6 +340,7 @@ class RechercheEquipementUI(object):
 
         #Mise en forme de la page d'accueil
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
+        # self.tableResultats.setHorizontalHeaderLabels("ID")
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.resizeColumnsToContents()
 
@@ -346,7 +353,7 @@ class RechercheEquipementUI(object):
         self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
         self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
         # self.textEditNumeroSerie_2.returnPressed.connect(self.rechercheNumeroSerie)
-        # self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
+        self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
 
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
         self.colonneClique = None
@@ -354,6 +361,31 @@ class RechercheEquipementUI(object):
         #Empeche la modification de la table
         self.tableResultats.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers );
         self.tableResultats.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.tableResultats.cellDoubleClicked.connect(self.choisirEquipement)
+        self.listeResultat = list()
+        self.modificationEquipement = None
+        self.equipementSelectionne = None
+
+    def choisirEquipement(self, ligne, colonne):
+        print("ligne", ligne)
+        print("colonne", colonne)
+        print(self.tableResultats.item(ligne,0).data(0))
+        self.equipementSelectionne = dict()
+        indice = 0
+        for cle in self.listeCleDonnees:
+            if(cle == "ID"):
+                self.equipementSelectionne[cle] = int(self.tableResultats.item(ligne,indice).data(0))
+            elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
+                self.equipementSelectionne[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%Y-%m-%d')
+            else:
+                self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
+            indice += 1
+        # self.modificationEquipement = QtWidgets.QWidget()
+        # self.modificationEquipementUI = ModificationEquipementUI()
+        # self.modificationEquipementUI.setupUi(self.modificationEquipement, equipement)
+        # # self.modificationEquipement.setStyleSheet("background: white;")
+        print (self.equipementSelectionne)
+        # self.hide()
 
     def trier(self, numeroColonne):
         """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
@@ -424,6 +456,7 @@ class RechercheEquipementUI(object):
     def rechercheNumeroSerie(self):
         """Methode permettant la recherche par rapport au champ de recherche
             Numero de Serie"""
+        print("recherche numero de serie")
         if (self.textEditNumeroSerie_2.toPlainText() != ""):
             self.dictionnaireRecherche["NumeroSerie"] = self.textEditNumeroSerie_2.toPlainText()
 
@@ -435,9 +468,9 @@ class RechercheEquipementUI(object):
         """Methode permettant de remplir la table des resultats
         Le remplissage se fait avec le resultat des donnees"""
         if(any(self.dictionnaireRecherche)):
-            liste = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
-            self.tableResultats.setRowCount(len(liste))
-            for i, dictionnaire in enumerate(liste):
+            self.listeResultat = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
+            self.tableResultats.setRowCount(len(self.listeResultat))
+            for i, dictionnaire in enumerate(self.listeResultat):
                 # Creation des QTableWidgetItem
                 colonne = 0
                 # print(dictionnaire)
