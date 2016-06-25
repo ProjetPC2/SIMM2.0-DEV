@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>833</width>
-    <height>464</height>
+    <width>672</width>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@ border-color: grey;
 border-style: solid;
 border-radius: 4px;
 padding: 3px;
-font: bold 14px;
+font: bold 12px;
 padding-left: 5px;
 padding-right: 5px;
 min-width: 35px;
@@ -84,7 +84,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="6">
+    <item row="0" column="0" colspan="3">
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
        <widget class="QLabel" name="label">
@@ -146,6 +146,73 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </layout>
     </item>
     <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>ID</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditID"/>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1" rowspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="boutonNouvelleRecherche">
+        <property name="text">
+         <string>Nouvelle
+Recherche</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="boutonSupprimerEquipement">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>  Supprimer
+l'équipement</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>garbage (1).png</normaloff>garbage (1).png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="2" rowspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0" rowspan="2">
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <item>
        <widget class="QLabel" name="labelCategorieEquipement">
@@ -206,7 +273,7 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
-    <item row="1" column="1" colspan="2">
+    <item row="3" column="1" colspan="2">
      <layout class="QVBoxLayout" name="verticalLayout_6">
       <item>
        <widget class="QLabel" name="labelNumeroSerie">
@@ -248,58 +315,7 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
-    <item row="1" column="3">
-     <layout class="QVBoxLayout" name="verticalLayout_7">
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>ID</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit"/>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="4">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="5">
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="minimumSize">
-         <size>
-          <width>130</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="0">
+    <item row="4" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLabel" name="labelEtatService">
@@ -360,7 +376,7 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
-    <item row="2" column="1">
+    <item row="4" column="1">
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QLabel" name="labelCentreService">
@@ -421,10 +437,7 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
-    <item row="2" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_4"/>
-    </item>
-    <item row="3" column="0">
+    <item row="5" column="0">
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QLabel" name="labelSalle">
@@ -485,7 +498,7 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
-    <item row="3" column="1">
+    <item row="5" column="1">
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
        <widget class="QLabel" name="labelProvenance">
@@ -546,31 +559,7 @@ background:rgb(247, 247, 247)</string>
       </item>
      </layout>
     </item>
-    <item row="3" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>garbage (1).png</normaloff>garbage (1).png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>32</width>
-          <height>32</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="4" column="0" colspan="6">
+    <item row="6" column="0" colspan="3">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QTableWidget" name="tableResultats">
@@ -664,13 +653,14 @@ background:rgb(247, 247, 247)</string>
      </layout>
     </item>
    </layout>
+   <zorder>horizontalSpacer_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>833</width>
+     <width>672</width>
      <height>21</height>
     </rect>
    </property>
