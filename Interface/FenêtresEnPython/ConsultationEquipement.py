@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import QVBoxLayout
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
-from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquipementUI
+from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipementUI
 
 
 class ConsultationEquipementUI(object):
@@ -156,7 +156,7 @@ class ConsultationEquipementUI(object):
         self.boutonAfficherEquipement.setFont(font)
         self.boutonAfficherEquipement.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/Refresh2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("..\\Images\\Refresh2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonAfficherEquipement.setIcon(icon)
         self.boutonAfficherEquipement.setIconSize(QtCore.QSize(36, 36))
         self.boutonAfficherEquipement.setObjectName("boutonAfficherEquipement")

@@ -12,7 +12,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.EquipementManager import EquipementManager
-from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquipementUI
+from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipementUI
 from Interface.Stockage import Equipement
 
 

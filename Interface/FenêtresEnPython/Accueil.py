@@ -10,14 +10,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 import sys
 
-from Interface.FenêtresEnPython.AjoutEquipement import AjoutEquipementUI
-from Interface.FenêtresEnPython.BonDeTravail import BonDeTravailUI
-from Interface.FenêtresEnPython.ConsultationEquipement import ConsultationEquipementUI
-from Interface.FenêtresEnPython.ModificationEquipement import ModificationEquipementUI
-from Interface.FenêtresEnPython.RechercheBonDeTravail import RechercheBonDeTravailUI
-from Interface.FenêtresEnPython.RechercheEquipement import RechercheEquipementUI
-from Interface.FenêtresEnPython.StatistiqueFenetre import Statistique
-from Interface.FenêtresEnPython.SupportPC2 import SupportPC2UI
+from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipementUI
+from Interface.FenetresEnPython.BonDeTravail import BonDeTravailUI
+from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipementUI
+from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipementUI
+from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravailUI
+from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipementUI
+from Interface.FenetresEnPython.StatistiqueFenetre import Statistique
+from Interface.FenetresEnPython.SupportPC2 import SupportPC2UI
 
 
 class Ui_MainWindow(object):
