@@ -1,31 +1,45 @@
 import os
-import subprocess
-
-from IPython.core.inputtransformer import tr
-from PyQt5 import QtGui
+import sys
+import time
 
 import yaml
-from reportlab.graphics.charts import utils
+from PyQt5.QtWidgets import (QFileDialog, QApplication)
 from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter, inch, A4, landscape
+from reportlab.lib.pagesizes import inch, A4, landscape
+from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import cm
 from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Table, Spacer
-from reportlab.lib.styles import getSampleStyleSheet
-import datetime
-from PyQt5.QtCore import QDate
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
 from reportlab.rl_config import defaultPageSize
-import time
-from PyQt5.QtWidgets import QFileDialog
-from BDD.EquipementManager import EquipementManager
 
+import random
 import sys
-from PyQt5.QtWidgets import (QMainWindow, QTextEdit,
-                             QAction, QFileDialog, QApplication)
-class PDF():
+from threading import Thread
+import time
+
+class Afficheur(Thread):
+
+    """Thread chargé simplement d'afficher une lettre dans la console."""
+
+    def __init__(self, lettre):
+        Thread.__init__(self)
+        self.lettre = lettre
+
+    def run(self):
+        """Code à exécuter pendant l'exécution du thread."""
+        i = 0
+        while i < 20:
+            sys.stdout.write(self.lettre)
+            sys.stdout.flush()
+            attente = 0.2
+            attente += random.randint(1, 60) / 100
+            time.sleep(attente)
+            i += 1
+
+from BDD.EquipementManager import EquipementManager
+class PDF(Thread):
     def __init__(self):
+        Thread.__init__(self)
         self.PAGE_WIDTH = defaultPageSize[1];
         self.PAGE_HEIGHT = defaultPageSize[0]
 
@@ -171,6 +185,12 @@ class PDF():
         iw, ih = img.getSize()
         aspect = ih / float(iw)
         return Image(path, width=width, height=(width * aspect))
+
+    def run(self):
+        if(self.fileName[0] != ""):
+            self.creationPDF(self.fileName[0])
+        else:
+            print("Sauvegarde annule")
 
 
 if __name__ == "__main__":

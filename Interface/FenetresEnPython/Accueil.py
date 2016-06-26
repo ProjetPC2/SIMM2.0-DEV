@@ -609,7 +609,10 @@ class Ui_MainWindow(object):
 
     def imprimerInventaire(self):
         pdf = PDF()
-        pdf.creationPDF(pdf.fileName[0])
+        # pdf.creationPDF(pdf.fileName[0])
+        pdf.start()
+        #On attend la fin du thread, on annule le lancement en parallele pour l'instant car le logiciel repond mal
+        pdf.join()
 
 class SIMM():
     '''

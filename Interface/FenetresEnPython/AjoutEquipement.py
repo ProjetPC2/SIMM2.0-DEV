@@ -458,7 +458,7 @@ class AjoutEquipementUI(object):
         # Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
         self.listeDonnees = list()
-        conf_file = 'Interface\\FenetresEnPython\\fichier_conf.yaml'  # pathname du fichier de configuration
+        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
             fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
