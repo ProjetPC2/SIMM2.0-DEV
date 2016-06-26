@@ -264,13 +264,39 @@ class Ui_MainWindow(object):
         self.LabelSIMM20HopitalSaintMichel.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.LabelSIMM20HopitalSaintMichel.setObjectName("LabelSIMM20HopitalSaintMichel")
         self.layoutAffichagePrincipal.addWidget(self.LabelSIMM20HopitalSaintMichel)
-        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
-        self.graphicsView.setObjectName("graphicsView")
+        self.graphicsView = QtWidgets.QLabel(self.centralwidget)
+        self.graphicsView.setObjectName("Logo")
+        self.graphicsView.setPixmap(QtGui.QPixmap("..\\Images\\SIMM2.0.png"))
+        self.graphicsView.setAlignment(QtCore.Qt.AlignCenter)
+        self.graphicsView.setStyleSheet("\n"
+"color: white;\n"
+"\n"
+" background-color: transparent ;")
+        #############
+        # Ajout pour la navigation
+        #############
+
+        self.labelFleche = QtWidgets.QPushButton(self.centralwidget)
+        self.labelFleche.setIcon(QtGui.QIcon("..\\Images\\left-arrow.png"))
+        self.labelFleche.setMaximumHeight(60)
+        self.labelFleche.setMaximumWidth(60)
+        # self.labelFleche.setScaledContents(True)
+        self.labelFleche.setStyleSheet("\n"
+"color: white;\n"
+"\n"
+" background-color: white ;")
+
+        self.layoutAffichagePrincipal.addWidget(self.labelFleche)
+        self.labelFleche.hide()
+
         self.layoutAffichagePrincipal.addWidget(self.graphicsView)
 
 
-        spacerItem11 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.layoutAffichagePrincipal.addItem(spacerItem11)
+        #Spacer responsable de l'esapce blanc dans le titre
+        self.spacerItem11 = QtWidgets.QSpacerItem(40, 1, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.layoutAffichagePrincipal.addItem(self.spacerItem11)
+
+
         self.LabelDefinitionSIMM = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setBold(True)
@@ -280,6 +306,7 @@ class Ui_MainWindow(object):
 "color: white;\n"
 "\n"
 " background-color: transparent ;")
+        # self.LabelDefinitionSIMM.setAlignment(QtCore.Qt.AlignBottom)
         self.LabelDefinitionSIMM.setAlignment(QtCore.Qt.AlignCenter)
         self.LabelDefinitionSIMM.setObjectName("LabelDefinitionSIMM")
         self.layoutAffichagePrincipal.addWidget(self.LabelDefinitionSIMM)
@@ -363,6 +390,9 @@ class Ui_MainWindow(object):
         self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
 
 
+        self.listeNavigation = list()
+        self.labelFleche.clicked.connect(self.naviguer)
+
     def connectionBouton(self):
         '''
             Methode qui va faire la connection des differents boutons
@@ -428,6 +458,8 @@ class Ui_MainWindow(object):
         else:
             #Affichage de l'element s'il existe deja
             self.consultationEquipement.show()
+        self.listeNavigation.clear()
+        self.listeNavigation.append(self.consultationEquipement)
 
     def afficherRechercheEquipement(self):
         '''
@@ -590,6 +622,7 @@ class Ui_MainWindow(object):
             :return:
         '''
         # On masque les autres elements
+        self.labelFleche.show()
         self.masquerElementGraphique()
         equipement = self.consultationEquipementUI.equipement
         if self.modificationEquipement is None:
@@ -606,6 +639,8 @@ class Ui_MainWindow(object):
             self.modificationEquipement.show()
             self.modificationEquipementUI.equipementRecherche = equipement
             self.modificationEquipementUI.remplirEquipement()
+        self.listeNavigation.append(self.modificationEquipement)
+
 
     def imprimerInventaire(self):
         pdf = PDF()
@@ -614,6 +649,16 @@ class Ui_MainWindow(object):
         #On attend la fin du thread, on annule le lancement en parallele pour l'instant car le logiciel repond mal
         pdf.join()
 
+    def naviguer(self):
+        if(len(self.listeNavigation)>1):
+            widget = self.listeNavigation.pop(len(self.listeNavigation) - 1)
+            widget.hide()
+            self.listeNavigation[len(self.listeNavigation) - 1].show()
+            if(len(self.listeNavigation)==1):
+                self.labelFleche.hide()
+        else:
+            print("Il n'y a qu'un seul element")
+            self.labelFleche.hide()
 class SIMM():
     '''
         Fonction de lancement de la page d'accueil de SIMM
