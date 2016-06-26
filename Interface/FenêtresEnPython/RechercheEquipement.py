@@ -12,8 +12,6 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.EquipementManager import EquipementManager
-from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipementUI
-from Interface.Stockage import Equipement
 
 
 class RechercheEquipementUI(object):
@@ -352,7 +350,7 @@ class RechercheEquipementUI(object):
         self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
         self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
         self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
-        # self.textEditNumeroSerie_2.returnPressed.connect(self.rechercheNumeroSerie)
+        self.textEditNumeroSerie_2.returnPressed.connect(self.rechercheNumeroSerie)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
 
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
@@ -457,10 +455,11 @@ class RechercheEquipementUI(object):
         """Methode permettant la recherche par rapport au champ de recherche
             Numero de Serie"""
         print("recherche numero de serie")
-        if (self.textEditNumeroSerie_2.toPlainText() != ""):
-            self.dictionnaireRecherche["NumeroSerie"] = self.textEditNumeroSerie_2.toPlainText()
+        if (self.textEditNumeroSerie_2.text() != ""):
+            self.dictionnaireRecherche["NumeroSerie"] = self.textEditNumeroSerie_2.text()
 
         else:
+
             self.dictionnaireRecherche.pop("NumeroSerie")
         self.remplirTableau()
 
