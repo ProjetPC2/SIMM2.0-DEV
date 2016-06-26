@@ -1,0 +1,16 @@
+nbEquipement: 2
+nbEquipementCentreService:
+  Urgences:
+    Defibrilateur: 2
+nbEquipementEtatConservation:
+  Acceptable: 1
+  Desuet: 0
+  En fin de vie: 0
+  Quasi neuf: 3
+nbEquipementEtatService:
+  Au rebus: 1
+  En maintenance: 0
+  En service: 3
+nbEquipementProvenance:
+  ? ''
+  : 2

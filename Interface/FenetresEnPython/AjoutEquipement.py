@@ -458,7 +458,7 @@ class AjoutEquipementUI(object):
         # Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
         self.listeDonnees = list()
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
+        conf_file = 'Interface\\FenetresEnPython\\fichier_conf.yaml'  # pathname du fichier de configuration
         try:
             fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
@@ -609,26 +609,29 @@ class AjoutEquipementUI(object):
 
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement"""
-        self.donnees()
-        indice = 0
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(10)
-        for text in self.listeDonnees:
-            if type(self.listeWidgets[indice]) is QButtonGroup:
-                for radioBouton in self.listeWidgets[indice].buttons():
-                    if not radioBouton.isChecked():
-                        radioBouton.hide()
-            else:
-                self.listeLabel[indice].setFont(font)
-                self.listeLabel[indice].setText(str(text))
-                self.listeLabel[indice].show()
-                self.listeWidgets[indice].hide()
-            indice += 1
-        self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
-        self.boutonEnregister.show()
-        self.boutonModifier.show()
-        self.boutonValider.hide()
+        if(self.verificationChamps()):
+            self.donnees()
+            indice = 0
+            font = QtGui.QFont()
+            font.setFamily("Times New Roman")
+            font.setPointSize(10)
+            for text in self.listeDonnees:
+                if type(self.listeWidgets[indice]) is QButtonGroup:
+                    for radioBouton in self.listeWidgets[indice].buttons():
+                        if not radioBouton.isChecked():
+                            radioBouton.hide()
+                else:
+                    self.listeLabel[indice].setFont(font)
+                    self.listeLabel[indice].setText(str(text))
+                    self.listeLabel[indice].show()
+                    self.listeWidgets[indice].hide()
+                indice += 1
+            self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
+            self.boutonEnregister.show()
+            self.boutonModifier.show()
+            self.boutonValider.hide()
+        else:
+            print("Champs obligatoire(s) manquant(s)")
 
     def modifierEquipement(self):
         """Action lors de l'appuie sur le bouton modifier
@@ -669,7 +672,11 @@ class AjoutEquipementUI(object):
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             indice += 1
 
-
+    def verificationChamps(self):
+        if(self.comboBoxCategorie.currentText() == ""):
+            return False
+        else:
+            return True
 
 if __name__ == "__main__":
     import sys

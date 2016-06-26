@@ -185,8 +185,9 @@ class Statistique(QWidget):
         self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
         self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
 
-        self.listeComboProvenance.currentTextChanged.connect(self.affichageProvenance)
-        self.listeComboService.currentTextChanged.connect(self.affichageCenreService)
+        #TODO : a reconnecter une fois que les fichiers de l'ancienne bdd aura ete reparse
+        # self.listeComboProvenance.currentTextChanged.connect(self.affichageProvenance)
+        # self.listeComboService.currentTextChanged.connect(self.affichageCenreService)
 
     def center(self):
         """Methode permettant de centrer la fenetre"""

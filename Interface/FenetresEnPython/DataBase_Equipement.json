@@ -9035,18 +9035,54 @@ _default:
       Salle: Hospitalisation
     state:
       eid: 501
-  502:
-    CategorieEquipement: Ordinateur
-    CentreService: Pharmacie
-    Commentaires: '"Non utilise. Entroposer sur l''etagere."'
-    DateAcquisition: 2016-06-23
-    DateDernierEntretien: 2016-06-23
-    EtatConservation: Acceptable
+  502: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Ordinateur
+      CentreService: Pharmacie
+      Commentaires: '"Non utilise. Entroposer sur l''etagere."'
+      DateAcquisition: 2016-06-23
+      DateDernierEntretien: 2016-06-23
+      EtatConservation: Acceptable
+      EtatService: En service
+      ID: '505'
+      Marque: DELL
+      Modele: INSPIRON
+      NbBonTravail: 0
+      NumeroSerie: '36858441601'
+      Provenance: UNFPA
+      Salle: ''
+    state:
+      eid: 502
+  503: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2000-01-01
+      DateDernierEntretien: 2000-01-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '506'
+      Marque: asoij
+      Modele: oijas
+      NbBonTravail: 0
+      NumeroSerie: oijads
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 503
+  504:
+    CategorieEquipement: Defibrilateur
+    CentreService: Urgences
+    Commentaires: ''
+    DateAcquisition: 2000-01-01
+    DateDernierEntretien: 2000-01-01
+    EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '505'
-    Marque: DELL
-    Modele: INSPIRON
+    ID: '507'
+    Marque: ''
+    Modele: ''
     NbBonTravail: 0
-    NumeroSerie: '36858441601'
-    Provenance: UNFPA
+    NumeroSerie: ''
+    Provenance: ''
     Salle: ''

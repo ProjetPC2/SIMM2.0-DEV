@@ -19,6 +19,8 @@ from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipementUI
 from Interface.FenetresEnPython.StatistiqueFenetre import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2UI
 
+from Interface.FenetresEnPython.PDF import PDF
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -351,7 +353,10 @@ class Ui_MainWindow(object):
 
         #Creation du conteneur de la page statistique
         self.statistique = None
-        # self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
+        self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
+
+        #Connexion de l'impression de la BDD
+        self.BoutonImprimerInventaire.clicked.connect(self.imprimerInventaire)
 
         #Creation de la partie Support
         self.support = None
@@ -371,8 +376,8 @@ class Ui_MainWindow(object):
         self.BoutonAjouterBonTravail.clicked.connect(self.afficherAjoutBonDeTravail)
         self.BoutonRechercherBonTravail.clicked.connect()
 
-        self.BoutonImprimerInventaire.clicked.connect()
-        self.BoutonStatistiques.clicked.connect()
+        self.BoutonImprimerInventaire.clicked.connect(self.imprimerInventaire)
+        self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
 
         self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
 
@@ -601,6 +606,10 @@ class Ui_MainWindow(object):
             self.modificationEquipement.show()
             self.modificationEquipementUI.equipementRecherche = equipement
             self.modificationEquipementUI.remplirEquipement()
+
+    def imprimerInventaire(self):
+        pdf = PDF()
+        pdf.creationPDF(pdf.fileName[0])
 
 class SIMM():
     '''

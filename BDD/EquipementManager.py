@@ -46,7 +46,7 @@ class EquipementManager:
 
         dict_renvoi = {'Reussite': False}
         if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf):   # ARRANGER FONCTION AVANT
-            id_eq = self._ObtenirProchainID(conf)               # id du nouvel équipement
+            id_eq = self._ObtenirProchainID()               # id du nouvel équipement
             dictio['ID'] = str(id_eq)                       # ajout de l'ID au dictionnaire
             dictio['NbBonTravail'] = 0                      # ajout du nombre de bon de travail qui est toujours 0 pour un nouvel équipement
             if db.insert(dictio) != list([]):
@@ -179,7 +179,7 @@ class EquipementManager:
                     if value not in stats['nbEquipementCentreService'][dictio['CentreService']]: # vérifie si l'équipement est dans le centre de service associé
                         stats['nbEquipementCentreService'][dictio['CentreService']][value] = 0    # si non, ajout de l'éq. dans le centre de service associé
         self._ActualiserConfiguration(conf)       # actualise le fichier de configuration et de stats pour qu'il contienne la nouvelle entrée
-        self._ActualiserStats()
+        self._ActualiserStats(stats)
         return conforme                       # retourne un booléen qui indique si le dictionnaire est conforme ou non
 
 
