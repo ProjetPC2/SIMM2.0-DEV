@@ -11,7 +11,7 @@ _default:
       ID: '1'
       Marque: Electro-ECG
       Modele: E432
-      NbBonTravail: 0
+      NbBonTravail: 5
       NumeroSerie: '1234'
       Provenance: Poly
       Salle: A867
@@ -29,24 +29,27 @@ _default:
       ID: '2'
       Marque: Electro-ECG
       Modele: E432
-      NbBonTravail: 0
+      NbBonTravail: 1
       NumeroSerie: '1234'
       Provenance: Poly
       Salle: A867
     state:
       eid: 2
-  3:
-    CategorieEquipement: Lit
-    CentreService: "Natalit\xE9"
-    Commentaires: NONE
-    DateAcquisition: 2008-07-12
-    DateDernierEntretien: 2011-02-27
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '3'
-    Marque: Bed-Ultra
-    Modele: E432
-    NbBonTravail: 0
-    NumeroSerie: '1134'
-    Provenance: Poly
-    Salle: A867
+  3: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Natalit\xE9"
+      Commentaires: NONE
+      DateAcquisition: 2008-07-12
+      DateDernierEntretien: 2011-02-27
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '3'
+      Marque: Bed-Ultra
+      Modele: E432
+      NbBonTravail: 1
+      NumeroSerie: '1134'
+      Provenance: Poly
+      Salle: A867
+    state:
+      eid: 3

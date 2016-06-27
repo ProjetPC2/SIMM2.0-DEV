@@ -32,15 +32,22 @@ class BonTravailManager:
         conf = self._getConf()
         db = self._getDB()
         db_equip = self._getEquipDB()
-
+        Equipement = Query()
+        list_ajout_champ_equipement = list(conf['BDT_Ajout_Champ_Equipement'])
         dict_renvoi = {'Reussite': False}                       # Initialisation du dictionnaire de renvoie
+        dict_equipement = db_equip.get(Equipement['ID'] == id_equipement)
         id_bdt = self._ObtenirProchainIDdeBDT(id_equipement)    # id du nouveau bon de travail
+
         if id_bdt == -1:                                        # Equipement non existant
             print("The equipment doesn't exist. ID :", id_equipement)
             return dict_renvoi
         elif self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf):   # Vérification du dictionnaire
             dictio['ID-EQ'] = str(id_equipement)
             dictio['ID-BDT'] = str(id_bdt)
+            for key, value in dict_equipement.items():     # récupère les infos pertinentes et les ajoute au dictionnaire du bon de travail
+                if key in list_ajout_champ_equipement:
+                    dictio[key] = value
+            print(dictio)
             if db.insert(dictio) != list([]):                   # ajout du nouveau bdt dans la db
                 # Mise à jour du nombre de bons de travail pour cet équipement dans la base de données des équipements
                 Equipement = Query()
@@ -103,18 +110,16 @@ class BonTravailManager:
         dict_renvoi = {'Reussite': False}                       # Initialisation du dictionnaire de renvoie à false
         db = self._getDB()
         conf = self._getConf()
-
         if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf):
             if db.update(dict_modif, (BonTravail['ID-EQ'] == id_eq_modif) & (BonTravail['ID-BDT'] == id_bdt_modif)) != []:
                 dict_renvoi['Reussite'] = True                  # Mise à jour de l'équipement réussie
-        
         self._ActualiserConfiguration(conf)                         # Actualiser le fichier de configuration
         return dict_renvoi
 
 
     def _ObtenirProchainIDdeBDT(self, id_equip):
         Equipement = Query()
-        db = self._getDB()
+        db = self._getEquipDB()
         equipement_ = db.get((Equipement['ID'] == id_equip))    # Aller chercher l'équipement associé au bon de travail
         if equipement_ is None:                                 # Si l'équipement n'existe pas
             return -1
@@ -215,14 +220,15 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
              'TempsEstime': 'Cam-modif',
              'DescriptionSituation': 'Larose-modif',
              'DescriptionIntervention': 'Blablabla-modif',
-             'EtatBDT': 'Ferme'}
+             'EtatBDT': 'Ferme',
+             'NomTechnicien': 'Kerlin'}
 
 
     #dic_request = {'AvantLe': datetime.date(2016, 03, 12)}
                    #'ApresLe': datetime.date(2016, 06, 10)}
 
 
-    #print(manager.AjouterBonTravail('1', data1))                       # Ajout de 2 équipements de suite (pour tester...
+    #print(manager.AjouterBonTravail('2', data1))                       # Ajout de 2 équipements de suite (pour tester...
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
     #print(len(manager.RechercherBonTravail(dic_request)))
