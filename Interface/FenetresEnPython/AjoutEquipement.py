@@ -90,17 +90,17 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonValider.clicked.connect(self.verificationEquipement)
 
         # Creation des differents labels pour la verification
-        self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
-        self.marqueLabel = QLabel("Ici marque")
-        self.modeleLabel = QLabel("Ici Modele ")
-        self.numSerieLabel = QLabel("Ici No. de serie ")
-        self.salleLabel = QLabel("Ici Label ")
-        self.centreServiceLabel = QLabel("Ici Centre de service ")
-        self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
-        self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
-        self.provenanceLabel = QLabel()
-        self.etatServiceLabel = QLabel("Ici Etat de service ")
-        self.etatConservationLabel = QLabel("Ici Etat de conservation ")
+        #self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
+        #self.marqueLabel = QLabel("Ici marque")
+        #self.modeleLabel = QLabel("Ici Modele ")
+        #self.numSerieLabel = QLabel("Ici No. de serie ")
+        #self.salleLabel = QLabel("Ici Label ")
+        #self.centreServiceLabel = QLabel("Ici Centre de service ")
+        #self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
+        #self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
+        #self.provenanceLabel = QLabel()
+        #self.etatServiceLabel = QLabel("Ici Etat de service ")
+        #self.etatConservationLabel = QLabel("Ici Etat de conservation ")
         self.commentaire = QLabel("Ici commentaires ")
 
         # Creation du liste pour manipuler plus facilement ces differents labels
