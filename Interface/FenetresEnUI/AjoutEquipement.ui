@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>563</width>
-    <height>586</height>
+    <width>801</width>
+    <height>636</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -485,70 +485,70 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        <item>
         <widget class="QLabel" name="labelID">
          <property name="text">
-          <string>ID</string>
+          <string>Ici ID</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelCategorie">
          <property name="text">
-          <string>Catégorie</string>
+          <string>Ici Catégorie</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelMarque">
          <property name="text">
-          <string>Marque</string>
+          <string>Ici Marque</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelModele">
          <property name="text">
-          <string>Modèle</string>
+          <string>Ici Modèle</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelNoDeSerie">
          <property name="text">
-          <string>No. de serie</string>
+          <string>Ici No. de serie</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelSalle">
          <property name="text">
-          <string>Salle</string>
+          <string>Ici Salle</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelCentreDeService">
          <property name="text">
-          <string>Centre de service</string>
+          <string>Ici Centre de service</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelDateDAquisition">
          <property name="text">
-          <string>Date d'aquisition</string>
+          <string>Ici Date d'aquisition</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelDateDernierEntretien">
          <property name="text">
-          <string>Date du dernier entretien</string>
+          <string>Ici Date du dernier entretien</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelProvenance">
          <property name="text">
-          <string>Provenance</string>
+          <string>Ici Provenance</string>
          </property>
         </widget>
        </item>
@@ -579,10 +579,20 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
             <property name="text">
              <string>État de service : </string>
             </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
            </widget>
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="labelEtatDeService">
+              <property name="text">
+               <string>Ici État de Service</string>
+              </property>
+             </widget>
+            </item>
             <item>
              <widget class="QRadioButton" name="radioButtonEnService">
               <property name="text">
@@ -632,10 +642,20 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
             <property name="text">
              <string>État de Conservation : </string>
             </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
            </widget>
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="labelEtatDeConservation">
+              <property name="text">
+               <string>Ici État de Conservation</string>
+              </property>
+             </widget>
+            </item>
             <item>
              <widget class="QRadioButton" name="radioButtonQuasiNeuf">
               <property name="text">
