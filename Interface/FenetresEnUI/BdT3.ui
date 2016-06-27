@@ -57,9 +57,101 @@ border-radius: 4px;
 background:rgb(247,247,247)
 }</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="0">
-    <spacer name="verticalSpacer_2">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="labelPhotoPlus">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../PC2/SIMM2.0-DEV/Interface/Images/plus.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Images/plus.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelTitre">
+       <property name="maximumSize">
+        <size>
+         <width>20000</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Bon de travail - Maintenance &amp; réparation</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_6">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
@@ -69,12 +161,12 @@ background:rgb(247,247,247)
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>20</height>
+       <height>23</height>
       </size>
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -102,7 +194,7 @@ background:rgb(247,247,247)
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>290</width>
+             <width>400</width>
              <height>20</height>
             </size>
            </property>
@@ -112,8 +204,8 @@ background:rgb(247,247,247)
           <widget class="QPushButton" name="boutonActualiser">
            <property name="maximumSize">
             <size>
-             <width>160</width>
-             <height>120</height>
+             <width>100</width>
+             <height>40</height>
             </size>
            </property>
            <property name="cursor">
@@ -124,7 +216,7 @@ background:rgb(247,247,247)
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/actualize-arrows-couple-in-circle.png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/actualize-arrows-couple-in-circle.png</iconset>
+             <normaloff>../Images/actualize-arrows-couple-in-circle.png</normaloff>../Images/actualize-arrows-couple-in-circle.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -370,73 +462,23 @@ color: rgb(81, 81, 81);
      </item>
     </layout>
    </item>
-   <item row="0" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="labelPhotoPlus">
-       <property name="maximumSize">
-        <size>
-         <width>100</width>
-         <height>100</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../../../../PC2/SIMM2.0-DEV/Interface/Images/plus.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="labelTitre">
-       <property name="maximumSize">
-        <size>
-         <width>20000</width>
-         <height>100</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <property name="text">
-        <string>Bon de travail - Maintenance &amp; réparation</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_5">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>60</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>30</height>
+      </size>
+     </property>
+    </spacer>
    </item>
-   <item row="3" column="0">
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -470,7 +512,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/plus_64.png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/plus_64.png</iconset>
+               <normaloff>../Images/plus_64.png</normaloff>../Images/plus_64.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -502,7 +544,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/save (1).png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/save (1).png</iconset>
+               <normaloff>../Images/save (1).png</normaloff>../Images/save (1).png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -531,7 +573,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/double-left-chevron.png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/double-left-chevron.png</iconset>
+               <normaloff>../Images/double-left-chevron.png</normaloff>../Images/double-left-chevron.png</iconset>
              </property>
             </widget>
            </item>
@@ -554,7 +596,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/angle-pointing-to-left (1).png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/angle-pointing-to-left (1).png</iconset>
+               <normaloff>../Images/angle-pointing-to-left (1).png</normaloff>../Images/angle-pointing-to-left (1).png</iconset>
              </property>
             </widget>
            </item>
@@ -577,7 +619,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/angle-arrow-pointing-to-right.png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/angle-arrow-pointing-to-right.png</iconset>
+               <normaloff>../Images/angle-arrow-pointing-to-right.png</normaloff>../Images/angle-arrow-pointing-to-right.png</iconset>
              </property>
             </widget>
            </item>
@@ -600,7 +642,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/double-angle-pointing-to-right.png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/double-angle-pointing-to-right.png</iconset>
+               <normaloff>../Images/double-angle-pointing-to-right.png</normaloff>../Images/double-angle-pointing-to-right.png</iconset>
              </property>
             </widget>
            </item>
@@ -1063,11 +1105,8 @@ background:rgb(247,247,247)
     </layout>
    </item>
   </layout>
-  <zorder>horizontalSpacer_6</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget_2</zorder>
   <zorder>verticalSpacer_2</zorder>
-  <zorder>layoutWidget_3</zorder>
+  <zorder>verticalSpacer_6</zorder>
  </widget>
  <resources/>
  <connections/>
