@@ -291,6 +291,49 @@ class EquipementManager:
                 stats_dict['nbEquipementCentreService'][nouveau_dict['CentreService']][nouveau_dict['CategorieEquipement']] += 1
         self._ActualiserStats(stats_dict)
 
+    # Cette fonction parcoure la base de données et recalcule les statistiques en cas de bug du logiciel. On s'assure
+    # d'avoir les statistiques à jour
+    def _recalculStats(self):
+        stats = self._getStats()
+        conf = self._getConf()
+        db = self._getDB()
+        Equipement = Query()
+
+        # recupère les champs possibles pour EtatService
+        list_EtatService = list(conf['EtatService'])
+        # récupère les champs possibles pour EtatConservation
+        list_EtatConservation = list(conf['EtatConservation'])
+        # récupère les champs possibles pour la provenance
+        list_Provenance = list(conf['Provenance'])
+        # récupère les champs possibles pour le centre de service
+        list_CentreService = list(conf['CentreService'])
+        # récupère les champs possibles pour la CategorieEquipement
+        list_CategorieEquipement = list(conf['CategorieEquipement'])
+
+        # Nombre total d'équipements
+        stats['nbEquipement'] = len(db)
+
+        # Nombre d'équipement selon l'état de service
+        for element in list_EtatService:
+            stats['nbEquipementEtatService'][element] = db.count(Equipement['EtatService'] == element)
+
+        # Nombre d'équipement selon l'état de service
+        for element in list_EtatConservation:
+            stats['nbEquipementEtatConservation'][element] = db.count(Equipement['EtatConservation'] == element)
+
+        # Nombre d'équipement selon la provenance
+        for element in list_Provenance:
+            stats['nbEquipementProvenance'][element] = db.count(Equipement['Provenance'] == element)
+
+        # Nombre d'équipement de chaque catégorie par centre de service
+        for centre in list_CentreService:
+            for categorie in list_CategorieEquipement:
+                recherche_temp = db.count((Equipement['CentreService'] == centre) &
+                                          (Equipement['CategorieEquipement'] == categorie))
+                if recherche_temp != 0:
+                    stats['nbEquipementCentreService'][centre][categorie] = recherche_temp
+        self._ActualiserStats(stats)
+
 
     def _ActualiserStats(self, stats):
         try:
@@ -380,7 +423,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager.AjouterEquipement(data))
         #print(manager.SupprimerEquipement('1'))                     # id_supp en int
         #print(manager.RechercherEquipement(dic_request))
-        print(manager.ModifierEquipement('3', data))               # id_modif en int
+        #print(manager.ModifierEquipement('3', data))               # id_modif en int
 
         # Stats
         #print(manager._statsNbTotalEquipement())
@@ -388,6 +431,8 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager._statsNbEquipementEtatConservation())
         #print(manager._statsNbEquipementProvenance())
         #print(manager._statsNbEquipementCentreServiceCategorie())
+
+        #manager._recalculStats()
 
 
 

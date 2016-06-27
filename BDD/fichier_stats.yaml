@@ -17,4 +17,8 @@ nbEquipementEtatService:
   En maintenance: 1
   En service: 3
 nbEquipementProvenance:
+  CHU St-Justine: 0
+  CHU Ste-Justine: 0
+  CSI: 0
+  POLY: 0
   Poly: 4
