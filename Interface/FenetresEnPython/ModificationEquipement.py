@@ -178,7 +178,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        self.equipementManager = EquipementManager('DataBase_Equipement.json')
+        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
 
     def verificationEquipement(self):

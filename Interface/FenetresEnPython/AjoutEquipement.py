@@ -57,7 +57,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.equipement.ajoutListeMethodes()
 
         # Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
         self.listeDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -183,7 +183,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        self.equipementManager = EquipementManager('DataBase_Equipement.json')
+        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
 
     def verificationEquipement(self):

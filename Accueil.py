@@ -248,6 +248,11 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
 
+    #TODO : Creer une methode ajouterBonDeTravail
+    #Cette methode va masquer les autres elements graphiques du layout principal
+    #Elle va creer un nouveau widget ajouterBonDeTravailEquipement
+
+    #TODO : Creer une methode pour consulter le bon de travail selectionnee
     def afficherRechercheBonDeTravail(self):
         '''
             Affichage du widget permet la recherche d'un bon de travail

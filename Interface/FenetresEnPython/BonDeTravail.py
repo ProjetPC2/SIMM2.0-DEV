@@ -25,7 +25,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.lineEditID.returnPressed.connect(self.chercherEquipement)
 
         #Creation des differents elements utiles pour la sauvegarde
-        self.equipementManager = EquipementManager('DataBase_Equipement.json')
+        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         self.equipementDictionnaire = None
         self.listeBonDeTravail = list()

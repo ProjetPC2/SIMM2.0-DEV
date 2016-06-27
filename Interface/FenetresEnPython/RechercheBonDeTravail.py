@@ -21,7 +21,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
     def ajoutRechercheBonDeTravail(self):
         # Recuperation des differents attributs
-        self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration

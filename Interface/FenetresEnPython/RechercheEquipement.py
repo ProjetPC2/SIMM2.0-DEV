@@ -14,7 +14,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
     def ajoutRechercheEquipement(self):
         #Recuperation des differents attributs d'un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
         self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
