@@ -21,7 +21,7 @@ class Ui_RechercheEquipement(object):
         self.logoLoupe = QtWidgets.QLabel(RechercheEquipement)
         self.logoLoupe.setMaximumSize(QtCore.QSize(50, 80))
         self.logoLoupe.setText("")
-        self.logoLoupe.setPixmap(QtGui.QPixmap("../../../../PC2/SIMM2.0-DEV/Interface/Images/magnifier.png"))
+        self.logoLoupe.setPixmap(QtGui.QPixmap("Images/magnifier.png"))
         self.logoLoupe.setObjectName("logoLoupe")
         self.gridLayout_6.addWidget(self.logoLoupe, 0, 0, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(300, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -64,7 +64,7 @@ class Ui_RechercheEquipement(object):
 "}")
         self.boutonActualiser.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../../PC2/SIMM2.0-DEV/Interface/Images/refresh-button-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Images/refresh-button-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonActualiser.setIcon(icon)
         self.boutonActualiser.setIconSize(QtCore.QSize(50, 50))
         self.boutonActualiser.setObjectName("boutonActualiser")
@@ -331,13 +331,4 @@ class Ui_RechercheEquipement(object):
         item.setText(_translate("RechercheEquipement", "Catégorie d\'équipement"))
         item = self.tableResultats.horizontalHeaderItem(2)
         item.setText(_translate("RechercheEquipement", "Marque"))
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    rechercheEquipement = QtWidgets.QWidget()
-    rechercheEquipementUI = Ui_RechercheEquipement()
-    rechercheEquipementUI.setupUi(rechercheEquipement)
-    rechercheEquipement.show()
-    sys.exit(app.exec_())
 

@@ -158,7 +158,7 @@ class Ui_SuppressionEquipement(object):
         self.boutonAfficherEquipement.setFont(font)
         self.boutonAfficherEquipement.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../Images/Refresh2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Images/Refresh2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonAfficherEquipement.setIcon(icon)
         self.boutonAfficherEquipement.setIconSize(QtCore.QSize(36, 36))
         self.boutonAfficherEquipement.setObjectName("boutonAfficherEquipement")
@@ -174,7 +174,7 @@ class Ui_SuppressionEquipement(object):
         font.setWeight(75)
         self.boutonSupprimerEquipement.setFont(font)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../Images/garbage (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("Images/garbage (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonSupprimerEquipement.setIcon(icon1)
         self.boutonSupprimerEquipement.setIconSize(QtCore.QSize(42, 42))
         self.boutonSupprimerEquipement.setObjectName("boutonSupprimerEquipement")
@@ -396,7 +396,7 @@ class Ui_SuppressionEquipement(object):
         self.horizontalLayout_6.addWidget(self.comboBoxBons, 0, QtCore.Qt.AlignLeft)
         self.boutonConsulterBon = QtWidgets.QPushButton(SuppressionEquipement)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("../Images/navigation.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("Images/navigation.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonConsulterBon.setIcon(icon3)
         self.boutonConsulterBon.setObjectName("boutonConsulterBon")
         self.horizontalLayout_6.addWidget(self.boutonConsulterBon)
@@ -447,3 +447,11 @@ class Ui_SuppressionEquipement(object):
         self.comboBoxBons.setItemText(2, _translate("SuppressionEquipement", "Bon 2016-05-12"))
         self.boutonConsulterBon.setText(_translate("SuppressionEquipement", "Consulter le Bon"))
 
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainFrame = QtWidgets.QWidget()
+    ui = Ui_SuppressionEquipement()
+    ui.setupUi(MainFrame)
+    MainFrame.show()
+    sys.exit(app.exec_())

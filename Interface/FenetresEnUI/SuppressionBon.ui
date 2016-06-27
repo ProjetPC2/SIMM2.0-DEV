@@ -124,7 +124,7 @@ background:rgb(247,247,247)
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/actualize-arrows-couple-in-circle.png</normaloff>../../../../PC2/SIMM2.0-DEV/Interface/Images/actualize-arrows-couple-in-circle.png</iconset>
+             <normaloff>Images/actualize-arrows-couple-in-circle.png</normaloff>Images/actualize-arrows-couple-in-circle.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -384,7 +384,7 @@ color: rgb(81, 81, 81);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../Images/garbage (1).png</pixmap>
+        <pixmap>Images/garbage (1).png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -474,7 +474,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/garbage (1).png</normaloff>../Images/garbage (1).png</iconset>
+               <normaloff>Images/garbage (1).png</normaloff>Images/garbage (1).png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -503,7 +503,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/double-left-chevron.png</normaloff>../Images/double-left-chevron.png</iconset>
+               <normaloff>Images/double-left-chevron.png</normaloff>Images/double-left-chevron.png</iconset>
              </property>
             </widget>
            </item>
@@ -526,7 +526,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/angle-pointing-to-left (1).png</normaloff>../Images/angle-pointing-to-left (1).png</iconset>
+               <normaloff>Images/angle-pointing-to-left (1).png</normaloff>Images/angle-pointing-to-left (1).png</iconset>
              </property>
             </widget>
            </item>
@@ -549,7 +549,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/angle-arrow-pointing-to-right.png</normaloff>../Images/angle-arrow-pointing-to-right.png</iconset>
+               <normaloff>Images/angle-arrow-pointing-to-right.png</normaloff>Images/angle-arrow-pointing-to-right.png</iconset>
              </property>
             </widget>
            </item>
@@ -572,7 +572,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/double-angle-pointing-to-right.png</normaloff>../Images/double-angle-pointing-to-right.png</iconset>
+               <normaloff>Images/double-angle-pointing-to-right.png</normaloff>Images/double-angle-pointing-to-right.png</iconset>
              </property>
             </widget>
            </item>

@@ -22,7 +22,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../Images/PC2_logo.png</pixmap>
+        <pixmap>Images/PC2_logo.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -95,7 +95,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../Images/PC2.png</pixmap>
+      <pixmap>Images/PC2.png</pixmap>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -166,7 +166,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/garbage (2).png</normaloff>../Images/garbage (2).png</iconset>
+         <normaloff>Images/garbage (2).png</normaloff>Images/garbage (2).png</iconset>
        </property>
       </widget>
      </item>
@@ -178,7 +178,7 @@ Bon de Travail</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/garbage.png</normaloff>../Images/garbage.png</iconset>
+         <normaloff>Images/garbage.png</normaloff>Images/garbage.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -196,7 +196,7 @@ Statistiques</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/refresh-button-2.png</normaloff>../Images/refresh-button-2.png</iconset>
+         <normaloff>Images/refresh-button-2.png</normaloff>Images/refresh-button-2.png</iconset>
        </property>
       </widget>
      </item>

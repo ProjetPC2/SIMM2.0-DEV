@@ -213,7 +213,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Images/Refresh2.png</normaloff>../Images/Refresh2.png</iconset>
+           <normaloff>Images/Refresh2.png</normaloff>Images/Refresh2.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -253,7 +253,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/edit.png</normaloff>../Images/edit.png</iconset>
+         <normaloff>Images/edit.png</normaloff>Images/edit.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -283,7 +283,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/plus.png</normaloff>../Images/plus.png</iconset>
+         <normaloff>Images/plus.png</normaloff>Images/plus.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -759,7 +759,7 @@ nous sommes programmés ainsi.</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/navigation.png</normaloff>../Images/navigation.png</iconset>
+         <normaloff>Images/navigation.png</normaloff>Images/navigation.png</iconset>
        </property>
       </widget>
      </item>

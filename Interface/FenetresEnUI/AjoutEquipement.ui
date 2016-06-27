@@ -116,7 +116,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../Images/add1.png</pixmap>
+        <pixmap>Images/add1.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -653,7 +653,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/check-symbol.png</normaloff>../Images/check-symbol.png</iconset>
+         <normaloff>Images/check-symbol.png</normaloff>Images/check-symbol.png</iconset>
        </property>
       </widget>
      </item>
@@ -667,7 +667,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/Modify-icon.png</normaloff>../Images/Modify-icon.png</iconset>
+         <normaloff>Images/Modify-icon.png</normaloff>Images/Modify-icon.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -687,7 +687,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Images/save (1).png</normaloff>../Images/save (1).png</iconset>
+         <normaloff>Images/save (1).png</normaloff>Images/save (1).png</iconset>
        </property>
       </widget>
      </item>

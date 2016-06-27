@@ -51,7 +51,7 @@ class Ui_RechercheBonDeTravail(object):
         self.label = QtWidgets.QLabel(RechercheBonDeTravail)
         self.label.setMaximumSize(QtCore.QSize(38, 34))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../Images/magnifier (1).png"))
+        self.label.setPixmap(QtGui.QPixmap("Images/magnifier (1).png"))
         self.label.setObjectName("label")
         self.horizontalLayout_3.addWidget(self.label)
         self.LabelTitre = QtWidgets.QLabel(RechercheBonDeTravail)
@@ -278,11 +278,3 @@ class Ui_RechercheBonDeTravail(object):
         item = self.tableResultats.horizontalHeaderItem(6)
         item.setText(_translate("RechercheBonDeTravail", "Description"))
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    rechercheBonDeTravail = QtWidgets.QWidget()
-    rechercheBonDeTravailUI = Ui_RechercheBonDeTravail()
-    rechercheBonDeTravailUI.setupUi(rechercheBonDeTravail)
-    rechercheBonDeTravail.show()
-    sys.exit(app.exec_())

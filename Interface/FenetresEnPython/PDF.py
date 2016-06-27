@@ -102,7 +102,7 @@ class PDF(Thread):
         # Ajout d'un espacement
         elements = [Spacer(0, 2 * inch)]
         # Ajout du logo de SIMM 2.0
-        elements.append(self.get_image("..\Images\SIMM2.0.png", width=5 * cm))
+        elements.append(self.get_image("Images\SIMM2.0.png", width=5 * cm))
         elements.append(Spacer(0, 1 * inch))
         #Creation du style par defaut
         styleSheet = getSampleStyleSheet()

@@ -69,7 +69,7 @@ background: white;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../Images/magnifier (1).png</pixmap>
+        <pixmap>Images/magnifier (1).png</pixmap>
        </property>
       </widget>
      </item>

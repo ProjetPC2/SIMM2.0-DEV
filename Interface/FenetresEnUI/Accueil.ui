@@ -115,7 +115,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/home.png</normaloff>../Images/home.png</iconset>
+              <normaloff>Images/home.png</normaloff>Images/home.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -172,7 +172,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/plus (2).png</normaloff>../Images/plus (2).png</iconset>
+              <normaloff>Images/plus (2).png</normaloff>Images/plus (2).png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -218,7 +218,7 @@ un équipement</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/pencil-edit-button.png</normaloff>../Images/pencil-edit-button.png</iconset>
+              <normaloff>Images/pencil-edit-button.png</normaloff>Images/pencil-edit-button.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -262,7 +262,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/magnifier.png</normaloff>../Images/magnifier.png</iconset>
+              <normaloff>Images/magnifier.png</normaloff>Images/magnifier.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -334,7 +334,7 @@ de travail</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/plus.png</normaloff>../Images/plus.png</iconset>
+              <normaloff>Images/plus.png</normaloff>Images/plus.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -377,7 +377,7 @@ bon de travail</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/magnifier (1).png</normaloff>../Images/magnifier (1).png</iconset>
+              <normaloff>Images/magnifier (1).png</normaloff>Images/magnifier (1).png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -463,7 +463,7 @@ l'inventaire</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/printer- (3).png</normaloff>../Images/printer- (3).png</iconset>
+              <normaloff>Images/printer- (3).png</normaloff>Images/printer- (3).png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -506,7 +506,7 @@ statistiques</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/pie-chart (1).png</normaloff>../Images/pie-chart (1).png</iconset>
+              <normaloff>Images/pie-chart (1).png</normaloff>Images/pie-chart (1).png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -593,7 +593,7 @@ technique</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/PC2.png</normaloff>../Images/PC2.png</iconset>
+              <normaloff>Images/PC2.png</normaloff>Images/PC2.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -699,7 +699,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../Images/left-arrow.png</normaloff>../Images/left-arrow.png</iconset>
+              <normaloff>Images/left-arrow.png</normaloff>Images/left-arrow.png</iconset>
             </property>
             <property name="autoDefault">
              <bool>false</bool>
@@ -748,7 +748,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>../Images/SIMM2.0_logo_Alex.png</pixmap>
+           <pixmap>Images/SIMM2.0_logo_Alex.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>

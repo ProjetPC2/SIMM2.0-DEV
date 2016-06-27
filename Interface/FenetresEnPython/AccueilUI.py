@@ -53,7 +53,7 @@ class Ui_Accueil(object):
 "}\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../Images/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Images/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonAccueil.setIcon(icon)
         self.BoutonAccueil.setIconSize(QtCore.QSize(35, 35))
         self.BoutonAccueil.setObjectName("BoutonAccueil")
@@ -77,7 +77,7 @@ class Ui_Accueil(object):
 "}\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../Images/plus (2).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("Images/plus (2).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonAjouterEquipement.setIcon(icon1)
         self.BoutonAjouterEquipement.setIconSize(QtCore.QSize(40, 40))
         self.BoutonAjouterEquipement.setFlat(False)
@@ -98,7 +98,7 @@ class Ui_Accueil(object):
 "}\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../Images/pencil-edit-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("Images/pencil-edit-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonModifierConsulterEquipement.setIcon(icon2)
         self.BoutonModifierConsulterEquipement.setIconSize(QtCore.QSize(40, 40))
         self.BoutonModifierConsulterEquipement.setObjectName("BoutonModifierConsulterEquipement")
@@ -120,7 +120,7 @@ class Ui_Accueil(object):
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("../Images/magnifier.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("Images/magnifier.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonRechercherEquipement.setIcon(icon3)
         self.BoutonRechercherEquipement.setIconSize(QtCore.QSize(40, 40))
         self.BoutonRechercherEquipement.setObjectName("BoutonRechercherEquipement")
@@ -147,7 +147,7 @@ class Ui_Accueil(object):
 "}\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../Images/plus.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("Images/plus.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonAjouterBonTravail.setIcon(icon4)
         self.BoutonAjouterBonTravail.setIconSize(QtCore.QSize(40, 40))
         self.BoutonAjouterBonTravail.setObjectName("BoutonAjouterBonTravail")
@@ -168,7 +168,7 @@ class Ui_Accueil(object):
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("../Images/magnifier (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("Images/magnifier (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonRechercherBonTravail.setIcon(icon5)
         self.BoutonRechercherBonTravail.setIconSize(QtCore.QSize(40, 40))
         self.BoutonRechercherBonTravail.setObjectName("BoutonRechercherBonTravail")
@@ -198,7 +198,7 @@ class Ui_Accueil(object):
 "}\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("../Images/printer- (3).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("Images/printer- (3).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonImprimerInventaire.setIcon(icon6)
         self.BoutonImprimerInventaire.setIconSize(QtCore.QSize(40, 40))
         self.BoutonImprimerInventaire.setObjectName("BoutonImprimerInventaire")
@@ -219,7 +219,7 @@ class Ui_Accueil(object):
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("../Images/pie-chart (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap("Images/pie-chart (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonStatistiques.setIcon(icon7)
         self.BoutonStatistiques.setIconSize(QtCore.QSize(40, 40))
         self.BoutonStatistiques.setObjectName("BoutonStatistiques")
@@ -250,7 +250,7 @@ class Ui_Accueil(object):
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("../Images/PC2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon8.addPixmap(QtGui.QPixmap("Images/PC2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonSuportTecnique.setIcon(icon8)
         self.BoutonSuportTecnique.setIconSize(QtCore.QSize(40, 40))
         self.BoutonSuportTecnique.setAutoDefault(False)
@@ -298,7 +298,7 @@ class Ui_Accueil(object):
 "QPushButton:pressed{ background-color: #cccccc; }")
         self.BoutonFlecheNavigation.setText("")
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("../Images/left-arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon9.addPixmap(QtGui.QPixmap("Images/left-arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonFlecheNavigation.setIcon(icon9)
         self.BoutonFlecheNavigation.setAutoDefault(False)
         self.BoutonFlecheNavigation.setDefault(False)
@@ -317,7 +317,7 @@ class Ui_Accueil(object):
         self.logo.setMinimumSize(QtCore.QSize(600, 600))
         self.logo.setStyleSheet("background-color: transparent ;color : white;")
         self.logo.setText("")
-        self.logo.setPixmap(QtGui.QPixmap("../Images/SIMM2.0_logo_Alex.png"))
+        self.logo.setPixmap(QtGui.QPixmap("Images/SIMM2.0_logo_Alex.png"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
         self.layoutAffichagePrincipal.addWidget(self.logo)
@@ -365,7 +365,6 @@ class Ui_Accueil(object):
 "Hôpital Saint-Michel "))
         self.LabelDefinitionSIMM.setText(_translate("Accueil", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -374,4 +373,3 @@ if __name__ == "__main__":
     ui.setupUi(MainFrame)
     MainFrame.show()
     sys.exit(app.exec_())
-    os.system("pause")

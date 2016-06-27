@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1376</width>
-    <height>1376</height>
+    <width>1448</width>
+    <height>1396</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,23 +72,13 @@ background:rgb(247,247,247)
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../PC2/SIMM2.0-DEV/Interface/Images/plus.png</pixmap>
+        <pixmap>Images/plus.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../Images/plus.png</pixmap>
        </property>
       </widget>
      </item>
@@ -216,7 +206,7 @@ background:rgb(247,247,247)
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../Images/actualize-arrows-couple-in-circle.png</normaloff>../Images/actualize-arrows-couple-in-circle.png</iconset>
+             <normaloff>Images/actualize-arrows-couple-in-circle.png</normaloff>Images/actualize-arrows-couple-in-circle.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -512,7 +502,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/plus_64.png</normaloff>../Images/plus_64.png</iconset>
+               <normaloff>Images/plus_64.png</normaloff>Images/plus_64.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -544,7 +534,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/save (1).png</normaloff>../Images/save (1).png</iconset>
+               <normaloff>Images/save (1).png</normaloff>Images/save (1).png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -573,7 +563,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/double-left-chevron.png</normaloff>../Images/double-left-chevron.png</iconset>
+               <normaloff>Images/double-left-chevron.png</normaloff>Images/double-left-chevron.png</iconset>
              </property>
             </widget>
            </item>
@@ -596,7 +586,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/angle-pointing-to-left (1).png</normaloff>../Images/angle-pointing-to-left (1).png</iconset>
+               <normaloff>Images/angle-pointing-to-left (1).png</normaloff>Images/angle-pointing-to-left (1).png</iconset>
              </property>
             </widget>
            </item>
@@ -619,7 +609,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/angle-arrow-pointing-to-right.png</normaloff>../Images/angle-arrow-pointing-to-right.png</iconset>
+               <normaloff>Images/angle-arrow-pointing-to-right.png</normaloff>Images/angle-arrow-pointing-to-right.png</iconset>
              </property>
             </widget>
            </item>
@@ -642,7 +632,7 @@ color: rgb(81, 81, 81);
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../Images/double-angle-pointing-to-right.png</normaloff>../Images/double-angle-pointing-to-right.png</iconset>
+               <normaloff>Images/double-angle-pointing-to-right.png</normaloff>Images/double-angle-pointing-to-right.png</iconset>
              </property>
             </widget>
            </item>
