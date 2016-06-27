@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AjoutEquipement</class>
- <widget class="QWidget" name="AjoutEquipement">
+ <class>ModificationEquipement</class>
+ <widget class="QWidget" name="ModificationEquipement">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -136,7 +136,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         </font>
        </property>
        <property name="text">
-        <string>Ajout d'équipement</string>
+        <string>Modification d'équipement</string>
        </property>
       </widget>
      </item>

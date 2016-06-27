@@ -7,5 +7,5 @@ setup(
     name = "salut",
     version = "0.1",
     description = "Ce programme vous dit bonjour",
-    executables = [Executable("Accueil.py")],
+    executables = [Executable("AccueilUI.py")],
 )

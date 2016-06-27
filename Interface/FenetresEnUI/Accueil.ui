@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Accueil</class>
+ <widget class="QMainWindow" name="Accueil">
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
@@ -22,7 +22,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Accueil</string>
   </property>
   <property name="styleSheet">
    <string notr="true">  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
@@ -41,6 +41,15 @@
    <layout class="QGridLayout" name="gridLayout_2">
     <property name="leftMargin">
      <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
     </property>
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="layoutHorizontalPrincipal">
@@ -78,7 +87,13 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="boutonAccueil">
+           <widget class="QPushButton" name="BoutonAccueil">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -100,7 +115,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>home.png</normaloff>home.png</iconset>
+              <normaloff>../Images/home.png</normaloff>../Images/home.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -125,6 +140,12 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonAjouterEquipement">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -166,6 +187,12 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonModifierConsulterEquipement">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -203,6 +230,12 @@ un équipement</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonRechercherEquipement">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -270,7 +303,55 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
            </spacer>
           </item>
           <item>
+           <widget class="QPushButton" name="BoutonAjouterBonTravail">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);
+}
+QPushButton:pressed{ background-color: #cccccc; }</string>
+            </property>
+            <property name="text">
+             <string>Ajouter un bon
+de travail</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../Images/plus.png</normaloff>../Images/plus.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="BoutonRechercherBonTravail">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -297,42 +378,6 @@ bon de travail</string>
             <property name="icon">
              <iconset>
               <normaloff>../Images/magnifier (1).png</normaloff>../Images/magnifier (1).png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>40</width>
-              <height>40</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="BoutonAjouterBonTravail">
-            <property name="font">
-             <font>
-              <pointsize>11</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);
-}
-QPushButton:pressed{ background-color: #cccccc; }</string>
-            </property>
-            <property name="text">
-             <string>Ajouter un bon
-de travail</string>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>../Images/plus.png</normaloff>../Images/plus.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -387,6 +432,12 @@ de travail</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonImprimerInventaire">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -424,6 +475,12 @@ l'inventaire</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonStatistiques">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -504,6 +561,12 @@ statistiques</string>
          <layout class="QVBoxLayout" name="layoutBoutonSupport">
           <item>
            <widget class="QPushButton" name="BoutonSuportTecnique">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>15</pointsize>
@@ -567,9 +630,9 @@ technique</string>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="layoutAffichagePrincipal" stretch="0,0,0">
+       <layout class="QVBoxLayout" name="layoutAffichagePrincipal" stretch="0,0,0,0">
         <property name="spacing">
-         <number>15</number>
+         <number>0</number>
         </property>
         <property name="sizeConstraint">
          <enum>QLayout::SetDefaultConstraint</enum>
@@ -609,6 +672,68 @@ Hôpital Saint-Michel </string>
          </widget>
         </item>
         <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="BoutonFlecheNavigation">
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+QPushButton{border-radius : 0px; padding : 5px ;background-color: white ;color : white;}
+
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);
+}
+QPushButton:pressed{ background-color: #cccccc; }</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../Images/left-arrow.png</normaloff>../Images/left-arrow.png</iconset>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frameFleche">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
          <widget class="QLabel" name="logo">
           <property name="minimumSize">
            <size>
@@ -623,7 +748,7 @@ Hôpital Saint-Michel </string>
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>SIMM2.0_logo_Alex.png</pixmap>
+           <pixmap>../Images/SIMM2.0_logo_Alex.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>

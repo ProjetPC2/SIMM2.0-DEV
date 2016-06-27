@@ -9071,7 +9071,25 @@ _default:
       Salle: ''
     state:
       eid: 503
-  504:
+  504: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2000-01-01
+      DateDernierEntretien: 2000-01-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '507'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 504
+  505:
     CategorieEquipement: Defibrilateur
     CentreService: Urgences
     Commentaires: ''
@@ -9079,7 +9097,7 @@ _default:
     DateDernierEntretien: 2000-01-01
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '507'
+    ID: '508'
     Marque: ''
     Modele: ''
     NbBonTravail: 0

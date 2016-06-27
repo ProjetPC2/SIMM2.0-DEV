@@ -88,7 +88,7 @@ background:rgb(247, 247, 247)</string>
       </widget>
      </item>
      <item row="1" column="0" alignment="Qt::AlignLeft">
-      <widget class="QComboBox" name="comboBoxCategorieEquipement_2">
+      <widget class="QComboBox" name="comboBoxCategorieEquipement">
        <property name="minimumSize">
         <size>
          <width>200</width>

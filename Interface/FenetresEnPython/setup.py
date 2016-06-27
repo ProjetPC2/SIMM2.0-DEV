@@ -9,7 +9,7 @@ import sys
 base = 'Win32GUI' if sys.platform=='win32' else None
 
 executables = [
-    Executable('Accueil.py', base=base, targetName = 'SIMM.exe')
+    Executable('AccueilUI.py', base=base, targetName = 'SIMM.exe')
 ]
 
 setup(name='test',

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PC2</class>
- <widget class="QWidget" name="PC2">
+ <class>RechercheBonDeTravail</class>
+ <widget class="QWidget" name="RechercheBonDeTravail">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>787</width>
-    <height>755</height>
+    <width>1258</width>
+    <height>975</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -69,7 +69,7 @@ background: white;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>magnifier (1).png</pixmap>
+        <pixmap>../Images/magnifier (1).png</pixmap>
        </property>
       </widget>
      </item>
@@ -129,7 +129,7 @@ background: white;
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QLabel" name="Labelcategorie">
+        <widget class="QLabel" name="labelCategorie">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -150,7 +150,7 @@ background: white;
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="buttonCategorie">
+        <widget class="QComboBox" name="comboBoxCategorieEquipement">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -169,7 +169,7 @@ background: white;
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_7">
        <item>
-        <widget class="QLabel" name="Labelavant">
+        <widget class="QLabel" name="LabelAvant">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -222,7 +222,7 @@ background: white;
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <widget class="QLabel" name="Labelapres">
+        <widget class="QLabel" name="LabelApres">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -272,7 +272,7 @@ background: white;
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
-        <widget class="QLabel" name="Labeletat">
+        <widget class="QLabel" name="LabelEtat">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -293,7 +293,7 @@ background: white;
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="buttonAvant">
+        <widget class="QComboBox" name="comboBoxEtat">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -316,7 +316,7 @@ background: white;
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QLabel" name="LabelCdS">
+        <widget class="QLabel" name="LabelCentreService">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -334,7 +334,7 @@ background: white;
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="buttonCdS">
+        <widget class="QComboBox" name="comboBoxCentreService">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -366,7 +366,7 @@ background: white;
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="Labeldescription">
+        <widget class="QLabel" name="LabelDescription">
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -384,7 +384,7 @@ background: white;
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="lineEditDescriptionSituation"/>
        </item>
       </layout>
      </item>
@@ -543,7 +543,6 @@ background:rgb(247, 247, 247)</string>
   </layout>
   <zorder>verticalSpacer_3</zorder>
   <zorder>verticalSpacer</zorder>
-  <zorder>horizontalLayoutWidget</zorder>
  </widget>
  <resources/>
  <connections/>
