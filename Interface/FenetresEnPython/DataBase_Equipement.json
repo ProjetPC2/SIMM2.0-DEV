@@ -29,7 +29,7 @@ _default:
       ID: '41'
       Marque: HP
       Modele: M1728B
-      NbBonTravail: 0
+      NbBonTravail: 1
       NumeroSerie: US00104416
       Provenance: ''
       Salle: ''
@@ -9089,18 +9089,21 @@ _default:
       Salle: ''
     state:
       eid: 504
-  505:
-    CategorieEquipement: Defibrilateur
-    CentreService: Urgences
-    Commentaires: ''
-    DateAcquisition: 2000-01-01
-    DateDernierEntretien: 2000-01-01
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '508'
-    Marque: ''
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: ''
-    Salle: ''
+  505: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2000-01-01
+      DateDernierEntretien: 2000-01-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '508'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 505

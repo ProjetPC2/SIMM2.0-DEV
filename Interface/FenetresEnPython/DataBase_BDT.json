@@ -1708,11 +1708,29 @@ _default:
       TempsEstime: '0.03'
     state:
       eid: 133
-  134:
+  134: !!python/object/new:tinydb.database.Element
+    dictitems:
+      Date: 2016-06-18
+      DescriptionIntervention: "on a ajout\xC3\xA9 un capteur. Alors c'est fonctionnel."
+      DescriptionSituation: pas de capteur SPO2.
+      EtatBDT: "Ferm\xC3\xA9"
+      ID-BDT: '1'
+      ID-EQ: '547'
+      TempsEstime: '0.01'
+    state:
+      eid: 134
+  135:
+    CategorieEquipement: Defibrilateur
+    CentreService: Urgences
     Date: 2016-06-18
-    DescriptionIntervention: "on a ajout\xC3\xA9 un capteur. Alors c'est fonctionnel."
-    DescriptionSituation: pas de capteur SPO2.
-    EtatBDT: "Ferm\xC3\xA9"
+    DescriptionIntervention: "Ajout des cables defibrilateur et ceux de l'ECG pris\
+      \ de l'\xC3\xA9quipement ID 79. Ensuite on a recharg\xC3\xA9e la batterie. "
+    DescriptionSituation: "La batterie \xC3\xA9tait d\xC3\xA9charg\xC3\xA9e. Pas de\
+      \ cable reliant le patient \xC3\xA9 l'appareil. Pas de cables d\xC3\xA9fibrilateurs."
+    EtatBDT: Ferme
     ID-BDT: '1'
-    ID-EQ: '547'
-    TempsEstime: '0.01'
+    ID-EQ: '41'
+    Marque: HP
+    Modele: M1728B
+    Salle: ''
+    TempsEstime: 00:00:00

@@ -89,7 +89,10 @@ class BonDeTravail(Ui_BonDeTravail):
         dictionnaireDonnees["TempsEstime"] = str(self.timeEditTempsEstime.time().toPyTime())
         dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
         dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
-        dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
+        if(self.comboBoxOuvertFerme.currentText() != "Ouvert"):
+            dictionnaireDonnees["EtatBDT"] = "Ferme"
+        else:
+            self.comboBoxOuvertFerme.currentText()
         if(any(self.equipementDictionnaire)):
             #On ajoute le bon de travail a un equipement existant
             self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees)

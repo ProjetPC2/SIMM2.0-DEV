@@ -1,3 +1,9 @@
+BDT_Ajout_Champ_Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- CentreService
+- Salle
 BDT_ChampAjoutNonPermis:
 - EtatBDT
 BDT_ChampAjoutPermis:
@@ -84,7 +90,7 @@ Equipement_ChampFormatPrecis:
 - DateDernierEntretien
 EtatBDT:
 - Ouvert
-- Fermé
+- Ferme
 EtatConservation:
 - Quasi neuf
 - Acceptable
