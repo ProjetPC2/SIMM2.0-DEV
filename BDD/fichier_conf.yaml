@@ -11,6 +11,8 @@ BDT_ChampAjoutPermis:
 BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
+BDT_recherchePlusieursChamps:
+- RechercheMotCle
 CategorieEquipement:
 - ECG
 - IRM
@@ -84,4 +86,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 3
+dernierID-Equipement: 4

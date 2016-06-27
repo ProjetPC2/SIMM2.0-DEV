@@ -73,6 +73,7 @@ class BonTravailManager:
 
     def RechercherBonTravail(self, regex_dict):
         db = self._getDB()
+        conf = self._getConf()
         recherche = Query()
         firstEntry = True
         for key, value in regex_dict.items():
@@ -83,14 +84,14 @@ class BonTravailManager:
                     queryUser = recherche["ID-EQ"] == value
                     firstEntry = False
                 else:
-                    queryUser = (queryUser) & (recherche[key].matches(value))
+                    queryUser = (queryUser) & (recherche['ID_EQ'] == value)
             else:
-                if not isinstance(value, datetime.date):            # S'il ne s'agit pas d'une date
+                if not isinstance(value, datetime.date):           # S'il ne s'agit pas d'une date
                     if firstEntry:                                  # Si c'est la première recherche
-                        queryUser = (recherche[key].matches(value))  # Trouver dans la base de données la valeur correspondante
+                        queryUser = (recherche[key].search(value))  # Trouver dans la base de données la valeur correspondante
                         firstEntry = False
                     else:
-                        queryUser = (queryUser) & (recherche[key].matches(value))
+                        queryUser = (queryUser) & (recherche[key].search(value))
                 else:                                               # S'il s'agit d'une date
                     if key == 'ApresLe':                            # Chercher après la date
                         if firstEntry:                              # Si c'est la première recherche
@@ -105,6 +106,7 @@ class BonTravailManager:
                         else:
                             queryUser = (queryUser) & (recherche['Date'] <= value)
 
+        print(queryUser)
         result = db.search(queryUser)                           # Rechercher la combinaison de chaque champ de recherche
         return result
 
@@ -221,19 +223,21 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
 
     data1 = {'Date': datetime.date(2016, 2, 22),
              'TempsEstime': datetime.time(2, 30),
-             'DescriptionSituation': 'dict_modif',
+             'DescriptionSituation': 'Vraiment brisé',
              'DescriptionIntervention': 'Blablabla-modif',
              'EtatBDT': 'Ouvert',
              'NomTechnicien': 'Kerlin'}
 
+    dict_request = {'DescriptionSituation': 'bris'}
+
     #dic_request = {'AvantLe': datetime.date(2016, 03, 12)}
-                   #'ApresLe': datetime.date(2016, 06, 10)}
+    #               'ApresLe': datetime.date(2016, 06, 10)}
 
     #print(manager.AjouterBonTravail('2', data1))                       # Ajout de 2 équipements de suite (pour tester...
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
     #print(len(manager.RechercherBonTravail(dic_request)))
-    #print(manager.RechercherBonTravail(dic_request))
+    #print(manager.RechercherBonTravail(dict_request))
     #print(manager.ModifierBonTravail('2', '3', data1))                     # id_modif en int
 
 

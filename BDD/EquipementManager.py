@@ -92,13 +92,13 @@ class EquipementManager:
                     queryUser = recherche.ID == value
                     firstEntry = False
                 else:
-                    queryUser = (queryUser) & (recherche[key].matches(value))
+                    queryUser = (queryUser) & (recherche['ID'] == value)
             else:
                 if firstEntry:
-                    queryUser = (recherche[key].matches(value))
+                    queryUser = (recherche[key].search(value))
                     firstEntry = False
                 else:
-                    queryUser = (queryUser) & (recherche[key].matches(value))
+                    queryUser = (queryUser) & (recherche[key].search(value))
         result = db.search(queryUser)
 
         return result
@@ -325,7 +325,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         manager = EquipementManager('DataBase_Equipement.json')
 
         data = {'CategorieEquipement': 'Lit',
-                'Marque': 'Bed-Ultra',
+                'Marque': 'Lit de la muerte',
                 'Modele': 'E432',
                 'NumeroSerie': '1134',
                 'Salle': 'A867',
@@ -350,6 +350,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #               'EtatService': '',
         #               'EtatConservation': ''}
 
+        #dic_request = {'Marque': 'uerte'}
         #print(manager.AjouterEquipement(data))
         #print(manager.SupprimerEquipement('1'))                     # id_supp en int
         #print(manager.RechercherEquipement(dic_request))
