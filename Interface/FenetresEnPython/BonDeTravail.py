@@ -27,7 +27,7 @@ class BonDeTravail(Ui_BonDeTravail):
         #Creation des differents elements utiles pour la sauvegarde
         self.equipementManager = EquipementManager('DataBase_Equipement.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
-        self.equipementDictionnaire = dict()
+        self.equipementDictionnaire = None
         self.listeBonDeTravail = list()
         self.indiceBonDeTravail = 0
 
@@ -38,6 +38,10 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
         self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
+        #TODO : Connexion du bouton d'actualisation au clique pour lancer la recherche
+        #TODO : Connexion du bouton AjoutBDT avec une methode a creer nouveauBDT
+
+        #TODO : Faire appel a la methode qui sera implementee plus bas pour masquer les differents labels et afficher les champs de saisie
 
     def chercherEquipement(self):
         '''
@@ -68,6 +72,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.chargerBonTravail()
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
+            self.equipementDictionnaire = None
             self.labelEcritureCatEquip.setText("")
             self.labelEcritureCentreService.setText("")
             self.labelEcritureMarque.setText("")
@@ -84,18 +89,19 @@ class BonDeTravail(Ui_BonDeTravail):
             :return:
         '''
         #Recuperation des differentes informations dans les champs de BDT
-        dictionnaireDonnees = dict()
-        dictionnaireDonnees["Date"] = self.dateEdit.date().toPyDate()
-        dictionnaireDonnees["TempsEstime"] = str(self.timeEditTempsEstime.time().toPyTime())
-        dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
-        dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
-        if(self.comboBoxOuvertFerme.currentText() != "Ouvert"):
-            dictionnaireDonnees["EtatBDT"] = "Ferme"
-        else:
-            self.comboBoxOuvertFerme.currentText()
-        if(any(self.equipementDictionnaire)):
-            #On ajoute le bon de travail a un equipement existant
-            self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees)
+        if(self.equipementDictionnaire is not None):
+            dictionnaireDonnees = dict()
+            dictionnaireDonnees["Date"] = self.dateEdit.date().toPyDate()
+            dictionnaireDonnees["TempsEstime"] = str(self.timeEditTempsEstime.time().toPyTime())
+            dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
+            dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
+            if(self.comboBoxOuvertFerme.currentText() != "Ouvert"):
+                dictionnaireDonnees["EtatBDT"] = "Ferme"
+            else:
+                self.comboBoxOuvertFerme.currentText()
+            if(any(self.equipementDictionnaire)):
+                #On ajoute le bon de travail a un equipement existant
+                self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees)
 
     def chargerBonTravail(self):
         '''
@@ -112,13 +118,14 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
             self.textEditDescIntervention.wordWrapMode()
             #Remplir le temps estime
-            #TODO: Remplir la date associe au bon de travail
+            #TODO: Remplir le temps estime associea un BDT
             # self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
             idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
             self.labelEcritureBonTravail.setText(idBDT)
 
+    #TODO : creer une methode similaire a chargerBonDeTravail qui va s'occuper de mettre les bonnes informations dans les labels "Ce que j'ai ecrit"
     def bonTravailSuivant(self):
         '''
             Methode permettant d'afficher le bon de travail suivant
@@ -170,8 +177,13 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescSituation.setDisabled(True)
             self.textEditDescIntervention.setDisabled(True)
 
+    #TODO: Creer une methode nouveauBDT, avec comme seul argument : self
+    # Cette methode aura pour but de de vider les champs du BDT ( Description Situation, Description intervention
+    # Temps estime et ID bon de travail
 
+    #TODO : Creer une methode qui masque les differents labels "Ce que j'ai ecrit" et qui affiche les champs de saisie correspondant
 
+    #TODO : Creer une methode qui affiche les differents labels et qui masque les champs de saisie correspondant
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
