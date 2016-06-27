@@ -200,7 +200,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.dateEdit.clear()
 
     #TODO : Creer une methode qui masque les differents labels "Ce que j'ai ecrit" et qui affiche les champs de saisie correspondant
-
+#df
     def masqueLabelCache(self):
 
         self.labelCacheDate.hide()
