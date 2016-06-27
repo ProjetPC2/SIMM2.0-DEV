@@ -118,7 +118,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
             self.textEditDescIntervention.wordWrapMode()
             #Remplir le temps estime
-            #TODO: Remplir le temps estime associea un BDT
+            #TODO: Remplir le temps estime associe a un BDT
             # self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
@@ -178,12 +178,14 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.setDisabled(True)
 
     #TODO: Creer une methode nouveauBDT, avec comme seul argument : self
+    #Cette methode fera appel a la methode pour masquer les labels et afficher les champs de saisie ainsi que l'affichage des boutons  appropries
     # Cette methode aura pour but de de vider les champs du BDT ( Description Situation, Description intervention
     # Temps estime et ID bon de travail
 
-    #TODO : Creer une methode qui masque les differents labels "Ce que j'ai ecrit" et qui affiche les champs de saisie correspondant
+    #TODO : Creer une methode qui masque les differents labels "Ce que j'ai ecrit", et les cinq boutons(sauf la consultation) et qui affiche les champs de saisie correspondant et le bouton de consultation
 
-    #TODO : Creer une methode qui affiche les differents labels et qui masque les champs de saisie correspondant
+
+    #TODO : Creer une methode qui affiche les differents labels et les cinqs boutons et qui masque les champs de saisie correspondant ainsi que le bouton de consultation
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
