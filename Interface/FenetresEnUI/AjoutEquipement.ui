@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1202</width>
-    <height>1226</height>
+    <width>559</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -107,7 +107,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
     left: 1px;
 }</string>
   </property>
-  <layout class="QFormLayout" name="formLayout">
+  <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="2">
     <layout class="QHBoxLayout" name="layoutTitre">
      <item>
@@ -310,171 +310,249 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
     </layout>
    </item>
    <item row="1" column="1">
-    <layout class="QVBoxLayout" name="layoutChamps">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="labelId">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBoxCategorie">
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="maxCount">
-        <number>2147483645</number>
-       </property>
-       <property name="sizeAdjustPolicy">
-        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-       </property>
+      <layout class="QVBoxLayout" name="layoutChampsModifiables">
        <item>
-        <property name="text">
-         <string>Catégorie 1</string>
-        </property>
+        <widget class="QLabel" name="labelId">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>Catégorie 2</string>
-        </property>
+        <widget class="QComboBox" name="comboBoxCategorie">
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="maxCount">
+          <number>2147483645</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>Catégorie 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Catégorie 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Catégorie 3</string>
+          </property>
+         </item>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>Catégorie 3</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEditMarque">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEditModele">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEditNoDeSerie">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBoxSalle">
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="maxCount">
-        <number>2147483645</number>
-       </property>
-       <property name="sizeAdjustPolicy">
-        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-       </property>
-       <item>
-        <property name="text">
-         <string>Salle 1</string>
-        </property>
+        <widget class="QLineEdit" name="lineEditMarque">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>Salle 2</string>
-        </property>
+        <widget class="QLineEdit" name="lineEditModele">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>Salle 3</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBoxCentreDeService">
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="maxCount">
-        <number>2147483645</number>
-       </property>
-       <property name="sizeAdjustPolicy">
-        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-       </property>
-       <item>
-        <property name="text">
-         <string>Centre de service X</string>
-        </property>
+        <widget class="QLineEdit" name="lineEditNoDeSerie">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>Centre de service Y</string>
-        </property>
+        <widget class="QComboBox" name="comboBoxSalle">
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="maxCount">
+          <number>2147483645</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>Salle 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Salle 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Salle 3</string>
+          </property>
+         </item>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>Centre de service Z</string>
-        </property>
+        <widget class="QComboBox" name="comboBoxCentreDeService">
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="maxCount">
+          <number>2147483645</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>Centre de service X</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Centre de service Y</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Centre de service Z</string>
+          </property>
+         </item>
+        </widget>
        </item>
-      </widget>
+       <item>
+        <widget class="QDateEdit" name="dateEditDateDaquisition">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="displayFormat">
+          <string>dd-MM-yyyy</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEditDateDuDernierEntretien">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="displayFormat">
+          <string>dd-MM-yyyy</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxProvenance"/>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QDateEdit" name="dateEditDateDaquisition">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="displayFormat">
-        <string>dd-MM-yyyy</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDateEdit" name="dateEditDateDuDernierEntretien">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="displayFormat">
-        <string>dd-MM-yyyy</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBoxProvenance"/>
+      <layout class="QVBoxLayout" name="layoutChampsNonModifiables">
+       <item>
+        <widget class="QLabel" name="labelID">
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelCategorie">
+         <property name="text">
+          <string>Catégorie</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelMarque">
+         <property name="text">
+          <string>Marque</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelModele">
+         <property name="text">
+          <string>Modèle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelNoDeSerie">
+         <property name="text">
+          <string>No. de serie</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelSalle">
+         <property name="text">
+          <string>Salle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelCentreDeService">
+         <property name="text">
+          <string>Centre de service</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDateDAquisition">
+         <property name="text">
+          <string>Date d'aquisition</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDateDernierEntretien">
+         <property name="text">
+          <string>Date du dernier entretien</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelProvenance">
+         <property name="text">
+          <string>Provenance</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>
