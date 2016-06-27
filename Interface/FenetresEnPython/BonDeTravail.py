@@ -38,9 +38,11 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
         self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
-        #TODO : Connexion du bouton d'actualisation au clique pour lancer la recherche
-        #TODO : Connexion du bouton AjoutBDT avec une methode a creer nouveauBDT
 
+        #TODO : Connexion du bouton d'actualisation au clique pour lancer la recherche
+        self.boutonActualiser.clicked.connect(self.chercherEquipement)
+        #TODO : Connexion du bouton AjoutBDT avec une methode a creer nouveauBDT
+        self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
         #TODO : Faire appel a la methode qui sera implementee plus bas pour masquer les differents labels et afficher les champs de saisie
 
     def chercherEquipement(self):
@@ -126,6 +128,15 @@ class BonDeTravail(Ui_BonDeTravail):
             self.labelEcritureBonTravail.setText(idBDT)
 
     #TODO : creer une methode similaire a chargerBonDeTravail qui va s'occuper de mettre les bonnes informations dans les labels "Ce que j'ai ecrit"
+    def remplirBonDeTravail(self):
+
+        self.labelCacheNomTech.setText(self.comboBoxNomTech.currentText())
+        self.labelCacheDate.setText(self.dateEdit.date())
+        self.labelCacheTemps.setText(self.timeEditTempsEstime.time())
+        self.labelCacheDescSit.setText(self.textEditDescSituation.toPlainText())
+        self.labelCacheDescInt.setText(self.textEditDescIntervention.toPlainText())
+
+
     def bonTravailSuivant(self):
         '''
             Methode permettant d'afficher le bon de travail suivant
@@ -181,9 +192,35 @@ class BonDeTravail(Ui_BonDeTravail):
     # Cette methode aura pour but de de vider les champs du BDT ( Description Situation, Description intervention
     # Temps estime et ID bon de travail
 
+    def nouveauBondeTravail(self):
+        self.textEditDescIntervention.clear()
+        self.textEditDescSituation.clear()
+        self.timeEditTempsEstime.clear()
+        self.labelEcritureBonTravail.clear()
+        self.dateEdit.clear()
+
     #TODO : Creer une methode qui masque les differents labels "Ce que j'ai ecrit" et qui affiche les champs de saisie correspondant
 
+    def masqueLabelCache(self):
+
+        self.labelCacheDate.hide()
+        self.labelCacheNomTech.hide()
+        self.labelCacheTemps.hide()
+        self.labelCacheDescInt.hide()
+        self.labelCacheDescSit.hide()
+
+
     #TODO : Creer une methode qui affiche les differents labels et qui masque les champs de saisie correspondant
+
+    def afficheSaisi(self):
+
+        self.dateEdit.hide()
+        self.comboBoxNomTech.hide()
+        self.timeEditTempsEstime.hide()
+        self.textEditDescIntervention.hide()
+        self.textEditDescSituation.hide()
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
