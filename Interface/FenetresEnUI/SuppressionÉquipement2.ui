@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainFrame</class>
- <widget class="QWidget" name="MainFrame">
+ <class>SuppressionEquipement</class>
+ <widget class="QWidget" name="SuppressionEquipement">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>938</width>
-    <height>738</height>
+    <width>1420</width>
+    <height>1078</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -118,7 +118,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>garbage (2).png</pixmap>
+        <pixmap>../Images/garbage (2).png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -200,7 +200,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>Refresh2.png</normaloff>Refresh2.png</iconset>
+           <normaloff>../Images/Refresh2.png</normaloff>../Images/Refresh2.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -240,7 +240,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>garbage (1).png</normaloff>garbage (1).png</iconset>
+         <normaloff>../Images/garbage (1).png</normaloff>../Images/garbage (1).png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -749,13 +749,13 @@ nous sommes programmés ainsi.</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="boutonConsulterLeBon">
+      <widget class="QPushButton" name="boutonConsulterBon">
        <property name="text">
         <string>Consulter le Bon</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>navigation.png</normaloff>navigation.png</iconset>
+         <normaloff>../Images/navigation.png</normaloff>../Images/navigation.png</iconset>
        </property>
       </widget>
      </item>

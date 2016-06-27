@@ -13,6 +13,9 @@ from Interface.FenetresEnPython.StatistiqueFenetre import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 
 from Interface.FenetresEnPython.PDF import PDF
+from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeTravail
+from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
+
 
 class Accueil(Ui_Accueil):
     '''
@@ -57,7 +60,8 @@ class Accueil(Ui_Accueil):
 
         # Creation de la partie Support
         self.support = None
-
+        self.supprimeEquipement = None
+        self.supprimeBonDeTravail = None
         #Connexion des differents elements
         self.connectionBouton()
 
@@ -106,6 +110,9 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.ajoutEquipement.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
 
     def afficherConsultationEquipement(self):
         '''
@@ -130,6 +137,8 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage de l'element s'il existe deja
             self.consultationEquipement.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
         self.listeNavigation.clear()
         self.listeNavigation.append(self.consultationEquipement)
 
@@ -153,24 +162,16 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.rechercheEquipement.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
+        self.listeNavigation.append(self.rechercheEquipement)
 
     def choisirEquipement(self):
-        # print("ligne", ligne)
-        # print("colonne", colonne)
-        # print(self.tableResultats.item(ligne, 0).data(0))
-        # equipement = dict()
-        # indice = 0
-        # for cle in self.listeCleDonnees:
-        #     if (cle == "ID"):
-        #         equipement[cle] = int(self.tableResultats.item(ligne, indice).data(0))
-        #     elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
-        #         equipement[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne, indice).data(0),
-        #                                                      '%Y-%m-%d')
-        #     else:
-        #         equipement[cle] = self.tableResultats.item(ligne, indice).data(0)
-        #     indice += 1
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.frameFleche.show()
+        self.BoutonFlecheNavigation.show()
         equipement = self.rechercheEquipementUI.equipementSelectionne
         if self.modificationEquipementRecherche is None:
             # Creation du widget s'il n'existe pas
@@ -185,6 +186,43 @@ class Accueil(Ui_Accueil):
             self.modificationEquipementRecherche.show()
             self.modificationEquipementRechercheUI.equipementRecherche = equipement
             self.modificationEquipementRechercheUI.remplirEquipement()
+        self.listeNavigation.append(self.modificationEquipementRecherche)
+
+    def supprimerEquipement(self):
+        # On masque les autres elements
+        self.masquerElementGraphique()
+        self.frameFleche.show()
+        self.BoutonFlecheNavigation.show()
+        if self.supprimeEquipement is None:
+            # Creation du widget s'il n'existe pas
+            self.supprimeEquipement = QtWidgets.QWidget()
+            self.supprimeEquipementUI = SuppressionEquipement(self.supprimeEquipement)
+            self.supprimeEquipement.setStyleSheet("background: white;")
+
+            self.listeElementParDefaut.append(self.supprimeEquipement)
+            self.layoutAffichagePrincipal.addWidget(self.supprimeEquipement)
+        else:
+            # Affichage du widget s'il existe deja
+            self.supprimeEquipement.show()
+        self.listeNavigation.append(self.supprimeEquipement)
+
+    def supprimerBonDeTravail(self):
+        # On masque les autres elements
+        self.masquerElementGraphique()
+        self.frameFleche.show()
+        self.BoutonFlecheNavigation.show()
+        if self.supprimeBonDeTravail is None:
+            # Creation du widget s'il n'existe pas
+            self.supprimeBonDeTravail = QtWidgets.QWidget()
+            self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
+            self.supprimeBonDeTravail.setStyleSheet("background: white;")
+
+            self.listeElementParDefaut.append(self.supprimeBonDeTravail)
+            self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
+        else:
+            # Affichage du widget s'il existe deja
+            self.supprimeBonDeTravail.show()
+        self.listeNavigation.append(self.supprimeBonDeTravail)
 
     def afficherAjoutBonDeTravail(self):
         '''
@@ -206,6 +244,9 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage de l'element s'il existe deja
             self.ajoutBonDeTravail.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
 
     def afficherRechercheBonDeTravail(self):
         '''
@@ -227,6 +268,9 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.rechercheBonDeTravail.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
 
     def afficherStatistique(self):
         '''
@@ -248,6 +292,9 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.statistique.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
 
     def afficherSupport(self):
         '''
@@ -263,12 +310,17 @@ class Accueil(Ui_Accueil):
             self.support = QtWidgets.QWidget()
             self.supportPC2UI = SupportPC2(self.support)
             self.support.setStyleSheet("background: white;")
-
+            self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
+            self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
             self.listeElementParDefaut.append(self.support)
             self.layoutAffichagePrincipal.addWidget(self.support)
         else:
             # Affichage du widget support
             self.support.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
+        self.listeNavigation.append(self.support)
 
     def afficherAccueil(self):
         '''
@@ -282,6 +334,9 @@ class Accueil(Ui_Accueil):
         self.LabelSIMM20HopitalSaintMichel.show()
         self.logo.show()
         self.LabelDefinitionSIMM.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
 
     def masquerElementGraphique(self):
         '''
@@ -338,6 +393,8 @@ class Accueil(Ui_Accueil):
             print("Il n'y a qu'un seul element")
             self.BoutonFlecheNavigation.hide()
             self.frameFleche.hide()
+
+
 
     def selectionOption(self):
         # self.BoutonAjouterEquipement.setStyleSheet("background-color: white")

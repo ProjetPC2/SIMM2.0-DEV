@@ -3,17 +3,16 @@ from PyQt5 import QtGui, QtWidgets
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
-from Interface.FenetresEnPython.ConsultationEquipementUI import Ui_ConsultationEquipement
+from Interface.FenetresEnPython.SuppressionEquipementUI import Ui_SuppressionEquipement
 
 
-class ConsultationEquipement(Ui_ConsultationEquipement):
+class SuppressionEquipement(Ui_SuppressionEquipement):
     def __init__(self, widget):
         self.setupUi(widget)
-        self.ajoutConsultationEquipement()
+        self.ajoutSuppressionEquipement()
 
-
-    def ajoutConsultationEquipement(self):
-        #Creation de la liste pour manipuler les labels
+    def ajoutSuppressionEquipement(self):
+        # Creation de la liste pour manipuler les labels
         self.listeLabel = list()
         self.listeLabel.append(self.labelCategorie)
         self.listeLabel.append(self.labelMarque)
@@ -27,13 +26,12 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
 
-
         # A voir pour les bons de travaux
         self.listeLabel.append(self.labelCommentaires)
-        #Efface le contenu des differents champs par defaut
+        # Efface le contenu des differents champs par defaut
         for label in self.listeLabel:
             label.clear()
-        #Recuperation des differents attributs d''un equipement
+        # Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json")
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         # self.listeCleDonnees = list()
@@ -48,17 +46,15 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
         fichierConf.close()
 
-
         self.listeEdit = list()
         self.equipement = None
         self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
         self.lineEditId.returnPressed.connect(self.rechercherEquipement)
-        self.boutonModifierEquipement.setEnabled(False)
-        self.boutonAjouterUnBon.setEnabled(False)
         self.boutonConsulterBon.setEnabled(False)
+        self.boutonSupprimerEquipement.setEnabled(False)
+        self.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
         self.comboBoxBons.clear()
 
-        # self.comboBoxBons.addItem(icon2, "")
 
     def rechercherEquipement(self):
         '''
@@ -67,28 +63,27 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
             :param: None
             :return:
         '''
-        #Recuperation du dictionnaire de resultat
-        if(self.lineEditId.text() != ""):
+        # Recuperation du dictionnaire de resultat
+        if (self.lineEditId.text() != ""):
             equipementRecherche = dict()
             equipementRecherche["ID"] = self.lineEditId.text()
             listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
 
-
-            if(any(listeEquipement)):
-                #Cas ou l'equipement existe
-                self.boutonModifierEquipement.setEnabled(True)
-                self.boutonAjouterUnBon.setEnabled(True)
+            if (any(listeEquipement)):
+                # Cas ou l'equipement existe
+                self.boutonSupprimerEquipement.setEnabled(True)
                 self.boutonConsulterBon.setEnabled(False)
                 self.equipement = listeEquipement[0]
                 i = 0
                 for cle in self.listeCleDonnees:
-                    #Recuperation des donnees sous forme de string
+                    # Recuperation des donnees sous forme de string
                     self.listeLabel[i].setText(str(self.equipement[cle]))
                     i += 1
                 self.rechercherBonDeTravailAssocie()
+                self.rechercherBonDeTravailAssocie()
             else:
-                #Cas ou l'equipement n'existe pas
-                self.boutonModifierEquipement.setEnabled(False)
+                # Cas ou l'equipement n'existe pas
+                self.boutonSupprimerEquipement.setEnabled(False)
         else:
             print("Champ ID null")
 
@@ -99,14 +94,14 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
             :param: None
             :return:
         '''
-        #Recuperation des bons associees a l'equipement
+        # Recuperation des bons associees a l'equipement
         dictionnaireBDTRecherche = dict()
-        #TODO : verifier que l'ID-EQ recupere bien que cet ID
+        # TODO : verifier que l'ID-EQ recupere bien que cet ID
         dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
         listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
         self.comboBoxBons.clear()
-        if(any(listeBonDeTravail)):
-            #Dans le cas ou on a trouve des bons de travail, on les affiche
+        if (any(listeBonDeTravail)):
+            # Dans le cas ou on a trouve des bons de travail, on les affiche
             self.boutonConsulterBon.setEnabled(True)
             icon2 = QtGui.QIcon()
             icon2.addPixmap(
@@ -116,11 +111,13 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
                 self.comboBoxBons.addItem(icon2, affichage)
 
+    def supprimerEquipement(self):
+        self.equipementManager.SupprimerEquipement(self.equipement["ID"])
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    consultationEquipement = QtWidgets.QWidget()
-    consultationEquipementUI = ConsultationEquipement(consultationEquipement)
-    consultationEquipement.show()
+    MainFrame = QtWidgets.QWidget()
+    ui = SuppressionEquipement(MainFrame)
+    MainFrame.show()
     sys.exit(app.exec_())

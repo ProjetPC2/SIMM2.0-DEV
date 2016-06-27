@@ -67,6 +67,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
         self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
         self.lineEditNumeroSerie.returnPressed.connect(self.rechercheNumeroSerie)
+        self.boutonActualiser.clicked.connect(self.rechercheNumeroSerie)
+        self.boutonNouvelleRecherche.clicked.connect(self.nouvelleRecherche)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
 
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
@@ -195,6 +197,16 @@ class RechercheEquipement(Ui_RechercheEquipement):
                     colonne += 1
         else:
             print("dictionnaire de recherche vide")
+
+    def nouvelleRecherche(self):
+        self.comboBoxProvenance.setCurrentText("")
+        self.comboBoxSalle.setCurrentText("")
+        self.comboBoxCategorieEquipement.setCurrentText("")
+        self.comboBoxCentreService.setCurrentText("")
+        self.comboBoxEtatService.setCurrentText("")
+        self.lineEditNumeroSerie.setText("")
+        self.tableResultats.clear()
+
 
 if __name__ == "__main__":
     import sys
