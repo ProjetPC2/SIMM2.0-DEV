@@ -1,160 +1,52 @@
 _default:
   1: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
+      CategorieEquipement: ECG
+      CentreService: Urgence
       Commentaires: NONE
-      DateAcquisition: 2010-07-12
+      DateAcquisition: 2008-07-12
       DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: Au rebut
-      ID: '24'
-      Marque: HARRISON
-      Modele: IS
+      EtatConservation: Acceptable
+      EtatService: En maintenance
+      ID: '1'
+      Marque: Electro-ECG
+      Modele: E432
       NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: CHU Ste-Justine
+      NumeroSerie: '1234'
+      Provenance: Poly
       Salle: A867
     state:
       eid: 1
   2: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
+      CategorieEquipement: ECG
+      CentreService: "Maternit\xE9"
       Commentaires: NONE
-      DateAcquisition: 2010-07-12
+      DateAcquisition: 2008-07-12
       DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: Au rebut
-      ID: '25'
-      Marque: HARRISON
-      Modele: IS
+      EtatConservation: Desuet
+      EtatService: Au rebus
+      ID: '2'
+      Marque: Electro-ECG
+      Modele: E432
       NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: CHU Ste-Justine
+      NumeroSerie: '1234'
+      Provenance: Poly
       Salle: A867
     state:
       eid: 2
-  3: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
-      Commentaires: NONE
-      DateAcquisition: 2010-07-12
-      DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: Au rebut
-      ID: '26'
-      Marque: HARRISON
-      Modele: IS
-      NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: CHU Ste-Justine
-      Salle: A867
-    state:
-      eid: 3
-  4: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
-      Commentaires: NONE
-      DateAcquisition: 2010-07-12
-      DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: En maintenance
-      ID: '28'
-      Marque: HARRISON
-      Modele: IS
-      NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: CHU Ste-Justine
-      Salle: A867
-    state:
-      eid: 4
-  5: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
-      Commentaires: NONE
-      DateAcquisition: 2010-07-12
-      DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: En maintenance
-      ID: '29'
-      Marque: HARRISON
-      Modele: IS
-      NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: POLY
-      Salle: A867
-    state:
-      eid: 5
-  6: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
-      Commentaires: NONE
-      DateAcquisition: 2010-07-12
-      DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: En maintenance
-      ID: '30'
-      Marque: HARRISON
-      Modele: IS
-      NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: POLY
-      Salle: A867
-    state:
-      eid: 6
-  7: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
-      Commentaires: NONE
-      DateAcquisition: 2010-07-12
-      DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: En maintenance
-      ID: '31'
-      Marque: HARRISON
-      Modele: IS
-      NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: CHU Ste-Justine
-      Salle: A867
-    state:
-      eid: 7
-  8: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: JEROME-test
-      CentreService: Soins intensifs
-      Commentaires: NONE
-      DateAcquisition: 2010-07-12
-      DateDernierEntretien: 2011-02-27
-      EtatConservation: En fin de vie
-      EtatService: En maintenance
-      ID: '32'
-      Marque: HARRISON
-      Modele: IS
-      NbBonTravail: 0
-      NumeroSerie: NICE
-      Provenance: CHU Ste-Justine
-      Salle: A867
-    state:
-      eid: 8
-  9:
-    CategorieEquipement: IRM
-    CentreService: Urgence
+  3:
+    CategorieEquipement: Lit
+    CentreService: "Natalit\xE9"
     Commentaires: NONE
-    DateAcquisition: 2010-07-12
+    DateAcquisition: 2008-07-12
     DateDernierEntretien: 2011-02-27
-    EtatConservation: En fin de vie
-    EtatService: En maintenance
-    ID: '33'
-    Marque: HARRISON
-    Modele: IS
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    ID: '3'
+    Marque: Bed-Ultra
+    Modele: E432
     NbBonTravail: 0
-    NumeroSerie: NICE
-    Provenance: CHU Ste-Justine
+    NumeroSerie: '1134'
+    Provenance: Poly
     Salle: A867

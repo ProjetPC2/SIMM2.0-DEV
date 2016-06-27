@@ -11,11 +11,16 @@ CategorieEquipement:
 - Dialyse
 - JEROME
 - JEROME-test
+- Lit
 CentreService:
 - Urgence
 - "Maternit\xE9"
 - "Atelier de g\xE9nie biom\xE9dical"
 - Soins intensifs
+- "P\xE9rinatalit\xE9"
+- "Hop\xEEtal"
+- "\xC9l\xE9mentaire"
+- "Natalit\xE9"
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -43,10 +48,15 @@ Provenance:
 - CSI
 - POLY
 - CHU Ste-Justine
+- CHU St-Justine
+- Poly
 Salle:
 - A123
 - B518
 - A867
+StatsAjoutFichier:
+- Provenance
+- CategorieEquipement
 champsAcceptes-BDT:
 - Date
 - TempsEstime
@@ -66,4 +76,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 33
+dernierID-Equipement: 3

@@ -45,7 +45,7 @@ class EquipementManager:
         db = self._getDB()
 
         dict_renvoi = {'Reussite': False}
-        if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf):   # ARRANGER FONCTION AVANT
+        if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf, stats):   # ARRANGER FONCTION AVANT
             id_eq = self._ObtenirProchainID()               # id du nouvel équipement
             dictio['ID'] = str(id_eq)                       # ajout de l'ID au dictionnaire
             dictio['NbBonTravail'] = 0                      # ajout du nombre de bon de travail qui est toujours 0 pour un nouvel équipement
@@ -55,7 +55,6 @@ class EquipementManager:
                 # mise à jour des données dans le fichier de stats pour l'ajout d'un nouvel équipement
                 self._miseAJourStats(ancien_dict=None, nouveau_dict=dictio, stats_dict=stats)
             self._ActualiserConfiguration(conf)
-            self._ActualiserStats(stats)
         else:
             print('An error occured')
         
@@ -77,8 +76,7 @@ class EquipementManager:
             dict_renvoi['Reussite'] = True                  # suppression de l'équipement, renvoie True seulement si l'équipement a été trouvé
             # modification du fichier de stats lors de la suppression d'un équipement
             self._miseAJourStats(ancien_dict=ancien_dict, nouveau_dict=None, stats_dict=stats)
-        
-        self._ActualiserStats(stats)
+
         return dict_renvoi
 
 
@@ -111,12 +109,11 @@ class EquipementManager:
         
         ancien_dict = db.get(Equipement['ID'] == id_modif)
         # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
-        if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf):
+        if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf, stats):
             if db.update(dict_modif, Equipement['ID'] == id_modif) != []:
                 dict_renvoi['Reussite'] = True              # modif du dict associé à l'équipement
                 self._miseAJourStats(ancien_dict=ancien_dict, nouveau_dict=dict_modif, stats_dict=stats)
         self._ActualiserConfiguration(conf)
-        self._ActualiserStats(stats)
         return dict_renvoi
 
 
@@ -145,8 +142,8 @@ class EquipementManager:
     # Étape 1: Vérifier que tous les champs attendus sont là
     # Étape 2: Vérifier qu'il n'y a pas un champ non attendu qui est là
     # Verifier si les valeurs des champs sont dans la configuration, si non ajouter la nouvelle valeur au dictionnaire
-    def _verifierDict(self, dictio, conf):
-        stats = self._getStats()
+    def _verifierDict(self, dictio, conf, stats):
+        #stats = self._getStats()
 
         conforme = True
         # récupère la liste des champs auxquels on peut ajouter des valeurs
@@ -273,7 +270,6 @@ class EquipementManager:
             if ancien_dict['CentreService'] != nouveau_dict['CentreService'] or ancien_dict['CategorieEquipement'] != nouveau_dict['CategorieEquipement']:
                 stats_dict['nbEquipementCentreService'][ancien_dict['CentreService']][ancien_dict['CategorieEquipement']] -= 1
                 stats_dict['nbEquipementCentreService'][nouveau_dict['CentreService']][nouveau_dict['CategorieEquipement']] += 1
-
         self._ActualiserStats(stats_dict)
 
 
@@ -324,17 +320,17 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #  TESTS
         manager = EquipementManager('DataBase_Equipement.json')
 
-        data = {'CategorieEquipement': 'ECG',
-                'Marque': 'HARRISON',
-                'Modele': 'IS',
-                'NumeroSerie': 'NICE',
+        data = {'CategorieEquipement': 'Lit',
+                'Marque': 'Bed-Ultra',
+                'Modele': 'E432',
+                'NumeroSerie': '1134',
                 'Salle': 'A867',
-                'CentreService': 'Maternité',
-                'DateAcquisition': datetime.date(2010, 7, 12),
+                'CentreService': 'Natalité',
+                'DateAcquisition': datetime.date(2008, 7, 12),
                 'DateDernierEntretien': datetime.date(2011, 2, 27),
-                'Provenance': 'POLY',
-                'EtatService': 'En maintenance',
-                'EtatConservation': 'Acceptable',
+                'Provenance': 'Poly',
+                'EtatService': 'En service',
+                'EtatConservation': 'Quasi neuf',
                 'Commentaires': 'NONE'}
 
         #manager._ObtenirProchainID()
@@ -351,9 +347,9 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #               'EtatConservation': ''}
 
         #print(manager.AjouterEquipement(data))
-        #print(manager.SupprimerEquipement('2'))                     # id_supp en int
+        #print(manager.SupprimerEquipement('1'))                     # id_supp en int
         #print(manager.RechercherEquipement(dic_request))
-        #print(manager.ModifierEquipement('1', data))               # id_modif en int
+        #print(manager.ModifierEquipement('3', data))               # id_modif en int
 
         # Stats
         #print(manager._statsNbTotalEquipement())
