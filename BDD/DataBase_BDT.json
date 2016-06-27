@@ -1,15 +1,15 @@
 _default:
   1: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: ECG
-      CentreService: "Maternit\xE9"
+      CategorieEquipement: "St\xE9thoscope"
+      CentreService: Urgence
       Date: 2016-02-22
       DescriptionIntervention: Blablabla-modif
       DescriptionSituation: dict_modif
       EtatBDT: Ouvert
       ID-BDT: '3'
       ID-EQ: '2'
-      Marque: Electro-ECG
+      Marque: Lit de la muerte
       Modele: E432
       NomTechnicien: Kerlin
       Salle: A867
@@ -39,15 +39,15 @@ _default:
       eid: 2
   3: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: ECG
-      CentreService: "Maternit\xE9"
+      CategorieEquipement: "St\xE9thoscope"
+      CentreService: Urgence
       Date: 2016-02-22
       DescriptionIntervention: Blablabla-modif
       DescriptionSituation: dict_modif
       EtatBDT: Ouvert
       ID-BDT: '4'
       ID-EQ: '2'
-      Marque: Electro-ECG
+      Marque: Lit de la muerte
       Modele: E432
       NomTechnicien: Kerlin
       Salle: A867
@@ -58,15 +58,15 @@ _default:
       eid: 3
   4: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: ECG
-      CentreService: "Maternit\xE9"
+      CategorieEquipement: "St\xE9thoscope"
+      CentreService: Urgence
       Date: 2016-02-22
       DescriptionIntervention: Blablabla-modif
       DescriptionSituation: dict_modif
       EtatBDT: Ouvert
       ID-BDT: '5'
       ID-EQ: '2'
-      Marque: Electro-ECG
+      Marque: Lit de la muerte
       Modele: E432
       NomTechnicien: Kerlin
       Salle: A867
@@ -75,19 +75,22 @@ _default:
         Ah4AAAAA
     state:
       eid: 4
-  5:
-    CategorieEquipement: ECG
-    CentreService: "Maternit\xE9"
-    Date: 2016-02-22
-    DescriptionIntervention: Blablabla-modif
-    DescriptionSituation: "Vraiment bris\xE9"
-    EtatBDT: Ouvert
-    ID-BDT: '6'
-    ID-EQ: '2'
-    Marque: Electro-ECG
-    Modele: E432
-    NomTechnicien: Kerlin
-    Salle: A867
-    TempsEstime: !!python/object/apply:datetime.time
-    - !!binary |
-      Ah4AAAAA
+  5: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "St\xE9thoscope"
+      CentreService: Urgence
+      Date: 2016-02-22
+      DescriptionIntervention: Blablabla-modif
+      DescriptionSituation: "Vraiment bris\xE9"
+      EtatBDT: Ouvert
+      ID-BDT: '6'
+      ID-EQ: '2'
+      Marque: Lit de la muerte
+      Modele: E432
+      NomTechnicien: Kerlin
+      Salle: A867
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        Ah4AAAAA
+    state:
+      eid: 5

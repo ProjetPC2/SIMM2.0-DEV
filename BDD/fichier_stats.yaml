@@ -1,19 +1,20 @@
 nbEquipement: 4
 nbEquipementCentreService:
   "Maternit\xE9":
-    ECG: 1
+    ECG: 0
   "Natalit\xE9":
-    Lit: 2
+    Lit: 1
   Urgence:
     ECG: 1
+    "St\xE9thoscope": 2
 nbEquipementEtatConservation:
   Acceptable: 1
-  Desuet: 1
+  Desuet: 0
   En fin de vie: 0
-  Quasi neuf: 2
+  Quasi neuf: 3
 nbEquipementEtatService:
-  Au rebus: 1
+  Au rebus: 0
   En maintenance: 1
-  En service: 2
+  En service: 3
 nbEquipementProvenance:
   Poly: 4

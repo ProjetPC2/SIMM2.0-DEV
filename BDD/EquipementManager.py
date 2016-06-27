@@ -31,8 +31,9 @@ import datetime
 import copy
 
 class EquipementManager:
-    def __init__(self, pathname):
-        self._pathname = pathname                               # pathname de la base de données des équipements
+    def __init__(self, pathname_eq, pathname_bdt):
+        self._pathnameEQ = pathname_eq                               # pathname de la base de données des équipements
+        self._pathnameBDT = pathname_bdt
         self.conf_file = 'fichier_conf.yaml'                    # pathname du fichier de configuration
         self.stats_file = 'fichier_stats.yaml'
 
@@ -110,14 +111,28 @@ class EquipementManager:
         Equipement = Query()
         dict_renvoi = {'Reussite': False}
         db = self._getDB()
-        
+        db_BDT = self._getDB_BDT()
+        liste_champ_ajout_BDT = list(conf['BDT_Ajout_Champ_Equipement'])
+
+        dict_modif_BDT = {}
+
         ancien_dict = db.get(Equipement['ID'] == id_modif)
         # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
         if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf, stats):
+            for key, value in dict_modif.items():  # création du dictionnaire update qui permettra la mise à jour des champs dans la bdd des bon de travail
+                if key in liste_champ_ajout_BDT:
+                    dict_modif_BDT[key] = value
             if db.update(dict_modif, Equipement['ID'] == id_modif) != []:
                 dict_renvoi['Reussite'] = True              # modif du dict associé à l'équipement
                 self._miseAJourStats(ancien_dict=ancien_dict, nouveau_dict=dict_modif, stats_dict=stats)
+            if db_BDT.search(Equipement['ID-EQ'] == id_modif) != []:
+                if db_BDT.update(dict_modif_BDT, Equipement['ID-EQ'] == id_modif) != []:
+                    dict_renvoi['Reussite'] = True
+                else:
+                    dict_renvoi['Reussite'] = False
+
         self._ActualiserConfiguration(conf)
+
         return dict_renvoi
 
 
@@ -310,26 +325,37 @@ class EquipementManager:
 
     def _getDB(self):
         try:
-            if not os.path.exists(self._pathname):
+            if not os.path.exists(self._pathnameEQ):
                 raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
             else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
+                db = TinyDB(self._pathnameEQ, storage=YAMLStorage)  # data base des équipements
         except OSError as e:
             print(e)
         
         return db
 
+    def _getDB_BDT(self):
+        try:
+            if not os.path.exists(self._pathnameBDT):
+                raise OSError("Oups nous ne trouvons plus la bdd des bons de travail!")    # erreur si le path n'existe pas
+            else:
+                db = TinyDB(self._pathnameBDT, storage=YAMLStorage)  # data base des équipements
+        except OSError as e:
+            print(e)
+
+        return db
+
 if __name__ == "__main__":#Execution lorsque le fichier est lance
     if True:
         #  TESTS
-        manager = EquipementManager('DataBase_Equipement.json')
+        manager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
 
-        data = {'CategorieEquipement': 'Lit',
+        data = {'CategorieEquipement': 'Stéthoscope',
                 'Marque': 'Lit de la muerte',
                 'Modele': 'E432',
                 'NumeroSerie': '1134',
                 'Salle': 'A867',
-                'CentreService': 'Natalité',
+                'CentreService': 'Urgence',
                 'DateAcquisition': datetime.date(2008, 7, 12),
                 'DateDernierEntretien': datetime.date(2011, 2, 27),
                 'Provenance': 'Poly',
@@ -354,7 +380,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager.AjouterEquipement(data))
         #print(manager.SupprimerEquipement('1'))                     # id_supp en int
         #print(manager.RechercherEquipement(dic_request))
-        #print(manager.ModifierEquipement('3', data))               # id_modif en int
+        print(manager.ModifierEquipement('3', data))               # id_modif en int
 
         # Stats
         #print(manager._statsNbTotalEquipement())

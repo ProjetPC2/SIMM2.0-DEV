@@ -11,8 +11,6 @@ BDT_ChampAjoutPermis:
 BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
-BDT_recherchePlusieursChamps:
-- RechercheMotCle
 CategorieEquipement:
 - ECG
 - IRM
@@ -21,6 +19,7 @@ CategorieEquipement:
 - JEROME
 - JEROME-test
 - Lit
+- "St\xE9thoscope"
 CentreService:
 - Urgence
 - "Maternit\xE9"
