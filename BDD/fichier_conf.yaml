@@ -10,6 +10,7 @@ BDT_ChampAjoutPermis:
 - null
 BDT_ChampFormatPrecis:
 - Date
+- TempsEstime
 CategorieEquipement:
 - ECG
 - IRM

@@ -33,9 +33,9 @@ class BonTravailManager:
         db = self._getDB()
         db_equip = self._getEquipDB()
         Equipement = Query()
-        list_ajout_champ_equipement = list(conf['BDT_Ajout_Champ_Equipement'])
+        list_ajout_champ_equipement = list(conf['BDT_Ajout_Champ_Equipement'])   # récupère la liste des informations à ajouter dans le dictionnaire
         dict_renvoi = {'Reussite': False}                       # Initialisation du dictionnaire de renvoie
-        dict_equipement = db_equip.get(Equipement['ID'] == id_equipement)
+        dict_equipement = db_equip.get(Equipement['ID'] == id_equipement)  # récupère l'équipement via la BDD des équipements
         id_bdt = self._ObtenirProchainIDdeBDT(id_equipement)    # id du nouveau bon de travail
 
         if id_bdt == -1:                                        # Equipement non existant
@@ -59,7 +59,7 @@ class BonTravailManager:
         
         return dict_renvoi
 
-
+    # il faut update le champ dans NbBonTravail dans l'équipement
     def SupprimerBonTravail(self, id_eq_supp, id_bdt_supp):
         BonTravail = Query()
         dict_renvoi = {'Reussite': False}                       # Initialisation du dictionnaire de renvoi à false
@@ -77,9 +77,13 @@ class BonTravailManager:
         firstEntry = True
         for key, value in regex_dict.items():
             # Pour chaque champ de la recherche
-            if (key == "ID-EQ"):
+            if (key == 'ID-EQ'):
                 # Dans le cas de la recherche par ID
-                queryUser = recherche["ID-EQ"] == value
+                if firstEntry:                                  # Si c'est la première recherche
+                    queryUser = recherche["ID-EQ"] == value
+                    firstEntry = False
+                else:
+                    queryUser = (queryUser) & (recherche[key].matches(value))
             else:
                 if not isinstance(value, datetime.date):            # S'il ne s'agit pas d'une date
                     if firstEntry:                                  # Si c'est la première recherche
@@ -111,6 +115,7 @@ class BonTravailManager:
         db = self._getDB()
         conf = self._getConf()
         if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf):
+            print('ICI')
             if db.update(dict_modif, (BonTravail['ID-EQ'] == id_eq_modif) & (BonTravail['ID-BDT'] == id_bdt_modif)) != []:
                 dict_renvoi['Reussite'] = True                  # Mise à jour de l'équipement réussie
         self._ActualiserConfiguration(conf)                         # Actualiser le fichier de configuration
@@ -166,17 +171,15 @@ class BonTravailManager:
                 if value not in list_temp:                      # Et que la valeur n'est pas dans la liste
                     conforme = False                            # Le dictionnaire n'est pas conforme
             elif key in list_champ_format_precis:               # Si le champ doit avoir une valeur avec un format précis
-                if not isinstance(value, datetime.date):        # Vérifier le format de datetime.date()
+                if (not isinstance(value, datetime.date)) and (not isinstance(value, datetime.time)):        # Vérifier le format de datetime.date()
                     conforme = False
 
         self._ActualiserConfiguration(conf)                         # Actualiser le fichier de configuration avec les nouvelles valeurs
         return conforme
 
-
     def _ActualiserConfiguration(self, conf):
         with open('fichier_conf.yaml', 'w') as fichierConf:
             fichierConf.write(yaml.dump(conf, default_flow_style=False))
-
 
     def _getConf(self):
         try:
@@ -217,23 +220,22 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
 
     data1 = {'Date': datetime.date(2016, 2, 22),
-             'TempsEstime': 'Cam-modif',
-             'DescriptionSituation': 'Larose-modif',
+             'TempsEstime': datetime.time(2, 30),
+             'DescriptionSituation': 'dict_modif',
              'DescriptionIntervention': 'Blablabla-modif',
-             'EtatBDT': 'Ferme',
+             'EtatBDT': 'Ouvert',
              'NomTechnicien': 'Kerlin'}
-
 
     #dic_request = {'AvantLe': datetime.date(2016, 03, 12)}
                    #'ApresLe': datetime.date(2016, 06, 10)}
-
 
     #print(manager.AjouterBonTravail('2', data1))                       # Ajout de 2 équipements de suite (pour tester...
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
     #print(len(manager.RechercherBonTravail(dic_request)))
     #print(manager.RechercherBonTravail(dic_request))
-    #print(manager.ModifierBonTravail('1', '2', data1))                     # id_modif en int
+    #print(manager.ModifierBonTravail('2', '3', data1))                     # id_modif en int
+
 
 
 

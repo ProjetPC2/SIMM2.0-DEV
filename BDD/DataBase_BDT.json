@@ -1,270 +1,55 @@
 _default:
   1: !!python/object/new:tinydb.database.Element
     dictitems:
-      Date: 2016-06-07
-      Description de la situation: test
-      ID-BDT: 1
-      ID-EQ: 1
-      Temps estime: '2'
+      CategorieEquipement: ECG
+      CentreService: "Maternit\xE9"
+      Date: 2016-02-22
+      DescriptionIntervention: Blablabla-modif
+      DescriptionSituation: dict_modif
+      EtatBDT: Ouvert
+      ID-BDT: '3'
+      ID-EQ: '2'
+      Marque: Electro-ECG
+      Modele: E432
+      NomTechnicien: Kerlin
+      Salle: A867
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        Ah4AAAAA
     state:
       eid: 1
   2: !!python/object/new:tinydb.database.Element
     dictitems:
-      Date: 2016-06-07
-      Description de la situation: test
-      ID-BDT: 2
-      ID-EQ: 1
-      Temps estime: '2'
+      CategorieEquipement: ECG
+      CentreService: Urgence
+      Date: 2016-02-22
+      DescriptionIntervention: Blablabla-modif
+      DescriptionSituation: dict_modif
+      EtatBDT: Ouvert
+      ID-BDT: '6'
+      ID-EQ: '1'
+      Marque: Electro-ECG
+      Modele: E432
+      NomTechnicien: Kerlin
+      Salle: A867
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        Ah4AAAAA
     state:
       eid: 2
-  3: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test
-      ID-BDT: 3
-      ID-EQ: 1
-      Temps estime: '2'
-    state:
-      eid: 3
-  4: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test
-      ID-BDT: 4
-      ID-EQ: 1
-      Temps estime: '2'
-    state:
-      eid: 4
-  5: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 5
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 5
-  6: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 6
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 6
-  7: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 7
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 7
-  8: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 8
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 8
-  9: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 9
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 9
-  10: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 10
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 10
-  11: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 11
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 11
-  12: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 12
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 12
-  13: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 13
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 13
-  14: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 14
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 14
-  15: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 15
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 15
-  16: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 16
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 16
-  17: !!python/object/new:tinydb.database.Element
-    dictitems:
-      Date: 2016-06-07
-      Description de la situation: test1
-      ID-BDT: 17
-      ID-EQ: 1
-      Temps estime: '1'
-    state:
-      eid: 17
-  18: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: ECG
-      CentreService: Urgence
-      Date: 2016-02-22
-      DescriptionIntervention: Blablabla-modif
-      DescriptionSituation: Larose-modif
-      EtatBDT: Ferme
-      ID-BDT: '1'
-      ID-EQ: '1'
-      Marque: Electro-ECG
-      Modele: E432
-      NomTechnicien: Kerlin
-      Salle: A867
-      TempsEstime: Cam-modif
-    state:
-      eid: 18
-  19: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: ECG
-      CentreService: Urgence
-      Date: 2016-02-22
-      DescriptionIntervention: Blablabla-modif
-      DescriptionSituation: Larose-modif
-      EtatBDT: Ferme
-      ID-BDT: '2'
-      ID-EQ: '1'
-      Marque: Electro-ECG
-      Modele: E432
-      NomTechnicien: Kerlin
-      Salle: A867
-      TempsEstime: Cam-modif
-    state:
-      eid: 19
-  20: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: ECG
-      CentreService: Urgence
-      Date: 2016-02-22
-      DescriptionIntervention: Blablabla-modif
-      DescriptionSituation: Larose-modif
-      EtatBDT: Ferme
-      ID-BDT: '3'
-      ID-EQ: '1'
-      Marque: Electro-ECG
-      Modele: E432
-      NomTechnicien: Kerlin
-      Salle: A867
-      TempsEstime: Cam-modif
-    state:
-      eid: 20
-  21: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: ECG
-      CentreService: Urgence
-      Date: 2016-02-22
-      DescriptionIntervention: Blablabla-modif
-      DescriptionSituation: Larose-modif
-      EtatBDT: Ferme
-      ID-BDT: '4'
-      ID-EQ: '1'
-      Marque: Electro-ECG
-      Modele: E432
-      NomTechnicien: Kerlin
-      Salle: A867
-      TempsEstime: Cam-modif
-    state:
-      eid: 21
-  22: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: ECG
-      CentreService: Urgence
-      Date: 2016-02-22
-      DescriptionIntervention: Blablabla-modif
-      DescriptionSituation: Larose-modif
-      EtatBDT: Ferme
-      ID-BDT: '5'
-      ID-EQ: '1'
-      Marque: Electro-ECG
-      Modele: E432
-      NomTechnicien: Kerlin
-      Salle: A867
-      TempsEstime: Cam-modif
-    state:
-      eid: 22
-  23: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Lit
-      CentreService: "Natalit\xE9"
-      Date: 2016-02-22
-      DescriptionIntervention: Blablabla-modif
-      DescriptionSituation: Larose-modif
-      EtatBDT: Ferme
-      ID-BDT: '1'
-      ID-EQ: '3'
-      Marque: Bed-Ultra
-      Modele: E432
-      NomTechnicien: Kerlin
-      Salle: A867
-      TempsEstime: Cam-modif
-    state:
-      eid: 23
-  24:
+  3:
     CategorieEquipement: ECG
     CentreService: "Maternit\xE9"
     Date: 2016-02-22
     DescriptionIntervention: Blablabla-modif
-    DescriptionSituation: Larose-modif
-    EtatBDT: Ferme
-    ID-BDT: '1'
+    DescriptionSituation: dict_modif
+    EtatBDT: Ouvert
+    ID-BDT: '4'
     ID-EQ: '2'
     Marque: Electro-ECG
     Modele: E432
     NomTechnicien: Kerlin
     Salle: A867
-    TempsEstime: Cam-modif
+    TempsEstime: !!python/object/apply:datetime.time
+    - !!binary |
+      Ah4AAAAA

@@ -87,8 +87,12 @@ class EquipementManager:
         firstEntry = True
         for key, value in regex_dict.items():
             if (key == "ID"):
-                # Dans le cas de la recherche par ID
-                queryUser = recherche.ID == value
+                if firstEntry:
+                    # Dans le cas de la recherche par ID
+                    queryUser = recherche.ID == value
+                    firstEntry = False
+                else:
+                    queryUser = (queryUser) & (recherche[key].matches(value))
             else:
                 if firstEntry:
                     queryUser = (recherche[key].matches(value))
