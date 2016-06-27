@@ -106,21 +106,22 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        self.listeLabel.append(self.categorieEquipementLabel)
-        self.listeLabel.append(self.marqueLabel)
-        self.listeLabel.append(self.modeleLabel)
-        self.listeLabel.append(self.numSerieLabel)
-        self.listeLabel.append(self.salleLabel)
-        self.listeLabel.append(self.centreServiceLabel)
-        self.listeLabel.append(self.dateAcquisitionLabel)
-        self.listeLabel.append(self.dateEntretienLabel)
-        self.listeLabel.append(self.provenanceLabel)
-        self.listeLabel.append(self.etatServiceLabel)
-        self.listeLabel.append(self.etatConservationLabel)
+        self.listeLabel.append(self.labelID)
+        self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelMarque)
+        self.listeLabel.append(self.labelModele)
+        self.listeLabel.append(self.labelNoDeSerie)
+        self.listeLabel.append(self.labelSalle)
+        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelDateDAquisition)
+        self.listeLabel.append(self.labelDateDernierEntretien)
+        self.listeLabel.append(self.labelProvenance)
+        self.listeLabel.append(self.labelEtatDeService)
+        self.listeLabel.append(self.labelEtatDeConservation)
 
         # Masquage des differents labels
         for label in self.listeLabel:
-            self.layoutChamps.addWidget(label)
+            self.layoutChampsNonModifiables.addWidget(label)
             label.hide()
 
         # Traitement de la partie commentaires
