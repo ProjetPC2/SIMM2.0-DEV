@@ -45,8 +45,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
         #TODO : Faire appel a la methode qui sera implementee plus bas pour masquer les differents labels et afficher les champs de saisie
 
-        #self.boutonConsultation.clicked.connect()
-        #if self.bouton
+        self.boutonConsultation.clicked.connect(self.masqueLabelCache)
     def chercherEquipement(self):
         '''
             Recuperation de l'equipement associe a l'ID dans le cas ou il existe
@@ -217,6 +216,9 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelCacheTemps.hide()
         self.labelCacheDescInt.hide()
         self.labelCacheDescSit.hide()
+
+        self.boutonSauvegarde.hide()
+        self.boutonAjoutBDT.hide()
 
 
     #TODO : Creer une methode qui affiche les differents labels et qui masque les champs de saisie correspondant
