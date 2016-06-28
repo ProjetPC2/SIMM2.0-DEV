@@ -57,6 +57,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         # self.tableResultats.setHorizontalHeaderLabels("ID")
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.resizeColumnsToContents()
+        self.tableResultats.setRowCount(0)
+
 
         self.dictionnaireRecherche = dict()
 
@@ -177,8 +179,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
             self.dictionnaireRecherche["NumeroSerie"] = self.lineEditNumeroSerie.text()
 
         else:
-
-            self.dictionnaireRecherche.pop("NumeroSerie")
+            if "NumeroSerie" in self.dictionnaireRecherche:
+                self.dictionnaireRecherche.pop("NumeroSerie")
         self.remplirTableau()
 
     def remplirTableau(self):
@@ -205,7 +207,9 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxCentreService.setCurrentText("")
         self.comboBoxEtatService.setCurrentText("")
         self.lineEditNumeroSerie.setText("")
-        self.tableResultats.clear()
+        # self.tableResultats.clear()
+        # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
+        self.tableResultats.setRowCount(0)
 
 
 if __name__ == "__main__":

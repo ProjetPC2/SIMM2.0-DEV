@@ -50,6 +50,9 @@ class Accueil(Ui_Accueil):
         self.consultationEquipement = None
         self.rechercheEquipement = None
         self.modificationEquipement = None
+        self.ajoutBonDeTravailEquipement = None
+        self.consultationBonDeTravail = None
+
         # Partie Bon de Travail
         self.ajoutBonDeTravail = None
         self.rechercheBonDeTravail = None
@@ -132,6 +135,8 @@ class Accueil(Ui_Accueil):
             # connexion de l'action a l'appuye du bouton modification equipement
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
 
+            self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.ajouterBonDeTravailEquipement)
+            self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
             self.listeElementParDefaut.append(self.consultationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.consultationEquipement)
         else:
@@ -378,6 +383,61 @@ class Accueil(Ui_Accueil):
             self.modificationEquipementUI.equipementRecherche = equipement
             self.modificationEquipementUI.remplirEquipement()
         self.listeNavigation.append(self.modificationEquipement)
+
+    def ajouterBonDeTravailEquipement(self):
+        '''
+            Affichage du widget permettant l'ajout d'un bon de travail par rapport a un equipement
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        #TODO passer les informations a la nouvelle fenetre
+        # On masque les autres elements
+        self.BoutonFlecheNavigation.show()
+        self.frameFleche.show()
+        self.masquerElementGraphique()
+        equipement = self.consultationEquipementUI.equipement
+        if self.ajoutBonDeTravailEquipement is None:
+            # Creation du widget s'il n'existe pas
+            self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
+            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement)
+            self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
+            self.listeElementParDefaut.append(self.ajoutBonDeTravailEquipement)
+            self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravailEquipement)
+        else:
+            # Affichage du widget s'il existe deja
+            self.ajoutBonDeTravailEquipement.show()
+            self.ajoutBonDeTravailEquipementUI.equipementRecherche = equipement
+            self.ajoutBonDeTravailEquipement.remplirEquipement()
+        self.listeNavigation.append(self.ajoutBonDeTravailEquipement)
+
+    def consulterBonDeTravail(self):
+        '''
+            Affichage du widget permettant de voir le bon de travail selectionne
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        #TODO passer les informations a la nouvelle fenetre
+        # On masque les autres elements
+        self.BoutonFlecheNavigation.show()
+        self.frameFleche.show()
+        self.masquerElementGraphique()
+        equipement = self.consultationEquipementUI.equipement
+        if self.ajoutBonDeTravailEquipement is None:
+            # Creation du widget s'il n'existe pas
+            self.consultationBonDeTravail = QtWidgets.QWidget()
+            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail)
+            self.consultationBonDeTravail.setStyleSheet("background: white;")
+            self.listeElementParDefaut.append(self.consultationBonDeTravail)
+            self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
+        else:
+            # Affichage du widget s'il existe deja
+            self.consultationBonDeTravail.show()
+            self.consultationBonDeTravailUI.equipementRecherche = equipement
+            self.consultationBonDeTravail.remplirEquipement()
+        self.listeNavigation.append(self.consultationBonDeTravail)
+
 
     def imprimerInventaire(self):
         pdf = PDF()

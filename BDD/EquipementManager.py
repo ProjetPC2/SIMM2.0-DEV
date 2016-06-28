@@ -83,8 +83,8 @@ class EquipementManager:
 
     def RechercherEquipement(self, regex_dict):
         db = self._getDB()
-        
-        recherchefEqu = Query()
+
+        recherche = Query()
         firstEntry = True
         for key, value in regex_dict.items():
             if (key == "ID"):
