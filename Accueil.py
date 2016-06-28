@@ -9,7 +9,7 @@ from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipe
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
-from Interface.FenetresEnPython.StatistiqueFenetre import Statistique
+from Interface.FenetresEnPython.Statistique import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 
 from Interface.FenetresEnPython.PDF import PDF
