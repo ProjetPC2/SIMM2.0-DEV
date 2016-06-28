@@ -45,7 +45,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
         #TODO : Faire appel a la methode qui sera implementee plus bas pour masquer les differents labels et afficher les champs de saisie
 
-        self.boutonConsultation.clicked.connect()
+        #self.boutonConsultation.clicked.connect()
         #if self.bouton
     def chercherEquipement(self):
         '''
