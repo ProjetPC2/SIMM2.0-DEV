@@ -25,7 +25,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.lineEditID.returnPressed.connect(self.chercherEquipement)
 
         #Creation des differents elements utiles pour la sauvegarde
-        self.equipementManager = EquipementManager('DataBase_Equipement.json')
+        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         self.equipementDictionnaire = None
         self.listeBonDeTravail = list()
@@ -120,7 +120,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
             self.textEditDescIntervention.wordWrapMode()
             #Remplir le temps estime
-            #TODO: Remplir le temps estime associea un BDT
+            #TODO: Remplir le temps estime associe a un BDT
             # self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
@@ -189,6 +189,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.setDisabled(True)
 
     #TODO: Creer une methode nouveauBDT, avec comme seul argument : self
+    #Cette methode fera appel a la methode pour masquer les labels et afficher les champs de saisie ainsi que l'affichage des boutons  appropries
     # Cette methode aura pour but de de vider les champs du BDT ( Description Situation, Description intervention
     # Temps estime et ID bon de travail
 
