@@ -121,7 +121,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
 
         # Masquage des differents labels
         for label in self.listeLabel:
-            self.layoutChampsNonModifiables.addWidget(label)
+            # self.layoutChampsNonModifiables.addWidget(label)
             label.hide()
         self.labelID.hide()
         # Traitement de la partie commentaires
@@ -175,6 +175,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
                 self.listeDonnees.append(etatDeService)
             else:
                 self.listeDonnees.append(widget.toPlainText())
+        print(self.listeDonnees)
 
     def sauvegarderEquipement(self):
         """Methode permettant l'enregristrement de l'equipement dans la BDD"""
@@ -201,6 +202,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
                     for radioBouton in self.listeWidgets[indice].buttons():
                         # if not radioBouton.isChecked():
                             radioBouton.hide()
+                    self.listeLabel[indice].setText(str(text))
+                    self.listeLabel[indice].show()
                 else:
                     # self.listeLabel[indice].setFont(font)
                     self.listeLabel[indice].setText(str(text))

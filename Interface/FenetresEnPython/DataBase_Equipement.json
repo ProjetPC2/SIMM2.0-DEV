@@ -9107,3 +9107,18 @@ _default:
       Salle: ''
     state:
       eid: 505
+  506:
+    CategorieEquipement: Defibrilateur
+    CentreService: Urgences
+    Commentaires: klasdlkasd
+    DateAcquisition: 2000-01-01
+    DateDernierEntretien: 2000-01-01
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    ID: '509'
+    Marque: asda
+    Modele: klads
+    NbBonTravail: 0
+    NumeroSerie: lkas
+    Provenance: ''
+    Salle: ''
