@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>801</width>
-    <height>636</height>
+    <width>1287</width>
+    <height>1269</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -314,7 +314,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      <item>
       <layout class="QVBoxLayout" name="layoutChampsModifiables">
        <item>
-        <widget class="QLabel" name="labelId">
+        <widget class="QLabel" name="labelVide">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -726,6 +726,16 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="commentaire">
+       <property name="text">
+        <string>commentaires</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

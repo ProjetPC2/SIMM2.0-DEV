@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
-        AjoutEquipement.resize(801, 636)
+        AjoutEquipement.resize(1287, 1269)
         AjoutEquipement.setStyleSheet("#MainFrame {\n"
 "\n"
 "background: white;\n"
@@ -205,13 +205,13 @@ class Ui_AjoutEquipement(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.layoutChampsModifiables = QtWidgets.QVBoxLayout()
         self.layoutChampsModifiables.setObjectName("layoutChampsModifiables")
-        self.labelId = QtWidgets.QLabel(AjoutEquipement)
+        self.labelVide = QtWidgets.QLabel(AjoutEquipement)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelId.setFont(font)
-        self.labelId.setText("")
-        self.labelId.setObjectName("labelId")
-        self.layoutChampsModifiables.addWidget(self.labelId)
+        self.labelVide.setFont(font)
+        self.labelVide.setText("")
+        self.labelVide.setObjectName("labelVide")
+        self.layoutChampsModifiables.addWidget(self.labelVide)
         self.comboBoxCategorie = QtWidgets.QComboBox(AjoutEquipement)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -404,6 +404,10 @@ class Ui_AjoutEquipement(object):
         self.textEditCommentaires.setFont(font)
         self.textEditCommentaires.setObjectName("textEditCommentaires")
         self.horizontalLayout_3.addWidget(self.textEditCommentaires)
+        self.commentaire = QtWidgets.QLabel(AjoutEquipement)
+        self.commentaire.setWordWrap(True)
+        self.commentaire.setObjectName("commentaire")
+        self.horizontalLayout_3.addWidget(self.commentaire)
         self.gridLayout.addLayout(self.horizontalLayout_3, 3, 0, 1, 2)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
@@ -491,17 +495,8 @@ class Ui_AjoutEquipement(object):
         self.radioButtonEnFinDeVie.setText(_translate("AjoutEquipement", "En fin de vie"))
         self.radioButtonDesuet.setText(_translate("AjoutEquipement", "Désuet"))
         self.labelTitreCommentaires.setText(_translate("AjoutEquipement", "Commentaires : "))
+        self.commentaire.setText(_translate("AjoutEquipement", "commentaires"))
         self.BoutonValider.setText(_translate("AjoutEquipement", "Valider"))
         self.BoutonModifier.setText(_translate("AjoutEquipement", "Modifier"))
         self.BoutonEnregistrer.setText(_translate("AjoutEquipement", "Enregistrer"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    AjoutEquipement = QtWidgets.QWidget()
-    ui = Ui_AjoutEquipement()
-    ui.setupUi(AjoutEquipement)
-    AjoutEquipement.show()
-    sys.exit(app.exec_())
 
