@@ -69,8 +69,10 @@ class Accueil(Ui_Accueil):
         self.connectionBouton()
 
         self.listeNavigation = list()
-        self.selectionOption()
         self.BoutonFlecheNavigation.clicked.connect(self.naviguer)
+
+        self.boutonSelectionne = None
+
 
     def connectionBouton(self):
         '''
@@ -89,7 +91,8 @@ class Accueil(Ui_Accueil):
         self.BoutonImprimerInventaire.clicked.connect(self.imprimerInventaire)
         self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
 
-        self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
+        self.BoutonSupportTecnique.clicked.connect(self.afficherSupport)
+
 
     def afficherAjoutEquipement(self):
         '''
@@ -100,7 +103,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
-
+        self.selectionnerBouton(self.BoutonAjouterEquipement)
         if self.ajoutEquipement is None:
             # Creation du widget s'il n'existe pas deja
 
@@ -126,6 +129,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonModifierConsulterEquipement)
         if self.consultationEquipement is None:
             # Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
@@ -147,6 +151,7 @@ class Accueil(Ui_Accueil):
         self.listeNavigation.clear()
         self.listeNavigation.append(self.consultationEquipement)
 
+
     def afficherRechercheEquipement(self):
         '''
             Affichage du widget permet la recherche d'un equipement
@@ -156,6 +161,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonRechercherEquipement)
         if self.rechercheEquipement is None:
             # Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget()
@@ -238,6 +244,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonAjouterBonTravail)
         if self.ajoutBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
@@ -267,6 +274,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonRechercherBonTravail)
         if self.rechercheBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.rechercheBonDeTravail = QtWidgets.QWidget()
@@ -291,7 +299,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
-
+        self.selectionnerBouton(self.BoutonStatistiques)
         if self.statistique is None:
             # Creation du widget Statistique s'il n'existe pas
             self.statistique = QtWidgets.QWidget()
@@ -315,6 +323,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonSupportTecnique)
         if self.support is None:
             # Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
@@ -461,9 +470,18 @@ class Accueil(Ui_Accueil):
 
 
 
-    def selectionOption(self):
-        # self.BoutonAjouterEquipement.setStyleSheet("background-color: white")
-        pass
+    def selectionnerBouton(self, bouton):
+        if self.boutonSelectionne is not None:
+            self.boutonSelectionne.setStyleSheet("QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{ background-color: #cccccc; }")
+        self.boutonSelectionne = bouton
+        self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
 
 
 class SIMM():

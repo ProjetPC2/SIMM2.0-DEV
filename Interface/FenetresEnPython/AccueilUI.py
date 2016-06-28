@@ -233,15 +233,15 @@ class Ui_Accueil(object):
         self.layoutBouton.addItem(spacerItem10)
         self.layoutBoutonSupport = QtWidgets.QVBoxLayout()
         self.layoutBoutonSupport.setObjectName("layoutBoutonSupport")
-        self.BoutonSuportTecnique = QtWidgets.QPushButton(self.centralwidget)
-        self.BoutonSuportTecnique.setMaximumSize(QtCore.QSize(350, 16777215))
+        self.BoutonSupportTecnique = QtWidgets.QPushButton(self.centralwidget)
+        self.BoutonSupportTecnique.setMaximumSize(QtCore.QSize(350, 16777215))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
-        self.BoutonSuportTecnique.setFont(font)
-        self.BoutonSuportTecnique.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.BoutonSuportTecnique.setStyleSheet("QPushButton{ padding : 20px; border-radius: 8px; background-color: transparent ;color : white;}\n"
+        self.BoutonSupportTecnique.setFont(font)
+        self.BoutonSupportTecnique.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonSupportTecnique.setStyleSheet("QPushButton{ padding : 20px; border-radius: 8px; background-color: transparent ;color : white;}\n"
 "\n"
 "QPushButton:hover {\n"
 "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);\n"
@@ -251,13 +251,13 @@ class Ui_Accueil(object):
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("Images/PC2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonSuportTecnique.setIcon(icon8)
-        self.BoutonSuportTecnique.setIconSize(QtCore.QSize(40, 40))
-        self.BoutonSuportTecnique.setAutoDefault(False)
-        self.BoutonSuportTecnique.setDefault(False)
-        self.BoutonSuportTecnique.setFlat(False)
-        self.BoutonSuportTecnique.setObjectName("BoutonSuportTecnique")
-        self.layoutBoutonSupport.addWidget(self.BoutonSuportTecnique)
+        self.BoutonSupportTecnique.setIcon(icon8)
+        self.BoutonSupportTecnique.setIconSize(QtCore.QSize(40, 40))
+        self.BoutonSupportTecnique.setAutoDefault(False)
+        self.BoutonSupportTecnique.setDefault(False)
+        self.BoutonSupportTecnique.setFlat(False)
+        self.BoutonSupportTecnique.setObjectName("BoutonSupportTecnique")
+        self.layoutBoutonSupport.addWidget(self.BoutonSupportTecnique)
         self.layoutBouton.addLayout(self.layoutBoutonSupport)
         spacerItem11 = QtWidgets.QSpacerItem(20, 60, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.layoutBouton.addItem(spacerItem11)
@@ -359,17 +359,9 @@ class Ui_Accueil(object):
 "l\'inventaire"))
         self.BoutonStatistiques.setText(_translate("Accueil", "Voir les\n"
 "statistiques"))
-        self.BoutonSuportTecnique.setText(_translate("Accueil", "Support\n"
+        self.BoutonSupportTecnique.setText(_translate("Accueil", "Support\n"
 "technique"))
         self.LabelSIMM20HopitalSaintMichel.setText(_translate("Accueil", "S.I.M.M. 2.0\n"
 "Hôpital Saint-Michel "))
         self.LabelDefinitionSIMM.setText(_translate("Accueil", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainFrame = QtWidgets.QMainWindow()
-    ui = Ui_Accueil()
-    ui.setupUi(MainFrame)
-    MainFrame.show()
-    sys.exit(app.exec_())
