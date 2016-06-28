@@ -5,8 +5,10 @@
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
+import datetime
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.BonTravailManager import BonTravailManager
@@ -21,7 +23,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
     def ajoutRechercheBonDeTravail(self):
         # Recuperation des differents attributs
-        self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
         # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
@@ -55,11 +57,13 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         fichierConf.close()
 
         #Creation des differents colonnes pour le tableau de resultat
-        self.listeCleDonnees = list(["ID", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "ID-BDT", "DescriptionSituation"])
+        self.listeCleDonnees = list(["ID", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
 
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.resizeColumnsToContents()
+        self.tableResultats.setRowCount(0)
+        # self.tableResultats.setColumnCount(0)
 
         self.dictionnaireRecherche = dict()
         self.dictionnaireRechercheBDT = dict()
@@ -73,6 +77,69 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.calendrierAvant.dateChanged.connect(self.rechercheDateAvant)
         self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituation)
         self.calendrierApres.dateChanged.connect(self.rechercheDateApres)
+
+        self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
+        self.colonneClique = None
+        self.nombreClique = 0
+        # Empeche la modification de la table
+        self.tableResultats.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers);
+        self.tableResultats.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.tableResultats.cellDoubleClicked.connect(self.choisirBonDeTravail)
+        self.listeResultat = list()
+        self.modificationEquipement = None
+        self.bonDeTravailSelectionne = None
+
+    def choisirBonDeTravail(self, ligne, colonne):
+        #TODO A remanier
+        print("ligne", ligne)
+        print("colonne", colonne)
+        print(self.tableResultats.item(ligne, 0).data(0))
+        self.bonDeTravailSelectionne = dict()
+        indice = 0
+        for cle in self.listeCleDonnees:
+            if (cle == "ID-EQ" or cle == "ID-BDT"):
+                self.bonDeTravailSelectionne[cle] = int(self.tableResultats.item(ligne, indice).data(0))
+            elif cle == "Date" :
+                self.bonDeTravailSelectionne[cle] = datetime.datetime.strptime(
+                    self.tableResultats.item(ligne, indice).data(0), '%Y-%m-%d')
+            elif cle == "TempsEstime":
+                self.bonDeTravailSelectionne[cle] = datetime.time.strptime(
+                    self.tableResultats.item(ligne, indice).data(0), '%H:%M')
+            else:
+                self.bonDeTravailSelectionne[cle] = self.tableResultats.item(ligne, indice).data(0)
+            indice += 1
+        # self.modificationEquipement = QtWidgets.QWidget()
+        # self.modificationEquipementUI = ModificationEquipementUI()
+        # self.modificationEquipementUI.setupUi(self.modificationEquipement, equipement)
+        # # self.modificationEquipement.setStyleSheet("background: white;")
+        print(self.bonDeTravailSelectionne)
+        # self.hide()
+
+    def trier(self, numeroColonne):
+        """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
+        Un clic fait un tri croisssant
+        Un second clic fera un tri decroissant"""
+        print(numeroColonne)
+        if numeroColonne == self.colonneClique:
+            if self.nombreClique % 2 == 0:
+                self.tableResultats.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            else:
+                self.tableResultats.sortByColumn(numeroColonne, Qt.DescendingOrder)
+            self.nombreClique += 1
+        else:
+            self.nombreClique = 1
+            self.tableResultats.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            self.colonneClique = numeroColonne
+
+    def rechercheCategorieEquipement(self):
+        """Methode permettant la recherche par rapport au champ de recherche
+        de categorie d'equipement"""
+        if (self.comboBoxCategorieEquipement.currentText() != ""):
+            self.dictionnaireRecherche["CategorieEquipement"] = self.comboBoxCategorieEquipement.currentText()
+
+        else:
+            self.dictionnaireRecherche.pop("CategorieEquipement")
+        self.remplirTableau()
 
     def rechercheDateAvant(self):
         '''
@@ -180,6 +247,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             #Recherche parmi les coordonnes
             if (any(self.dictionnaireRechercheBDT)):
                 liste = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRechercheBDT)
+                print(liste)
                 listeDonnees = list()
                 dictionnaireEquipementAssocie = dict()
                 indice = 0

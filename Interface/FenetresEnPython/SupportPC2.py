@@ -8,12 +8,21 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.SupportPC2UI import Ui_SupportPC2
 
 
 class SupportPC2(Ui_SupportPC2):
     def __init__(self, widget):
         self.setupUi(widget)
+        self.ajoutSupport()
+
+    def ajoutSupport(self):
+        self.boutonRinitialiserStatistiques.clicked.connect(self.recalculerStatistique)
+
+    def recalculerStatistique(self):
+        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+        self.equipementManager._recalculStats()
 
 if __name__ == "__main__":
     import sys

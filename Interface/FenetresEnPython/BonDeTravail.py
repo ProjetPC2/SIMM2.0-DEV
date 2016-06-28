@@ -229,7 +229,6 @@ class BonDeTravail(Ui_BonDeTravail):
         self.textEditDescIntervention.hide()
         self.textEditDescSituation.hide()
 
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

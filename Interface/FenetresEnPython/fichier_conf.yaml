@@ -10,73 +10,25 @@ BDT_ChampAjoutPermis:
 - null
 BDT_ChampFormatPrecis:
 - Date
+- TempsEstime
 CategorieEquipement:
-- Defibrilateur
-- Incubateur
-- Concentrateur d'oxygene
-- Negatoscope (moniteur de radiographie)
-- Four e orthese
-- Sterilisateur e vapeur
-- Moniteur physiologique
-- Autre
-- Nebulisateur
-- Centrifugeuse
-- Incubateur neonatal
-- Sonographe (Echographe)
-- Table d'examen
-- Appareil e succion
-- Appareil de radiographie
-- Analyseur CD4 (VIH)
-- UPS
-- Analyseur hematologie
-- Melangeur
-- Analyseur biochimie
-- Ordinateur
-- Refrigerateur
-- Imprimante
-- Table d'instruments
-- Sechoir
-- Tensiometre
-- Saturometre (Oxymetre)
-- Microscope
-- Plaque chauffante
-- Bain chauffant
-- Spectrophotometre
+- ECG
+- IRM
+- Oxymetre
+- Dialyse
+- JEROME
+- JEROME-test
 - Lit
-- Table de chevet
-- Balance
-- Chaise roulante
-- Support e solutes
-- Table de chirurgie
-- Appareil d'electrochirurgie
-- Lampe d'examen
-- Civiere de transport
-- Sterilisateur portable
-- Appareil d'anesthesie
-- Table de soins neonataux
-- Balance pediatrique
-- Toise
-- Thermometre
-- electrocardiographe
-- Autoscope
-- Chaise dentiste
-- Chaise de prelevement
-- Moniteur fetal
+- "St\xE9thoscope"
 CentreService:
-- Urgences
-- Laboratoire
-- Inconnu
-- Radiologie
-- Pediatrie
-- Maternite
-- Readaptation
-- Medecine interne
-- Bloc operatoire
-- Centre Prenatal
-- Archives
-- Clinique externe
-- Don de sang
-- Pharmacie
+- Urgence
+- "Maternit\xE9"
+- "Atelier de g\xE9nie biom\xE9dical"
+- Soins intensifs
+- "P\xE9rinatalit\xE9"
+- "Hop\xEEtal"
+- "\xC9l\xE9mentaire"
+- "Natalit\xE9"
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -101,44 +53,15 @@ EtatService:
 - En maintenance
 - Au rebus
 Provenance:
-- ''
-- SMS
-- I-TECH
-- SCMS
-- UGP
-- CHU Sainte-Justine
-- CDC
-- UNFPA
-- UNICEF
-- Croix-Rouge Haitienne
-- MSPP
-- PNS
-- as
+- CSI
+- POLY
+- CHU Ste-Justine
+- CHU St-Justine
+- Poly
 Salle:
-- ''
-- Observation
-- Lab 1
-- Lab 2
-- SOP
-- Salle sterilisateur
-- Salle de recuperation
-- Salle de travail
-- Salle d'isolation
-- Hospitalisation
-- Salle d'accouchement
-- Salle de consultation
-- Salle d'hospitalisation
-- Acceuil
-- Pansement
-- Vaccination
-- BOX 1
-- Consuling
-- BOX 2
-- BOX 3
-- BOX 4
-- IST
-- BOX 5
-- as
+- A123
+- B518
+- A867
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -148,6 +71,7 @@ champsAcceptes-BDT:
 - DescriptionSituation
 - DescriptionIntervention
 - EtatBDT
+- NomTechnicien
 champsAcceptes-Equipement:
 - CategorieEquipement
 - Marque
@@ -161,4 +85,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 508
+dernierID-Equipement: 4

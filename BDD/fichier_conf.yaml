@@ -19,6 +19,7 @@ CategorieEquipement:
 - JEROME
 - JEROME-test
 - Lit
+- "St\xE9thoscope"
 CentreService:
 - Urgence
 - "Maternit\xE9"
@@ -84,4 +85,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 3
+dernierID-Equipement: 4

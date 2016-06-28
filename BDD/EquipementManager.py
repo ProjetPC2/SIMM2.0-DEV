@@ -31,8 +31,9 @@ import datetime
 import copy
 
 class EquipementManager:
-    def __init__(self, pathname):
-        self._pathname = pathname                               # pathname de la base de données des équipements
+    def __init__(self, pathname_eq, pathname_bdt):
+        self._pathnameEQ = pathname_eq                               # pathname de la base de données des équipements
+        self._pathnameBDT = pathname_bdt
         self.conf_file = 'fichier_conf.yaml'                    # pathname du fichier de configuration
         self.stats_file = 'fichier_stats.yaml'
 
@@ -82,7 +83,7 @@ class EquipementManager:
 
     def RechercherEquipement(self, regex_dict):
         db = self._getDB()
-        
+
         recherche = Query()
         firstEntry = True
         for key, value in regex_dict.items():
@@ -92,13 +93,13 @@ class EquipementManager:
                     queryUser = recherche.ID == value
                     firstEntry = False
                 else:
-                    queryUser = (queryUser) & (recherche[key].matches(value))
+                    queryUser = (queryUser) & (recherche['ID'] == value)
             else:
                 if firstEntry:
-                    queryUser = (recherche[key].matches(value))
+                    queryUser = (recherche[key].search(value))
                     firstEntry = False
                 else:
-                    queryUser = (queryUser) & (recherche[key].matches(value))
+                    queryUser = (queryUser) & (recherche[key].search(value))
         result = db.search(queryUser)
 
         return result
@@ -110,14 +111,28 @@ class EquipementManager:
         Equipement = Query()
         dict_renvoi = {'Reussite': False}
         db = self._getDB()
-        
+        db_BDT = self._getDB_BDT()
+        liste_champ_ajout_BDT = list(conf['BDT_Ajout_Champ_Equipement'])
+
+        dict_modif_BDT = {}
+
         ancien_dict = db.get(Equipement['ID'] == id_modif)
         # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
         if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf, stats):
+            for key, value in dict_modif.items():  # création du dictionnaire update qui permettra la mise à jour des champs dans la bdd des bon de travail
+                if key in liste_champ_ajout_BDT:
+                    dict_modif_BDT[key] = value
             if db.update(dict_modif, Equipement['ID'] == id_modif) != []:
                 dict_renvoi['Reussite'] = True              # modif du dict associé à l'équipement
                 self._miseAJourStats(ancien_dict=ancien_dict, nouveau_dict=dict_modif, stats_dict=stats)
+            if db_BDT.search(Equipement['ID-EQ'] == id_modif) != []:
+                if db_BDT.update(dict_modif_BDT, Equipement['ID-EQ'] == id_modif) != []:
+                    dict_renvoi['Reussite'] = True
+                else:
+                    dict_renvoi['Reussite'] = False
+
         self._ActualiserConfiguration(conf)
+
         return dict_renvoi
 
 
@@ -276,6 +291,61 @@ class EquipementManager:
                 stats_dict['nbEquipementCentreService'][nouveau_dict['CentreService']][nouveau_dict['CategorieEquipement']] += 1
         self._ActualiserStats(stats_dict)
 
+    # Cette fonction parcoure la base de données et recalcule les statistiques en cas de bug du logiciel. On s'assure
+    # d'avoir les statistiques à jour
+    def _recalculStats(self):
+        stats = self._getStats()
+        conf = self._getConf()
+        db = self._getDB()
+        Equipement = Query()
+
+        # recupère les champs possibles pour EtatService
+        list_EtatService = list(conf['EtatService'])
+        # récupère les champs possibles pour EtatConservation
+        list_EtatConservation = list(conf['EtatConservation'])
+        # récupère les champs possibles pour la provenance
+        list_Provenance = list(conf['Provenance'])
+        # récupère les champs possibles pour le centre de service
+        list_CentreService = list(conf['CentreService'])
+        # récupère les champs possibles pour la CategorieEquipement
+        list_CategorieEquipement = list(conf['CategorieEquipement'])
+
+        # Nombre total d'équipements
+        stats['nbEquipement'] = len(db)
+
+        # Nombre d'équipement selon l'état de service
+        for element in list_EtatService:
+            stats['nbEquipementEtatService'][element] = db.count(Equipement['EtatService'] == element)
+
+        # Nombre d'équipement selon l'état de service
+        for element in list_EtatConservation:
+            stats['nbEquipementEtatConservation'][element] = db.count(Equipement['EtatConservation'] == element)
+
+        stats['nbEquipementProvenance'] = dict()
+        stats['nbEquipementCentreService'] = dict()
+
+        # Nombre d'équipement selon la provenance
+        for element in list_Provenance:
+            print((stats['nbEquipementProvenance']))
+            if(stats['nbEquipementProvenance'] is None):
+                stats['nbEquipementProvenance'] = dict()
+            # if element not in stats:  # ajoute la provenance au fichier de stats
+            #     stats['nbEquipementProvenance'][element] = 0
+            stats['nbEquipementProvenance'][element] = db.count(Equipement['Provenance'] == element)
+
+        # Nombre d'équipement de chaque catégorie par centre de service
+        for centre in list_CentreService:
+            if stats['nbEquipementCentreService'] is None:
+                stats['nbEquipementCentreService'] = dict()
+            if centre not in stats['nbEquipementCentreService']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
+                stats['nbEquipementCentreService'][centre] = dict()  # si non, ajout du centre de service
+            for categorie in list_CategorieEquipement:
+                recherche_temp = db.count((Equipement['CentreService'] == centre) &
+                                          (Equipement['CategorieEquipement'] == categorie))
+                if recherche_temp != 0:
+                    stats['nbEquipementCentreService'][centre][categorie] = recherche_temp
+        self._ActualiserStats(stats)
+
 
     def _ActualiserStats(self, stats):
         try:
@@ -310,26 +380,37 @@ class EquipementManager:
 
     def _getDB(self):
         try:
-            if not os.path.exists(self._pathname):
+            if not os.path.exists(self._pathnameEQ):
                 raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
             else:
-                db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
+                db = TinyDB(self._pathnameEQ, storage=YAMLStorage)  # data base des équipements
         except OSError as e:
             print(e)
         
         return db
 
+    def _getDB_BDT(self):
+        try:
+            if not os.path.exists(self._pathnameBDT):
+                raise OSError("Oups nous ne trouvons plus la bdd des bons de travail!")    # erreur si le path n'existe pas
+            else:
+                db = TinyDB(self._pathnameBDT, storage=YAMLStorage)  # data base des équipements
+        except OSError as e:
+            print(e)
+
+        return db
+
 if __name__ == "__main__":#Execution lorsque le fichier est lance
     if True:
         #  TESTS
-        manager = EquipementManager('DataBase_Equipement.json')
+        manager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
 
-        data = {'CategorieEquipement': 'Lit',
-                'Marque': 'Bed-Ultra',
+        data = {'CategorieEquipement': 'Stéthoscope',
+                'Marque': 'Lit de la muerte',
                 'Modele': 'E432',
                 'NumeroSerie': '1134',
                 'Salle': 'A867',
-                'CentreService': 'Natalité',
+                'CentreService': 'Urgence',
                 'DateAcquisition': datetime.date(2008, 7, 12),
                 'DateDernierEntretien': datetime.date(2011, 2, 27),
                 'Provenance': 'Poly',
@@ -350,6 +431,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #               'EtatService': '',
         #               'EtatConservation': ''}
 
+        #dic_request = {'Marque': 'uerte'}
         #print(manager.AjouterEquipement(data))
         #print(manager.SupprimerEquipement('1'))                     # id_supp en int
         #print(manager.RechercherEquipement(dic_request))
@@ -361,6 +443,8 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager._statsNbEquipementEtatConservation())
         #print(manager._statsNbEquipementProvenance())
         #print(manager._statsNbEquipementCentreServiceCategorie())
+
+        manager._recalculStats()
 
 
 

@@ -57,7 +57,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.equipement.ajoutListeMethodes()
 
         # Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.json")
+        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
         self.listeDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -90,39 +90,40 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonValider.clicked.connect(self.verificationEquipement)
 
         # Creation des differents labels pour la verification
-        self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
-        self.marqueLabel = QLabel("Ici marque")
-        self.modeleLabel = QLabel("Ici Modele ")
-        self.numSerieLabel = QLabel("Ici No. de serie ")
-        self.salleLabel = QLabel("Ici Label ")
-        self.centreServiceLabel = QLabel("Ici Centre de service ")
-        self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
-        self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
-        self.provenanceLabel = QLabel()
-        self.etatServiceLabel = QLabel("Ici Etat de service ")
-        self.etatConservationLabel = QLabel("Ici Etat de conservation ")
-        self.commentaire = QLabel("Ici commentaires ")
+        #self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
+        #self.marqueLabel = QLabel("Ici marque")
+        #self.modeleLabel = QLabel("Ici Modele ")
+        #self.numSerieLabel = QLabel("Ici No. de serie ")
+        #self.salleLabel = QLabel("Ici Label ")
+        #self.centreServiceLabel = QLabel("Ici Centre de service ")
+        #self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
+        #self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
+        #self.provenanceLabel = QLabel()
+        #self.etatServiceLabel = QLabel("Ici Etat de service ")
+        #self.etatConservationLabel = QLabel("Ici Etat de conservation ")
+        # self.commentaire = QLabel("Ici commentaires ")
 
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        self.listeLabel.append(self.categorieEquipementLabel)
-        self.listeLabel.append(self.marqueLabel)
-        self.listeLabel.append(self.modeleLabel)
-        self.listeLabel.append(self.numSerieLabel)
-        self.listeLabel.append(self.salleLabel)
-        self.listeLabel.append(self.centreServiceLabel)
-        self.listeLabel.append(self.dateAcquisitionLabel)
-        self.listeLabel.append(self.dateEntretienLabel)
-        self.listeLabel.append(self.provenanceLabel)
-        self.listeLabel.append(self.etatServiceLabel)
-        self.listeLabel.append(self.etatConservationLabel)
+        # self.listeLabel.append(self.labelID)
+        self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelMarque)
+        self.listeLabel.append(self.labelModele)
+        self.listeLabel.append(self.labelNoDeSerie)
+        self.listeLabel.append(self.labelSalle)
+        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelDateDAquisition)
+        self.listeLabel.append(self.labelDateDernierEntretien)
+        self.listeLabel.append(self.labelProvenance)
+        self.listeLabel.append(self.labelEtatDeService)
+        self.listeLabel.append(self.labelEtatDeConservation)
 
         # Masquage des differents labels
         for label in self.listeLabel:
-            self.layoutChamps.addWidget(label)
+            # self.layoutChampsNonModifiables.addWidget(label)
             label.hide()
-
+        self.labelID.hide()
         # Traitement de la partie commentaires
         self.listeLabel.append(self.commentaire)
         self.horizontalLayout_3.addWidget(self.commentaire)
@@ -174,6 +175,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
                 self.listeDonnees.append(etatDeService)
             else:
                 self.listeDonnees.append(widget.toPlainText())
+        print(self.listeDonnees)
 
     def sauvegarderEquipement(self):
         """Methode permettant l'enregristrement de l'equipement dans la BDD"""
@@ -183,12 +185,13 @@ class AjoutEquipement(Ui_AjoutEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        self.equipementManager = EquipementManager('DataBase_Equipement.json')
+        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
 
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement"""
         if (self.verificationChamps()):
+            self.labelID.show()
             self.donnees()
             indice = 0
             font = QtGui.QFont()
@@ -197,15 +200,17 @@ class AjoutEquipement(Ui_AjoutEquipement):
             for text in self.listeDonnees:
                 if type(self.listeWidgets[indice]) is QButtonGroup:
                     for radioBouton in self.listeWidgets[indice].buttons():
-                        if not radioBouton.isChecked():
+                        # if not radioBouton.isChecked():
                             radioBouton.hide()
+                    self.listeLabel[indice].setText(str(text))
+                    self.listeLabel[indice].show()
                 else:
-                    self.listeLabel[indice].setFont(font)
+                    # self.listeLabel[indice].setFont(font)
                     self.listeLabel[indice].setText(str(text))
                     self.listeLabel[indice].show()
                     self.listeWidgets[indice].hide()
                 indice += 1
-            self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
+            self.labelID.setText(str(self.equipementManager._ObtenirProchainID()))
             self.BoutonEnregistrer.show()
             self.BoutonModifier.show()
             self.BoutonValider.hide()
@@ -224,7 +229,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
                 self.listeLabel[indice].hide()
                 self.listeWidgets[indice].show()
             indice += 1
-        self.labelId.setText("")
+        self.labelID.setText("")
         self.BoutonEnregistrer.hide()
         self.BoutonValider.show()
         self.BoutonModifier.hide()

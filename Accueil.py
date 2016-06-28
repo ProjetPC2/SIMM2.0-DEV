@@ -9,7 +9,7 @@ from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipe
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
-from Interface.FenetresEnPython.StatistiqueFenetre import Statistique
+from Interface.FenetresEnPython.Statistique import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 
 from Interface.FenetresEnPython.PDF import PDF
@@ -50,6 +50,9 @@ class Accueil(Ui_Accueil):
         self.consultationEquipement = None
         self.rechercheEquipement = None
         self.modificationEquipement = None
+        self.ajoutBonDeTravailEquipement = None
+        self.consultationBonDeTravail = None
+
         # Partie Bon de Travail
         self.ajoutBonDeTravail = None
         self.rechercheBonDeTravail = None
@@ -66,8 +69,10 @@ class Accueil(Ui_Accueil):
         self.connectionBouton()
 
         self.listeNavigation = list()
-        self.selectionOption()
         self.BoutonFlecheNavigation.clicked.connect(self.naviguer)
+
+        self.boutonSelectionne = None
+
 
     def connectionBouton(self):
         '''
@@ -86,7 +91,8 @@ class Accueil(Ui_Accueil):
         self.BoutonImprimerInventaire.clicked.connect(self.imprimerInventaire)
         self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
 
-        self.BoutonSuportTecnique.clicked.connect(self.afficherSupport)
+        self.BoutonSupportTecnique.clicked.connect(self.afficherSupport)
+
 
     def afficherAjoutEquipement(self):
         '''
@@ -97,7 +103,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
-
+        self.selectionnerBouton(self.BoutonAjouterEquipement)
         if self.ajoutEquipement is None:
             # Creation du widget s'il n'existe pas deja
 
@@ -123,6 +129,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonModifierConsulterEquipement)
         if self.consultationEquipement is None:
             # Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
@@ -132,6 +139,8 @@ class Accueil(Ui_Accueil):
             # connexion de l'action a l'appuye du bouton modification equipement
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
 
+            self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.ajouterBonDeTravailEquipement)
+            self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
             self.listeElementParDefaut.append(self.consultationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.consultationEquipement)
         else:
@@ -142,6 +151,7 @@ class Accueil(Ui_Accueil):
         self.listeNavigation.clear()
         self.listeNavigation.append(self.consultationEquipement)
 
+
     def afficherRechercheEquipement(self):
         '''
             Affichage du widget permet la recherche d'un equipement
@@ -151,6 +161,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonRechercherEquipement)
         if self.rechercheEquipement is None:
             # Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget()
@@ -233,6 +244,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonAjouterBonTravail)
         if self.ajoutBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
@@ -248,6 +260,11 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
 
+    #TODO : Creer une methode ajouterBonDeTravail
+    #Cette methode va masquer les autres elements graphiques du layout principal
+    #Elle va creer un nouveau widget ajouterBonDeTravailEquipement
+
+    #TODO : Creer une methode pour consulter le bon de travail selectionnee
     def afficherRechercheBonDeTravail(self):
         '''
             Affichage du widget permet la recherche d'un bon de travail
@@ -257,6 +274,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonRechercherBonTravail)
         if self.rechercheBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.rechercheBonDeTravail = QtWidgets.QWidget()
@@ -281,7 +299,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
-
+        self.selectionnerBouton(self.BoutonStatistiques)
         if self.statistique is None:
             # Creation du widget Statistique s'il n'existe pas
             self.statistique = QtWidgets.QWidget()
@@ -305,6 +323,7 @@ class Accueil(Ui_Accueil):
         '''
         # On masque les autres elements
         self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonSupportTecnique)
         if self.support is None:
             # Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
@@ -374,6 +393,61 @@ class Accueil(Ui_Accueil):
             self.modificationEquipementUI.remplirEquipement()
         self.listeNavigation.append(self.modificationEquipement)
 
+    def ajouterBonDeTravailEquipement(self):
+        '''
+            Affichage du widget permettant l'ajout d'un bon de travail par rapport a un equipement
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        #TODO passer les informations a la nouvelle fenetre
+        # On masque les autres elements
+        self.BoutonFlecheNavigation.show()
+        self.frameFleche.show()
+        self.masquerElementGraphique()
+        equipement = self.consultationEquipementUI.equipement
+        if self.ajoutBonDeTravailEquipement is None:
+            # Creation du widget s'il n'existe pas
+            self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
+            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement)
+            self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
+            self.listeElementParDefaut.append(self.ajoutBonDeTravailEquipement)
+            self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravailEquipement)
+        else:
+            # Affichage du widget s'il existe deja
+            self.ajoutBonDeTravailEquipement.show()
+            self.ajoutBonDeTravailEquipementUI.equipementRecherche = equipement
+            self.ajoutBonDeTravailEquipement.remplirEquipement()
+        self.listeNavigation.append(self.ajoutBonDeTravailEquipement)
+
+    def consulterBonDeTravail(self):
+        '''
+            Affichage du widget permettant de voir le bon de travail selectionne
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        #TODO passer les informations a la nouvelle fenetre
+        # On masque les autres elements
+        self.BoutonFlecheNavigation.show()
+        self.frameFleche.show()
+        self.masquerElementGraphique()
+        equipement = self.consultationEquipementUI.equipement
+        if self.ajoutBonDeTravailEquipement is None:
+            # Creation du widget s'il n'existe pas
+            self.consultationBonDeTravail = QtWidgets.QWidget()
+            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail)
+            self.consultationBonDeTravail.setStyleSheet("background: white;")
+            self.listeElementParDefaut.append(self.consultationBonDeTravail)
+            self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
+        else:
+            # Affichage du widget s'il existe deja
+            self.consultationBonDeTravail.show()
+            self.consultationBonDeTravailUI.equipementRecherche = equipement
+            self.consultationBonDeTravail.remplirEquipement()
+        self.listeNavigation.append(self.consultationBonDeTravail)
+
+
     def imprimerInventaire(self):
         pdf = PDF()
         # pdf.creationPDF(pdf.fileName[0])
@@ -396,9 +470,18 @@ class Accueil(Ui_Accueil):
 
 
 
-    def selectionOption(self):
-        # self.BoutonAjouterEquipement.setStyleSheet("background-color: white")
-        pass
+    def selectionnerBouton(self, bouton):
+        if self.boutonSelectionne is not None:
+            self.boutonSelectionne.setStyleSheet("QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{ background-color: #cccccc; }")
+        self.boutonSelectionne = bouton
+        self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
 
 
 class SIMM():

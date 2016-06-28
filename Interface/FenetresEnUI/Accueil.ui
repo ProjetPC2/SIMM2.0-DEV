@@ -560,7 +560,7 @@ statistiques</string>
         <item>
          <layout class="QVBoxLayout" name="layoutBoutonSupport">
           <item>
-           <widget class="QPushButton" name="BoutonSuportTecnique">
+           <widget class="QPushButton" name="BoutonSupportTecnique">
             <property name="maximumSize">
              <size>
               <width>350</width>
