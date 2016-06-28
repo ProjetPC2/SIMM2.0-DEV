@@ -12,8 +12,7 @@ class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
         AjoutEquipement.resize(1287, 1269)
-        AjoutEquipement.setStyleSheet("#MainFrame {\n"
-"\n"
+        AjoutEquipement.setStyleSheet("#AjoutEquipement {\n"
 "background: white;\n"
 "}\n"
 "QLineEdit {\n"
@@ -134,6 +133,7 @@ class Ui_AjoutEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_34.setFont(font)
+        self.label_34.setStyleSheet("background: white;")
         self.label_34.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_34.setObjectName("label_34")
         self.layoutTitreLables.addWidget(self.label_34)

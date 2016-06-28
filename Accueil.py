@@ -109,7 +109,7 @@ class Accueil(Ui_Accueil):
 
             self.ajoutEquipement = QtWidgets.QWidget()
             self.ajoutEquipementUI = AjoutEquipement(self.ajoutEquipement)
-            self.ajoutEquipement.setStyleSheet("background: white;")
+            # self.ajoutEquipement.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.ajoutEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutEquipement)
@@ -134,7 +134,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
             self.consultationEquipementUI = ConsultationEquipement(self.consultationEquipement)
-            self.consultationEquipement.setStyleSheet("background: white;")
+            # self.consultationEquipement.setStyleSheet("background: white;")
 
             # connexion de l'action a l'appuye du bouton modification equipement
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
@@ -166,7 +166,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget()
             self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement)
-            self.rechercheEquipement.setStyleSheet("background: white;")
+            # self.rechercheEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.rechercheEquipement)
             self.layoutAffichagePrincipal.addWidget(self.rechercheEquipement)
             self.rechercheEquipementUI.tableResultats.doubleClicked.connect(self.choisirEquipement)
@@ -188,7 +188,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.modificationEquipementRecherche = QtWidgets.QWidget()
             self.modificationEquipementRechercheUI = ModificationEquipement(self.modificationEquipementRecherche, equipement)
-            self.modificationEquipementRecherche.setStyleSheet("background: white;")
+            # self.modificationEquipementRecherche.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.modificationEquipementRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipementRecherche)
@@ -208,7 +208,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.supprimeEquipement = QtWidgets.QWidget()
             self.supprimeEquipementUI = SuppressionEquipement(self.supprimeEquipement)
-            self.supprimeEquipement.setStyleSheet("background: white;")
+            # self.supprimeEquipement.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.supprimeEquipement)
             self.layoutAffichagePrincipal.addWidget(self.supprimeEquipement)
@@ -226,7 +226,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.supprimeBonDeTravail = QtWidgets.QWidget()
             self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
-            self.supprimeBonDeTravail.setStyleSheet("background: white;")
+            # self.supprimeBonDeTravail.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.supprimeBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
@@ -249,7 +249,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
             self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail)
-            self.ajoutBonDeTravail.setStyleSheet("background: white;")
+            # self.ajoutBonDeTravail.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
@@ -279,7 +279,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.rechercheBonDeTravail = QtWidgets.QWidget()
             self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail)
-            self.rechercheBonDeTravail.setStyleSheet("background: white;")
+            # self.rechercheBonDeTravail.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.rechercheBonDeTravail)
@@ -304,7 +304,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget Statistique s'il n'existe pas
             self.statistique = QtWidgets.QWidget()
             statistique = Statistique(self.statistique)
-            self.statistique.setStyleSheet("background: white;")
+            # self.statistique.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.statistique)
             self.layoutAffichagePrincipal.addWidget(self.statistique)
         else:
@@ -328,7 +328,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
             self.supportPC2UI = SupportPC2(self.support)
-            self.support.setStyleSheet("background: white;")
+            # self.support.setStyleSheet("background: white;")
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
             self.listeElementParDefaut.append(self.support)
@@ -383,7 +383,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.modificationEquipement = QtWidgets.QWidget()
             self.modificationEquipementUI = ModificationEquipement(self.modificationEquipement, equipement)
-            self.modificationEquipement.setStyleSheet("background: white;")
+            # self.modificationEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.modificationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipement)
         else:
@@ -410,7 +410,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
             self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement)
-            self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
+            # self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.ajoutBonDeTravailEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravailEquipement)
         else:
@@ -437,7 +437,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.consultationBonDeTravail = QtWidgets.QWidget()
             self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail)
-            self.consultationBonDeTravail.setStyleSheet("background: white;")
+            # self.consultationBonDeTravail.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.consultationBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
         else:

@@ -14,8 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#MainFrame {
-
+   <string notr="true">#AjoutEquipement {
 background: white;
 }
 QLineEdit {
@@ -163,6 +162,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string>ID : </string>

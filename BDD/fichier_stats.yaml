@@ -1,12 +1,16 @@
 nbEquipement: 4
 nbEquipementCentreService:
-  "Maternit\xE9":
-    ECG: 0
+  "Atelier de g\xE9nie biom\xE9dical": {}
+  "Hop\xEEtal": {}
+  "Maternit\xE9": {}
   "Natalit\xE9":
     Lit: 1
+  "P\xE9rinatalit\xE9": {}
+  Soins intensifs: {}
   Urgence:
     ECG: 1
     "St\xE9thoscope": 2
+  "\xC9l\xE9mentaire": {}
 nbEquipementEtatConservation:
   Acceptable: 1
   Desuet: 0
