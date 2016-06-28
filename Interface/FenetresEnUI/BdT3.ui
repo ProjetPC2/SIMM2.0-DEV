@@ -174,22 +174,6 @@ background:rgb(247,247,247)
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="1" column="3">
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Maximum</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>400</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
          <item row="1" column="2">
           <widget class="QPushButton" name="boutonActualiser">
            <property name="maximumSize">
@@ -215,6 +199,22 @@ background:rgb(247,247,247)
             </size>
            </property>
           </widget>
+         </item>
+         <item row="1" column="3">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Maximum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>200</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item row="1" column="0">
           <widget class="QLineEdit" name="lineEditID">
@@ -244,6 +244,33 @@ border-radius: 4px;
 background:rgb(247,247,247);
 }
 </string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QPushButton" name="boutonConsultation">
+           <property name="maximumSize">
+            <size>
+             <width>500</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Consultation d'un bon de travail</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>16</height>
+            </size>
            </property>
           </widget>
          </item>
