@@ -5,7 +5,7 @@
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
-
+import datetime
 from PyQt5 import QtWidgets
 
 from BDD.BonTravailManager import BonTravailManager
@@ -14,9 +14,28 @@ from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
 
 
 class BonDeTravail(Ui_BonDeTravail):
-    def __init__(self, widget):
+    def __init__(self, widget, consulterBDT = None, ajouterID = None):
         self.setupUi(widget)
         self.ajoutBonDeTravail()
+        self.boutonConsultation.hide()
+        self.boutonAjoutBDT.setDisabled(True)
+        self.boutonSauvegarde.hide()
+        self.boutonFlecheDoubleDroite.hide()
+        self.boutonFlecheDroite.hide()
+        self.boutonFlecheGauche.hide()
+        self.boutonFlecheDoubleGauche.hide()
+        self.dic_request = dict()
+        if(consulterBDT is not None):
+            self.lineEditID.setText(consulterBDT["ID-EQ"])
+            self.chercherEquipement()
+            self.indiceBonDeTravail = consulterBDT["ID-BDT"] - 1
+            self.chargerBonTravail()
+            self.ajoutBonDeTravail()
+        if(ajouterID is not None):
+            self.lineEditID.setText(ajouterID)
+            self.chercherEquipement()
+            self.nouveauBondeTravail()
+
 
     def ajoutBonDeTravail(self):
 
@@ -31,6 +50,24 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeBonDeTravail = list()
         self.indiceBonDeTravail = 0
 
+        self.listeLabelCache = list()
+        self.listeLabelCache.append(self.labelCacheNomTech)
+        self.listeLabelCache.append(self.labelCacheDate)
+        self.listeLabelCache.append(self.labelCacheTemps)
+        self.listeLabelCache.append(self.labelCacheDescSit)
+        self.listeLabelCache.append(self.labelCacheDescInt)
+
+        for label in self.listeLabelCache:
+            label.hide()
+
+        self.listeWidget = list()
+        self.listeWidget.append(self.textEditDescIntervention)
+        self.listeWidget.append(self.textEditDescSituation)
+        self.listeWidget.append(self.timeEditTempsEstime)
+        self.listeWidget.append(self.labelEcritureBonTravail)
+        self.listeWidget.append(self.dateEdit)
+        # self.listeWidget.append(self.comboBoxNomTech)
+
         #Connexion des differents boutons
         self.boutonSauvegarde.clicked.connect(self.sauvegarderBonDeTravail)
         self.boutonFlecheGauche.clicked.connect(self.bonTravailPrecedent)
@@ -39,13 +76,12 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
         self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
 
-        #TODO : Connexion du bouton d'actualisation au clique pour lancer la recherche
         self.boutonActualiser.clicked.connect(self.chercherEquipement)
         #TODO : Connexion du bouton AjoutBDT avec une methode a creer nouveauBDT
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
         #TODO : Faire appel a la methode qui sera implementee plus bas pour masquer les differents labels et afficher les champs de saisie
 
-        self.boutonConsultation.clicked.connect(self.masqueLabelCache)
+        self.boutonConsultation.clicked.connect(self.consulterBonDeTravail)
     def chercherEquipement(self):
         '''
             Recuperation de l'equipement associe a l'ID dans le cas ou il existe
@@ -55,10 +91,10 @@ class BonDeTravail(Ui_BonDeTravail):
             :return:
         '''
         #On fait la requete a la BDD
+        self.boutonConsultation.hide()
         print("recherche equipement")
-        dic_request = dict()
-        dic_request['ID'] = self.lineEditID.text()
-        listeTrouve = self.equipementManager.RechercherEquipement(dic_request)
+        self.dic_request['ID'] = self.lineEditID.text()
+        listeTrouve = self.equipementManager.RechercherEquipement(self.dic_request)
         #On efface les bons de travail deja affiche
         self.listeBonDeTravail.clear()
         if(any(listeTrouve)):
@@ -73,6 +109,11 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
             self.chargerBonTravail()
+            self.boutonAjoutBDT.setDisabled(False)
+            self.boutonFlecheDoubleDroite.show()
+            self.boutonFlecheDroite.show()
+            self.boutonFlecheGauche.show()
+            self.boutonFlecheDoubleGauche.show()
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
@@ -81,7 +122,11 @@ class BonDeTravail(Ui_BonDeTravail):
             self.labelEcritureMarque.setText("")
             self.labelEcritureSalle.setText("")
             self.labelEcritureModele.setText("")
-
+            self.boutonAjoutBDT.setDisabled(True)
+            self.boutonFlecheDoubleDroite.hide()
+            self.boutonFlecheDroite.hide()
+            self.boutonFlecheGauche.hide()
+            self.boutonFlecheDoubleGauche.hide()
 
     def sauvegarderBonDeTravail(self):
         '''
@@ -95,16 +140,26 @@ class BonDeTravail(Ui_BonDeTravail):
         if(self.equipementDictionnaire is not None):
             dictionnaireDonnees = dict()
             dictionnaireDonnees["Date"] = self.dateEdit.date().toPyDate()
-            dictionnaireDonnees["TempsEstime"] = str(self.timeEditTempsEstime.time().toPyTime())
+            dictionnaireDonnees["TempsEstime"] = (self.timeEditTempsEstime.time().toPyTime())
             dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
             dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
+            dictionnaireDonnees["NomTechnicien"] = self.comboBoxNomTech.currentText()
             if(self.comboBoxOuvertFerme.currentText() != "Ouvert"):
                 dictionnaireDonnees["EtatBDT"] = "Ferme"
             else:
-                self.comboBoxOuvertFerme.currentText()
+                dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
             if(any(self.equipementDictionnaire)):
                 #On ajoute le bon de travail a un equipement existant
-                self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees)
+                dicRetour = (self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees))
+                print(dicRetour)
+                if dicRetour["Reussite"]:
+                    print("Reussi")
+                    idBDT = self.bonDeTravailManager._ObtenirProchainIDdeBDT(self.dic_request["ID"])
+                    dictionnaireDonnees["ID-BDT"] = idBDT
+                    self.listeBonDeTravail.append(dictionnaireDonnees)
+
+
+            self.confirmation()
 
     def chargerBonTravail(self):
         '''
@@ -122,18 +177,27 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.wordWrapMode()
             #Remplir le temps estime
             #TODO: Remplir le temps estime associe a un BDT
-            # self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
+            if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
+                self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
             idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
             self.labelEcritureBonTravail.setText(idBDT)
+            #inutile
+            # self.labelCacheDate.setText(str(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"]))
+            # self.labelCacheDescInt.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
+            # self.labelCacheDescInt.wordWrap()
+            # self.labelCacheDescSit.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
+            # self.labelCacheDescSit.wordWrap()
+            # self.labelCacheTemps.setText(str(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"]))
+            # self.labelCacheNomTech.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["NomTechnicien"])
 
     #TODO : creer une methode similaire a chargerBonDeTravail qui va s'occuper de mettre les bonnes informations dans les labels "Ce que j'ai ecrit"
     def remplirBonDeTravail(self):
 
         self.labelCacheNomTech.setText(self.comboBoxNomTech.currentText())
-        self.labelCacheDate.setText(self.dateEdit.date())
-        self.labelCacheTemps.setText(self.timeEditTempsEstime.time())
+        self.labelCacheDate.setText(str(self.dateEdit.date().toPyDate()))
+        self.labelCacheTemps.setText(str(self.timeEditTempsEstime.time().toPyTime()))
         self.labelCacheDescSit.setText(self.textEditDescSituation.toPlainText())
         self.labelCacheDescInt.setText(self.textEditDescIntervention.toPlainText())
 
@@ -195,30 +259,70 @@ class BonDeTravail(Ui_BonDeTravail):
     # Temps estime et ID bon de travail
 
     def nouveauBondeTravail(self):
-        self.textEditDescIntervention.clear()
-        self.textEditDescSituation.clear()
-        self.timeEditTempsEstime.clear()
-        self.labelEcritureBonTravail.clear()
-        self.dateEdit.clear()
-
+        # self.textEditDescIntervention.clear()
+        # self.textEditDescIntervention.show()
+        # self.textEditDescSituation.clear()
+        # self.timeEditTempsEstime.clear()
+        # self.labelEcritureBonTravail.clear()
+        # self.dateEdit.clear()
+        # self.comboBoxNomTech.setCurrentText()
+        for widget in self.listeWidget:
+            widget.show()
+            widget.clear()
+        self.comboBoxOuvertFerme.setDisabled(False)
+        self.comboBoxNomTech.show()
+        self.boutonAjoutBDT.hide()
         self.boutonFlecheDoubleDroite.hide()
         self.boutonFlecheDroite.hide()
         self.boutonFlecheGauche.hide()
         self.boutonFlecheDoubleGauche.hide()
+        self.boutonConsultation.show()
+        if(any(self.listeBonDeTravail)):
+            self.boutonSauvegarde.show()
+
+        for label in self.listeLabelCache:
+            label.hide()
+
+
+    def consulterBonDeTravail(self):
+        self.comboBoxNomTech.show()
+        self.boutonAjoutBDT.hide()
+        self.boutonFlecheDoubleDroite.show()
+        self.boutonFlecheDroite.show()
+        self.boutonFlecheGauche.show()
+        self.boutonFlecheDoubleGauche.show()
+        self.boutonConsultation.show()
+        self.boutonSauvegarde.show()
+        self.boutonAjoutBDT.show()
         self.boutonConsultation.hide()
+        self.comboBoxOuvertFerme.setDisabled(False)
+        for label in self.listeLabelCache:
+            label.hide()
 
-    #TODO : Creer une methode qui masque les differents labels "Ce que j'ai ecrit" et qui affiche les champs de saisie correspondant
-#df
-    def masqueLabelCache(self):
+        self.chargerBonTravail()
 
-        self.labelCacheDate.hide()
-        self.labelCacheNomTech.hide()
-        self.labelCacheTemps.hide()
+    def confirmation(self):
+        self.boutonConsultation.hide()
+        self.textEditDescIntervention.hide()
+        self.textEditDescSituation.hide()
+        self.timeEditTempsEstime.hide()
         self.labelCacheDescInt.hide()
-        self.labelCacheDescSit.hide()
+        self.dateEdit.hide()
+        self.comboBoxNomTech.hide()
 
         self.boutonSauvegarde.hide()
         self.boutonAjoutBDT.hide()
+        self.boutonFlecheDoubleDroite.hide()
+        self.boutonFlecheDroite.hide()
+        self.boutonFlecheGauche.hide()
+        self.boutonFlecheDoubleGauche.hide()
+        self.comboBoxOuvertFerme.setDisabled(True)
+        for label in self.listeLabelCache:
+            label.show()
+        self.remplirBonDeTravail()
+        if(any(self.listeBonDeTravail)):
+            self.boutonConsultation.show()
+        self.boutonAjoutBDT.show()
 
 
     #TODO : Creer une methode qui affiche les differents labels et qui masque les champs de saisie correspondant
@@ -231,6 +335,22 @@ class BonDeTravail(Ui_BonDeTravail):
         self.textEditDescIntervention.hide()
         self.textEditDescSituation.hide()
 
+    def chargerEquipement(self):
+        self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
+        self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
+        self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
+        self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
+        self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
+        self.lineEditID.setText(self.equipementDictionnaire["ID"])
+        self.chargerBonTravail()
+        self.nouveauBondeTravail()
+
+    def consulterBonTravailSpecifique(self, dict):
+        self.lineEditID.setText(dict["ID-EQ"])
+        self.chercherEquipement()
+        self.indiceBonDeTravail = dict["ID-BDT"] - 1
+        self.chargerBonTravail()
+        self.consulterBonDeTravail()
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

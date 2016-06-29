@@ -11,7 +11,7 @@ _default:
       ID: '1'
       Marque: Electro-ECG
       Modele: E432
-      NbBonTravail: 6
+      NbBonTravail: 18
       NumeroSerie: '1234'
       Provenance: Poly
       Salle: A867

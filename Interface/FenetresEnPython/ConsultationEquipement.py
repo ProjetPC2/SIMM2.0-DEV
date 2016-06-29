@@ -14,6 +14,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
 
     def ajoutConsultationEquipement(self):
         #Creation de la liste pour manipuler les labels
+        self.listeBonDeTravail = list()
         self.listeLabel = list()
         self.listeLabel.append(self.labelCategorie)
         self.listeLabel.append(self.labelMarque)
@@ -103,19 +104,18 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         dictionnaireBDTRecherche = dict()
         #TODO : verifier que l'ID-EQ recupere bien que cet ID
         dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
-        listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
+        self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
         self.comboBoxBons.clear()
-        if(any(listeBonDeTravail)):
+        if(any(self.listeBonDeTravail)):
             #Dans le cas ou on a trouve des bons de travail, on les affiche
             self.boutonConsulterBon.setEnabled(True)
             icon2 = QtGui.QIcon()
             icon2.addPixmap(
                 QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png"),
                 QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            for bdt in listeBonDeTravail:
+            for bdt in self.listeBonDeTravail:
                 affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
                 self.comboBoxBons.addItem(icon2, affichage)
-
 
 if __name__ == "__main__":
     import sys
