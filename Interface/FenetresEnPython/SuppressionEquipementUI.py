@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'SuppressionÉquipement2.ui'
+# Form implementation generated from reading ui file 'SuppressionEquipement.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SuppressionEquipement(object):
     def setupUi(self, SuppressionEquipement):
         SuppressionEquipement.setObjectName("SuppressionEquipement")
-        SuppressionEquipement.resize(1420, 1078)
+        SuppressionEquipement.resize(719, 628)
         SuppressionEquipement.setStyleSheet("#MainFrame {\n"
 "\n"
 "background: white;\n"
@@ -129,7 +129,9 @@ class Ui_SuppressionEquipement(object):
         self.titreLayout.addWidget(self.labelTitreConsultationEquipement)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.titreLayout.addItem(spacerItem)
-        self.gridLayout.addLayout(self.titreLayout, 0, 0, 1, 4)
+        self.gridLayout.addLayout(self.titreLayout, 0, 0, 1, 5)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 54, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addItem(spacerItem1, 1, 2, 1, 1)
         self.idLayout = QtWidgets.QHBoxLayout()
         self.idLayout.setObjectName("idLayout")
         self.labelId = QtWidgets.QLabel(SuppressionEquipement)
@@ -144,7 +146,7 @@ class Ui_SuppressionEquipement(object):
         self.lineEditId = QtWidgets.QLineEdit(SuppressionEquipement)
         self.lineEditId.setObjectName("lineEditId")
         self.idLayout.addWidget(self.lineEditId)
-        self.gridLayout.addLayout(self.idLayout, 1, 0, 1, 3)
+        self.gridLayout.addLayout(self.idLayout, 2, 0, 1, 4)
         self.buttonsLayout = QtWidgets.QHBoxLayout()
         self.buttonsLayout.setObjectName("buttonsLayout")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
@@ -164,8 +166,8 @@ class Ui_SuppressionEquipement(object):
         self.boutonAfficherEquipement.setObjectName("boutonAfficherEquipement")
         self.verticalLayout_3.addWidget(self.boutonAfficherEquipement)
         self.buttonsLayout.addLayout(self.verticalLayout_3)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.buttonsLayout.addItem(spacerItem1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.buttonsLayout.addItem(spacerItem2)
         self.boutonSupprimerEquipement = QtWidgets.QPushButton(SuppressionEquipement)
         font = QtGui.QFont()
         font.setPointSize(-1)
@@ -179,15 +181,15 @@ class Ui_SuppressionEquipement(object):
         self.boutonSupprimerEquipement.setIconSize(QtCore.QSize(42, 42))
         self.boutonSupprimerEquipement.setObjectName("boutonSupprimerEquipement")
         self.buttonsLayout.addWidget(self.boutonSupprimerEquipement)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.buttonsLayout.addItem(spacerItem2)
         spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.buttonsLayout.addItem(spacerItem3)
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.buttonsLayout.addItem(spacerItem4)
         spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.buttonsLayout.addItem(spacerItem5)
-        self.gridLayout.addLayout(self.buttonsLayout, 1, 3, 1, 1)
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.buttonsLayout.addItem(spacerItem6)
+        self.gridLayout.addLayout(self.buttonsLayout, 2, 4, 1, 1)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.labelTitreCategorie = QtWidgets.QLabel(SuppressionEquipement)
@@ -267,7 +269,7 @@ class Ui_SuppressionEquipement(object):
         self.labelTitreEtatDeConservation.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreEtatDeConservation.setObjectName("labelTitreEtatDeConservation")
         self.verticalLayout.addWidget(self.labelTitreEtatDeConservation)
-        self.gridLayout.addLayout(self.verticalLayout, 2, 0, 1, 2)
+        self.gridLayout.addLayout(self.verticalLayout, 3, 0, 1, 2)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.labelCategorie = QtWidgets.QLabel(SuppressionEquipement)
@@ -347,7 +349,7 @@ class Ui_SuppressionEquipement(object):
         self.labelEtatDeConservation.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelEtatDeConservation.setObjectName("labelEtatDeConservation")
         self.verticalLayout_2.addWidget(self.labelEtatDeConservation)
-        self.gridLayout.addLayout(self.verticalLayout_2, 2, 2, 1, 2)
+        self.gridLayout.addLayout(self.verticalLayout_2, 3, 2, 1, 3)
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.labelTitreCommentaires = QtWidgets.QLabel(SuppressionEquipement)
@@ -357,7 +359,7 @@ class Ui_SuppressionEquipement(object):
         self.labelTitreCommentaires.setAlignment(QtCore.Qt.AlignCenter)
         self.labelTitreCommentaires.setObjectName("labelTitreCommentaires")
         self.horizontalLayout_7.addWidget(self.labelTitreCommentaires, 0, QtCore.Qt.AlignRight)
-        self.gridLayout.addLayout(self.horizontalLayout_7, 3, 0, 1, 1)
+        self.gridLayout.addLayout(self.horizontalLayout_7, 4, 0, 1, 1)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.labelCommentaires = QtWidgets.QLabel(SuppressionEquipement)
@@ -367,7 +369,7 @@ class Ui_SuppressionEquipement(object):
         self.labelCommentaires.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelCommentaires.setObjectName("labelCommentaires")
         self.horizontalLayout_5.addWidget(self.labelCommentaires)
-        self.gridLayout.addLayout(self.horizontalLayout_5, 3, 1, 1, 3)
+        self.gridLayout.addLayout(self.horizontalLayout_5, 4, 1, 1, 4)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.labelTitreBons = QtWidgets.QLabel(SuppressionEquipement)
@@ -377,7 +379,7 @@ class Ui_SuppressionEquipement(object):
         self.labelTitreBons.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreBons.setObjectName("labelTitreBons")
         self.horizontalLayout_8.addWidget(self.labelTitreBons)
-        self.gridLayout.addLayout(self.horizontalLayout_8, 4, 0, 1, 1)
+        self.gridLayout.addLayout(self.horizontalLayout_8, 5, 0, 1, 1)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.comboBoxBons = QtWidgets.QComboBox(SuppressionEquipement)
@@ -400,9 +402,11 @@ class Ui_SuppressionEquipement(object):
         self.boutonConsulterBon.setIcon(icon3)
         self.boutonConsulterBon.setObjectName("boutonConsulterBon")
         self.horizontalLayout_6.addWidget(self.boutonConsulterBon)
-        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem6)
-        self.gridLayout.addLayout(self.horizontalLayout_6, 4, 1, 1, 3)
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem7)
+        self.gridLayout.addLayout(self.horizontalLayout_6, 5, 1, 1, 4)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 54, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addItem(spacerItem8, 6, 3, 1, 2)
 
         self.retranslateUi(SuppressionEquipement)
         QtCore.QMetaObject.connectSlotsByName(SuppressionEquipement)
@@ -447,11 +451,13 @@ class Ui_SuppressionEquipement(object):
         self.comboBoxBons.setItemText(2, _translate("SuppressionEquipement", "Bon 2016-05-12"))
         self.boutonConsulterBon.setText(_translate("SuppressionEquipement", "Consulter le Bon"))
 
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainFrame = QtWidgets.QWidget()
+    SuppressionEquipement = QtWidgets.QWidget()
     ui = Ui_SuppressionEquipement()
-    ui.setupUi(MainFrame)
-    MainFrame.show()
+    ui.setupUi(SuppressionEquipement)
+    SuppressionEquipement.show()
     sys.exit(app.exec_())
+
