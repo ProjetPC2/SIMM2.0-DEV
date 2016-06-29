@@ -126,6 +126,16 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </widget>
      </item>
      <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>Images/pencil-edit-button_Hatim.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="labelTitreConsultationEquipement">
        <property name="font">
         <font>
