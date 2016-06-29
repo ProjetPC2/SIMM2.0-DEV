@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1420</width>
-    <height>1134</height>
+    <width>936</width>
+    <height>676</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -226,19 +226,6 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       </layout>
      </item>
      <item>
-      <spacer name="horizontalSpacer_8">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
       <widget class="QPushButton" name="boutonModifierEquipement">
        <property name="font">
         <font>
@@ -262,19 +249,6 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         </size>
        </property>
       </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
      <item>
       <widget class="QPushButton" name="boutonAjouterUnBon">
@@ -308,7 +282,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </item>
     </layout>
    </item>
-   <item row="4" column="0" colspan="2">
+   <item row="3" column="0" colspan="2">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item alignment="Qt::AlignRight">
       <widget class="QLabel" name="labelTitreCategorie">
@@ -477,7 +451,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </item>
     </layout>
    </item>
-   <item row="4" column="2" colspan="2">
+   <item row="3" column="2" colspan="2">
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QLabel" name="labelCategorie">
@@ -646,7 +620,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </item>
     </layout>
    </item>
-   <item row="5" column="0">
+   <item row="4" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item alignment="Qt::AlignRight">
       <widget class="QLabel" name="labelTitreCommentaires">
@@ -665,7 +639,7 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </item>
     </layout>
    </item>
-   <item row="5" column="1" colspan="3">
+   <item row="4" column="1" colspan="3">
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
       <widget class="QLabel" name="labelCommentaires">
@@ -688,7 +662,7 @@ nous sommes programmés ainsi.</string>
      </item>
     </layout>
    </item>
-   <item row="6" column="0">
+   <item row="5" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_8">
      <item>
       <widget class="QLabel" name="labelTitreBons">
@@ -707,7 +681,7 @@ nous sommes programmés ainsi.</string>
      </item>
     </layout>
    </item>
-   <item row="6" column="1" colspan="3">
+   <item row="5" column="1" colspan="3">
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item alignment="Qt::AlignLeft">
       <widget class="QComboBox" name="comboBoxBons">
@@ -778,7 +752,7 @@ nous sommes programmés ainsi.</string>
      </item>
     </layout>
    </item>
-   <item row="3" column="3">
+   <item row="6" column="2">
     <spacer name="verticalSpacer_2">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -786,7 +760,7 @@ nous sommes programmés ainsi.</string>
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>88</height>
+       <height>74</height>
       </size>
      </property>
     </spacer>
