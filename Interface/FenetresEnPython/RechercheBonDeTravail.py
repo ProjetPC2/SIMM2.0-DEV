@@ -57,7 +57,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         fichierConf.close()
 
         #Creation des differents colonnes pour le tableau de resultat
-        self.listeCleDonnees = list(["ID", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
+        self.listeCleDonnees = list(["ID-EQ", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
 
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
@@ -226,7 +226,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                     #Recuperation des bons de travail associe a un equipement
                     listeBonTravail.append(bonTravail)
                     dictDonnees = dict()
-                    dictDonnees["ID"] = element["ID"]
+                    dictDonnees["ID-EQ"] = element["ID"]
                     dictDonnees["CategorieEquipement"] = element["CategorieEquipement"]
                     dictDonnees["Modele"] = element["Modele"]
                     dictDonnees["CentreService"] = element["CentreService"]
@@ -261,7 +261,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                                 dictionnaireEquipementAssocie["ID-EQ"] = equipement
                             print(equipement)
                             dictDonnees = dict()
-                            dictDonnees["ID"] = equipement["ID"]
+                            dictDonnees["ID-EQ"] = equipement["ID"]
                             dictDonnees["CategorieEquipement"] = equipement["CategorieEquipement"]
                             dictDonnees["Modele"] = equipement["Modele"]
                             dictDonnees["CentreService"] = equipement["CentreService"]

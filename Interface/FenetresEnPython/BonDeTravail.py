@@ -26,7 +26,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleGauche.hide()
         self.dic_request = dict()
         if(consulterBDT is not None):
-            self.lineEditID.setText(consulterBDT["ID-EQ"])
+            self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
             self.chercherEquipement()
             self.indiceBonDeTravail = consulterBDT["ID-BDT"] - 1
             self.chargerBonTravail()

@@ -117,55 +117,6 @@ class Statistique(Ui_Statistique):
         self.comboBoxProvenance.currentTextChanged.connect(self.affichageProvenance)
         self.comboBoxCentreService.currentTextChanged.connect(self.affichageCenreService)
 
-    def center(self):
-        """Methode permettant de centrer la fenetre"""
-        # Nous recuperons la geometrie de la fenetre principale
-        qr = self.frameGeometry()
-        # Nous recuperons la definition de l'ecran et nous recuperons le point central
-        cp = QDesktopWidget().availableGeometry().center()
-        qr.moveCenter(cp)
-        # self.move(qr.topLeft())
-        # self.move(qr.center)
-
-    def closeEvent(self, event):
-        """Fonction gerant la creation d'une fenetre de verification
-        lors de la fermeture de la fenetre"""
-        reply = QMessageBox.question(self, 'Message',
-                                     "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
-                                     QMessageBox.No, QMessageBox.No)
-        #Selon le choix on fait une action precise
-        if reply == QMessageBox.Yes:
-            event.accept()
-        else:
-            event.ignore()
-
-    def quitter(self):
-        reply = QMessageBox.question(self, 'Message',
-                                     "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
-                                     QMessageBox.No, QMessageBox.No)
-        if reply == QMessageBox.Yes:
-            # self.hide()
-            # self.close()
-            self.destroy()
-
-    def afficheMessage(self, event):
-        """Methode affichant une fenetre de confirmation pour l'ajout d'un equipement
-        Cette fenetre va nous faire passer dans le mode consultable
-        Les champs ne seront plus modifiables"""
-        message = QMessageBox()
-        #On met le texte en gras avec les bases <b> </b>
-        message.setText("<b>Sauvegarde de l'equipement</b>")
-        message.setInformativeText("Vous allez sauvegarder un nouvel equipement")
-        message.setWindowTitle("Confirmation")
-        message.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-        message.buttonClicked.connect(self.confirmation)
-        message.exec()
-
-    def confirmation(self,i):
-        #Methode qui va faire appel a la methode valider
-        #Cette methode est appelee une fois que l'ajout d'un element a ete confirme
-        if i.text() == "OK":
-            self.valider()
 
     def miseAJourDonnees(self):
         self.nombreEquipement = self.equipementManager._statsNbTotalEquipement()
@@ -240,6 +191,10 @@ class Statistique(Ui_Statistique):
 
                     ligne += 1
 
+    def miseAJourStats(self):
+        self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
+        self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
+        self.miseAJourDonnees()
 
 if __name__ == "__main__": #Si le fichier est lancé tout seul
 

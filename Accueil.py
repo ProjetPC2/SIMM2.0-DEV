@@ -1,5 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
+from PyQt5.QtGui import QIcon
 
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
 
@@ -261,6 +262,7 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
 
+
     #TODO : Creer une methode ajouterBonDeTravail
     #Cette methode va masquer les autres elements graphiques du layout principal
     #Elle va creer un nouveau widget ajouterBonDeTravailEquipement
@@ -291,6 +293,8 @@ class Accueil(Ui_Accueil):
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.listeNavigation.clear()
+        self.listeNavigation.append(self.rechercheBonDeTravail)
+
 
     def choisirBonDeTravailTableau(self):
         '''
@@ -304,12 +308,11 @@ class Accueil(Ui_Accueil):
         self.BoutonFlecheNavigation.show()
         self.frameFleche.show()
         self.masquerElementGraphique()
-        equipement = self.consultationEquipementUI.equipement
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.modificationBonDeTravailRecherche = QtWidgets.QWidget()
 
-            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.consultationBonDeTravail, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
+            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
             self.modificationBonDeTravailRecherche.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.modificationBonDeTravailRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationBonDeTravailRecherche)
@@ -332,13 +335,15 @@ class Accueil(Ui_Accueil):
         if self.statistique is None:
             # Creation du widget Statistique s'il n'existe pas
             self.statistique = QtWidgets.QWidget()
-            statistique = Statistique(self.statistique)
+            self.statistiqueUI = Statistique(self.statistique)
             self.statistique.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.statistique)
             self.layoutAffichagePrincipal.addWidget(self.statistique)
         else:
             # Affichage du widget s'il existe deja
+            self.statistiqueUI.miseAJourStats()
             self.statistique.show()
+
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.listeNavigation.clear()
@@ -529,6 +534,8 @@ class SIMM():
         app = QtWidgets.QApplication(sys.argv)
         MainFrame = QtWidgets.QMainWindow()
         ui = Accueil(MainFrame)
+        MainFrame.setWindowIcon(QIcon('Images/SIMM2.0.png'))
+        MainFrame.setWindowTitle("SIMM 2.0")
         MainFrame.show()
         sys.exit(app.exec_())
         os.system("pause")
