@@ -83,7 +83,7 @@ class PDF(Thread):
                           "Date : %s" % date)
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision + espacement, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
                           "Technicien : %s" % technicien)
-        # canvas.drawImage(ImageReader("Images\SIMM2.0.png"), 100, 100)#, width=None, height=None, mask=None)
+        # canvas.drawImage(ImageReader(os.path.join("Images","SIMM2.0.png")), 100, 100)#, width=None, height=None, mask=None)
 
         # canvas.save()
         canvas.restoreState()
@@ -102,7 +102,7 @@ class PDF(Thread):
         # Ajout d'un espacement
         elements = [Spacer(0, 2 * inch)]
         # Ajout du logo de SIMM 2.0
-        elements.append(self.get_image("Images\SIMM2.0.png", width=5 * cm))
+        elements.append(self.get_image(os.path.join("Images","SIMM2.0.png"), width=5 * cm))
         elements.append(Spacer(0, 1 * inch))
         #Creation du style par defaut
         styleSheet = getSampleStyleSheet()
