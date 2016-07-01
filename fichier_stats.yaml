@@ -1,16 +1,18 @@
-nbEquipement: 3
+nbEquipement: 4
 nbEquipementCentreService:
+  Laboratoire:
+    Incubateur: 1
   Urgences:
     Defibrilateur: 3
 nbEquipementEtatConservation:
   Acceptable: 1
   Desuet: 0
-  En fin de vie: 0
+  En fin de vie: 1
   Quasi neuf: 4
 nbEquipementEtatService:
-  Au rebus: 1
+  Au rebus: 2
   En maintenance: 0
   En service: 4
 nbEquipementProvenance:
   ? ''
-  : 3
+  : 4

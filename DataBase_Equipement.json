@@ -9089,18 +9089,36 @@ _default:
       Salle: ''
     state:
       eid: 504
-  505:
-    CategorieEquipement: Defibrilateur
-    CentreService: Urgences
+  505: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2000-01-01
+      DateDernierEntretien: 2000-01-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '508'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 505
+  506:
+    CategorieEquipement: Incubateur
+    CentreService: Laboratoire
     Commentaires: ''
-    DateAcquisition: 2000-01-01
-    DateDernierEntretien: 2000-01-01
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '508'
-    Marque: ''
-    Modele: ''
+    DateAcquisition: 2015-07-12
+    DateDernierEntretien: 2016-02-27
+    EtatConservation: En fin de vie
+    EtatService: Au rebus
+    ID: '509'
+    Marque: Abbott
+    Modele: Commander
     NbBonTravail: 0
-    NumeroSerie: ''
+    NumeroSerie: IN651133
     Provenance: ''
     Salle: ''
