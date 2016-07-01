@@ -14,17 +14,19 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#AjoutEquipement {
+   <string notr="true">QWidget{
 background: white;
 }
 QLineEdit {
 padding: 1px;
 border-style: solid;
 border: 1px solid gray;
-border-radius: 8px;
+border-radius: 4px;
+background:rgb(247,247,247);
 min-width: 50px;
 max-width: 150px;
 }
+
 
 QDateEdit {
 max-width: 105px
@@ -104,7 +106,28 @@ QComboBox::down-arrow {
 QComboBox::down-arrow:on { /* shift the arrow when popup is open */
     top: 1px;
     left: 1px;
-}</string>
+}
+
+QRadioButton  {
+background: white;
+}
+
+QTextEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247,247,247)
+}
+
+QDateEdit{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background :rgb(247,247,247);
+}
+</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="2">
@@ -133,6 +156,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <bold>true</bold>
          <underline>false</underline>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string>Ajout d'équipement</string>
@@ -181,6 +207,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
        <property name="text">
         <string>Catégorie : </string>
        </property>
@@ -195,6 +224,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string>Marque : </string>
@@ -211,6 +243,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
        <property name="text">
         <string>Modèle : </string>
        </property>
@@ -225,6 +260,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string>No. de série : </string>
@@ -241,6 +279,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
        <property name="text">
         <string>Salle : </string>
        </property>
@@ -255,6 +296,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string>Centre de service : </string>
@@ -271,6 +315,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
        <property name="text">
         <string>Date d'aquisition : </string>
        </property>
@@ -286,6 +333,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
        <property name="text">
         <string>Date du dernier entretien : </string>
        </property>
@@ -300,6 +350,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string>Provenance : </string>
@@ -321,6 +374,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
           <font>
            <pointsize>10</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
          </property>
          <property name="text">
           <string/>
@@ -486,6 +542,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
       <layout class="QVBoxLayout" name="layoutChampsNonModifiables">
        <item>
         <widget class="QLabel" name="labelID">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici ID</string>
          </property>
@@ -493,6 +552,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelCategorie">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Catégorie</string>
          </property>
@@ -500,6 +562,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelMarque">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Marque</string>
          </property>
@@ -507,6 +572,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelModele">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Modèle</string>
          </property>
@@ -514,6 +582,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelNoDeSerie">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici No. de serie</string>
          </property>
@@ -521,6 +592,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelSalle">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Salle</string>
          </property>
@@ -528,6 +602,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelCentreDeService">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Centre de service</string>
          </property>
@@ -535,6 +612,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelDateDAquisition">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Date d'aquisition</string>
          </property>
@@ -542,6 +622,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelDateDernierEntretien">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Date du dernier entretien</string>
          </property>
@@ -549,6 +632,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
        </item>
        <item>
         <widget class="QLabel" name="labelProvenance">
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Ici Provenance</string>
          </property>
@@ -591,6 +677,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
               <pointsize>10</pointsize>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
             <property name="text">
              <string>État de service : </string>
             </property>
@@ -603,6 +692,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
              <widget class="QLabel" name="labelEtatDeService">
+              <property name="styleSheet">
+               <string notr="true">background: white;</string>
+              </property>
               <property name="text">
                <string>Ici État de Service</string>
               </property>
@@ -654,6 +746,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
               <pointsize>10</pointsize>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
             <property name="text">
              <string>État de Conservation : </string>
             </property>
@@ -666,6 +761,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
              <widget class="QLabel" name="labelEtatDeConservation">
+              <property name="styleSheet">
+               <string notr="true">background: white;</string>
+              </property>
               <property name="text">
                <string>Ici État de Conservation</string>
               </property>
@@ -717,6 +815,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
        <property name="text">
         <string>Commentaires : </string>
        </property>
@@ -733,6 +834,9 @@ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
      </item>
      <item>
       <widget class="QLabel" name="commentaire">
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
        <property name="text">
         <string>commentaires</string>
        </property>
