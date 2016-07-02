@@ -700,6 +700,9 @@ nous sommes programmés ainsi.</string>
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background:rgb(247, 247, 247);</string>
+       </property>
        <property name="maxCount">
         <number>2147483645</number>
        </property>

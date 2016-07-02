@@ -278,6 +278,7 @@ background:rgb(247,247,247);
          </property>
          <property name="styleSheet">
           <string notr="true"> QLabel{
+max-width:200px;
 padding: 1px;
 border-style: solid;
 border: 1px solid gray;
@@ -774,7 +775,7 @@ background-color: rgb(193, 213, 243);
           <widget class="QLabel" name="labelEcritureBonTravail">
            <property name="maximumSize">
             <size>
-             <width>220</width>
+             <width>104</width>
              <height>50</height>
             </size>
            </property>
@@ -785,6 +786,7 @@ background-color: rgb(193, 213, 243);
            </property>
            <property name="styleSheet">
             <string notr="true"> QLabel{
+max-width:100px;
 padding: 1px;
 border-style: solid;
 border: 1px solid gray;
@@ -819,7 +821,15 @@ color: rgb(81, 81, 81);
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+backround:rgb(245, 245, 245);
+}
+	</string>
            </property>
            <item>
             <property name="text">
@@ -866,17 +876,7 @@ color: rgb(81, 81, 81);
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">QDateEdit {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-color: black;
-background:rgb(247,247,247)
-}
-
-
-</string>
+            <string notr="true">max-width:100px;</string>
            </property>
            <property name="locale">
             <locale language="French" country="Canada"/>
@@ -943,7 +943,7 @@ background:rgb(247,247,247)
           <widget class="QTimeEdit" name="timeEditTempsEstime">
            <property name="maximumSize">
             <size>
-             <width>220</width>
+             <width>64</width>
              <height>16777215</height>
             </size>
            </property>
@@ -954,6 +954,7 @@ background:rgb(247,247,247)
            </property>
            <property name="styleSheet">
             <string notr="true">QTimeEdit {
+max-width:60px;
 padding: 1px;
 border-style: solid;
 border: 1px solid gray;
@@ -1045,7 +1046,13 @@ background:rgb(247,247,247)
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">QTextEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)
+}</string>
          </property>
         </widget>
        </item>
@@ -1103,7 +1110,13 @@ background:rgb(247,247,247)
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">QTextEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247)
+}</string>
          </property>
         </widget>
        </item>
@@ -1142,7 +1155,14 @@ background:rgb(247,247,247)
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+	max-width: 55px;
+backround:rgb(245, 245, 245);
+}
+	</string>
            </property>
            <item>
             <property name="text">

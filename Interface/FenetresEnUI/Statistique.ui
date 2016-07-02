@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1514</width>
-    <height>1271</height>
+    <width>869</width>
+    <height>794</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -133,9 +133,21 @@ background: white;
       <widget class="QTextBrowser" name="textBrowserNombreTotalEquipements">
        <property name="maximumSize">
         <size>
-         <width>100</width>
-         <height>50</height>
+         <width>49</width>
+         <height>24</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 45px;
+max-width: 45px;
+}</string>
        </property>
        <property name="verticalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -147,7 +159,7 @@ background: white;
         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
@@ -261,9 +273,21 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowserEnMaintenance">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>50</height>
+             <width>44</width>
+             <height>24</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 40px;
+max-width: 40px;
+}</string>
            </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -275,9 +299,9 @@ p, li { white-space: pre-wrap; }
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;400&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -285,9 +309,21 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowserEnService">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>50</height>
+             <width>44</width>
+             <height>24</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 40px;
+max-width: 40px;
+}</string>
            </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -299,7 +335,7 @@ p, li { white-space: pre-wrap; }
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -309,9 +345,21 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowserAuRebus">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>50</height>
+             <width>44</width>
+             <height>24</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 40px;
+max-width: 40px;
+}</string>
            </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -323,7 +371,7 @@ p, li { white-space: pre-wrap; }
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -371,7 +419,19 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxProvenance"/>
+        <widget class="QComboBox" name="comboBoxProvenance">
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+backround:rgb(245, 245, 245);
+}
+	</string>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="horizontalSpacer_3">
@@ -409,9 +469,22 @@ p, li { white-space: pre-wrap; }
         <widget class="QTextBrowser" name="textBrowserEquipementProvenance">
          <property name="maximumSize">
           <size>
-           <width>100</width>
-           <height>50</height>
+           <width>54</width>
+           <height>24</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+min-height:20px;
+max-height:20px;
+min-width: 50px;
+max-width: 50px;
+}</string>
          </property>
         </widget>
        </item>
@@ -559,9 +632,21 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowserQuasiNeuf">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>50</height>
+             <width>44</width>
+             <height>24</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 40px;
+max-width: 40px;
+}</string>
            </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -573,7 +658,7 @@ p, li { white-space: pre-wrap; }
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -583,9 +668,21 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowserAcceptable">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>50</height>
+             <width>44</width>
+             <height>24</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 40px;
+max-width: 40px;
+}</string>
            </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -597,7 +694,7 @@ p, li { white-space: pre-wrap; }
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -607,9 +704,21 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowserEnFinDeVie">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>50</height>
+             <width>44</width>
+             <height>24</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 40px;
+max-width: 40px;
+}</string>
            </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -621,7 +730,7 @@ p, li { white-space: pre-wrap; }
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -631,9 +740,21 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowserDesuet">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>50</height>
+             <width>44</width>
+             <height>24</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+max-height:20px;
+min-width: 40px;
+max-width: 40px;
+}</string>
            </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -645,7 +766,7 @@ p, li { white-space: pre-wrap; }
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;400&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -674,7 +795,19 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxCentreService"/>
+        <widget class="QComboBox" name="comboBoxCentreService">
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+backround:rgb(245, 245, 245);
+}
+	</string>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="horizontalSpacer_5">

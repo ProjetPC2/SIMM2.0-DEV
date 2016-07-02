@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1350</width>
-    <height>1273</height>
+    <width>707</width>
+    <height>681</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -155,14 +155,42 @@
       <widget class="QPushButton" name="boutonSupprimerEquipement">
        <property name="font">
         <font>
+         <pointsize>-1</pointsize>
          <weight>75</weight>
          <italic>false</italic>
          <bold>true</bold>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+       </property>
        <property name="text">
         <string>Supprimer un
-Équipement</string>
+ Équipement</string>
        </property>
        <property name="icon">
         <iconset>
@@ -172,6 +200,33 @@
      </item>
      <item>
       <widget class="QPushButton" name="boutonSupprimerBon">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+       </property>
        <property name="text">
         <string>Supprimer un
 Bon de Travail</string>
@@ -190,13 +245,46 @@ Bon de Travail</string>
      </item>
      <item>
       <widget class="QPushButton" name="boutonRinitialiserStatistiques">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+       </property>
        <property name="text">
         <string>Réinitialisier les
-Statistiques</string>
+  Statistiques</string>
        </property>
        <property name="icon">
         <iconset>
          <normaloff>Images/refresh-button-2.png</normaloff>Images/refresh-button-2.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
        </property>
       </widget>
      </item>

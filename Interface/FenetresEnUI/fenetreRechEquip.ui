@@ -6,19 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1519</width>
-    <height>999</height>
+    <width>930</width>
+    <height>658</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget
- {
-
-background:white;
-}</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -83,14 +79,14 @@ background:white;
         <widget class="QPushButton" name="boutonActualiser">
          <property name="minimumSize">
           <size>
-           <width>60</width>
-           <height>60</height>
+           <width>47</width>
+           <height>43</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>60</width>
-           <height>60</height>
+           <width>47</width>
+           <height>43</height>
           </size>
          </property>
          <property name="cursor">
@@ -98,25 +94,30 @@ background:white;
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background: rgb(247,247,247)
-}
-
-QPushButton::pressed {
-padding: 1px;
 color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
 border-style: solid;
-border: 1px solid gray;
-border-radius: 8px;
-background:rgb(169, 167, 170)
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 35px;
+max-width:35px;
+min-height: 35px;
+max-height: 35px;
 }
 
 QPushButton:hover {
 background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}</string>
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
          </property>
          <property name="text">
           <string/>
@@ -249,57 +250,6 @@ background:rgb(247,247,247);</string>
          </item>
         </layout>
        </item>
-       <item row="0" column="5">
-        <widget class="QPushButton" name="boutonNouvelleRecherche">
-         <property name="minimumSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>MS Reference Sans Serif</family>
-           <pointsize>7</pointsize>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background: rgb(247,247,247)
-}
-
-QPushButton::pressed {
-padding: 1px;
-color: black;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 8px;
-background:rgb(169, 167, 170)
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}</string>
-         </property>
-         <property name="text">
-          <string>Nouvelle
- recherche</string>
-         </property>
-        </widget>
-       </item>
        <item row="0" column="6">
         <spacer name="horizontalSpacer_2">
          <property name="orientation">
@@ -315,6 +265,64 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
           </size>
          </property>
         </spacer>
+       </item>
+       <item row="0" column="5">
+        <widget class="QPushButton" name="boutonNouvelleRecherche">
+         <property name="minimumSize">
+          <size>
+           <width>92</width>
+           <height>43</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>92</width>
+           <height>43</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width: 80px;
+min-height: 35px;
+max-height: 35px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Nouvelle
+ recherche</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -389,6 +397,38 @@ background:rgb(247,247,247);</string>
          </property>
         </spacer>
        </item>
+       <item row="1" column="3">
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>230</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelCentreService">
+         <property name="font">
+          <font>
+           <family>MS Reference Sans Serif</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
+         <property name="text">
+          <string>Centre de service</string>
+         </property>
+        </widget>
+       </item>
        <item row="1" column="0">
         <widget class="QComboBox" name="comboBoxEtatService">
          <property name="maximumSize">
@@ -425,38 +465,6 @@ background:rgb(247,247,247);</string>
           </property>
          </item>
         </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="labelCentreService">
-         <property name="font">
-          <font>
-           <family>MS Reference Sans Serif</family>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background: white;</string>
-         </property>
-         <property name="text">
-          <string>Centre de service</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <spacer name="horizontalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>230</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </item>

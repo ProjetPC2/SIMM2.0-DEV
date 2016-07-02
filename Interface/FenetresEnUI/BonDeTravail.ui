@@ -286,7 +286,7 @@ background:rgb(247,247,247);
           <widget class="QPushButton" name="boutonConsultation">
            <property name="maximumSize">
             <size>
-             <width>212</width>
+             <width>232</width>
              <height>38</height>
             </size>
            </property>
@@ -313,8 +313,8 @@ padding: 3px;
 font: bold 12px;
 padding-left: 5px;
 padding-right: 5px;
-min-width: 30px;
-max-width: 200px;
+min-width: 220px;
+max-width: 220px;
 min-height: 30px;
 max-height: 30px;
 }
@@ -331,9 +331,13 @@ background-color: rgb(193, 213, 243);
            <property name="text">
             <string>Consultation d'un bon de travail</string>
            </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>Images/magnifying-glass.png</normaloff>Images/magnifying-glass.png</iconset>
+           </property>
            <property name="iconSize">
             <size>
-             <width>20</width>
+             <width>16</width>
              <height>16</height>
             </size>
            </property>
