@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
-        Statistique.resize(869, 794)
+        Statistique.resize(974, 805)
         Statistique.setStyleSheet("background:white;")
         self.gridLayout = QtWidgets.QGridLayout(Statistique)
         self.gridLayout.setObjectName("gridLayout")
@@ -38,6 +38,8 @@ class Ui_Statistique(object):
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 5, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.gridLayout.addItem(spacerItem1, 1, 0, 1, 1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.LabelnombreTotalEquipement = QtWidgets.QLabel(Statistique)
@@ -64,9 +66,77 @@ class Ui_Statistique(object):
         self.textBrowserNombreTotalEquipements.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserNombreTotalEquipements.setObjectName("textBrowserNombreTotalEquipements")
         self.horizontalLayout_2.addWidget(self.textBrowserNombreTotalEquipements)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem1)
-        self.gridLayout.addLayout(self.horizontalLayout_2, 1, 0, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem2)
+        self.gridLayout.addLayout(self.horizontalLayout_2, 2, 0, 1, 1)
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.LabelnombreProvenance = QtWidgets.QLabel(Statistique)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.LabelnombreProvenance.setFont(font)
+        self.LabelnombreProvenance.setStyleSheet("background:white;")
+        self.LabelnombreProvenance.setObjectName("LabelnombreProvenance")
+        self.horizontalLayout_3.addWidget(self.LabelnombreProvenance)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.LabelProvenance = QtWidgets.QLabel(Statistique)
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.LabelProvenance.setFont(font)
+        self.LabelProvenance.setStyleSheet("background:white;")
+        self.LabelProvenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.LabelProvenance.setObjectName("LabelProvenance")
+        self.horizontalLayout_4.addWidget(self.LabelProvenance)
+        self.comboBoxProvenance = QtWidgets.QComboBox(Statistique)
+        self.comboBoxProvenance.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
+        self.comboBoxProvenance.setObjectName("comboBoxProvenance")
+        self.horizontalLayout_4.addWidget(self.comboBoxProvenance)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem3)
+        self.verticalLayout.addLayout(self.horizontalLayout_4)
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.LabelNombreProvenance = QtWidgets.QLabel(Statistique)
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.LabelNombreProvenance.setFont(font)
+        self.LabelNombreProvenance.setStyleSheet("background:white;")
+        self.LabelNombreProvenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.LabelNombreProvenance.setObjectName("LabelNombreProvenance")
+        self.horizontalLayout_5.addWidget(self.LabelNombreProvenance)
+        self.textBrowserEquipementProvenance = QtWidgets.QTextBrowser(Statistique)
+        self.textBrowserEquipementProvenance.setMaximumSize(QtCore.QSize(54, 24))
+        self.textBrowserEquipementProvenance.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"min-height:20px;\n"
+"max-height:20px;\n"
+"min-width: 50px;\n"
+"max-width: 50px;\n"
+"}")
+        self.textBrowserEquipementProvenance.setObjectName("textBrowserEquipementProvenance")
+        self.horizontalLayout_5.addWidget(self.textBrowserEquipementProvenance)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem4)
+        self.verticalLayout.addLayout(self.horizontalLayout_5)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem5)
+        self.gridLayout.addLayout(self.verticalLayout, 2, 1, 2, 1)
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
@@ -163,75 +233,7 @@ class Ui_Statistique(object):
         self.verticalLayout_7.addWidget(self.textBrowserAuRebus)
         self.horizontalLayout_8.addLayout(self.verticalLayout_7)
         self.verticalLayout_4.addLayout(self.horizontalLayout_8)
-        self.gridLayout.addLayout(self.verticalLayout_4, 2, 0, 1, 1)
-        self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.LabelnombreProvenance = QtWidgets.QLabel(Statistique)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.LabelnombreProvenance.setFont(font)
-        self.LabelnombreProvenance.setStyleSheet("background:white;")
-        self.LabelnombreProvenance.setObjectName("LabelnombreProvenance")
-        self.horizontalLayout_3.addWidget(self.LabelnombreProvenance)
-        self.verticalLayout.addLayout(self.horizontalLayout_3)
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.LabelProvenance = QtWidgets.QLabel(Statistique)
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        self.LabelProvenance.setFont(font)
-        self.LabelProvenance.setStyleSheet("background:white;")
-        self.LabelProvenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.LabelProvenance.setObjectName("LabelProvenance")
-        self.horizontalLayout_4.addWidget(self.LabelProvenance)
-        self.comboBoxProvenance = QtWidgets.QComboBox(Statistique)
-        self.comboBoxProvenance.setStyleSheet("QComboBox {\n"
-"    border: 1px solid gray;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 8em;\n"
-"    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
-"}\n"
-"    ")
-        self.comboBoxProvenance.setObjectName("comboBoxProvenance")
-        self.horizontalLayout_4.addWidget(self.comboBoxProvenance)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem2)
-        self.verticalLayout.addLayout(self.horizontalLayout_4)
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.LabelNombreProvenance = QtWidgets.QLabel(Statistique)
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        self.LabelNombreProvenance.setFont(font)
-        self.LabelNombreProvenance.setStyleSheet("background:white;")
-        self.LabelNombreProvenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.LabelNombreProvenance.setObjectName("LabelNombreProvenance")
-        self.horizontalLayout_5.addWidget(self.LabelNombreProvenance)
-        self.textBrowserEquipementProvenance = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserEquipementProvenance.setMaximumSize(QtCore.QSize(54, 24))
-        self.textBrowserEquipementProvenance.setStyleSheet("QTextBrowser {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:white;\n"
-"min-height:20px;\n"
-"max-height:20px;\n"
-"min-width: 50px;\n"
-"max-width: 50px;\n"
-"}")
-        self.textBrowserEquipementProvenance.setObjectName("textBrowserEquipementProvenance")
-        self.horizontalLayout_5.addWidget(self.textBrowserEquipementProvenance)
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem3)
-        self.verticalLayout.addLayout(self.horizontalLayout_5)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem4)
-        self.gridLayout.addLayout(self.verticalLayout, 2, 1, 2, 1)
+        self.gridLayout.addLayout(self.verticalLayout_4, 3, 0, 1, 1)
         self.verticalLayout_8 = QtWidgets.QVBoxLayout()
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
@@ -353,7 +355,7 @@ class Ui_Statistique(object):
         self.verticalLayout_3.addWidget(self.textBrowserDesuet)
         self.horizontalLayout_9.addLayout(self.verticalLayout_3)
         self.verticalLayout_8.addLayout(self.horizontalLayout_9)
-        self.gridLayout.addLayout(self.verticalLayout_8, 3, 0, 1, 1)
+        self.gridLayout.addLayout(self.verticalLayout_8, 4, 0, 1, 1)
         self.verticalLayout_5 = QtWidgets.QVBoxLayout()
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
@@ -377,8 +379,8 @@ class Ui_Statistique(object):
 "    ")
         self.comboBoxCentreService.setObjectName("comboBoxCentreService")
         self.horizontalLayout_10.addWidget(self.comboBoxCentreService)
-        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_10.addItem(spacerItem5)
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_10.addItem(spacerItem6)
         self.verticalLayout_5.addLayout(self.horizontalLayout_10)
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
@@ -421,7 +423,7 @@ class Ui_Statistique(object):
         self.tableResumeInventaire.verticalHeader().setStretchLastSection(False)
         self.horizontalLayout_11.addWidget(self.tableResumeInventaire)
         self.verticalLayout_5.addLayout(self.horizontalLayout_11)
-        self.gridLayout.addLayout(self.verticalLayout_5, 4, 0, 1, 2)
+        self.gridLayout.addLayout(self.verticalLayout_5, 5, 0, 1, 2)
 
         self.retranslateUi(Statistique)
         QtCore.QMetaObject.connectSlotsByName(Statistique)
@@ -437,6 +439,9 @@ class Ui_Statistique(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
+        self.LabelnombreProvenance.setText(_translate("Statistique", "Équipements par provenance"))
+        self.LabelProvenance.setText(_translate("Statistique", "Provenance choisie :"))
+        self.LabelNombreProvenance.setText(_translate("Statistique", "Équipements de cette provenance :"))
         self.nombreEtatdeService.setText(_translate("Statistique", "Équipements par état de service"))
         self.LabelMaintenance.setText(_translate("Statistique", "En maintenance :"))
         self.LabelService.setText(_translate("Statistique", "En service :"))
@@ -459,9 +464,6 @@ class Ui_Statistique(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
-        self.LabelnombreProvenance.setText(_translate("Statistique", "Équipements par provenance"))
-        self.LabelProvenance.setText(_translate("Statistique", "Provenance choisie :"))
-        self.LabelNombreProvenance.setText(_translate("Statistique", "Équipements de cette provenance :"))
         self.label_11.setText(_translate("Statistique", "Équipements par état de conservation"))
         self.LabelQuasiNeuf.setText(_translate("Statistique", "Quasi-neuf :"))
         self.LabelAcceptable.setText(_translate("Statistique", "Acceptable :"))

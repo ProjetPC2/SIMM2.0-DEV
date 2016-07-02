@@ -38,7 +38,7 @@ class Ui_ConsultationEquipement(object):
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.titreLayout.addItem(spacerItem)
         self.gridLayout.addLayout(self.titreLayout, 0, 0, 1, 4)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 88, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 80, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.gridLayout.addItem(spacerItem1, 1, 2, 1, 1)
         self.idLayout = QtWidgets.QHBoxLayout()
         self.idLayout.setObjectName("idLayout")
@@ -419,7 +419,7 @@ class Ui_ConsultationEquipement(object):
         self.comboBoxBons.addItem(icon3, "")
         self.comboBoxBons.addItem(icon3, "")
         self.comboBoxBons.addItem(icon3, "")
-        self.horizontalLayout_6.addWidget(self.comboBoxBons, 0, QtCore.Qt.AlignLeft)
+        self.horizontalLayout_6.addWidget(self.comboBoxBons)
         self.boutonConsulterBon = QtWidgets.QPushButton(ConsultationEquipement)
         self.boutonConsulterBon.setStyleSheet("QPushButton {\n"
 "color: black;\n"
