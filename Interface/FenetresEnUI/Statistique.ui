@@ -66,6 +66,9 @@ background: white;
      </item>
      <item>
       <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -88,6 +91,9 @@ background: white;
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
        </property>
        <property name="text">
         <string>Statistiques</string>
@@ -123,6 +129,9 @@ background: white;
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
        </property>
        <property name="text">
         <string>Nombre total d'équipements</string>
@@ -191,6 +200,9 @@ p, li { white-space: pre-wrap; }
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background:white;</string>
+         </property>
          <property name="text">
           <string>Équipements par état de service</string>
          </property>
@@ -215,6 +227,9 @@ p, li { white-space: pre-wrap; }
              <pointsize>9</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background:white;</string>
+           </property>
            <property name="text">
             <string>En maintenance :</string>
            </property>
@@ -236,6 +251,9 @@ p, li { white-space: pre-wrap; }
              <pointsize>9</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background:white;</string>
+           </property>
            <property name="text">
             <string>En service :</string>
            </property>
@@ -256,6 +274,9 @@ p, li { white-space: pre-wrap; }
             <font>
              <pointsize>9</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background:white;</string>
            </property>
            <property name="text">
             <string>Au rebus :</string>
@@ -394,6 +415,9 @@ p, li { white-space: pre-wrap; }
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background:white;</string>
+         </property>
          <property name="text">
           <string>Équipements par provenance</string>
          </property>
@@ -409,6 +433,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <pointsize>9</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background:white;</string>
          </property>
          <property name="text">
           <string>Provenance choisie :</string>
@@ -456,6 +483,9 @@ backround:rgb(245, 245, 245);
           <font>
            <pointsize>9</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background:white;</string>
          </property>
          <property name="text">
           <string>Équipements de cette provenance :</string>
@@ -529,6 +559,9 @@ max-width: 50px;
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background:white;</string>
+         </property>
          <property name="text">
           <string>Équipements par état de conservation</string>
          </property>
@@ -553,6 +586,9 @@ max-width: 50px;
              <pointsize>9</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background:white;</string>
+           </property>
            <property name="text">
             <string>Quasi-neuf :</string>
            </property>
@@ -573,6 +609,9 @@ max-width: 50px;
             <font>
              <pointsize>9</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background:white;</string>
            </property>
            <property name="text">
             <string>Acceptable :</string>
@@ -595,6 +634,9 @@ max-width: 50px;
              <pointsize>9</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background:white;</string>
+           </property>
            <property name="text">
             <string>En fin de vie :</string>
            </property>
@@ -615,6 +657,9 @@ max-width: 50px;
             <font>
              <pointsize>9</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background:white;</string>
            </property>
            <property name="text">
             <string>Désuet :</string>
@@ -788,6 +833,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <pointsize>10</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background:white;</string>
          </property>
          <property name="text">
           <string>Résume de l'inventaire par centre de service</string>

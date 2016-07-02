@@ -18,6 +18,9 @@
     <layout class="QHBoxLayout" name="layoutTitre">
      <item>
       <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -41,8 +44,11 @@
          <underline>false</underline>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
+       </property>
        <property name="text">
-        <string>Support PC2 - Projet S.I.M.M.</string>
+        <string>Support Projet PC2 - S.I.M.M.</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -117,6 +123,9 @@
    </item>
    <item>
     <widget class="QLabel" name="labelDescription">
+     <property name="styleSheet">
+      <string notr="true">background:white;</string>
+     </property>
      <property name="text">
       <string>Projet PC2 est un organisme à but non-lucratif fondé et dirigé par des étudiants de Polytechnique Montréal. Notre mission est de se rendre dans différents pays en développement pour outiller nos bénéficiaires afin qu’ils puissent eux-mêmes contribuer à l’amélioration de la santé, de l’éducation et de l’environnement dans leur pays. Nous tentons de donner une seconde vie au matériel informatique et médical en se rendant sur place pour offrir des formations sur l’utilisation et la maintenance de ces équipements. Notre stratégie est axée sur la maximisation des ressources déjà disponibles et le partage de connaissances. C’est en travaillant en collaboration avec nos bénéficiaires que nous pouvons y arriver.
 </string>
@@ -131,6 +140,9 @@
    </item>
    <item>
     <widget class="QLabel" name="labelContact">
+     <property name="styleSheet">
+      <string notr="true">background:white;</string>
+     </property>
      <property name="text">
       <string>Contact : contact@xxx.com</string>
      </property>

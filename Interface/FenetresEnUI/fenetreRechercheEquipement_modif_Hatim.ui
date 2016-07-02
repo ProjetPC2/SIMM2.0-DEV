@@ -74,6 +74,9 @@ background-color: rgb(193, 213, 243);
           <pointsize>18</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
+        </property>
         <property name="text">
          <string>Assistant de recherche - Équipement</string>
         </property>
@@ -86,6 +89,9 @@ background-color: rgb(193, 213, 243);
           <width>100</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
         </property>
         <property name="text">
          <string/>
@@ -106,6 +112,9 @@ background-color: rgb(193, 213, 243);
           <family>MS Shell Dlg 2</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
         </property>
         <property name="text">
          <string>Catégorie d'équipement</string>
@@ -167,6 +176,9 @@ background:rgb(247, 247, 247)</string>
           <family>MS Sans Serif</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
         </property>
         <property name="text">
          <string>État de service</string>
@@ -240,7 +252,7 @@ background:rgb(247, 247, 247)</string>
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247, 247, 247)</string>
+background:rgb(247,247,247);</string>
         </property>
         <property name="lineWidth">
          <number>10</number>
@@ -424,6 +436,9 @@ background-color: rgb(193, 213, 243);
           <pointsize>10</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
+        </property>
         <property name="text">
          <string>Numéro de série</string>
         </property>
@@ -469,6 +484,9 @@ background:rgb(247, 247, 247)</string>
           <family>MS Shell Dlg 2</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
         </property>
         <property name="text">
          <string>Provenance</string>
@@ -531,6 +549,9 @@ background:rgb(247, 247, 247)</string>
           <pointsize>10</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
+        </property>
         <property name="text">
          <string>Centre de service</string>
         </property>
@@ -585,6 +606,9 @@ background:rgb(247, 247, 247)</string>
           <family>MS Shell Dlg 2</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:white;</string>
         </property>
         <property name="text">
          <string>Salle</string>

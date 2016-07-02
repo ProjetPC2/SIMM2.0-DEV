@@ -689,6 +689,9 @@ backround:rgb(245, 245, 245);
             </item>
             <item>
              <widget class="QRadioButton" name="radioButtonEnService">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
               <property name="text">
                <string>En service</string>
               </property>
@@ -696,6 +699,9 @@ backround:rgb(245, 245, 245);
             </item>
             <item>
              <widget class="QRadioButton" name="radioButtonEnMaintenance">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
               <property name="text">
                <string>En maintenance</string>
               </property>
@@ -703,6 +709,9 @@ backround:rgb(245, 245, 245);
             </item>
             <item>
              <widget class="QRadioButton" name="radioButtonAuRebus">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
               <property name="text">
                <string>Au rebus</string>
               </property>
@@ -758,6 +767,9 @@ backround:rgb(245, 245, 245);
             </item>
             <item>
              <widget class="QRadioButton" name="radioButtonQuasiNeuf">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
               <property name="text">
                <string>Quasi neuf</string>
               </property>
@@ -765,6 +777,9 @@ backround:rgb(245, 245, 245);
             </item>
             <item>
              <widget class="QRadioButton" name="radioButtonAcceptable">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
               <property name="text">
                <string>Acceptable</string>
               </property>
@@ -772,6 +787,9 @@ backround:rgb(245, 245, 245);
             </item>
             <item>
              <widget class="QRadioButton" name="radioButtonEnFinDeVie">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
               <property name="text">
                <string>En fin de vie</string>
               </property>
@@ -779,6 +797,9 @@ backround:rgb(245, 245, 245);
             </item>
             <item>
              <widget class="QRadioButton" name="radioButtonDesuet">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
               <property name="text">
                <string>Désuet</string>
               </property>
