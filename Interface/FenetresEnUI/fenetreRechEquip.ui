@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+ {
+
+background:white;
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -59,6 +66,9 @@
            <weight>75</weight>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
          </property>
          <property name="text">
           <string>Assistant de recherche - Équipement</string>
@@ -132,6 +142,9 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
              <family>MS Reference Sans Serif</family>
              <pointsize>10</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: white;</string>
            </property>
            <property name="text">
             <string>Catégorie d'équipement</string>
@@ -225,6 +238,9 @@ background:rgb(247,247,247);</string>
              <family>MS Reference Sans Serif</family>
              <pointsize>10</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: white;</string>
            </property>
            <property name="text">
             <string>Numéro de série</string>
@@ -349,6 +365,9 @@ background:rgb(247,247,247);</string>
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>État de service</string>
          </property>
@@ -414,6 +433,9 @@ background:rgb(247,247,247);</string>
            <family>MS Reference Sans Serif</family>
            <pointsize>10</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
          </property>
          <property name="text">
           <string>Centre de service</string>
@@ -538,6 +560,9 @@ background:rgb(247,247,247);</string>
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Provenance</string>
          </property>
@@ -566,6 +591,9 @@ background:rgb(247,247,247);</string>
            <family>MS Reference Sans Serif</family>
            <pointsize>10</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
          </property>
          <property name="text">
           <string>Salle</string>
