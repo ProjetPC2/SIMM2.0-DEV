@@ -12,6 +12,11 @@ class Ui_RechercheEquipement(object):
     def setupUi(self, RechercheEquipement):
         RechercheEquipement.setObjectName("RechercheEquipement")
         RechercheEquipement.resize(1519, 999)
+        RechercheEquipement.setStyleSheet("QWidget\n"
+" {\n"
+"\n"
+"background:white;\n"
+"}")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(RechercheEquipement)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
@@ -33,6 +38,7 @@ class Ui_RechercheEquipement(object):
         font.setBold(True)
         font.setWeight(75)
         self.labelTitre.setFont(font)
+        self.labelTitre.setStyleSheet("background: white;")
         self.labelTitre.setObjectName("labelTitre")
         self.gridLayout_6.addWidget(self.labelTitre, 0, 1, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout_6)
@@ -76,6 +82,7 @@ class Ui_RechercheEquipement(object):
         font.setFamily("MS Reference Sans Serif")
         font.setPointSize(10)
         self.labelCategorieEquipement.setFont(font)
+        self.labelCategorieEquipement.setStyleSheet("background: white;")
         self.labelCategorieEquipement.setObjectName("labelCategorieEquipement")
         self.gridLayout_9.addWidget(self.labelCategorieEquipement, 0, 0, 1, 1)
         self.lineEditNumeroSerie = QtWidgets.QLineEdit(RechercheEquipement)
@@ -113,6 +120,7 @@ class Ui_RechercheEquipement(object):
         font.setFamily("MS Reference Sans Serif")
         font.setPointSize(10)
         self.labelNumeroSerie.setFont(font)
+        self.labelNumeroSerie.setStyleSheet("background: white;")
         self.labelNumeroSerie.setObjectName("labelNumeroSerie")
         self.gridLayout_9.addWidget(self.labelNumeroSerie, 0, 2, 1, 1)
         self.gridLayout_5.addLayout(self.gridLayout_9, 0, 3, 1, 1)
@@ -171,6 +179,7 @@ class Ui_RechercheEquipement(object):
         font.setFamily("MS Reference Sans Serif")
         font.setPointSize(10)
         self.labelEtatService.setFont(font)
+        self.labelEtatService.setStyleSheet("background: white;")
         self.labelEtatService.setObjectName("labelEtatService")
         self.gridLayout_3.addWidget(self.labelEtatService, 0, 0, 1, 1)
         spacerItem3 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -195,6 +204,7 @@ class Ui_RechercheEquipement(object):
         font.setFamily("MS Reference Sans Serif")
         font.setPointSize(10)
         self.labelCentreService.setFont(font)
+        self.labelCentreService.setStyleSheet("background: white;")
         self.labelCentreService.setObjectName("labelCentreService")
         self.gridLayout_3.addWidget(self.labelCentreService, 0, 2, 1, 1)
         spacerItem4 = QtWidgets.QSpacerItem(230, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -239,6 +249,7 @@ class Ui_RechercheEquipement(object):
         font.setFamily("MS Reference Sans Serif")
         font.setPointSize(10)
         self.labelProvenance.setFont(font)
+        self.labelProvenance.setStyleSheet("background: white;")
         self.labelProvenance.setObjectName("labelProvenance")
         self.gridLayout.addWidget(self.labelProvenance, 0, 2, 1, 1)
         spacerItem6 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -248,6 +259,7 @@ class Ui_RechercheEquipement(object):
         font.setFamily("MS Reference Sans Serif")
         font.setPointSize(10)
         self.labelSalle.setFont(font)
+        self.labelSalle.setStyleSheet("background: white;")
         self.labelSalle.setObjectName("labelSalle")
         self.gridLayout.addWidget(self.labelSalle, 0, 0, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
