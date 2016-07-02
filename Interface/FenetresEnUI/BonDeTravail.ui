@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1157</width>
-    <height>876</height>
+    <width>1007</width>
+    <height>698</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -186,12 +186,39 @@ background:rgb(247,247,247)
           <widget class="QPushButton" name="boutonActualiser">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>40</height>
+             <width>42</width>
+             <height>38</height>
             </size>
            </property>
            <property name="cursor">
             <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 30px;
+max-width: 30px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
            </property>
            <property name="text">
             <string/>
@@ -259,17 +286,47 @@ background:rgb(247,247,247);
           <widget class="QPushButton" name="boutonConsultation">
            <property name="maximumSize">
             <size>
-             <width>500</width>
-             <height>150</height>
+             <width>212</width>
+             <height>38</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <pointsize>10</pointsize>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <italic>false</italic>
+             <bold>true</bold>
             </font>
            </property>
            <property name="cursor">
             <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 30px;
+max-width: 200px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
            </property>
            <property name="text">
             <string>Consultation d'un bon de travail</string>
@@ -544,6 +601,33 @@ color: rgb(81, 81, 81);
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 30px;
+max-width: 30px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -563,8 +647,8 @@ color: rgb(81, 81, 81);
             <widget class="QPushButton" name="boutonSauvegarde">
              <property name="maximumSize">
               <size>
-               <width>50</width>
-               <height>180</height>
+               <width>42</width>
+               <height>38</height>
               </size>
              </property>
              <property name="cursor">
@@ -574,7 +658,31 @@ color: rgb(81, 81, 81);
               <bool>false</bool>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 30px;
+max-width: 30px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
              </property>
              <property name="text">
               <string/>
@@ -595,15 +703,39 @@ color: rgb(81, 81, 81);
             <widget class="QPushButton" name="boutonFlecheDoubleGauche">
              <property name="maximumSize">
               <size>
-               <width>50</width>
-               <height>150</height>
+               <width>27</width>
+               <height>38</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 15px;
+max-width:15px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
              </property>
              <property name="text">
               <string/>
@@ -618,15 +750,39 @@ color: rgb(81, 81, 81);
             <widget class="QPushButton" name="boutonFlecheGauche">
              <property name="maximumSize">
               <size>
-               <width>50</width>
-               <height>180</height>
+               <width>27</width>
+               <height>38</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 15px;
+max-width:15px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
              </property>
              <property name="text">
               <string/>
@@ -641,15 +797,39 @@ color: rgb(81, 81, 81);
             <widget class="QPushButton" name="boutonFlecheDroite">
              <property name="maximumSize">
               <size>
-               <width>50</width>
-               <height>180</height>
+               <width>27</width>
+               <height>38</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 15px;
+max-width:15px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
              </property>
              <property name="text">
               <string/>
@@ -664,15 +844,39 @@ color: rgb(81, 81, 81);
             <widget class="QPushButton" name="boutonFlecheDoubleDroite">
              <property name="maximumSize">
               <size>
-               <width>60</width>
-               <height>180</height>
+               <width>27</width>
+               <height>38</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 15px;
+max-width:15px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
              </property>
              <property name="text">
               <string/>

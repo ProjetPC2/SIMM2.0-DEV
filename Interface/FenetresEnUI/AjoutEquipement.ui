@@ -6,128 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1287</width>
-    <height>1269</height>
+    <width>964</width>
+    <height>711</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget{
-background: white;
-}
-QLineEdit {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247);
-min-width: 50px;
-max-width: 150px;
-}
-
-
-QDateEdit {
-max-width: 105px
-}
-
-QPushButton {
-color: black;
-background-color: rgb(240, 240, 240);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 16px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 130px;
-max-width:150px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-
-
-QComboBox {
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 1px 18px 1px 3px;
-    min-width: 8em;
-	max-width: 200px;
-	
-}
-
-QComboBox:editable {
-    background: white;
-}
-
-QComboBox:!editable, QComboBox::drop-down:editable {
-     background:rgb(241, 241, 241);
-}
-
-/* QComboBox gets the &quot;on&quot; state when the popup is open */
-QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
-                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
-}
-
-QComboBox:on { /* shift the text when the popup opens */
-    padding-top: 3px;
-    padding-left: 4px;
-}
-
-QComboBox::drop-down {
-    subcontrol-origin: padding;
-    subcontrol-position: top right;
-    width: 15px;
-
-    border-left-width: 1px;
-    border-left-color: darkgrey;
-    border-left-style: solid; /* just a single line */
-    border-top-right-radius: 3px; /* same radius as the QComboBox */
-    border-bottom-right-radius: 3px;
-}
-
-QComboBox::down-arrow {
-    image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png);
-}
-
-QComboBox::down-arrow:on { /* shift the arrow when popup is open */
-    top: 1px;
-    left: 1px;
-}
-
-QRadioButton  {
-background: white;
-}
-
-QTextEdit {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247)
-}
-
-QDateEdit{
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background :rgb(247,247,247);
-}
-</string>
+   <string notr="true"/>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="2">
@@ -391,6 +278,17 @@ background :rgb(247,247,247);
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+backround:rgb(245, 245, 245);
+}
+	</string>
+         </property>
          <property name="maxCount">
           <number>2147483645</number>
          </property>
@@ -421,6 +319,17 @@ background :rgb(247,247,247);
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+min-width: 50px;
+max-width: 220px;
+}</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -429,6 +338,17 @@ background :rgb(247,247,247);
           <font>
            <pointsize>10</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+min-width: 50px;
+max-width: 220px;
+}</string>
          </property>
         </widget>
        </item>
@@ -439,6 +359,17 @@ background :rgb(247,247,247);
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white;
+min-width: 50px;
+max-width: 220px;
+}</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -448,6 +379,17 @@ background :rgb(247,247,247);
            <family>MS Shell Dlg 2</family>
            <pointsize>10</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+backround:rgb(245, 245, 245);
+}
+	</string>
          </property>
          <property name="maxCount">
           <number>2147483645</number>
@@ -480,6 +422,17 @@ background :rgb(247,247,247);
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+backround:rgb(245, 245, 245);
+}
+	</string>
+         </property>
          <property name="maxCount">
           <number>2147483645</number>
          </property>
@@ -510,6 +463,17 @@ background :rgb(247,247,247);
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QDateEdit{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background :white;
+max-width:105px;
+}
+</string>
+         </property>
          <property name="displayFormat">
           <string>dd-MM-yyyy</string>
          </property>
@@ -525,6 +489,17 @@ background :rgb(247,247,247);
            <pointsize>10</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QDateEdit{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background :white;
+max-width:105px;
+}
+</string>
+         </property>
          <property name="displayFormat">
           <string>dd-MM-yyyy</string>
          </property>
@@ -534,7 +509,19 @@ background :rgb(247,247,247);
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxProvenance"/>
+        <widget class="QComboBox" name="comboBoxProvenance">
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+backround:rgb(245, 245, 245);
+}
+	</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -830,6 +817,15 @@ background :rgb(247,247,247);
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:white
+}</string>
+       </property>
       </widget>
      </item>
      <item>
@@ -875,6 +871,33 @@ background :rgb(247,247,247);
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+       </property>
        <property name="text">
         <string>Valider</string>
        </property>
@@ -888,6 +911,33 @@ background :rgb(247,247,247);
       <widget class="QPushButton" name="BoutonModifier">
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
        </property>
        <property name="text">
         <string>Modifier</string>
@@ -908,6 +958,33 @@ background :rgb(247,247,247);
       <widget class="QPushButton" name="BoutonEnregistrer">
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
        </property>
        <property name="text">
         <string>Enregistrer</string>
