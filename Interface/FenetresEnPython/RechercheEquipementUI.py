@@ -11,12 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_RechercheEquipement(object):
     def setupUi(self, RechercheEquipement):
         RechercheEquipement.setObjectName("RechercheEquipement")
-        RechercheEquipement.resize(1519, 999)
-        RechercheEquipement.setStyleSheet("QWidget\n"
-" {\n"
-"\n"
-"background:white;\n"
-"}")
+        RechercheEquipement.resize(930, 658)
+        RechercheEquipement.setStyleSheet("background: white;")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(RechercheEquipement)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
@@ -45,29 +41,34 @@ class Ui_RechercheEquipement(object):
         self.gridLayout_5 = QtWidgets.QGridLayout()
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.boutonActualiser = QtWidgets.QPushButton(RechercheEquipement)
-        self.boutonActualiser.setMinimumSize(QtCore.QSize(60, 60))
-        self.boutonActualiser.setMaximumSize(QtCore.QSize(60, 60))
+        self.boutonActualiser.setMinimumSize(QtCore.QSize(47, 43))
+        self.boutonActualiser.setMaximumSize(QtCore.QSize(47, 43))
         self.boutonActualiser.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonActualiser.setStyleSheet("QPushButton {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background: rgb(247,247,247)\n"
-"}\n"
-"\n"
-"QPushButton::pressed {\n"
-"padding: 1px;\n"
 "color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
 "border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 8px;\n"
-"background:rgb(169, 167, 170)\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 35px;\n"
+"max-width:35px;\n"
+"min-height: 35px;\n"
+"max-height: 35px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}")
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonActualiser.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Images/refresh-button-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -124,38 +125,45 @@ class Ui_RechercheEquipement(object):
         self.labelNumeroSerie.setObjectName("labelNumeroSerie")
         self.gridLayout_9.addWidget(self.labelNumeroSerie, 0, 2, 1, 1)
         self.gridLayout_5.addLayout(self.gridLayout_9, 0, 3, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(80, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_5.addItem(spacerItem2, 0, 6, 1, 1)
         self.boutonNouvelleRecherche = QtWidgets.QPushButton(RechercheEquipement)
-        self.boutonNouvelleRecherche.setMinimumSize(QtCore.QSize(60, 60))
-        self.boutonNouvelleRecherche.setMaximumSize(QtCore.QSize(60, 60))
+        self.boutonNouvelleRecherche.setMinimumSize(QtCore.QSize(92, 43))
+        self.boutonNouvelleRecherche.setMaximumSize(QtCore.QSize(92, 43))
         font = QtGui.QFont()
-        font.setFamily("MS Reference Sans Serif")
-        font.setPointSize(7)
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
         self.boutonNouvelleRecherche.setFont(font)
         self.boutonNouvelleRecherche.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonNouvelleRecherche.setStyleSheet("QPushButton {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background: rgb(247,247,247)\n"
-"}\n"
-"\n"
-"QPushButton::pressed {\n"
-"padding: 1px;\n"
 "color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
 "border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 8px;\n"
-"background:rgb(169, 167, 170)\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width: 80px;\n"
+"min-height: 35px;\n"
+"max-height: 35px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}")
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonNouvelleRecherche.setObjectName("boutonNouvelleRecherche")
         self.gridLayout_5.addWidget(self.boutonNouvelleRecherche, 0, 5, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(80, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_5.addItem(spacerItem2, 0, 6, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout_5)
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setObjectName("gridLayout_3")
@@ -184,6 +192,16 @@ class Ui_RechercheEquipement(object):
         self.gridLayout_3.addWidget(self.labelEtatService, 0, 0, 1, 1)
         spacerItem3 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_3.addItem(spacerItem3, 1, 1, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(230, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem4, 1, 3, 1, 1)
+        self.labelCentreService = QtWidgets.QLabel(RechercheEquipement)
+        font = QtGui.QFont()
+        font.setFamily("MS Reference Sans Serif")
+        font.setPointSize(10)
+        self.labelCentreService.setFont(font)
+        self.labelCentreService.setStyleSheet("background: white;")
+        self.labelCentreService.setObjectName("labelCentreService")
+        self.gridLayout_3.addWidget(self.labelCentreService, 0, 2, 1, 1)
         self.comboBoxEtatService = QtWidgets.QComboBox(RechercheEquipement)
         self.comboBoxEtatService.setMaximumSize(QtCore.QSize(300, 16777215))
         font = QtGui.QFont()
@@ -199,16 +217,6 @@ class Ui_RechercheEquipement(object):
         self.comboBoxEtatService.addItem("")
         self.comboBoxEtatService.addItem("")
         self.gridLayout_3.addWidget(self.comboBoxEtatService, 1, 0, 1, 1)
-        self.labelCentreService = QtWidgets.QLabel(RechercheEquipement)
-        font = QtGui.QFont()
-        font.setFamily("MS Reference Sans Serif")
-        font.setPointSize(10)
-        self.labelCentreService.setFont(font)
-        self.labelCentreService.setStyleSheet("background: white;")
-        self.labelCentreService.setObjectName("labelCentreService")
-        self.gridLayout_3.addWidget(self.labelCentreService, 0, 2, 1, 1)
-        spacerItem4 = QtWidgets.QSpacerItem(230, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem4, 1, 3, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout_3)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
@@ -312,15 +320,15 @@ class Ui_RechercheEquipement(object):
         self.comboBoxCategorieEquipement.setItemText(3, _translate("RechercheEquipement", "Catégorie 4"))
         self.labelNumeroSerie.setText(_translate("RechercheEquipement", "Numéro de série"))
         self.boutonNouvelleRecherche.setText(_translate("RechercheEquipement", "Nouvelle\n"
-" recherche"))
+"Recherche"))
         self.comboBoxCentreService.setItemText(0, _translate("RechercheEquipement", "Centre 1"))
         self.comboBoxCentreService.setItemText(1, _translate("RechercheEquipement", "Centre 2"))
         self.comboBoxCentreService.setItemText(2, _translate("RechercheEquipement", "Centre 3"))
         self.labelEtatService.setText(_translate("RechercheEquipement", "État de service"))
+        self.labelCentreService.setText(_translate("RechercheEquipement", "Centre de service"))
         self.comboBoxEtatService.setItemText(0, _translate("RechercheEquipement", "En maintenance"))
         self.comboBoxEtatService.setItemText(1, _translate("RechercheEquipement", "En réparation"))
         self.comboBoxEtatService.setItemText(2, _translate("RechercheEquipement", "Au rebus"))
-        self.labelCentreService.setText(_translate("RechercheEquipement", "Centre de service"))
         self.comboBoxProvenance.setItemText(0, _translate("RechercheEquipement", "Provenance 1"))
         self.comboBoxProvenance.setItemText(1, _translate("RechercheEquipement", "Provenance 2"))
         self.comboBoxProvenance.setItemText(2, _translate("RechercheEquipement", "Provenance 3"))
@@ -343,4 +351,14 @@ class Ui_RechercheEquipement(object):
         item.setText(_translate("RechercheEquipement", "Catégorie d\'équipement"))
         item = self.tableResultats.horizontalHeaderItem(2)
         item.setText(_translate("RechercheEquipement", "Marque"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    RechercheEquipement = QtWidgets.QWidget()
+    ui = Ui_RechercheEquipement()
+    ui.setupUi(RechercheEquipement)
+    RechercheEquipement.show()
+    sys.exit(app.exec_())
 

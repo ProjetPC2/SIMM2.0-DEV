@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background: white;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -320,7 +320,7 @@ background-color: rgb(193, 213, 243);
          </property>
          <property name="text">
           <string>Nouvelle
- recherche</string>
+Recherche</string>
          </property>
         </widget>
        </item>

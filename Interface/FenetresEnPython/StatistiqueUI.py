@@ -11,46 +11,16 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
-        Statistique.resize(1514, 1271)
-        Statistique.setStyleSheet("QPushButton {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background: rgb(247,247,247)\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton::pressed {\n"
-"padding: 1px;\n"
-"color: black;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 8px;\n"
-"background:rgb(169, 167, 170)\n"
-"}\n"
-"#MainFrame {\n"
-"\n"
-"background: white;\n"
-"}\n"
-"\n"
-"")
+        Statistique.resize(869, 794)
+        Statistique.setStyleSheet("background:white;")
         self.gridLayout = QtWidgets.QGridLayout(Statistique)
         self.gridLayout.setObjectName("gridLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setContentsMargins(-1, 2, -1, 2)
         self.horizontalLayout.setSpacing(8)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.label = QtWidgets.QLabel(Statistique)
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("pie-chart (1).png"))
-        self.label.setObjectName("label")
-        self.horizontalLayout.addWidget(self.label)
         self.label_2 = QtWidgets.QLabel(Statistique)
+        self.label_2.setStyleSheet("background:white;")
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap("Images/pie-chart (1).png"))
         self.label_2.setObjectName("label_2")
@@ -62,6 +32,7 @@ class Ui_Statistique(object):
         font.setBold(True)
         font.setWeight(75)
         self.Labeltitre.setFont(font)
+        self.Labeltitre.setStyleSheet("background:white;")
         self.Labeltitre.setObjectName("Labeltitre")
         self.horizontalLayout.addWidget(self.Labeltitre)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -74,10 +45,21 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.LabelnombreTotalEquipement.setFont(font)
+        self.LabelnombreTotalEquipement.setStyleSheet("background:white;")
         self.LabelnombreTotalEquipement.setObjectName("LabelnombreTotalEquipement")
         self.horizontalLayout_2.addWidget(self.LabelnombreTotalEquipement)
         self.textBrowserNombreTotalEquipements = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserNombreTotalEquipements.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserNombreTotalEquipements.setMaximumSize(QtCore.QSize(49, 24))
+        self.textBrowserNombreTotalEquipements.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 45px;\n"
+"max-width: 45px;\n"
+"}")
         self.textBrowserNombreTotalEquipements.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserNombreTotalEquipements.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserNombreTotalEquipements.setObjectName("textBrowserNombreTotalEquipements")
@@ -93,6 +75,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.nombreEtatdeService.setFont(font)
+        self.nombreEtatdeService.setStyleSheet("background:white;")
         self.nombreEtatdeService.setObjectName("nombreEtatdeService")
         self.horizontalLayout_6.addWidget(self.nombreEtatdeService)
         self.verticalLayout_4.addLayout(self.horizontalLayout_6)
@@ -105,6 +88,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelMaintenance.setFont(font)
+        self.LabelMaintenance.setStyleSheet("background:white;")
         self.LabelMaintenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelMaintenance.setObjectName("LabelMaintenance")
         self.verticalLayout_6.addWidget(self.LabelMaintenance)
@@ -113,6 +97,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelService.setFont(font)
+        self.LabelService.setStyleSheet("background:white;")
         self.LabelService.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelService.setObjectName("LabelService")
         self.verticalLayout_6.addWidget(self.LabelService)
@@ -121,6 +106,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelRebus.setFont(font)
+        self.LabelRebus.setStyleSheet("background:white;")
         self.LabelRebus.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelRebus.setObjectName("LabelRebus")
         self.verticalLayout_6.addWidget(self.LabelRebus)
@@ -128,19 +114,49 @@ class Ui_Statistique(object):
         self.verticalLayout_7 = QtWidgets.QVBoxLayout()
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.textBrowserEnMaintenance = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserEnMaintenance.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserEnMaintenance.setMaximumSize(QtCore.QSize(44, 24))
+        self.textBrowserEnMaintenance.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"}")
         self.textBrowserEnMaintenance.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserEnMaintenance.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserEnMaintenance.setObjectName("textBrowserEnMaintenance")
         self.verticalLayout_7.addWidget(self.textBrowserEnMaintenance)
         self.textBrowserEnService = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserEnService.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserEnService.setMaximumSize(QtCore.QSize(44, 24))
+        self.textBrowserEnService.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"}")
         self.textBrowserEnService.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserEnService.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserEnService.setObjectName("textBrowserEnService")
         self.verticalLayout_7.addWidget(self.textBrowserEnService)
         self.textBrowserAuRebus = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserAuRebus.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserAuRebus.setMaximumSize(QtCore.QSize(44, 24))
+        self.textBrowserAuRebus.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"}")
         self.textBrowserAuRebus.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserAuRebus.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserAuRebus.setObjectName("textBrowserAuRebus")
@@ -156,6 +172,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.LabelnombreProvenance.setFont(font)
+        self.LabelnombreProvenance.setStyleSheet("background:white;")
         self.LabelnombreProvenance.setObjectName("LabelnombreProvenance")
         self.horizontalLayout_3.addWidget(self.LabelnombreProvenance)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
@@ -165,10 +182,20 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelProvenance.setFont(font)
+        self.LabelProvenance.setStyleSheet("background:white;")
         self.LabelProvenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelProvenance.setObjectName("LabelProvenance")
         self.horizontalLayout_4.addWidget(self.LabelProvenance)
         self.comboBoxProvenance = QtWidgets.QComboBox(Statistique)
+        self.comboBoxProvenance.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
         self.horizontalLayout_4.addWidget(self.comboBoxProvenance)
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -180,11 +207,23 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelNombreProvenance.setFont(font)
+        self.LabelNombreProvenance.setStyleSheet("background:white;")
         self.LabelNombreProvenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelNombreProvenance.setObjectName("LabelNombreProvenance")
         self.horizontalLayout_5.addWidget(self.LabelNombreProvenance)
         self.textBrowserEquipementProvenance = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserEquipementProvenance.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserEquipementProvenance.setMaximumSize(QtCore.QSize(54, 24))
+        self.textBrowserEquipementProvenance.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"min-height:20px;\n"
+"max-height:20px;\n"
+"min-width: 50px;\n"
+"max-width: 50px;\n"
+"}")
         self.textBrowserEquipementProvenance.setObjectName("textBrowserEquipementProvenance")
         self.horizontalLayout_5.addWidget(self.textBrowserEquipementProvenance)
         spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -201,6 +240,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_11.setFont(font)
+        self.label_11.setStyleSheet("background:white;")
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_7.addWidget(self.label_11)
         self.verticalLayout_8.addLayout(self.horizontalLayout_7)
@@ -213,6 +253,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelQuasiNeuf.setFont(font)
+        self.LabelQuasiNeuf.setStyleSheet("background:white;")
         self.LabelQuasiNeuf.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelQuasiNeuf.setObjectName("LabelQuasiNeuf")
         self.verticalLayout_2.addWidget(self.LabelQuasiNeuf)
@@ -221,6 +262,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelAcceptable.setFont(font)
+        self.LabelAcceptable.setStyleSheet("background:white;")
         self.LabelAcceptable.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelAcceptable.setObjectName("LabelAcceptable")
         self.verticalLayout_2.addWidget(self.LabelAcceptable)
@@ -229,6 +271,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelFinDeVie.setFont(font)
+        self.LabelFinDeVie.setStyleSheet("background:white;")
         self.LabelFinDeVie.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelFinDeVie.setObjectName("LabelFinDeVie")
         self.verticalLayout_2.addWidget(self.LabelFinDeVie)
@@ -237,6 +280,7 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(9)
         self.LabelDesuet.setFont(font)
+        self.LabelDesuet.setStyleSheet("background:white;")
         self.LabelDesuet.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.LabelDesuet.setObjectName("LabelDesuet")
         self.verticalLayout_2.addWidget(self.LabelDesuet)
@@ -244,25 +288,65 @@ class Ui_Statistique(object):
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.textBrowserQuasiNeuf = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserQuasiNeuf.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserQuasiNeuf.setMaximumSize(QtCore.QSize(44, 24))
+        self.textBrowserQuasiNeuf.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"}")
         self.textBrowserQuasiNeuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserQuasiNeuf.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserQuasiNeuf.setObjectName("textBrowserQuasiNeuf")
         self.verticalLayout_3.addWidget(self.textBrowserQuasiNeuf)
         self.textBrowserAcceptable = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserAcceptable.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserAcceptable.setMaximumSize(QtCore.QSize(44, 24))
+        self.textBrowserAcceptable.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"}")
         self.textBrowserAcceptable.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserAcceptable.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserAcceptable.setObjectName("textBrowserAcceptable")
         self.verticalLayout_3.addWidget(self.textBrowserAcceptable)
         self.textBrowserEnFinDeVie = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserEnFinDeVie.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserEnFinDeVie.setMaximumSize(QtCore.QSize(44, 24))
+        self.textBrowserEnFinDeVie.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"}")
         self.textBrowserEnFinDeVie.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserEnFinDeVie.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserEnFinDeVie.setObjectName("textBrowserEnFinDeVie")
         self.verticalLayout_3.addWidget(self.textBrowserEnFinDeVie)
         self.textBrowserDesuet = QtWidgets.QTextBrowser(Statistique)
-        self.textBrowserDesuet.setMaximumSize(QtCore.QSize(100, 50))
+        self.textBrowserDesuet.setMaximumSize(QtCore.QSize(44, 24))
+        self.textBrowserDesuet.setStyleSheet("QTextBrowser {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"max-height:20px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"}")
         self.textBrowserDesuet.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserDesuet.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserDesuet.setObjectName("textBrowserDesuet")
@@ -278,9 +362,19 @@ class Ui_Statistique(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.LabelCentreDeService.setFont(font)
+        self.LabelCentreDeService.setStyleSheet("background:white;")
         self.LabelCentreDeService.setObjectName("LabelCentreDeService")
         self.horizontalLayout_10.addWidget(self.LabelCentreDeService)
         self.comboBoxCentreService = QtWidgets.QComboBox(Statistique)
+        self.comboBoxCentreService.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxCentreService.setObjectName("comboBoxCentreService")
         self.horizontalLayout_10.addWidget(self.comboBoxCentreService)
         spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -340,7 +434,7 @@ class Ui_Statistique(object):
         self.textBrowserNombreTotalEquipements.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.nombreEtatdeService.setText(_translate("Statistique", "Équipements par état de service"))
@@ -350,19 +444,19 @@ class Ui_Statistique(object):
         self.textBrowserEnMaintenance.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8.25pt;\">400</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p></body></html>"))
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">400</p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.textBrowserEnService.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserAuRebus.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.LabelnombreProvenance.setText(_translate("Statistique", "Équipements par provenance"))
@@ -376,25 +470,25 @@ class Ui_Statistique(object):
         self.textBrowserQuasiNeuf.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserAcceptable.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserEnFinDeVie.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserDesuet.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.1pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.LabelCentreDeService.setText(_translate("Statistique", "Résume de l\'inventaire par centre de service"))
@@ -408,4 +502,14 @@ class Ui_Statistique(object):
         item.setText(_translate("Statistique", "Catégorie d\'équipement"))
         item = self.tableResumeInventaire.horizontalHeaderItem(1)
         item.setText(_translate("Statistique", "Quantité"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Statistique = QtWidgets.QWidget()
+    ui = Ui_Statistique()
+    ui.setupUi(Statistique)
+    Statistique.show()
+    sys.exit(app.exec_())
 

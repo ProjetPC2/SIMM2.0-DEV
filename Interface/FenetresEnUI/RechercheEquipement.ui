@@ -1,48 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>RechercheEquipement</class>
+ <widget class="QMainWindow" name="RechercheEquipement">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>696</width>
-    <height>462</height>
+    <width>853</width>
+    <height>473</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#MainWindow{
-background:white;
-}
-
-
-QPushButton {
-color: black;
-background-color: rgb(240, 240, 240);
-border-width: 2px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 14px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 40px;
-max-width:220px;
-min-height: 40px;
-max-height: 40px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}</string>
+   <string notr="true">background: white;</string>
   </property>
   <property name="iconSize">
    <size>
@@ -173,7 +145,7 @@ background:rgb(247, 247, 247)</string>
        <widget class="QLabel" name="labelEtatService">
         <property name="font">
          <font>
-          <family>MS Sans Serif</family>
+          <family>MS Shell Dlg 2</family>
           <pointsize>10</pointsize>
          </font>
         </property>
@@ -668,7 +640,7 @@ background:rgb(247, 247, 247)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>696</width>
+     <width>853</width>
      <height>21</height>
     </rect>
    </property>

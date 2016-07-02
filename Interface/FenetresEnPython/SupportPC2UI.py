@@ -11,12 +11,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SupportPC2(object):
     def setupUi(self, SupportPC2):
         SupportPC2.setObjectName("SupportPC2")
-        SupportPC2.resize(1350, 1273)
+        SupportPC2.resize(707, 681)
+        SupportPC2.setStyleSheet("background: white;")
         self.verticalLayout = QtWidgets.QVBoxLayout(SupportPC2)
         self.verticalLayout.setObjectName("verticalLayout")
         self.layoutTitre = QtWidgets.QHBoxLayout()
         self.layoutTitre.setObjectName("layoutTitre")
         self.label = QtWidgets.QLabel(SupportPC2)
+        self.label.setStyleSheet("background:white;")
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("Images/PC2_logo.png"))
         self.label.setScaledContents(False)
@@ -31,6 +33,7 @@ class Ui_SupportPC2(object):
         font.setUnderline(False)
         font.setWeight(75)
         self.labelSupportPC2_2.setFont(font)
+        self.labelSupportPC2_2.setStyleSheet("background:white;")
         self.labelSupportPC2_2.setAlignment(QtCore.Qt.AlignCenter)
         self.labelSupportPC2_2.setObjectName("labelSupportPC2_2")
         self.layoutTitre.addWidget(self.labelSupportPC2_2)
@@ -50,11 +53,13 @@ class Ui_SupportPC2(object):
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem2)
         self.labelDescription = QtWidgets.QLabel(SupportPC2)
+        self.labelDescription.setStyleSheet("background:white;")
         self.labelDescription.setTextFormat(QtCore.Qt.PlainText)
         self.labelDescription.setWordWrap(True)
         self.labelDescription.setObjectName("labelDescription")
         self.verticalLayout.addWidget(self.labelDescription)
         self.labelContact = QtWidgets.QLabel(SupportPC2)
+        self.labelContact.setStyleSheet("background:white;")
         self.labelContact.setObjectName("labelContact")
         self.verticalLayout.addWidget(self.labelContact)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
@@ -63,16 +68,67 @@ class Ui_SupportPC2(object):
         self.horizontalLayout_8.addItem(spacerItem3)
         self.boutonSupprimerEquipement = QtWidgets.QPushButton(SupportPC2)
         font = QtGui.QFont()
+        font.setPointSize(-1)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.boutonSupprimerEquipement.setFont(font)
+        self.boutonSupprimerEquipement.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Images/garbage (2).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonSupprimerEquipement.setIcon(icon)
         self.boutonSupprimerEquipement.setObjectName("boutonSupprimerEquipement")
         self.horizontalLayout_8.addWidget(self.boutonSupprimerEquipement)
         self.boutonSupprimerBon = QtWidgets.QPushButton(SupportPC2)
+        self.boutonSupprimerBon.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Images/garbage.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonSupprimerBon.setIcon(icon1)
@@ -80,9 +136,35 @@ class Ui_SupportPC2(object):
         self.boutonSupprimerBon.setObjectName("boutonSupprimerBon")
         self.horizontalLayout_8.addWidget(self.boutonSupprimerBon)
         self.boutonRinitialiserStatistiques = QtWidgets.QPushButton(SupportPC2)
+        self.boutonRinitialiserStatistiques.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("Images/refresh-button-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonRinitialiserStatistiques.setIcon(icon2)
+        self.boutonRinitialiserStatistiques.setIconSize(QtCore.QSize(24, 24))
         self.boutonRinitialiserStatistiques.setObjectName("boutonRinitialiserStatistiques")
         self.horizontalLayout_8.addWidget(self.boutonRinitialiserStatistiques)
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -95,14 +177,24 @@ class Ui_SupportPC2(object):
     def retranslateUi(self, SupportPC2):
         _translate = QtCore.QCoreApplication.translate
         SupportPC2.setWindowTitle(_translate("SupportPC2", "Form"))
-        self.labelSupportPC2_2.setText(_translate("SupportPC2", "Support PC2 - Projet S.I.M.M."))
+        self.labelSupportPC2_2.setText(_translate("SupportPC2", "Support Projet PC2 - S.I.M.M."))
         self.labelDescription.setText(_translate("SupportPC2", "Projet PC2 est un organisme à but non-lucratif fondé et dirigé par des étudiants de Polytechnique Montréal. Notre mission est de se rendre dans différents pays en développement pour outiller nos bénéficiaires afin qu’ils puissent eux-mêmes contribuer à l’amélioration de la santé, de l’éducation et de l’environnement dans leur pays. Nous tentons de donner une seconde vie au matériel informatique et médical en se rendant sur place pour offrir des formations sur l’utilisation et la maintenance de ces équipements. Notre stratégie est axée sur la maximisation des ressources déjà disponibles et le partage de connaissances. C’est en travaillant en collaboration avec nos bénéficiaires que nous pouvons y arriver.\n"
 ""))
         self.labelContact.setText(_translate("SupportPC2", "Contact : contact@xxx.com"))
         self.boutonSupprimerEquipement.setText(_translate("SupportPC2", "Supprimer un\n"
-"Équipement"))
+" Équipement"))
         self.boutonSupprimerBon.setText(_translate("SupportPC2", "Supprimer un\n"
 "Bon de Travail"))
         self.boutonRinitialiserStatistiques.setText(_translate("SupportPC2", "Réinitialisier les\n"
-"Statistiques"))
+"  Statistiques"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    SupportPC2 = QtWidgets.QWidget()
+    ui = Ui_SupportPC2()
+    ui.setupUi(SupportPC2)
+    SupportPC2.show()
+    sys.exit(app.exec_())
 

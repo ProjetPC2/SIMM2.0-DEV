@@ -14,13 +14,16 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background:white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="2">
     <layout class="QHBoxLayout" name="layoutTitre">
      <item>
       <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
+       </property>
        <property name="text">
         <string/>
        </property>

@@ -11,45 +11,19 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_RechercheBonDeTravail(object):
     def setupUi(self, RechercheBonDeTravail):
         RechercheBonDeTravail.setObjectName("RechercheBonDeTravail")
-        RechercheBonDeTravail.resize(1258, 975)
+        RechercheBonDeTravail.resize(939, 738)
         RechercheBonDeTravail.setMaximumSize(QtCore.QSize(2000, 2000))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../../../SIMM2.0-DEV/Interface/Images/PC2_logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         RechercheBonDeTravail.setWindowIcon(icon)
-        RechercheBonDeTravail.setStyleSheet("QPushButton {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background: rgb(247,247,247)\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton::pressed {\n"
-"padding: 1px;\n"
-"color: black;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(169, 167, 170)\n"
-"}\n"
-"QMainWindow\n"
-"{\n"
-"background: white;\n"
-"}\n"
-"\n"
-"\n"
-"")
+        RechercheBonDeTravail.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(RechercheBonDeTravail)
         self.gridLayout.setObjectName("gridLayout")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.label = QtWidgets.QLabel(RechercheBonDeTravail)
         self.label.setMaximumSize(QtCore.QSize(38, 34))
+        self.label.setStyleSheet("background: white;")
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("Images/magnifier (1).png"))
         self.label.setObjectName("label")
@@ -61,6 +35,7 @@ class Ui_RechercheBonDeTravail(object):
         font.setBold(True)
         font.setWeight(75)
         self.LabelTitre.setFont(font)
+        self.LabelTitre.setStyleSheet("background: white;")
         self.LabelTitre.setObjectName("LabelTitre")
         self.horizontalLayout_3.addWidget(self.LabelTitre)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -77,14 +52,24 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.labelCategorie.setFont(font)
+        self.labelCategorie.setStyleSheet("background: white;")
         self.labelCategorie.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelCategorie.setObjectName("labelCategorie")
         self.verticalLayout_4.addWidget(self.labelCategorie)
         self.comboBoxCategorieEquipement = QtWidgets.QComboBox(RechercheBonDeTravail)
-        self.comboBoxCategorieEquipement.setMaximumSize(QtCore.QSize(500, 500))
+        self.comboBoxCategorieEquipement.setMaximumSize(QtCore.QSize(243, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.comboBoxCategorieEquipement.setFont(font)
+        self.comboBoxCategorieEquipement.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 220px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxCategorieEquipement.setObjectName("comboBoxCategorieEquipement")
         self.verticalLayout_4.addWidget(self.comboBoxCategorieEquipement)
         self.horizontalLayout.addLayout(self.verticalLayout_4)
@@ -95,14 +80,24 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.LabelAvant.setFont(font)
+        self.LabelAvant.setStyleSheet("background: white;")
         self.LabelAvant.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.LabelAvant.setObjectName("LabelAvant")
         self.verticalLayout_7.addWidget(self.LabelAvant)
         self.calendrierAvant = QtWidgets.QDateEdit(RechercheBonDeTravail)
-        self.calendrierAvant.setMaximumSize(QtCore.QSize(500, 500))
+        self.calendrierAvant.setMaximumSize(QtCore.QSize(224, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.calendrierAvant.setFont(font)
+        self.calendrierAvant.setStyleSheet("QDateEdit{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background :white;\n"
+"max-width:220px;\n"
+"}\n"
+"")
         self.calendrierAvant.setCalendarPopup(True)
         self.calendrierAvant.setDate(QtCore.QDate(2016, 1, 1))
         self.calendrierAvant.setObjectName("calendrierAvant")
@@ -115,13 +110,23 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.LabelApres.setFont(font)
+        self.LabelApres.setStyleSheet("background: white;")
         self.LabelApres.setObjectName("LabelApres")
         self.verticalLayout_5.addWidget(self.LabelApres)
         self.calendrierApres = QtWidgets.QDateEdit(RechercheBonDeTravail)
-        self.calendrierApres.setMaximumSize(QtCore.QSize(500, 500))
+        self.calendrierApres.setMaximumSize(QtCore.QSize(224, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.calendrierApres.setFont(font)
+        self.calendrierApres.setStyleSheet("QDateEdit{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background :white;\n"
+"max-width:220px;\n"
+"}\n"
+"")
         self.calendrierApres.setCalendarPopup(True)
         self.calendrierApres.setDate(QtCore.QDate(2016, 1, 1))
         self.calendrierApres.setObjectName("calendrierApres")
@@ -134,14 +139,24 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.LabelEtat.setFont(font)
+        self.LabelEtat.setStyleSheet("background: white;")
         self.LabelEtat.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.LabelEtat.setObjectName("LabelEtat")
         self.verticalLayout_8.addWidget(self.LabelEtat)
         self.comboBoxEtat = QtWidgets.QComboBox(RechercheBonDeTravail)
-        self.comboBoxEtat.setMaximumSize(QtCore.QSize(500, 500))
+        self.comboBoxEtat.setMaximumSize(QtCore.QSize(223, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.comboBoxEtat.setFont(font)
+        self.comboBoxEtat.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxEtat.setObjectName("comboBoxEtat")
         self.verticalLayout_8.addWidget(self.comboBoxEtat)
         self.horizontalLayout.addLayout(self.verticalLayout_8)
@@ -155,13 +170,23 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.LabelCentreService.setFont(font)
+        self.LabelCentreService.setStyleSheet("background: white;")
         self.LabelCentreService.setObjectName("LabelCentreService")
         self.verticalLayout_2.addWidget(self.LabelCentreService)
         self.comboBoxCentreService = QtWidgets.QComboBox(RechercheBonDeTravail)
-        self.comboBoxCentreService.setMaximumSize(QtCore.QSize(500, 500))
+        self.comboBoxCentreService.setMaximumSize(QtCore.QSize(223, 500))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.comboBoxCentreService.setFont(font)
+        self.comboBoxCentreService.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxCentreService.setObjectName("comboBoxCentreService")
         self.verticalLayout_2.addWidget(self.comboBoxCentreService)
         self.horizontalLayout_2.addLayout(self.verticalLayout_2)
@@ -174,9 +199,19 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.LabelDescription.setFont(font)
+        self.LabelDescription.setStyleSheet("background: white;")
         self.LabelDescription.setObjectName("LabelDescription")
         self.verticalLayout.addWidget(self.LabelDescription)
         self.lineEditDescriptionSituation = QtWidgets.QLineEdit(RechercheBonDeTravail)
+        self.lineEditDescriptionSituation.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"min-width: 50px;\n"
+"max-width: 300px;\n"
+"}")
         self.lineEditDescriptionSituation.setObjectName("lineEditDescriptionSituation")
         self.verticalLayout.addWidget(self.lineEditDescriptionSituation)
         self.horizontalLayout_2.addLayout(self.verticalLayout)
@@ -277,4 +312,14 @@ class Ui_RechercheBonDeTravail(object):
         item.setText(_translate("RechercheBonDeTravail", "Date"))
         item = self.tableResultats.horizontalHeaderItem(6)
         item.setText(_translate("RechercheBonDeTravail", "Description"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    RechercheBonDeTravail = QtWidgets.QWidget()
+    ui = Ui_RechercheBonDeTravail()
+    ui.setupUi(RechercheBonDeTravail)
+    RechercheBonDeTravail.show()
+    sys.exit(app.exec_())
 

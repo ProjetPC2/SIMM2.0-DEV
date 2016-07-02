@@ -14,26 +14,16 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background:white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="4">
     <layout class="QHBoxLayout" name="titreLayout">
      <item>
-      <widget class="QLabel" name="iconConsultationEquipement">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>pencil-edit-button_Hatim.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -773,7 +763,7 @@ nous sommes programmés ainsi.</string>
    </item>
    <item row="5" column="1" colspan="3">
     <layout class="QHBoxLayout" name="horizontalLayout_6">
-     <item alignment="Qt::AlignLeft">
+     <item>
       <widget class="QComboBox" name="comboBoxBons">
        <property name="font">
         <font>

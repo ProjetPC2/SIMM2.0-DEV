@@ -11,126 +11,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
-        AjoutEquipement.resize(1287, 1269)
-        AjoutEquipement.setStyleSheet("QWidget{\n"
-"background: white;\n"
-"}\n"
-"QLineEdit {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247);\n"
-"min-width: 50px;\n"
-"max-width: 150px;\n"
-"}\n"
-"\n"
-"\n"
-"QDateEdit {\n"
-"max-width: 105px\n"
-"}\n"
-"\n"
-"QPushButton {\n"
-"color: black;\n"
-"background-color: rgb(240, 240, 240);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 16px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 130px;\n"
-"max-width:150px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"\n"
-"\n"
-"QComboBox {\n"
-"    border: 1px solid gray;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 8em;\n"
-"    max-width: 200px;\n"
-"    \n"
-"}\n"
-"\n"
-"QComboBox:editable {\n"
-"    background: white;\n"
-"}\n"
-"\n"
-"QComboBox:!editable, QComboBox::drop-down:editable {\n"
-"     background:rgb(241, 241, 241);\n"
-"}\n"
-"\n"
-"/* QComboBox gets the \"on\" state when the popup is open */\n"
-"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
-"                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
-"}\n"
-"\n"
-"QComboBox:on { /* shift the text when the popup opens */\n"
-"    padding-top: 3px;\n"
-"    padding-left: 4px;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    width: 15px;\n"
-"\n"
-"    border-left-width: 1px;\n"
-"    border-left-color: darkgrey;\n"
-"    border-left-style: solid; /* just a single line */\n"
-"    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
-"    border-bottom-right-radius: 3px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow {\n"
-"    image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png);\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
-"    top: 1px;\n"
-"    left: 1px;\n"
-"}\n"
-"\n"
-"QRadioButton  {\n"
-"background: white;\n"
-"}\n"
-"\n"
-"QTextEdit {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247)\n"
-"}\n"
-"\n"
-"QDateEdit{\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background :rgb(247,247,247);\n"
-"}\n"
-"")
+        AjoutEquipement.resize(964, 711)
+        AjoutEquipement.setStyleSheet("background:white;")
         self.gridLayout = QtWidgets.QGridLayout(AjoutEquipement)
         self.gridLayout.setObjectName("gridLayout")
         self.layoutTitre = QtWidgets.QHBoxLayout()
         self.layoutTitre.setObjectName("layoutTitre")
         self.label = QtWidgets.QLabel(AjoutEquipement)
+        self.label.setStyleSheet("background:white;")
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("Images/add1.png"))
         self.label.setScaledContents(False)
@@ -251,6 +139,15 @@ class Ui_AjoutEquipement(object):
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         self.comboBoxCategorie.setFont(font)
+        self.comboBoxCategorie.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxCategorie.setMaxCount(2147483645)
         self.comboBoxCategorie.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
         self.comboBoxCategorie.setObjectName("comboBoxCategorie")
@@ -262,18 +159,45 @@ class Ui_AjoutEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.lineEditMarque.setFont(font)
+        self.lineEditMarque.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"min-width: 50px;\n"
+"max-width: 220px;\n"
+"}")
         self.lineEditMarque.setObjectName("lineEditMarque")
         self.layoutChampsModifiables.addWidget(self.lineEditMarque)
         self.lineEditModele = QtWidgets.QLineEdit(AjoutEquipement)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.lineEditModele.setFont(font)
+        self.lineEditModele.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"min-width: 50px;\n"
+"max-width: 220px;\n"
+"}")
         self.lineEditModele.setObjectName("lineEditModele")
         self.layoutChampsModifiables.addWidget(self.lineEditModele)
         self.lineEditNoDeSerie = QtWidgets.QLineEdit(AjoutEquipement)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.lineEditNoDeSerie.setFont(font)
+        self.lineEditNoDeSerie.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white;\n"
+"min-width: 50px;\n"
+"max-width: 220px;\n"
+"}")
         self.lineEditNoDeSerie.setObjectName("lineEditNoDeSerie")
         self.layoutChampsModifiables.addWidget(self.lineEditNoDeSerie)
         self.comboBoxSalle = QtWidgets.QComboBox(AjoutEquipement)
@@ -281,6 +205,15 @@ class Ui_AjoutEquipement(object):
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         self.comboBoxSalle.setFont(font)
+        self.comboBoxSalle.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxSalle.setMaxCount(2147483645)
         self.comboBoxSalle.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
         self.comboBoxSalle.setObjectName("comboBoxSalle")
@@ -293,6 +226,15 @@ class Ui_AjoutEquipement(object):
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         self.comboBoxCentreDeService.setFont(font)
+        self.comboBoxCentreDeService.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxCentreDeService.setMaxCount(2147483645)
         self.comboBoxCentreDeService.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
         self.comboBoxCentreDeService.setObjectName("comboBoxCentreDeService")
@@ -304,6 +246,15 @@ class Ui_AjoutEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.dateEditDateDaquisition.setFont(font)
+        self.dateEditDateDaquisition.setStyleSheet("QDateEdit{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background :white;\n"
+"max-width:105px;\n"
+"}\n"
+"")
         self.dateEditDateDaquisition.setCalendarPopup(True)
         self.dateEditDateDaquisition.setObjectName("dateEditDateDaquisition")
         self.layoutChampsModifiables.addWidget(self.dateEditDateDaquisition)
@@ -311,10 +262,28 @@ class Ui_AjoutEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.dateEditDateDuDernierEntretien.setFont(font)
+        self.dateEditDateDuDernierEntretien.setStyleSheet("QDateEdit{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background :white;\n"
+"max-width:105px;\n"
+"}\n"
+"")
         self.dateEditDateDuDernierEntretien.setCalendarPopup(True)
         self.dateEditDateDuDernierEntretien.setObjectName("dateEditDateDuDernierEntretien")
         self.layoutChampsModifiables.addWidget(self.dateEditDateDuDernierEntretien)
         self.comboBoxProvenance = QtWidgets.QComboBox(AjoutEquipement)
+        self.comboBoxProvenance.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
         self.layoutChampsModifiables.addWidget(self.comboBoxProvenance)
         self.horizontalLayout.addLayout(self.layoutChampsModifiables)
@@ -389,12 +358,15 @@ class Ui_AjoutEquipement(object):
         self.labelEtatDeService.setObjectName("labelEtatDeService")
         self.verticalLayout_3.addWidget(self.labelEtatDeService)
         self.radioButtonEnService = QtWidgets.QRadioButton(self.frame)
+        self.radioButtonEnService.setStyleSheet("background:white;")
         self.radioButtonEnService.setObjectName("radioButtonEnService")
         self.verticalLayout_3.addWidget(self.radioButtonEnService)
         self.radioButtonEnMaintenance = QtWidgets.QRadioButton(self.frame)
+        self.radioButtonEnMaintenance.setStyleSheet("background:white;")
         self.radioButtonEnMaintenance.setObjectName("radioButtonEnMaintenance")
         self.verticalLayout_3.addWidget(self.radioButtonEnMaintenance)
         self.radioButtonAuRebus = QtWidgets.QRadioButton(self.frame)
+        self.radioButtonAuRebus.setStyleSheet("background:white;")
         self.radioButtonAuRebus.setObjectName("radioButtonAuRebus")
         self.verticalLayout_3.addWidget(self.radioButtonAuRebus)
         self.horizontalLayout_4.addLayout(self.verticalLayout_3)
@@ -423,15 +395,19 @@ class Ui_AjoutEquipement(object):
         self.labelEtatDeConservation.setObjectName("labelEtatDeConservation")
         self.verticalLayout_4.addWidget(self.labelEtatDeConservation)
         self.radioButtonQuasiNeuf = QtWidgets.QRadioButton(self.frame_2)
+        self.radioButtonQuasiNeuf.setStyleSheet("background:white;")
         self.radioButtonQuasiNeuf.setObjectName("radioButtonQuasiNeuf")
         self.verticalLayout_4.addWidget(self.radioButtonQuasiNeuf)
         self.radioButtonAcceptable = QtWidgets.QRadioButton(self.frame_2)
+        self.radioButtonAcceptable.setStyleSheet("background:white;")
         self.radioButtonAcceptable.setObjectName("radioButtonAcceptable")
         self.verticalLayout_4.addWidget(self.radioButtonAcceptable)
         self.radioButtonEnFinDeVie = QtWidgets.QRadioButton(self.frame_2)
+        self.radioButtonEnFinDeVie.setStyleSheet("background:white;")
         self.radioButtonEnFinDeVie.setObjectName("radioButtonEnFinDeVie")
         self.verticalLayout_4.addWidget(self.radioButtonEnFinDeVie)
         self.radioButtonDesuet = QtWidgets.QRadioButton(self.frame_2)
+        self.radioButtonDesuet.setStyleSheet("background:white;")
         self.radioButtonDesuet.setObjectName("radioButtonDesuet")
         self.verticalLayout_4.addWidget(self.radioButtonDesuet)
         self.horizontalLayout_6.addLayout(self.verticalLayout_4)
@@ -451,6 +427,13 @@ class Ui_AjoutEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEditCommentaires.setFont(font)
+        self.textEditCommentaires.setStyleSheet("QTextEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:white\n"
+"}")
         self.textEditCommentaires.setObjectName("textEditCommentaires")
         self.horizontalLayout_3.addWidget(self.textEditCommentaires)
         self.commentaire = QtWidgets.QLabel(AjoutEquipement)
@@ -471,6 +454,31 @@ class Ui_AjoutEquipement(object):
         font.setWeight(75)
         self.BoutonValider.setFont(font)
         self.BoutonValider.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonValider.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Images/check-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonValider.setIcon(icon)
@@ -478,6 +486,31 @@ class Ui_AjoutEquipement(object):
         self.horizontalLayout_8.addWidget(self.BoutonValider)
         self.BoutonModifier = QtWidgets.QPushButton(AjoutEquipement)
         self.BoutonModifier.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonModifier.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Images/Modify-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonModifier.setIcon(icon1)
@@ -486,6 +519,31 @@ class Ui_AjoutEquipement(object):
         self.horizontalLayout_8.addWidget(self.BoutonModifier)
         self.BoutonEnregistrer = QtWidgets.QPushButton(AjoutEquipement)
         self.BoutonEnregistrer.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonEnregistrer.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("Images/save (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BoutonEnregistrer.setIcon(icon2)
@@ -549,4 +607,14 @@ class Ui_AjoutEquipement(object):
         self.BoutonValider.setText(_translate("AjoutEquipement", "Valider"))
         self.BoutonModifier.setText(_translate("AjoutEquipement", "Modifier"))
         self.BoutonEnregistrer.setText(_translate("AjoutEquipement", "Enregistrer"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    AjoutEquipement = QtWidgets.QWidget()
+    ui = Ui_AjoutEquipement()
+    ui.setupUi(AjoutEquipement)
+    AjoutEquipement.show()
+    sys.exit(app.exec_())
 

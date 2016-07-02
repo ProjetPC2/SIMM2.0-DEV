@@ -14,48 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow 
- {
-
-background: white;
-}
-
-QPushButton {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background: rgb(247,247,247)
-}
-
-QPushButton::pressed {
-padding: 1px;
-color: black;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 8px;
-background:rgb(169, 167, 170)
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QTextEdit {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247)
-}
-
-QComboBox {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247)
-}</string>
+   <string notr="true">background: white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="2">

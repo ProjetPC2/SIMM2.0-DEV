@@ -25,7 +25,7 @@
    </iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background: white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -37,6 +37,9 @@
          <width>38</width>
          <height>34</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string/>
@@ -60,6 +63,9 @@
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string>Assistant de Recherche-Bon de travail</string>
@@ -114,6 +120,9 @@
            <pointsize>11</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Catégorie d'équipement</string>
          </property>
@@ -164,6 +173,9 @@ backround:rgb(245, 245, 245);
           <font>
            <pointsize>11</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
          </property>
          <property name="text">
           <string>Avant le</string>
@@ -229,6 +241,9 @@ max-width:220px;
            <pointsize>11</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>Après le</string>
          </property>
@@ -290,6 +305,9 @@ max-width:220px;
            <pointsize>11</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
          <property name="text">
           <string>État</string>
          </property>
@@ -344,6 +362,9 @@ backround:rgb(245, 245, 245);
           <font>
            <pointsize>11</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
          </property>
          <property name="text">
           <string>Centre de service</string>
@@ -405,6 +426,9 @@ backround:rgb(245, 245, 245);
           <font>
            <pointsize>11</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
          </property>
          <property name="text">
           <string>Description de la situation</string>
