@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>939</width>
-    <height>738</height>
+    <width>1258</width>
+    <height>975</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -25,7 +25,49 @@
    </iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: white;</string>
+   <string notr="true">QWidget{
+background:white;
+
+}
+
+QPushButton {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background: rgb(247,247,247)
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+
+QPushButton::pressed {
+padding: 1px;
+color: black;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(169, 167, 170)
+}
+
+QComboBox{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background: rgb(247,247,247)
+}
+
+
+QDateEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background: rgb(247,247,247)
+}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -37,9 +79,6 @@
          <width>38</width>
          <height>34</height>
         </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
        </property>
        <property name="text">
         <string/>
@@ -68,7 +107,7 @@
         <string notr="true">background: white;</string>
        </property>
        <property name="text">
-        <string>Assistant de Recherche-Bon de travail</string>
+        <string>Assistant de Recherche - Bon de travail</string>
        </property>
       </widget>
      </item>
@@ -117,7 +156,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -135,7 +174,7 @@
         <widget class="QComboBox" name="comboBoxCategorieEquipement">
          <property name="maximumSize">
           <size>
-           <width>243</width>
+           <width>500</width>
            <height>500</height>
           </size>
          </property>
@@ -143,17 +182,6 @@
           <font>
            <pointsize>11</pointsize>
           </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QComboBox {
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 1px 18px 1px 3px;
-    min-width: 8em;
-	max-width: 220px;
-backround:rgb(245, 245, 245);
-}
-	</string>
          </property>
         </widget>
        </item>
@@ -171,7 +199,7 @@ backround:rgb(245, 245, 245);
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -189,25 +217,14 @@ backround:rgb(245, 245, 245);
         <widget class="QDateEdit" name="calendrierAvant">
          <property name="maximumSize">
           <size>
-           <width>224</width>
+           <width>500</width>
            <height>500</height>
           </size>
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QDateEdit{
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background :white;
-max-width:220px;
-}
-</string>
          </property>
          <property name="displayFormat">
           <string>dd-MM-yyyy</string>
@@ -238,7 +255,7 @@ max-width:220px;
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -253,25 +270,14 @@ max-width:220px;
         <widget class="QDateEdit" name="calendrierApres">
          <property name="maximumSize">
           <size>
-           <width>224</width>
+           <width>500</width>
            <height>500</height>
           </size>
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QDateEdit{
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background :white;
-max-width:220px;
-}
-</string>
          </property>
          <property name="displayFormat">
           <string>dd-MM-yyyy</string>
@@ -302,7 +308,7 @@ max-width:220px;
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -320,7 +326,7 @@ max-width:220px;
         <widget class="QComboBox" name="comboBoxEtat">
          <property name="maximumSize">
           <size>
-           <width>223</width>
+           <width>500</width>
            <height>500</height>
           </size>
          </property>
@@ -328,17 +334,6 @@ max-width:220px;
           <font>
            <pointsize>11</pointsize>
           </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QComboBox {
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 1px 18px 1px 3px;
-    min-width: 8em;
-	max-width: 200px;
-backround:rgb(245, 245, 245);
-}
-	</string>
          </property>
         </widget>
        </item>
@@ -360,7 +355,7 @@ backround:rgb(245, 245, 245);
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -375,7 +370,7 @@ backround:rgb(245, 245, 245);
         <widget class="QComboBox" name="comboBoxCentreService">
          <property name="maximumSize">
           <size>
-           <width>223</width>
+           <width>500</width>
            <height>500</height>
           </size>
          </property>
@@ -383,17 +378,6 @@ backround:rgb(245, 245, 245);
           <font>
            <pointsize>11</pointsize>
           </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QComboBox {
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 1px 18px 1px 3px;
-    min-width: 8em;
-	max-width: 200px;
-backround:rgb(245, 245, 245);
-}
-	</string>
          </property>
         </widget>
        </item>
@@ -424,7 +408,7 @@ backround:rgb(245, 245, 245);
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -438,15 +422,12 @@ backround:rgb(245, 245, 245);
        <item>
         <widget class="QLineEdit" name="lineEditDescriptionSituation">
          <property name="styleSheet">
-          <string notr="true">QLineEdit {
+          <string notr="true">
 padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
-min-width: 50px;
-max-width: 300px;
-}</string>
+background: rgb(247,247,247);</string>
          </property>
         </widget>
        </item>
