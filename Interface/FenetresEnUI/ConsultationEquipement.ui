@@ -78,7 +78,7 @@
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>80</height>
+       <height>30</height>
       </size>
      </property>
     </spacer>
@@ -115,6 +115,7 @@ border: 1px solid gray;
 border-radius: 4px;
 min-width: 50px;
 max-width: 150px;
+background:rgb(247, 247, 247);
 }</string>
        </property>
       </widget>
@@ -134,6 +135,9 @@ max-width: 150px;
            <italic>false</italic>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
@@ -189,6 +193,9 @@ background-color: rgb(193, 213, 243);
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
 color: black;
@@ -233,6 +240,9 @@ background-color: rgb(193, 213, 243);
      </item>
      <item>
       <widget class="QPushButton" name="boutonAjouterUnBon">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
 color: black;
@@ -770,7 +780,7 @@ nous sommes programmés ainsi.</string>
       <widget class="QComboBox" name="comboBoxBons">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>MS Shell Dlg 2</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -781,7 +791,7 @@ nous sommes programmés ainsi.</string>
     padding: 1px 18px 1px 3px;
     min-width: 8em;
 	max-width: 200px;
-backround:rgb(245, 245, 245);
+background:rgb(247, 247, 247);
 }</string>
        </property>
        <property name="maxCount">
@@ -821,6 +831,9 @@ backround:rgb(245, 245, 245);
      </item>
      <item>
       <widget class="QPushButton" name="boutonConsulterBon">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
 color: black;

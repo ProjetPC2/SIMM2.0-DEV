@@ -288,7 +288,7 @@
     padding: 1px 18px 1px 3px;
     min-width: 8em;
 	max-width: 200px;
-backround:rgb(245, 245, 245);
+background:rgb(247, 247, 247);
 }
 	</string>
          </property>
@@ -331,6 +331,7 @@ border-radius: 4px;
 background:white;
 min-width: 50px;
 max-width: 220px;
+background:rgb(247, 247, 247);
 }</string>
          </property>
         </widget>
@@ -351,6 +352,7 @@ border-radius: 4px;
 background:white;
 min-width: 50px;
 max-width: 220px;
+background:rgb(247, 247, 247);
 }</string>
          </property>
         </widget>
@@ -371,6 +373,7 @@ border-radius: 4px;
 background:white;
 min-width: 50px;
 max-width: 220px;
+background:rgb(247, 247, 247);
 }</string>
          </property>
         </widget>
@@ -390,7 +393,7 @@ max-width: 220px;
     padding: 1px 18px 1px 3px;
     min-width: 8em;
 	max-width: 200px;
-backround:rgb(245, 245, 245);
+background:rgb(247, 247, 247);
 }
 	</string>
          </property>
@@ -432,7 +435,7 @@ backround:rgb(245, 245, 245);
     padding: 1px 18px 1px 3px;
     min-width: 8em;
 	max-width: 200px;
-backround:rgb(245, 245, 245);
+background:rgb(247, 247, 247);
 }
 	</string>
          </property>
@@ -474,6 +477,7 @@ border: 1px solid gray;
 border-radius: 4px;
 background :white;
 max-width:105px;
+background:rgb(247, 247, 247);
 }
 </string>
          </property>
@@ -500,6 +504,7 @@ border: 1px solid gray;
 border-radius: 4px;
 background :white;
 max-width:105px;
+background:rgb(247, 247, 247);
 }
 </string>
          </property>
@@ -520,7 +525,7 @@ max-width:105px;
     padding: 1px 18px 1px 3px;
     min-width: 8em;
 	max-width: 200px;
-backround:rgb(245, 245, 245);
+background:rgb(247, 247, 247);
 }
 	</string>
          </property>
