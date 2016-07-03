@@ -38,7 +38,7 @@ class Ui_ConsultationEquipement(object):
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.titreLayout.addItem(spacerItem)
         self.gridLayout.addLayout(self.titreLayout, 0, 0, 1, 4)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 80, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.gridLayout.addItem(spacerItem1, 1, 2, 1, 1)
         self.idLayout = QtWidgets.QHBoxLayout()
         self.idLayout.setObjectName("idLayout")
@@ -60,6 +60,7 @@ class Ui_ConsultationEquipement(object):
 "border-radius: 4px;\n"
 "min-width: 50px;\n"
 "max-width: 150px;\n"
+"background:rgb(247, 247, 247);\n"
 "}")
         self.lineEditId.setObjectName("lineEditId")
         self.idLayout.addWidget(self.lineEditId)
@@ -75,6 +76,7 @@ class Ui_ConsultationEquipement(object):
         font.setItalic(False)
         font.setWeight(75)
         self.boutonAfficherEquipement.setFont(font)
+        self.boutonAfficherEquipement.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonAfficherEquipement.setStyleSheet("QPushButton {\n"
 "color: black;\n"
 "background-color:rgb(245, 245, 245);\n"
@@ -115,6 +117,7 @@ class Ui_ConsultationEquipement(object):
         font.setItalic(False)
         font.setWeight(75)
         self.boutonModifierEquipement.setFont(font)
+        self.boutonModifierEquipement.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonModifierEquipement.setStyleSheet("QPushButton {\n"
 "color: black;\n"
 "background-color:rgb(245, 245, 245);\n"
@@ -147,6 +150,7 @@ class Ui_ConsultationEquipement(object):
         self.boutonModifierEquipement.setObjectName("boutonModifierEquipement")
         self.buttonsLayout.addWidget(self.boutonModifierEquipement)
         self.boutonAjouterUnBon = QtWidgets.QPushButton(ConsultationEquipement)
+        self.boutonAjouterUnBon.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonAjouterUnBon.setStyleSheet("QPushButton {\n"
 "color: black;\n"
 "background-color:rgb(245, 245, 245);\n"
@@ -400,7 +404,7 @@ class Ui_ConsultationEquipement(object):
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.comboBoxBons = QtWidgets.QComboBox(ConsultationEquipement)
         font = QtGui.QFont()
-        font.setFamily("Times New Roman")
+        font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         self.comboBoxBons.setFont(font)
         self.comboBoxBons.setStyleSheet("QComboBox {\n"
@@ -409,7 +413,7 @@ class Ui_ConsultationEquipement(object):
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 8em;\n"
 "    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
+"background:rgb(247, 247, 247);\n"
 "}")
         self.comboBoxBons.setMaxCount(2147483645)
         self.comboBoxBons.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
@@ -421,6 +425,7 @@ class Ui_ConsultationEquipement(object):
         self.comboBoxBons.addItem(icon3, "")
         self.horizontalLayout_6.addWidget(self.comboBoxBons)
         self.boutonConsulterBon = QtWidgets.QPushButton(ConsultationEquipement)
+        self.boutonConsulterBon.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonConsulterBon.setStyleSheet("QPushButton {\n"
 "color: black;\n"
 "background-color:rgb(245, 245, 245);\n"
@@ -500,14 +505,4 @@ class Ui_ConsultationEquipement(object):
         self.comboBoxBons.setItemText(1, _translate("ConsultationEquipement", "Bon 2016-03-07"))
         self.comboBoxBons.setItemText(2, _translate("ConsultationEquipement", "Bon 2016-05-12"))
         self.boutonConsulterBon.setText(_translate("ConsultationEquipement", "Consulter le Bon"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    ConsultationEquipement = QtWidgets.QWidget()
-    ui = Ui_ConsultationEquipement()
-    ui.setupUi(ConsultationEquipement)
-    ConsultationEquipement.show()
-    sys.exit(app.exec_())
 

@@ -145,7 +145,7 @@ class Ui_AjoutEquipement(object):
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 8em;\n"
 "    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
+"background:rgb(247, 247, 247);\n"
 "}\n"
 "    ")
         self.comboBoxCategorie.setMaxCount(2147483645)
@@ -167,6 +167,7 @@ class Ui_AjoutEquipement(object):
 "background:white;\n"
 "min-width: 50px;\n"
 "max-width: 220px;\n"
+"background:rgb(247, 247, 247);\n"
 "}")
         self.lineEditMarque.setObjectName("lineEditMarque")
         self.layoutChampsModifiables.addWidget(self.lineEditMarque)
@@ -182,6 +183,7 @@ class Ui_AjoutEquipement(object):
 "background:white;\n"
 "min-width: 50px;\n"
 "max-width: 220px;\n"
+"background:rgb(247, 247, 247);\n"
 "}")
         self.lineEditModele.setObjectName("lineEditModele")
         self.layoutChampsModifiables.addWidget(self.lineEditModele)
@@ -197,6 +199,7 @@ class Ui_AjoutEquipement(object):
 "background:white;\n"
 "min-width: 50px;\n"
 "max-width: 220px;\n"
+"background:rgb(247, 247, 247);\n"
 "}")
         self.lineEditNoDeSerie.setObjectName("lineEditNoDeSerie")
         self.layoutChampsModifiables.addWidget(self.lineEditNoDeSerie)
@@ -211,7 +214,7 @@ class Ui_AjoutEquipement(object):
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 8em;\n"
 "    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
+"background:rgb(247, 247, 247);\n"
 "}\n"
 "    ")
         self.comboBoxSalle.setMaxCount(2147483645)
@@ -232,7 +235,7 @@ class Ui_AjoutEquipement(object):
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 8em;\n"
 "    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
+"background:rgb(247, 247, 247);\n"
 "}\n"
 "    ")
         self.comboBoxCentreDeService.setMaxCount(2147483645)
@@ -253,6 +256,7 @@ class Ui_AjoutEquipement(object):
 "border-radius: 4px;\n"
 "background :white;\n"
 "max-width:105px;\n"
+"background:rgb(247, 247, 247);\n"
 "}\n"
 "")
         self.dateEditDateDaquisition.setCalendarPopup(True)
@@ -269,6 +273,7 @@ class Ui_AjoutEquipement(object):
 "border-radius: 4px;\n"
 "background :white;\n"
 "max-width:105px;\n"
+"background:rgb(247, 247, 247);\n"
 "}\n"
 "")
         self.dateEditDateDuDernierEntretien.setCalendarPopup(True)
@@ -281,7 +286,7 @@ class Ui_AjoutEquipement(object):
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 8em;\n"
 "    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
+"background:rgb(247, 247, 247);\n"
 "}\n"
 "    ")
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
@@ -607,14 +612,4 @@ class Ui_AjoutEquipement(object):
         self.BoutonValider.setText(_translate("AjoutEquipement", "Valider"))
         self.BoutonModifier.setText(_translate("AjoutEquipement", "Modifier"))
         self.BoutonEnregistrer.setText(_translate("AjoutEquipement", "Enregistrer"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    AjoutEquipement = QtWidgets.QWidget()
-    ui = Ui_AjoutEquipement()
-    ui.setupUi(AjoutEquipement)
-    AjoutEquipement.show()
-    sys.exit(app.exec_())
 
