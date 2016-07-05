@@ -133,6 +133,7 @@ Salle:
 - IST
 - BOX 5
 - as
+- '123'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -155,4 +156,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 509
+dernierID-Equipement: 510

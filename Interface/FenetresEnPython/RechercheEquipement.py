@@ -56,7 +56,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
         # self.tableResultats.setHorizontalHeaderLabels("ID")
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
-        self.tableResultats.resizeColumnsToContents()
         self.tableResultats.setRowCount(0)
 
 
@@ -197,6 +196,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 for cle in self.listeCleDonnees:
                     self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                     colonne += 1
+                self.tableResultats.resizeColumnsToContents()
+
         else:
             print("dictionnaire de recherche vide")
 

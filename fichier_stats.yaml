@@ -1,18 +1,185 @@
-nbEquipement: 4
+nbEquipement: 501
 nbEquipementCentreService:
+  Archives:
+    Ordinateur: 3
+  "Bloc op\xC3\xA9ratoire":
+    Appareil d'anesthesie: 4
+    Appareil d'electrochirurgie: 4
+    Appareil e succion: 2
+    Balance: 1
+    Civiere de transport: 1
+    Concentrateur d'oxygene: 2
+    Defibrilateur: 1
+    Lampe d'examen: 2
+    Lit: 21
+    Moniteur physiologique: 3
+    Nebulisateur: 1
+    Plaque chauffante: 1
+    Saturometre (Oxymetre): 1
+    Sterilisateur e vapeur: 4
+    Sterilisateur portable: 1
+    Support e solutes: 15
+    Table d'examen: 3
+    Table d'instruments: 12
+    Table de chirurgie: 1
+  "Centre Pr\xC3\xA9natal":
+    Balance: 4
+    Lampe d'examen: 3
+    Moniteur fetal: 3
+    Ordinateur: 5
+    Support e solutes: 1
+    Table d'examen: 7
+    Table d'instruments: 5
+    UPS: 1
+  Clinique externe:
+    Autoscope: 3
+    Balance: 3
+    Chaise dentiste: 1
+    Lampe d'examen: 1
+    Negatoscope (moniteur de radiographie): 1
+    Ordinateur: 10
+    Sterilisateur e vapeur: 1
+    Support e solutes: 1
+    Table d'examen: 7
+    Table d'instruments: 3
+    Tensiometre: 5
+    Toise: 1
+    UPS: 5
+  Don de sang:
+    Autre: 2
+    Balance: 3
+    Centrifugeuse: 2
+    Chaise de prelevement: 2
+    Imprimante: 1
+    Incubateur: 2
+    Ordinateur: 1
+    Refrigerateur: 4
+  Inconnu:
+    Autre: 1
+    Balance pediatrique: 1
+    Centrifugeuse: 1
+    Concentrateur d'oxygene: 2
+    Four e orthese: 1
+    Moniteur physiologique: 1
+    Nebulisateur: 1
+    Sterilisateur e vapeur: 1
+    Tensiometre: 8
+    Thermometre: 1
   Laboratoire:
-    Incubateur: 1
+    Analyseur CD4 (VIH): 1
+    Analyseur biochimie: 1
+    Analyseur hematologie: 1
+    Bain chauffant: 2
+    Centrifugeuse: 3
+    Imprimante: 1
+    Incubateur: 5
+    Melangeur: 4
+    Microscope: 10
+    Ordinateur: 5
+    Plaque chauffante: 3
+    Refrigerateur: 5
+    Spectrophotometre: 1
+    UPS: 4
+  "Maternit\xC3\xA9":
+    Autoscope: 1
+    Balance: 1
+    Balance pediatrique: 4
+    Chaise roulante: 1
+    Civiere de transport: 1
+    Concentrateur d'oxygene: 1
+    Lampe d'examen: 2
+    Lit: 16
+    Moniteur fetal: 1
+    Moniteur physiologique: 1
+    Saturometre (Oxymetre): 1
+    Sonographe (Echographe): 1
+    Support e solutes: 9
+    Table d'examen: 5
+    Table d'instruments: 5
+    Table de chevet: 2
+    Table de soins neonataux: 7
+    Tensiometre: 1
+  Medecine interne:
+    Balance: 1
+    Chaise roulante: 1
+    Concentrateur d'oxygene: 1
+    Lit: 26
+    Support e solutes: 9
+    Table d'instruments: 3
+    Table de chevet: 7
+    Tensiometre: 1
+  Pharmacie:
+    Imprimante: 3
+    Ordinateur: 3
+    Refrigerateur: 1
+  "P\xC3\xA9diatrie":
+    Autoscope: 3
+    Balance: 6
+    Balance pediatrique: 5
+    Incubateur neonatal: 2
+    Lampe d'examen: 5
+    Lit: 12
+    Moniteur physiologique: 1
+    Negatoscope (moniteur de radiographie): 1
+    Ordinateur: 2
+    Refrigerateur: 1
+    Saturometre (Oxymetre): 1
+    Support e solutes: 8
+    Table d'examen: 8
+    Table d'instruments: 3
+    Table de soins neonataux: 13
+    Tensiometre: 1
+    Toise: 2
+    UPS: 1
+    electrocardiographe: 1
+  Radiologie:
+    Appareil de radiographie: 2
+    Negatoscope (moniteur de radiographie): 2
+    Sechoir: 1
+    Table d'examen: 1
+    Table d'instruments: 1
+  "R\xC3\xA9adaptation":
+    Table d'examen: 4
   Urgences:
-    Defibrilateur: 3
+    Analyseur biochimie: 1
+    Analyseur hematologie: 1
+    Appareil e succion: 2
+    Balance: 1
+    Chaise roulante: 2
+    Civiere de transport: 1
+    Concentrateur d'oxygene: 4
+    Defibrilateur: 5
+    Lampe d'examen: 2
+    Lit: 6
+    Moniteur physiologique: 4
+    Nebulisateur: 5
+    Saturometre (Oxymetre): 2
+    Support e solutes: 6
+    Table d'examen: 6
+    Table d'instruments: 5
+    Tensiometre: 8
+    Thermometre: 1
+    electrocardiographe: 1
 nbEquipementEtatConservation:
-  Acceptable: 1
-  Desuet: 0
-  En fin de vie: 1
-  Quasi neuf: 4
+  Acceptable: 423
+  Desuet: 15
+  En fin de vie: 49
+  Quasi neuf: 14
 nbEquipementEtatService:
-  Au rebus: 2
-  En maintenance: 0
-  En service: 4
+  Au rebus: 15
+  En maintenance: 52
+  En service: 434
 nbEquipementProvenance:
   ? ''
-  : 4
+  : 370
+  CDC: 10
+  CHU Sainte-Justine: 5
+  Croix-Rouge Haitienne: 5
+  I-TECH: 51
+  MSPP: 1
+  PNS: 1
+  SCMS: 3
+  SMS: 6
+  UGP: 44
+  UNFPA: 4
+  UNICEF: 1

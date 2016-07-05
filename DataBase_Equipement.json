@@ -9107,18 +9107,36 @@ _default:
       Salle: ''
     state:
       eid: 505
-  506:
+  506: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Incubateur
+      CentreService: Laboratoire
+      Commentaires: ''
+      DateAcquisition: 2015-07-12
+      DateDernierEntretien: 2016-02-27
+      EtatConservation: En fin de vie
+      EtatService: Au rebus
+      ID: '509'
+      Marque: Abbott
+      Modele: Commander
+      NbBonTravail: 0
+      NumeroSerie: IN651133
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 506
+  507:
     CategorieEquipement: Incubateur
     CentreService: Laboratoire
     Commentaires: ''
     DateAcquisition: 2015-07-12
     DateDernierEntretien: 2016-02-27
     EtatConservation: En fin de vie
-    EtatService: Au rebus
-    ID: '509'
+    EtatService: En maintenance
+    ID: '510'
     Marque: Abbott
     Modele: Commander
     NbBonTravail: 0
     NumeroSerie: IN651133
     Provenance: ''
-    Salle: ''
+    Salle: '123'

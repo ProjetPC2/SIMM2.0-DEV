@@ -282,6 +282,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                             else:
                                 self.tableResultats.setItem(i, colonne, QTableWidgetItem((dictionnaire[cle])))
                             colonne += 1
+                        self.tableResultats.resizeColumnsToContents()
+
                 else:
                     print("Aucun resultat")
             else:

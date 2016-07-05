@@ -133,7 +133,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Redefinition de la taille des champs d'entree de date
         self.dateEditDateDaquisition.setMinimumWidth(200)
         self.dateEditDateDuDernierEntretien.setMinimumWidth(200)
-
+        self.dateEditDateDuDernierEntretien.setDate(QDate.currentDate())
+        self.dateEditDateDaquisition.setDate(QDate.currentDate())
 
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipement)
         self.BoutonModifier.clicked.connect(self.modifierEquipement)

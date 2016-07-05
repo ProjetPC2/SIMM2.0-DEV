@@ -28,7 +28,7 @@ class BonDeTravail(Ui_BonDeTravail):
         if(consulterBDT is not None):
             self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
             self.chercherEquipement()
-            self.indiceBonDeTravail = consulterBDT["ID-BDT"] - 1
+            self.indiceBonDeTravail = int(consulterBDT["ID-BDT"]) - 1
             self.chargerBonTravail()
             self.ajoutBonDeTravail()
         if(ajouterID is not None):
