@@ -1,24 +1,18 @@
 nbEquipement: 4
 nbEquipementCentreService:
-  "Maternit\xE9":
-    ECG: 0
-  "Natalit\xE9":
-    Lit: 1
-  Urgence:
-    ECG: 1
-    "St\xE9thoscope": 2
+  Laboratoire:
+    Incubateur: 1
+  Urgences:
+    Defibrilateur: 3
 nbEquipementEtatConservation:
   Acceptable: 1
   Desuet: 0
-  En fin de vie: 0
-  Quasi neuf: 3
+  En fin de vie: 1
+  Quasi neuf: 4
 nbEquipementEtatService:
-  Au rebus: 0
-  En maintenance: 1
-  En service: 3
+  Au rebus: 2
+  En maintenance: 0
+  En service: 4
 nbEquipementProvenance:
-  CHU St-Justine: 0
-  CHU Ste-Justine: 0
-  CSI: 0
-  POLY: 0
-  Poly: 4
+  ? ''
+  : 4

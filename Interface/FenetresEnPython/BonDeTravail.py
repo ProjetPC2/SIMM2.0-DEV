@@ -92,6 +92,10 @@ class BonDeTravail(Ui_BonDeTravail):
         '''
         #On fait la requete a la BDD
         self.boutonConsultation.hide()
+        self.boutonSauvegarde.hide()
+        self.boutonAjoutBDT.show()
+        self.boutonAjoutBDT.setDisabled(True)
+        self.comboBoxOuvertFerme.setDisabled(False)
         print("recherche equipement")
         self.dic_request['ID'] = self.lineEditID.text()
         listeTrouve = self.equipementManager.RechercherEquipement(self.dic_request)
@@ -117,12 +121,18 @@ class BonDeTravail(Ui_BonDeTravail):
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
-            self.labelEcritureCatEquip.setText("")
-            self.labelEcritureCentreService.setText("")
-            self.labelEcritureMarque.setText("")
-            self.labelEcritureSalle.setText("")
-            self.labelEcritureModele.setText("")
+            self.labelEcritureCatEquip.clear()
+            self.labelEcritureCentreService.clear()
+            self.labelEcritureMarque.clear()
+            self.labelEcritureSalle.clear()
+            self.labelEcritureModele.clear()
+            self.labelEcritureBonTravail.clear()
+            self.dateEdit.clear()
+            self.timeEditTempsEstime.clear()
+            self.textEditDescSituation.clear()
+            self.textEditDescIntervention.clear()
             self.boutonAjoutBDT.setDisabled(True)
+            self.comboBoxOuvertFerme.setDisabled(True)
             self.boutonFlecheDoubleDroite.hide()
             self.boutonFlecheDroite.hide()
             self.boutonFlecheGauche.hide()
@@ -270,6 +280,7 @@ class BonDeTravail(Ui_BonDeTravail):
             widget.show()
             widget.clear()
         self.comboBoxOuvertFerme.setDisabled(False)
+        self.comboBoxOuvertFerme.setCurrentIndex(0)
         self.comboBoxNomTech.show()
         self.boutonAjoutBDT.hide()
         self.boutonFlecheDoubleDroite.hide()

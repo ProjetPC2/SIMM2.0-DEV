@@ -2,6 +2,7 @@ import datetime
 
 import yaml
 from PyQt5 import QtGui, QtWidgets
+from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
@@ -145,6 +146,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxSalle.setEditable(True)
         self.comboBoxProvenance.setEditable(True)
         self.comboBoxCentreDeService.setEditable(True)
+
+        self.dateEditDateDuDernierEntretien.setDate(QDate.currentDate())
+        self.dateEditDateDaquisition.setDate(QDate.currentDate())
 
     def obtenirEtatDeService(self, groupeBoutton):
         """Methode permettant d'obtenir le choix selectionne parmi le groupe

@@ -1,9 +1,11 @@
 import os
 import sys
 import time
+from multiprocessing.pool import Pool
 
 import yaml
-from PyQt5.QtWidgets import (QFileDialog, QApplication)
+from PyQt5.QtWidgets import QFileDialog, QApplication, QPushButton
+from multiprocessing import Process
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import inch, A4, landscape
 from reportlab.lib.styles import getSampleStyleSheet
@@ -19,20 +21,22 @@ import time
 
 from BDD.EquipementManager import EquipementManager
 
-class PDF(Thread):
-    def __init__(self):
-        Thread.__init__(self)
+class PDF():
+    def __init__(self, path, bouton):
+        # Thread.__init__(self)
         self.PAGE_WIDTH = defaultPageSize[1];
         self.PAGE_HEIGHT = defaultPageSize[0]
 
         self.Title = "Inventaire - S.I.M.M 2.0"
         self.pageinfo = "S.I.M.M 2.0"
         #On autorise que les pdf
-        self.filter = "PDF (*.pdf)"
+        # self.filter = "PDF (*.pdf)"
         # fileName = QFileDialog.getSaveFileName(None, 'Save file', "/home/SIMM2.0.pdf", filter)
         #On ouvre une fenetre de dialogue pour demander ou placer le fichier
         #On place le fichier par defaut dans le bureau avec le nom SIMM2.0.pdf
-        self.fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"), self.filter)
+        # self.fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"), self.filter)
+        print("bouton", bouton.text())
+        self.creationPDF(path, bouton)
 
     def myFirstPage(self, canvas, doc):
         """Methode s'occupant de la mise en page du debut de document
@@ -78,7 +82,7 @@ class PDF(Thread):
         canvas.drawString(inch, 0.75 * inch, "Page %d %s" % (doc.page, self.pageinfo))
         canvas.restoreState()
 
-    def creationPDF(self, path):
+    def creationPDF(self, path, bouton):
         doc = SimpleDocTemplate(path, pagesize = landscape(A4))
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
         # Ajout d'un espacement
@@ -160,6 +164,9 @@ class PDF(Thread):
         # Ecriture du document pdf
         doc.build(elements, onFirstPage=self.myFirstPage, onLaterPages= self.myLaterPages)
         print("termine")
+        if(bouton is not None):
+            bouton.setDisabled(False)
+
 
     def get_image(self, path, width=1*cm):
         """Methode permettant la creation de l'image"""
@@ -169,15 +176,20 @@ class PDF(Thread):
         return Image(path, width=width, height=(width * aspect))
 
     def run(self):
-        if(self.fileName[0] != ""):
-            self.creationPDF(self.fileName[0])
+        if(self.fileName[0] != None and self.fileName[0] !=""):
+            # p = Process(target=self.creationPDF, args=(self.fileName[0],))
+            # self.creationPDF(self.fileName[0])
+            # p.start()
+            pool = Pool(processes=4)  # start 4 worker processes
+            result = pool.apply_async(self.creationPDF, [self.fileName[0]])
         else:
             print("Sauvegarde annule")
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    pdf = PDF()
-    print(pdf.fileName[0])
-    pdf.creationPDF(pdf.fileName[0])
+    # pdf = PDF(pdf.fileName[0])
+    # print(pdf.fileName[0])
+    # # pdf.creationPDF(pdf.fileName[0])
+    # pdf.run()
     sys.exit(app.exec_())

@@ -1,19 +1,29 @@
+import os
 import sys
+from multiprocessing.pool import Pool
+
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QStatusBar
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from multiprocessing import Process
 
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
 
 from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
+from Interface.FenetresEnPython.Attente import Overlay
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
 from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipement
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
+from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.Statistique import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 
-from Interface.FenetresEnPython.PDF import PDF
+from Interface.FenetresEnPython.PDF2 import PDF
 from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeTravail
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
 
@@ -30,6 +40,12 @@ class Accueil(Ui_Accueil):
         self.ajoutAccueil()
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
+        self.Accueil = Accueil
+        self.statusBar = self.Accueil.statusBar()
+        self.statusBar.showMessage("Bonjour", 1000)
+        self.statusBar.setStyleSheet("background:None")
+        # self.setCentralWidget(self.consultationEquipement)
+        # self.overlay = Overlay(self.consultationEquipement)
 
     def ajoutAccueil(self):
         '''
@@ -67,6 +83,8 @@ class Accueil(Ui_Accueil):
         self.support = None
         self.supprimeEquipement = None
         self.supprimeBonDeTravail = None
+        self.c = Communicate()
+
         #Connexion des differents elements
         self.connectionBouton()
 
@@ -74,8 +92,7 @@ class Accueil(Ui_Accueil):
         self.BoutonFlecheNavigation.clicked.connect(self.naviguer)
 
         self.boutonSelectionne = None
-
-
+        self.pool = Pool(processes=4)
     def connectionBouton(self):
         '''
             Methode qui va faire la connection des differents boutons
@@ -94,6 +111,7 @@ class Accueil(Ui_Accueil):
         self.BoutonStatistiques.clicked.connect(self.afficherStatistique)
 
         self.BoutonSupportTecnique.clicked.connect(self.afficherSupport)
+        self.c.closeApp.connect(self.BoutonImprimerInventaire.show)
 
 
     def afficherAjoutEquipement(self):
@@ -104,6 +122,10 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # On masque les autres elements
+        # self.pool.apply_async(self.imprimerInventaire)
+        # self.pool.close()
+        # self.pool.join()
+        # self.Accueil.affichage()
         self.masquerElementGraphique()
         self.selectionnerBouton(self.BoutonAjouterEquipement)
         if self.ajoutEquipement is None:
@@ -130,8 +152,11 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # On masque les autres elements
+
         self.masquerElementGraphique()
+
         self.selectionnerBouton(self.BoutonModifierConsulterEquipement)
+
         if self.consultationEquipement is None:
             # Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
@@ -469,6 +494,7 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.consultationBonDeTravail = QtWidgets.QWidget()
+
             # dictID = dict()
             # dictID["ID-EQ"] = self.consultationEquipementUI.equipement["ID"]
             # indice = self.consultationEquipementUI.comboBoxBons.currentText()
@@ -488,11 +514,22 @@ class Accueil(Ui_Accueil):
 
 
     def imprimerInventaire(self):
-        pdf = PDF()
+        self.BoutonImprimerInventaire.setDisabled(True)
+        # pdf = PDF()
+        # print("impression en cours")
         # pdf.creationPDF(pdf.fileName[0])
-        pdf.start()
-        # On attend la fin du thread, on annule le lancement en parallele pour l'instant car le logiciel repond mal
-        pdf.join()
+        # self.overlay.show()
+        # self.Accueil.setEnabled(False)
+
+        # pdf.start()
+        # # On attend la fin du thread, on annule le lancement en parallele pour l'instant car le logiciel repond mal
+        # pdf.join()
+        # self.Accueil.setEnabled(True)
+        # self.overlay.()
+
+        # p = Process(target=pdf.run)
+        # p.start()
+        # p.join()
 
     def naviguer(self):
         if (len(self.listeNavigation) > 1):
@@ -522,6 +559,30 @@ class Accueil(Ui_Accueil):
         self.boutonSelectionne = bouton
         # self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
 
+class MainWindow(QMainWindow):
+    def __init__(self, parent=None):
+        QMainWindow.__init__(self, parent)
+        self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
+        self.setWindowTitle("SIMM 2.0")
+
+        # self.show()
+        # widget = QWidget(self)
+        #
+        #
+        # self.setCentralWidget(widget)
+        # self.overlay = Overlay(self)
+        # self.overlay.hide()
+        #
+        # self.overlay.show()
+        process = Process(target= self.affichage)
+        process.start()
+
+    # def resizeEvent(self, event):
+    #     self.overlay.resize(event.size())
+    #     event.accept()
+
+    def affichage(self):
+        self.ui = Accueil(self)
 
 class SIMM():
     '''
@@ -532,13 +593,62 @@ class SIMM():
     # On masque les autres elements
     def __init__(self):
         app = QtWidgets.QApplication(sys.argv)
+
+        splash_pix = QPixmap('Images\SIMM2.0.png')
+        splash = QSplashScreen(splash_pix, Qt.WindowStaysOnTopHint)
+        splash.setMask(splash_pix.mask())
+        splash.show()
+
         MainFrame = QtWidgets.QMainWindow()
-        ui = Accueil(MainFrame)
+        # pool = Pool(processes=4)  # start 4 worker processes
+        # result = pool.apply_async(f, [10])
+        # ui = pool.apply_async(self.affichage,[MainFrame, pool])
+        self.mapper = QSignalMapper(MainFrame)
+        self.mapper.mapped[QWidget].connect(impressionPDF)
+
+        self.ui = Accueil(MainFrame)
+        self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
+        self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
         MainFrame.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         MainFrame.setWindowTitle("SIMM 2.0")
         MainFrame.show()
+        # ui.BoutonImprimerInventaire.connect()
+
+        # MainFrame = MainWindow()
+        # MainFrame.show()
+        splash.finish(MainFrame)
         sys.exit(app.exec_())
         os.system("pause")
+    def affichage(self, MainFrame, pool):
+        ui = Accueil(MainFrame)
+
+    def resizeEvent(self, event):
+        self.overlay.resize(event.size())
+        event.accept()
+
+def impressionPDF(bouton):
+    print(bouton)
+
+    # ui.BoutonImprimerInventaire.disabled(True)
+    print("impression en cours")
+    filter = "PDF (*.pdf)"
+    fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"),
+                                           filter)
+    if(fileName[0] != ""):
+        p = Process(target=imprimer, args=(fileName[0], bouton))
+        p.start()
+    else:
+        bouton.setDisabled(False)
+
+
+def imprimer(path, bouton):
+
+    print("Impression en cours de chez cours")
+    pdf = PDF(path, bouton)
+    print("Impression en cours de chez cours")
+    # pdf.creationPDF(path)
+    print("Impression en cours de chez cours")
 
 if __name__ == "__main__":
+
     SIMM()
