@@ -23,6 +23,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonEnregistrer.hide()
         self.BoutonModifier.hide()
 
+
     def ajout(self):
 
         # Creation du groupe contenant le choix pour l'etat de service

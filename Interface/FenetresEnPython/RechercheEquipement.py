@@ -1,4 +1,6 @@
 import datetime
+from threading import Thread
+
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
@@ -8,9 +10,10 @@ from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.RechercheEquipementUI import Ui_RechercheEquipement
 
 class RechercheEquipement(Ui_RechercheEquipement):
-    def __init__(self, widget):
+    def __init__(self, widget, finChargement):
         self.setupUi(widget)
         self.ajoutRechercheEquipement()
+        self.finChargement = finChargement
 
     def ajoutRechercheEquipement(self):
         #Recuperation des differents attributs d'un equipement
@@ -62,13 +65,13 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.dictionnaireRecherche = dict()
 
         #Connexion des differents champs de selections
-        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipement)
-        self.comboBoxEtatService.currentTextChanged.connect(self.rechercheEtatDeService)
-        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
-        self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
-        self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
-        self.lineEditNumeroSerie.returnPressed.connect(self.rechercheNumeroSerie)
-        self.boutonActualiser.clicked.connect(self.rechercheNumeroSerie)
+        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieThread)
+        self.comboBoxEtatService.currentTextChanged.connect(self.rechercheEtatDeServiceThread)
+        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreServiceThread)
+        self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalleThread)
+        self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenanceThread)
+        self.lineEditNumeroSerie.returnPressed.connect(self.rechercheNumeroSerieThread)
+        self.boutonActualiser.clicked.connect(self.rechercheNumeroSerieThread)
         self.boutonNouvelleRecherche.clicked.connect(self.nouvelleRecherche)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
 
@@ -129,6 +132,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
 
 
     def rechercheEtatDeService(self):
@@ -212,11 +216,44 @@ class RechercheEquipement(Ui_RechercheEquipement):
         # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.setRowCount(0)
 
+    def rechercheCategorieThread(self):
+        thread = RechercherEquipement(self.rechercheCategorieEquipement)
+        thread.start()
+
+    def rechercheEtatDeServiceThread(self):
+        thread = RechercherEquipement(self.rechercheEtatDeService)
+        thread.start()
+
+    def rechercheCentreServiceThread(self):
+        thread = RechercherEquipement(self.rechercheCentreService)
+        thread.start()
+
+    def rechercheSalleThread(self):
+        thread = RechercherEquipement(self.rechercheSalle)
+        thread.start()
+
+    def rechercheProvenanceThread(self):
+        thread = RechercherEquipement(self.rechercheProvenance)
+        thread.start()
+
+    def rechercheNumeroSerieThread(self):
+        thread = RechercherEquipement(self.rechercheNumeroSerie)
+        thread.start()
+
+
+class RechercherEquipement (Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+
+    def run(self):
+        self.fonction()
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     rechercheEquipement = QtWidgets.QWidget()
-    rechercheEquipementUI = RechercheEquipement(rechercheEquipement)
+    rechercheEquipementUI = RechercheEquipement(rechercheEquipement, None)
     rechercheEquipement.show()
     sys.exit(app.exec_())

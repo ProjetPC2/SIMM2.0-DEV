@@ -28,6 +28,7 @@ class Ui_ConsultationEquipement(object):
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(18)
         font.setBold(True)
+
         font.setItalic(False)
         font.setUnderline(False)
         font.setWeight(75)

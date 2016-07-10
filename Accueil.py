@@ -1,27 +1,24 @@
 import os
 import sys
-from multiprocessing.pool import Pool
+from multiprocessing import Process
 
 from PyQt5 import QtWidgets
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QStatusBar
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from multiprocessing import Process
 
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
-
 from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
+from Interface.FenetresEnPython.Attente import Overlay, AttenteThread
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
 from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipement
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
+from Interface.FenetresEnPython.PDF2 import PDF
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
+from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.Statistique import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
-
-from Interface.FenetresEnPython.PDF2 import PDF
 from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeTravail
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
 
@@ -38,6 +35,10 @@ class Accueil(Ui_Accueil):
         self.ajoutAccueil()
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
+        self.overlay = Accueil.overlay
+        self.Accueil = Accueil
+        self.finChargment = Communicate()
+
 
     def ajoutAccueil(self):
         '''
@@ -119,7 +120,7 @@ class Accueil(Ui_Accueil):
 
             self.ajoutEquipement = QtWidgets.QWidget()
             self.ajoutEquipementUI = AjoutEquipement(self.ajoutEquipement)
-            self.ajoutEquipement.setStyleSheet("background: white;")
+            # self.ajoutEquipement.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.ajoutEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutEquipement)
@@ -143,12 +144,15 @@ class Accueil(Ui_Accueil):
         if self.consultationEquipement is None:
             # Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
-            self.consultationEquipementUI = ConsultationEquipement(self.consultationEquipement)
+            self.consultationEquipementUI = ConsultationEquipement(self.consultationEquipement, self.finChargment)
             # self.consultationEquipement.setStyleSheet("background: white;")
 
             # connexion de l'action a l'appuye du bouton modification equipement
-            self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
+            self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.attente)
+            # self.consultationEquipementUI.lineEditId.returnPressed.connect(self.attente)
+            # self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.consultationEquipementUI.rechercherEquipement)
 
+            self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
             self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.ajouterBonDeTravailEquipement)
             self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
             self.listeElementParDefaut.append(self.consultationEquipement)
@@ -175,8 +179,15 @@ class Accueil(Ui_Accueil):
         if self.rechercheEquipement is None:
             # Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget()
-            self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement)
-            self.rechercheEquipement.setStyleSheet("background: white;")
+            self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement, self.finChargment)
+            # self.rechercheEquipement.setStyleSheet("background: white;")
+            self.rechercheEquipementUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.attente)
+            self.rechercheEquipementUI.comboBoxProvenance.currentTextChanged.connect(self.attente)
+            self.rechercheEquipementUI.comboBoxSalle.currentTextChanged.connect(self.attente)
+            self.rechercheEquipementUI.comboBoxCentreService.currentTextChanged.connect(self.attente)
+            self.rechercheEquipementUI.comboBoxEtatService.currentTextChanged.connect(self.attente)
+            self.rechercheEquipementUI.lineEditNumeroSerie.returnPressed.connect(self.attente)
+            self.rechercheEquipementUI.boutonActualiser.clicked.connect(self.attente)
             self.listeElementParDefaut.append(self.rechercheEquipement)
             self.layoutAffichagePrincipal.addWidget(self.rechercheEquipement)
             self.rechercheEquipementUI.tableResultats.doubleClicked.connect(self.choisirEquipement)
@@ -198,7 +209,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.modificationEquipementRecherche = QtWidgets.QWidget()
             self.modificationEquipementRechercheUI = ModificationEquipement(self.modificationEquipementRecherche, equipement)
-            self.modificationEquipementRecherche.setStyleSheet("background: white;")
+            # self.modificationEquipementRecherche.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.modificationEquipementRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipementRecherche)
@@ -218,7 +229,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.supprimeEquipement = QtWidgets.QWidget()
             self.supprimeEquipementUI = SuppressionEquipement(self.supprimeEquipement)
-            self.supprimeEquipement.setStyleSheet("background: white;")
+            # self.supprimeEquipement.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.supprimeEquipement)
             self.layoutAffichagePrincipal.addWidget(self.supprimeEquipement)
@@ -236,7 +247,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.supprimeBonDeTravail = QtWidgets.QWidget()
             self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
-            self.supprimeBonDeTravail.setStyleSheet("background: white;")
+            # self.supprimeBonDeTravail.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.supprimeBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
@@ -259,7 +270,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
             self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail)
-            self.ajoutBonDeTravail.setStyleSheet("background: white;")
+            # self.ajoutBonDeTravail.setStyleSheet("background: white;")
 
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
@@ -289,7 +300,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.rechercheBonDeTravail = QtWidgets.QWidget()
             self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail)
-            self.rechercheBonDeTravail.setStyleSheet("background: white;")
+            # self.rechercheBonDeTravail.setStyleSheet("background: white;")
 
             self.rechercheBonDeTravailUI.tableResultats.doubleClicked.connect(self.choisirBonDeTravailTableau)
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)
@@ -319,7 +330,7 @@ class Accueil(Ui_Accueil):
             self.modificationBonDeTravailRecherche = QtWidgets.QWidget()
 
             self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
-            self.modificationBonDeTravailRecherche.setStyleSheet("background: white;")
+            # self.modificationBonDeTravailRecherche.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.modificationBonDeTravailRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationBonDeTravailRecherche)
         else:
@@ -342,7 +353,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget Statistique s'il n'existe pas
             self.statistique = QtWidgets.QWidget()
             self.statistiqueUI = Statistique(self.statistique)
-            self.statistique.setStyleSheet("background: white;")
+            # self.statistique.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.statistique)
             self.layoutAffichagePrincipal.addWidget(self.statistique)
         else:
@@ -368,7 +379,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
             self.supportPC2UI = SupportPC2(self.support)
-            self.support.setStyleSheet("background: white;")
+            # self.support.setStyleSheet("background: white;")
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
             self.listeElementParDefaut.append(self.support)
@@ -380,6 +391,9 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
         self.listeNavigation.append(self.support)
+        # self.overlay.raise_()
+        # self.overlay.show()
+
 
     def afficherAccueil(self):
         '''
@@ -389,6 +403,7 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # On masque les autres elements
+        self.selectionnerBouton(self.BoutonAccueil)
         self.masquerElementGraphique()
         self.LabelSIMM20HopitalSaintMichel.show()
         self.logo.show()
@@ -415,6 +430,7 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # On masque les autres elements
+
         self.BoutonFlecheNavigation.show()
         self.frameFleche.show()
         self.masquerElementGraphique()
@@ -423,7 +439,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.modificationEquipement = QtWidgets.QWidget()
             self.modificationEquipementUI = ModificationEquipement(self.modificationEquipement, equipement)
-            self.modificationEquipement.setStyleSheet("background: white;")
+            # self.modificationEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.modificationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipement)
         else:
@@ -449,7 +465,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
             self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
-            self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
+            # self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.ajoutBonDeTravailEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravailEquipement)
         else:
@@ -482,7 +498,7 @@ class Accueil(Ui_Accueil):
             # dictID["ID-BDT"] = listeID(len(listeID) - 1)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
             self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            self.consultationBonDeTravail.setStyleSheet("background: white;")
+            # self.consultationBonDeTravail.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.consultationBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
         else:
@@ -526,8 +542,16 @@ class Accueil(Ui_Accueil):
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         self.boutonSelectionne = bouton
-        self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
+        if (self.boutonSelectionne != self.BoutonAccueil):
+            self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
 
+    def attente(self):
+        self.overlay.raise_()
+        self.overlay.show()
+
+    def finChargement(self):
+        print("fin chargement")
+        self.overlay.hide()
 
 class SIMM():
     '''
@@ -538,18 +562,59 @@ class SIMM():
     # On masque les autres elements
     def __init__(self):
         app = QtWidgets.QApplication(sys.argv)
-        MainFrame = QtWidgets.QMainWindow()
-        self.mapper = QSignalMapper(MainFrame)
-        self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
-        self.ui = Accueil(MainFrame)
+        # MainFrame = QtWidgets.QMainWindow()
+        # self.mapper = QSignalMapper(MainFrame)
+        # self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
+        # self.ui = Accueil(MainFrame)
         # ui.BoutonImprimerInventaire.clicked.connect(impressionPDF)
-        self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
-        self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
-        MainFrame.setWindowIcon(QIcon('Images/SIMM2.0.png'))
-        MainFrame.setWindowTitle("SIMM 2.0")
+        # MainFrame.setWindowIcon(QIcon('Images/SIMM2.0.png'))
+        # MainFrame.setWindowTitle("SIMM 2.0")
+        # print(MainFrame.centralWidget())
+        # self.overlay = Overlay(MainFrame.centralWidget())
+        # self.overlay.hide()
+        # self.ui.BoutonAccueil.clicked.connect(self.overlay.show)
+        # MainFrame.show()
+        # print(MainFrame.size())
+        # MainFrame.resize(self.resizeEvent())
+        # self.overlay.move(250,250)
+        MainFrame = MainWindow()
         MainFrame.show()
         sys.exit(app.exec_())
         os.system("pause")
+
+
+    def resizeEvent(self, event):
+        print("size", event.size())
+        self.overlay.resize(event.size())
+        event.accept()
+
+class MainWindow(QMainWindow):
+    def __init__(self, parent=None):
+        QMainWindow.__init__(self, parent)
+        self.mapper = QSignalMapper(self)
+        self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
+        self.overlay = None
+        self.ui = Accueil(self)
+        self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
+        self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
+        self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
+        self.setWindowTitle("SIMM 2.0")
+        self.overlay = Overlay(self.centralWidget())
+        self.overlay.hide()
+        self.ui.overlay = self.overlay
+        self.ui.finChargment.finProcessus.connect(self.ui.finChargement)
+
+        # self.ui.BoutonRechercherEquipement.clicked.connect(self.overlay.show)
+        self.attente = AttenteThread(self)
+        # self.attente.start()
+        # self.overlay.hide()
+
+    def resizeEvent(self, event):
+        print(event)
+        print("size", event.size())
+        self.overlay.resize(event.size())
+        event.accept()
+
 
 def impressionPDF(bouton):
     print(bouton)

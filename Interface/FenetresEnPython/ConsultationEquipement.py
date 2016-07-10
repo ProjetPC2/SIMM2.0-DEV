@@ -4,12 +4,13 @@ from PyQt5 import QtGui, QtWidgets
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.ConsultationEquipementUI import Ui_ConsultationEquipement
-
+from threading import Thread
 
 class ConsultationEquipement(Ui_ConsultationEquipement):
-    def __init__(self, widget):
+    def __init__(self, widget, finChargement):
         self.setupUi(widget)
         self.ajoutConsultationEquipement()
+        self.finChargement = finChargement
 
 
     def ajoutConsultationEquipement(self):
@@ -37,7 +38,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         #Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
-        # self.listeCleDonnees = list()
+            # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
             fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
@@ -52,8 +53,8 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
 
         self.listeEdit = list()
         self.equipement = None
-        self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
-        self.lineEditId.returnPressed.connect(self.rechercherEquipement)
+        self.boutonAfficherEquipement.clicked.connect(self.test)
+        self.lineEditId.returnPressed.connect(self.test)
         self.boutonModifierEquipement.setEnabled(False)
         self.boutonAjouterUnBon.setEnabled(False)
         self.boutonConsulterBon.setEnabled(False)
@@ -90,6 +91,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
             else:
                 #Cas ou l'equipement n'existe pas
                 self.boutonModifierEquipement.setEnabled(False)
+            self.finChargement.finProcessus.emit()
         else:
             print("Champ ID null")
 
@@ -116,6 +118,19 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
             for bdt in self.listeBonDeTravail:
                 affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
                 self.comboBoxBons.addItem(icon2, affichage)
+
+    def test(self):
+        a = RechercherEquipement(self.rechercherEquipement)
+        a.start()
+
+class RechercherEquipement (Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+
+    def run(self):
+        self.fonction()
 
 if __name__ == "__main__":
     import sys
