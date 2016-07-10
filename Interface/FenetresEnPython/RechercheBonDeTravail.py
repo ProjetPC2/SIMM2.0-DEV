@@ -6,6 +6,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 import datetime
+from threading import Thread
+
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
@@ -17,9 +19,10 @@ from Interface.FenetresEnPython.RechercheBonDeTravailUI import Ui_RechercheBonDe
 
 
 class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
-    def __init__(self, widget):
+    def __init__(self, widget, finChargement):
         self.setupUi(widget)
         self.ajoutRechercheBonDeTravail()
+        self.finChargement = finChargement
 
 
     def ajoutRechercheBonDeTravail(self):
@@ -70,14 +73,14 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.dictionnaireRecherche = dict()
 
         #Connexion des differentes recherches pour la mise a jour automatique
-        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipement)
+        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipementThread)
         self.comboBoxEtat.currentTextChanged.connect(self.rechercheEtatDeService)
-        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
+        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreServiceThread)
         # self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
         # self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
-        self.calendrierAvant.dateChanged.connect(self.rechercheDateAvant)
-        self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituation)
-        self.calendrierApres.dateChanged.connect(self.rechercheDateApres)
+        self.calendrierAvant.dateChanged.connect(self.rechercheDateAvantThread)
+        self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituationThread)
+        self.calendrierApres.dateChanged.connect(self.rechercheDateApresThread)
 
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
         self.colonneClique = None
@@ -141,6 +144,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheDateAvant(self):
         '''
@@ -150,6 +155,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         self.dictionnaireRecherche["AvantLe"] = self.calendrierAvant.date().toPyDate()
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheDateApres(self):
         '''
@@ -159,6 +166,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         self.dictionnaireRecherche["ApresLe"] = self.calendrierApres.date().toPyDate()
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheDescriptionSituation(self):
         '''
@@ -169,6 +178,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         if (self.lineEditDescriptionSituation.text() != ""):
             self.dictionnaireRecherche["DescriptionSituation"] = self.lineEditDescriptionSituation.text()
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheCategorieEquipement(self):
         '''
@@ -182,6 +193,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
 
     def rechercheEtatDeService(self):
@@ -196,6 +209,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("EtatService")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheCentreService(self):
         '''
@@ -209,6 +224,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("CentreService")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def remplirTableau(self):
             '''
@@ -286,8 +303,45 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
                 else:
                     print("Aucun resultat")
+                    self.tableResultats.clearContents()
+                    self.tableResultats.setRowCount(0)
             else:
                 print("dictionnaire de recherche vide")
+                self.tableResultats.clearContents()
+                self.tableResultats.setRowCount(0)
+
+    def rechercheCategorieEquipementThread(self):
+        thread = RechercherBonDeTravail(self.rechercheCategorieEquipement)
+        thread.start()
+
+    def rechercheEtatDeServiceThread(self):
+        thread = RechercherBonDeTravail(self.rechercheEtatService)
+        thread.start()
+
+    def rechercheCentreServiceThread(self):
+        thread = RechercherBonDeTravail(self.rechercheCentreService)
+        thread.start()
+
+    def rechercheDateAvantThread(self):
+        thread = RechercherBonDeTravail(self.rechercheDateAvant)
+        thread.start()
+
+    def rechercheDateApresThread(self):
+        thread = RechercherBonDeTravail(self.rechercheDateApres)
+        thread.start()
+
+    def rechercheDescriptionSituationThread(self):
+        thread = RechercherBonDeTravail(self.rechercheDescriptionSituation)
+        thread.start()
+
+class RechercherBonDeTravail (Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+
+    def run(self):
+        self.fonction()
 
 if __name__ == "__main__":
     import sys

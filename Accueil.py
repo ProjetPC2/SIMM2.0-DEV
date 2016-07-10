@@ -299,8 +299,13 @@ class Accueil(Ui_Accueil):
         if self.rechercheBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.rechercheBonDeTravail = QtWidgets.QWidget()
-            self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail)
+            self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail, self.finChargment)
             # self.rechercheBonDeTravail.setStyleSheet("background: white;")
+            self.rechercheBonDeTravailUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.attente)
+            self.rechercheBonDeTravailUI.comboBoxCentreService.currentTextChanged.connect(self.attente)
+            self.rechercheBonDeTravailUI.comboBoxEtat.currentTextChanged.connect(self.attente)
+            self.rechercheBonDeTravailUI.calendrierApres.dateChanged.connect(self.attente)
+            self.rechercheBonDeTravailUI.calendrierAvant.dateChanged.connect(self.attente)
 
             self.rechercheBonDeTravailUI.tableResultats.doubleClicked.connect(self.choisirBonDeTravailTableau)
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)

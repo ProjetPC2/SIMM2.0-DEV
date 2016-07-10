@@ -144,6 +144,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("EtatService")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheCentreService(self):
         """Methode permettant la recherche par rapport au champ de recherche
@@ -154,6 +156,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("CentreService")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheSalle(self):
         """Methode permettant la recherche par rapport au champ de recherche
@@ -164,6 +168,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("Salle")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheProvenance(self):
         """Methode permettant la recherche par rapport au champ de recherche
@@ -173,6 +179,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("Provenance")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def rechercheNumeroSerie(self):
         """Methode permettant la recherche par rapport au champ de recherche
@@ -185,6 +193,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if "NumeroSerie" in self.dictionnaireRecherche:
                 self.dictionnaireRecherche.pop("NumeroSerie")
         self.remplirTableau()
+        self.finChargement.finProcessus.emit()
+
 
     def remplirTableau(self):
         """Methode permettant de remplir la table des resultats
@@ -201,7 +211,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
                     self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                     colonne += 1
                 self.tableResultats.resizeColumnsToContents()
-
         else:
             print("dictionnaire de recherche vide")
 
