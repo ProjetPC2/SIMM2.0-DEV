@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1007</width>
-    <height>698</height>
+    <width>1401</width>
+    <height>1390</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -557,6 +557,16 @@ color: rgb(81, 81, 81);
         </size>
        </property>
       </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QComboBox" name="comboBox"/>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget"/>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>
