@@ -58,14 +58,6 @@ background-color: rgb(193, 213, 243);
 }
 
 
-QComboBox {
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 1px 18px 1px 3px;
-    min-width: 8em;
-	max-width: 200px;
-	
-}
 
 QComboBox:editable {
     background: white;
