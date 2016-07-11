@@ -12,17 +12,18 @@ class Ui_ModificationEquipement(object):
     def setupUi(self, ModificationEquipement):
         ModificationEquipement.setObjectName("ModificationEquipement")
         ModificationEquipement.resize(1202, 1226)
-        ModificationEquipement.setStyleSheet("#MainFrame {\n"
+        ModificationEquipement.setStyleSheet("QWidget{\n"
 "\n"
 "background: white;\n"
 "}\n"
+"\n"
 "QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
-"border-radius: 8px;\n"
-"min-width: 50px;\n"
-"max-width: 150px;\n"
+"border-radius: 4px;\n"
+"background:rgb(247,247,247);\n"
+"\n"
 "}\n"
 "\n"
 "QDateEdit {\n"
@@ -103,12 +104,31 @@ class Ui_ModificationEquipement(object):
 "QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
 "    top: 1px;\n"
 "    left: 1px;\n"
+"}\n"
+"\n"
+"QComboBox\n"
+"{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247,247,247)\n"
+"}\n"
+"\n"
+"QDateEdit\n"
+"{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247,247,247);\n"
 "}")
         self.formLayout = QtWidgets.QFormLayout(ModificationEquipement)
         self.formLayout.setObjectName("formLayout")
         self.layoutTitre = QtWidgets.QHBoxLayout()
         self.layoutTitre.setObjectName("layoutTitre")
         self.label = QtWidgets.QLabel(ModificationEquipement)
+        self.label.setStyleSheet("background: white;")
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("Images/add1.png"))
         self.label.setScaledContents(False)
@@ -123,6 +143,7 @@ class Ui_ModificationEquipement(object):
         font.setUnderline(False)
         font.setWeight(75)
         self.titreModificationEquipement.setFont(font)
+        self.titreModificationEquipement.setStyleSheet("background: white;")
         self.titreModificationEquipement.setObjectName("titreModificationEquipement")
         self.layoutTitre.addWidget(self.titreModificationEquipement)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -134,6 +155,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_34.setFont(font)
+        self.label_34.setStyleSheet("background: white;")
         self.label_34.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_34.setObjectName("label_34")
         self.layoutTitreLables.addWidget(self.label_34)
@@ -141,6 +163,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_37.setFont(font)
+        self.label_37.setStyleSheet("background: white;")
         self.label_37.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_37.setObjectName("label_37")
         self.layoutTitreLables.addWidget(self.label_37)
@@ -148,6 +171,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_36.setFont(font)
+        self.label_36.setStyleSheet("background: white;")
         self.label_36.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_36.setObjectName("label_36")
         self.layoutTitreLables.addWidget(self.label_36)
@@ -155,6 +179,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_35.setFont(font)
+        self.label_35.setStyleSheet("background: white;")
         self.label_35.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_35.setObjectName("label_35")
         self.layoutTitreLables.addWidget(self.label_35)
@@ -162,6 +187,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_30.setFont(font)
+        self.label_30.setStyleSheet("background: white;")
         self.label_30.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_30.setObjectName("label_30")
         self.layoutTitreLables.addWidget(self.label_30)
@@ -169,6 +195,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_31.setFont(font)
+        self.label_31.setStyleSheet("background: white;")
         self.label_31.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_31.setObjectName("label_31")
         self.layoutTitreLables.addWidget(self.label_31)
@@ -176,6 +203,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_33.setFont(font)
+        self.label_33.setStyleSheet("background: white;")
         self.label_33.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_33.setObjectName("label_33")
         self.layoutTitreLables.addWidget(self.label_33)
@@ -183,6 +211,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_29.setFont(font)
+        self.label_29.setStyleSheet("background: white;")
         self.label_29.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_29.setObjectName("label_29")
         self.layoutTitreLables.addWidget(self.label_29)
@@ -190,6 +219,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_27.setFont(font)
+        self.label_27.setStyleSheet("background: white;")
         self.label_27.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_27.setObjectName("label_27")
         self.layoutTitreLables.addWidget(self.label_27)
@@ -197,6 +227,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_26.setFont(font)
+        self.label_26.setStyleSheet("background: white;")
         self.label_26.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_26.setObjectName("label_26")
         self.layoutTitreLables.addWidget(self.label_26)
@@ -207,6 +238,16 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelId.setFont(font)
+        self.labelId.setStyleSheet("QLabel\n"
+"\n"
+"{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247,247,247);\n"
+"}\n"
+"")
         self.labelId.setText("")
         self.labelId.setObjectName("labelId")
         self.layoutChamps.addWidget(self.labelId)
@@ -296,6 +337,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreEtatDeService.setFont(font)
+        self.labelTitreEtatDeService.setStyleSheet("background: white;")
         self.labelTitreEtatDeService.setObjectName("labelTitreEtatDeService")
         self.horizontalLayout_4.addWidget(self.labelTitreEtatDeService)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
@@ -324,6 +366,7 @@ class Ui_ModificationEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreEtatDeConservation.setFont(font)
+        self.labelTitreEtatDeConservation.setStyleSheet("background: white;")
         self.labelTitreEtatDeConservation.setObjectName("labelTitreEtatDeConservation")
         self.horizontalLayout_6.addWidget(self.labelTitreEtatDeConservation)
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
