@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1202</width>
+    <width>1016</width>
     <height>1226</height>
    </rect>
   </property>
@@ -59,11 +59,6 @@ background-color: rgb(193, 213, 243);
 
 
 
-QComboBox:editable {
-    background: white;
-}
-
-
 
 QComboBox
 {
@@ -71,7 +66,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247)
+background:rgb(247,247,247);
 }
 
 QDateEdit
