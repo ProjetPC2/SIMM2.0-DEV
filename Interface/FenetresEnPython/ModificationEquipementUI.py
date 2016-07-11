@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ModificationEquipement(object):
     def setupUi(self, ModificationEquipement):
         ModificationEquipement.setObjectName("ModificationEquipement")
-        ModificationEquipement.resize(1202, 1226)
+        ModificationEquipement.resize(1016, 1226)
         ModificationEquipement.setStyleSheet("QWidget{\n"
 "\n"
 "background: white;\n"
@@ -57,11 +57,6 @@ class Ui_ModificationEquipement(object):
 "\n"
 "\n"
 "\n"
-"QComboBox:editable {\n"
-"    background: white;\n"
-"}\n"
-"\n"
-"\n"
 "\n"
 "QComboBox\n"
 "{\n"
@@ -69,7 +64,7 @@ class Ui_ModificationEquipement(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:rgb(247,247,247)\n"
+"background:rgb(247,247,247);\n"
 "}\n"
 "\n"
 "QDateEdit\n"
