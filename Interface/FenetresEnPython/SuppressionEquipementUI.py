@@ -12,105 +12,13 @@ class Ui_SuppressionEquipement(object):
     def setupUi(self, SuppressionEquipement):
         SuppressionEquipement.setObjectName("SuppressionEquipement")
         SuppressionEquipement.resize(719, 628)
-        SuppressionEquipement.setStyleSheet("#MainFrame {\n"
-"\n"
-"background: white;\n"
-"}\n"
-"QLineEdit {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 2px solid gray;\n"
-"border-radius: 8px;\n"
-"min-width: 50px;\n"
-"max-width: 150px;\n"
-"}\n"
-"\n"
-"QDateEdit {\n"
-"max-width: 105px\n"
-"}\n"
-"\n"
-"QPushButton {\n"
-"color: black;\n"
-"background-color: rgb(240, 240, 240);\n"
-"border-width: 2px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 14px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 40px;\n"
-"max-width:220px;\n"
-"min-height: 40px;\n"
-"max-height: 40px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"\n"
-"\n"
-"QComboBox {\n"
-"    border: 1px solid gray;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 8em;\n"
-"    max-width: 200px;\n"
-"    \n"
-"}\n"
-"\n"
-"QComboBox:editable {\n"
-"    background: white;\n"
-"}\n"
-"\n"
-"QComboBox:!editable, QComboBox::drop-down:editable {\n"
-"     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
-"                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
-"}\n"
-"\n"
-"/* QComboBox gets the \"on\" state when the popup is open */\n"
-"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
-"                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
-"}\n"
-"\n"
-"QComboBox:on { /* shift the text when the popup opens */\n"
-"    padding-top: 3px;\n"
-"    padding-left: 4px;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    width: 15px;\n"
-"\n"
-"    border-left-width: 1px;\n"
-"    border-left-color: darkgrey;\n"
-"    border-left-style: solid; /* just a single line */\n"
-"    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
-"    border-bottom-right-radius: 3px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow {\n"
-"    image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png);\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
-"    top: 1px;\n"
-"    left: 1px;\n"
-"}")
+        SuppressionEquipement.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(SuppressionEquipement)
         self.gridLayout.setObjectName("gridLayout")
         self.titreLayout = QtWidgets.QHBoxLayout()
         self.titreLayout.setObjectName("titreLayout")
         self.iconConsultationEquipement = QtWidgets.QLabel(SuppressionEquipement)
+        self.iconConsultationEquipement.setStyleSheet("background:white;")
         self.iconConsultationEquipement.setText("")
         self.iconConsultationEquipement.setPixmap(QtGui.QPixmap("../Images/garbage (2).png"))
         self.iconConsultationEquipement.setScaledContents(False)
@@ -125,6 +33,7 @@ class Ui_SuppressionEquipement(object):
         font.setUnderline(False)
         font.setWeight(75)
         self.labelTitreConsultationEquipement.setFont(font)
+        self.labelTitreConsultationEquipement.setStyleSheet("background:white;")
         self.labelTitreConsultationEquipement.setObjectName("labelTitreConsultationEquipement")
         self.titreLayout.addWidget(self.labelTitreConsultationEquipement)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -140,10 +49,19 @@ class Ui_SuppressionEquipement(object):
         font.setBold(True)
         font.setWeight(75)
         self.labelId.setFont(font)
+        self.labelId.setStyleSheet("background:white;")
         self.labelId.setAlignment(QtCore.Qt.AlignCenter)
         self.labelId.setObjectName("labelId")
         self.idLayout.addWidget(self.labelId)
         self.lineEditId = QtWidgets.QLineEdit(SuppressionEquipement)
+        self.lineEditId.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"min-width: 50px;\n"
+"max-width: 150px;\n"
+"}")
         self.lineEditId.setObjectName("lineEditId")
         self.idLayout.addWidget(self.lineEditId)
         self.gridLayout.addLayout(self.idLayout, 2, 0, 1, 4)
@@ -158,6 +76,31 @@ class Ui_SuppressionEquipement(object):
         font.setItalic(False)
         font.setWeight(75)
         self.boutonAfficherEquipement.setFont(font)
+        self.boutonAfficherEquipement.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 30px;\n"
+"max-width:30px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonAfficherEquipement.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Images/Refresh2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -175,6 +118,31 @@ class Ui_SuppressionEquipement(object):
         font.setItalic(False)
         font.setWeight(75)
         self.boutonSupprimerEquipement.setFont(font)
+        self.boutonSupprimerEquipement.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 30px;\n"
+"max-width: 200px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Images/garbage (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonSupprimerEquipement.setIcon(icon1)
@@ -196,6 +164,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreCategorie.setFont(font)
+        self.labelTitreCategorie.setStyleSheet("background:white;")
         self.labelTitreCategorie.setAlignment(QtCore.Qt.AlignCenter)
         self.labelTitreCategorie.setObjectName("labelTitreCategorie")
         self.verticalLayout.addWidget(self.labelTitreCategorie, 0, QtCore.Qt.AlignRight)
@@ -203,6 +172,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreMarque.setFont(font)
+        self.labelTitreMarque.setStyleSheet("background:white;")
         self.labelTitreMarque.setAlignment(QtCore.Qt.AlignCenter)
         self.labelTitreMarque.setObjectName("labelTitreMarque")
         self.verticalLayout.addWidget(self.labelTitreMarque, 0, QtCore.Qt.AlignRight)
@@ -210,6 +180,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreModele.setFont(font)
+        self.labelTitreModele.setStyleSheet("background:white;")
         self.labelTitreModele.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreModele.setObjectName("labelTitreModele")
         self.verticalLayout.addWidget(self.labelTitreModele)
@@ -217,6 +188,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreNoDeSerie.setFont(font)
+        self.labelTitreNoDeSerie.setStyleSheet("background:white;")
         self.labelTitreNoDeSerie.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreNoDeSerie.setObjectName("labelTitreNoDeSerie")
         self.verticalLayout.addWidget(self.labelTitreNoDeSerie)
@@ -224,6 +196,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreSalle.setFont(font)
+        self.labelTitreSalle.setStyleSheet("background:white;")
         self.labelTitreSalle.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreSalle.setObjectName("labelTitreSalle")
         self.verticalLayout.addWidget(self.labelTitreSalle)
@@ -231,6 +204,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreCentreDeService.setFont(font)
+        self.labelTitreCentreDeService.setStyleSheet("background:white;")
         self.labelTitreCentreDeService.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreCentreDeService.setObjectName("labelTitreCentreDeService")
         self.verticalLayout.addWidget(self.labelTitreCentreDeService)
@@ -238,6 +212,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreDateDaquisition.setFont(font)
+        self.labelTitreDateDaquisition.setStyleSheet("background:white;")
         self.labelTitreDateDaquisition.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreDateDaquisition.setObjectName("labelTitreDateDaquisition")
         self.verticalLayout.addWidget(self.labelTitreDateDaquisition)
@@ -245,6 +220,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreDateDuDernierEntretien.setFont(font)
+        self.labelTitreDateDuDernierEntretien.setStyleSheet("background:white;")
         self.labelTitreDateDuDernierEntretien.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreDateDuDernierEntretien.setObjectName("labelTitreDateDuDernierEntretien")
         self.verticalLayout.addWidget(self.labelTitreDateDuDernierEntretien)
@@ -252,6 +228,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreProvenance.setFont(font)
+        self.labelTitreProvenance.setStyleSheet("background:white;")
         self.labelTitreProvenance.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreProvenance.setObjectName("labelTitreProvenance")
         self.verticalLayout.addWidget(self.labelTitreProvenance)
@@ -259,6 +236,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreEtatDeService.setFont(font)
+        self.labelTitreEtatDeService.setStyleSheet("background:white;")
         self.labelTitreEtatDeService.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreEtatDeService.setObjectName("labelTitreEtatDeService")
         self.verticalLayout.addWidget(self.labelTitreEtatDeService)
@@ -266,6 +244,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreEtatDeConservation.setFont(font)
+        self.labelTitreEtatDeConservation.setStyleSheet("background:white;")
         self.labelTitreEtatDeConservation.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreEtatDeConservation.setObjectName("labelTitreEtatDeConservation")
         self.verticalLayout.addWidget(self.labelTitreEtatDeConservation)
@@ -276,6 +255,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCategorie.setFont(font)
+        self.labelCategorie.setStyleSheet("background:white;")
         self.labelCategorie.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelCategorie.setObjectName("labelCategorie")
         self.verticalLayout_2.addWidget(self.labelCategorie)
@@ -283,6 +263,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelMarque.setFont(font)
+        self.labelMarque.setStyleSheet("background:white;")
         self.labelMarque.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelMarque.setObjectName("labelMarque")
         self.verticalLayout_2.addWidget(self.labelMarque)
@@ -290,6 +271,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelModele.setFont(font)
+        self.labelModele.setStyleSheet("background:white;")
         self.labelModele.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelModele.setObjectName("labelModele")
         self.verticalLayout_2.addWidget(self.labelModele)
@@ -297,6 +279,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelNoDeSerie.setFont(font)
+        self.labelNoDeSerie.setStyleSheet("background:white;")
         self.labelNoDeSerie.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelNoDeSerie.setObjectName("labelNoDeSerie")
         self.verticalLayout_2.addWidget(self.labelNoDeSerie)
@@ -304,6 +287,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelSalle.setFont(font)
+        self.labelSalle.setStyleSheet("background:white;")
         self.labelSalle.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelSalle.setObjectName("labelSalle")
         self.verticalLayout_2.addWidget(self.labelSalle)
@@ -311,6 +295,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCentreDeService.setFont(font)
+        self.labelCentreDeService.setStyleSheet("background:white;")
         self.labelCentreDeService.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelCentreDeService.setObjectName("labelCentreDeService")
         self.verticalLayout_2.addWidget(self.labelCentreDeService)
@@ -318,6 +303,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelDateDaquisition.setFont(font)
+        self.labelDateDaquisition.setStyleSheet("background:white;")
         self.labelDateDaquisition.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelDateDaquisition.setObjectName("labelDateDaquisition")
         self.verticalLayout_2.addWidget(self.labelDateDaquisition)
@@ -325,6 +311,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelDateDuDernierEntretien.setFont(font)
+        self.labelDateDuDernierEntretien.setStyleSheet("background:white;")
         self.labelDateDuDernierEntretien.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelDateDuDernierEntretien.setObjectName("labelDateDuDernierEntretien")
         self.verticalLayout_2.addWidget(self.labelDateDuDernierEntretien)
@@ -332,6 +319,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelProvenance.setFont(font)
+        self.labelProvenance.setStyleSheet("background:white;")
         self.labelProvenance.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelProvenance.setObjectName("labelProvenance")
         self.verticalLayout_2.addWidget(self.labelProvenance)
@@ -339,6 +327,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelEtatDeService.setFont(font)
+        self.labelEtatDeService.setStyleSheet("background:white;")
         self.labelEtatDeService.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelEtatDeService.setObjectName("labelEtatDeService")
         self.verticalLayout_2.addWidget(self.labelEtatDeService)
@@ -346,6 +335,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelEtatDeConservation.setFont(font)
+        self.labelEtatDeConservation.setStyleSheet("background:white;")
         self.labelEtatDeConservation.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelEtatDeConservation.setObjectName("labelEtatDeConservation")
         self.verticalLayout_2.addWidget(self.labelEtatDeConservation)
@@ -356,6 +346,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreCommentaires.setFont(font)
+        self.labelTitreCommentaires.setStyleSheet("background:white;")
         self.labelTitreCommentaires.setAlignment(QtCore.Qt.AlignCenter)
         self.labelTitreCommentaires.setObjectName("labelTitreCommentaires")
         self.horizontalLayout_7.addWidget(self.labelTitreCommentaires, 0, QtCore.Qt.AlignRight)
@@ -366,6 +357,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCommentaires.setFont(font)
+        self.labelCommentaires.setStyleSheet("background:white;")
         self.labelCommentaires.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.labelCommentaires.setObjectName("labelCommentaires")
         self.horizontalLayout_5.addWidget(self.labelCommentaires)
@@ -376,6 +368,7 @@ class Ui_SuppressionEquipement(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelTitreBons.setFont(font)
+        self.labelTitreBons.setStyleSheet("background:white;")
         self.labelTitreBons.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelTitreBons.setObjectName("labelTitreBons")
         self.horizontalLayout_8.addWidget(self.labelTitreBons)
@@ -387,6 +380,14 @@ class Ui_SuppressionEquipement(object):
         font.setFamily("Times New Roman")
         font.setPointSize(10)
         self.comboBoxBons.setFont(font)
+        self.comboBoxBons.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}")
         self.comboBoxBons.setMaxCount(2147483645)
         self.comboBoxBons.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
         self.comboBoxBons.setObjectName("comboBoxBons")
@@ -397,6 +398,31 @@ class Ui_SuppressionEquipement(object):
         self.comboBoxBons.addItem(icon2, "")
         self.horizontalLayout_6.addWidget(self.comboBoxBons, 0, QtCore.Qt.AlignLeft)
         self.boutonConsulterBon = QtWidgets.QPushButton(SuppressionEquipement)
+        self.boutonConsulterBon.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 30px;\n"
+"max-width: 200px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("Images/navigation.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonConsulterBon.setIcon(icon3)
@@ -450,14 +476,4 @@ class Ui_SuppressionEquipement(object):
         self.comboBoxBons.setItemText(1, _translate("SuppressionEquipement", "Bon 2016-03-07"))
         self.comboBoxBons.setItemText(2, _translate("SuppressionEquipement", "Bon 2016-05-12"))
         self.boutonConsulterBon.setText(_translate("SuppressionEquipement", "Consulter le Bon"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    SuppressionEquipement = QtWidgets.QWidget()
-    ui = Ui_SuppressionEquipement()
-    ui.setupUi(SuppressionEquipement)
-    SuppressionEquipement.show()
-    sys.exit(app.exec_())
 
