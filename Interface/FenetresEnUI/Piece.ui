@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1019</width>
-    <height>915</height>
+    <width>1001</width>
+    <height>996</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,39 +17,114 @@
    <string notr="true">background:white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="6" column="0" colspan="2">
-    <widget class="QListView" name="listViewPieceCategorie"/>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Selectionnez les categories a ajouter</string>
+   <item row="3" column="1">
+    <widget class="QListView" name="listView">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
      </property>
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QLineEdit" name="lineEdit"/>
-   </item>
-   <item row="3" column="1">
-    <widget class="QListView" name="listView"/>
-   </item>
-   <item row="2" column="1">
-    <widget class="QComboBox" name="comboBox"/>
-   </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="labelCategorieSelectionnee">
-     <property name="text">
-      <string>Liste des pieces pour la categorie selectionnee</string>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247,247,247);
+color: black
+}</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="1">
-    <widget class="QComboBox" name="comboBoxCategorieSelectionnee"/>
-   </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Ajouter une piece</string>
+      <string>Ajouter une pièce</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="comboBox">
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247,247,247);
+color: black;
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="labelCategorieSelectionnee">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Liste des pièces pour la catégorie sélectionnée</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QComboBox" name="comboBoxCategorieSelectionnee">
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247,247,247);
+color: black;
+}
+</string>
      </property>
     </widget>
    </item>
@@ -57,6 +132,12 @@
     <layout class="QHBoxLayout" name="titreLayout">
      <item>
       <widget class="QLabel" name="label_3">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background:white;</string>
        </property>
@@ -64,7 +145,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>Images/pencil-edit-button_Hatim.png</pixmap>
+        <pixmap>../../../../../Downloads/screwdriver-and-wrench-crossed (3).png</pixmap>
        </property>
       </widget>
      </item>
@@ -84,7 +165,7 @@
         <string notr="true">background:white;</string>
        </property>
        <property name="text">
-        <string>Piece</string>
+        <string>Ajouter une pièce</string>
        </property>
       </widget>
      </item>
@@ -103,12 +184,110 @@
      </item>
     </layout>
    </item>
-   <item row="4" column="1">
-    <widget class="QPushButton" name="pushButton">
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Enregistrer Piece</string>
+      <string>Sélectionner la catégorie à ajouter</string>
      </property>
     </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QListView" name="listViewPieceCategorie">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>200</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Enregistrer la pièce</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>200</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1459</width>
-    <height>1316</height>
+    <width>1255</width>
+    <height>1219</height>
    </rect>
   </property>
   <property name="font">
@@ -288,20 +288,56 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
          </spacer>
         </item>
         <item>
+         <spacer name="verticalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);
+}
+
+QPushButton:pressed{ background-color: #cccccc; }</string>
+          </property>
+          <property name="text">
+           <string> Ajouter une pièce</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../../../Downloads/screwdriver-and-wrench-crossed (3).png</normaloff>../../../../../Downloads/screwdriver-and-wrench-crossed (3).png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QVBoxLayout" name="layoutBoutonBdT">
-          <item>
-           <spacer name="verticalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
           <item>
            <widget class="QPushButton" name="BoutonAjouterBonTravail">
             <property name="maximumSize">
@@ -403,19 +439,6 @@ bon de travail</string>
          </layout>
         </item>
         <item>
-         <spacer name="verticalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
          <layout class="QVBoxLayout" name="layoutBoutonExtra">
           <item>
            <spacer name="verticalSpacer_6">
@@ -500,6 +523,9 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , 
 
 QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
+            <property name="locale">
+             <locale language="French" country="Canada"/>
+            </property>
             <property name="text">
              <string>Voir les
 statistiques</string>
@@ -530,19 +556,6 @@ statistiques</string>
            </spacer>
           </item>
          </layout>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_13">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>60</height>
-           </size>
-          </property>
-         </spacer>
         </item>
         <item>
          <spacer name="verticalSpacer_14">
@@ -630,7 +643,7 @@ technique</string>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="layoutAffichagePrincipal" stretch="0,0,0,0">
+       <layout class="QVBoxLayout" name="layoutAffichagePrincipal" stretch="0,0,0,0,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -712,26 +725,26 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QFrame" name="frameFleche">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>60</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: white;</string>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-           </widget>
-          </item>
          </layout>
+        </item>
+        <item>
+         <widget class="QFrame" name="frameFleche">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="logo">
