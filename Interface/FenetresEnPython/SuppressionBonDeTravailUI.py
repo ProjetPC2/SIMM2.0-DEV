@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'SuppressionBon.ui'
+# Form implementation generated from reading ui file 'SuppressionBonDeTravail.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,55 +11,15 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SuppressionBonDeTravail(object):
     def setupUi(self, SuppressionBonDeTravail):
         SuppressionBonDeTravail.setObjectName("SuppressionBonDeTravail")
-        SuppressionBonDeTravail.resize(818, 664)
-        SuppressionBonDeTravail.setStyleSheet("QMainWindow \n"
-" {\n"
-"\n"
-"background: white;\n"
-"}\n"
-"\n"
-"QPushButton {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background: rgb(247,247,247)\n"
-"}\n"
-"\n"
-"QPushButton::pressed {\n"
-"padding: 1px;\n"
-"color: black;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 8px;\n"
-"background:rgb(169, 167, 170)\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QTextEdit {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247)\n"
-"}\n"
-"\n"
-"QComboBox {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247)\n"
-"}")
+        SuppressionBonDeTravail.resize(837, 710)
+        SuppressionBonDeTravail.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(SuppressionBonDeTravail)
         self.gridLayout.setObjectName("gridLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.labelPhotoPlus = QtWidgets.QLabel(SuppressionBonDeTravail)
         self.labelPhotoPlus.setMaximumSize(QtCore.QSize(100, 100))
+        self.labelPhotoPlus.setStyleSheet("background:white;")
         self.labelPhotoPlus.setText("")
         self.labelPhotoPlus.setPixmap(QtGui.QPixmap("Images/garbage (1).png"))
         self.labelPhotoPlus.setScaledContents(False)
@@ -75,7 +35,7 @@ class Ui_SuppressionBonDeTravail(object):
         font.setWeight(75)
         self.labelTitre.setFont(font)
         self.labelTitre.setAutoFillBackground(False)
-        self.labelTitre.setStyleSheet("")
+        self.labelTitre.setStyleSheet("background:white;")
         self.labelTitre.setObjectName("labelTitre")
         self.horizontalLayout.addWidget(self.labelTitre)
         spacerItem = QtWidgets.QSpacerItem(40, 60, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -91,6 +51,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_ID.setFont(font)
+        self.label_ID.setStyleSheet("background:white;")
         self.label_ID.setObjectName("label_ID")
         self.verticalLayout_6.addWidget(self.label_ID)
         self.gridLayout_2 = QtWidgets.QGridLayout()
@@ -98,8 +59,33 @@ class Ui_SuppressionBonDeTravail(object):
         spacerItem2 = QtWidgets.QSpacerItem(290, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_2.addItem(spacerItem2, 1, 3, 1, 1)
         self.boutonActualiser = QtWidgets.QPushButton(SuppressionBonDeTravail)
-        self.boutonActualiser.setMaximumSize(QtCore.QSize(160, 120))
+        self.boutonActualiser.setMaximumSize(QtCore.QSize(42, 38))
         self.boutonActualiser.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.boutonActualiser.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 30px;\n"
+"max-width:30px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonActualiser.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Images/actualize-arrows-couple-in-circle.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -132,6 +118,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCategorieEquip.setFont(font)
+        self.labelCategorieEquip.setStyleSheet("background:white;")
         self.labelCategorieEquip.setObjectName("labelCategorieEquip")
         self.verticalLayout_6.addWidget(self.labelCategorieEquip)
         self.labelEcritureCatEquip = QtWidgets.QLabel(SuppressionBonDeTravail)
@@ -139,6 +126,7 @@ class Ui_SuppressionBonDeTravail(object):
         font.setPointSize(10)
         self.labelEcritureCatEquip.setFont(font)
         self.labelEcritureCatEquip.setStyleSheet(" QLabel{\n"
+"max-width:200px;\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
@@ -157,19 +145,21 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelSalle.setFont(font)
+        self.labelSalle.setStyleSheet("background:white;")
         self.labelSalle.setObjectName("labelSalle")
         self.gridLayout_3.addWidget(self.labelSalle, 3, 2, 1, 1)
         self.labelCentreService = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCentreService.setFont(font)
-        self.labelCentreService.setStyleSheet("")
+        self.labelCentreService.setStyleSheet("background:white;")
         self.labelCentreService.setObjectName("labelCentreService")
         self.gridLayout_3.addWidget(self.labelCentreService, 3, 1, 1, 1)
         self.labelModele = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelModele.setFont(font)
+        self.labelModele.setStyleSheet("background:white;")
         self.labelModele.setObjectName("labelModele")
         self.gridLayout_3.addWidget(self.labelModele, 0, 2, 1, 1)
         self.labelEcritureMarque = QtWidgets.QLabel(SuppressionBonDeTravail)
@@ -208,6 +198,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelMarque.setFont(font)
+        self.labelMarque.setStyleSheet("background:white;")
         self.labelMarque.setObjectName("labelMarque")
         self.gridLayout_3.addWidget(self.labelMarque, 0, 1, 1, 1)
         self.labelEcritureCentreService = QtWidgets.QLabel(SuppressionBonDeTravail)
@@ -261,10 +252,36 @@ class Ui_SuppressionBonDeTravail(object):
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.boutonSupprimerBon = QtWidgets.QPushButton(SuppressionBonDeTravail)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(-1)
         font.setBold(True)
+        font.setItalic(False)
         font.setWeight(75)
         self.boutonSupprimerBon.setFont(font)
+        self.boutonSupprimerBon.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 150px;\n"
+"max-width:150px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Images/garbage (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonSupprimerBon.setIcon(icon1)
@@ -272,9 +289,33 @@ class Ui_SuppressionBonDeTravail(object):
         self.boutonSupprimerBon.setObjectName("boutonSupprimerBon")
         self.horizontalLayout_4.addWidget(self.boutonSupprimerBon)
         self.boutonFlecheDoubleGauche = QtWidgets.QPushButton(SuppressionBonDeTravail)
-        self.boutonFlecheDoubleGauche.setMaximumSize(QtCore.QSize(50, 150))
+        self.boutonFlecheDoubleGauche.setMaximumSize(QtCore.QSize(27, 38))
         self.boutonFlecheDoubleGauche.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheDoubleGauche.setStyleSheet("")
+        self.boutonFlecheDoubleGauche.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 15px;\n"
+"max-width:15px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonFlecheDoubleGauche.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("Images/double-left-chevron.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -282,9 +323,33 @@ class Ui_SuppressionBonDeTravail(object):
         self.boutonFlecheDoubleGauche.setObjectName("boutonFlecheDoubleGauche")
         self.horizontalLayout_4.addWidget(self.boutonFlecheDoubleGauche)
         self.boutonFlecheGauche = QtWidgets.QPushButton(SuppressionBonDeTravail)
-        self.boutonFlecheGauche.setMaximumSize(QtCore.QSize(50, 180))
+        self.boutonFlecheGauche.setMaximumSize(QtCore.QSize(27, 38))
         self.boutonFlecheGauche.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheGauche.setStyleSheet("")
+        self.boutonFlecheGauche.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 15px;\n"
+"max-width:15px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonFlecheGauche.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("Images/angle-pointing-to-left (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -292,9 +357,33 @@ class Ui_SuppressionBonDeTravail(object):
         self.boutonFlecheGauche.setObjectName("boutonFlecheGauche")
         self.horizontalLayout_4.addWidget(self.boutonFlecheGauche)
         self.boutonFlecheDroite = QtWidgets.QPushButton(SuppressionBonDeTravail)
-        self.boutonFlecheDroite.setMaximumSize(QtCore.QSize(50, 180))
+        self.boutonFlecheDroite.setMaximumSize(QtCore.QSize(27, 38))
         self.boutonFlecheDroite.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheDroite.setStyleSheet("")
+        self.boutonFlecheDroite.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 15px;\n"
+"max-width:15px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonFlecheDroite.setText("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("Images/angle-arrow-pointing-to-right.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -302,9 +391,33 @@ class Ui_SuppressionBonDeTravail(object):
         self.boutonFlecheDroite.setObjectName("boutonFlecheDroite")
         self.horizontalLayout_4.addWidget(self.boutonFlecheDroite)
         self.boutonFlecheDoubleDroite = QtWidgets.QPushButton(SuppressionBonDeTravail)
-        self.boutonFlecheDoubleDroite.setMaximumSize(QtCore.QSize(60, 180))
+        self.boutonFlecheDoubleDroite.setMaximumSize(QtCore.QSize(27, 38))
         self.boutonFlecheDoubleDroite.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheDoubleDroite.setStyleSheet("")
+        self.boutonFlecheDoubleDroite.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 15px;\n"
+"max-width:15px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
         self.boutonFlecheDoubleDroite.setText("")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("Images/double-angle-pointing-to-right.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -318,14 +431,16 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelBonTravail.setFont(font)
+        self.labelBonTravail.setStyleSheet("background:white;")
         self.labelBonTravail.setObjectName("labelBonTravail")
         self.verticalLayout_3.addWidget(self.labelBonTravail)
         self.labelEcritureBonTravail = QtWidgets.QLabel(SuppressionBonDeTravail)
-        self.labelEcritureBonTravail.setMaximumSize(QtCore.QSize(220, 50))
+        self.labelEcritureBonTravail.setMaximumSize(QtCore.QSize(104, 50))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelEcritureBonTravail.setFont(font)
         self.labelEcritureBonTravail.setStyleSheet(" QLabel{\n"
+"max-width:100px;\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
@@ -341,13 +456,22 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelNomTechnicien.setFont(font)
+        self.labelNomTechnicien.setStyleSheet("background:white;")
         self.labelNomTechnicien.setObjectName("labelNomTechnicien")
         self.verticalLayout_3.addWidget(self.labelNomTechnicien)
         self.comboBoxNomTech = QtWidgets.QComboBox(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.comboBoxNomTech.setFont(font)
-        self.comboBoxNomTech.setStyleSheet("")
+        self.comboBoxNomTech.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 8em;\n"
+"    max-width: 200px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxNomTech.setObjectName("comboBoxNomTech")
         self.comboBoxNomTech.addItem("")
         self.verticalLayout_3.addWidget(self.comboBoxNomTech)
@@ -360,6 +484,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCacheNomTech.setFont(font)
+        self.labelCacheNomTech.setStyleSheet("background:white;")
         self.labelCacheNomTech.setObjectName("labelCacheNomTech")
         self.verticalLayout_3.addWidget(self.labelCacheNomTech)
         self.labelDate = QtWidgets.QLabel(SuppressionBonDeTravail)
@@ -372,17 +497,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.dateEdit.setFont(font)
-        self.dateEdit.setStyleSheet("QDateEdit {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"color: black;\n"
-"background:rgb(247,247,247)\n"
-"}\n"
-"\n"
-"\n"
-"")
+        self.dateEdit.setStyleSheet("max-width:100px;")
         self.dateEdit.setLocale(QtCore.QLocale(QtCore.QLocale.French, QtCore.QLocale.Canada))
         self.dateEdit.setButtonSymbols(QtWidgets.QAbstractSpinBox.UpDownArrows)
         self.dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2016, 2, 1), QtCore.QTime(0, 0, 0)))
@@ -396,6 +511,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCacheDate.setFont(font)
+        self.labelCacheDate.setStyleSheet("background:white;")
         self.labelCacheDate.setObjectName("labelCacheDate")
         self.verticalLayout_3.addWidget(self.labelCacheDate)
         self.labelTempsEstime = QtWidgets.QLabel(SuppressionBonDeTravail)
@@ -405,11 +521,12 @@ class Ui_SuppressionBonDeTravail(object):
         self.labelTempsEstime.setObjectName("labelTempsEstime")
         self.verticalLayout_3.addWidget(self.labelTempsEstime)
         self.timeEditTempsEstime = QtWidgets.QTimeEdit(SuppressionBonDeTravail)
-        self.timeEditTempsEstime.setMaximumSize(QtCore.QSize(220, 16777215))
+        self.timeEditTempsEstime.setMaximumSize(QtCore.QSize(64, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.timeEditTempsEstime.setFont(font)
         self.timeEditTempsEstime.setStyleSheet("QTimeEdit {\n"
+"max-width:60px;\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
@@ -424,6 +541,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCacheTemps.setFont(font)
+        self.labelCacheTemps.setStyleSheet("background:white;")
         self.labelCacheTemps.setObjectName("labelCacheTemps")
         self.verticalLayout_3.addWidget(self.labelCacheTemps)
         spacerItem7 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -438,6 +556,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelDescSituation.setFont(font)
+        self.labelDescSituation.setStyleSheet("background:white;")
         self.labelDescSituation.setObjectName("labelDescSituation")
         self.verticalLayout_4.addWidget(self.labelDescSituation)
         self.textEditDescSituation = QtWidgets.QTextEdit(SuppressionBonDeTravail)
@@ -445,13 +564,20 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEditDescSituation.setFont(font)
-        self.textEditDescSituation.setStyleSheet("")
+        self.textEditDescSituation.setStyleSheet("QTextEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247, 247, 247)\n"
+"}")
         self.textEditDescSituation.setObjectName("textEditDescSituation")
         self.verticalLayout_4.addWidget(self.textEditDescSituation)
         self.labelCacheDescSit = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCacheDescSit.setFont(font)
+        self.labelCacheDescSit.setStyleSheet("background:white;")
         self.labelCacheDescSit.setObjectName("labelCacheDescSit")
         self.verticalLayout_4.addWidget(self.labelCacheDescSit)
         spacerItem9 = QtWidgets.QSpacerItem(30, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
@@ -460,6 +586,7 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelDescIntervention.setFont(font)
+        self.labelDescIntervention.setStyleSheet("background:white;")
         self.labelDescIntervention.setObjectName("labelDescIntervention")
         self.verticalLayout_4.addWidget(self.labelDescIntervention)
         self.textEditDescIntervention = QtWidgets.QTextEdit(SuppressionBonDeTravail)
@@ -467,13 +594,20 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEditDescIntervention.setFont(font)
-        self.textEditDescIntervention.setStyleSheet("")
+        self.textEditDescIntervention.setStyleSheet("QTextEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247, 247, 247)\n"
+"}")
         self.textEditDescIntervention.setObjectName("textEditDescIntervention")
         self.verticalLayout_4.addWidget(self.textEditDescIntervention)
         self.labelCacheDescInt = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCacheDescInt.setFont(font)
+        self.labelCacheDescInt.setStyleSheet("background:white;")
         self.labelCacheDescInt.setObjectName("labelCacheDescInt")
         self.verticalLayout_4.addWidget(self.labelCacheDescInt)
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
@@ -484,7 +618,14 @@ class Ui_SuppressionBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.comboBoxOuvertFerme.setFont(font)
-        self.comboBoxOuvertFerme.setStyleSheet("")
+        self.comboBoxOuvertFerme.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    max-width: 55px;\n"
+"backround:rgb(245, 245, 245);\n"
+"}\n"
+"    ")
         self.comboBoxOuvertFerme.setObjectName("comboBoxOuvertFerme")
         self.comboBoxOuvertFerme.addItem("")
         self.comboBoxOuvertFerme.addItem("")
@@ -530,14 +671,4 @@ class Ui_SuppressionBonDeTravail(object):
         self.labelCacheDescInt.setText(_translate("SuppressionBonDeTravail", "Ce que j\'ai écrit"))
         self.comboBoxOuvertFerme.setItemText(0, _translate("SuppressionBonDeTravail", "Ouvert"))
         self.comboBoxOuvertFerme.setItemText(1, _translate("SuppressionBonDeTravail", "Fermé"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    SuppressionBonDeTravail = QtWidgets.QWidget()
-    ui = Ui_SuppressionBonDeTravail()
-    ui.setupUi(SuppressionBonDeTravail)
-    SuppressionBonDeTravail.show()
-    sys.exit(app.exec_())
 
