@@ -145,7 +145,7 @@ color: black;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../Images/piece_image.png</pixmap>
+        <pixmap>../Images/screwdriver-and-wrench-crossed (3).png</pixmap>
        </property>
       </widget>
      </item>

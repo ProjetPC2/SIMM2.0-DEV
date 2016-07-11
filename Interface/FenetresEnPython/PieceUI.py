@@ -87,7 +87,7 @@ class Ui_Piece(object):
         self.label_3.setMaximumSize(QtCore.QSize(100, 100))
         self.label_3.setStyleSheet("background:white;")
         self.label_3.setText("")
-        self.label_3.setPixmap(QtGui.QPixmap("../../Images/piece_image.png"))
+        self.label_3.setPixmap(QtGui.QPixmap("../Images/screwdriver-and-wrench-crossed (3).png"))
         self.label_3.setObjectName("label_3")
         self.titreLayout.addWidget(self.label_3)
         self.labelTitreConsultationEquipement = QtWidgets.QLabel(Piece)
