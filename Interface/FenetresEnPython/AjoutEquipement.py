@@ -268,6 +268,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         else:
             return True
 
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

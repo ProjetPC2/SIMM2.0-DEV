@@ -149,7 +149,7 @@ class Accueil(Ui_Accueil):
 
             # connexion de l'action a l'appuye du bouton modification equipement
             self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.attente)
-            # self.consultationEquipementUI.lineEditId.returnPressed.connect(self.attente)
+            self.consultationEquipementUI.lineEditId.returnPressed.connect(self.attente)
             # self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.consultationEquipementUI.rechercherEquipement)
 
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
@@ -610,7 +610,7 @@ class MainWindow(QMainWindow):
         self.ui.finChargment.finProcessus.connect(self.ui.finChargement)
 
         # self.ui.BoutonRechercherEquipement.clicked.connect(self.overlay.show)
-        self.attente = AttenteThread(self)
+        # self.attente = AttenteThread(self)
         # self.attente.start()
         # self.overlay.hide()
 

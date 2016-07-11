@@ -13,7 +13,7 @@ class Ui_Accueil(object):
         Accueil.setObjectName("Accueil")
         Accueil.setWindowModality(QtCore.Qt.NonModal)
         Accueil.setEnabled(True)
-        Accueil.resize(1255, 1219)
+        Accueil.resize(1255, 1312)
         font = QtGui.QFont()
         font.setFamily("Cambria")
         Accueil.setFont(font)
@@ -145,7 +145,7 @@ class Ui_Accueil(object):
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../../Images/piece_image.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("Images/piece_image.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon4)
         self.pushButton.setIconSize(QtCore.QSize(40, 40))
         self.pushButton.setObjectName("pushButton")
@@ -322,14 +322,14 @@ class Ui_Accueil(object):
         self.BoutonFlecheNavigation.setFlat(False)
         self.BoutonFlecheNavigation.setObjectName("BoutonFlecheNavigation")
         self.horizontalLayout.addWidget(self.BoutonFlecheNavigation)
-        self.layoutAffichagePrincipal.addLayout(self.horizontalLayout)
         self.frameFleche = QtWidgets.QFrame(self.centralwidget)
         self.frameFleche.setMaximumSize(QtCore.QSize(16777215, 60))
         self.frameFleche.setStyleSheet("background-color: white;")
         self.frameFleche.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frameFleche.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frameFleche.setObjectName("frameFleche")
-        self.layoutAffichagePrincipal.addWidget(self.frameFleche)
+        self.horizontalLayout.addWidget(self.frameFleche)
+        self.layoutAffichagePrincipal.addLayout(self.horizontalLayout)
         self.logo = QtWidgets.QLabel(self.centralwidget)
         self.logo.setMinimumSize(QtCore.QSize(600, 600))
         self.logo.setStyleSheet("background-color: transparent ;color : white;")
@@ -383,3 +383,12 @@ class Ui_Accueil(object):
 "Hôpital Saint-Michel "))
         self.LabelDefinitionSIMM.setText(_translate("Accueil", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Accueil = QtWidgets.QMainWindow()
+    ui = Ui_Accueil()
+    ui.setupUi(Accueil)
+    Accueil.show()
+    sys.exit(app.exec_())

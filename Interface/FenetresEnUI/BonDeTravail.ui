@@ -604,6 +604,9 @@ color: rgb(81, 81, 81);
           </widget>
          </item>
          <item>
+          <widget class="QSpinBox" name="spinBoxNombrePiece"/>
+         </item>
+         <item>
           <spacer name="horizontalSpacer_8">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
