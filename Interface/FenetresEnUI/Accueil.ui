@@ -326,7 +326,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../../../Downloads/screwdriver-and-wrench-crossed (3).png</normaloff>../../../../../Downloads/screwdriver-and-wrench-crossed (3).png</iconset>
+            <normaloff>../../Images/piece_image.png</normaloff>../../Images/piece_image.png</iconset>
           </property>
           <property name="iconSize">
            <size>

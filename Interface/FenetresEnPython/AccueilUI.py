@@ -145,7 +145,7 @@ class Ui_Accueil(object):
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../../../../../Downloads/screwdriver-and-wrench-crossed (3).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("../../Images/piece_image.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon4)
         self.pushButton.setIconSize(QtCore.QSize(40, 40))
         self.pushButton.setObjectName("pushButton")
