@@ -761,7 +761,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>Images/SIMM2.0_logo_Alex.png</pixmap>
+           <pixmap>Images/Logo_SIMM.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
