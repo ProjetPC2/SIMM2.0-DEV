@@ -301,43 +301,43 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}
+         <layout class="QVBoxLayout" name="layoutBoutonBdT">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}
 
 QPushButton:hover {
 background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);
 }
 
 QPushButton:pressed{ background-color: #cccccc; }</string>
-          </property>
-          <property name="text">
-           <string> Ajouter une pièce</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/piece_image.png</normaloff>Images/piece_image.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>40</width>
-            <height>40</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="layoutBoutonBdT">
+            </property>
+            <property name="text">
+             <string> Ajouter une pièce</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Images/piece_image.png</normaloff>Images/piece_image.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QPushButton" name="BoutonAjouterBonTravail">
             <property name="maximumSize">
