@@ -12,10 +12,12 @@ from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
 from Interface.FenetresEnPython.Attente import Overlay, AttenteThread
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
 from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipement
+from Interface.FenetresEnPython.FinAction import FinAction
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.PDF2 import PDF
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
+from Interface.FenetresEnPython.Sauvegarde import Sauvegarde
 from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.Statistique import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
@@ -36,6 +38,8 @@ class Accueil(Ui_Accueil):
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.overlay = Accueil.overlay
+        self.aucunResultat = Accueil.aucunResultat
+        self.sauvegarde = Accueil.sauvegarde
         self.Accueil = Accueil
         self.finChargment = Communicate()
 
@@ -119,9 +123,9 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas deja
 
             self.ajoutEquipement = QtWidgets.QWidget()
-            self.ajoutEquipementUI = AjoutEquipement(self.ajoutEquipement)
+            self.ajoutEquipementUI = AjoutEquipement(self.ajoutEquipement, self.finChargment)
             # self.ajoutEquipement.setStyleSheet("background: white;")
-
+            self.ajoutEquipementUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
             self.listeElementParDefaut.append(self.ajoutEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutEquipement)
         else:
@@ -558,6 +562,19 @@ class Accueil(Ui_Accueil):
         print("fin chargement")
         self.overlay.hide()
 
+    def afficherAucunResultat(self):
+        print("Aurcun resultat")
+        self.aucunResultat.raise_()
+        self.aucunResultat.show()
+
+    def sauvegardeEnCours(self):
+        self.sauvegarde.raise_()
+        self.sauvegarde.show()
+
+    def sauvegarderTermine(self):
+        print("Sauvegarde termine")
+        self.sauvegarde.hide()
+
 class SIMM():
     '''
         Fonction de lancement de la page d'accueil de SIMM
@@ -588,27 +605,31 @@ class SIMM():
         os.system("pause")
 
 
-    def resizeEvent(self, event):
-        print("size", event.size())
-        self.overlay.resize(event.size())
-        event.accept()
-
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
         self.mapper = QSignalMapper(self)
         self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
         self.overlay = None
+        self.aucunResultat = None
+        self.sauvegarde = None
         self.ui = Accueil(self)
         self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
         self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.setWindowTitle("SIMM 2.0")
         self.overlay = Overlay(self.centralWidget())
+        self.aucunResultat = FinAction(self.centralWidget())
+        self.sauvegarde = Sauvegarde(self.centralWidget())
         self.overlay.hide()
+        self.aucunResultat.hide()
+        self.sauvegarde.hide()
         self.ui.overlay = self.overlay
+        self.ui.aucunResultat = self.aucunResultat
+        self.ui.sauvegarde = self.sauvegarde
         self.ui.finChargment.finProcessus.connect(self.ui.finChargement)
-
+        self.ui.finChargment.aucunResultat.connect(self.ui.afficherAucunResultat)
+        self.ui.finChargment.sauvegardeTermine.connect(self.ui.sauvegarderTermine)
         # self.ui.BoutonRechercherEquipement.clicked.connect(self.overlay.show)
         # self.attente = AttenteThread(self)
         # self.attente.start()
@@ -618,6 +639,8 @@ class MainWindow(QMainWindow):
         print(event)
         print("size", event.size())
         self.overlay.resize(event.size())
+        self.aucunResultat.resize(event.size())
+        self.sauvegarde.resize(event.size())
         event.accept()
 
 

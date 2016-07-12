@@ -6,6 +6,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 import datetime
+from threading import Thread
+
 from PyQt5 import QtWidgets
 
 from BDD.BonTravailManager import BonTravailManager
@@ -27,13 +29,13 @@ class BonDeTravail(Ui_BonDeTravail):
         self.dic_request = dict()
         if(consulterBDT is not None):
             self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
-            self.chercherEquipement()
+            self.chercherEquipementThread()
             self.indiceBonDeTravail = int(consulterBDT["ID-BDT"]) - 1
             self.chargerBonTravail()
             self.ajoutBonDeTravail()
         if(ajouterID is not None):
             self.lineEditID.setText(ajouterID)
-            self.chercherEquipement()
+            self.chercherEquipementThread()
             self.nouveauBondeTravail()
 
 
@@ -41,7 +43,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
         self.labelEcritureBonTravail.setText("")
         #Connexion de l'appuie de la touche entree
-        self.lineEditID.returnPressed.connect(self.chercherEquipement)
+        self.lineEditID.returnPressed.connect(self.chercherEquipementThread)
 
         #Creation des differents elements utiles pour la sauvegarde
         self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
@@ -76,7 +78,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
         self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
 
-        self.boutonActualiser.clicked.connect(self.chercherEquipement)
+        self.boutonActualiser.clicked.connect(self.chercherEquipementThread)
         #TODO : Connexion du bouton AjoutBDT avec une methode a creer nouveauBDT
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
         #TODO : Faire appel a la methode qui sera implementee plus bas pour masquer les differents labels et afficher les champs de saisie
@@ -362,6 +364,22 @@ class BonDeTravail(Ui_BonDeTravail):
         self.indiceBonDeTravail = dict["ID-BDT"] - 1
         self.chargerBonTravail()
         self.consulterBonDeTravail()
+
+    def chercherEquipementThread(self):
+        thread = RechercherBonDeTravail(self.chercherEquipement)
+        thread.start()
+
+
+class RechercherBonDeTravail (Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+
+    def run(self):
+        self.fonction()
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

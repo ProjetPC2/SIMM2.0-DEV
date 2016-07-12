@@ -88,10 +88,14 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                     self.listeLabel[i].setText(str(self.equipement[cle]))
                     i += 1
                 self.rechercherBonDeTravailAssocie()
+                self.finChargement.finProcessus.emit()
             else:
                 #Cas ou l'equipement n'existe pas
                 self.boutonModifierEquipement.setEnabled(False)
-            self.finChargement.finProcessus.emit()
+                self.finChargement.finProcessus.emit()
+                self.finChargement.aucunResultat.emit()
+
+
         else:
             print("Champ ID null")
 

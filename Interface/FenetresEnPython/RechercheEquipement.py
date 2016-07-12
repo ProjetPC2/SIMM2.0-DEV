@@ -202,15 +202,18 @@ class RechercheEquipement(Ui_RechercheEquipement):
         if(any(self.dictionnaireRecherche)):
             self.listeResultat = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
             self.tableResultats.setRowCount(len(self.listeResultat))
-            for i, dictionnaire in enumerate(self.listeResultat):
-                # Creation des QTableWidgetItem
-                colonne = 0
-                # print(dictionnaire)
-                # print(self.listeCleDonnees)
-                for cle in self.listeCleDonnees:
-                    self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
-                    colonne += 1
-                self.tableResultats.resizeColumnsToContents()
+            if(any(self.listeResultat)):
+                for i, dictionnaire in enumerate(self.listeResultat):
+                    # Creation des QTableWidgetItem
+                    colonne = 0
+                    # print(dictionnaire)
+                    # print(self.listeCleDonnees)
+                    for cle in self.listeCleDonnees:
+                        self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
+                        colonne += 1
+                    self.tableResultats.resizeColumnsToContents()
+            else:
+                self.finChargement.aucunResultat.emit()
         else:
             print("dictionnaire de recherche vide")
 

@@ -305,10 +305,12 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                     print("Aucun resultat")
                     self.tableResultats.clearContents()
                     self.tableResultats.setRowCount(0)
+                    self.finChargement.aucunResultat.emit()
             else:
                 print("dictionnaire de recherche vide")
                 self.tableResultats.clearContents()
                 self.tableResultats.setRowCount(0)
+
 
     def rechercheCategorieEquipementThread(self):
         thread = RechercherBonDeTravail(self.rechercheCategorieEquipement)

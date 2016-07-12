@@ -1,4 +1,5 @@
 import datetime
+from threading import Thread
 
 import yaml
 from PyQt5 import QtGui, QtWidgets
@@ -17,11 +18,12 @@ class AjoutEquipement(Ui_AjoutEquipement):
         :return:
     '''
     # On masque les autres elements
-    def __init__(self, AjoutEquipement):
+    def __init__(self, AjoutEquipement, sauvegarde):
         self.setupUi(AjoutEquipement)
         self.ajout()
         self.BoutonEnregistrer.hide()
         self.BoutonModifier.hide()
+        self.sauvegarde = sauvegarde
 
 
     def ajout(self):
@@ -137,7 +139,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.dateEditDateDuDernierEntretien.setDate(QDate.currentDate())
         self.dateEditDateDaquisition.setDate(QDate.currentDate())
 
-        self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipement)
+        self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
         self.BoutonModifier.clicked.connect(self.modifierEquipement)
 
 
@@ -193,6 +195,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             i += 1
         self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
+        self.sauvegarde.sauvegardeTermine.emit()
 
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement"""
@@ -268,7 +271,18 @@ class AjoutEquipement(Ui_AjoutEquipement):
         else:
             return True
 
+    def sauvegarderEquipementThread(self):
+        thread = SauvergarderEquipement(self.sauvegarderEquipement)
+        thread.start()
 
+class SauvergarderEquipement (Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+
+    def run(self):
+        self.fonction()
 
 if __name__ == "__main__":
     import sys

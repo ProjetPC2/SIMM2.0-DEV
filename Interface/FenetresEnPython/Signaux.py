@@ -3,5 +3,7 @@ from PyQt5.QtCore import pyqtSignal, QObject
 
 
 class Communicate(QObject):
-    closeApp = pyqtSignal()
+
+    aucunResultat = pyqtSignal()
     finProcessus = pyqtSignal()
+    sauvegardeTermine = pyqtSignal()

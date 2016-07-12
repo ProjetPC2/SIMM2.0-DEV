@@ -8,14 +8,14 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QWidget, QMainWindow, QTextEdit, QPushButton, QGridLayout
 
 
-class Overlay(QWidget):
+class Sauvegarde(QWidget):
     def __init__(self, parent=None):
 
         QWidget.__init__(self, parent)
         palette = QPalette(self.palette())
         # palette.setColor(palette.Background, Qt.transparent)
         # self.setPalette(palette)
-        self.text = "Chargement"
+        self.text = "Sauvegarde en cours..."
 
     def paintEvent(self, event):
 
@@ -73,26 +73,26 @@ class MainWindow(QMainWindow):
         layout.addWidget(button, 1, 1, 1, 1)
 
         self.setCentralWidget(widget)
-        self.overlay = Overlay(self.centralWidget())
+        self.sauvegarde = Sauvergade(self.centralWidget())
         print(widget.size())
-        self.overlay.hide()
-        button.clicked.connect(self.overlay.show)
+        self.sauvegarde.hide()
+        button.clicked.connect(self.sauvegarde.show)
 
     def resizeEvent(self, event):
         print(event)
         print("size", event.size())
-        self.overlay.resize(event.size())
+        self.sauvegarde.resize(event.size())
         event.accept()
 
 class AttenteThread(Thread):
-    def __init__(self, Overlay):
+    def __init__(self, Sauvegarde):
         Thread.__init__(self)
-        self.overlay = Overlay
+        self.sauvegarde = Sauvegarde
 
 
     def run(self):
-        self.overlay.raise_()
-        self.overlay.show()
+        self.sauvegarde.raise_()
+        self.sauvegarde.show()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
