@@ -12,7 +12,17 @@ class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
         Statistique.resize(974, 805)
-        Statistique.setStyleSheet("background:white;")
+        Statistique.setStyleSheet("QWidget{\n"
+"background:white;\n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247, 247, 247);\n"
+"}")
         self.gridLayout = QtWidgets.QGridLayout(Statistique)
         self.gridLayout.setObjectName("gridLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -57,7 +67,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 45px;\n"
 "max-width: 45px;\n"
@@ -98,7 +108,7 @@ class Ui_Statistique(object):
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 8em;\n"
 "    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
+"background: rgb(247, 247, 247);\n"
 "}\n"
 "    ")
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
@@ -123,7 +133,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "min-height:20px;\n"
 "max-height:20px;\n"
 "min-width: 50px;\n"
@@ -190,7 +200,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 40px;\n"
 "max-width: 40px;\n"
@@ -206,7 +216,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 40px;\n"
 "max-width: 40px;\n"
@@ -222,7 +232,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 40px;\n"
 "max-width: 40px;\n"
@@ -296,7 +306,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 40px;\n"
 "max-width: 40px;\n"
@@ -312,7 +322,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 40px;\n"
 "max-width: 40px;\n"
@@ -328,7 +338,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 40px;\n"
 "max-width: 40px;\n"
@@ -344,7 +354,7 @@ class Ui_Statistique(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:white;\n"
+"background: rgb(247, 247, 247);\n"
 "max-height:20px;\n"
 "min-width: 40px;\n"
 "max-width: 40px;\n"
@@ -374,7 +384,7 @@ class Ui_Statistique(object):
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 8em;\n"
 "    max-width: 200px;\n"
-"backround:rgb(245, 245, 245);\n"
+"background: rgb(247, 247, 247);\n"
 "}\n"
 "    ")
         self.comboBoxCentreService.setObjectName("comboBoxCentreService")
@@ -493,7 +503,7 @@ class Ui_Statistique(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
-        self.LabelCentreDeService.setText(_translate("Statistique", "Résume de l\'inventaire par centre de service"))
+        self.LabelCentreDeService.setText(_translate("Statistique", "Résumé de l\'inventaire par centre de service"))
         item = self.tableResumeInventaire.verticalHeaderItem(0)
         item.setText(_translate("Statistique", "1"))
         item = self.tableResumeInventaire.verticalHeaderItem(1)
@@ -504,14 +514,4 @@ class Ui_Statistique(object):
         item.setText(_translate("Statistique", "Catégorie d\'équipement"))
         item = self.tableResumeInventaire.horizontalHeaderItem(1)
         item.setText(_translate("Statistique", "Quantité"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Statistique = QtWidgets.QWidget()
-    ui = Ui_Statistique()
-    ui.setupUi(Statistique)
-    Statistique.show()
-    sys.exit(app.exec_())
 
