@@ -14,7 +14,17 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:white;</string>
+   <string notr="true">QWidget{
+background:white;
+}
+
+QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247, 247, 247);
+}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -132,7 +142,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 45px;
 max-width: 45px;
@@ -219,7 +229,7 @@ p, li { white-space: pre-wrap; }
     padding: 1px 18px 1px 3px;
     min-width: 8em;
 	max-width: 200px;
-backround:rgb(245, 245, 245);
+background: rgb(247, 247, 247);
 }
 	</string>
          </property>
@@ -274,7 +284,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 min-height:20px;
 max-height:20px;
 min-width: 50px;
@@ -428,7 +438,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 40px;
 max-width: 40px;
@@ -464,7 +474,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 40px;
 max-width: 40px;
@@ -500,7 +510,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 40px;
 max-width: 40px;
@@ -667,7 +677,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 40px;
 max-width: 40px;
@@ -703,7 +713,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 40px;
 max-width: 40px;
@@ -739,7 +749,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 40px;
 max-width: 40px;
@@ -775,7 +785,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:white;
+background: rgb(247, 247, 247);
 max-height:20px;
 min-width: 40px;
 max-width: 40px;
@@ -818,7 +828,7 @@ p, li { white-space: pre-wrap; }
           <string notr="true">background:white;</string>
          </property>
          <property name="text">
-          <string>Résume de l'inventaire par centre de service</string>
+          <string>Résumé de l'inventaire par centre de service</string>
          </property>
         </widget>
        </item>
@@ -831,7 +841,7 @@ p, li { white-space: pre-wrap; }
     padding: 1px 18px 1px 3px;
     min-width: 8em;
 	max-width: 200px;
-backround:rgb(245, 245, 245);
+background: rgb(247, 247, 247);
 }
 	</string>
          </property>
