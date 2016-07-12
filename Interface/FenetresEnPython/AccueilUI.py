@@ -334,7 +334,7 @@ class Ui_Accueil(object):
         self.logo.setMinimumSize(QtCore.QSize(600, 600))
         self.logo.setStyleSheet("background-color: transparent ;color : white;")
         self.logo.setText("")
-        self.logo.setPixmap(QtGui.QPixmap("Images/SIMM2.0_logo_Alex.png"))
+        self.logo.setPixmap(QtGui.QPixmap("Images/Logo_SIMM.png"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
         self.layoutAffichagePrincipal.addWidget(self.logo)
@@ -383,12 +383,3 @@ class Ui_Accueil(object):
 "Hôpital Saint-Michel "))
         self.LabelDefinitionSIMM.setText(_translate("Accueil", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Accueil = QtWidgets.QMainWindow()
-    ui = Ui_Accueil()
-    ui.setupUi(Accueil)
-    Accueil.show()
-    sys.exit(app.exec_())
