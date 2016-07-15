@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1264</width>
+    <width>1434</width>
     <height>697</height>
    </rect>
   </property>
@@ -597,7 +597,26 @@ color: rgb(81, 81, 81);
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
+          <spacer name="horizontalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QLabel" name="labelCategoriePiece">
+           <property name="maximumSize">
+            <size>
+             <width>500</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -630,7 +649,33 @@ color: rgb(81, 81, 81);
           </widget>
          </item>
          <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>600</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
           <widget class="QLabel" name="labelNomPiece">
+           <property name="maximumSize">
+            <size>
+             <width>500</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -642,39 +687,20 @@ color: rgb(81, 81, 81);
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBoxNombrePiece"/>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_8">
+          <spacer name="horizontalSpacer_11">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
+            <enum>QSizePolicy::Maximum</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>250</width>
+             <width>15</width>
              <height>20</height>
             </size>
            </property>
           </spacer>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <widget class="QLabel" name="labelNomPiece_2">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Nom de la pièce</string>
-           </property>
-          </widget>
          </item>
          <item>
           <widget class="QComboBox" name="comboBoxNomPiece">
@@ -689,6 +715,25 @@ color: rgb(81, 81, 81);
              <width>225</width>
              <height>20</height>
             </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelNomPiece_2">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Nom de la pièce</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBoxNombrePiece">
+           <property name="maximum">
+            <number>999</number>
            </property>
           </widget>
          </item>
