@@ -184,6 +184,8 @@ class BonDeTravail(Ui_BonDeTravail):
             else:
                 dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
             dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
+            #Decrementation des pieces dans le stock
+            self.pieceManager.choisirPiece(self.listeAjoutPieceReparation)
             if(any(self.equipementDictionnaire)):
                 #On ajoute le bon de travail a un equipement existant
                 dicRetour = (self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees))
