@@ -206,6 +206,7 @@ class BonDeTravail(Ui_BonDeTravail):
          '''
         if(any(self.listeBonDeTravail)):
             #Si un bon de travail a ete trouve, on remplit les differents champs associes
+            self.listeAjoutPieceReparation.clear()
             self.dateEdit.setDate(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"])
             self.textEditDescSituation.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
             self.textEditDescSituation.wordWrapMode()
@@ -219,6 +220,21 @@ class BonDeTravail(Ui_BonDeTravail):
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
             idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
             self.labelEcritureBonTravail.setText(idBDT)
+            self.tableWidgetPiecesAssociees.setRowCount(0)
+            if "Pieces" in self.listeBonDeTravail[self.indiceBonDeTravail]:
+                if self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"] is not None:
+                    print(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
+                    self.tableWidgetPiecesAssociees.setRowCount(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
+                    ligne = 0
+                    for tuple in self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]:
+                        print(tuple)
+                        categorie, nomPiece, nombre = tuple
+                        self.tableWidgetPiecesAssociees.setItem(ligne, 0,
+                                                         QTableWidgetItem(categorie))
+                        self.tableWidgetPiecesAssociees.setItem(ligne, 1, QTableWidgetItem(nomPiece))
+                        self.tableWidgetPiecesAssociees.setItem(ligne, 2, QTableWidgetItem(str(nombre)))
+                        ligne += 1
+                    self.listeAjoutPieceReparation.append((categorie, nomPiece, nombre))
             #inutile
             # self.labelCacheDate.setText(str(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"]))
             # self.labelCacheDescInt.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
@@ -314,7 +330,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
         for label in self.listeLabelCache:
             label.hide()
-
+        self.listeAjoutPieceReparation.clear()
 
     def consulterBonDeTravail(self):
         self.comboBoxNomTech.show()
