@@ -1,4 +1,4 @@
-nbEquipement: 501
+nbEquipement: 506
 nbEquipementCentreService:
   Archives:
     Ordinateur: 3
@@ -148,7 +148,7 @@ nbEquipementCentreService:
     Chaise roulante: 2
     Civiere de transport: 1
     Concentrateur d'oxygene: 4
-    Defibrilateur: 5
+    Defibrilateur: 10
     Lampe d'examen: 2
     Lit: 6
     Moniteur physiologique: 4
@@ -164,14 +164,14 @@ nbEquipementEtatConservation:
   Acceptable: 423
   Desuet: 15
   En fin de vie: 49
-  Quasi neuf: 14
+  Quasi neuf: 19
 nbEquipementEtatService:
   Au rebus: 15
   En maintenance: 52
-  En service: 434
+  En service: 439
 nbEquipementProvenance:
   ? ''
-  : 370
+  : 375
   CDC: 10
   CHU Sainte-Justine: 5
   Croix-Rouge Haitienne: 5

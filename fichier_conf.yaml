@@ -143,6 +143,8 @@ champsAcceptes-BDT:
 - DescriptionSituation
 - DescriptionIntervention
 - EtatBDT
+- NomTechnicien
+- Pieces
 champsAcceptes-Equipement:
 - CategorieEquipement
 - Marque
@@ -156,4 +158,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 510
+dernierID-Equipement: 515

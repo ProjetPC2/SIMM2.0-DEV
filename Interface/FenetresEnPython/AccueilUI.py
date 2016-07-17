@@ -132,14 +132,14 @@ class Ui_Accueil(object):
         self.layoutBouton.addItem(spacerItem4)
         self.layoutBoutonBdT = QtWidgets.QVBoxLayout()
         self.layoutBoutonBdT.setObjectName("layoutBoutonBdT")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.BoutonAjouterPiece = QtWidgets.QPushButton(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton.setFont(font)
-        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButton.setStyleSheet("QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}\n"
+        self.BoutonAjouterPiece.setFont(font)
+        self.BoutonAjouterPiece.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonAjouterPiece.setStyleSheet("QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}\n"
 "\n"
 "QPushButton:hover {\n"
 "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);\n"
@@ -148,10 +148,10 @@ class Ui_Accueil(object):
 "QPushButton:pressed{ background-color: #cccccc; }")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("Images/piece_image.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton.setIcon(icon4)
-        self.pushButton.setIconSize(QtCore.QSize(40, 40))
-        self.pushButton.setObjectName("pushButton")
-        self.layoutBoutonBdT.addWidget(self.pushButton)
+        self.BoutonAjouterPiece.setIcon(icon4)
+        self.BoutonAjouterPiece.setIconSize(QtCore.QSize(40, 40))
+        self.BoutonAjouterPiece.setObjectName("BoutonAjouterPiece")
+        self.layoutBoutonBdT.addWidget(self.BoutonAjouterPiece)
         self.BoutonAjouterBonTravail = QtWidgets.QPushButton(self.centralwidget)
         self.BoutonAjouterBonTravail.setMaximumSize(QtCore.QSize(350, 16777215))
         font = QtGui.QFont()
@@ -368,7 +368,7 @@ class Ui_Accueil(object):
 "un équipement"))
         self.BoutonRechercherEquipement.setText(_translate("Accueil", "Rechercher un\n"
 "équipement"))
-        self.pushButton.setText(_translate("Accueil", " Ajouter une pièce"))
+        self.BoutonAjouterPiece.setText(_translate("Accueil", " Ajouter une pièce"))
         self.BoutonAjouterBonTravail.setText(_translate("Accueil", "Ajouter un bon\n"
 "de travail"))
         self.BoutonRechercherBonTravail.setText(_translate("Accueil", "Rechercher un\n"

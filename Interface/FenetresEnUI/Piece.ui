@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1056</width>
-    <height>605</height>
+    <width>1811</width>
+    <height>852</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -61,19 +61,6 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
      </property>
     </widget>
    </item>
-   <item row="7" column="0" colspan="9">
-    <widget class="QListView" name="listViewCategoriePiece">
-     <property name="font">
-      <font>
-       <family>MS Shell Dlg 2</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: white;</string>
-     </property>
-    </widget>
-   </item>
    <item row="9" column="0" colspan="9">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
@@ -90,7 +77,7 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButtonEnregistreePiece">
+      <widget class="QPushButton" name="BoutonEnregistrerPiece">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -156,19 +143,6 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
      </property>
      <property name="text">
       <string>Résumé des pièces pour chaque catégorie</string>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="0" colspan="9">
-    <widget class="QListView" name="listViewResume">
-     <property name="font">
-      <font>
-       <family>MS Shell Dlg 2</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: white;</string>
      </property>
     </widget>
    </item>
@@ -326,7 +300,7 @@ color: black;
     </widget>
    </item>
    <item row="4" column="8">
-    <widget class="QPushButton" name="pushButtonValider">
+    <widget class="QPushButton" name="BoutonValider">
      <property name="minimumSize">
       <size>
        <width>110</width>
@@ -433,7 +407,7 @@ color: black;
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QComboBox" name="comboBoxSelectionCategorie_2">
+    <widget class="QComboBox" name="comboBoxSelectionCategoriePiece">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>0</horstretch>
@@ -466,6 +440,9 @@ border-radius: 4px;
 background:rgb(247,247,247);
 color: black;
 }</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -503,6 +480,35 @@ border-radius: 4px;
 background:rgb(247,247,247);
 color: black;
 }</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="9">
+    <widget class="QTableWidget" name="tableCategoriePiece">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0" colspan="9">
+    <widget class="QTableWidget" name="tableResume">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;</string>
      </property>
     </widget>
    </item>

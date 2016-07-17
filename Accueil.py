@@ -15,6 +15,7 @@ from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipe
 from Interface.FenetresEnPython.FinAction import FinAction
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.PDF2 import PDF
+from Interface.FenetresEnPython.Piece import Piece
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
 from Interface.FenetresEnPython.Sauvegarde import Sauvegarde
@@ -68,6 +69,7 @@ class Accueil(Ui_Accueil):
         self.consultationBonDeTravail = None
 
         # Partie Bon de Travail
+        self.ajoutPiece = None
         self.ajoutBonDeTravail = None
         self.rechercheBonDeTravail = None
         self.modificationEquipementRecherche = None
@@ -100,6 +102,7 @@ class Accueil(Ui_Accueil):
         self.BoutonModifierConsulterEquipement.clicked.connect(self.afficherConsultationEquipement)
         self.BoutonRechercherEquipement.clicked.connect(self.afficherRechercheEquipement)
 
+        self.BoutonAjouterPiece.clicked.connect(self.afficherAjoutPiece)
         self.BoutonAjouterBonTravail.clicked.connect(self.afficherAjoutBonDeTravail)
         self.BoutonRechercherBonTravail.clicked.connect(self.afficherRechercheBonDeTravail)
 
@@ -260,6 +263,26 @@ class Accueil(Ui_Accueil):
             self.supprimeBonDeTravail.show()
         self.listeNavigation.append(self.supprimeBonDeTravail)
 
+    def afficherAjoutPiece(self):
+        '''
+            Affichage du widget permet l'ajout d'une piece et le resume des categories de pieces
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonAjouterPiece)
+        if self.ajoutPiece is None:
+            self.ajoutPiece = QtWidgets.QWidget()
+            self.pieceUI = Piece(self.ajoutPiece)
+            self.listeElementParDefaut.append(self.ajoutPiece)
+            self.layoutAffichagePrincipal.addWidget(self.ajoutPiece)
+        else:
+            self.ajoutPiece.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
+
     def afficherAjoutBonDeTravail(self):
         '''
             Affichage du widget permet l'ajout d'un bon de travail
@@ -285,11 +308,7 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
 
-    #TODO : Creer une methode ajouterBonDeTravail
-    #Cette methode va masquer les autres elements graphiques du layout principal
-    #Elle va creer un nouveau widget ajouterBonDeTravailEquipement
 
-    #TODO : Creer une methode pour consulter le bon de travail selectionnee
     def afficherRechercheBonDeTravail(self):
         '''
             Affichage du widget permet la recherche d'un bon de travail

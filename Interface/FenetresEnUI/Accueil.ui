@@ -303,7 +303,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
         <item>
          <layout class="QVBoxLayout" name="layoutBoutonBdT">
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="BoutonAjouterPiece">
             <property name="font">
              <font>
               <pointsize>11</pointsize>

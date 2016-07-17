@@ -356,7 +356,8 @@ class EquipementManager:
                     fichierStat.write(yaml.dump(stats, default_flow_style=False))
         except OSError:
             print("Could not update: ", self.stats_file)
-    
+
+
 
     def _getConf(self):
         try:

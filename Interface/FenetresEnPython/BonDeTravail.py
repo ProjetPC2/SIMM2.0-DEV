@@ -9,9 +9,12 @@ import datetime
 from threading import Thread
 
 from PyQt5 import QtWidgets
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
+from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
 
 
@@ -27,15 +30,18 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheGauche.hide()
         self.boutonFlecheDoubleGauche.hide()
         self.dic_request = dict()
+        self.listeAjoutPieceReparation = list()
+        self.pushButtonValider.setDisabled(True)
+
         if(consulterBDT is not None):
             self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
-            self.chercherEquipementThread()
+            self.chercherEquipement()
             self.indiceBonDeTravail = int(consulterBDT["ID-BDT"]) - 1
             self.chargerBonTravail()
             self.ajoutBonDeTravail()
         if(ajouterID is not None):
             self.lineEditID.setText(ajouterID)
-            self.chercherEquipementThread()
+            self.chercherEquipement()
             self.nouveauBondeTravail()
 
 
@@ -43,11 +49,12 @@ class BonDeTravail(Ui_BonDeTravail):
 
         self.labelEcritureBonTravail.setText("")
         #Connexion de l'appuie de la touche entree
-        self.lineEditID.returnPressed.connect(self.chercherEquipementThread)
+        self.lineEditID.returnPressed.connect(self.chercherEquipement)
 
         #Creation des differents elements utiles pour la sauvegarde
         self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
+        self.pieceManager = PieceManager()
         self.equipementDictionnaire = None
         self.listeBonDeTravail = list()
         self.indiceBonDeTravail = 0
@@ -70,6 +77,10 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeWidget.append(self.dateEdit)
         # self.listeWidget.append(self.comboBoxNomTech)
 
+        self.colonneClique = None
+        self.nombreClique = 0
+
+
         #Connexion des differents boutons
         self.boutonSauvegarde.clicked.connect(self.sauvegarderBonDeTravail)
         self.boutonFlecheGauche.clicked.connect(self.bonTravailPrecedent)
@@ -78,12 +89,22 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
         self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
 
-        self.boutonActualiser.clicked.connect(self.chercherEquipementThread)
-        #TODO : Connexion du bouton AjoutBDT avec une methode a creer nouveauBDT
+        self.boutonActualiser.clicked.connect(self.chercherEquipement)
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
-        #TODO : Faire appel a la methode qui sera implementee plus bas pour masquer les differents labels et afficher les champs de saisie
 
         self.boutonConsultation.clicked.connect(self.consulterBonDeTravail)
+        self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+        self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
+        self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
+        # self.listePieceReparation = list()
+        self.pushButtonValider.clicked.connect(self.validerChoixPiece)
+        self.listeCleDonnees = list(["Categorie","Nom Piece", "Nombre"])
+        self.tableWidgetPiecesAssociees.setColumnCount(len(self.listeCleDonnees))
+        self.tableWidgetPiecesAssociees.setHorizontalHeaderLabels(self.listeCleDonnees)
+        self.tableWidgetPiecesAssociees.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidgetPiecesAssociees.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.tableWidgetPiecesAssociees.horizontalHeader().sectionClicked.connect(self.trier)
+
     def chercherEquipement(self):
         '''
             Recuperation de l'equipement associe a l'ID dans le cas ou il existe
@@ -120,6 +141,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.boutonFlecheDroite.show()
             self.boutonFlecheGauche.show()
             self.boutonFlecheDoubleGauche.show()
+            self.pushButtonValider.setDisabled(False)
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
@@ -139,6 +161,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.boutonFlecheDroite.hide()
             self.boutonFlecheGauche.hide()
             self.boutonFlecheDoubleGauche.hide()
+            self.pushButtonValider.setDisabled(True)
 
     def sauvegarderBonDeTravail(self):
         '''
@@ -160,6 +183,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 dictionnaireDonnees["EtatBDT"] = "Ferme"
             else:
                 dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
+            dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
             if(any(self.equipementDictionnaire)):
                 #On ajoute le bon de travail a un equipement existant
                 dicRetour = (self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees))
@@ -265,11 +289,6 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescSituation.setDisabled(True)
             self.textEditDescIntervention.setDisabled(True)
 
-    #TODO: Creer une methode nouveauBDT, avec comme seul argument : self
-    #Cette methode fera appel a la methode pour masquer les labels et afficher les champs de saisie ainsi que l'affichage des boutons  appropries
-    # Cette methode aura pour but de de vider les champs du BDT ( Description Situation, Description intervention
-    # Temps estime et ID bon de travail
-
     def nouveauBondeTravail(self):
         # self.textEditDescIntervention.clear()
         # self.textEditDescIntervention.show()
@@ -336,9 +355,8 @@ class BonDeTravail(Ui_BonDeTravail):
         if(any(self.listeBonDeTravail)):
             self.boutonConsultation.show()
         self.boutonAjoutBDT.show()
+        self.listeAjoutPieceReparation.clear()
 
-
-    #TODO : Creer une methode qui affiche les differents labels et qui masque les champs de saisie correspondant
 
     def afficheSaisi(self):
 
@@ -369,6 +387,39 @@ class BonDeTravail(Ui_BonDeTravail):
         thread = RechercherBonDeTravail(self.chercherEquipement)
         thread.start()
 
+    def choisirCategoriePiece(self):
+        self.comboBoxNomPiece.clear()
+        listePiece = self.pieceManager.ObtenirListePiece(self.comboBoxCategoriePiece.currentText())
+        self.comboBoxNomPiece.addItems(listePiece)
+
+    def validerChoixPiece(self):
+        categorie = self.comboBoxCategoriePiece.currentText()
+        nomPiece = self.comboBoxNomPiece.currentText()
+        nombre = self.spinBoxNombrePiece.text()
+        self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
+
+        self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 0, QTableWidgetItem(categorie))
+        self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 1, QTableWidgetItem(nomPiece))
+        self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 2, QTableWidgetItem((nombre)))
+
+        self.listeAjoutPieceReparation.append((categorie, nomPiece, int(nombre)))
+        print(self.listeAjoutPieceReparation)
+
+    def trier(self, numeroColonne):
+        """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
+        Un clic fait un tri croisssant
+        Un second clic fera un tri decroissant"""
+        print(numeroColonne)
+        if numeroColonne == self.colonneClique:
+            if self.nombreClique % 2 == 0:
+                self.tableWidgetPiecesAssociees.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            else:
+                self.tableWidgetPiecesAssociees.sortByColumn(numeroColonne, Qt.DescendingOrder)
+            self.nombreClique += 1
+        else:
+            self.nombreClique = 1
+            self.tableWidgetPiecesAssociees.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            self.colonneClique = numeroColonne
 
 class RechercherBonDeTravail (Thread):
     def __init__(self, fonction):

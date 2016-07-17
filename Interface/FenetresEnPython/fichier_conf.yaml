@@ -1,3 +1,9 @@
+BDT_Ajout_Champ_Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- CentreService
+- Salle
 BDT_ChampAjoutNonPermis:
 - EtatBDT
 BDT_ChampAjoutPermis:
@@ -142,6 +148,8 @@ champsAcceptes-BDT:
 - DescriptionSituation
 - DescriptionIntervention
 - EtatBDT
+- NomTechnicien
+- Pieces
 champsAcceptes-Equipement:
 - CategorieEquipement
 - Marque
@@ -155,4 +163,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 509
+dernierID-Equipement: 510

@@ -11,7 +11,7 @@ _default:
       ID: '40'
       Marque: 'Physio-control '
       Modele: Lifepak 300
-      NbBonTravail: 3
+      NbBonTravail: 5
       NumeroSerie: '14749'
       Provenance: ''
       Salle: ''
@@ -9107,18 +9107,39 @@ _default:
       Salle: ''
     state:
       eid: 505
-  506:
-    CategorieEquipement: Incubateur
-    CentreService: Laboratoire
-    Commentaires: ''
-    DateAcquisition: 2015-07-12
-    DateDernierEntretien: 2016-02-27
-    EtatConservation: En fin de vie
-    EtatService: Au rebus
-    ID: '509'
-    Marque: Abbott
-    Modele: Commander
-    NbBonTravail: 0
-    NumeroSerie: IN651133
-    Provenance: ''
-    Salle: ''
+  506: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Incubateur
+      CentreService: Laboratoire
+      Commentaires: ''
+      DateAcquisition: 2015-07-12
+      DateDernierEntretien: 2016-02-27
+      EtatConservation: En fin de vie
+      EtatService: Au rebus
+      ID: '509'
+      Marque: Abbott
+      Modele: Commander
+      NbBonTravail: 0
+      NumeroSerie: IN651133
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 506
+  507: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2016-07-11
+      DateDernierEntretien: 2016-07-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '510'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 507

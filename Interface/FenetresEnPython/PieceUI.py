@@ -11,76 +11,79 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Piece(object):
     def setupUi(self, Piece):
         Piece.setObjectName("Piece")
-        Piece.resize(817, 996)
-        Piece.setStyleSheet("background:white;")
+        Piece.resize(1811, 852)
+        Piece.setStyleSheet("QWidget {\n"
+"background:white;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background: rgb(247,247,247);\n"
+"}\n"
+"\n"
+"QPushButton::pressed {\n"
+"padding: 1px;\n"
+"color: black;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 8px;\n"
+"background:rgb(169, 167, 170);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}")
         self.gridLayout = QtWidgets.QGridLayout(Piece)
         self.gridLayout.setObjectName("gridLayout")
-        self.listView = QtWidgets.QListView(Piece)
-        font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(10)
-        self.listView.setFont(font)
-        self.listView.setObjectName("listView")
-        self.gridLayout.addWidget(self.listView, 3, 1, 1, 1)
-        self.lineEdit = QtWidgets.QLineEdit(Piece)
-        self.lineEdit.setMaximumSize(QtCore.QSize(300, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.lineEdit.setFont(font)
-        self.lineEdit.setStyleSheet("QLineEdit\n"
-"{\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247);\n"
-"color: black\n"
-"}")
-        self.lineEdit.setObjectName("lineEdit")
-        self.gridLayout.addWidget(self.lineEdit, 1, 1, 1, 1)
-        self.label = QtWidgets.QLabel(Piece)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
-        self.comboBox = QtWidgets.QComboBox(Piece)
-        self.comboBox.setMaximumSize(QtCore.QSize(300, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.comboBox.setFont(font)
-        self.comboBox.setStyleSheet("QComboBox{\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247);\n"
-"color: black;\n"
-"}")
-        self.comboBox.setObjectName("comboBox")
-        self.gridLayout.addWidget(self.comboBox, 2, 1, 1, 1)
         self.labelCategorieSelectionnee = QtWidgets.QLabel(Piece)
+        self.labelCategorieSelectionnee.setMaximumSize(QtCore.QSize(300, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCategorieSelectionnee.setFont(font)
+        self.labelCategorieSelectionnee.setStyleSheet("background: white;")
         self.labelCategorieSelectionnee.setObjectName("labelCategorieSelectionnee")
-        self.gridLayout.addWidget(self.labelCategorieSelectionnee, 6, 0, 1, 1)
-        self.comboBoxCategorieSelectionnee = QtWidgets.QComboBox(Piece)
-        self.comboBoxCategorieSelectionnee.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.gridLayout.addWidget(self.labelCategorieSelectionnee, 11, 0, 1, 1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem = QtWidgets.QSpacerItem(40, 50, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.BoutonEnregistrerPiece = QtWidgets.QPushButton(Piece)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonEnregistrerPiece.sizePolicy().hasHeightForWidth())
+        self.BoutonEnregistrerPiece.setSizePolicy(sizePolicy)
+        self.BoutonEnregistrerPiece.setMinimumSize(QtCore.QSize(0, 25))
+        self.BoutonEnregistrerPiece.setMaximumSize(QtCore.QSize(200, 20))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.comboBoxCategorieSelectionnee.setFont(font)
-        self.comboBoxCategorieSelectionnee.setStyleSheet("QComboBox{\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247);\n"
-"color: black;\n"
-"}\n"
-"")
-        self.comboBoxCategorieSelectionnee.setObjectName("comboBoxCategorieSelectionnee")
-        self.gridLayout.addWidget(self.comboBoxCategorieSelectionnee, 6, 1, 1, 1)
+        self.BoutonEnregistrerPiece.setFont(font)
+        self.BoutonEnregistrerPiece.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonEnregistrerPiece.setStyleSheet("")
+        self.BoutonEnregistrerPiece.setObjectName("BoutonEnregistrerPiece")
+        self.horizontalLayout.addWidget(self.BoutonEnregistrerPiece)
+        self.gridLayout.addLayout(self.horizontalLayout, 9, 0, 1, 9)
+        self.labelNombrePiece = QtWidgets.QLabel(Piece)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelNombrePiece.setFont(font)
+        self.labelNombrePiece.setStyleSheet("background: white;")
+        self.labelNombrePiece.setObjectName("labelNombrePiece")
+        self.gridLayout.addWidget(self.labelNombrePiece, 4, 4, 1, 1)
+        self.labelResumePiece = QtWidgets.QLabel(Piece)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.labelResumePiece.setFont(font)
+        self.labelResumePiece.setStyleSheet("background: white;")
+        self.labelResumePiece.setObjectName("labelResumePiece")
+        self.gridLayout.addWidget(self.labelResumePiece, 10, 0, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(5, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem1, 6, 4, 1, 1)
         self.titreLayout = QtWidgets.QHBoxLayout()
         self.titreLayout.setObjectName("titreLayout")
         self.label_3 = QtWidgets.QLabel(Piece)
@@ -102,60 +105,163 @@ class Ui_Piece(object):
         self.labelTitreConsultationEquipement.setStyleSheet("background:white;")
         self.labelTitreConsultationEquipement.setObjectName("labelTitreConsultationEquipement")
         self.titreLayout.addWidget(self.labelTitreConsultationEquipement)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.titreLayout.addItem(spacerItem)
-        self.gridLayout.addLayout(self.titreLayout, 0, 0, 1, 2)
-        self.label_2 = QtWidgets.QLabel(Piece)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.titreLayout.addItem(spacerItem2)
+        self.gridLayout.addLayout(self.titreLayout, 0, 0, 1, 9)
+        self.labelNomPiece = QtWidgets.QLabel(Piece)
+        self.labelNomPiece.setMaximumSize(QtCore.QSize(300, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout.addWidget(self.label_2, 2, 0, 1, 1)
-        self.listViewPieceCategorie = QtWidgets.QListView(Piece)
-        font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(10)
-        self.listViewPieceCategorie.setFont(font)
-        self.listViewPieceCategorie.setObjectName("listViewPieceCategorie")
-        self.gridLayout.addWidget(self.listViewPieceCategorie, 7, 0, 1, 2)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem1 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem1)
-        self.pushButton = QtWidgets.QPushButton(Piece)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        self.pushButton.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.labelNomPiece.setFont(font)
+        self.labelNomPiece.setStyleSheet("background: white;")
+        self.labelNomPiece.setObjectName("labelNomPiece")
+        self.gridLayout.addWidget(self.labelNomPiece, 4, 0, 1, 1)
+        self.labelSelectionCategorie = QtWidgets.QLabel(Piece)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.pushButton.setFont(font)
-        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButton.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
+        self.labelSelectionCategorie.setFont(font)
+        self.labelSelectionCategorie.setStyleSheet("background: white;")
+        self.labelSelectionCategorie.setObjectName("labelSelectionCategorie")
+        self.gridLayout.addWidget(self.labelSelectionCategorie, 3, 0, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(5, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem3, 4, 3, 1, 1)
+        self.spinBoxNombreEquipement = QtWidgets.QSpinBox(Piece)
+        self.spinBoxNombreEquipement.setMaximumSize(QtCore.QSize(50, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.spinBoxNombreEquipement.setFont(font)
+        self.spinBoxNombreEquipement.setStyleSheet("QSpinBox\n"
+"{\n"
+"padding: 1px;\n"
 "border-style: solid;\n"
+"border: 1px solid gray;\n"
 "border-radius: 4px;\n"
+"background:rgb(247,247,247);\n"
+"color: black;\n"
+"}")
+        self.spinBoxNombreEquipement.setMaximum(999)
+        self.spinBoxNombreEquipement.setObjectName("spinBoxNombreEquipement")
+        self.gridLayout.addWidget(self.spinBoxNombreEquipement, 4, 5, 1, 1)
+        self.BoutonValider = QtWidgets.QPushButton(Piece)
+        self.BoutonValider.setMinimumSize(QtCore.QSize(110, 20))
+        self.BoutonValider.setMaximumSize(QtCore.QSize(200, 200))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.BoutonValider.setFont(font)
+        self.BoutonValider.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonValider.setStyleSheet("QPushButton {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background: rgb(247,247,247);\n"
+"}\n"
 "\n"
+"QPushButton::pressed {\n"
+"padding: 1px;\n"
+"color: black;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 8px;\n"
+"background:rgb(169, 167, 170);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
+"}")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("Images/check-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonValider.setIcon(icon)
+        self.BoutonValider.setObjectName("BoutonValider")
+        self.gridLayout.addWidget(self.BoutonValider, 4, 8, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(90, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem4, 4, 6, 1, 2)
+        self.comboBoxCategorieSelectionnee = QtWidgets.QComboBox(Piece)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.comboBoxCategorieSelectionnee.sizePolicy().hasHeightForWidth())
+        self.comboBoxCategorieSelectionnee.setSizePolicy(sizePolicy)
+        self.comboBoxCategorieSelectionnee.setMinimumSize(QtCore.QSize(300, 0))
+        self.comboBoxCategorieSelectionnee.setMaximumSize(QtCore.QSize(600, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.comboBoxCategorieSelectionnee.setFont(font)
+        self.comboBoxCategorieSelectionnee.setStyleSheet("QComboBox{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247,247,247);\n"
+"color: black;\n"
 "}\n"
 "")
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
-        spacerItem2 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem2)
-        self.gridLayout.addLayout(self.horizontalLayout, 4, 1, 1, 1)
+        self.comboBoxCategorieSelectionnee.setObjectName("comboBoxCategorieSelectionnee")
+        self.gridLayout.addWidget(self.comboBoxCategorieSelectionnee, 11, 1, 1, 1)
+        self.comboBoxSelectionCategoriePiece = QtWidgets.QComboBox(Piece)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.comboBoxSelectionCategoriePiece.sizePolicy().hasHeightForWidth())
+        self.comboBoxSelectionCategoriePiece.setSizePolicy(sizePolicy)
+        self.comboBoxSelectionCategoriePiece.setMinimumSize(QtCore.QSize(300, 0))
+        self.comboBoxSelectionCategoriePiece.setMaximumSize(QtCore.QSize(600, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.comboBoxSelectionCategoriePiece.setFont(font)
+        self.comboBoxSelectionCategoriePiece.setStyleSheet("QComboBox{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247,247,247);\n"
+"color: black;\n"
+"}")
+        self.comboBoxSelectionCategoriePiece.setEditable(True)
+        self.comboBoxSelectionCategoriePiece.setObjectName("comboBoxSelectionCategoriePiece")
+        self.gridLayout.addWidget(self.comboBoxSelectionCategoriePiece, 3, 1, 1, 1)
+        self.comboBoxNomPiece = QtWidgets.QComboBox(Piece)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.comboBoxNomPiece.sizePolicy().hasHeightForWidth())
+        self.comboBoxNomPiece.setSizePolicy(sizePolicy)
+        self.comboBoxNomPiece.setMinimumSize(QtCore.QSize(300, 0))
+        self.comboBoxNomPiece.setMaximumSize(QtCore.QSize(600, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.comboBoxNomPiece.setFont(font)
+        self.comboBoxNomPiece.setStyleSheet("QComboBox{\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background:rgb(247,247,247);\n"
+"color: black;\n"
+"}")
+        self.comboBoxNomPiece.setEditable(True)
+        self.comboBoxNomPiece.setObjectName("comboBoxNomPiece")
+        self.gridLayout.addWidget(self.comboBoxNomPiece, 4, 1, 1, 1)
+        self.tableCategoriePiece = QtWidgets.QTableWidget(Piece)
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(10)
+        self.tableCategoriePiece.setFont(font)
+        self.tableCategoriePiece.setStyleSheet("background: white;")
+        self.tableCategoriePiece.setObjectName("tableCategoriePiece")
+        self.tableCategoriePiece.setColumnCount(0)
+        self.tableCategoriePiece.setRowCount(0)
+        self.gridLayout.addWidget(self.tableCategoriePiece, 7, 0, 1, 9)
+        self.tableResume = QtWidgets.QTableWidget(Piece)
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(10)
+        self.tableResume.setFont(font)
+        self.tableResume.setStyleSheet("background: white;")
+        self.tableResume.setObjectName("tableResume")
+        self.tableResume.setColumnCount(0)
+        self.tableResume.setRowCount(0)
+        self.gridLayout.addWidget(self.tableResume, 12, 0, 1, 9)
 
         self.retranslateUi(Piece)
         QtCore.QMetaObject.connectSlotsByName(Piece)
@@ -163,9 +269,20 @@ class Ui_Piece(object):
     def retranslateUi(self, Piece):
         _translate = QtCore.QCoreApplication.translate
         Piece.setWindowTitle(_translate("Piece", "Form"))
-        self.label.setText(_translate("Piece", "Ajouter une pièce"))
         self.labelCategorieSelectionnee.setText(_translate("Piece", "Liste des pièces pour la catégorie sélectionnée"))
+        self.BoutonEnregistrerPiece.setText(_translate("Piece", "Enregistrer la pièce"))
+        self.labelNombrePiece.setText(_translate("Piece", "Nombre de pièces"))
+        self.labelResumePiece.setText(_translate("Piece", "Résumé des pièces pour chaque catégorie"))
         self.labelTitreConsultationEquipement.setText(_translate("Piece", "Ajouter une pièce"))
-        self.label_2.setText(_translate("Piece", "Sélectionner la catégorie à ajouter"))
-        self.pushButton.setText(_translate("Piece", "Enregistrer la pièce"))
+        self.labelNomPiece.setText(_translate("Piece", "Nom de la pièce"))
+        self.labelSelectionCategorie.setText(_translate("Piece", "Sélectionner la catégorie de la pièce"))
+        self.BoutonValider.setText(_translate("Piece", "Valider"))
 
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Piece = QtWidgets.QWidget()
+    ui = Ui_Piece()
+    ui.setupUi(Piece)
+    Piece.show()
+    sys.exit(app.exec_())

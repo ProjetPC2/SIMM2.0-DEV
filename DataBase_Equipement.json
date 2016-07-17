@@ -9125,18 +9125,108 @@ _default:
       Salle: ''
     state:
       eid: 506
-  507:
-    CategorieEquipement: Incubateur
-    CentreService: Laboratoire
+  507: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Incubateur
+      CentreService: Laboratoire
+      Commentaires: ''
+      DateAcquisition: 2015-07-12
+      DateDernierEntretien: 2016-02-27
+      EtatConservation: En fin de vie
+      EtatService: En maintenance
+      ID: '510'
+      Marque: Abbott
+      Modele: Commander
+      NbBonTravail: 0
+      NumeroSerie: IN651133
+      Provenance: ''
+      Salle: '123'
+    state:
+      eid: 507
+  508: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2016-07-11
+      DateDernierEntretien: 2016-07-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '511'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 508
+  509: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2016-07-11
+      DateDernierEntretien: 2016-07-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '512'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 509
+  510: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2016-07-11
+      DateDernierEntretien: 2016-07-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '513'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 510
+  511: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Commentaires: ''
+      DateAcquisition: 2016-07-11
+      DateDernierEntretien: 2016-07-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '514'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 511
+  512:
+    CategorieEquipement: Defibrilateur
+    CentreService: Urgences
     Commentaires: ''
-    DateAcquisition: 2015-07-12
-    DateDernierEntretien: 2016-02-27
-    EtatConservation: En fin de vie
-    EtatService: En maintenance
-    ID: '510'
-    Marque: Abbott
-    Modele: Commander
+    DateAcquisition: 2016-07-11
+    DateDernierEntretien: 2016-07-11
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    ID: '515'
+    Marque: ''
+    Modele: ''
     NbBonTravail: 0
-    NumeroSerie: IN651133
+    NumeroSerie: ''
     Provenance: ''
-    Salle: '123'
+    Salle: ''

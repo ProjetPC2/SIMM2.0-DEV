@@ -25,7 +25,7 @@ class BonTravailManager:
         self._pathname = bdt_pathname                           # pathname de la base de données des bons de travail
         self._equip_pathname = equip_pathname                   # pathname de la base de données associées des équipements
         self.conf_file = 'fichier_conf.yaml'                         # nom du fichier de configuration
-
+        self.piece_file = 'fichier_piece.yaml'
 
     def AjouterBonTravail(self, id_equipement, dictio):
         # Ajout du bon de travail dans la base de données
@@ -183,6 +183,13 @@ class BonTravailManager:
         with open('fichier_conf.yaml', 'w') as fichierConf:
             fichierConf.write(yaml.dump(conf, default_flow_style=False))
 
+    def _ActualiserPiece(self, pieces):
+        try:
+            if not os.path.exists(self.piece_file):
+                pass #TODO a completer pour l'ajout des piece dans le fichier
+        except:
+            pass
+
     def _getConf(self):
         try:
             with open(self.conf_file, 'r') as fichierConf:            # try: ouvrir le fichier et le lire
@@ -192,6 +199,13 @@ class BonTravailManager:
 
         return conf
 
+
+    def _getPiece(self):
+        try:
+            with open(self.piece_file, 'r') as fichierPiece:
+                piece = yaml.load(fichierPiece)
+        except IOError:
+            print("Could not read file: ", self.piece_file)
 
     def _getDB(self):
         try:

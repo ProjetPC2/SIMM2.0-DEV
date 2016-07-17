@@ -2639,18 +2639,70 @@ _default:
         AAMAAAAA
     state:
       eid: 133
-  134:
-    CategorieEquipement: Saturometre (Oxymetre)
-    CentreService: "P\xC3\xA9diatrie"
-    Date: 2015-09-17
-    DescriptionIntervention: "on a ajout\xC3\xA9 un capteur. Alors c'est fonctionnel."
-    DescriptionSituation: pas de capteur SPO2.
-    EtatBDT: Ferme
-    ID-BDT: '1'
-    ID-EQ: '547'
-    Marque: NELLCOR PURITAN BENNETT
-    Modele: NPB-40
-    Salle: Hospitalisation
+  134: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Saturometre (Oxymetre)
+      CentreService: "P\xC3\xA9diatrie"
+      Date: 2015-09-17
+      DescriptionIntervention: "on a ajout\xC3\xA9 un capteur. Alors c'est fonctionnel."
+      DescriptionSituation: pas de capteur SPO2.
+      EtatBDT: Ferme
+      ID-BDT: '1'
+      ID-EQ: '547'
+      Marque: NELLCOR PURITAN BENNETT
+      Modele: NPB-40
+      Salle: Hospitalisation
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        AAEAAAAA
+    state:
+      eid: 134
+  135: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Defibrilateur
+      CentreService: Urgences
+      Date: 2015-07-14
+      DescriptionIntervention: test
+      DescriptionSituation: "test\t\t"
+      EtatBDT: Ouvert
+      ID-BDT: '4'
+      ID-EQ: '40'
+      Marque: 'Physio-control '
+      Modele: Lifepak 300
+      NomTechnicien: Kerlin Hyppolite
+      Pieces:
+      - !!python/tuple
+        - oi
+        - oi1
+        - 4
+      Salle: ''
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        DRMeBPGg
+    state:
+      eid: 135
+  136:
+    CategorieEquipement: Defibrilateur
+    CentreService: Urgences
+    Date: 2015-07-14
+    DescriptionIntervention: test
+    DescriptionSituation: test
+    EtatBDT: Ouvert
+    ID-BDT: '5'
+    ID-EQ: '40'
+    Marque: 'Physio-control '
+    Modele: Lifepak 300
+    NomTechnicien: Kerlin Hyppolite
+    Pieces:
+    - !!python/tuple
+      - oi
+      - oi1
+      - 3
+    - !!python/tuple
+      - bonjour
+      - fsfd
+      - 3
+    Salle: ''
     TempsEstime: !!python/object/apply:datetime.time
     - !!binary |
-      AAEAAAAA
+      DRMeBPGg
