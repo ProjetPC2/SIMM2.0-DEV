@@ -31,6 +31,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleGauche.hide()
         self.dic_request = dict()
         self.listeAjoutPieceReparation = list()
+        self.listPieceReparationUtilise = list()
         self.pushButtonValider.setDisabled(True)
 
         if(consulterBDT is not None):
@@ -236,7 +237,7 @@ class BonDeTravail(Ui_BonDeTravail):
                         self.tableWidgetPiecesAssociees.setItem(ligne, 1, QTableWidgetItem(nomPiece))
                         self.tableWidgetPiecesAssociees.setItem(ligne, 2, QTableWidgetItem(str(nombre)))
                         ligne += 1
-                    self.listeAjoutPieceReparation.append((categorie, nomPiece, nombre))
+                    self.listPieceReparationUtilise.append((categorie, nomPiece, nombre))
             #inutile
             # self.labelCacheDate.setText(str(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"]))
             # self.labelCacheDescInt.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
