@@ -755,7 +755,6 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <zorder>logo</zorder>
            </widget>
           </item>
          </layout>
