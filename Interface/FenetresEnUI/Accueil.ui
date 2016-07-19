@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1255</width>
-    <height>1312</height>
+    <width>902</width>
+    <height>715</height>
    </rect>
   </property>
   <property name="font">
@@ -643,7 +643,7 @@ technique</string>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="layoutAffichagePrincipal" stretch="0,0,0,0">
+       <layout class="QVBoxLayout" name="layoutAffichagePrincipal" stretch="0,0,0,0,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -653,6 +653,19 @@ technique</string>
         <property name="leftMargin">
          <number>0</number>
         </property>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="LabelSIMM20HopitalSaintMichel">
           <property name="font">
@@ -742,31 +755,68 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <zorder>logo</zorder>
            </widget>
           </item>
          </layout>
         </item>
         <item>
-         <widget class="QLabel" name="logo">
-          <property name="minimumSize">
-           <size>
-            <width>600</width>
-            <height>600</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: transparent ;color : white;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap>Images/Logo_SIMM.png</pixmap>
-          </property>
-          <property name="scaledContents">
-           <bool>true</bool>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="logo">
+            <property name="minimumSize">
+             <size>
+              <width>600</width>
+              <height>600</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>600</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> background-color: transparent ;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>Images/Logo_SIMM.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
         <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
          <widget class="QLabel" name="LabelDefinitionSIMM">
