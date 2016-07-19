@@ -315,7 +315,7 @@ background:rgb(247,247,247);</string>
          </property>
          <property name="text">
           <string>Nouvelle
-fenêtre</string>
+recherche</string>
          </property>
         </widget>
        </item>
@@ -412,6 +412,56 @@ background:rgb(247,247,247);</string>
      <column>
       <property name="text">
        <string>Marque</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Modèle</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Numéro de série</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Salle</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Centre de service</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Date d'acquisition</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Date du dernier entretien</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Provenance</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>État de service</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>État de conservation</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Commentaires</string>
       </property>
      </column>
     </widget>
