@@ -5,68 +5,68 @@ BDT_ChampAjoutPermis:
 BDT_ChampFormatPrecis:
 - Date
 CategorieEquipement:
-- Defibrilateur
+- "D\xE9fibrilateur"
 - Incubateur
-- Concentrateur d'oxygene
-- Negatoscope (moniteur de radiographie)
-- Four e orthese
-- Sterilisateur e vapeur
+- "Concentrateur d'oxyg\u00E8ne"
+- "N\xE9gatoscope (moniteur de radiographie)"
+- "Four \u00E0 orth\u00E8se"
+- "St\xE9rilisateur e vapeur"
 - Moniteur physiologique
 - Autre
-- Nebulisateur
+- "N\xE9bulisateur"
 - Centrifugeuse
-- Incubateur neonatal
-- Sonographe (Echographe)
+- "Incubateur n\xE9onatal"
+- "Sonographe (\xE9chographe)"
 - Table d'examen
-- Appareil e succion
+- "Appareil \u00E0 succion"
 - Appareil de radiographie
 - Analyseur CD4 (VIH)
 - UPS
-- Analyseur hematologie
-- Melangeur
+- "Analyseur h\xE9matologie"
+- "M\xE9langeur"
 - Analyseur biochimie
 - Ordinateur
-- Refrigerateur
+- "R\xE9frigerateur"
 - Imprimante
 - Table d'instruments
-- Sechoir
-- Tensiometre
-- Saturometre (Oxymetre)
+- "S\xE9choir"
+- "Tensiom\u00E8tre"
+- "Saturom\u00E8tre (Oxym\u00E8tre)"
 - Microscope
 - Plaque chauffante
 - Bain chauffant
-- Spectrophotometre
+- "Spectrophotom\u00E8tre"
 - Lit
 - Table de chevet
 - Balance
 - Chaise roulante
-- Support e solutes
+- "Support \u00E0 solut\xE9s"
 - Table de chirurgie
-- Appareil d'electrochirurgie
+- "Appareil d'\xE9lectrochirurgie"
 - Lampe d'examen
-- Civiere de transport
-- Sterilisateur portable
+- "Civi\u00E8re de transport"
+- "St\xE9rilisateur portable"
 - Appareil d'anesthesie
-- Table de soins neonataux
-- Balance pediatrique
+- "Table de soins n\xE9onataux"
+- "Balance p\xE9diatrique"
 - Toise
-- Thermometre
-- electrocardiographe
+- "Thermom\u00E8tre"
+- "\xC9l\xE9lectrocardiographe"
 - Autoscope
 - Chaise dentiste
-- Chaise de prelevement
-- Moniteur fetal
+- "Chaise de pr\xE9l\u00E8vement"
+- "Moniteur f\xE9tal"
 CentreService:
 - Urgences
 - Laboratoire
 - Inconnu
 - Radiologie
-- Pediatrie
-- Maternite
-- Readaptation
-- Medecine interne
-- Bloc operatoire
-- Centre Prenatal
+- "P\xE9diatrie"
+- "Maternit\xE9"
+- "R\xE9adaptation"
+- "M\xE9decine interne"
+- "Bloc op\xE9ratoire"
+- "Centre pr\xE9natal"
 - Archives
 - Clinique externe
 - Don de sang
@@ -104,7 +104,7 @@ Provenance:
 - CDC
 - UNFPA
 - UNICEF
-- Croix-Rouge Haitienne
+- "Croix-Rouge Ha\u00EFtienne"
 - MSPP
 - PNS
 - as
@@ -114,8 +114,8 @@ Salle:
 - Lab 1
 - Lab 2
 - SOP
-- Salle sterilisateur
-- Salle de recuperation
+- "Salle st\xE9rilisateur"
+- "Salle de r\xE9cuperation"
 - Salle de travail
 - Salle d'isolation
 - Hospitalisation
