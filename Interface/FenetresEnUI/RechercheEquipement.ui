@@ -279,7 +279,7 @@ background:rgb(247,247,247);</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Documents/GitHub/SIMM2.0-DEV/Interface/FenetresEnUI/Images/refresh-button-2.png</normaloff>../Documents/GitHub/SIMM2.0-DEV/Interface/FenetresEnUI/Images/refresh-button-2.png</iconset>
+           <normaloff>Images/refresh-button-2.png</normaloff>Images/refresh-button-2.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -454,7 +454,7 @@ background:rgb(247,247,247);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../Documents/GitHub/SIMM2.0-DEV/Interface/FenetresEnUI/Images/magnifier.png</pixmap>
+        <pixmap>Images/magnifier.png</pixmap>
        </property>
       </widget>
      </item>
