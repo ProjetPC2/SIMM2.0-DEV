@@ -10,7 +10,7 @@ CategorieEquipement:
 - "Concentrateur d'oxyg\u00E8ne"
 - "N\xE9gatoscope (moniteur de radiographie)"
 - "Four \u00E0 orth\u00E8se"
-- "St\xE9rilisateur e vapeur"
+- "St\xE9rilisateur \u00E0 vapeur"
 - Moniteur physiologique
 - Autre
 - "N\xE9bulisateur"
@@ -55,7 +55,7 @@ CategorieEquipement:
 - Autoscope
 - Chaise dentiste
 - "Chaise de pr\xE9l\u00E8vement"
-- "Moniteur f\xE9tal"
+- "Moniteur foetal"
 CentreService:
 - Urgences
 - Laboratoire
@@ -122,7 +122,7 @@ Salle:
 - Salle d'accouchement
 - Salle de consultation
 - Salle d'hospitalisation
-- Acceuil
+- Accueil
 - Pansement
 - Vaccination
 - BOX 1
