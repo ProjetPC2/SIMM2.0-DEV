@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1434</width>
+    <width>1710</width>
     <height>697</height>
    </rect>
   </property>
@@ -105,22 +105,6 @@ background:rgb(247,247,247);
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>10</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
      <item>
       <widget class="QLabel" name="labelTitre">
@@ -597,19 +581,6 @@ color: rgb(81, 81, 81);
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <spacer name="horizontalSpacer_10">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
           <widget class="QLabel" name="labelCategoriePiece">
            <property name="maximumSize">
             <size>
@@ -654,7 +625,7 @@ color: rgb(81, 81, 81);
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
+            <enum>QSizePolicy::Maximum</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -743,7 +714,7 @@ color: rgb(81, 81, 81);
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
+            <enum>QSizePolicy::Maximum</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -770,6 +741,8 @@ color: rgb(81, 81, 81);
            <property name="font">
             <font>
              <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
            </property>
            <property name="cursor">
@@ -1423,7 +1396,7 @@ background:rgb(247,247,247)
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>43</width>
+         <width>35</width>
          <height>20</height>
         </size>
        </property>
