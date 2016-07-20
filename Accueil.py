@@ -12,6 +12,7 @@ from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
 from Interface.FenetresEnPython.Attente import Overlay, AttenteThread
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
 from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipement
+from Interface.FenetresEnPython.Enregistrement import Enregistrement
 from Interface.FenetresEnPython.FinAction import FinAction
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.PDF2 import PDF
@@ -274,7 +275,8 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonAjouterPiece)
         if self.ajoutPiece is None:
             self.ajoutPiece = QtWidgets.QWidget()
-            self.pieceUI = Piece(self.ajoutPiece)
+            self.pieceUI = Piece(self.ajoutPiece, self.finChargment)
+            self.pieceUI.BoutonEnregistrerPiece.clicked.connect(self.enregistrer)
             self.listeElementParDefaut.append(self.ajoutPiece)
             self.layoutAffichagePrincipal.addWidget(self.ajoutPiece)
         else:
@@ -296,9 +298,11 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
-            self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail)
+            self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail, self.finChargment)
             # self.ajoutBonDeTravail.setStyleSheet("background: white;")
-
+            self.bonDeTravailUI.boutonActualiser.clicked.connect(self.attente)
+            self.bonDeTravailUI.lineEditID.returnPressed.connect(self.attente)
+            self.bonDeTravailUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
         else:
@@ -447,6 +451,7 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # On masque les autres elements
+        # print("salut", self.horizontalLayout_2.minimumSize())
         for elementGraphique in self.listeElementParDefaut:
             elementGraphique.hide()
 
@@ -594,6 +599,9 @@ class Accueil(Ui_Accueil):
         print("Sauvegarde termine")
         self.sauvegarde.hide()
 
+    def enregistrer(self):
+        self.enregistrement.raise_()
+        self.enregistrement.show()
 class SIMM():
     '''
         Fonction de lancement de la page d'accueil de SIMM
@@ -632,6 +640,7 @@ class MainWindow(QMainWindow):
         self.overlay = None
         self.aucunResultat = None
         self.sauvegarde = None
+        self.enregistrement = None
         self.ui = Accueil(self)
         self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
         self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
@@ -640,15 +649,20 @@ class MainWindow(QMainWindow):
         self.overlay = Overlay(self.centralWidget())
         self.aucunResultat = FinAction(self.centralWidget())
         self.sauvegarde = Sauvegarde(self.centralWidget())
+        self.enregistrement = Enregistrement(self.centralWidget())
         self.overlay.hide()
         self.aucunResultat.hide()
         self.sauvegarde.hide()
+        self.enregistrement.hide()
         self.ui.overlay = self.overlay
         self.ui.aucunResultat = self.aucunResultat
         self.ui.sauvegarde = self.sauvegarde
+        self.ui.enregistrement = self.enregistrement
         self.ui.finChargment.finProcessus.connect(self.ui.finChargement)
         self.ui.finChargment.aucunResultat.connect(self.ui.afficherAucunResultat)
         self.ui.finChargment.sauvegardeTermine.connect(self.ui.sauvegarderTermine)
+        self.ui.finChargment.enregistrement.connect(self.ui.enregistrer)
+
         # self.ui.BoutonRechercherEquipement.clicked.connect(self.overlay.show)
         # self.attente = AttenteThread(self)
         # self.attente.start()
@@ -660,6 +674,7 @@ class MainWindow(QMainWindow):
         self.overlay.resize(event.size())
         self.aucunResultat.resize(event.size())
         self.sauvegarde.resize(event.size())
+        self.enregistrement.resize(event.size())
         event.accept()
 
 

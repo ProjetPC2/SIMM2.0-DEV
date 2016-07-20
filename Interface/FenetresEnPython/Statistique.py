@@ -47,13 +47,13 @@ class Statistique(Ui_Statistique):
 
         #Mise en place du layout principal
 
-        self.nombreQuasiNeuf = 3
-        self.nombreAcceptable = 2
-        self.nombreEnFinVie = 2
-        self.nombreDesuet = 3
-        self.enService = 7
-        self.enMaintenance = 2
-        self.auRebus = 1
+        self.nombreQuasiNeuf = 0
+        self.nombreAcceptable = 0
+        self.nombreEnFinVie = 0
+        self.nombreDesuet = 0
+        self.enService = 0
+        self.enMaintenance = 0
+        self.auRebus = 0
 
         self.miseAJourDonnees()
         self.textBrowserNombreTotalEquipements.setText(str(self.nombreEquipement))
@@ -113,9 +113,14 @@ class Statistique(Ui_Statistique):
         self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
         self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
         print(self.statsCategorie)
-        #TODO : a reconnecter une fois que les fichiers de l'ancienne bdd aura ete reparse
         self.comboBoxProvenance.currentTextChanged.connect(self.affichageProvenance)
         self.comboBoxCentreService.currentTextChanged.connect(self.affichageCenreService)
+        self.tableResumeInventaire.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers);
+        self.tableResumeInventaire.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+
+        self.colonneClique = None
+        self.nombreClique = 0
+        self.tableResumeInventaire.horizontalHeader().sectionClicked.connect(self.trier)
 
 
     def miseAJourDonnees(self):
@@ -131,6 +136,22 @@ class Statistique(Ui_Statistique):
         self.nombreDesuet = dictionnaire["Desuet"]
 
         print(self.nombreEquipement)
+
+    def trier(self, numeroColonne):
+        """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
+        Un clic fait un tri croisssant
+        Un second clic fera un tri decroissant"""
+        print(numeroColonne)
+        if numeroColonne == self.colonneClique:
+            if self.nombreClique % 2 == 0:
+                self.tableResumeInventaire.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            else:
+                self.tableResumeInventaire.sortByColumn(numeroColonne, Qt.DescendingOrder)
+            self.nombreClique += 1
+        else:
+            self.nombreClique = 1
+            self.tableResumeInventaire.sortByColumn(numeroColonne, Qt.AscendingOrder)
+            self.colonneClique = numeroColonne
 
     def affichageProvenance(self):
         if(self.comboBoxProvenance.currentText() is not ""):

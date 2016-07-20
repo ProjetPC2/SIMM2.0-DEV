@@ -13,9 +13,10 @@ from Interface.FenetresEnPython.PieceUI import Ui_Piece
 
 
 class Piece(Ui_Piece):
-    def __init__(self, widget):
+    def __init__(self, widget, enregistrement):
         self.setupUi(widget)
         self.pieceManager = PieceManager()
+        self.enregistrement = enregistrement
 
         self.ajoutPiece()
         # self.finChargement = finChargement
@@ -23,9 +24,11 @@ class Piece(Ui_Piece):
         self.listeAjoutPiece = list()
         self.nombreLigne  = 0
 
+
     def ajoutPiece(self):
         self.piece = self.pieceManager._getPiece()
-
+        if(self.piece['CategoriePiece'] is None):
+            self.piece['CategoriePiece'] = dict()
         self.pieceSelonCentre = dict(self.piece['CategoriePiece'])
         # self.quantitePiece = dict(self.piece['QuantitePiece'])
         # print(self.pieceSelonCentre)
@@ -94,6 +97,8 @@ class Piece(Ui_Piece):
         self.tableCategoriePiece.setRowCount(0)
         self.pieceManager.AjouterPiece(self.listeAjoutPiece)
         self.listeAjoutPiece.clear()
+        self.enregistrement.enregistrement.emit()
+
 
     def recuperationPieceCategorie(self):
         self.comboBoxNomPiece.clear()

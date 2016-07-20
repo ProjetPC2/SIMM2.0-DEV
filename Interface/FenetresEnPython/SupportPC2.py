@@ -24,6 +24,8 @@ class SupportPC2(Ui_SupportPC2):
         self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
         self.equipementManager._recalculStats()
 
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

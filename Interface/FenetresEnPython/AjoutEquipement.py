@@ -92,7 +92,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
 
         # Connexion du bouton valider
         self.BoutonValider.clicked.connect(self.verificationEquipement)
-
+        self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
         # Creation des differents labels pour la verification
         #self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
         #self.marqueLabel = QLabel("Ici marque")
@@ -243,6 +243,25 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonValider.show()
         self.BoutonModifier.hide()
 
+    def nouvelEquipement(self):
+        """Remet en place un formulaire vide pour l'ajout d'un equipement
+            """
+        indice = 0
+        for text in self.listeDonnees:
+            if type(self.listeWidgets[indice]) is QButtonGroup:
+                for radioBouton in self.listeWidgets[indice].buttons():
+                    radioBouton.show()
+            else:
+                self.listeLabel[indice].hide()
+                self.listeWidgets[indice].show()
+                if( isinstance(self.listeWidgets[indice], QLineEdit) or isinstance(self.listeWidgets[indice], QTextEdit)):
+                    self.listeWidgets[indice].clear()
+            indice += 1
+        self.labelID.setText("")
+        self.BoutonEnregistrer.hide()
+        self.BoutonValider.show()
+        self.BoutonModifier.hide()
+
     def remplirEquipement(self):
         """Methode permettant le remplissage des differents labels
          Utilisation des donnees entrees par l'utilisateur pour les labels
@@ -288,7 +307,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     ajoutEquipementWidget = QtWidgets.QWidget()
-    ajoutEquipement = AjoutEquipement(ajoutEquipementWidget)
+    ajoutEquipement = AjoutEquipement(ajoutEquipementWidget, None)
     ajoutEquipementWidget.show()
     sys.exit(app.exec_())
     os.system("pause")

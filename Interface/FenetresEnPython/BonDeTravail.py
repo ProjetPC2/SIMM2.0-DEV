@@ -19,7 +19,7 @@ from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
 
 
 class BonDeTravail(Ui_BonDeTravail):
-    def __init__(self, widget, consulterBDT = None, ajouterID = None):
+    def __init__(self, widget, chargement,consulterBDT = None, ajouterID = None):
         self.setupUi(widget)
         self.ajoutBonDeTravail()
         self.boutonConsultation.hide()
@@ -33,6 +33,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeAjoutPieceReparation = list()
         self.listPieceReparationUtilise = list()
         self.pushButtonValider.setDisabled(True)
+        self.chargement = chargement
 
         if(consulterBDT is not None):
             self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
@@ -83,7 +84,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
 
         #Connexion des differents boutons
-        self.boutonSauvegarde.clicked.connect(self.sauvegarderBonDeTravail)
+        self.boutonSauvegarde.clicked.connect(self.sauvegarderBonDeTravailThread)
         self.boutonFlecheGauche.clicked.connect(self.bonTravailPrecedent)
         self.boutonFlecheDroite.clicked.connect(self.bonTravailSuivant)
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
@@ -186,7 +187,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
             dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
             #Decrementation des pieces dans le stock
-            self.pieceManager.choisirPiece(self.listeAjoutPieceReparation)
+            self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation)
             if(any(self.equipementDictionnaire)):
                 #On ajoute le bon de travail a un equipement existant
                 dicRetour = (self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees))
@@ -199,6 +200,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
 
             self.confirmation()
+            self.chargement.sauvegardeTermine.emit()
 
     def chargerBonTravail(self):
         '''
@@ -377,6 +379,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeAjoutPieceReparation.clear()
 
 
+
     def afficheSaisi(self):
 
         self.dateEdit.hide()
@@ -403,7 +406,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.consulterBonDeTravail()
 
     def chercherEquipementThread(self):
-        thread = RechercherBonDeTravail(self.chercherEquipement)
+        thread = BonDeTravailThread(self.chercherEquipement)
         thread.start()
 
     def choisirCategoriePiece(self):
@@ -440,7 +443,15 @@ class BonDeTravail(Ui_BonDeTravail):
             self.tableWidgetPiecesAssociees.sortByColumn(numeroColonne, Qt.AscendingOrder)
             self.colonneClique = numeroColonne
 
-class RechercherBonDeTravail (Thread):
+    def sauvegarderBonDeTravailThread(self):
+        thread = BonDeTravailThread(self.sauvegarderBonDeTravail)
+        thread.start()
+
+    def chargerBonDeTravailThread(self):
+        thread = BonDeTravailThread(self.chargerBonTravail)
+        thread.start()
+
+class BonDeTravailThread (Thread):
     def __init__(self, fonction):
         Thread.__init__(self)
         self.fonction = fonction

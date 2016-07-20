@@ -95,9 +95,9 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 self.finChargement.finProcessus.emit()
                 self.finChargement.aucunResultat.emit()
 
-
         else:
             print("Champ ID null")
+            self.finChargement.finProcessus.emit()
 
     def rechercherBonDeTravailAssocie(self):
         '''
