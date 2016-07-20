@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>902</width>
-    <height>715</height>
+    <width>1153</width>
+    <height>1357</height>
    </rect>
   </property>
   <property name="font">
@@ -304,6 +304,12 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
          <layout class="QVBoxLayout" name="layoutBoutonBdT">
           <item>
            <widget class="QPushButton" name="BoutonAjouterPiece">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -324,7 +330,8 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , 
 QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
             <property name="text">
-             <string> Ajouter une pièce</string>
+             <string> Ajouter une 
+pièce</string>
             </property>
             <property name="icon">
              <iconset>
@@ -769,7 +776,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             <property name="sizeHint" stdset="0">
              <size>
               <width>40</width>
-              <height>20</height>
+              <height>0</height>
              </size>
             </property>
            </spacer>
@@ -810,7 +817,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             <property name="sizeHint" stdset="0">
              <size>
               <width>40</width>
-              <height>20</height>
+              <height>0</height>
              </size>
             </property>
            </spacer>
