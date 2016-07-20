@@ -181,7 +181,7 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../Images/screwdriver-and-wrench-crossed (3).png</pixmap>
+        <pixmap>../Images/piece_image.png</pixmap>
        </property>
       </widget>
      </item>
@@ -311,7 +311,7 @@ color: black;
     <widget class="QPushButton" name="BoutonValider">
      <property name="minimumSize">
       <size>
-       <width>120</width>
+       <width>140</width>
        <height>20</height>
       </size>
      </property>
