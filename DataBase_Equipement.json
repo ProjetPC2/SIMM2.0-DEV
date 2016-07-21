@@ -73,7 +73,7 @@ _default:
       eid: 4
   5: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -91,7 +91,7 @@ _default:
       eid: 5
   6: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2010-03-09
@@ -109,7 +109,7 @@ _default:
       eid: 6
   7: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Negatoscope (moniteur de radiographie)
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Radiologie
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -127,7 +127,7 @@ _default:
       eid: 7
   8: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Four e orthese
+      CategorieEquipement: "Four \u00E0 orth\u00E8se"
       CentreService: Inconnu
       Commentaires: "Four a orth\xC3\xA8se."
       DateAcquisition: 2016-06-29
@@ -145,7 +145,7 @@ _default:
       eid: 8
   9: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur e vapeur
+      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -199,7 +199,7 @@ _default:
       eid: 11
   12: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Nebulisateur
+      CategorieEquipement: "N\xE9bulisateur"
       CentreService: Inconnu
       Commentaires: 'Pompe a air. Semble-t-il qu''on devrait ajouter d''autres pieces. '
       DateAcquisition: 2016-06-29
@@ -253,8 +253,8 @@ _default:
       eid: 14
   15: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Incubateur neonatal
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Incubateur n\xE9onatal"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2015-08-25
@@ -271,8 +271,8 @@ _default:
       eid: 15
   16: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Incubateur neonatal
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Incubateur n\xE9onatal"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -289,8 +289,8 @@ _default:
       eid: 16
   17: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Sonographe (\xE9chographe)"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -308,7 +308,7 @@ _default:
   18: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -325,7 +325,7 @@ _default:
       eid: 18
   19: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil e succion
+      CategorieEquipement: "Appareil \u00E0 succion"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -344,7 +344,7 @@ _default:
   20: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "R\xC3\xA9adaptation"
+      CentreService: "R\xE9adaptation"
       Commentaires: "Une table locale en bois qui n'a pas de marque r\xC3\xA9elle."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -433,7 +433,7 @@ _default:
       eid: 24
   25: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Analyseur hematologie
+      CategorieEquipement: "Analyseur h\xE9matologie"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -451,7 +451,7 @@ _default:
       eid: 25
   26: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Melangeur
+      CategorieEquipement: "M\xE9langeur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -523,7 +523,7 @@ _default:
       eid: 29
   30: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -541,7 +541,7 @@ _default:
       eid: 30
   31: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -649,7 +649,7 @@ _default:
       eid: 36
   37: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Negatoscope (moniteur de radiographie)
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Radiologie
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -667,7 +667,7 @@ _default:
       eid: 37
   38: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sechoir
+      CategorieEquipement: "S\xE9choir"
       CentreService: Radiologie
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -703,7 +703,7 @@ _default:
       eid: 39
   40: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -721,7 +721,7 @@ _default:
       eid: 40
   41: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -739,7 +739,7 @@ _default:
       eid: 41
   42: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -775,7 +775,7 @@ _default:
       eid: 43
   44: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Saturometre (Oxymetre)
+      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1027,7 +1027,7 @@ _default:
       eid: 57
   58: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Melangeur
+      CategorieEquipement: "M\xE9langeur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1045,7 +1045,7 @@ _default:
       eid: 58
   59: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Melangeur
+      CategorieEquipement: "M\xE9langeur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1063,7 +1063,7 @@ _default:
       eid: 59
   60: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Melangeur
+      CategorieEquipement: "M\xE9langeur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1135,7 +1135,7 @@ _default:
       eid: 63
   64: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Spectrophotometre
+      CategorieEquipement: "Spectrophotom\u00E8tre"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1207,7 +1207,7 @@ _default:
       eid: 67
   68: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1225,7 +1225,7 @@ _default:
       eid: 68
   69: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1317,7 +1317,7 @@ _default:
       eid: 73
   74: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Laboratoire
       Commentaires: "D\xC3\xA9pos\xC3\xA9 dans le couloir."
       DateAcquisition: 2016-06-29
@@ -1336,7 +1336,7 @@ _default:
   75: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1354,7 +1354,7 @@ _default:
   76: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1372,7 +1372,7 @@ _default:
   77: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1390,7 +1390,7 @@ _default:
   78: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1408,7 +1408,7 @@ _default:
   79: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1426,7 +1426,7 @@ _default:
   80: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1444,7 +1444,7 @@ _default:
   81: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1462,7 +1462,7 @@ _default:
   82: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1480,7 +1480,7 @@ _default:
   83: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1498,7 +1498,7 @@ _default:
   84: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1516,7 +1516,7 @@ _default:
   85: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1534,7 +1534,7 @@ _default:
   86: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1552,7 +1552,7 @@ _default:
   87: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1570,7 +1570,7 @@ _default:
   88: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1588,7 +1588,7 @@ _default:
   89: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1606,7 +1606,7 @@ _default:
   90: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1624,7 +1624,7 @@ _default:
   91: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1642,7 +1642,7 @@ _default:
   92: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1660,7 +1660,7 @@ _default:
   93: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1678,7 +1678,7 @@ _default:
   94: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1696,7 +1696,7 @@ _default:
   95: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1714,7 +1714,7 @@ _default:
   96: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1732,7 +1732,7 @@ _default:
   97: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1750,7 +1750,7 @@ _default:
   98: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1768,7 +1768,7 @@ _default:
   99: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1786,8 +1786,8 @@ _default:
   100: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
-      Commentaires: "Il est completement bris\xC3\xA9 mais toujours en medecine interne."
+      CentreService: "M\xE9decine interne"
+      Commentaires: "Il est completement bris\xC3\xA9 mais toujours en "M\xE9decine interne"."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Desuet
@@ -1804,7 +1804,7 @@ _default:
   101: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1822,7 +1822,7 @@ _default:
   102: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1840,7 +1840,7 @@ _default:
   103: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1858,7 +1858,7 @@ _default:
   104: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1875,8 +1875,8 @@ _default:
       eid: 104
   105: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
-      CentreService: Medecine interne
+      CategorieEquipement: "Tensiom\u00E8tre"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1893,8 +1893,8 @@ _default:
       eid: 105
   106: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
-      CentreService: Medecine interne
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1912,7 +1912,7 @@ _default:
   107: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Chaise roulante
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1930,7 +1930,7 @@ _default:
   108: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1948,7 +1948,7 @@ _default:
   109: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1966,7 +1966,7 @@ _default:
   110: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -1984,7 +1984,7 @@ _default:
   111: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2002,7 +2002,7 @@ _default:
   112: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2019,8 +2019,8 @@ _default:
       eid: 112
   113: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2037,8 +2037,8 @@ _default:
       eid: 113
   114: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2055,8 +2055,8 @@ _default:
       eid: 114
   115: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2073,8 +2073,8 @@ _default:
       eid: 115
   116: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2091,8 +2091,8 @@ _default:
       eid: 116
   117: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2109,8 +2109,8 @@ _default:
       eid: 117
   118: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2127,8 +2127,8 @@ _default:
       eid: 118
   119: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2145,8 +2145,8 @@ _default:
       eid: 119
   120: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2163,8 +2163,8 @@ _default:
       eid: 120
   121: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: Medecine interne
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2182,7 +2182,7 @@ _default:
   122: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2200,7 +2200,7 @@ _default:
   123: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2217,8 +2217,8 @@ _default:
       eid: 123
   124: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Saturometre (Oxymetre)
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2236,7 +2236,7 @@ _default:
   125: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chirurgie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2253,8 +2253,8 @@ _default:
       eid: 125
   126: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2271,8 +2271,8 @@ _default:
       eid: 126
   127: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2289,8 +2289,8 @@ _default:
       eid: 127
   128: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: Il manque d'un transformateur.
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2307,8 +2307,8 @@ _default:
       eid: 128
   129: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2326,7 +2326,7 @@ _default:
   130: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2343,8 +2343,8 @@ _default:
       eid: 130
   131: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2361,8 +2361,8 @@ _default:
       eid: 131
   132: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2379,8 +2379,8 @@ _default:
       eid: 132
   133: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil d'electrochirurgie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Appareil d'\xE9lectrochirurgie"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: Il manque des isolants (adhesif pour le patient).
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2397,8 +2397,8 @@ _default:
       eid: 133
   134: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil d'electrochirurgie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Appareil d'\xE9lectrochirurgie"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2415,8 +2415,8 @@ _default:
       eid: 134
   135: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil d'electrochirurgie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Appareil d'\xE9lectrochirurgie"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2433,8 +2433,8 @@ _default:
       eid: 135
   136: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil e succion
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Appareil \u00E0 succion"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: Le boulon en plastique est trop petit. ca cause le caillot bouche.
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2452,7 +2452,7 @@ _default:
   137: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: Il manque des cables pour les patients.
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2469,8 +2469,8 @@ _default:
       eid: 137
   138: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil e succion
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Appareil \u00E0 succion"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2488,7 +2488,7 @@ _default:
   139: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2506,7 +2506,7 @@ _default:
   140: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2524,7 +2524,7 @@ _default:
   141: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2542,7 +2542,7 @@ _default:
   142: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2559,8 +2559,8 @@ _default:
       eid: 142
   143: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Civiere de transport
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Civi\u00E8re de transport"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2577,8 +2577,8 @@ _default:
       eid: 143
   144: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur e vapeur
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2590,13 +2590,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '920549'
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 144
   145: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur e vapeur
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2608,13 +2608,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 145
   146: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Plaque chauffante
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2626,13 +2626,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 146
   147: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur portable
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "St\xE9rilisateur portable"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2644,13 +2644,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 147
   148: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur e vapeur
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2662,13 +2662,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 148
   149: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2686,7 +2686,7 @@ _default:
   150: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2704,7 +2704,7 @@ _default:
   151: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2722,7 +2722,7 @@ _default:
   152: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2740,7 +2740,7 @@ _default:
   153: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2758,7 +2758,7 @@ _default:
   154: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2776,7 +2776,7 @@ _default:
   155: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2794,7 +2794,7 @@ _default:
   156: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2812,7 +2812,7 @@ _default:
   157: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2830,7 +2830,7 @@ _default:
   158: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2848,7 +2848,7 @@ _default:
   159: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2865,8 +2865,8 @@ _default:
       eid: 159
   160: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2878,13 +2878,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 160
   161: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2896,13 +2896,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 161
   162: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2914,13 +2914,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 162
   163: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2932,13 +2932,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 163
   164: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2950,13 +2950,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 164
   165: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2968,13 +2968,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 165
   166: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -2986,13 +2986,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 166
   167: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3004,13 +3004,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 167
   168: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3022,13 +3022,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 168
   169: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3040,13 +3040,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 169
   170: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3058,13 +3058,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 170
   171: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3076,13 +3076,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 171
   172: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3094,13 +3094,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 172
   173: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3112,13 +3112,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 173
   174: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3130,13 +3130,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 174
   175: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3148,13 +3148,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 175
   176: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3166,13 +3166,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 176
   177: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3184,13 +3184,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 177
   178: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3202,13 +3202,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 178
   179: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3220,13 +3220,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 179
   180: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3238,13 +3238,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 180
   181: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3256,13 +3256,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 181
   182: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3274,13 +3274,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 182
   183: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3292,13 +3292,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 183
   184: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3310,13 +3310,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 184
   185: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3328,13 +3328,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 185
   186: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3346,13 +3346,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 186
   187: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3364,13 +3364,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 187
   188: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3382,13 +3382,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 188
   189: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3400,13 +3400,13 @@ _default:
       NbBonTravail: 1
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 189
   190: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3418,13 +3418,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 190
   191: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Appareil d'anesthesie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3442,7 +3442,7 @@ _default:
   192: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Appareil d'anesthesie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3460,7 +3460,7 @@ _default:
   193: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Appareil d'anesthesie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3477,8 +3477,8 @@ _default:
       eid: 193
   194: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3495,8 +3495,8 @@ _default:
       eid: 194
   195: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil d'electrochirurgie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "Appareil d'\xE9lectrochirurgie"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3514,7 +3514,7 @@ _default:
   196: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3531,8 +3531,8 @@ _default:
       eid: 196
   197: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Nebulisateur
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "N\xE9bulisateur"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3549,8 +3549,8 @@ _default:
       eid: 197
   198: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur e vapeur
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3562,13 +3562,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 198
   199: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Appareil d'anesthesie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3586,7 +3586,7 @@ _default:
   200: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3604,7 +3604,7 @@ _default:
   201: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: "\"Seul l'ECG fonctionne. Il fonctionne seulement sur le powersupply.\
         \ Batterie \xC3\_ changer. Il faudrait remplacer tous les connecteurs,  Fuite\
         \ dans le circuit de pression - Non fonctionnel pour \xC3\xA7a.\""
@@ -3624,7 +3624,7 @@ _default:
   202: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3642,7 +3642,7 @@ _default:
   203: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3660,7 +3660,7 @@ _default:
   204: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3677,8 +3677,8 @@ _default:
       eid: 204
   205: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3695,8 +3695,8 @@ _default:
       eid: 205
   206: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3713,8 +3713,8 @@ _default:
       eid: 206
   207: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3731,8 +3731,8 @@ _default:
       eid: 207
   208: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3750,7 +3750,7 @@ _default:
   209: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3768,7 +3768,7 @@ _default:
   210: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Manque une ampoule mais elle est entrepos\xC3\xA9 dans la salle\
         \ de p\xC3\xA9diatrie."
       DateAcquisition: 2016-06-29
@@ -3787,7 +3787,7 @@ _default:
   211: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3804,8 +3804,8 @@ _default:
       eid: 211
   212: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3822,8 +3822,8 @@ _default:
       eid: 212
   213: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2015-08-11
@@ -3840,8 +3840,8 @@ _default:
       eid: 213
   214: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3859,7 +3859,7 @@ _default:
   215: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3876,8 +3876,8 @@ _default:
       eid: 215
   216: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Tensiom\u00E8tre"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Il manque un brassard et un connecteur mais se trouve dans la\
         \ salle de p\xC3\xA9diatrie."
       DateAcquisition: 2016-06-29
@@ -3896,7 +3896,7 @@ _default:
   217: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3914,7 +3914,7 @@ _default:
   218: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3932,7 +3932,7 @@ _default:
   219: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3950,7 +3950,7 @@ _default:
   220: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3968,7 +3968,7 @@ _default:
   221: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Toise
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3986,7 +3986,7 @@ _default:
   222: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4004,7 +4004,7 @@ _default:
   223: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4022,7 +4022,7 @@ _default:
   224: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4040,7 +4040,7 @@ _default:
   225: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4058,7 +4058,7 @@ _default:
   226: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4076,7 +4076,7 @@ _default:
   227: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4094,7 +4094,7 @@ _default:
   228: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4112,7 +4112,7 @@ _default:
   229: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4130,7 +4130,7 @@ _default:
   230: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4148,7 +4148,7 @@ _default:
   231: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4166,7 +4166,7 @@ _default:
   232: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4184,7 +4184,7 @@ _default:
   233: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4202,7 +4202,7 @@ _default:
   234: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4220,7 +4220,7 @@ _default:
   235: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4238,7 +4238,7 @@ _default:
   236: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4256,7 +4256,7 @@ _default:
   237: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2013-11-11
       DateDernierEntretien: 2016-06-29
@@ -4273,8 +4273,8 @@ _default:
       eid: 237
   238: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4291,8 +4291,8 @@ _default:
       eid: 238
   239: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4309,8 +4309,8 @@ _default:
       eid: 239
   240: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4327,8 +4327,8 @@ _default:
       eid: 240
   241: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4345,8 +4345,8 @@ _default:
       eid: 241
   242: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4363,8 +4363,8 @@ _default:
       eid: 242
   243: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4381,8 +4381,8 @@ _default:
       eid: 243
   244: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4399,8 +4399,8 @@ _default:
       eid: 244
   245: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4417,8 +4417,8 @@ _default:
       eid: 245
   246: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Bris\xC3\xA9e mais il se trouve dans la salle de p\xC3\xA9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4435,8 +4435,8 @@ _default:
       eid: 246
   247: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Bris\xC3\xA9e mais il se trouve dans la salle de p\xC3\xA9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4453,8 +4453,8 @@ _default:
       eid: 247
   248: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4471,8 +4471,8 @@ _default:
       eid: 248
   249: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4489,8 +4489,8 @@ _default:
       eid: 249
   250: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4507,8 +4507,8 @@ _default:
       eid: 250
   251: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4525,8 +4525,8 @@ _default:
       eid: 251
   252: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4543,8 +4543,8 @@ _default:
       eid: 252
   253: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Bris\xC3\xA9e mais il se trouve dans la salle de p\xC3\xA9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4561,8 +4561,8 @@ _default:
       eid: 253
   254: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4579,8 +4579,8 @@ _default:
       eid: 254
   255: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4597,8 +4597,8 @@ _default:
       eid: 255
   256: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4615,8 +4615,8 @@ _default:
       eid: 256
   257: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CentreService: "Maternit\xE9"
       Commentaires: "\"D'autres \xC3\xA9quipements identiques en service,  il est\
         \ gard\xC3\xA9 dans l'atelier pour les pi\xC3\xA8ces de rechange.\""
       DateAcquisition: 2016-06-29
@@ -4634,8 +4634,8 @@ _default:
       eid: 257
   258: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4653,7 +4653,7 @@ _default:
   259: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Chaise roulante
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2014-10-15
@@ -4670,8 +4670,8 @@ _default:
       eid: 259
   260: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Civiere de transport
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Civi\u00E8re de transport"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4689,7 +4689,7 @@ _default:
   261: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4707,7 +4707,7 @@ _default:
   262: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4725,7 +4725,7 @@ _default:
   263: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4742,8 +4742,8 @@ _default:
       eid: 263
   264: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4760,8 +4760,8 @@ _default:
       eid: 264
   265: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4779,7 +4779,7 @@ _default:
   266: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4797,7 +4797,7 @@ _default:
   267: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4815,7 +4815,7 @@ _default:
   268: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4832,8 +4832,8 @@ _default:
       eid: 268
   269: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4851,7 +4851,7 @@ _default:
   270: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4868,8 +4868,8 @@ _default:
       eid: 270
   271: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4887,7 +4887,7 @@ _default:
   272: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4905,7 +4905,7 @@ _default:
   273: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4922,8 +4922,8 @@ _default:
       eid: 273
   274: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
       Commentaires: "Bris\xC3\xA9e mais se trouve dans la salle de maternit\xC3\xA9\
         ."
       DateAcquisition: 2016-06-29
@@ -4941,8 +4941,8 @@ _default:
       eid: 274
   275: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4959,8 +4959,8 @@ _default:
       eid: 275
   276: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4977,8 +4977,8 @@ _default:
       eid: 276
   277: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4995,8 +4995,8 @@ _default:
       eid: 277
   278: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5014,7 +5014,7 @@ _default:
   279: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5031,8 +5031,8 @@ _default:
       eid: 279
   280: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5049,8 +5049,8 @@ _default:
       eid: 280
   281: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5067,8 +5067,8 @@ _default:
       eid: 281
   282: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5085,8 +5085,8 @@ _default:
       eid: 282
   283: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5103,8 +5103,8 @@ _default:
       eid: 283
   284: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5121,8 +5121,8 @@ _default:
       eid: 284
   285: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5140,7 +5140,7 @@ _default:
   286: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5158,7 +5158,7 @@ _default:
   287: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5176,7 +5176,7 @@ _default:
   288: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5194,7 +5194,7 @@ _default:
   289: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5212,7 +5212,7 @@ _default:
   290: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5230,7 +5230,7 @@ _default:
   291: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5248,7 +5248,7 @@ _default:
   292: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5266,7 +5266,7 @@ _default:
   293: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5284,7 +5284,7 @@ _default:
   294: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5302,7 +5302,7 @@ _default:
   295: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5320,7 +5320,7 @@ _default:
   296: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5338,7 +5338,7 @@ _default:
   297: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5356,7 +5356,7 @@ _default:
   298: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5374,7 +5374,7 @@ _default:
   299: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5392,7 +5392,7 @@ _default:
   300: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5409,8 +5409,8 @@ _default:
       eid: 300
   301: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Tensiom\u00E8tre"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2014-07-14
       DateDernierEntretien: 2016-06-29
@@ -5428,7 +5428,7 @@ _default:
   302: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5446,7 +5446,7 @@ _default:
   303: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5464,7 +5464,7 @@ _default:
   304: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5482,7 +5482,7 @@ _default:
   305: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5500,7 +5500,7 @@ _default:
   306: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5517,7 +5517,7 @@ _default:
       eid: 306
   307: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Civiere de transport
+      CategorieEquipement: "Civi\u00E8re de transport"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5530,7 +5530,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 307
   308: !!python/object/new:tinydb.database.Element
@@ -5548,7 +5548,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 308
   309: !!python/object/new:tinydb.database.Element
@@ -5566,7 +5566,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 309
   310: !!python/object/new:tinydb.database.Element
@@ -5584,7 +5584,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 310
   311: !!python/object/new:tinydb.database.Element
@@ -5602,12 +5602,12 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 311
   312: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5625,7 +5625,7 @@ _default:
       eid: 312
   313: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-08
@@ -5638,12 +5638,12 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 313
   314: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-08
@@ -5656,12 +5656,12 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 314
   315: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-08
@@ -5674,7 +5674,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 315
   316: !!python/object/new:tinydb.database.Element
@@ -5692,7 +5692,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Acceuil
+      Salle: Accueil
     state:
       eid: 316
   317: !!python/object/new:tinydb.database.Element
@@ -5787,7 +5787,7 @@ _default:
       eid: 321
   322: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Analyseur hematologie
+      CategorieEquipement: "Analyseur h\xE9matologie"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5931,7 +5931,7 @@ _default:
       eid: 329
   330: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
       Commentaires: "\"Il est aux urgences,  mais bris\xC3\xA9.\""
       DateAcquisition: 2016-06-29
@@ -5967,7 +5967,7 @@ _default:
       eid: 331
   332: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5985,7 +5985,7 @@ _default:
       eid: 332
   333: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6093,7 +6093,7 @@ _default:
       eid: 338
   339: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: electrocardiographe
+      CategorieEquipement: "\xC9l\xE9lectrocardiographe"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6111,7 +6111,7 @@ _default:
       eid: 339
   340: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6129,7 +6129,7 @@ _default:
       eid: 340
   341: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2012-08-05
@@ -6147,7 +6147,7 @@ _default:
       eid: 341
   342: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6183,7 +6183,7 @@ _default:
       eid: 343
   344: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil e succion
+      CategorieEquipement: "Appareil \u00E0 succion"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6201,7 +6201,7 @@ _default:
       eid: 344
   345: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Nebulisateur
+      CategorieEquipement: "N\xE9bulisateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6219,7 +6219,7 @@ _default:
       eid: 345
   346: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6237,7 +6237,7 @@ _default:
       eid: 346
   347: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Nebulisateur
+      CategorieEquipement: "N\xE9bulisateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6255,7 +6255,7 @@ _default:
       eid: 347
   348: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Nebulisateur
+      CategorieEquipement: "N\xE9bulisateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6273,7 +6273,7 @@ _default:
       eid: 348
   349: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Nebulisateur
+      CategorieEquipement: "N\xE9bulisateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6291,7 +6291,7 @@ _default:
       eid: 349
   350: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Nebulisateur
+      CategorieEquipement: "N\xE9bulisateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6328,7 +6328,7 @@ _default:
   352: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6346,7 +6346,7 @@ _default:
   353: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6364,7 +6364,7 @@ _default:
   354: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6382,7 +6382,7 @@ _default:
   355: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Ordinateur
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2014-10-07
       DateDernierEntretien: 2016-06-29
@@ -6400,7 +6400,7 @@ _default:
   356: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6418,7 +6418,7 @@ _default:
   357: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6436,7 +6436,7 @@ _default:
   358: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Ordinateur
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6454,7 +6454,7 @@ _default:
   359: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: UPS
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6472,7 +6472,7 @@ _default:
   360: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6490,7 +6490,7 @@ _default:
   361: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2010-01-30
       DateDernierEntretien: 2016-06-29
@@ -6508,7 +6508,7 @@ _default:
   362: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2010-05-01
       DateDernierEntretien: 2016-06-29
@@ -6526,7 +6526,7 @@ _default:
   363: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6544,7 +6544,7 @@ _default:
   364: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Ordinateur
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6562,7 +6562,7 @@ _default:
   365: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: "En maintenance mais se trouve dans le centre de pr\xC3\xA9natalit\xC3\
         \xA9 (coordonateur)."
       DateAcquisition: 2016-06-29
@@ -6580,8 +6580,8 @@ _default:
       eid: 365
   366: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6599,7 +6599,7 @@ _default:
   367: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6617,7 +6617,7 @@ _default:
   368: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6635,7 +6635,7 @@ _default:
   369: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6653,7 +6653,7 @@ _default:
   370: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6671,7 +6671,7 @@ _default:
   371: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6689,7 +6689,7 @@ _default:
   372: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6707,7 +6707,7 @@ _default:
   373: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6725,7 +6725,7 @@ _default:
   374: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Ordinateur
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6743,7 +6743,7 @@ _default:
   375: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2010-05-01
       DateDernierEntretien: 2016-06-29
@@ -6761,7 +6761,7 @@ _default:
   376: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6779,7 +6779,7 @@ _default:
   377: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Ordinateur
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6796,8 +6796,8 @@ _default:
       eid: 377
   378: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "R\xE9frigerateur"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -6922,7 +6922,7 @@ _default:
       eid: 384
   385: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Negatoscope (moniteur de radiographie)
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2011-07-01
@@ -7156,7 +7156,7 @@ _default:
       eid: 397
   398: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7228,7 +7228,7 @@ _default:
       eid: 401
   402: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur e vapeur
+      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7300,7 +7300,7 @@ _default:
       eid: 405
   406: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7318,7 +7318,7 @@ _default:
       eid: 406
   407: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7336,8 +7336,8 @@ _default:
       eid: 407
   408: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7355,7 +7355,7 @@ _default:
   409: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2013-11-11
       DateDernierEntretien: 2016-06-29
@@ -7373,7 +7373,7 @@ _default:
   410: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Autoscope
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7391,7 +7391,7 @@ _default:
   411: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7408,8 +7408,8 @@ _default:
       eid: 411
   412: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Negatoscope (moniteur de radiographie)
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7426,8 +7426,8 @@ _default:
       eid: 412
   413: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: electrocardiographe
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "\xC9l\xE9lectrocardiographe"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7444,8 +7444,8 @@ _default:
       eid: 413
   414: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2015-09-11
@@ -7463,7 +7463,7 @@ _default:
   415: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Ordinateur
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7481,7 +7481,7 @@ _default:
   416: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Toise
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7499,7 +7499,7 @@ _default:
   417: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: UPS
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7517,7 +7517,7 @@ _default:
   418: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2011-07-01
       DateDernierEntretien: 2016-06-29
@@ -7535,7 +7535,7 @@ _default:
   419: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Autoscope
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7553,7 +7553,7 @@ _default:
   420: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Ordinateur
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7571,7 +7571,7 @@ _default:
   421: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7589,7 +7589,7 @@ _default:
   422: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Autoscope
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2011-07-01
       DateDernierEntretien: 2016-06-29
@@ -7607,7 +7607,7 @@ _default:
   423: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Elle manque la regle gradu\xC3\xA9e."
       DateAcquisition: 2010-05-05
       DateDernierEntretien: 2016-06-29
@@ -7625,7 +7625,7 @@ _default:
   424: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Elle manque la regle gradu\xC3\xA9e."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7643,7 +7643,7 @@ _default:
   425: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: "Elle manque la regle gradu\xC3\xA9e."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7661,7 +7661,7 @@ _default:
   426: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7679,7 +7679,7 @@ _default:
   427: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7842,7 +7842,7 @@ _default:
       eid: 435
   436: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7860,7 +7860,7 @@ _default:
       eid: 436
   437: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7933,7 +7933,7 @@ _default:
       eid: 440
   441: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Clinique externe
       Commentaires: "Grande pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
         \ clinique externe devant BOX 5."
@@ -8021,7 +8021,7 @@ _default:
       Modele: OFFICE OTC 4500
       NbBonTravail: 0
       NumeroSerie: CN18TG31PN
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: ''
     state:
       eid: 445
@@ -8039,7 +8039,7 @@ _default:
       Modele: OPTIPLEX 380
       NbBonTravail: 0
       NumeroSerie: 14LNPN1
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: ''
     state:
       eid: 446
@@ -8063,7 +8063,7 @@ _default:
       eid: 447
   448: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Chaise de prelevement
+      CategorieEquipement: "Chaise de pr\xE9l\u00E8vement"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8081,7 +8081,7 @@ _default:
       eid: 448
   449: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Chaise de prelevement
+      CategorieEquipement: "Chaise de pr\xE9l\u00E8vement"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8099,7 +8099,7 @@ _default:
       eid: 449
   450: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8117,7 +8117,7 @@ _default:
       eid: 450
   451: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8135,7 +8135,7 @@ _default:
       eid: 451
   452: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8165,7 +8165,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: ''
     state:
       eid: 453
@@ -8208,7 +8208,7 @@ _default:
       eid: 455
   456: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8238,7 +8238,7 @@ _default:
       Modele: BSH1002
       NbBonTravail: 1
       NumeroSerie: AS-BSH2-1580
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: ''
     state:
       eid: 457
@@ -8256,7 +8256,7 @@ _default:
       Modele: PLASMA EXPRESSOR
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: ''
     state:
       eid: 458
@@ -8336,7 +8336,7 @@ _default:
       eid: 462
   463: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Refrigerateur
+      CategorieEquipement: "R\xE9frigerateur"
       CentreService: Pharmacie
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8372,8 +8372,8 @@ _default:
       eid: 464
   465: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Moniteur fetal
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CategorieEquipement: "Moniteur foetal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8390,8 +8390,8 @@ _default:
       eid: 465
   466: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Moniteur fetal
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Moniteur foetal"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8408,8 +8408,8 @@ _default:
       eid: 466
   467: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Moniteur fetal
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CategorieEquipement: "Moniteur foetal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8426,8 +8426,8 @@ _default:
       eid: 467
   468: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Moniteur fetal
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CategorieEquipement: "Moniteur foetal"
+      CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8445,7 +8445,7 @@ _default:
   469: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8457,13 +8457,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cuperation"
     state:
       eid: 469
   470: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8534,7 +8534,7 @@ _default:
       eid: 473
   474: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: "Tensiom\xC3\xA8tre manuel "
       DateAcquisition: 2016-06-29
@@ -8552,7 +8552,7 @@ _default:
       eid: 474
   475: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8571,7 +8571,7 @@ _default:
   476: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "R\xC3\xA9adaptation"
+      CentreService: "R\xE9adaptation"
       Commentaires: ''
       DateAcquisition: 2015-08-01
       DateDernierEntretien: 2015-08-07
@@ -8589,7 +8589,7 @@ _default:
   477: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "R\xC3\xA9adaptation"
+      CentreService: "R\xE9adaptation"
       Commentaires: "Repar\xC3\xA9 mais elle manque une petite vis du reglage. Elle\
         \ est toujours dans la salle de reparation."
       DateAcquisition: 2015-08-01
@@ -8607,8 +8607,8 @@ _default:
       eid: 477
   478: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "Maternit\xE9"
       Commentaires: Ne fonctionne que sur batterie
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8625,7 +8625,7 @@ _default:
       eid: 478
   479: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2013-07-01
@@ -8643,7 +8643,7 @@ _default:
       eid: 479
   480: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8661,7 +8661,7 @@ _default:
       eid: 480
   481: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8679,7 +8679,7 @@ _default:
       eid: 481
   482: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8697,7 +8697,7 @@ _default:
       eid: 482
   483: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8715,7 +8715,7 @@ _default:
       eid: 483
   484: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8733,7 +8733,7 @@ _default:
       eid: 484
   485: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
+      CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: Inconnu
       Commentaires: Je la trouve dehors. Je prends en maintenance parcequ'elle n'est
         pas encore tarrer.
@@ -8752,7 +8752,7 @@ _default:
       eid: 485
   486: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8788,7 +8788,7 @@ _default:
       eid: 487
   488: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8842,7 +8842,7 @@ _default:
       eid: 490
   491: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Concentrateur d'oxygene
+      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8860,7 +8860,7 @@ _default:
       eid: 491
   492: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8879,7 +8879,7 @@ _default:
   493: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Autoscope
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2015-09-01
@@ -8896,7 +8896,7 @@ _default:
       eid: 493
   494: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-07
@@ -8914,7 +8914,7 @@ _default:
       eid: 494
   495: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Saturometre (Oxymetre)
+      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8932,7 +8932,7 @@ _default:
       eid: 495
   496: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8968,8 +8968,8 @@ _default:
       eid: 497
   498: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
-      CentreService: "P\xC3\xA9diatrie"
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8987,7 +8987,7 @@ _default:
   499: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "R\xC3\xA9adaptation"
+      CentreService: "R\xE9adaptation"
       Commentaires: Elle a beaucoup de corrosion. elle etait couverte de poussiere.
         Je prends ces vis pour reparer la table ID 522.
       DateAcquisition: 2015-08-01
@@ -9005,8 +9005,8 @@ _default:
       eid: 499
   500: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Saturometre (Oxymetre)
-      CentreService: "Maternit\xC3\xA9"
+      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2015-09-17
       DateDernierEntretien: 2015-09-18
@@ -9023,7 +9023,7 @@ _default:
       eid: 500
   501: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Saturometre (Oxymetre)
+      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2015-09-16
@@ -9041,7 +9041,7 @@ _default:
       eid: 501
   502: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9059,7 +9059,7 @@ _default:
       eid: 502
   503: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9077,7 +9077,7 @@ _default:
       eid: 503
   504: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9095,7 +9095,7 @@ _default:
       eid: 504
   505: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9131,7 +9131,7 @@ _default:
       eid: 506
   507: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur portable
+      CategorieEquipement: "St\xE9rilisateur portable"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9144,12 +9144,12 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 507
   508: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sterilisateur portable
+      CategorieEquipement: "St\xE9rilisateur portable"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9162,12 +9162,12 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: Salle sterilisateur
+      Salle: "Salle st\xE9rilisateur"
     state:
       eid: 508
   509: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Appareil e succion
+      CategorieEquipement: "Appareil \u00E0 succion"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2015-10-14
@@ -9185,7 +9185,7 @@ _default:
       eid: 509
   510: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Tensiometre
+      CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
       Commentaires: Adult . Range 18.4 a 26.7 cm.
       DateAcquisition: 2016-07-18
@@ -9239,8 +9239,8 @@ _default:
       eid: 512
   513: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
-      CentreService: Medecine interne
+      CategorieEquipement: "Thermom\u00E8tre"
+      CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2015-10-15
       DateDernierEntretien: 2015-10-25
@@ -9257,7 +9257,7 @@ _default:
       eid: 513
   514: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-15
@@ -9275,7 +9275,7 @@ _default:
       eid: 514
   515: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-15
@@ -9293,7 +9293,7 @@ _default:
       eid: 515
   516: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Thermometre
+      CategorieEquipement: "Thermom\u00E8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-15
@@ -9329,7 +9329,7 @@ _default:
       eid: 517
   518: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Balance pediatrique
+      CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-07-18
@@ -9347,7 +9347,7 @@ _default:
       eid: 518
   519: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Support e solutes
+      CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-07-18
@@ -9383,7 +9383,7 @@ _default:
       eid: 520
   521: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Saturometre (Oxymetre)
+      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: On a tarre l'appareil . fonctionnel
       DateAcquisition: 2016-07-18
@@ -9414,7 +9414,7 @@ _default:
       Modele: Ri-former
       NbBonTravail: 0
       NumeroSerie: '6859'
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Salle consultation externe R107
     state:
       eid: 522
@@ -9433,7 +9433,7 @@ _default:
       Modele: 02-131
       NbBonTravail: 0
       NumeroSerie: '5100160515'
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Salle consultation externe R107
     state:
       eid: 523
@@ -9452,7 +9452,7 @@ _default:
       Modele: 02-131
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: hopital general 1103
     state:
       eid: 524
@@ -9473,7 +9473,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 525
@@ -9494,7 +9494,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 526
@@ -9515,7 +9515,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 527
@@ -9536,7 +9536,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 528
@@ -9557,7 +9557,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 529
@@ -9578,7 +9578,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 530
@@ -9599,7 +9599,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 531
@@ -9620,7 +9620,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 532
@@ -9641,7 +9641,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 533
@@ -9662,7 +9662,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 534
@@ -9683,7 +9683,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 535
@@ -9702,7 +9702,7 @@ _default:
       Modele: 02-131
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: Croix-Rouge Haitienne
+      Provenance: "Croix-Rouge Ha\u00EFtienne"
       Salle: '1103'
     state:
       eid: 536
@@ -9738,5 +9738,5 @@ _default:
     Modele: 02-131
     NbBonTravail: 0
     NumeroSerie: ''
-    Provenance: Croix-Rouge Haitienne
+    Provenance: "Croix-Rouge Ha\u00EFtienne"
     Salle: '1103'
