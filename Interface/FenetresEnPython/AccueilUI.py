@@ -285,7 +285,7 @@ class Ui_Accueil(object):
         self.layoutAffichagePrincipal.setContentsMargins(0, -1, -1, -1)
         self.layoutAffichagePrincipal.setSpacing(0)
         self.layoutAffichagePrincipal.setObjectName("layoutAffichagePrincipal")
-        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem10 = QtWidgets.QSpacerItem(40, 0, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.layoutAffichagePrincipal.addItem(spacerItem10)
         self.LabelSIMM20HopitalSaintMichel = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
