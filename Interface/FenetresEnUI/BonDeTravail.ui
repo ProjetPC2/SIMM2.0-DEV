@@ -653,7 +653,7 @@ color: rgb(81, 81, 81);
             </font>
            </property>
            <property name="text">
-            <string>Nombre de pièces</string>
+            <string>Nom de la pièce</string>
            </property>
           </widget>
          </item>
@@ -667,7 +667,7 @@ color: rgb(81, 81, 81);
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>15</width>
+             <width>30</width>
              <height>20</height>
             </size>
            </property>
@@ -697,7 +697,7 @@ color: rgb(81, 81, 81);
             </font>
            </property>
            <property name="text">
-            <string>Nom de la pièce</string>
+            <string>Nombre de pièces</string>
            </property>
           </widget>
          </item>
