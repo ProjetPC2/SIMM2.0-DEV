@@ -1787,7 +1787,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: "M\xE9decine interne"
-      Commentaires: "Il est completement bris\xC3\xA9 mais toujours en "M\xE9decine interne"."
+      Commentaires: "Il est completement bris\xC3\xA9 mais toujours en medecine interne."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Desuet
