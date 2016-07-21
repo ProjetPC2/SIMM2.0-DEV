@@ -1,7 +1,7 @@
 _default:
   1: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Defibrilateur
+      CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
       Commentaires: "Manuel de sevice disponible sur les \xC3\xA9tagere."
       DateAcquisition: 2016-06-29
@@ -19,7 +19,7 @@ _default:
       eid: 1
   2: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Defibrilateur
+      CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -685,7 +685,7 @@ _default:
       eid: 38
   39: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Defibrilateur
+      CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2541,7 +2541,7 @@ _default:
       eid: 141
   142: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Defibrilateur
+      CategorieEquipement: "D\xE9fibrilateur"
       CentreService: "Bloc op\xC3\xA9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5751,7 +5751,7 @@ _default:
       eid: 319
   320: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Defibrilateur
+      CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5769,7 +5769,7 @@ _default:
       eid: 320
   321: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Defibrilateur
+      CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
