@@ -6,8 +6,8 @@ _default:
       Date: 2015-07-14
       DescriptionIntervention: ''
       DescriptionSituation: "La batterie de voltage faible. Elle retourne une mesure\
-        \ de 6.33 V au multim\xC3\xA9tre. Pas de cable de branchement aussi pour connecter\
-        \ sur le courant de ville. N\xC3\xA9c\xC3\xA9ssite un chargeur p/n 804906"
+        \ de 6.33 V au multim\xE9tre. Pas de cable de branchement aussi pour connecter\
+        \ sur le courant de ville. N\xE9c\xE9ssite un chargeur p/n 804906"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '40'
@@ -25,7 +25,7 @@ _default:
       CentreService: Urgences
       Date: 2015-07-14
       DescriptionIntervention: ''
-      DescriptionSituation: "\"La batterie de remplacement. Sa specificit\xC3\xA9\
+      DescriptionSituation: "\"La batterie de remplacement. Sa specificit\xE9\
         \ est de : 6v ,  3, 5 Amp/h et model ps 630\""
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -44,9 +44,9 @@ _default:
       CentreService: Urgences
       Date: 2015-07-14
       DescriptionIntervention: "Ajout des cables defibrilateur et ceux de l'ECG pris\
-        \ de l'\xC3\xA9quipement ID 79. Ensuite on a recharg\xC3\xA9e la batterie. "
-      DescriptionSituation: "La batterie \xC3\xA9tait d\xC3\xA9charg\xC3\xA9e. Pas\
-        \ de cable reliant le patient \xC3\xA9 l'appareil. Pas de cables d\xC3\xA9\
+        \ de l'\xE9quipement ID 79. Ensuite on a recharg\xE9e la batterie. "
+      DescriptionSituation: "La batterie \xE9tait d\xE9charg\xE9e. Pas\
+        \ de cable reliant le patient \xE9 l'appareil. Pas de cables d\xE9\
         fibrilateurs."
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -65,7 +65,7 @@ _default:
       CentreService: Inconnu
       Date: 2015-07-14
       DescriptionIntervention: Appareil mis au rebut
-      DescriptionSituation: "La batterie de remplacement. Sa specificit\xC3\xA9 est\
+      DescriptionSituation: "La batterie de remplacement. Sa specificit\xE9 est\
         \ de : 6v - 3 Amp/h "
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -83,11 +83,11 @@ _default:
       CategorieEquipement: Sterilisateur e vapeur
       CentreService: Inconnu
       Date: 2015-08-25
-      DescriptionIntervention: "Les fusibles avaient \xC3\xA9t\xC3\xA9 short\xC3\xA9\
-        s et ils \xC3\xA9taient manquants. C'est tr\xC3\xA9s dangereux pour un appareil\
-        \ qui chauffe autant. On a enlev\xC3\xA9 les connections directes et remplac\xC3\
+      DescriptionIntervention: "Les fusibles avaient \xE9t\xE9 short\xE9\
+        s et ils \xE9taient manquants. C'est tr\xE9s dangereux pour un appareil\
+        \ qui chauffe autant. On a enlev\xE9 les connections directes et remplac\xC3\
         \xA9 les fusibles l'appareil semble maintenant fonctionner. "
-      DescriptionSituation: "V\xC3\xA9rification et diagnostic "
+      DescriptionSituation: "V\xE9rification et diagnostic "
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '49'
@@ -123,8 +123,8 @@ _default:
       CategorieEquipement: Appareil de radiographie
       CentreService: Radiologie
       Date: 2015-08-25
-      DescriptionIntervention: "L'appareil est irr\xC3\xA9cup\xC3\xA9rable. Je l'ai\
-        \ d\xC3\xA9mont\xC3\xA9 et conserv\xC3\xA9 les pi\xC3\xA9ces utiles. "
+      DescriptionIntervention: "L'appareil est irr\xE9cup\xE9rable. Je l'ai\
+        \ d\xE9mont\xE9 et conserv\xE9 les pi\xE9ces utiles. "
       DescriptionSituation: Les branchements avec les materiels de radiographie sont
         defectueuses.
       EtatBDT: Ferme
@@ -182,16 +182,16 @@ _default:
       Date: 2015-07-16
       DescriptionIntervention: "\"Je pris l'ouvrage de maintenance sur la bibliotheque\
         \ papier pour consulter la procedure de maintenance. Performance verification\
-        \ page 3-8. Inspection visuelle : l'appareil est en bon \xC3\xA9tat. les cables\
-        \ ECG n'est pas en bon \xC3\xA9tat (il a \xC3\xA9t\xC3\xA9 repar\xC3\xA9).\
-        \ J'ai remplac\xC3\xA9 le rouleau de papier par ceux de ID 79. Tests effectu\xC3\
-        \xA9s: Calibration du defibrilateur : Calibration r\xC3\xA9ussie. Test du\
-        \ defibrillateur : reussie sur batterie seulement,  r\xC3\xA9ussie sur ac\
-        \ seulement. Test ECG r\xC3\xA9ussi. Test d'alarme ECG r\xC3\xA9ussi. Test\
-        \ ecran r\xC3\xA9ussi. Test d'enregistrement r\xC3\xA9ussi sauf que le niveau\
-        \ d'encre est bas. Test de commande r\xC3\xA9ussi. Test d'indicateurs r\xC3\
+        \ page 3-8. Inspection visuelle : l'appareil est en bon \xE9tat. les cables\
+        \ ECG n'est pas en bon \xE9tat (il a \xE9t\xE9 repar\xE9).\
+        \ J'ai remplac\xE9 le rouleau de papier par ceux de ID 79. Tests effectu\xC3\
+        \xA9s: Calibration du defibrilateur : Calibration r\xE9ussie. Test du\
+        \ defibrillateur : reussie sur batterie seulement,  r\xE9ussie sur ac\
+        \ seulement. Test ECG r\xE9ussi. Test d'alarme ECG r\xE9ussi. Test\
+        \ ecran r\xE9ussi. Test d'enregistrement r\xE9ussi sauf que le niveau\
+        \ d'encre est bas. Test de commande r\xE9ussi. Test d'indicateurs r\xC3\
         \xA9ussi.\""
-      DescriptionSituation: "V\xC3\xA9rification et entretien. "
+      DescriptionSituation: "V\xE9rification et entretien. "
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '41'
@@ -263,7 +263,7 @@ _default:
       CentreService: Laboratoire
       Date: 2015-07-17
       DescriptionIntervention: ''
-      DescriptionSituation: "Il a un probleme de luminosit\xC3\xA9. Un probleme aussi\
+      DescriptionSituation: "Il a un probleme de luminosit\xE9. Un probleme aussi\
         \ au niveau de la lentille 40x et 100x."
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -299,11 +299,11 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
       Date: 2015-07-17
-      DescriptionIntervention: "Appareil test\xC3\xA9 avec les cables de l'appareil\
+      DescriptionIntervention: "Appareil test\xE9 avec les cables de l'appareil\
         \ procare 400. SPO2 et pression fonctionnent."
-      DescriptionSituation: "\"L'appareil \xC3\xA9tait defectueux par le service d'urgence.\
-        \ Inspection visuelle : Tous les indicateurs de mesures sont \xC3\xA9ffac\xC3\
-        \xA9s. Le connecteur SPO2 est enfonc\xC3\xA9 et endommag\xC3\xA9. Le rouleau\
+      DescriptionSituation: "\"L'appareil \xE9tait defectueux par le service d'urgence.\
+        \ Inspection visuelle : Tous les indicateurs de mesures sont \xE9ffac\xC3\
+        \xA9s. Le connecteur SPO2 est enfonc\xE9 et endommag\xE9. Le rouleau\
         \ d'impression est vide. Il manque tous les cables (SPO2,  pression,  alimentation).\
         \ La batterie est defectueuse.\""
       EtatBDT: Ferme
@@ -322,13 +322,13 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
       Date: 2015-07-17
-      DescriptionIntervention: "Le cable SPO2 est remplac\xC3\xA9 par un nouveau ref\
-        \ : DS100A. le cable de pression est temporairement colmat\xC3\xA9 par un\
-        \ patch. la batterie a \xC3\xA9t\xC3\xA9 recharg\xC3\xA9e. l'appareil fonctionne\
+      DescriptionIntervention: "Le cable SPO2 est remplac\xE9 par un nouveau ref\
+        \ : DS100A. le cable de pression est temporairement colmat\xE9 par un\
+        \ patch. la batterie a \xE9t\xE9 recharg\xE9e. l'appareil fonctionne\
         \ maintenant."
       DescriptionSituation: "Inspection visuelle : Appareil est en bon etat. le cable\
         \ SPO2 ne fonctionne pas. le cable de pression a une fuite (erreure 83). le\
-        \ cable d'alimentation a \xC3\xA9t\xC3\xA9 d\xC3\xA9chir\xC3\xA9 mais fonctionne."
+        \ cable d'alimentation a \xE9t\xE9 d\xE9chir\xE9 mais fonctionne."
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '50'
@@ -343,7 +343,7 @@ _default:
   18: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chirurgie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Date: 2015-07-20
       DescriptionIntervention: ''
       DescriptionSituation: la vise pour les supports ne fonctionne pas. le mecanisme
@@ -362,7 +362,7 @@ _default:
   19: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Concentrateur d'oxygene
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Date: 2015-08-26
       DescriptionIntervention: ''
       DescriptionSituation: Il faut une prise a 220V
@@ -380,17 +380,17 @@ _default:
   20: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Date: 2015-07-20
       DescriptionIntervention: ''
-      DescriptionSituation: "Lit en bon etat mais endommag\xC3\xA9. Il manque deux\
+      DescriptionSituation: "Lit en bon etat mais endommag\xE9. Il manque deux\
         \ roues."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '231'
       Marque: ''
       Modele: ''
-      Salle: "Salle de r\xC3\xA9cup\xC3\xA9ration"
+      Salle: "Salle de r\xE9cup\xE9ration"
       TempsEstime: !!python/object/apply:datetime.time
       - !!binary |
         DRcSAH0A
@@ -399,9 +399,9 @@ _default:
   21: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Appareil d'anesthesie
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Date: 2015-07-21
-      DescriptionIntervention: "J'\xC3\xA9cris la solution..."
+      DescriptionIntervention: "J'\xE9cris la solution..."
       DescriptionSituation: "\"L'appareil est neuf,  mais n'a jamais fonctionn\xC3\
         \xA9.\""
       EtatBDT: Ferme
@@ -422,9 +422,9 @@ _default:
       Date: 2015-07-22
       DescriptionIntervention: "\"Inspection visuelle : L'appareil est en bon \xC3\
         \xA9tat,  Le DEL de la batterie n'allume pas. Le DEL de l'alimentation s'allume.\
-        \ La batterie est d\xC3\xA9fectueuse.Son voltage est trop bas,  elle ne peut\
-        \ plus \xC3\xA9tre recharg\xC3\xA9e. Une nouvelle batterie en paquet de 6\
-        \ de 7, 2 volts et 2, 70AmH est n\xC3\xA9cessaire. Il fonctionne pour l'instant\
+        \ La batterie est d\xE9fectueuse.Son voltage est trop bas,  elle ne peut\
+        \ plus \xE9tre recharg\xE9e. Une nouvelle batterie en paquet de 6\
+        \ de 7, 2 volts et 2, 70AmH est n\xE9cessaire. Il fonctionne pour l'instant\
         \ avec le powersupply. Il peut retourner en service.\""
       DescriptionSituation: Diagnostique de l'appareil
       EtatBDT: Ferme
@@ -441,16 +441,16 @@ _default:
   23: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-07-22
       DescriptionIntervention: "\"Il y a beaucoup de corrosion La batterie est d\xC3\
-        \xA9charg\xC3\xA9e E83 : Fuite d'air au niveau du connecteur lors de la prise\
-        \ de pression. J'ai d\xC3\xA9bouch\xC3\xA9 le connecteur et tester avec un\
+        \xA9charg\xE9e E83 : Fuite d'air au niveau du connecteur lors de la prise\
+        \ de pression. J'ai d\xE9bouch\xE9 le connecteur et tester avec un\
         \ brassard d'un atre appareil. Tout fonctionne normalement. Pour que l'appareil\
         \ retourne en service,  il faut une nouvelle batterie 6V,  3.5AmH et un nouveau\
         \ brassard adulte. \""
-      DescriptionSituation: "Pas de c\xC3\xA9ble d'alimentation. Pas de brassard.\
-        \ Le c\xC3\xA9ble de presssion est d\xC3\xA9terior\xC3\xA9. L'appareil n'allume\
+      DescriptionSituation: "Pas de c\xE9ble d'alimentation. Pas de brassard.\
+        \ Le c\xE9ble de presssion est d\xE9terior\xE9. L'appareil n'allume\
         \ pas"
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -466,10 +466,10 @@ _default:
   24: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-07-22
-      DescriptionIntervention: "J'ai ouvert l'appareil au complet et trouv\xC3\xA9\
-        \ que le contact du bouton on-off \xC3\xA9tait sale. Je l'ai nettoy\xC3\xA9\
+      DescriptionIntervention: "J'ai ouvert l'appareil au complet et trouv\xE9\
+        \ que le contact du bouton on-off \xE9tait sale. Je l'ai nettoy\xE9\
         \ avec une lingette d'alcool et il fonctionne bien maintenant"
       DescriptionSituation: Il est difficile d'appuyer sur le bouton mise en marche
         - Hors service (On-OFF)
@@ -487,19 +487,19 @@ _default:
   25: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Date: 2015-07-21
-      DescriptionIntervention: "\".... Apr\xC3\xA9s avoir essayer de r\xC3\xA9veiller\
-        \ la batterie 4 fois comme le sugg\xC3\xA9rait le manuel de service,  on a\
-        \ pu constater que la batterie n'a pas charg\xC3\xA9e. Batterie irr\xC3\xA9\
-        cup\xC3\xA9rable. L'appareil fonctionne seulement sur l'\xC3\xA9lectricit\xC3\
-        \xA9. Test de l'ECG R\xC3\xA9ussi : Il fonctionne normalement Test de pression\
-        \ - Calibration du NBP - \xC3\xA9chou\xC3\xA9 = Fuite de pression. Changer\
-        \ debassard,  refait le test = test \xC3\xA9chouer,  toujours une fuite de\
+      DescriptionIntervention: "\".... Apr\xE9s avoir essayer de r\xE9veiller\
+        \ la batterie 4 fois comme le sugg\xE9rait le manuel de service,  on a\
+        \ pu constater que la batterie n'a pas charg\xE9e. Batterie irr\xE9\
+        cup\xE9rable. L'appareil fonctionne seulement sur l'\xE9lectricit\xC3\
+        \xA9. Test de l'ECG R\xE9ussi : Il fonctionne normalement Test de pression\
+        \ - Calibration du NBP - \xE9chou\xE9 = Fuite de pression. Changer\
+        \ debassard,  refait le test = test \xE9chouer,  toujours une fuite de\
         \ pression. Il faudrait ouvir l'appareil pour savoir si la fuite est dans\
-        \ l'appareil. (bon de travail suivant) R\xC3\xA9SUM\xC3\xA9 : Batterie \xC3\
-        \xA9 chang\xC3\xA9e,  procurrer des connecteurs (SPO2,  temp\xC3\xA9rature,\
-        \  bp1, bp2,  CO2) .Seul l'ECG fonctionne,  fuite de pression ult\xC3\xA9\
+        \ l'appareil. (bon de travail suivant) R\xE9SUM\xE9 : Batterie \xC3\
+        \xA9 chang\xE9e,  procurrer des connecteurs (SPO2,  temp\xE9rature,\
+        \  bp1, bp2,  CO2) .Seul l'ECG fonctionne,  fuite de pression ult\xE9\
         rieurement.\""
       DescriptionSituation: Diagnostique de l'appareil.
       EtatBDT: Ferme
@@ -516,7 +516,7 @@ _default:
   26: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Date: 2015-07-23
       DescriptionIntervention: ''
       DescriptionSituation: 'Fuite de pression dans le circuit du NBP. '
@@ -534,11 +534,11 @@ _default:
   27: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-07-23
-      DescriptionIntervention: "Support trouv\xC3\xA9 et replac\xC3\xA9 sur l'appareil.\
+      DescriptionIntervention: "Support trouv\xE9 et replac\xE9 sur l'appareil.\
         \ Il faut maintenant la callibrer. "
-      DescriptionSituation: "Non fonctionnelle. . Il manque le support \xC3\xA9 droite\
+      DescriptionSituation: "Non fonctionnelle. . Il manque le support \xE9 droite\
         \ de la balance."
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -557,14 +557,14 @@ _default:
       CentreService: Urgences
       Date: 2015-07-24
       DescriptionIntervention: "\"Inspection visuelle : L'appareil et les connections\
-        \ semblent \xC3\xA9tre en bon \xC3\xA9tat. L'appareil s'allume sans erreur.\
+        \ semblent \xE9tre en bon \xE9tat. L'appareil s'allume sans erreur.\
         \ Une mesure de tension retourne une erreur 833 : ''cuff inflation time exceeds\
         \ 40 seconds or air leak detected''. Je cherche une fuite dans les cables\
         \ et dans le brassard et j'entend une fuite a la connection brassard - tuyau.\
-        \ J'ai coup\xC3\xA9 les tuyaux pour refaire les 4 connections mais le probl\xC3\
-        \xA9me persiste. En inspectant de plus pr\xC3\xA9s les 4 connecteurs m\xC3\
-        \xA9talliques,  il y en a deux qui sont endomagg\xC3\xA9s (gaskets d\xC3\xA9\
-        chir\xC3\xA9s). J'ai pris les connecteurs de l'appareil ID:80. \""
+        \ J'ai coup\xE9 les tuyaux pour refaire les 4 connections mais le probl\xC3\
+        \xA9me persiste. En inspectant de plus pr\xE9s les 4 connecteurs m\xC3\
+        \xA9talliques,  il y en a deux qui sont endomagg\xE9s (gaskets d\xE9\
+        chir\xE9s). J'ai pris les connecteurs de l'appareil ID:80. \""
       DescriptionSituation: 'Diagnostic de l''appareil . L''appareil s''allume sans
         erreur. Une mesure de tension retourne une erreur 833 : ''''cuff inflation
         time exceeds 40 seconds or air leak detected''''. '
@@ -584,7 +584,7 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-07-24
-      DescriptionIntervention: "On a test\xC3\xA9 avec les cables de l'autre appareil\
+      DescriptionIntervention: "On a test\xE9 avec les cables de l'autre appareil\
         \ ID: 81. On a vu tout marche bien."
       DescriptionSituation: 'L''appareil est en bon etat mais pas de connecteurs dans
         ses cables. Il faut commander toute suite les connecteurs. '
@@ -638,10 +638,10 @@ _default:
   32: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre Pr\xE9natal"
       Date: 2015-07-27
       DescriptionIntervention: ''
-      DescriptionSituation: "Table endommag\xC3\xA9e."
+      DescriptionSituation: "Table endommag\xE9e."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '410'
@@ -656,7 +656,7 @@ _default:
   33: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre Pr\xE9natal"
       Date: 2015-07-27
       DescriptionIntervention: ''
       DescriptionSituation: Il manque une ampoule.
@@ -674,7 +674,7 @@ _default:
   34: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre Pr\xE9natal"
       Date: 2015-07-27
       DescriptionIntervention: ''
       DescriptionSituation: Il manque une ampoule.
@@ -692,9 +692,9 @@ _default:
   35: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-07-28
-      DescriptionIntervention: "On a plac\xC3\xA9 une ampoule de 100W et 120v dans\
+      DescriptionIntervention: "On a plac\xE9 une ampoule de 100W et 120v dans\
         \ la lampe d'examen. Alors. c'est fonctionnel."
       DescriptionSituation: Elle manque une ampoule de 100W et 120v
       EtatBDT: Ferme
@@ -714,8 +714,8 @@ _default:
       CentreService: Clinique externe
       Date: 2015-07-28
       DescriptionIntervention: ''
-      DescriptionSituation: "Fuite dans les tuyaux. Probl\xC3\xA9me de contact avec\
-        \ la lumi\xC3\xA9re. Coupure dans les tuyaux de pression."
+      DescriptionSituation: "Fuite dans les tuyaux. Probl\xE9me de contact avec\
+        \ la lumi\xE9re. Coupure dans les tuyaux de pression."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '444'
@@ -787,7 +787,7 @@ _default:
       CentreService: Don de sang
       Date: 2015-07-29
       DescriptionIntervention: ''
-      DescriptionSituation: "Fonctionnel mais il est intermitant. (allume/\xC3\xA9\
+      DescriptionSituation: "Fonctionnel mais il est intermitant. (allume/\xE9\
         teint constament)"
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -805,14 +805,14 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
       Date: 2015-07-30
-      DescriptionIntervention: "\"Inspection visuelle: Ce materiel a \xC3\xA9t\xC3\
-        \xA9 dej\xC3\xA9 ouvert par un technicien et le boitier ne ferme pas completement.\
+      DescriptionIntervention: "\"Inspection visuelle: Ce materiel a \xE9t\xC3\
+        \xA9 dej\xE9 ouvert par un technicien et le boitier ne ferme pas completement.\
         \ Il manque tous les cables (pression,  SPO2 ,  ECG et alimentation). J'ai\
-        \ remplac\xC3\xA9 les cables d'alimentation,  de SP02 et de NIBP. l'appareil\
-        \ s'allume bien sans erreur. On a ajout\xC3\xA9 un cable SPO2. Le cable SPO2\
-        \ fonctionne. La pression monte bien mais Il a du mal \xC3\xA9 decompresser.\
-        \ On a remplac\xC3\xA9 le connecteur maintenant il fonctionne bien. Le bouton\
-        \ off red\xC3\xA9marre l'appareil il ne l'\xC3\xA9teint pas. \""
+        \ remplac\xE9 les cables d'alimentation,  de SP02 et de NIBP. l'appareil\
+        \ s'allume bien sans erreur. On a ajout\xE9 un cable SPO2. Le cable SPO2\
+        \ fonctionne. La pression monte bien mais Il a du mal \xE9 decompresser.\
+        \ On a remplac\xE9 le connecteur maintenant il fonctionne bien. Le bouton\
+        \ off red\xE9marre l'appareil il ne l'\xE9teint pas. \""
       DescriptionSituation: 'Verification du materiel. '
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -849,12 +849,12 @@ _default:
       CategorieEquipement: Incubateur
       CentreService: Laboratoire
       Date: 2015-07-30
-      DescriptionIntervention: "L'appareil s'allume bien. On a configur\xC3\xA9 la\
-        \ temperature a 50 pour tester s'il peut monter \xC3\xA9 50. L'incubateur\
-        \ chauffe sans s'arr\xC3\xA9ter. Il est rendu a 67 degr\xC3\xA9s et continue\
-        \ de monter. (Circuit de r\xC3\xA9gullation peut \xC3\xA9tre fautif). Il manque\
-        \ aussi de thermom\xC3\xA9tre pour v\xC3\xA9rifier les temp\xC3\xA9ratures\
-        \ mesur\xC3\xA9es par l'appareil. "
+      DescriptionIntervention: "L'appareil s'allume bien. On a configur\xE9 la\
+        \ temperature a 50 pour tester s'il peut monter \xE9 50. L'incubateur\
+        \ chauffe sans s'arr\xE9ter. Il est rendu a 67 degr\xE9s et continue\
+        \ de monter. (Circuit de r\xE9gullation peut \xE9tre fautif). Il manque\
+        \ aussi de thermom\xE9tre pour v\xE9rifier les temp\xE9ratures\
+        \ mesur\xE9es par l'appareil. "
       DescriptionSituation: verification du materiel
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -873,10 +873,10 @@ _default:
       CentreService: Laboratoire
       Date: 2015-07-30
       DescriptionIntervention: "L'appareil ne s'allume pas du tout. J'ai ouvert le\
-        \ boitier et trouv\xC3\xA9 un Fusible saut\xC3\xA9 - Mod\xC3\xA9le T250 V\
-        \ 6 Amp\xC3\xA9res. j'ai trouv\xC3\xA9 un fusible 250 V 4 A mais celui ci\
+        \ boitier et trouv\xE9 un Fusible saut\xE9 - Mod\xE9le T250 V\
+        \ 6 Amp\xE9res. j'ai trouv\xE9 un fusible 250 V 4 A mais celui ci\
         \ ne suffit pas. "
-      DescriptionSituation: "Diagnostic de l'appareil. Le fusible a saut\xC3\xA9.\
+      DescriptionSituation: "Diagnostic de l'appareil. Le fusible a saut\xE9.\
         \ Il manque un fusible 250 V 6 A"
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -895,7 +895,7 @@ _default:
       CentreService: Urgences
       Date: 2015-07-30
       DescriptionIntervention: ''
-      DescriptionSituation: "Ce materiel n'a pas de fusible. Je les ai enlev\xC3\xA9\
+      DescriptionSituation: "Ce materiel n'a pas de fusible. Je les ai enlev\xE9\
         es pour reparer le materiel ID 43. "
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -914,7 +914,7 @@ _default:
       CentreService: Urgences
       Date: 2015-07-30
       DescriptionIntervention: ''
-      DescriptionSituation: "J'ai enlev\xC3\xA9 la batterie parcequ'elle ne peut pas\
+      DescriptionSituation: "J'ai enlev\xE9 la batterie parcequ'elle ne peut pas\
         \ actualiser."
       EtatBDT: Ferme
       ID-BDT: '2'
@@ -988,7 +988,7 @@ _default:
       CentreService: Inconnu
       Date: 2015-07-30
       DescriptionIntervention: ''
-      DescriptionSituation: "Il manque une batterie de specificit\xC3\xA9 1.5v AA"
+      DescriptionSituation: "Il manque une batterie de specificit\xE9 1.5v AA"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '387'
@@ -1005,9 +1005,9 @@ _default:
       CategorieEquipement: Saturometre (Oxymetre)
       CentreService: Urgences
       Date: 2015-07-30
-      DescriptionIntervention: "J'ai remplac\xC3\xA9 les batteries 1.5v AA ca fonctionne\
+      DescriptionIntervention: "J'ai remplac\xE9 les batteries 1.5v AA ca fonctionne\
         \ bien. "
-      DescriptionSituation: "Remplacement de batterie de specifit\xC3\xA9 1.5 v AA"
+      DescriptionSituation: "Remplacement de batterie de specifit\xE9 1.5 v AA"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '86'
@@ -1043,7 +1043,7 @@ _default:
       CategorieEquipement: Appareil e succion
       CentreService: Urgences
       Date: 2015-07-30
-      DescriptionIntervention: "\"Apres l'avoir charg\xC3\xA9 ,  on note quelle ne\
+      DescriptionIntervention: "\"Apres l'avoir charg\xE9 ,  on note quelle ne\
         \ tient plus ca charge. La batterie est morte. Il faut la remplacer. \""
       DescriptionSituation: "\"La batterie tombe a zero volt. sa batterie est de specificit\xC3\
         \xA9 12 v dc 2400mAh ,  serie : 31204250. \""
@@ -1064,7 +1064,7 @@ _default:
       CentreService: Inconnu
       Date: 2015-07-30
       DescriptionIntervention: ''
-      DescriptionSituation: "La fusible a saut\xC3\xA9."
+      DescriptionSituation: "La fusible a saut\xE9."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '52'
@@ -1083,7 +1083,7 @@ _default:
       Date: 2015-07-31
       DescriptionIntervention: ''
       DescriptionSituation: "Donne le bon poids mais la balance ne peut pas revenir\
-        \ au z\xC3\xA9ro initiale"
+        \ au z\xE9ro initiale"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '518'
@@ -1102,7 +1102,7 @@ _default:
       Date: 2015-07-31
       DescriptionIntervention: Elle tourne normalement. le timer fonctionnel. l'appareil
         fonctionne.
-      DescriptionSituation: "\"elle ne tourne pas,  le timer semble aussi d\xC3\xA9\
+      DescriptionSituation: "\"elle ne tourne pas,  le timer semble aussi d\xE9\
         fectueux \""
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1121,8 +1121,8 @@ _default:
       CentreService: Urgences
       Date: 2015-08-03
       DescriptionIntervention: "\"On doit dechirer un peu la toile pour coller avec\
-        \ le liquide PL Promium. Apr\xC3\xA9s ca,  tout fonctionne. 15min de r\xC3\
-        \xA9paration mais j'ai laiss\xC3\xA9 s\xC3\xA9ch\xC3\xA9 pendant 4 heures.\""
+        \ le liquide PL Promium. Apr\xE9s ca,  tout fonctionne. 15min de r\xC3\
+        \xA9paration mais j'ai laiss\xE9 s\xE9ch\xE9 pendant 4 heures.\""
       DescriptionSituation: Verification du materiel. Fuite entre le vessie et le
         cable de pression.
       EtatBDT: Ferme
@@ -1139,7 +1139,7 @@ _default:
   58: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre Pr\xE9natal"
       Date: 2015-08-03
       DescriptionIntervention: ''
       DescriptionSituation: L'aiguille du manometre ne fontionne pas
@@ -1157,7 +1157,7 @@ _default:
   59: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "Centre Pr\xC3\xA9natal"
+      CentreService: "Centre Pr\xE9natal"
       Date: 2015-08-03
       DescriptionIntervention: ''
       DescriptionSituation: ''
@@ -1177,8 +1177,8 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-08-03
-      DescriptionIntervention: "J'ai ouvert la boite du manometre. J'ai trouv\xC3\xA9\
-        \ le ressort \xC3\xA9 l\xC3\xA9interieur a deterior\xC3\xA9. il est dilat\xC3\
+      DescriptionIntervention: "J'ai ouvert la boite du manometre. J'ai trouv\xE9\
+        \ le ressort \xE9 l\xE9interieur a deterior\xE9. il est dilat\xC3\
         \xA9."
       DescriptionSituation: L'aiguille du manometre ne varie pas
       EtatBDT: Ferme
@@ -1195,10 +1195,10 @@ _default:
   61: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-03
-      DescriptionIntervention: "J'ai chang\xC3\xA9 les connecteurs de pression. Le\
-        \ probl\xC3\xA9me est r\xC3\xA9gler. "
+      DescriptionIntervention: "J'ai chang\xE9 les connecteurs de pression. Le\
+        \ probl\xE9me est r\xE9gler. "
       DescriptionSituation: Fuite de pression (erreur E83)
       EtatBDT: Ferme
       ID-BDT: '3'
@@ -1214,7 +1214,7 @@ _default:
   62: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-03
       DescriptionIntervention: ''
       DescriptionSituation: Le connecteur de pression est brise.
@@ -1232,13 +1232,13 @@ _default:
   63: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-03
-      DescriptionIntervention: "\"J'ai mesur\xC3\xA9 la tension avant et apr\xC3\xA9\
-        s 15 minutes de recharge. La charge est pass\xC3\xA9e de 5, 83 v \xC3\xA9\
-        \ 5, 89 V. Le chargeur fonctionne donc,  seul la DELL est brul\xC3\xA9e.\""
+      DescriptionIntervention: "\"J'ai mesur\xE9 la tension avant et apr\xE9\
+        s 15 minutes de recharge. La charge est pass\xE9e de 5, 83 v \xE9\
+        \ 5, 89 V. Le chargeur fonctionne donc,  seul la DELL est brul\xE9e.\""
       DescriptionSituation: "La DELL de chargement ne s'allume pas lorsque l'appareil\
-        \ est branch\xC3\xA9 sur le secteur."
+        \ est branch\xE9 sur le secteur."
       EtatBDT: Ferme
       ID-BDT: '5'
       ID-EQ: '247'
@@ -1255,15 +1255,15 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-08-27
-      DescriptionIntervention: "J'ai d\xC3\xA9nud\xC3\xA9 le fil . V\xC3\xA9rification\
-        \ des contacteurs: J'ai ouvert l'appareil et nettoy\xC3\xA9 les contacteurs\
-        \ avec du blowoff. Le contacteur du courant fait encore d\xC3\xA9faut. La\
-        \ seule fa\xC3\xA9on qu'il fonctionne c'est de tenir le connecteur du fil\
-        \ lors de l'utilisation. Puisque le ressort est manquant. On n'a soud\xC3\xA9\
+      DescriptionIntervention: "J'ai d\xE9nud\xE9 le fil . V\xE9rification\
+        \ des contacteurs: J'ai ouvert l'appareil et nettoy\xE9 les contacteurs\
+        \ avec du blowoff. Le contacteur du courant fait encore d\xE9faut. La\
+        \ seule fa\xE9on qu'il fonctionne c'est de tenir le connecteur du fil\
+        \ lors de l'utilisation. Puisque le ressort est manquant. On n'a soud\xE9\
         \ le connecteur. On raccorde le fil avec une tape electrique pour proteger\
         \ le cable d'alimentation. Et je l'ai remis en service. "
-      DescriptionSituation: "Il y a un probl\xC3\xA9me de connection avec le reseau.\
-        \ Mauvais contac dans le fil \xC3\xA9 l'embout du connecteur. "
+      DescriptionSituation: "Il y a un probl\xE9me de connection avec le reseau.\
+        \ Mauvais contac dans le fil \xE9 l'embout du connecteur. "
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '84'
@@ -1280,7 +1280,7 @@ _default:
       CategorieEquipement: Saturometre (Oxymetre)
       CentreService: Urgences
       Date: 2015-08-05
-      DescriptionIntervention: "\"J'ai nettoy\xC3\xA9 avec du blowoff,  ca ne va pas\
+      DescriptionIntervention: "\"J'ai nettoy\xE9 avec du blowoff,  ca ne va pas\
         \ encore. \""
       DescriptionSituation: 'L''appareil ne peut pas fermer. '
       EtatBDT: Ferme
@@ -1297,13 +1297,13 @@ _default:
   66: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Incubateur neonatal
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-08-05
-      DescriptionIntervention: "La porte est bloqu\xC3\xA9e. On a devis\xC3\xA9 la\
-        \ vise. Ca fonctionne automatiquement. Les gaskets sont dilat\xC3\xA9s. On\
-        \ a pris les gasket de l'appareil ID 56. La vitre est cass\xC3\xA9e. Il nous\
-        \ faut un gros tournevis et du WD40 pour la remplac\xC3\xA9e. Les proc\xC3\
-        \xA9dures de test n\xC3\xA9cessitent toutes un simulateur : "
+      DescriptionIntervention: "La porte est bloqu\xE9e. On a devis\xE9 la\
+        \ vise. Ca fonctionne automatiquement. Les gaskets sont dilat\xE9s. On\
+        \ a pris les gasket de l'appareil ID 56. La vitre est cass\xE9e. Il nous\
+        \ faut un gros tournevis et du WD40 pour la remplac\xE9e. Les proc\xC3\
+        \xA9dures de test n\xE9cessitent toutes un simulateur : "
       DescriptionSituation: Diagnostic de l'appareil. Inspection mecanique avec le
         manuel de service.
       EtatBDT: Ferme
@@ -1320,13 +1320,13 @@ _default:
   67: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Incubateur neonatal
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-08-04
-      DescriptionIntervention: "\"On a d\xC3\xA9mont\xC3\xA9 et nettoy\xC3\xA9 compl\xC3\
-        \xA9tement l'appareil. Les meilleurs pi\xC3\xA9ces de cet appareil et de celui\
-        \ ID:56 ont \xC3\xA9t\xC3\xA9 mises ensembles pour faire un incubateur bien\
+      DescriptionIntervention: "\"On a d\xE9mont\xE9 et nettoy\xE9 compl\xC3\
+        \xA9tement l'appareil. Les meilleurs pi\xE9ces de cet appareil et de celui\
+        \ ID:56 ont \xE9t\xE9 mises ensembles pour faire un incubateur bien\
         \ fonctionnel. On a repris le haut de l'appareil ID 56,  ainsi que quelques\
-        \ portes et son circuit de contr\xC3\xA9le. \""
+        \ portes et son circuit de contr\xE9le. \""
       DescriptionSituation: remise en service de l'appareil
       EtatBDT: Ferme
       ID-BDT: '2'
@@ -1346,16 +1346,16 @@ _default:
       Date: 2015-08-05
       DescriptionIntervention: "\"Consultation le manuel d'utilisation. L'appareil\
         \ s'allume mais un message d'erreur affiche lorsqu'on fait l'autotest.Selon\
-        \ le manuel,  le message d'erreur est peut etre reli\xC3\xA9 aux fusibles.\
-        \ J'ai v\xC3\xA9rifi\xC3\xA9 les fusibles. Ils sont encore bons. Cela peut\
-        \ \xC3\xA9tre aussi une fuite d'oxyg\xC3\xA9ne dans les tuyaux. J'ai ouvert\
-        \ l'appareil,  j'ai enlev\xC3\xA9 le couvercle. On note : -Le couvercle est\
-        \ abim\xC3\xA9 au niveau de la partie d'a\xC3\xA9ration. - beaucoup de corosion\
-        \ sur les composantes internes. -De la rouille -beaucoup de d\xC3\xA9brits\
-        \ \xC3\xA9 l'int\xC3\xA9rieur de l'appareil. - Il fil \xC3\xA9lectrique de\
-        \ coup\xC3\xA9 - Un tuyau fondu et perc\xC3\xA9 \xC3\xA9 plusieurs endroits.\
-        \ Aussi,  le r\xC3\xA9glage du d\xC3\xA9bit d'oxyg\xC3\xA9ne ne marche pas.\
-        \ On soupsonne une souris qui a rentr\xC3\xA9 par le troue du couvercle dans\
+        \ le manuel,  le message d'erreur est peut etre reli\xE9 aux fusibles.\
+        \ J'ai v\xE9rifi\xE9 les fusibles. Ils sont encore bons. Cela peut\
+        \ \xE9tre aussi une fuite d'oxyg\xE9ne dans les tuyaux. J'ai ouvert\
+        \ l'appareil,  j'ai enlev\xE9 le couvercle. On note : -Le couvercle est\
+        \ abim\xE9 au niveau de la partie d'a\xE9ration. - beaucoup de corosion\
+        \ sur les composantes internes. -De la rouille -beaucoup de d\xE9brits\
+        \ \xE9 l'int\xE9rieur de l'appareil. - Il fil \xE9lectrique de\
+        \ coup\xE9 - Un tuyau fondu et perc\xE9 \xE9 plusieurs endroits.\
+        \ Aussi,  le r\xE9glage du d\xE9bit d'oxyg\xE9ne ne marche pas.\
+        \ On soupsonne une souris qui a rentr\xE9 par le troue du couvercle dans\
         \ le circuit interne.\""
       DescriptionSituation: Diagnostic de l'appareil.
       EtatBDT: Ferme
@@ -1376,7 +1376,7 @@ _default:
       Date: 2015-08-05
       DescriptionIntervention: ''
       DescriptionSituation: "Message d'erreur lors de l'autotest. Fuite dans les tuyaux\
-        \ (c'est constat\xC3\xA9 dans le diagnostic) Fil d\xC3\xA9coup\xC3\xA9."
+        \ (c'est constat\xE9 dans le diagnostic) Fil d\xE9coup\xE9."
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '45'
@@ -1393,14 +1393,14 @@ _default:
       CategorieEquipement: Concentrateur d'oxygene
       CentreService: Inconnu
       Date: 2015-08-05
-      DescriptionIntervention: "\"Inspection visuelle - la jauge pour indiqu\xC3\xA9\
-        \ la concentration d'oxyg\xC3\xA9ne est bris\xC3\xA9e. -Le couvercle de l'appareil\
-        \ est un peu abim\xC3\xA9. - L'appareil s'allume. - J'ai ouvert l'appareil.\
-        \ Une nouvelle batterie de 9V doit \xC3\xA9tre mise. Elle sert d'alimentation\
+      DescriptionIntervention: "\"Inspection visuelle - la jauge pour indiqu\xE9\
+        \ la concentration d'oxyg\xE9ne est bris\xE9e. -Le couvercle de l'appareil\
+        \ est un peu abim\xE9. - L'appareil s'allume. - J'ai ouvert l'appareil.\
+        \ Une nouvelle batterie de 9V doit \xE9tre mise. Elle sert d'alimentation\
         \ pour les signaux (DEL/compteur) -Beaucoup de rouille sur les composantes\
-        \ internes. - Coussin de protection d\xC3\xA9ss\xC3\xA9ch\xC3\xA9,  il n'y\
-        \ a pplus de mousse protectrice pour le ransformateur - appareil v\xC3\xA9\
-        rifi\xC3\xA9 avec les techniciens de ste justine - il est irr\xC3\xA9cup\xC3\
+        \ internes. - Coussin de protection d\xE9ss\xE9ch\xE9,  il n'y\
+        \ a pplus de mousse protectrice pour le ransformateur - appareil v\xE9\
+        rifi\xE9 avec les techniciens de ste justine - il est irr\xE9cup\xC3\
         \xA9rable\""
       DescriptionSituation: Diagnostic de l'appareil.
       EtatBDT: Ferme
@@ -1420,14 +1420,14 @@ _default:
       CentreService: Urgences
       Date: 2015-08-06
       DescriptionIntervention: "J'ai ouvert le compartiment de batterie et j'ai v\xC3\
-        \xA9rifi\xC3\xA9 le circuit. J'ai trouv\xC3\xA9 un transistor qui a surchauff\xC3\
-        \xA9 et qui a une trace brul\xC3\xA9e. Je l'ai test\xC3\xA9 sur le board au\
-        \ multim\xC3\xA9tre et il est d\xC3\xA9fectueux. Il faut un remplacement IRF5210.\
-        \ On enl\xC3\xA9ve les batteries dans le circuit de la batterie. Alors c'eteint\
-        \ lorsqu'on enl\xC3\xA9ve le cable d'alimentation. Il semble y avoir un d\xC3\
+        \xA9rifi\xE9 le circuit. J'ai trouv\xE9 un transistor qui a surchauff\xC3\
+        \xA9 et qui a une trace brul\xE9e. Je l'ai test\xE9 sur le board au\
+        \ multim\xE9tre et il est d\xE9fectueux. Il faut un remplacement IRF5210.\
+        \ On enl\xE9ve les batteries dans le circuit de la batterie. Alors c'eteint\
+        \ lorsqu'on enl\xE9ve le cable d'alimentation. Il semble y avoir un d\xC3\
         \xA9faut dans le circuit de recharge il faudrait le remplacer"
       DescriptionSituation: "Le bouton Power ON/OFF ne fonction. L'appareil reste\
-        \ allum\xC3\xA9 meme on presse le Power."
+        \ allum\xE9 meme on presse le Power."
       EtatBDT: Ferme
       ID-BDT: '3'
       ID-EQ: '59'
@@ -1442,9 +1442,9 @@ _default:
   72: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-08-07
-      DescriptionIntervention: "On a ajout\xC3\xA9 une ampoule de 100W et 120 v. Mais\
+      DescriptionIntervention: "On a ajout\xE9 une ampoule de 100W et 120 v. Mais\
         \ il faut trouver sa base."
       DescriptionSituation: Manque une ampoule electrique de 100W et 120 v.
       EtatBDT: Ferme
@@ -1461,7 +1461,7 @@ _default:
   73: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Tensiometre
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-08-07
       DescriptionIntervention: ''
       DescriptionSituation: Il manque le poids et le brassard pour enfant.
@@ -1479,14 +1479,14 @@ _default:
   74: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Concentrateur d'oxygene
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-07
       DescriptionIntervention: "La batterie est defectueuse. Le compresseur marche.\
-        \ Pas d'alarme. Le condensateur est d\xC3\xA9fectueux. sa marque est de :\
-        \ Icar Ecofill de specificit\xC3\xA9 : 15uF 450v et 50 hz. Apr\xC3\xA9s v\xC3\
+        \ Pas d'alarme. Le condensateur est d\xE9fectueux. sa marque est de :\
+        \ Icar Ecofill de specificit\xE9 : 15uF 450v et 50 hz. Apr\xE9s v\xC3\
         \xA9rification avec les techniciens de ste justine on constate que sa carte\
-        \ \xC3\xA9lectronique est d\xC3\xA9fectueuse. "
-      DescriptionSituation: "L'appareil est bris\xC3\xA9. Je verifie avec le manuel\
+        \ \xE9lectronique est d\xE9fectueuse. "
+      DescriptionSituation: "L'appareil est bris\xE9. Je verifie avec le manuel\
         \ de service."
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1502,11 +1502,11 @@ _default:
   75: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de soins neonataux
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-07
       DescriptionIntervention: ''
-      DescriptionSituation: "La table est bris\xC3\xA9e mais encore en utilisation\
-        \ dans la maternit\xC3\xA9"
+      DescriptionSituation: "La table est bris\xE9e mais encore en utilisation\
+        \ dans la maternit\xE9"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '319'
@@ -1521,18 +1521,18 @@ _default:
   76: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-07
-      DescriptionIntervention: "\"On a \xC3\xA9t\xC3\xA9 vu le manuel de service.\
-        \ On a d\xC3\xA9cid\xC3\xA9 de faire la proc\xC3\xA9dure de nettoyage. On\
+      DescriptionIntervention: "\"On a \xE9t\xE9 vu le manuel de service.\
+        \ On a d\xE9cid\xE9 de faire la proc\xE9dure de nettoyage. On\
         \ a ouvert l'appareil,  on a vu qu'il n'y a rien qui se passe dans le power\
-        \ supply principal. On a suivi la proc\xC3\xA9dure du manuel de service pour\
-        \ le sortir et on observe les branchements. Les cables \xC3\xA9taient mals\
-        \ branch\xC3\xA9s. On a vu que les grounds et les VO 5 volts ont permut\xC3\
-        \xA9s. On a replac\xC3\xA9 les connecteurs comme il faut et on allume l'appareil\
-        \ \xC3\xA9 nouveau. Il allume et l'ecran affiche certains indicateurs.\""
+        \ supply principal. On a suivi la proc\xE9dure du manuel de service pour\
+        \ le sortir et on observe les branchements. Les cables \xE9taient mals\
+        \ branch\xE9s. On a vu que les grounds et les VO 5 volts ont permut\xC3\
+        \xA9s. On a replac\xE9 les connecteurs comme il faut et on allume l'appareil\
+        \ \xE9 nouveau. Il allume et l'ecran affiche certains indicateurs.\""
       DescriptionSituation: "On entendu juste un seul ventilateur fonctionner au niveau\
-        \ du power supply. L'entr\xC3\xA9e est a 220 V au lieu de 230V. Aucun affichage\
+        \ du power supply. L'entr\xE9e est a 220 V au lieu de 230V. Aucun affichage\
         \ a l'ecran et l'appareil pas non plus."
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1551,7 +1551,7 @@ _default:
       CentreService: Urgences
       Date: 2015-08-11
       DescriptionIntervention: "\"J'au decousu la toile. j'appose de la colle sur\
-        \ la fuite et laisse la colle dessech\xC3\xA9 pendant plus que 6 heures. J'apporte\
+        \ la fuite et laisse la colle dessech\xE9 pendant plus que 6 heures. J'apporte\
         \ le materiel a la couture pour fermer la toile. Alors,  il fonctionne normalement.\
         \ Je le remets au responsable de l'urgence. \""
       DescriptionSituation: fuite entre le vessie et le cable du manometre.
@@ -1569,11 +1569,11 @@ _default:
   78: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-11
       DescriptionIntervention: ''
-      DescriptionSituation: "v\xC3\xA9rification du bon fonctionnement et tests. Il\
-        \ faut un clinicien qualifi\xC3\xA9. "
+      DescriptionSituation: "v\xE9rification du bon fonctionnement et tests. Il\
+        \ faut un clinicien qualifi\xE9. "
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '57'
@@ -1588,11 +1588,11 @@ _default:
   79: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "R\xC3\xA9adaptation"
+      CentreService: "R\xE9adaptation"
       Date: 2015-08-07
       DescriptionIntervention: "Je lis le manuel de montage. Je mets toutes les pi\xC3\
-        \xA9ces \xC3\xA9 l'endroits id\xC3\xA9eals. J'ai plac\xC3\xA9 les boulons\
-        \ et les ecrous. J'ai serr\xC3\xA9 toutes les ecrous."
+        \xA9ces \xE9 l'endroits id\xE9eals. J'ai plac\xE9 les boulons\
+        \ et les ecrous. J'ai serr\xE9 toutes les ecrous."
       DescriptionSituation: Assembalage de la table.
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1608,10 +1608,10 @@ _default:
   80: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "R\xC3\xA9adaptation"
+      CentreService: "R\xE9adaptation"
       Date: 2015-08-07
-      DescriptionIntervention: "Toutes les pi\xC3\xA9ces sont presentes. Mais elle\
-        \ manque des vises et des \xC3\xA9crous."
+      DescriptionIntervention: "Toutes les pi\xE9ces sont presentes. Mais elle\
+        \ manque des vises et des \xE9crous."
       DescriptionSituation: Assemblage de la table.
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1627,7 +1627,7 @@ _default:
   81: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-12
       DescriptionIntervention: ''
       DescriptionSituation: alimentation SW HV anormale. sonde en court-circuit. CPUI
@@ -1646,11 +1646,11 @@ _default:
   82: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Tensiometre
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-13
-      DescriptionIntervention: "J'ai coup\xC3\xA9 le cable et repla\xC3\xA9\xC3\xA9\
+      DescriptionIntervention: "J'ai coup\xE9 le cable et repla\xE9\xE9\
         . maintenant c'est fonctionnel."
-      DescriptionSituation: "Le cable de pression a \xC3\xA9t\xC3\xA9 d\xC3\xA9chir\xC3\
+      DescriptionSituation: "Le cable de pression a \xE9t\xE9 d\xE9chir\xC3\
         \xA9."
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1687,7 +1687,7 @@ _default:
       CentreService: Inconnu
       Date: 2015-08-17
       DescriptionIntervention: "\"Je deplace le tube de pression et tourne la vis\
-        \ avec une vasegrippe pourque l'aiguille revienne \xC3\xA9 zero. Maintenant,\
+        \ avec une vasegrippe pourque l'aiguille revienne \xE9 zero. Maintenant,\
         \  le manometre est tarrer.\""
       DescriptionSituation: Le manometre du tensiometre n'est pas encore tarrer.
       EtatBDT: Ferme
@@ -1707,7 +1707,7 @@ _default:
       CentreService: Inconnu
       Date: 2015-08-17
       DescriptionIntervention: ''
-      DescriptionSituation: "toile du brassard est dechir\xC3\xA9e. "
+      DescriptionSituation: "toile du brassard est dechir\xE9e. "
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '529'
@@ -1725,7 +1725,7 @@ _default:
       CentreService: Inconnu
       Date: 2015-08-17
       DescriptionIntervention: "\"Je deplace le tube de pression. Je tourne lavis\
-        \ avec une vase grippe pourque l'aiguille du manometre tombre \xC3\xA9 zero.\
+        \ avec une vase grippe pourque l'aiguille du manometre tombre \xE9 zero.\
         \ Alors,  le manometre est tarrer.\""
       DescriptionSituation: Le manometre n'est pas tarrer.
       EtatBDT: Ferme
@@ -1745,7 +1745,7 @@ _default:
       CentreService: Inconnu
       Date: 2015-08-17
       DescriptionIntervention: ''
-      DescriptionSituation: "La toile a \xC3\xA9t\xC3\xA9 d\xC3\xA9chir\xC3\xA9e"
+      DescriptionSituation: "La toile a \xE9t\xE9 d\xE9chir\xE9e"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '531'
@@ -1801,7 +1801,7 @@ _default:
       DescriptionIntervention: couper le cable. Enlever la boule qui se situe dans
         la pompe de pression. Enlever le noeuds de jonction qui relie le tube et la
         pompe. Fonctionnelle.
-      DescriptionSituation: "tube de pression d\xC3\xA9chir\xC3\xA9e et fuite dans\
+      DescriptionSituation: "tube de pression d\xE9chir\xE9e et fuite dans\
         \ la pompe de pression."
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1820,7 +1820,7 @@ _default:
       CentreService: Urgences
       Date: 2015-08-17
       DescriptionIntervention: ''
-      DescriptionSituation: "Le vessie est dilat\xC3\xA9. "
+      DescriptionSituation: "Le vessie est dilat\xE9. "
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '526'
@@ -1872,7 +1872,7 @@ _default:
   94: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-08-21
       DescriptionIntervention: ''
       DescriptionSituation: erreur E21
@@ -1910,7 +1910,7 @@ _default:
       CategorieEquipement: Lampe d'examen
       CentreService: Urgences
       Date: 2015-08-21
-      DescriptionIntervention: "\"J'ai rempla\xC3\xA9\xC3\xA9 lampoule. Maintenant,\
+      DescriptionIntervention: "\"J'ai rempla\xE9\xE9 lampoule. Maintenant,\
         \  c'est fonctionnelle.\""
       DescriptionSituation: Lampoule defectueuse.
       EtatBDT: Ferme
@@ -1929,7 +1929,7 @@ _default:
       CategorieEquipement: Concentrateur d'oxygene
       CentreService: Urgences
       Date: 2015-08-21
-      DescriptionIntervention: "prise 220v \xC3\xA9 integrer la salle des urgences"
+      DescriptionIntervention: "prise 220v \xE9 integrer la salle des urgences"
       DescriptionSituation: Pas en fonction
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1945,10 +1945,10 @@ _default:
   98: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-24
-      DescriptionIntervention: "On a plac\xC3\xA9 le support \xC3\xA9 droite. On a\
-        \ tarrer normalement avec le reglage et la vis ebas \xC3\xA9 gauche de la\
+      DescriptionIntervention: "On a plac\xE9 le support \xE9 droite. On a\
+        \ tarrer normalement avec le reglage et la vis ebas \xE9 gauche de la\
         \ balance. maintenant c'est fonctionnelle."
       DescriptionSituation: Balance dysfonctionnelle.
       EtatBDT: Ferme
@@ -1965,11 +1965,11 @@ _default:
   99: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Appareil e succion
-      CentreService: "Bloc op\xC3\xA9ratoire"
+      CentreService: "Bloc op\xE9ratoire"
       Date: 2015-08-25
-      DescriptionIntervention: "\"La pompe est d\xC3\xA9fectueuse,  la carte \xC3\xA9\
+      DescriptionIntervention: "\"La pompe est d\xE9fectueuse,  la carte \xE9\
         lectronique aussi,  rien a faire pour cet appareil \""
-      DescriptionSituation: "V\xC3\xA9rification et diagnostic avec les techniciens\
+      DescriptionSituation: "V\xE9rification et diagnostic avec les techniciens\
         \ de sainte justine "
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -1988,7 +1988,7 @@ _default:
       CentreService: Laboratoire
       Date: 2015-08-25
       DescriptionIntervention: ''
-      DescriptionSituation: "En attente de pi\xC3\xA9ces de rechange (circuit de contr\xC3\
+      DescriptionSituation: "En attente de pi\xE9ces de rechange (circuit de contr\xC3\
         \xA9le)"
       EtatBDT: Ferme
       ID-BDT: '2'
@@ -2006,10 +2006,10 @@ _default:
       CategorieEquipement: Centrifugeuse
       CentreService: Inconnu
       Date: 2015-08-24
-      DescriptionIntervention: "\"Rien \xC3\xA9 faire,  appareil mis au rebut apr\xC3\
-        \xA9s v\xC3\xA9rification par le technicien de ste justine. \""
-      DescriptionSituation: "\"L'appareil est compl\xC3\xA9tement d\xC3\xA9mont\xC3\
-        \xA9 ,  manque de pi\xC3\xA9ces pour le remonter\""
+      DescriptionIntervention: "\"Rien \xE9 faire,  appareil mis au rebut apr\xC3\
+        \xA9s v\xE9rification par le technicien de ste justine. \""
+      DescriptionSituation: "\"L'appareil est compl\xE9tement d\xE9mont\xC3\
+        \xA9 ,  manque de pi\xE9ces pour le remonter\""
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '54'
@@ -2024,14 +2024,14 @@ _default:
   102: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Incubateur neonatal
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-08-26
-      DescriptionIntervention: "\"On a chang\xC3\xA9 beaucoup de pi\xC3\xA9ces avec\
-        \ l'\xC3\xA9quipement ID:55 (vitre,  circuit,  cable d'alimentation). Cet\
+      DescriptionIntervention: "\"On a chang\xE9 beaucoup de pi\xE9ces avec\
+        \ l'\xE9quipement ID:55 (vitre,  circuit,  cable d'alimentation). Cet\
         \ appareil peut encore fonctionner mais il faut: - ajouter un cable d'alimentation\
         \ - boucher tout les trous de la vitre (portes et gaskets manquants) - Confectionner\
         \ un lit (matelas manquant) \""
-      DescriptionSituation: "Remise sur pied de l'\xC3\xA9quipement"
+      DescriptionSituation: "Remise sur pied de l'\xE9quipement"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '56'
@@ -2046,7 +2046,7 @@ _default:
   103: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Incubateur neonatal
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-08-26
       DescriptionIntervention: ''
       DescriptionSituation: 'pour remettre en service il faut: - ajouter un cable
@@ -2066,11 +2066,11 @@ _default:
   104: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-26
       DescriptionIntervention: "Le callibnrage n'est jamais correctement. Cette balance\
         \ peutmetren une source d'erreur . C'est la raison pour laquelle on l'a mis\
-        \ au rebus mais elle est disponible dans l'atelier pour les pi\xC3\xA9ces\
+        \ au rebus mais elle est disponible dans l'atelier pour les pi\xE9ces\
         \ de rechange."
       DescriptionSituation: Calibration de la balance
       EtatBDT: Ferme
@@ -2087,9 +2087,9 @@ _default:
   105: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance pediatrique
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-08-25
-      DescriptionIntervention: "\"On a plac\xC3\xA9 4 batteries dans l'appareil, \
+      DescriptionIntervention: "\"On a plac\xE9 4 batteries dans l'appareil, \
         \ il fonctionne sur batterie. \""
       DescriptionSituation: '"Pas de cable d''alimentation,  l''appareil ne s''allume
         pas"'
@@ -2163,7 +2163,7 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-08-31
-      DescriptionIntervention: "on a tarr\xC3\xA9 le manometre. Fonctionnel"
+      DescriptionIntervention: "on a tarr\xE9 le manometre. Fonctionnel"
       DescriptionSituation: Verification du materiel.
       EtatBDT: Ferme
       ID-BDT: '3'
@@ -2181,11 +2181,11 @@ _default:
       CategorieEquipement: Saturometre (Oxymetre)
       CentreService: Urgences
       Date: 2015-08-31
-      DescriptionIntervention: "J'ai demont\xC3\xA9 le materiel. Je l'ai nettoy\xC3\
+      DescriptionIntervention: "J'ai demont\xE9 le materiel. Je l'ai nettoy\xC3\
         \xA9 avec du blow off. Il s'allume et etteint. Il ne fonctionne pas encore.\
         \ Il donne erreur E13."
-      DescriptionSituation: "Verification du mat\xC3\xA9riel. Il s'allume et etteint\
-        \ tr\xC3\xA9s vite."
+      DescriptionSituation: "Verification du mat\xE9riel. Il s'allume et etteint\
+        \ tr\xE9s vite."
       EtatBDT: Ferme
       ID-BDT: '3'
       ID-EQ: '86'
@@ -2202,8 +2202,8 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Inconnu
       Date: 2015-08-31
-      DescriptionIntervention: "J'ai coll\xC3\xA9 avec de la colle. Il passe 6heures\
-        \ de temps \xC3\xA9 d\xC3\xA9ss\xC3\xA9cher. Fonctionnel."
+      DescriptionIntervention: "J'ai coll\xE9 avec de la colle. Il passe 6heures\
+        \ de temps \xE9 d\xE9ss\xE9cher. Fonctionnel."
       DescriptionSituation: fuite dans le vessie
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -2219,11 +2219,11 @@ _default:
   112: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Autoscope
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-09-01
       DescriptionIntervention: "Remplacement de brassard. ajout de deux connecteurs\
-        \ que j'ai pris dans le tensiometre ID 526. Je les ai nettoy\xC3\xA9 parce\
-        \ que le premier tube est dilat\xC3\xA9 dans ces connecteurs. "
+        \ que j'ai pris dans le tensiometre ID 526. Je les ai nettoy\xE9 parce\
+        \ que le premier tube est dilat\xE9 dans ces connecteurs. "
       DescriptionSituation: pas de brassard
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -2278,7 +2278,7 @@ _default:
       CentreService: Laboratoire
       Date: 2015-09-01
       DescriptionIntervention: "il faut remplacer le bouton on -off. le bouton de\
-        \ temperature est foir\xC3\xA9. l'engrenage ne tient pas. "
+        \ temperature est foir\xE9. l'engrenage ne tient pas. "
       DescriptionSituation: verification du materiel. bouton on -off reste sur on.
         bonton temperature ne regle pas.
       EtatBDT: Ferme
@@ -2315,8 +2315,8 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-09-03
-      DescriptionIntervention: "on a tarr\xC3\xA9 l'aiguille du manometre."
-      DescriptionSituation: "l'aiguille du manometre est deregl\xC3\xA9e"
+      DescriptionIntervention: "on a tarr\xE9 l'aiguille du manometre."
+      DescriptionSituation: "l'aiguille du manometre est deregl\xE9e"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '540'
@@ -2333,10 +2333,10 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Inconnu
       Date: 2015-09-07
-      DescriptionIntervention: "On a tarr\xC3\xA9 l'aiguille du manometre. On a remplac\xC3\
+      DescriptionIntervention: "On a tarr\xE9 l'aiguille du manometre. On a remplac\xC3\
         \xA9 le poire du manometre. Fonctionnelle"
-      DescriptionSituation: "L'aiguille du manometre est deregl\xC3\xA9e. Le poire\
-        \ est dilat\xC3\xA9. "
+      DescriptionSituation: "L'aiguille du manometre est deregl\xE9e. Le poire\
+        \ est dilat\xE9. "
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '528'
@@ -2353,10 +2353,10 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Inconnu
       Date: 2015-09-07
-      DescriptionIntervention: "On a tarr\xC3\xA9 L'aiguille du manometre. on a patch\xC3\
+      DescriptionIntervention: "On a tarr\xE9 L'aiguille du manometre. on a patch\xC3\
         \xA9 le vessie. la toile n'a pas cousu."
-      DescriptionSituation: "L'aiguille est d\xC3\xA9regl\xC3\xA9e. La toile est d\xC3\
-        \xA9chir\xC3\xA9e. le vessie a une fuite."
+      DescriptionSituation: "L'aiguille est d\xE9regl\xE9e. La toile est d\xC3\
+        \xA9chir\xE9e. le vessie a une fuite."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '542'
@@ -2373,9 +2373,9 @@ _default:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
       Date: 2015-09-07
-      DescriptionIntervention: "On a d\xC3\xA9mont\xC3\xA9 l'appareil. On a remplac\xC3\
-        \xA9 le fusible. L'appareil est allum\xC3\xA9 par intermittance."
-      DescriptionSituation: "L'appareil n'a pas allum\xC3\xA9. "
+      DescriptionIntervention: "On a d\xE9mont\xE9 l'appareil. On a remplac\xC3\
+        \xA9 le fusible. L'appareil est allum\xE9 par intermittance."
+      DescriptionSituation: "L'appareil n'a pas allum\xE9. "
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '93'
@@ -2392,8 +2392,8 @@ _default:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
       Date: 2015-09-07
-      DescriptionIntervention: "On a remplac\xC3\xA9 le fusible. "
-      DescriptionSituation: "Le fusible est saut\xC3\xA9. "
+      DescriptionIntervention: "On a remplac\xE9 le fusible. "
+      DescriptionSituation: "Le fusible est saut\xE9. "
       EtatBDT: Ferme
       ID-BDT: '3'
       ID-EQ: '93'
@@ -2410,7 +2410,7 @@ _default:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
       Date: 2015-09-07
-      DescriptionIntervention: "On a court-circuit\xC3\xA9 le relais. Fonctionnel\
+      DescriptionIntervention: "On a court-circuit\xE9 le relais. Fonctionnel\
         \ mais sans le bouton timer."
       DescriptionSituation: le relais est dysfonctionnel.
       EtatBDT: Ferme
@@ -2429,10 +2429,10 @@ _default:
       CategorieEquipement: Bain chauffant
       CentreService: Laboratoire
       Date: 2015-09-08
-      DescriptionIntervention: "\"On l'a n\xC3\xA9ttoy\xC3\xA9. On a patch\xC3\xA9\
-        \ le coin du recipient avec de la colle. apr\xC3\xA9s le temps appropri\xC3\
+      DescriptionIntervention: "\"On l'a n\xE9ttoy\xE9. On a patch\xE9\
+        \ le coin du recipient avec de la colle. apr\xE9s le temps appropri\xC3\
         \xA9. on a rempli ce recipient avec de l'eau,  on constate le probleme n'a\
-        \ encore r\xC3\xA9solu.\""
+        \ encore r\xE9solu.\""
       DescriptionSituation: fuite au coin gauche du recipient
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -2448,7 +2448,7 @@ _default:
   124: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Support e solutes
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-09-09
       DescriptionIntervention: ''
       DescriptionSituation: Il manque la base.
@@ -2466,9 +2466,9 @@ _default:
   125: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-09-09
-      DescriptionIntervention: "On a ajout\xC3\xA9 de la vis. on a serr\xC3\xA9 un\
+      DescriptionIntervention: "On a ajout\xE9 de la vis. on a serr\xE9 un\
         \ peu plus les autres vis."
       DescriptionSituation: manque de vis de la barre du milieu en dessous de la table
         d'examen.
@@ -2486,9 +2486,9 @@ _default:
   126: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-09-09
-      DescriptionIntervention: "On a ajout\xC3\xA9 la vis et on a serr\xC3\xA9 les\
+      DescriptionIntervention: "On a ajout\xE9 la vis et on a serr\xE9 les\
         \ autres vis."
       DescriptionSituation: Manque de vis du fer qui joue le role du reglage manuel.
       EtatBDT: Ferme
@@ -2507,7 +2507,7 @@ _default:
       CategorieEquipement: Bain chauffant
       CentreService: Laboratoire
       Date: 2015-09-09
-      DescriptionIntervention: "\"On a patch\xC3\xA9 avec de la colle. Maintenant,\
+      DescriptionIntervention: "\"On a patch\xE9 avec de la colle. Maintenant,\
         \  c'est fonctionnel.\""
       DescriptionSituation: fuite en dessous du recipient
       EtatBDT: Ferme
@@ -2524,10 +2524,10 @@ _default:
   128: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance pediatrique
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-09-11
       DescriptionIntervention: ''
-      DescriptionSituation: "lecture erronn\xC3\xA9e"
+      DescriptionSituation: "lecture erronn\xE9e"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '544'
@@ -2542,7 +2542,7 @@ _default:
   129: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
-      CentreService: "R\xC3\xA9adaptation"
+      CentreService: "R\xE9adaptation"
       Date: 2015-09-14
       DescriptionIntervention: Je la monte avec les vis de la table du No ID 545.
       DescriptionSituation: Assemblage de table.
@@ -2560,12 +2560,12 @@ _default:
   130: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance pediatrique
-      CentreService: "P\xC3\xA9diatrie"
+      CentreService: "P\xE9diatrie"
       Date: 2015-09-14
-      DescriptionIntervention: "Je l'ai n\xC3\xA9ttoy\xC3\xA9e. je l'ai ouverte. J'ai\
-        \ trouv\xC3\xA9 une batterie 1.5v qui est couverte de sulfate. je l'ai remplac\xC3\
+      DescriptionIntervention: "Je l'ai n\xE9ttoy\xE9e. je l'ai ouverte. J'ai\
+        \ trouv\xE9 une batterie 1.5v qui est couverte de sulfate. je l'ai remplac\xC3\
         \xA9 par une autre. "
-      DescriptionSituation: "Lecture erronee. Elle est tr\xC3\xA9s salle."
+      DescriptionSituation: "Lecture erronee. Elle est tr\xE9s salle."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '459'
@@ -2582,12 +2582,12 @@ _default:
       CategorieEquipement: Balance pediatrique
       CentreService: Inconnu
       Date: 2015-09-16
-      DescriptionIntervention: "\"J'ai apport\xC3\xA9 \xC3\xA9 l'atelier pour le diagnostiquer.\
-        \ Je l'ai n\xC3\xA9ttoy\xC3\xA9. le mecanisme de reglage est defectueux compl\xC3\
-        \xA9tement m\xC3\xA9me le vis du reglage est oxyd\xC3\xA9. L'aiguille ne peut\
-        \ pas ram\xC3\xA9ner au zero. C'est pourquoi,  on l'a mis au rebut. \""
-      DescriptionSituation: "verification du materiel. recouvert de poussi\xC3\xA9\
-        re sur la cour de l'hopital l'aiguille est d\xC3\xA9regl\xC3\xA9e."
+      DescriptionIntervention: "\"J'ai apport\xE9 \xE9 l'atelier pour le diagnostiquer.\
+        \ Je l'ai n\xE9ttoy\xE9. le mecanisme de reglage est defectueux compl\xC3\
+        \xA9tement m\xE9me le vis du reglage est oxyd\xE9. L'aiguille ne peut\
+        \ pas ram\xE9ner au zero. C'est pourquoi,  on l'a mis au rebut. \""
+      DescriptionSituation: "verification du materiel. recouvert de poussi\xE9\
+        re sur la cour de l'hopital l'aiguille est d\xE9regl\xE9e."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '530'
@@ -2605,7 +2605,7 @@ _default:
       CentreService: Laboratoire
       Date: 2015-09-18
       DescriptionIntervention: ''
-      DescriptionSituation: "fusible saut\xC3\xA9"
+      DescriptionSituation: "fusible saut\xE9"
       EtatBDT: Ferme
       ID-BDT: '5'
       ID-EQ: '93'
@@ -2620,14 +2620,14 @@ _default:
   133: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Saturometre (Oxymetre)
-      CentreService: "Maternit\xC3\xA9"
+      CentreService: "Maternit\xE9"
       Date: 2015-09-18
-      DescriptionIntervention: "j'ai d\xC3\xA9mont\xC3\xA9 l'appareil. J'ai test\xC3\
-        \xA9 la batteire. Elle est \xC3\xA9 2.17 v. sa charge est trop faible. Elle\
-        \ ne peut pas actualiser. Elle est defectueuse. J'ai d\xC3\xA9mont\xC3\xA9\
+      DescriptionIntervention: "j'ai d\xE9mont\xE9 l'appareil. J'ai test\xC3\
+        \xA9 la batteire. Elle est \xE9 2.17 v. sa charge est trop faible. Elle\
+        \ ne peut pas actualiser. Elle est defectueuse. J'ai d\xE9mont\xE9\
         \ les connecteurs de la batterie. Maintenant c'est fonctionnel."
-      DescriptionSituation: "Lappareil s'allume et etteint sans avoir affich\xC3\xA9\
-        \ le r\xC3\xA9sultat."
+      DescriptionSituation: "Lappareil s'allume et etteint sans avoir affich\xE9\
+        \ le r\xE9sultat."
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '546'
@@ -2641,9 +2641,9 @@ _default:
       eid: 133
   134:
     CategorieEquipement: Saturometre (Oxymetre)
-    CentreService: "P\xC3\xA9diatrie"
+    CentreService: "P\xE9diatrie"
     Date: 2015-09-17
-    DescriptionIntervention: "on a ajout\xC3\xA9 un capteur. Alors c'est fonctionnel."
+    DescriptionIntervention: "on a ajout\xE9 un capteur. Alors c'est fonctionnel."
     DescriptionSituation: pas de capteur SPO2.
     EtatBDT: Ferme
     ID-BDT: '1'
