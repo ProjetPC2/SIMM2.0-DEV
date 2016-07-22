@@ -85,8 +85,8 @@ _default:
       Date: 2015-08-25
       DescriptionIntervention: "Les fusibles avaient \xE9t\xE9 short\xE9\
         s et ils \xE9taient manquants. C'est tr\xE9s dangereux pour un appareil\
-        \ qui chauffe autant. On a enlev\xE9 les connections directes et remplac\xC3\
-        \xA9 les fusibles l'appareil semble maintenant fonctionner. "
+        \ qui chauffe autant. On a enlev\xE9 les connections directes et remplac\xE9\
+        \ les fusibles l'appareil semble maintenant fonctionner. "
       DescriptionSituation: "V\xE9rification et diagnostic "
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -184,13 +184,13 @@ _default:
         \ papier pour consulter la procedure de maintenance. Performance verification\
         \ page 3-8. Inspection visuelle : l'appareil est en bon \xE9tat. les cables\
         \ ECG n'est pas en bon \xE9tat (il a \xE9t\xE9 repar\xE9).\
-        \ J'ai remplac\xE9 le rouleau de papier par ceux de ID 79. Tests effectu\xC3\
-        \xA9s: Calibration du defibrilateur : Calibration r\xE9ussie. Test du\
+        \ J'ai remplac\xE9 le rouleau de papier par ceux de ID 79. Tests effectu\xE9s\
+        \ :Calibration du defibrilateur : Calibration r\xE9ussie. Test du\
         \ defibrillateur : reussie sur batterie seulement,  r\xE9ussie sur ac\
         \ seulement. Test ECG r\xE9ussi. Test d'alarme ECG r\xE9ussi. Test\
         \ ecran r\xE9ussi. Test d'enregistrement r\xE9ussi sauf que le niveau\
-        \ d'encre est bas. Test de commande r\xE9ussi. Test d'indicateurs r\xC3\
-        \xA9ussi.\""
+        \ d'encre est bas. Test de commande r\xE9ussi. Test d'indicateurs r\xE9ussi\
+        \ .\""
       DescriptionSituation: "V\xE9rification et entretien. "
       EtatBDT: Ferme
       ID-BDT: '2'
@@ -302,8 +302,8 @@ _default:
       DescriptionIntervention: "Appareil test\xE9 avec les cables de l'appareil\
         \ procare 400. SPO2 et pression fonctionnent."
       DescriptionSituation: "\"L'appareil \xE9tait defectueux par le service d'urgence.\
-        \ Inspection visuelle : Tous les indicateurs de mesures sont \xE9ffac\xC3\
-        \xA9s. Le connecteur SPO2 est enfonc\xE9 et endommag\xE9. Le rouleau\
+        \ Inspection visuelle : Tous les indicateurs de mesures sont effac\xE9s.\
+        \ Le connecteur SPO2 est enfonc\xE9 et endommag\xE9. Le rouleau\
         \ d'impression est vide. Il manque tous les cables (SPO2,  pression,  alimentation).\
         \ La batterie est defectueuse.\""
       EtatBDT: Ferme
@@ -402,8 +402,8 @@ _default:
       CentreService: "Bloc op\xE9ratoire"
       Date: 2015-07-21
       DescriptionIntervention: "J'\xE9cris la solution..."
-      DescriptionSituation: "\"L'appareil est neuf,  mais n'a jamais fonctionn\xC3\
-        \xA9.\""
+      DescriptionSituation: "\"L'appareil est neuf,  mais n'a jamais fonctionn\xE9\
+        \ .\""
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '235'
@@ -420,10 +420,10 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-07-22
-      DescriptionIntervention: "\"Inspection visuelle : L'appareil est en bon \xC3\
-        \xA9tat,  Le DEL de la batterie n'allume pas. Le DEL de l'alimentation s'allume.\
+      DescriptionIntervention: "\"Inspection visuelle : L'appareil est en bon \xE9tat\
+        \ , Le DEL de la batterie n'allume pas. Le DEL de l'alimentation s'allume.\
         \ La batterie est d\xE9fectueuse.Son voltage est trop bas,  elle ne peut\
-        \ plus \xE9tre recharg\xE9e. Une nouvelle batterie en paquet de 6\
+        \ plus etre recharg\xE9e. Une nouvelle batterie en paquet de 6\
         \ de 7, 2 volts et 2, 70AmH est n\xE9cessaire. Il fonctionne pour l'instant\
         \ avec le powersupply. Il peut retourner en service.\""
       DescriptionSituation: Diagnostique de l'appareil
@@ -443,8 +443,8 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: "Maternit\xE9"
       Date: 2015-07-22
-      DescriptionIntervention: "\"Il y a beaucoup de corrosion La batterie est d\xC3\
-        \xA9charg\xE9e E83 : Fuite d'air au niveau du connecteur lors de la prise\
+      DescriptionIntervention: "\"Il y a beaucoup de corrosion. La batterie est d\xE9charg\xE9e\
+        \ E83 : Fuite d'air au niveau du connecteur lors de la prise\
         \ de pression. J'ai d\xE9bouch\xE9 le connecteur et tester avec un\
         \ brassard d'un atre appareil. Tout fonctionne normalement. Pour que l'appareil\
         \ retourne en service,  il faut une nouvelle batterie 6V,  3.5AmH et un nouveau\
@@ -489,16 +489,16 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: "Bloc op\xE9ratoire"
       Date: 2015-07-21
-      DescriptionIntervention: "\".... Apr\xE9s avoir essayer de r\xE9veiller\
+      DescriptionIntervention: "\".... Apr\u00E8s avoir essayer de r\xE9veiller\
         \ la batterie 4 fois comme le sugg\xE9rait le manuel de service,  on a\
         \ pu constater que la batterie n'a pas charg\xE9e. Batterie irr\xE9\
-        cup\xE9rable. L'appareil fonctionne seulement sur l'\xE9lectricit\xC3\
-        \xA9. Test de l'ECG R\xE9ussi : Il fonctionne normalement Test de pression\
+        cup\xE9rable. L'appareil fonctionne seulement sur l'\xE9lectricit\xE9.\
+        \ Test de l'ECG R\xE9ussi : Il fonctionne normalement Test de pression\
         \ - Calibration du NBP - \xE9chou\xE9 = Fuite de pression. Changer\
         \ debassard,  refait le test = test \xE9chouer,  toujours une fuite de\
         \ pression. Il faudrait ouvir l'appareil pour savoir si la fuite est dans\
-        \ l'appareil. (bon de travail suivant) R\xE9SUM\xE9 : Batterie \xC3\
-        \xA9 chang\xE9e,  procurrer des connecteurs (SPO2,  temp\xE9rature,\
+        \ l'appareil. (bon de travail suivant) R\xE9sum\xE9 : Batterie \u00E0\
+        \ changer,  procurrer des connecteurs (SPO2,  temp\xE9rature,\
         \  bp1, bp2,  CO2) .Seul l'ECG fonctionne,  fuite de pression ult\xE9\
         rieurement.\""
       DescriptionSituation: Diagnostique de l'appareil.
@@ -561,9 +561,9 @@ _default:
         \ Une mesure de tension retourne une erreur 833 : ''cuff inflation time exceeds\
         \ 40 seconds or air leak detected''. Je cherche une fuite dans les cables\
         \ et dans le brassard et j'entend une fuite a la connection brassard - tuyau.\
-        \ J'ai coup\xE9 les tuyaux pour refaire les 4 connections mais le probl\xC3\
-        \xA9me persiste. En inspectant de plus pr\xE9s les 4 connecteurs m\xC3\
-        \xA9talliques,  il y en a deux qui sont endomagg\xE9s (gaskets d\xE9\
+        \ J'ai coup\xE9 les tuyaux pour refaire les 4 connections mais le probl\u00E8me\
+        \ persiste. En inspectant de plus pr\u00E8s les 4 connecteurs m\xE9talliques\
+        \ ,  il y en a deux qui sont endommag\xE9s (gaskets d\xE9\
         chir\xE9s). J'ai pris les connecteurs de l'appareil ID:80. \""
       DescriptionSituation: 'Diagnostic de l''appareil . L''appareil s''allume sans
         erreur. Une mesure de tension retourne une erreur 833 : ''''cuff inflation
@@ -805,12 +805,12 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
       Date: 2015-07-30
-      DescriptionIntervention: "\"Inspection visuelle: Ce materiel a \xE9t\xC3\
-        \xA9 dej\xE9 ouvert par un technicien et le boitier ne ferme pas completement.\
+      DescriptionIntervention: "\"Inspection visuelle: Ce materiel a \xE9t\xE9\
+        \ dej\u00E0 ouvert par un technicien et le boitier ne ferme pas completement.\
         \ Il manque tous les cables (pression,  SPO2 ,  ECG et alimentation). J'ai\
         \ remplac\xE9 les cables d'alimentation,  de SP02 et de NIBP. l'appareil\
         \ s'allume bien sans erreur. On a ajout\xE9 un cable SPO2. Le cable SPO2\
-        \ fonctionne. La pression monte bien mais Il a du mal \xE9 decompresser.\
+        \ fonctionne. La pression monte bien mais Il a du mal \u00E0 decompresser.\
         \ On a remplac\xE9 le connecteur maintenant il fonctionne bien. Le bouton\
         \ off red\xE9marre l'appareil il ne l'\xE9teint pas. \""
       DescriptionSituation: 'Verification du materiel. '
@@ -1045,8 +1045,8 @@ _default:
       Date: 2015-07-30
       DescriptionIntervention: "\"Apres l'avoir charg\xE9 ,  on note quelle ne\
         \ tient plus ca charge. La batterie est morte. Il faut la remplacer. \""
-      DescriptionSituation: "\"La batterie tombe a zero volt. sa batterie est de specificit\xC3\
-        \xA9 12 v dc 2400mAh ,  serie : 31204250. \""
+      DescriptionSituation: "\"La batterie tombe \u00E0 z\xE9ro volt. Sa batterie est de specificit\xE9\
+        \ 12 v dc 2400mAh ,  s\xE9rie : 31204250. \""
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '59'
@@ -1120,9 +1120,9 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-08-03
-      DescriptionIntervention: "\"On doit dechirer un peu la toile pour coller avec\
-        \ le liquide PL Promium. Apr\xE9s ca,  tout fonctionne. 15min de r\xC3\
-        \xA9paration mais j'ai laiss\xE9 s\xE9ch\xE9 pendant 4 heures.\""
+      DescriptionIntervention: "\"On doit d\xE9chirer un peu la toile pour coller avec\
+        \ le liquide PL Promium. Apr\u00E8s ca,  tout fonctionne. 15min de r\xE9paration\
+        \ mais j'ai laiss\xE9 s\xE9ch\xE9 pendant 4 heures.\""
       DescriptionSituation: Verification du materiel. Fuite entre le vessie et le
         cable de pression.
       EtatBDT: Ferme
@@ -1178,9 +1178,9 @@ _default:
       CentreService: Urgences
       Date: 2015-08-03
       DescriptionIntervention: "J'ai ouvert la boite du manometre. J'ai trouv\xE9\
-        \ le ressort \xE9 l\xE9interieur a deterior\xE9. il est dilat\xC3\
-        \xA9."
-      DescriptionSituation: L'aiguille du manometre ne varie pas
+        \ le ressort \u00E0 l'interieur a deterior\xE9. il est dilat\xE9\
+        \ ."
+      DescriptionSituation: L'aiguille du manom\u00E8tre ne varie pas
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '520'
