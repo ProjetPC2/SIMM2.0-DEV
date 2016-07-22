@@ -3,7 +3,7 @@ _default:
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
-      Commentaires: "Manuel de sevice disponible sur les \xC3\xA9tagere."
+      Commentaires: "Manuel de sevice disponible sur les \xE9tagere."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2008-03-12
       EtatConservation: Acceptable
@@ -129,7 +129,7 @@ _default:
     dictitems:
       CategorieEquipement: "Four \u00E0 orth\u00E8se"
       CentreService: Inconnu
-      Commentaires: "Four a orth\xC3\xA8se."
+      Commentaires: "Four a orth\u00E8se."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -345,7 +345,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
-      Commentaires: "Une table locale en bois qui n'a pas de marque r\xC3\xA9elle."
+      Commentaires: "Une table locale en bois qui n'a pas de marque r\xE9elle."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -957,7 +957,7 @@ _default:
     dictitems:
       CategorieEquipement: Microscope
       CentreService: Laboratoire
-      Commentaires: "Mais bon pour les pieces. il est entrepos\xC3\xA9 au lab2."
+      Commentaires: "Mais bon pour les pieces. il est entrepos\xE9 au lab2."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Desuet
@@ -975,7 +975,7 @@ _default:
     dictitems:
       CategorieEquipement: Microscope
       CentreService: Laboratoire
-      Commentaires: "Bon pour les pieces et il est entrepos\xC3\xA9 au lab2."
+      Commentaires: "Bon pour les pieces et il est entrepos\xE9 au lab2."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Desuet
@@ -1319,7 +1319,7 @@ _default:
     dictitems:
       CategorieEquipement: "R\xE9frigerateur"
       CentreService: Laboratoire
-      Commentaires: "D\xC3\xA9pos\xC3\xA9 dans le couloir."
+      Commentaires: "D\xE9pos\xE9 dans le couloir."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Desuet
@@ -1787,7 +1787,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: "M\xE9decine interne"
-      Commentaires: "Il est completement bris\xC3\xA9 mais toujours en medecine interne."
+      Commentaires: "Il est completement bris\xE9 mais toujours en medecine interne."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Desuet
@@ -3606,8 +3606,8 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: "\"Seul l'ECG fonctionne. Il fonctionne seulement sur le powersupply.\
-        \ Batterie \xC3\_ changer. Il faudrait remplacer tous les connecteurs,  Fuite\
-        \ dans le circuit de pression - Non fonctionnel pour \xC3\xA7a.\""
+        \ Batterie \u00E0 changer. Il faudrait remplacer tous les connecteurs,  Fuite\
+        \ dans le circuit de pression - Non fonctionnel pour ca.\""
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -3769,8 +3769,8 @@ _default:
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: "P\xE9diatrie"
-      Commentaires: "Manque une ampoule mais elle est entrepos\xC3\xA9 dans la salle\
-        \ de p\xC3\xA9diatrie."
+      Commentaires: "Manque une ampoule mais elle est entrepos\xE9 dans la salle\
+        \ de p\xE9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -3879,7 +3879,7 @@ _default:
       CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: "P\xE9diatrie"
       Commentaires: "Il manque un brassard et un connecteur mais se trouve dans la\
-        \ salle de p\xC3\xA9diatrie."
+        \ salle de p\xE9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -4419,7 +4419,7 @@ _default:
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
       CentreService: "P\xE9diatrie"
-      Commentaires: "Bris\xC3\xA9e mais il se trouve dans la salle de p\xC3\xA9diatrie."
+      Commentaires: "Bris\xE9e mais il se trouve dans la salle de p\xE9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -4437,7 +4437,7 @@ _default:
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
       CentreService: "P\xE9diatrie"
-      Commentaires: "Bris\xC3\xA9e mais il se trouve dans la salle de p\xC3\xA9diatrie."
+      Commentaires: "Bris\xE9e mais il se trouve dans la salle de p\xE9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -4545,7 +4545,7 @@ _default:
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
       CentreService: "P\xE9diatrie"
-      Commentaires: "Bris\xC3\xA9e mais il se trouve dans la salle de p\xC3\xA9diatrie."
+      Commentaires: "Bris\xE9e mais il se trouve dans la salle de p\xE9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -4617,8 +4617,8 @@ _default:
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
       CentreService: "Maternit\xE9"
-      Commentaires: "\"D'autres \xC3\xA9quipements identiques en service,  il est\
-        \ gard\xC3\xA9 dans l'atelier pour les pi\xC3\xA8ces de rechange.\""
+      Commentaires: "\"D'autres \xE9quipements identiques en service,  il est\
+        \ gard\xE9 dans l'atelier pour les pi\u00E8ces de rechange.\""
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2013-06-11
       EtatConservation: Desuet
@@ -4924,7 +4924,7 @@ _default:
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
       CentreService: "Maternit\xE9"
-      Commentaires: "Bris\xC3\xA9e mais se trouve dans la salle de maternit\xC3\xA9\
+      Commentaires: "Bris\xE9e mais se trouve dans la salle de maternit\xE9\
         ."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -5807,7 +5807,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: Urgences
-      Commentaires: "Support a solut\xC3\xA9s int\xC3\xA9gr\xC3\xA9."
+      Commentaires: "Support a solut\xE9s int\xE9gr\xE9."
       DateAcquisition: 2014-08-01
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -5825,7 +5825,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: Urgences
-      Commentaires: "Support a solut\xC3\xA9s int\xC3\xA9gr\xC3\xA9."
+      Commentaires: "Support a solut\xE9s int\xE9gr\xE9."
       DateAcquisition: 2014-08-01
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -5843,7 +5843,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: Urgences
-      Commentaires: "Support a solut\xC3\xA9s int\xC3\xA9gr\xC3\xA9."
+      Commentaires: "Support a solut\xE9s int\xE9gr\xE9."
       DateAcquisition: 2014-08-01
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -5861,7 +5861,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: Urgences
-      Commentaires: "Support a solut\xC3\xA9s int\xC3\xA9gr\xC3\xA9."
+      Commentaires: "Support a solut\xE9s int\xE9gr\xE9."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -5933,7 +5933,7 @@ _default:
     dictitems:
       CategorieEquipement: "Support \u00E0 solut\xE9s"
       CentreService: Urgences
-      Commentaires: "\"Il est aux urgences,  mais bris\xC3\xA9.\""
+      Commentaires: "\"Il est aux urgences,  mais bris\xE9.\""
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -6005,7 +6005,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: Urgences
-      Commentaires: "Support a solut\xC3\xA9s int\xC3\xA9gr\xC3\xA9."
+      Commentaires: "Support a solut\xE9s int\xE9gr\xE9."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -6023,7 +6023,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: Urgences
-      Commentaires: "Support a solut\xC3\xA9s int\xC3\xA9gr\xC3\xA9."
+      Commentaires: "Support a solut\xE9s int\xE9gr\xE9."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -6563,8 +6563,8 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "Centre pr\xE9natal"
-      Commentaires: "En maintenance mais se trouve dans le centre de pr\xC3\xA9natalit\xC3\
-        \xA9 (coordonateur)."
+      Commentaires: "En maintenance mais se trouve dans le centre de pr\xE9natalit\xE9\
+        \ (coordonateur)."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -7608,7 +7608,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: "P\xE9diatrie"
-      Commentaires: "Elle manque la regle gradu\xC3\xA9e."
+      Commentaires: "Elle manque la regle gradu\xE9e."
       DateAcquisition: 2010-05-05
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7626,7 +7626,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: "P\xE9diatrie"
-      Commentaires: "Elle manque la regle gradu\xC3\xA9e."
+      Commentaires: "Elle manque la regle gradu\xE9e."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7644,7 +7644,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: "P\xE9diatrie"
-      Commentaires: "Elle manque la regle gradu\xC3\xA9e."
+      Commentaires: "Elle manque la regle gradu\xE9e."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7716,7 +7716,7 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Clinique externe
-      Commentaires: "Portable. Pour les infirmi\xC3\xA8res."
+      Commentaires: "Portable. Pour les infirmi\u00E8res."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7752,7 +7752,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      Commentaires: "Petite pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
+      Commentaires: "Petite pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
         \ clinique externe devant IST."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7771,7 +7771,7 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Clinique externe
-      Commentaires: "Petite pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
+      Commentaires: "Petite pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
         \ clinique externe devant IST."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7916,7 +7916,7 @@ _default:
     dictitems:
       CategorieEquipement: Autoscope
       CentreService: Clinique externe
-      Commentaires: "Grande pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
+      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
         \ clinique externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7935,7 +7935,7 @@ _default:
     dictitems:
       CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Clinique externe
-      Commentaires: "Grande pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
+      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
         \ clinique externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7954,7 +7954,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      Commentaires: "Grande pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
+      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
         \ clinique externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7973,7 +7973,7 @@ _default:
     dictitems:
       CategorieEquipement: UPS
       CentreService: Clinique externe
-      Commentaires: "Grande pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
+      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
         \ clinique externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -7992,7 +7992,7 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Clinique externe
-      Commentaires: "Grande pi\xC3\xA8ce non-identifi\xC3\xA9e. Premier \xC3\xA9tage\
+      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
         \ clinique externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -8246,7 +8246,7 @@ _default:
     dictitems:
       CategorieEquipement: Autre
       CentreService: Don de sang
-      Commentaires: "S\xC3\xA9parateur"
+      Commentaires: "S\xE9parateur"
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -8282,7 +8282,7 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Pharmacie
-      Commentaires: "\"Non utilis\xC3\xA9,  entroposer sur l'\xC3\xA9tag\xC3\xA8re.\""
+      Commentaires: "\"Non utilis\xE9,  entroposer sur l'\xE9tag\u00E8re.\""
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -8318,8 +8318,8 @@ _default:
     dictitems:
       CategorieEquipement: Imprimante
       CentreService: Pharmacie
-      Commentaires: "Se trouve dans la pharmacie. Un FAX de marque EPSON ; mod\xC3\
-        \xA8le LX300 + II P170B ; no. s\xC3\xA9rie G804380671 est reli\xC3\xA9 a cet\
+      Commentaires: "Se trouve dans la pharmacie. Un FAX de marque EPSON ; mod\u00E8le\
+        \ LX300 + II P170B ; no. s\xE9rie G804380671 est reli\xE9 a cette\
         \ imprimante."
       DateAcquisition: 2009-09-23
       DateDernierEntretien: 2016-06-29
@@ -8500,7 +8500,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: Don de sang
-      Commentaires: "mais se trouve entrepos\xC3\xA9e au Don de sang."
+      Commentaires: "mais se trouve entrepos\xE9e au Don de sang."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Desuet
@@ -8518,7 +8518,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: Don de sang
-      Commentaires: "mais se trouve entrepos\xC3\xA9e au Don de sang."
+      Commentaires: "mais se trouve entrepos\xE9e au Don de sang."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -8536,7 +8536,7 @@ _default:
     dictitems:
       CategorieEquipement: "Tensiom\u00E8tre"
       CentreService: Urgences
-      Commentaires: "Tensiom\xC3\xA8tre manuel "
+      Commentaires: "Tensiom\u00E8tre manuel "
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2015-08-31
       EtatConservation: Acceptable
@@ -8590,7 +8590,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
-      Commentaires: "Repar\xC3\xA9 mais elle manque une petite vis du reglage. Elle\
+      Commentaires: "Repar\xE9 mais elle manque une petite vis du reglage. Elle\
         \ est toujours dans la salle de reparation."
       DateAcquisition: 2015-08-01
       DateDernierEntretien: 2016-06-29

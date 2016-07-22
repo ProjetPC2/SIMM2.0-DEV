@@ -105,7 +105,7 @@ _default:
       CentreService: Radiologie
       Date: 2015-08-03
       DescriptionIntervention: ''
-      DescriptionSituation: Les lampes sont defectueuses. neons T8 15W/765. L'appareil
+      DescriptionSituation: Les lampes sont d\xE9fectueuses. neons T8 15W/765. L'appareil
         en prend 5 pour fonctionner
       EtatBDT: Ferme
       ID-BDT: '1'
@@ -124,9 +124,9 @@ _default:
       CentreService: Radiologie
       Date: 2015-08-25
       DescriptionIntervention: "L'appareil est irr\xE9cup\xE9rable. Je l'ai\
-        \ d\xE9mont\xE9 et conserv\xE9 les pi\xE9ces utiles. "
+        \ d\xE9mont\xE9 et conserv\xE9 les pi\u00E8ces utiles. "
       DescriptionSituation: Les branchements avec les materiels de radiographie sont
-        defectueuses.
+        d\xE9fectueuses.
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '61'
@@ -301,11 +301,11 @@ _default:
       Date: 2015-07-17
       DescriptionIntervention: "Appareil test\xE9 avec les cables de l'appareil\
         \ procare 400. SPO2 et pression fonctionnent."
-      DescriptionSituation: "\"L'appareil \xE9tait defectueux par le service d'urgence.\
+      DescriptionSituation: "\"L'appareil \xE9tait d\xE9fectueux par le service d'urgence.\
         \ Inspection visuelle : Tous les indicateurs de mesures sont effac\xE9s.\
         \ Le connecteur SPO2 est enfonc\xE9 et endommag\xE9. Le rouleau\
         \ d'impression est vide. Il manque tous les cables (SPO2,  pression,  alimentation).\
-        \ La batterie est defectueuse.\""
+        \ La batterie est d\xE9fectueuse.\""
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '85'
@@ -1142,7 +1142,7 @@ _default:
       CentreService: "Centre Pr\xE9natal"
       Date: 2015-08-03
       DescriptionIntervention: ''
-      DescriptionSituation: L'aiguille du manometre ne fontionne pas
+      DescriptionSituation: L'aiguille du manom\u00E8tre ne fontionne pas
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '420'
@@ -1177,7 +1177,7 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-08-03
-      DescriptionIntervention: "J'ai ouvert la boite du manometre. J'ai trouv\xE9\
+      DescriptionIntervention: "J'ai ouvert la boite du manom\u00E8tre. J'ai trouv\xE9\
         \ le ressort \u00E0 l'interieur a deterior\xE9. il est dilat\xE9\
         \ ."
       DescriptionSituation: L'aiguille du manom\u00E8tre ne varie pas
@@ -1481,7 +1481,7 @@ _default:
       CategorieEquipement: Concentrateur d'oxygene
       CentreService: "Maternit\xE9"
       Date: 2015-08-07
-      DescriptionIntervention: "La batterie est defectueuse. Le compresseur marche.\
+      DescriptionIntervention: "La batterie est d\xE9fectueuse. Le compresseur marche.\
         \ Pas d'alarme. Le condensateur est d\xE9fectueux. sa marque est de :\
         \ Icar Ecofill de specificit\xE9 : 15uF 450v et 50 hz. Apr\u00E8s v\xE9rification\
         \ avec les techniciens de ste justine on constate que sa carte\
@@ -1554,7 +1554,7 @@ _default:
         \ la fuite et laisse la colle dessech\xE9 pendant plus que 6 heures. J'apporte\
         \ le materiel a la couture pour fermer la toile. Alors,  il fonctionne normalement.\
         \ Je le remets au responsable de l'urgence. \""
-      DescriptionSituation: fuite entre le vessie et le cable du manometre.
+      DescriptionSituation: fuite entre le vessie et le cable du manom\u00E8tre.
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '519'
@@ -1610,7 +1610,7 @@ _default:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
       Date: 2015-08-07
-      DescriptionIntervention: "Toutes les pi\xE9ces sont presentes. Mais elle\
+      DescriptionIntervention: "Toutes les pi\u00E8ces sont presentes. Mais elle\
         \ manque des vises et des \xE9crous."
       DescriptionSituation: Assemblage de la table.
       EtatBDT: Ferme
@@ -1688,8 +1688,8 @@ _default:
       Date: 2015-08-17
       DescriptionIntervention: "\"Je deplace le tube de pression et tourne la vis\
         \ avec une vasegrippe pourque l'aiguille revienne \xE9 zero. Maintenant,\
-        \  le manometre est tarrer.\""
-      DescriptionSituation: Le manometre du tensiometre n'est pas encore tarrer.
+        \  le manom\u00E8tre est tarrer.\""
+      DescriptionSituation: Le manom\u00E8tre du tensiometre n'est pas encore tarrer.
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '527'
@@ -1725,9 +1725,9 @@ _default:
       CentreService: Inconnu
       Date: 2015-08-17
       DescriptionIntervention: "\"Je deplace le tube de pression. Je tourne lavis\
-        \ avec une vase grippe pourque l'aiguille du manometre tombre \xE9 zero.\
-        \ Alors,  le manometre est tarrer.\""
-      DescriptionSituation: Le manometre n'est pas tarrer.
+        \ avec une vase grippe pourque l'aiguille du manom\u00E8tre tombre \xE9 zero.\
+        \ Alors,  le manom\u00E8tre est tarrer.\""
+      DescriptionSituation: Le manom\u00E8tre n'est pas tarrer.
       EtatBDT: Ferme
       ID-BDT: '2'
       ID-EQ: '529'
@@ -2026,7 +2026,7 @@ _default:
       CategorieEquipement: Incubateur neonatal
       CentreService: "P\xE9diatrie"
       Date: 2015-08-26
-      DescriptionIntervention: "\"On a chang\xE9 beaucoup de pi\xE9ces avec\
+      DescriptionIntervention: "\"On a chang\xE9 beaucoup de pi\u00E8ces avec\
         \ l'\xE9quipement ID:55 (vitre,  circuit,  cable d'alimentation). Cet\
         \ appareil peut encore fonctionner mais il faut: - ajouter un cable d'alimentation\
         \ - boucher tout les trous de la vitre (portes et gaskets manquants) - Confectionner\
@@ -2070,7 +2070,7 @@ _default:
       Date: 2015-08-26
       DescriptionIntervention: "Le callibnrage n'est jamais correctement. Cette balance\
         \ peutmetren une source d'erreur . C'est la raison pour laquelle on l'a mis\
-        \ au rebus mais elle est disponible dans l'atelier pour les pi\xE9ces\
+        \ au rebus mais elle est disponible dans l'atelier pour les pi\u00E8ces\
         \ de rechange."
       DescriptionSituation: Calibration de la balance
       EtatBDT: Ferme
@@ -2163,7 +2163,7 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-08-31
-      DescriptionIntervention: "on a tarr\xE9 le manometre. Fonctionnel"
+      DescriptionIntervention: "on a tarr\xE9 le manom\u00E8tre. Fonctionnel"
       DescriptionSituation: Verification du materiel.
       EtatBDT: Ferme
       ID-BDT: '3'
@@ -2315,8 +2315,8 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Urgences
       Date: 2015-09-03
-      DescriptionIntervention: "on a tarr\xE9 l'aiguille du manometre."
-      DescriptionSituation: "l'aiguille du manometre est deregl\xE9e"
+      DescriptionIntervention: "on a tarr\xE9 l'aiguille du manom\u00E8tre."
+      DescriptionSituation: "l'aiguille du manom\u00E8tre est deregl\xE9e"
       EtatBDT: Ferme
       ID-BDT: '1'
       ID-EQ: '540'
@@ -2353,7 +2353,7 @@ _default:
       CategorieEquipement: Tensiometre
       CentreService: Inconnu
       Date: 2015-09-07
-      DescriptionIntervention: "On a tarr\xE9 L'aiguille du manometre. on a patch\xE9\
+      DescriptionIntervention: "On a tarr\xE9 L'aiguille du manom\u00E8tre. on a patch\xE9\
         \ le vessie. la toile n'a pas cousu."
       DescriptionSituation: "L'aiguille est d\xE9r\u00E8gl\xE9e. La toile est d\xE9chir\xE9e.\
         \ le vessie a une fuite."
