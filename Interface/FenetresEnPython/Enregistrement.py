@@ -13,7 +13,7 @@ class Enregistrement(QWidget):
 
         QWidget.__init__(self, parent)
         palette = QPalette(self.palette())
-        self.text = "Sauvegarde Reussi"
+        self.text = "Sauvegarde réussie"
         # palette.setColor(palette.Background, Qt.transparent)
         # self.setPalette(palette)
 
