@@ -5,57 +5,84 @@ BDT_ChampAjoutPermis:
 BDT_ChampFormatPrecis:
 - Date
 CategorieEquipement:
-- "D\xE9fibrilateur"
-- Incubateur
-- "Concentrateur d'oxyg\u00E8ne"
-- "N\xE9gatoscope (moniteur de radiographie)"
-- "Four \u00E0 orth\u00E8se"
-- "St\xE9rilisateur \u00E0 vapeur"
-- Moniteur physiologique
-- Autre
-- "N\xE9bulisateur"
-- Centrifugeuse
-- "Incubateur n\xE9onatal"
-- "Sonographe (\xE9chographe)"
-- Table d'examen
-- "Appareil \u00E0 succion"
-- Appareil de radiographie
-- Analyseur CD4 (VIH)
-- UPS
-- "Analyseur h\xE9matologie"
-- "M\xE9langeur"
 - Analyseur biochimie
-- Ordinateur
-- "R\xE9frigerateur"
-- Imprimante
-- Table d'instruments
-- "S\xE9choir"
-- "Tensiom\u00E8tre"
-- "Saturom\u00E8tre (Oxym\u00E8tre)"
-- Microscope
-- Plaque chauffante
-- Bain chauffant
-- "Spectrophotom\u00E8tre"
-- Lit
-- Table de chevet
-- Balance
-- Chaise roulante
-- "Support \u00E0 solut\xE9s"
-- Table de chirurgie
-- "Appareil d'\xE9lectrochirurgie"
-- Lampe d'examen
-- "Civi\u00E8re de transport"
-- "St\xE9rilisateur portable"
+- Analyseur CD4 (VIH)
+- "Analyseur h\xE9matologie"
+- "Appareil \u00E0 succion"
 - Appareil d'anesthesie
-- "Table de soins n\xE9onataux"
-- "Balance p\xE9diatrique"
-- Toise
-- "Thermom\u00E8tre"
-- "\xC9l\xE9lectrocardiographe"
+- "Appareil d'\xE9lectrochirurgie"
+- Appareil de radiographie
+- "Autor\xE9fractom\u00E8tre"
 - Autoscope
-- Chaise dentiste
+- Autre
+- Bain chauffant
+- Balance
+- "Balance p\xE9diatrique"
+- Berceau
+- "Cam\xE9ra r\xE9tinienne"
+- "Cellule r\xE9frig\xE9rante"
+- Centrifugeuse
 - "Chaise de pr\xE9l\u00E8vement"
+- Chaise dentiste
+- Chaise roulante
+- Champ visuel
+- "Civi\u00E8re de transport"
+- "Concentrateur d'oxyg\u00E8ne"
+- "Cong\xE9lateur"
+- "D\xE9fibrilateur"
+- Doppler foetal
+- "\xC9l\xE9lectrocardiographe"
+- Endoscope
+- Ensacheuse
+- "\xC9vier de brossage"
+- "Four \u00E0 orth\u00E8se"
+- Imprimante
+- "Incin\xE9rateur"
+- Incubateur
+- "Incubateur n\xE9onatal"
+- Lampe a fente
+- Lampe chauffante
+- Lampe d'examen
+- Laser ophtalmique
+- Lecteur de microplaque
+- "Lentim\u00E8tre"
+- Lit
+- Matelas chauffant
+- "M\xE9langeur"
+- Microscope
 - "Moniteur foetal"
+- Moniteur physiologique
+- Moniteur PNI
+- "N\xE9bulisateur"
+- "N\xE9gatoscope (moniteur de radiographie)"
+- Ordinateur
+- Ophtalmoscope
+- Plaque chauffante
+- Projecteur
+- "Pupillom\u00E8tre"
+- "R\xE9fracteur"
+- "R\xE9fr\xE9girateur"
+- Rotateur
+- "Saturom\u00E8tre (Oxym\u00E8tre)"
+- Scie a platre
+- "S\xE9choir"
+- "Sonographe (\xE9chographe)"
+- "Spectrophotom\u00E8tre"
+- "St\xE9rilisateur \u00E0 vapeur"
+- "St\xE9rilisateur portable"
+- "Support \u00E0 solut\xE9s"
+- Table d'examen
+- Table d'instruments
+- Table de chevet
+- Table de chirurgie
+- "Table de soins n\xE9onataux"
+- "Tensiom\u00E8tre"
+- "Thermom\u00E8tre"
+- Toise
+- "Unit\xE9 de phototh\xE9rapie"
+- "Unit\xE9 murale"
+- UPS
+
 CentreService:
 - Urgences
 - Laboratoire
