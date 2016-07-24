@@ -52,6 +52,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.dateEditDateDaquisition)
         self.listeWidgets.append(self.dateEditDateDuDernierEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
+        # modif sab
         self.listeWidgets.append(self.lineEditCodeASSET)
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
@@ -121,6 +122,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelDateDAquisition)
         self.listeLabel.append(self.labelDateDernierEntretien)
         self.listeLabel.append(self.labelProvenance)
+        # modif sab
         self.listeLabel.append(self.labelCodeASSET)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)

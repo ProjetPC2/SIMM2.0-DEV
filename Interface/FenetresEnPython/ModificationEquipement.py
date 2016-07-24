@@ -42,6 +42,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.listeWidgets.append(self.dateEditDateDaquisition)
         self.listeWidgets.append(self.dateEditDateDuDernierEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
+        self.listeWidgets.append(self.lineEditCodeASSET)
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
@@ -109,6 +110,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.listeLabel.append(self.dateAcquisitionLabel)
         self.listeLabel.append(self.dateEntretienLabel)
         self.listeLabel.append(self.provenanceLabel)
+        self.listeLabel.append(self)
         self.listeLabel.append(self.etatServiceLabel)
         self.listeLabel.append(self.etatConservationLabel)
 

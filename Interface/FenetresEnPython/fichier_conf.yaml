@@ -4,6 +4,8 @@ BDT_Ajout_Champ_Equipement:
 - Modele
 - CentreService
 - Salle
+# modif sab
+- Code ASSET
 BDT_ChampAjoutNonPermis:
 - EtatBDT
 BDT_ChampAjoutPermis:
@@ -160,6 +162,8 @@ champsAcceptes-Equipement:
 - DateAcquisition
 - DateDernierEntretien
 - Provenance
+# modif sab
+- CodeASSET
 - EtatService
 - EtatConservation
 - Commentaires
