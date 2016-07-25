@@ -82,22 +82,21 @@ CategorieEquipement:
 - "Unit\xE9 de phototh\xE9rapie"
 - "Unit\xE9 murale"
 - UPS
-
 CentreService:
-- Urgences
-- Laboratoire
-- Inconnu
-- Radiologie
-- "P\xE9diatrie"
-- "Maternit\xE9"
-- "R\xE9adaptation"
-- "M\xE9decine interne"
+- Archives
 - "Bloc op\xE9ratoire"
 - "Centre pr\xE9natal"
-- Archives
 - Clinique externe
 - Don de sang
+- Inconnu
+- Laboratoire
+- "Maternit\xE9"
+- "M\xE9decine interne"
+- "P\xE9diatrie"
 - Pharmacie
+- Radiologie
+- "R\xE9adaptation"
+- Urgences
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -123,44 +122,40 @@ EtatService:
 - Au rebus
 Provenance:
 - ''
-- SMS
-- I-TECH
-- SCMS
-- UGP
-- CHU Sainte-Justine
 - CDC
-- UNFPA
-- UNICEF
+- CHU Sainte-Justine
 - "Croix-Rouge Ha\u00EFtienne"
+- I-TECH
 - MSPP
 - PNS
-- as
+- SCMS
+- SMS
+- UGP
+- UNFPA
+- UNICEF
 Salle:
-- ''
-- Observation
+- Accueil
+- BOX 1
+- BOX 2
+- BOX 3
+- BOX 4
+- BOX 5
+- Consuling
+- Hospitalisation
+- IST
 - Lab 1
 - Lab 2
+- Observation
+- Pansement
 - SOP
 - "Salle st\xE9rilisateur"
 - "Salle de r\xE9cuperation"
 - Salle de travail
 - Salle d'isolation
-- Hospitalisation
 - Salle d'accouchement
 - Salle de consultation
 - Salle d'hospitalisation
-- Accueil
-- Pansement
 - Vaccination
-- BOX 1
-- Consuling
-- BOX 2
-- BOX 3
-- BOX 4
-- IST
-- BOX 5
-- as
-- '123'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
