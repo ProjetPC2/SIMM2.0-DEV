@@ -17,6 +17,176 @@
    <string notr="true">background:white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="labelTitreEtatDeService">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
+            <property name="text">
+             <string>État de service : </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="labelEtatDeService">
+              <property name="styleSheet">
+               <string notr="true">background: white;</string>
+              </property>
+              <property name="text">
+               <string>Ici État de Service</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButtonEnService">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
+              <property name="text">
+               <string>En service</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButtonEnMaintenance">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
+              <property name="text">
+               <string>En maintenance</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButtonAuRebus">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
+              <property name="text">
+               <string>Au rebus</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_2">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="labelTitreEtatDeConservation">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
+            <property name="text">
+             <string>État de Conservation : </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="labelEtatDeConservation">
+              <property name="styleSheet">
+               <string notr="true">background: white;</string>
+              </property>
+              <property name="text">
+               <string>Ici État de Conservation</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButtonQuasiNeuf">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
+              <property name="text">
+               <string>Quasi neuf</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButtonAcceptable">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
+              <property name="text">
+               <string>Acceptable</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButtonEnFinDeVie">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
+              <property name="text">
+               <string>En fin de vie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButtonDesuet">
+              <property name="styleSheet">
+               <string notr="true">background:white;</string>
+              </property>
+              <property name="text">
+               <string>Désuet</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="0" column="0" colspan="2">
     <layout class="QHBoxLayout" name="layoutTitre">
      <item>
@@ -67,190 +237,6 @@
         </size>
        </property>
       </spacer>
-     </item>
-    </layout>
-   </item>
-   <item row="1" column="0">
-    <layout class="QVBoxLayout" name="layoutTitreLables">
-     <item>
-      <widget class="QLabel" name="label_34">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>ID : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_37">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Catégorie : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_36">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Marque : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_35">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Modèle : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_30">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>No. de série : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_31">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Salle : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_33">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Centre de service : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_29">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Date d'aquisition : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_27">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Date du dernier entretien : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_26">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Provenance : </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
      </item>
     </layout>
    </item>
@@ -531,6 +517,35 @@ background:rgb(247, 247, 247);
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditCodeASSET">
+         <property name="minimumSize">
+          <size>
+           <width>127</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>223</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+	max-width: 200px;
+background:rgb(247, 247, 247);</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -635,6 +650,13 @@ background:rgb(247, 247, 247);
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QLabel" name="labelCodeASSET">
+         <property name="text">
+          <string>Ici Code ASSET</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -652,172 +674,201 @@ background:rgb(247, 247, 247);
      </item>
     </layout>
    </item>
-   <item row="2" column="0" colspan="2">
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="layoutTitreLables">
      <item>
-      <widget class="QFrame" name="frame">
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
+      <widget class="QLabel" name="label_34">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
        </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QLabel" name="labelTitreEtatDeService">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background: white;</string>
-            </property>
-            <property name="text">
-             <string>État de service : </string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-            <item>
-             <widget class="QLabel" name="labelEtatDeService">
-              <property name="styleSheet">
-               <string notr="true">background: white;</string>
-              </property>
-              <property name="text">
-               <string>Ici État de Service</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButtonEnService">
-              <property name="styleSheet">
-               <string notr="true">background:white;</string>
-              </property>
-              <property name="text">
-               <string>En service</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButtonEnMaintenance">
-              <property name="styleSheet">
-               <string notr="true">background:white;</string>
-              </property>
-              <property name="text">
-               <string>En maintenance</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButtonAuRebus">
-              <property name="styleSheet">
-               <string notr="true">background:white;</string>
-              </property>
-              <property name="text">
-               <string>Au rebus</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
+       <property name="text">
+        <string>ID : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
       </widget>
      </item>
      <item>
-      <widget class="QFrame" name="frame_2">
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
+      <widget class="QLabel" name="label_37">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
        </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_7">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QLabel" name="labelTitreEtatDeConservation">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background: white;</string>
-            </property>
-            <property name="text">
-             <string>État de Conservation : </string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_4">
-            <item>
-             <widget class="QLabel" name="labelEtatDeConservation">
-              <property name="styleSheet">
-               <string notr="true">background: white;</string>
-              </property>
-              <property name="text">
-               <string>Ici État de Conservation</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButtonQuasiNeuf">
-              <property name="styleSheet">
-               <string notr="true">background:white;</string>
-              </property>
-              <property name="text">
-               <string>Quasi neuf</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButtonAcceptable">
-              <property name="styleSheet">
-               <string notr="true">background:white;</string>
-              </property>
-              <property name="text">
-               <string>Acceptable</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButtonEnFinDeVie">
-              <property name="styleSheet">
-               <string notr="true">background:white;</string>
-              </property>
-              <property name="text">
-               <string>En fin de vie</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButtonDesuet">
-              <property name="styleSheet">
-               <string notr="true">background:white;</string>
-              </property>
-              <property name="text">
-               <string>Désuet</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
+       <property name="text">
+        <string>Catégorie : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_36">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Marque : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_35">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Modèle : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_30">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>No. de série : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_31">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Salle : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_33">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Centre de service : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_29">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Date d'aquisition : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_27">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Date du dernier entretien : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_26">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Provenance : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Code ASSET :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
       </widget>
      </item>
     </layout>
