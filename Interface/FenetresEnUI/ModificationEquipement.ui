@@ -314,6 +314,21 @@ background:rgb(247,247,247);
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Code ASSET :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item row="1" column="1">
@@ -495,9 +510,12 @@ background:rgb(247,247,247);
      <item>
       <widget class="QComboBox" name="comboBoxProvenance"/>
      </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditCodeASSET"/>
+     </item>
     </layout>
    </item>
-   <item row="2" column="0" colspan="2">
+   <item row="3" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QFrame" name="frame">
@@ -620,7 +638,7 @@ background:rgb(247,247,247);
      </item>
     </layout>
    </item>
-   <item row="3" column="0" colspan="2">
+   <item row="4" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QLabel" name="labelTitreCommentaires">
@@ -645,7 +663,7 @@ background:rgb(247,247,247);
      </item>
     </layout>
    </item>
-   <item row="4" column="0" colspan="2">
+   <item row="5" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_8">
      <item>
       <spacer name="horizontalSpacer_2">
