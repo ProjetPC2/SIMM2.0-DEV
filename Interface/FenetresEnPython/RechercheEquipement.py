@@ -7,6 +7,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.EquipementManager import EquipementManager
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.RechercheEquipementUI import Ui_RechercheEquipement
 
 class RechercheEquipement(Ui_RechercheEquipement):
@@ -17,7 +18,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
     def ajoutRechercheEquipement(self):
         #Recuperation des differents attributs d'un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -96,7 +97,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if(cle == "ID"):
                 self.equipementSelectionne[cle] = int(self.tableResultats.item(ligne,indice).data(0))
             elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
-                self.equipementSelectionne[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%Y-%m-%d')
+                self.equipementSelectionne[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%d-%m-%Y')
             else:
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             indice += 1

@@ -5,6 +5,7 @@ from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.ModificationEquipementUI import Ui_ModificationEquipement
 from Interface.Stockage import Equipement
 
@@ -52,7 +53,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.equipement.ajoutListeMethodes()
 
         # Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -189,7 +190,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
+        # self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
         self.equipementManager.ModifierEquipement(self. equipementRecherche["ID"], self.equipement.dictionnaire)
 
     def verificationEquipement(self):

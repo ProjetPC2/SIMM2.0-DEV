@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import *
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
 from Interface.Stockage import Equipement
-
+from Interface.FenetresEnPython.Fichiers import *
 
 class AjoutEquipement(Ui_AjoutEquipement):
     '''
@@ -62,7 +62,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.equipement.ajoutListeMethodes()
 
         # Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -201,7 +202,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
+        # self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
         self.sauvegarde.sauvegardeTermine.emit()
 

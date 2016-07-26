@@ -6,6 +6,9 @@ from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.ConsultationEquipementUI import Ui_ConsultationEquipement
 from threading import Thread
 
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+
+
 class ConsultationEquipement(Ui_ConsultationEquipement):
     def __init__(self, widget, finChargement):
         self.setupUi(widget)
@@ -37,8 +40,8 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         for label in self.listeLabel:
             label.clear()
         #Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
-        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
             # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
@@ -110,7 +113,6 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         '''
         #Recuperation des bons associees a l'equipement
         dictionnaireBDTRecherche = dict()
-        #TODO : verifier que l'ID-EQ recupere bien que cet ID
         dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
         self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
         self.comboBoxBons.clear()

@@ -12,23 +12,87 @@ BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
 CategorieEquipement:
-- ECG
-- IRM
-- Oxymetre
-- Dialyse
-- JEROME
-- JEROME-test
+- "D\xE9fibrilateur"
+- Incubateur
+- "Concentrateur d'oxyg\xE8ne"
+- Analyseur biochimie
+- "N\xE9gatoscope (moniteur de radiographie)"
+- "Four \xE0 orth\xE8se"
+- "St\xE9rilisateur \xE0 vapeur"
+- Moniteur physiologique
+- Autre
+- "N\xE9bulisateur"
+- Centrifugeuse
+- "Incubateur n\xE9onatal"
+- Sonographe (Echographe)
+- Table d'examen
+- "Appareil \xE0 succion"
+- Ordinateur
+- Appareil de radiographie
+- Analyseur CD4 (VIH)
+- UPS
+- "Analyseur h\xE9matologie"
+- "M\xE9langeur"
+- "R\xE9frig\xE9rateur"
+- Imprimante
+- Table d'instruments
+- "S\xE9choir"
+- Moniteur PNI
+- "Saturom\xE8tre (Oxym\xE8tre)"
+- Microscope
+- Plaque chauffante
+- Bain chauffant
+- "Spectrophotom\xE8tre"
 - Lit
-- "St\xE9thoscope"
+- Table de chevet
+- Balance
+- "Tensiom\xE8tre"
+- Chaise roulante
+- "Support \xE0 solut\xE9s"
+- Table de chirurgie
+- "Appareil d'\xE9lectrochirurgie"
+- Lampe d'examen
+- "Civi\xE8re de transport"
+- "St\xE9rilisateur portable"
+- "Appareil d'anesth\xE9sie"
+- "Table de soins n\xE9onataux"
+- "Balance p\xE9diatrique"
+- Toise
+- "Thermom\xE8tre"
+- "\xC9lectrocardiographe"
+- Otoscope
+- Chaise dentiste
+- "Chaise de pr\xE9l\xE8vement"
+- "Moniteur f\u0153tal"
+- "Scie \xE0 pl\xE2tre"
+- "Glucom\xE8tre"
+- "Lampe \xE0 fente"
+- "Lentim\xE8tre"
+- Projecteur
+- "Autor\xE9fractom\xE8tre"
+- Champ visuel
+- "Pupillom\xE8tre"
+- Laser ophtalmique
+- "Cam\xE9ra r\xE9tinienne"
 CentreService:
-- Urgence
+- Urgences
+- Laboratoire
+- Inconnu
+- Radiologie
+- "P\xE9diatrie"
 - "Maternit\xE9"
-- "Atelier de g\xE9nie biom\xE9dical"
-- Soins intensifs
-- "P\xE9rinatalit\xE9"
-- "Hop\xEEtal"
-- "\xC9l\xE9mentaire"
-- "Natalit\xE9"
+- "R\xE9adaptation"
+- Comptabilite
+- Medecine interne
+- "Bloc op\xE9ratoire"
+- "Centre Pr\xE9natal"
+- Archives
+- Clinique externe
+- Don de sang
+- Pharmacie
+- Secretaire de direction medicale
+- hopital general
+- Opthalmologie
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -43,25 +107,77 @@ Equipement_ChampFormatPrecis:
 EtatBDT:
 - Ouvert
 - Ferme
+- "Ferm\xE9"
 EtatConservation:
 - Quasi neuf
 - Acceptable
 - En fin de vie
 - Desuet
+- "D\xE9suet"
 EtatService:
 - En service
 - En maintenance
 - Au rebus
 Provenance:
-- CSI
-- POLY
-- CHU Ste-Justine
-- CHU St-Justine
-- Poly
+- ''
+- SMS
+- I-TECH
+- SCMS
+- UGP
+- CHU Sainte-Justine
+- CDC
+- UNFPA
+- UNICEF
+- Croix-Rouge Haitienne
+- MSPP
+- PNS
+- Croix-Rouge Canadienne
 Salle:
-- A123
-- B518
-- A867
+- ''
+- Observation
+- Lab 1
+- Lab 2
+- SOP
+- Salle sterilisateur
+- "Salle de r\xE9cup\xE9ration"
+- Salle de travail
+- Salle d'isolation
+- Hospitalisation
+- Salle d'accouchement
+- Salle de consultation
+- Salle d'hospitalisation
+- Acceuil
+- Pansement
+- Vaccination
+- BOX 1
+- Consuling
+- BOX 2
+- BOX 3
+- BOX 4
+- IST
+- BOX 5
+- Salle consultation externe R107
+- hopital general 1103
+- Entrepot Croix Rouge Jacmel
+- '1103'
+- R101
+- R108
+- R200
+- '1203'
+- '1301'
+- R204
+- R208
+- R105
+- R606
+- R102
+- R203
+- R601
+- R107
+- R103
+- Salle opthalmologie
+- R205
+- R207
+- R201
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -83,7 +199,9 @@ champsAcceptes-Equipement:
 - DateAcquisition
 - DateDernierEntretien
 - Provenance
+- CodeAsset
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 4
+- ID
+dernierID-Equipement: '651'
