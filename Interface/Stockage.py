@@ -69,6 +69,9 @@ class Equipement():
         def modifierProvenance(self, provenance):
             self.dictionnaire["Provenance"] = provenance
 
+        def modifierCodeASSET(self, codeAssset):
+            self.dictionnaire["CodeAsset"] = codeAssset
+
         def modifierEtatService(self, etatService):
             self.dictionnaire["EtatService"] = etatService
 
@@ -90,6 +93,7 @@ class Equipement():
             self.listeMethodes.append(self.modifierDateAcquisition)
             self.listeMethodes.append(self.modifierDateEntretien)
             self.listeMethodes.append(self.modifierProvenance)
+            self.listeMethodes.append(self.modifierCodeASSET)
             self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierEtatConversation)
             self.listeMethodes.append(self.modifierCommentaire)

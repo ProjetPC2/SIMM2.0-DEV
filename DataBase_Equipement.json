@@ -73,7 +73,7 @@ _default:
       eid: 4
   5: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -91,7 +91,7 @@ _default:
       eid: 5
   6: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2010-03-09
@@ -127,9 +127,9 @@ _default:
       eid: 7
   8: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Four \u00E0 orth\u00E8se"
+      CategorieEquipement: "Four \xE0 orth\xE8se"
       CentreService: Inconnu
-      Commentaires: "Four a orth\u00E8se."
+      Commentaires: "Four a orth\xE8se."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -145,7 +145,7 @@ _default:
       eid: 8
   9: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -325,7 +325,7 @@ _default:
       eid: 18
   19: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Appareil \u00E0 succion"
+      CategorieEquipement: "Appareil \xE0 succion"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -703,7 +703,7 @@ _default:
       eid: 39
   40: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -721,7 +721,7 @@ _default:
       eid: 40
   41: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -739,7 +739,7 @@ _default:
       eid: 41
   42: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -775,7 +775,7 @@ _default:
       eid: 43
   44: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1135,7 +1135,7 @@ _default:
       eid: 63
   64: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Spectrophotom\u00E8tre"
+      CategorieEquipement: "Spectrophotom\xE8tre"
       CentreService: Laboratoire
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1875,7 +1875,7 @@ _default:
       eid: 104
   105: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -1893,7 +1893,7 @@ _default:
       eid: 105
   106: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2019,7 +2019,7 @@ _default:
       eid: 112
   113: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2037,7 +2037,7 @@ _default:
       eid: 113
   114: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2055,7 +2055,7 @@ _default:
       eid: 114
   115: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2073,7 +2073,7 @@ _default:
       eid: 115
   116: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2091,7 +2091,7 @@ _default:
       eid: 116
   117: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2109,7 +2109,7 @@ _default:
       eid: 117
   118: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2127,7 +2127,7 @@ _default:
       eid: 118
   119: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2145,7 +2145,7 @@ _default:
       eid: 119
   120: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2163,7 +2163,7 @@ _default:
       eid: 120
   121: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2217,7 +2217,7 @@ _default:
       eid: 123
   124: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2253,7 +2253,7 @@ _default:
       eid: 125
   126: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2271,7 +2271,7 @@ _default:
       eid: 126
   127: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2289,7 +2289,7 @@ _default:
       eid: 127
   128: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: Il manque d'un transformateur.
       DateAcquisition: 2016-06-29
@@ -2307,7 +2307,7 @@ _default:
       eid: 128
   129: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2343,7 +2343,7 @@ _default:
       eid: 130
   131: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2361,7 +2361,7 @@ _default:
       eid: 131
   132: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2433,7 +2433,7 @@ _default:
       eid: 135
   136: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Appareil \u00E0 succion"
+      CategorieEquipement: "Appareil \xE0 succion"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: Le boulon en plastique est trop petit. ca cause le caillot bouche.
       DateAcquisition: 2016-06-29
@@ -2469,7 +2469,7 @@ _default:
       eid: 137
   138: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Appareil \u00E0 succion"
+      CategorieEquipement: "Appareil \xE0 succion"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2559,7 +2559,7 @@ _default:
       eid: 142
   143: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Civi\u00E8re de transport"
+      CategorieEquipement: "Civi\xE8re de transport"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2577,7 +2577,7 @@ _default:
       eid: 143
   144: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2595,7 +2595,7 @@ _default:
       eid: 144
   145: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2649,7 +2649,7 @@ _default:
       eid: 147
   148: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2865,7 +2865,7 @@ _default:
       eid: 159
   160: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2883,7 +2883,7 @@ _default:
       eid: 160
   161: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2901,7 +2901,7 @@ _default:
       eid: 161
   162: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2919,7 +2919,7 @@ _default:
       eid: 162
   163: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2937,7 +2937,7 @@ _default:
       eid: 163
   164: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2955,7 +2955,7 @@ _default:
       eid: 164
   165: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2973,7 +2973,7 @@ _default:
       eid: 165
   166: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -2991,7 +2991,7 @@ _default:
       eid: 166
   167: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3009,7 +3009,7 @@ _default:
       eid: 167
   168: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3405,7 +3405,7 @@ _default:
       eid: 189
   190: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3477,7 +3477,7 @@ _default:
       eid: 193
   194: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3549,7 +3549,7 @@ _default:
       eid: 197
   198: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3606,7 +3606,7 @@ _default:
       CategorieEquipement: Moniteur physiologique
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: "\"Seul l'ECG fonctionne. Il fonctionne seulement sur le powersupply.\
-        \ Batterie \u00E0 changer. Il faudrait remplacer tous les connecteurs,  Fuite\
+        \ Batterie \xE0 changer. Il faudrait remplacer tous les connecteurs,  Fuite\
         \ dans le circuit de pression - Non fonctionnel pour ca.\""
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -3695,7 +3695,7 @@ _default:
       eid: 205
   206: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3731,7 +3731,7 @@ _default:
       eid: 207
   208: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3769,8 +3769,8 @@ _default:
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: "P\xE9diatrie"
-      Commentaires: "Manque une ampoule mais elle est entrepos\xE9 dans la salle\
-        \ de p\xE9diatrie."
+      Commentaires: "Manque une ampoule mais elle est entrepos\xE9 dans la salle de\
+        \ p\xE9diatrie."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -3804,7 +3804,7 @@ _default:
       eid: 211
   212: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -3876,7 +3876,7 @@ _default:
       eid: 215
   216: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: "P\xE9diatrie"
       Commentaires: "Il manque un brassard et un connecteur mais se trouve dans la\
         \ salle de p\xE9diatrie."
@@ -4273,7 +4273,7 @@ _default:
       eid: 237
   238: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4291,7 +4291,7 @@ _default:
       eid: 238
   239: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4309,7 +4309,7 @@ _default:
       eid: 239
   240: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4327,7 +4327,7 @@ _default:
       eid: 240
   241: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4345,7 +4345,7 @@ _default:
       eid: 241
   242: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4615,10 +4615,10 @@ _default:
       eid: 256
   257: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "Maternit\xE9"
-      Commentaires: "\"D'autres \xE9quipements identiques en service,  il est\
-        \ gard\xE9 dans l'atelier pour les pi\u00E8ces de rechange.\""
+      Commentaires: "\"D'autres \xE9quipements identiques en service,  il est gard\xE9\
+        \ dans l'atelier pour les pi\xE8ces de rechange.\""
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2013-06-11
       EtatConservation: Desuet
@@ -4670,7 +4670,7 @@ _default:
       eid: 259
   260: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Civi\u00E8re de transport"
+      CategorieEquipement: "Civi\xE8re de transport"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4742,7 +4742,7 @@ _default:
       eid: 263
   264: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4760,7 +4760,7 @@ _default:
       eid: 264
   265: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4832,7 +4832,7 @@ _default:
       eid: 268
   269: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -4924,8 +4924,7 @@ _default:
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
       CentreService: "Maternit\xE9"
-      Commentaires: "Bris\xE9e mais se trouve dans la salle de maternit\xE9\
-        ."
+      Commentaires: "Bris\xE9e mais se trouve dans la salle de maternit\xE9."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -5031,7 +5030,7 @@ _default:
       eid: 279
   280: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5049,7 +5048,7 @@ _default:
       eid: 280
   281: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5067,7 +5066,7 @@ _default:
       eid: 281
   282: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5085,7 +5084,7 @@ _default:
       eid: 282
   283: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5103,7 +5102,7 @@ _default:
       eid: 283
   284: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5121,7 +5120,7 @@ _default:
       eid: 284
   285: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5409,7 +5408,7 @@ _default:
       eid: 300
   301: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2014-07-14
@@ -5517,7 +5516,7 @@ _default:
       eid: 306
   307: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Civi\u00E8re de transport"
+      CategorieEquipement: "Civi\xE8re de transport"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5607,7 +5606,7 @@ _default:
       eid: 311
   312: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5625,7 +5624,7 @@ _default:
       eid: 312
   313: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-08
@@ -5643,7 +5642,7 @@ _default:
       eid: 313
   314: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-08
@@ -5661,7 +5660,7 @@ _default:
       eid: 314
   315: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-08
@@ -5931,7 +5930,7 @@ _default:
       eid: 329
   330: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
       Commentaires: "\"Il est aux urgences,  mais bris\xE9.\""
       DateAcquisition: 2016-06-29
@@ -5967,7 +5966,7 @@ _default:
       eid: 331
   332: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -5985,7 +5984,7 @@ _default:
       eid: 332
   333: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6111,7 +6110,7 @@ _default:
       eid: 339
   340: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6129,7 +6128,7 @@ _default:
       eid: 340
   341: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2012-08-05
@@ -6147,7 +6146,7 @@ _default:
       eid: 341
   342: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6183,7 +6182,7 @@ _default:
       eid: 343
   344: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Appareil \u00E0 succion"
+      CategorieEquipement: "Appareil \xE0 succion"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6219,7 +6218,7 @@ _default:
       eid: 345
   346: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -6580,7 +6579,7 @@ _default:
       eid: 365
   366: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7156,7 +7155,7 @@ _default:
       eid: 397
   398: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7228,7 +7227,7 @@ _default:
       eid: 401
   402: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "St\xE9rilisateur \u00E0 vapeur"
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7300,7 +7299,7 @@ _default:
       eid: 405
   406: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7318,7 +7317,7 @@ _default:
       eid: 406
   407: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7716,7 +7715,7 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Clinique externe
-      Commentaires: "Portable. Pour les infirmi\u00E8res."
+      Commentaires: "Portable. Pour les infirmi\xE8res."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7752,8 +7751,8 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      Commentaires: "Petite pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
-        \ clinique externe devant IST."
+      Commentaires: "Petite pi\xE8ce non-identifi\xE9e. Premier \xE9tage clinique\
+        \ externe devant IST."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7771,8 +7770,8 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Clinique externe
-      Commentaires: "Petite pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
-        \ clinique externe devant IST."
+      Commentaires: "Petite pi\xE8ce non-identifi\xE9e. Premier \xE9tage clinique\
+        \ externe devant IST."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7842,7 +7841,7 @@ _default:
       eid: 435
   436: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7860,7 +7859,7 @@ _default:
       eid: 436
   437: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Clinique externe
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -7916,8 +7915,8 @@ _default:
     dictitems:
       CategorieEquipement: Autoscope
       CentreService: Clinique externe
-      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
-        \ clinique externe devant BOX 5."
+      Commentaires: "Grande pi\xE8ce non-identifi\xE9e. Premier \xE9tage clinique\
+        \ externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7933,10 +7932,10 @@ _default:
       eid: 440
   441: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Clinique externe
-      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
-        \ clinique externe devant BOX 5."
+      Commentaires: "Grande pi\xE8ce non-identifi\xE9e. Premier \xE9tage clinique\
+        \ externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7954,8 +7953,8 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
-        \ clinique externe devant BOX 5."
+      Commentaires: "Grande pi\xE8ce non-identifi\xE9e. Premier \xE9tage clinique\
+        \ externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7973,8 +7972,8 @@ _default:
     dictitems:
       CategorieEquipement: UPS
       CentreService: Clinique externe
-      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
-        \ clinique externe devant BOX 5."
+      Commentaires: "Grande pi\xE8ce non-identifi\xE9e. Premier \xE9tage clinique\
+        \ externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -7992,8 +7991,8 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Clinique externe
-      Commentaires: "Grande pi\u00E8ce non-identifi\xE9e. Premier \xE9tage\
-        \ clinique externe devant BOX 5."
+      Commentaires: "Grande pi\xE8ce non-identifi\xE9e. Premier \xE9tage clinique\
+        \ externe devant BOX 5."
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -8021,7 +8020,7 @@ _default:
       Modele: OFFICE OTC 4500
       NbBonTravail: 0
       NumeroSerie: CN18TG31PN
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: ''
     state:
       eid: 445
@@ -8039,7 +8038,7 @@ _default:
       Modele: OPTIPLEX 380
       NbBonTravail: 0
       NumeroSerie: 14LNPN1
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: ''
     state:
       eid: 446
@@ -8063,7 +8062,7 @@ _default:
       eid: 447
   448: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Chaise de pr\xE9l\u00E8vement"
+      CategorieEquipement: "Chaise de pr\xE9l\xE8vement"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8081,7 +8080,7 @@ _default:
       eid: 448
   449: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Chaise de pr\xE9l\u00E8vement"
+      CategorieEquipement: "Chaise de pr\xE9l\xE8vement"
       CentreService: Don de sang
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8165,7 +8164,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: ''
     state:
       eid: 453
@@ -8238,7 +8237,7 @@ _default:
       Modele: BSH1002
       NbBonTravail: 1
       NumeroSerie: AS-BSH2-1580
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: ''
     state:
       eid: 457
@@ -8256,7 +8255,7 @@ _default:
       Modele: PLASMA EXPRESSOR
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: ''
     state:
       eid: 458
@@ -8282,7 +8281,7 @@ _default:
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Pharmacie
-      Commentaires: "\"Non utilis\xE9,  entroposer sur l'\xE9tag\u00E8re.\""
+      Commentaires: "\"Non utilis\xE9,  entroposer sur l'\xE9tag\xE8re.\""
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: Acceptable
@@ -8318,9 +8317,8 @@ _default:
     dictitems:
       CategorieEquipement: Imprimante
       CentreService: Pharmacie
-      Commentaires: "Se trouve dans la pharmacie. Un FAX de marque EPSON ; mod\u00E8le\
-        \ LX300 + II P170B ; no. s\xE9rie G804380671 est reli\xE9 a cette\
-        \ imprimante."
+      Commentaires: "Se trouve dans la pharmacie. Un FAX de marque EPSON ; mod\xE8\
+        le LX300 + II P170B ; no. s\xE9rie G804380671 est reli\xE9 a cette imprimante."
       DateAcquisition: 2009-09-23
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -8372,7 +8370,7 @@ _default:
       eid: 464
   465: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Moniteur foetal"
+      CategorieEquipement: Moniteur foetal
       CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8390,7 +8388,7 @@ _default:
       eid: 465
   466: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Moniteur foetal"
+      CategorieEquipement: Moniteur foetal
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8408,7 +8406,7 @@ _default:
       eid: 466
   467: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Moniteur foetal"
+      CategorieEquipement: Moniteur foetal
       CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8426,7 +8424,7 @@ _default:
       eid: 467
   468: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Moniteur foetal"
+      CategorieEquipement: Moniteur foetal
       CentreService: "Centre pr\xE9natal"
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8534,9 +8532,9 @@ _default:
       eid: 473
   474: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
-      Commentaires: "Tensiom\u00E8tre manuel "
+      Commentaires: "Tensiom\xE8tre manuel "
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2015-08-31
       EtatConservation: Acceptable
@@ -8552,7 +8550,7 @@ _default:
       eid: 474
   475: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8590,8 +8588,8 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
-      Commentaires: "Repar\xE9 mais elle manque une petite vis du reglage. Elle\
-        \ est toujours dans la salle de reparation."
+      Commentaires: "Repar\xE9 mais elle manque une petite vis du reglage. Elle est\
+        \ toujours dans la salle de reparation."
       DateAcquisition: 2015-08-01
       DateDernierEntretien: 2016-06-29
       EtatConservation: Quasi neuf
@@ -8625,7 +8623,7 @@ _default:
       eid: 478
   479: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2013-07-01
@@ -8643,7 +8641,7 @@ _default:
       eid: 479
   480: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8661,7 +8659,7 @@ _default:
       eid: 480
   481: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8679,7 +8677,7 @@ _default:
       eid: 481
   482: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8697,7 +8695,7 @@ _default:
       eid: 482
   483: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8715,7 +8713,7 @@ _default:
       eid: 483
   484: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8752,7 +8750,7 @@ _default:
       eid: 485
   486: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8788,7 +8786,7 @@ _default:
       eid: 487
   488: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8842,7 +8840,7 @@ _default:
       eid: 490
   491: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\u00E8ne"
+      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8860,7 +8858,7 @@ _default:
       eid: 491
   492: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8896,7 +8894,7 @@ _default:
       eid: 493
   494: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2015-07-07
@@ -8914,7 +8912,7 @@ _default:
       eid: 494
   495: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -8932,7 +8930,7 @@ _default:
       eid: 495
   496: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2016-06-29
@@ -9005,7 +9003,7 @@ _default:
       eid: 499
   500: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2015-09-17
@@ -9023,7 +9021,7 @@ _default:
       eid: 500
   501: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "P\xE9diatrie"
       Commentaires: ''
       DateAcquisition: 2015-09-16
@@ -9041,7 +9039,7 @@ _default:
       eid: 501
   502: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9059,7 +9057,7 @@ _default:
       eid: 502
   503: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9077,7 +9075,7 @@ _default:
       eid: 503
   504: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9095,7 +9093,7 @@ _default:
       eid: 504
   505: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2015-10-01
@@ -9167,7 +9165,7 @@ _default:
       eid: 508
   509: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Appareil \u00E0 succion"
+      CategorieEquipement: "Appareil \xE0 succion"
       CentreService: "Maternit\xE9"
       Commentaires: ''
       DateAcquisition: 2015-10-14
@@ -9185,7 +9183,7 @@ _default:
       eid: 509
   510: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\u00E8tre"
+      CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
       Commentaires: Adult . Range 18.4 a 26.7 cm.
       DateAcquisition: 2016-07-18
@@ -9239,7 +9237,7 @@ _default:
       eid: 512
   513: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: "M\xE9decine interne"
       Commentaires: ''
       DateAcquisition: 2015-10-15
@@ -9257,7 +9255,7 @@ _default:
       eid: 513
   514: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-15
@@ -9275,7 +9273,7 @@ _default:
       eid: 514
   515: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-15
@@ -9293,7 +9291,7 @@ _default:
       eid: 515
   516: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Thermom\u00E8tre"
+      CategorieEquipement: "Thermom\xE8tre"
       CentreService: Inconnu
       Commentaires: ''
       DateAcquisition: 2015-10-15
@@ -9347,7 +9345,7 @@ _default:
       eid: 518
   519: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Support \u00E0 solut\xE9s"
+      CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
       Commentaires: ''
       DateAcquisition: 2016-07-18
@@ -9383,7 +9381,7 @@ _default:
       eid: 520
   521: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Saturom\u00E8tre (Oxym\u00E8tre)"
+      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "Bloc op\xE9ratoire"
       Commentaires: On a tarre l'appareil . fonctionnel
       DateAcquisition: 2016-07-18
@@ -9414,7 +9412,7 @@ _default:
       Modele: Ri-former
       NbBonTravail: 0
       NumeroSerie: '6859'
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Salle consultation externe R107
     state:
       eid: 522
@@ -9433,7 +9431,7 @@ _default:
       Modele: 02-131
       NbBonTravail: 0
       NumeroSerie: '5100160515'
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Salle consultation externe R107
     state:
       eid: 523
@@ -9452,7 +9450,7 @@ _default:
       Modele: 02-131
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: hopital general 1103
     state:
       eid: 524
@@ -9473,7 +9471,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 525
@@ -9494,7 +9492,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 526
@@ -9515,7 +9513,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 527
@@ -9536,7 +9534,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 528
@@ -9557,7 +9555,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 529
@@ -9578,7 +9576,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 530
@@ -9599,7 +9597,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 531
@@ -9620,7 +9618,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 532
@@ -9641,7 +9639,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 533
@@ -9662,7 +9660,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 534
@@ -9683,7 +9681,7 @@ _default:
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 535
@@ -9702,7 +9700,7 @@ _default:
       Modele: 02-131
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: "Croix-Rouge Ha\u00EFtienne"
+      Provenance: "Croix-Rouge Ha\xEFtienne"
       Salle: '1103'
     state:
       eid: 536
@@ -9724,19 +9722,41 @@ _default:
       Salle: Entrepot Croix Rouge Jacmel
     state:
       eid: 537
-  538:
-    CategorieEquipement: Moniteur PNI
-    CentreService: hopital general
-    Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel et
-      sera installe lors de la mise en service du nouvel hopital vers mai 2016
-    DateAcquisition: 2016-01-29
-    DateDernierEntretien: 2016-07-18
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '593'
-    Marque: Veridian
-    Modele: 02-131
-    NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: "Croix-Rouge Ha\u00EFtienne"
-    Salle: '1103'
+  538: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Moniteur PNI
+      CentreService: hopital general
+      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel et
+        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      DateAcquisition: 2016-01-29
+      DateDernierEntretien: 2016-07-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '593'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: "Croix-Rouge Ha\xEFtienne"
+      Salle: '1103'
+    state:
+      eid: 538
+  539: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Analyseur biochimie
+      CentreService: Archives
+      CodeAsset: nyunyu
+      Commentaires: ''
+      DateAcquisition: 2016-07-25
+      DateDernierEntretien: 2016-07-25
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '595'
+      Marque: bonjour
+      Modele: correction
+      NbBonTravail: 0
+      NumeroSerie: ici
+      Provenance: somewhere
+      Salle: helo
+    state:
+      eid: 539

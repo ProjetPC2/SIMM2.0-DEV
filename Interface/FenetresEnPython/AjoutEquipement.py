@@ -81,6 +81,12 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeSalle = list(self._conf['Salle'])
         self.listeProvenance = list(self._conf['Provenance'])
 
+        self.listeCategorieEquipement.sort()
+        self.listeEtatService.sort()
+        self.listeCentreService.sort()
+        self.listeSalle.sort()
+        self.listeProvenance.sort()
+
         # Chargement des differentes listes deroulantes
         self.comboBoxCategorie.clear()
         self.comboBoxCategorie.addItems(self.listeCategorieEquipement)

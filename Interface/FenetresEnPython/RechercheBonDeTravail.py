@@ -35,8 +35,11 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         # print("liste des cles : ", self.listeCleDonnees)
 
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
+        self.listeCategorieEquipement.sort()
         self.listeCentreService = list(self._conf['CentreService'])
+        self.listeCentreService.sort()
         self.listeEtatService = list(self._conf['EtatService'])
+        self.listeEtatService.sort()
         # self.listeProvenance = list(self._conf['Provenance'])
 
         #Mise a jour des differentes listes deroulantes

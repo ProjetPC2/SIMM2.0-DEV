@@ -160,6 +160,7 @@ champsAcceptes-Equipement:
 - DateAcquisition
 - DateDernierEntretien
 - Provenance
+- CodeASSET
 - EtatService
 - EtatConservation
 - Commentaires

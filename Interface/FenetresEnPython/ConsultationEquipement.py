@@ -26,6 +26,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeLabel.append(self.labelDateDaquisition)
         self.listeLabel.append(self.labelDateDuDernierEntretien)
         self.listeLabel.append(self.labelProvenance)
+        self.listeLabel.append(self.labelCodeASSET)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
 
@@ -74,7 +75,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
             equipementRecherche = dict()
             equipementRecherche["ID"] = self.lineEditId.text()
             listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
-
+            self.equipement
 
             if(any(listeEquipement)):
                 #Cas ou l'equipement existe
@@ -82,6 +83,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 self.boutonAjouterUnBon.setEnabled(True)
                 self.boutonConsulterBon.setEnabled(False)
                 self.equipement = listeEquipement[0]
+                # self.equipement["ID"] = self.lineEditId.text()
                 i = 0
                 for cle in self.listeCleDonnees:
                     #Recuperation des donnees sous forme de string
@@ -117,7 +119,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
             self.boutonConsulterBon.setEnabled(True)
             icon2 = QtGui.QIcon()
             icon2.addPixmap(
-                QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png"),
+                QtGui.QPixmap("Images/view-icon.png"),
                 QtGui.QIcon.Normal, QtGui.QIcon.Off)
             for bdt in self.listeBonDeTravail:
                 affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]

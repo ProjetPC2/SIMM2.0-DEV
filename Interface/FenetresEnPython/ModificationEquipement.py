@@ -42,6 +42,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.listeWidgets.append(self.dateEditDateDaquisition)
         self.listeWidgets.append(self.dateEditDateDuDernierEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
+        self.listeWidgets.append(self.lineEditCodeASSET)
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
@@ -70,6 +71,12 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.listeSalle = list(self._conf['Salle'])
         self.listeProvenance = list(self._conf['Provenance'])
 
+        self.listeCategorieEquipement.sort()
+        self.listeEtatService.sort()
+        self.listeCentreService.sort()
+        self.listeSalle.sort()
+        self.listeProvenance.sort()
+
         # Chargement des differentes listes deroulantes
         self.comboBoxCategorie.clear()
         self.comboBoxCategorie.addItems(self.listeCategorieEquipement)
@@ -93,9 +100,11 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
         self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
         self.provenanceLabel = QLabel()
+        self.codeASSETLabel = QLabel()
         self.etatServiceLabel = QLabel("Ici Etat de service ")
         self.etatConservationLabel = QLabel("Ici Etat de conservation ")
         self.commentaire = QLabel("Ici commentaires ")
+
 
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
@@ -109,6 +118,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.listeLabel.append(self.dateAcquisitionLabel)
         self.listeLabel.append(self.dateEntretienLabel)
         self.listeLabel.append(self.provenanceLabel)
+        self.listeLabel.append(self.codeASSETLabel)
         self.listeLabel.append(self.etatServiceLabel)
         self.listeLabel.append(self.etatConservationLabel)
 
@@ -128,6 +138,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
 
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipement)
         self.BoutonModifier.clicked.connect(self.modifierEquipement)
+        # self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
 
         # Selection des choix par defaut pour les radio boutons
         self.radioButtonEnService.setChecked(True)
@@ -179,7 +190,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
             self.equipement.listeMethodes[i](donnees)
             i += 1
         self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
-        self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
+        self.equipementManager.ModifierEquipement(self. equipementRecherche["ID"], self.equipement.dictionnaire)
 
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement"""
@@ -200,7 +211,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
                     self.listeLabel[indice].show()
                     self.listeWidgets[indice].hide()
                 indice += 1
-            self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
+            # self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
             self.BoutonEnregistrer.show()
             self.BoutonModifier.show()
             self.BoutonValider.hide()
@@ -229,6 +240,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
          Utilisation des donnees entrees par l'utilisateur pour les labels
          """
         equipement = self.equipementRecherche
+        self.labelId.setText(equipement["ID"])
         indice = 0
         for widget in self.listeWidgets:
             # self.stockage.dictionnaire
@@ -252,6 +264,25 @@ class ModificationEquipement(Ui_ModificationEquipement):
         else:
             return True
 
+    def nouvelEquipement(self):
+        """Remet en place un formulaire vide pour l'ajout d'un equipement
+            """
+        indice = 0
+        for text in self.listeDonnees:
+            if type(self.listeWidgets[indice]) is QButtonGroup:
+                for radioBouton in self.listeWidgets[indice].buttons():
+                    radioBouton.show()
+            else:
+                self.listeLabel[indice].hide()
+                self.listeWidgets[indice].show()
+                if (isinstance(self.listeWidgets[indice], QLineEdit) or isinstance(self.listeWidgets[indice],
+                                                                                   QTextEdit)):
+                    self.listeWidgets[indice].clear()
+            indice += 1
+        self.labelID.setText("")
+        self.BoutonEnregistrer.hide()
+        self.BoutonValider.show()
+        self.BoutonModifier.hide()
 
 if __name__ == "__main__":
     import sys

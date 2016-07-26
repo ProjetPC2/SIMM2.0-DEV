@@ -1,6 +1,7 @@
-nbEquipement: 512
+nbEquipement: 513
 nbEquipementCentreService:
   Archives:
+    Analyseur biochimie: 1
     Ordinateur: 3
   "Bloc op\xC3\xA9ratoire":
     Appareil d'anesthesie: 4
@@ -164,11 +165,11 @@ nbEquipementEtatConservation:
   Acceptable: 423
   Desuet: 15
   En fin de vie: 49
-  Quasi neuf: 25
+  Quasi neuf: 26
 nbEquipementEtatService:
   Au rebus: 15
   En maintenance: 52
-  En service: 445
+  En service: 446
 nbEquipementProvenance:
   ? ''
   : 381
@@ -183,3 +184,5 @@ nbEquipementProvenance:
   UGP: 44
   UNFPA: 4
   UNICEF: 1
+  somewhere: 1
+  yuyu: 0

@@ -1,18 +1,25 @@
+BDT_Ajout_Champ_Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- CentreService
+- Salle
 BDT_ChampAjoutNonPermis:
 - EtatBDT
 BDT_ChampAjoutPermis:
 - null
 BDT_ChampFormatPrecis:
 - Date
+- TempsEstime
 CategorieEquipement:
 - Analyseur biochimie
 - Analyseur CD4 (VIH)
 - "Analyseur h\xE9matologie"
-- "Appareil \u00E0 succion"
+- "Appareil \xE0 succion"
 - Appareil d'anesthesie
 - "Appareil d'\xE9lectrochirurgie"
 - Appareil de radiographie
-- "Autor\xE9fractom\u00E8tre"
+- "Autor\xE9fractom\xE8tre"
 - Autoscope
 - Autre
 - Bain chauffant
@@ -22,12 +29,12 @@ CategorieEquipement:
 - "Cam\xE9ra r\xE9tinienne"
 - "Cellule r\xE9frig\xE9rante"
 - Centrifugeuse
-- "Chaise de pr\xE9l\u00E8vement"
+- "Chaise de pr\xE9l\xE8vement"
 - Chaise dentiste
 - Chaise roulante
 - Champ visuel
-- "Civi\u00E8re de transport"
-- "Concentrateur d'oxyg\u00E8ne"
+- "Civi\xE8re de transport"
+- "Concentrateur d'oxyg\xE8ne"
 - "Cong\xE9lateur"
 - "D\xE9fibrilateur"
 - Doppler foetal
@@ -35,7 +42,7 @@ CategorieEquipement:
 - Endoscope
 - Ensacheuse
 - "\xC9vier de brossage"
-- "Four \u00E0 orth\u00E8se"
+- "Four \xE0 orth\xE8se"
 - Imprimante
 - "Incin\xE9rateur"
 - Incubateur
@@ -45,12 +52,12 @@ CategorieEquipement:
 - Lampe d'examen
 - Laser ophtalmique
 - Lecteur de microplaque
-- "Lentim\u00E8tre"
+- "Lentim\xE8tre"
 - Lit
 - Matelas chauffant
 - "M\xE9langeur"
 - Microscope
-- "Moniteur foetal"
+- Moniteur foetal
 - Moniteur physiologique
 - Moniteur PNI
 - "N\xE9bulisateur"
@@ -59,25 +66,25 @@ CategorieEquipement:
 - Ophtalmoscope
 - Plaque chauffante
 - Projecteur
-- "Pupillom\u00E8tre"
+- "Pupillom\xE8tre"
 - "R\xE9fracteur"
 - "R\xE9fr\xE9girateur"
 - Rotateur
-- "Saturom\u00E8tre (Oxym\u00E8tre)"
+- "Saturom\xE8tre (Oxym\xE8tre)"
 - Scie a platre
 - "S\xE9choir"
 - "Sonographe (\xE9chographe)"
-- "Spectrophotom\u00E8tre"
-- "St\xE9rilisateur \u00E0 vapeur"
+- "Spectrophotom\xE8tre"
+- "St\xE9rilisateur \xE0 vapeur"
 - "St\xE9rilisateur portable"
-- "Support \u00E0 solut\xE9s"
+- "Support \xE0 solut\xE9s"
 - Table d'examen
 - Table d'instruments
 - Table de chevet
 - Table de chirurgie
 - "Table de soins n\xE9onataux"
-- "Tensiom\u00E8tre"
-- "Thermom\u00E8tre"
+- "Tensiom\xE8tre"
+- "Thermom\xE8tre"
 - Toise
 - "Unit\xE9 de phototh\xE9rapie"
 - "Unit\xE9 murale"
@@ -111,11 +118,13 @@ Equipement_ChampFormatPrecis:
 EtatBDT:
 - Ouvert
 - Ferme
+- "Ferm\xE9"
 EtatConservation:
 - Quasi neuf
 - Acceptable
 - En fin de vie
 - Desuet
+- "D\xE9suet"
 EtatService:
 - En service
 - En maintenance
@@ -124,7 +133,7 @@ Provenance:
 - ''
 - CDC
 - CHU Sainte-Justine
-- "Croix-Rouge Ha\u00EFtienne"
+- "Croix-Rouge Ha\xEFtienne"
 - I-TECH
 - MSPP
 - PNS
@@ -133,6 +142,8 @@ Provenance:
 - UGP
 - UNFPA
 - UNICEF
+- yuyu
+- somewhere
 Salle:
 - Accueil
 - BOX 1
@@ -156,6 +167,7 @@ Salle:
 - Salle de consultation
 - Salle d'hospitalisation
 - Vaccination
+- helo
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -177,7 +189,8 @@ champsAcceptes-Equipement:
 - DateAcquisition
 - DateDernierEntretien
 - Provenance
+- CodeAsset
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 515
+dernierID-Equipement: 595
