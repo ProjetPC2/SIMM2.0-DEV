@@ -11413,8 +11413,27 @@ _default:
       Salle: '1203'
     state:
       eid: 596
-  597:
-    CategorieEquipement: Table d'examen
+  597: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '652'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: Salle de consultation - R101
+    state:
+      eid: 597
+  598:
+    CategorieEquipement: Lampe d'examen
     CentreService: Clinique externe
     CodeAsset: ''
     Commentaires: ''
@@ -11422,10 +11441,10 @@ _default:
     DateDernierEntretien: 2016-07-28
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '652'
+    ID: '653'
     Marque: ''
     Modele: ''
     NbBonTravail: 0
-    NumeroSerie: ''
+    NumeroSerie: KD1510442
     Provenance: Croix-Rouge Canadienne
     Salle: Salle de consultation - R101

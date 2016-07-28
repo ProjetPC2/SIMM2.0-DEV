@@ -168,7 +168,6 @@ Salle:
 - Salle de consultation - R106
 - Salle de consultation - R102
 - Salle de consultation - R203
-- Salle de consultation - R101
 - Salle de consultation - R107
 - Salle de consultation - R103
 - Salle opthalmologie
@@ -201,4 +200,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 652
+dernierID-Equipement: 653

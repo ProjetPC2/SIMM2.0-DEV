@@ -1,4 +1,4 @@
-nbEquipement: 597
+nbEquipement: 598
 nbEquipementCentreService:
   Archives:
     Ordinateur: 3
@@ -39,7 +39,7 @@ nbEquipementCentreService:
     "Concentrateur d'oxyg\xE8ne": 1
     "D\xE9fibrilateur": 1
     "Glucom\xE8tre": 3
-    Lampe d'examen: 1
+    Lampe d'examen: 2
     "Moniteur f\u0153tal": 2
     "N\xE9bulisateur": 3
     "N\xE9gatoscope (moniteur de radiographie)": 10
@@ -203,17 +203,17 @@ nbEquipementEtatConservation:
   Acceptable: 448
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 81
+  Quasi neuf: 82
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 520
+  En service: 521
 nbEquipementProvenance:
   ? ''
   : 394
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 65
+  Croix-Rouge Canadienne: 66
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1
