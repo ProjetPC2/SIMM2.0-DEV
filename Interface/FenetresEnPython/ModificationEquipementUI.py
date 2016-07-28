@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ModificationEquipement(object):
     def setupUi(self, ModificationEquipement):
         ModificationEquipement.setObjectName("ModificationEquipement")
-        ModificationEquipement.resize(1016, 1226)
+        ModificationEquipement.resize(1710, 697)
+        ModificationEquipement.setMaximumSize(QtCore.QSize(11111111, 1111111))
         ModificationEquipement.setStyleSheet("QWidget{\n"
 "\n"
 "background: white;\n"

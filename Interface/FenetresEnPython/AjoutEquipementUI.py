@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
-        AjoutEquipement.resize(964, 711)
+        AjoutEquipement.resize(1710, 697)
+        AjoutEquipement.setMaximumSize(QtCore.QSize(11111111, 1111111))
         AjoutEquipement.setStyleSheet("background:white;")
         self.gridLayout = QtWidgets.QGridLayout(AjoutEquipement)
         self.gridLayout.setObjectName("gridLayout")

@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SupportPC2(object):
     def setupUi(self, SupportPC2):
         SupportPC2.setObjectName("SupportPC2")
-        SupportPC2.resize(707, 681)
+        SupportPC2.resize(1710, 697)
+        SupportPC2.setMaximumSize(QtCore.QSize(11111111, 1111111))
         SupportPC2.setStyleSheet("background: white;")
         self.verticalLayout = QtWidgets.QVBoxLayout(SupportPC2)
         self.verticalLayout.setObjectName("verticalLayout")

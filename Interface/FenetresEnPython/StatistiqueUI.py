@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
-        Statistique.resize(974, 805)
+        Statistique.resize(1710, 805)
+        Statistique.setMaximumSize(QtCore.QSize(11111111, 1111111))
         Statistique.setStyleSheet("QWidget{\n"
 "background:white;\n"
 "}\n"
