@@ -38,6 +38,12 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.listeSalle = list(self._conf['Salle'])
         self.listeProvenance = list(self._conf['Provenance'])
 
+        self.listeCategorieEquipement.sort()
+        self.listeEtatService.sort()
+        self.listeCentreService.sort()
+        self.listeSalle.sort()
+        self.listeProvenance.sort()
+
         #Mise a jour des listes avec les bons elements
         self.comboBoxCategorieEquipement.clear()
         self.comboBoxCategorieEquipement.addItem("")
