@@ -11394,19 +11394,38 @@ _default:
       Salle: '1203'
     state:
       eid: 595
-  596:
-    CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-    CentreService: hopital general
+  596: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
+      CentreService: hopital general
+      CodeAsset: ''
+      Commentaires: "\xC9quipement neuf"
+      DateAcquisition: 2016-01-31
+      DateDernierEntretien: 2016-07-26
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '651'
+      Marque: Masimo
+      Modele: RAD-5V
+      NbBonTravail: 0
+      NumeroSerie: N95522
+      Provenance: Croix-Rouge Canadienne
+      Salle: '1203'
+    state:
+      eid: 596
+  597:
+    CategorieEquipement: Table d'examen
+    CentreService: Clinique externe
     CodeAsset: ''
-    Commentaires: "\xC9quipement neuf"
-    DateAcquisition: 2016-01-31
-    DateDernierEntretien: 2016-07-26
+    Commentaires: ''
+    DateAcquisition: 2016-07-28
+    DateDernierEntretien: 2016-07-28
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '651'
-    Marque: Masimo
-    Modele: RAD-5V
+    ID: '652'
+    Marque: ''
+    Modele: ''
     NbBonTravail: 0
-    NumeroSerie: N95522
+    NumeroSerie: ''
     Provenance: Croix-Rouge Canadienne
-    Salle: '1203'
+    Salle: Salle de consultation - R101
