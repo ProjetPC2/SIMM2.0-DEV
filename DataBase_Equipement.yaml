@@ -11432,19 +11432,98 @@ _default:
       Salle: Salle de consultation - R101
     state:
       eid: 597
-  598:
-    CategorieEquipement: Lampe d'examen
-    CentreService: Clinique externe
-    CodeAsset: ''
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-07-28
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '653'
-    Marque: ''
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: KD1510442
-    Provenance: Croix-Rouge Canadienne
-    Salle: Salle de consultation - R101
+  598: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '653'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510442
+      Provenance: Croix-Rouge Canadienne
+      Salle: Salle de consultation - R101
+    state:
+      eid: 598
+  599: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '654'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: Salle de consultation - R101
+    state:
+      eid: 599
+  600: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '655'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: Poste des infimieres - R105
+    state:
+      eid: 600
+  601: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '656'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510444
+      Provenance: Croix-Rouge Canadienne
+      Salle: Poste des infimieres - R105
+    state:
+      eid: 601
+  602: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '657'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: Poste des infimieres - R105
+    state:
+      eid: 602
