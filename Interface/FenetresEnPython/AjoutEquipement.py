@@ -204,6 +204,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             i += 1
         # self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
+        self.equipement.dictionnaire.clear()
         self.sauvegarde.sauvegardeTermine.emit()
 
     def verificationEquipement(self):
