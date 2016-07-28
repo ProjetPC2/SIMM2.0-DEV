@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1056</width>
-    <height>852</height>
+    <width>1711</width>
+    <height>697</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>11111111</width>
+    <height>1111111</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -40,6 +46,127 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
 }</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="4">
+    <widget class="QSpinBox" name="spinBoxNombreEquipement">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox
+{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247,247,247);
+color: black;
+}</string>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelSelectionCategorie">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;</string>
+     </property>
+     <property name="text">
+      <string>Sélectionner la catégorie de la pièce</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="7">
+    <widget class="QPushButton" name="BoutonValider">
+     <property name="minimumSize">
+      <size>
+       <width>140</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background: rgb(247,247,247);
+}
+
+QPushButton::pressed {
+padding: 1px;
+color: black;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 8px;
+background:rgb(169, 167, 170);
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}</string>
+     </property>
+     <property name="text">
+      <string>Valider</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Images/check-symbol.png</normaloff>Images/check-symbol.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5" colspan="2">
+    <spacer name="horizontalSpacer_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Maximum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>700</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
    <item row="11" column="0">
     <widget class="QLabel" name="labelCategorieSelectionnee">
      <property name="maximumSize">
@@ -61,7 +188,7 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
      </property>
     </widget>
    </item>
-   <item row="9" column="0" colspan="9">
+   <item row="9" column="0" colspan="8">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <spacer name="horizontalSpacer">
@@ -116,21 +243,6 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
      </item>
     </layout>
    </item>
-   <item row="4" column="4">
-    <widget class="QLabel" name="labelNombrePiece">
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: white;</string>
-     </property>
-     <property name="text">
-      <string>Nombre de pièces</string>
-     </property>
-    </widget>
-   </item>
    <item row="10" column="0">
     <widget class="QLabel" name="labelResumePiece">
      <property name="font">
@@ -148,7 +260,7 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
      </property>
     </widget>
    </item>
-   <item row="6" column="4">
+   <item row="6" column="3">
     <spacer name="horizontalSpacer_2">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -164,7 +276,22 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
      </property>
     </spacer>
    </item>
-   <item row="0" column="0" colspan="9">
+   <item row="4" column="3">
+    <widget class="QLabel" name="labelNombrePiece">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;</string>
+     </property>
+     <property name="text">
+      <string>Nombre de pièces</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="8">
     <layout class="QHBoxLayout" name="titreLayout">
      <item>
       <widget class="QLabel" name="label_3">
@@ -240,143 +367,6 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
       <string>Nom de la pièce</string>
      </property>
     </widget>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="labelSelectionCategorie">
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: white;</string>
-     </property>
-     <property name="text">
-      <string>Sélectionner la catégorie de la pièce</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="3">
-    <spacer name="horizontalSpacer_3">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Fixed</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>5</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="4" column="5">
-    <widget class="QSpinBox" name="spinBoxNombreEquipement">
-     <property name="minimumSize">
-      <size>
-       <width>50</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>50</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QSpinBox
-{
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247);
-color: black;
-}</string>
-     </property>
-     <property name="maximum">
-      <number>999</number>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="8">
-    <widget class="QPushButton" name="BoutonValider">
-     <property name="minimumSize">
-      <size>
-       <width>140</width>
-       <height>20</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>120</width>
-       <height>200</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background: rgb(247,247,247);
-}
-
-QPushButton::pressed {
-padding: 1px;
-color: black;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 8px;
-background:rgb(169, 167, 170);
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}</string>
-     </property>
-     <property name="text">
-      <string>Valider</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>Images/check-symbol.png</normaloff>Images/check-symbol.png</iconset>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="6" colspan="2">
-    <spacer name="horizontalSpacer_5">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Maximum</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>500</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
    </item>
    <item row="11" column="1">
     <widget class="QComboBox" name="comboBoxCategorieSelectionnee">
@@ -496,7 +486,7 @@ color: black;
      </property>
     </widget>
    </item>
-   <item row="7" column="0" colspan="9">
+   <item row="7" column="0" colspan="8">
     <widget class="QTableWidget" name="tableCategoriePiece">
      <property name="font">
       <font>
@@ -509,7 +499,7 @@ color: black;
      </property>
     </widget>
    </item>
-   <item row="12" column="0" colspan="9">
+   <item row="12" column="0" colspan="8">
     <widget class="QTableWidget" name="tableResume">
      <property name="font">
       <font>
