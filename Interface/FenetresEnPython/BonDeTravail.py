@@ -19,7 +19,7 @@ from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
 
 
 class BonDeTravail(Ui_BonDeTravail):
-    def __init__(self, widget, chargement,consulterBDT = None, ajouterID = None):
+    def __init__(self, widget, chargement, consulterBDT = None, ajouterID = None):
         self.setupUi(widget)
         self.ajoutBonDeTravail()
         self.boutonConsultation.hide()

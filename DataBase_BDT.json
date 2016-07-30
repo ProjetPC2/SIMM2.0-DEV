@@ -910,7 +910,7 @@ _default:
       eid: 45
   46: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Defibrilateur
+        CategorieEquipement: Defibrilateur
       CentreService: Urgences
       Date: 2015-07-30
       DescriptionIntervention: ''

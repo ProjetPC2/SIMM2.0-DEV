@@ -133,7 +133,7 @@ class Statistique(Ui_Statistique):
         self.nombreQuasiNeuf = dictionnaire["Quasi neuf"]
         self.nombreEnFinVie = dictionnaire["En fin de vie"]
         self.nombreAcceptable = dictionnaire["Acceptable"]
-        self.nombreDesuet = dictionnaire["Desuet"]
+        self.nombreDesuet = dictionnaire["D\xE9suet"]
 
         print(self.nombreEquipement)
 

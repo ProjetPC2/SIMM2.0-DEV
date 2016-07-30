@@ -497,7 +497,7 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
-            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
+            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, self.finChargment, ajouterID=self.consultationEquipementUI.equipement["ID"])
             # self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.ajoutBonDeTravailEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravailEquipement)
@@ -530,7 +530,7 @@ class Accueil(Ui_Accueil):
             # listeID = indice.split("-")
             # dictID["ID-BDT"] = listeID(len(listeID) - 1)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
+            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.finChargment, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
             # self.consultationBonDeTravail.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.consultationBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
