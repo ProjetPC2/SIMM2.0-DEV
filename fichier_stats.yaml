@@ -1,4 +1,4 @@
-nbEquipement: 602
+nbEquipement: 604
 nbEquipementCentreService:
   Archives:
     Lampe d'examen: 0
@@ -37,10 +37,11 @@ nbEquipementCentreService:
     Balance: 3
     "Balance p\xE9diatrique": 2
     Chaise dentiste: 1
+    Chariot de soins: 2
     "Concentrateur d'oxyg\xE8ne": 1
     "D\xE9fibrilateur": 1
     "Glucom\xE8tre": 3
-    Lampe d'examen: 3
+    Lampe d'examen: 4
     "Moniteur f\u0153tal": 2
     "N\xE9bulisateur": 3
     "N\xE9gatoscope (moniteur de radiographie)": 10
@@ -49,8 +50,9 @@ nbEquipementCentreService:
     "Saturom\xE8tre (Oxym\xE8tre)": 2
     "St\xE9rilisateur \xE0 vapeur": 2
     "Support \xE0 solut\xE9s": 1
-    Table d'examen: 9
+    Table d'examen: 10
     Table d'instruments: 3
+    Table de chevet: 0
     "Tensiom\xE8tre": 9
     Toise: 1
     UPS: 5
@@ -204,17 +206,17 @@ nbEquipementEtatConservation:
   Acceptable: 448
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 86
+  Quasi neuf: 88
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 525
+  En service: 527
 nbEquipementProvenance:
   ? ''
   : 394
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 70
+  Croix-Rouge Canadienne: 72
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1
