@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'BdT3.ui'
-#
-# Created by: PyQt5 UI code generator 5.6
-#
-# WARNING! All changes made in this file will be lost!
 import datetime
+import locale
 from threading import Thread
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtCore import Qt, QLocale
+from PyQt5.QtWidgets import QTableWidgetItem,QCalendarWidget
+from PyQt5.uic.properties import QtCore
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
@@ -34,11 +30,15 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listPieceReparationUtilise = list()
         self.pushButtonValider.setDisabled(True)
         self.chargement = chargement
-
         if(consulterBDT is not None):
             self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
             self.chercherEquipement()
-            self.indiceBonDeTravail = int(consulterBDT["ID-BDT"]) - 1
+            indice = 0
+            while(self.listeBonDeTravail[indice]["ID-BDT"] != str(consulterBDT["ID-BDT"])):
+                print("id dans la liste", self.listeBonDeTravail[indice]["ID-BDT"])
+                print("id recupere", consulterBDT["ID-BDT"])
+                indice += 1
+            self.indiceBonDeTravail = indice
             self.chargerBonTravail()
             self.ajoutBonDeTravail()
         if(ajouterID is not None):
@@ -47,15 +47,15 @@ class BonDeTravail(Ui_BonDeTravail):
             self.nouveauBondeTravail()
 
 
+
     def ajoutBonDeTravail(self):
 
-        self.labelEcritureBonTravail.setText("")
         #Connexion de l'appuie de la touche entree
         self.lineEditID.returnPressed.connect(self.chercherEquipement)
 
         #Creation des differents elements utiles pour la sauvegarde
-        self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
-        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
+        self.equipementManager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.json')
+        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.yaml')
         self.pieceManager = PieceManager()
         self.equipementDictionnaire = None
         self.listeBonDeTravail = list()
@@ -95,11 +95,18 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
 
         self.boutonConsultation.clicked.connect(self.consulterBonDeTravail)
-        self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
-        self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
-        self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
+        self.listeCategoriePiece = None
+
         # self.listePieceReparation = list()
         self.pushButtonValider.clicked.connect(self.validerChoixPiece)
+        #modification calendrierBDT
+        calendrierBDT = QCalendarWidget()
+        calendrierBDT.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrierBDT.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        self.dateEdit.setCalendarWidget(calendrierBDT)
+        self.dateEdit.setLocale(QLocale(QLocale.French, QLocale.France))
+
+
         self.listeCleDonnees = list(["Categorie","Nom Piece", "Nombre"])
         self.tableWidgetPiecesAssociees.setColumnCount(len(self.listeCleDonnees))
         self.tableWidgetPiecesAssociees.setHorizontalHeaderLabels(self.listeCleDonnees)
@@ -144,6 +151,10 @@ class BonDeTravail(Ui_BonDeTravail):
             self.boutonFlecheGauche.show()
             self.boutonFlecheDoubleGauche.show()
             self.pushButtonValider.setDisabled(False)
+            self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+            self.listeCategoriePiece.sort()
+            self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
+            self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
@@ -218,12 +229,12 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
             self.textEditDescIntervention.wordWrapMode()
             #Remplir le temps estime
-            #TODO: Remplir le temps estime associe a un BDT
             if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
                 self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
-            idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
+            idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"])
+            print("idBDT", idBDT)
             self.labelEcritureBonTravail.setText(idBDT)
             self.tableWidgetPiecesAssociees.setRowCount(0)
             if "Pieces" in self.listeBonDeTravail[self.indiceBonDeTravail]:
@@ -249,7 +260,6 @@ class BonDeTravail(Ui_BonDeTravail):
             # self.labelCacheTemps.setText(str(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"]))
             # self.labelCacheNomTech.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["NomTechnicien"])
 
-    #TODO : creer une methode similaire a chargerBonDeTravail qui va s'occuper de mettre les bonnes informations dans les labels "Ce que j'ai ecrit"
     def remplirBonDeTravail(self):
 
         self.labelCacheNomTech.setText(self.comboBoxNomTech.currentText())
