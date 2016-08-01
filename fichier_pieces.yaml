@@ -1,1 +1,69 @@
 CategoriePiece:
+  Batteries:
+    Batterie 6 V, 3.5 Ah: 12
+    Batterie 9 V: 12
+    Batterie AA: 30
+    Batterie AAA: 50
+  Brassards de pression:
+    Taille 1 an: 4
+    Taille 12-19 cm: 2
+    Taille 12.6-17.3 po: 1
+    Taille 17-25 cm: 4
+    Taille 2 ans: 2
+    Taille 23-33 cm: 5
+    Taille 3 ans: 6
+    Taille 31-40 cm: 1
+    Taille 4 ans: 6
+    Taille 5 ans: 8
+    Taille 8-13 cm: 6
+  Capteurs:
+    Capteur SpO2 Nellcor: 12
+    "Capteur oxyg\xE8ne Nellcor": 2
+    "Paquet de 30 \xE9lectrodes en mousse 530, Kendall": 20
+    "Sondes convexes d'\xE9chographes Toshiba": 1
+    "Sondes lin\xE9aires d'\xE9chographe Toshiba": 1
+  Connecteurs:
+    'Connecteur pour humidificateur ': 6
+  Fusible:
+    ? "Fusible 10A, 250V AC, dim: 6.3mm x 32mm \n"
+    : 1
+    ? "Fusible 12A, 250V AC, dim: 6.3mm x 32mm \n"
+    : 1
+    ? 'Fusible 15A, 250V AC, dim: 6.3mm x 32mm (GSA15)
+
+      '
+    : 2
+    'Fusible 1A, 250V AC dim: 5.2 mm x 20 mm (GGM1)': 4
+    'Fusible 1A, 250V AC dim: 6.3 mm x 32 mm (GGC1)': 10
+    'Fusible 2A, 250V AC dim: 5.2 mm x 20 mm (GSC2)': 10
+    'Fusible 2A, 250V AC dim: 6.3 mm x 32 mm (GGC2, GDL2 (5))': 18
+    'Fusible 4A, 250V AC, dim: 6.3mm x 32mm (GDL4)': 11
+    ? 'Fusible 5A, 250V AC, dim: 6.3mm x 32mm (GGC5)
+
+      '
+    : 6
+    ? "Fusible 5A, 32V , dim: 6.3mm x 32mm \n"
+    : 6
+    'Fusible 6A, 250V AC, dim: 6.3mm x 32mm (GGC6)': 8
+    ? 'Fusible 6A, 250V AC, dim: 6.3mm x 32mm (GGC8)
+
+      '
+    : 4
+  "Halog\xE8ne":
+    "Xenon halog\xE8ne, 3.5V, X-002.88.044": 1
+    "Xenon halog\xE8ne, 3.5V, X-002.88.046": 1
+  Relai:
+    12V DC, 250V AC, 16A - Omron: 5
+    24V DC, 250V AC, 16A - Omron: 5
+    9V DC, 250V AC, 16A - Omron: 5
+  "Table d'op\xE9ration":
+    "Support pour les membres inf\xE9rieurs": 2
+    "Support pour les membres sup\xE9rieurs": 1
+  Testeurs:
+    "Testeur \xE9lectrochirurgie": 1
+  Tubes:
+    Adapteurs de tubes (plastique): 84
+    Tube de calibration: 13
+    Tube de respiration artificielle: 6
+    Tube pour les brassards/moniteur physiologique: 4
+    "Tube \xE0 oxyg\xE8ne": 5
