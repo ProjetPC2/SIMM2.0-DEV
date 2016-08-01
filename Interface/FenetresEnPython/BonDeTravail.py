@@ -12,6 +12,7 @@ from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 
 
 class BonDeTravail(Ui_BonDeTravail):
@@ -54,8 +55,8 @@ class BonDeTravail(Ui_BonDeTravail):
         self.lineEditID.returnPressed.connect(self.chercherEquipement)
 
         #Creation des differents elements utiles pour la sauvegarde
-        self.equipementManager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.yaml')
-        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.yaml', 'DataBase_Equipement.yaml')
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
         self.pieceManager = PieceManager()
         self.equipementDictionnaire = None
         self.listeBonDeTravail = list()
@@ -250,7 +251,7 @@ class BonDeTravail(Ui_BonDeTravail):
                         self.tableWidgetPiecesAssociees.setItem(ligne, 1, QTableWidgetItem(nomPiece))
                         self.tableWidgetPiecesAssociees.setItem(ligne, 2, QTableWidgetItem(str(nombre)))
                         ligne += 1
-                    self.listPieceReparationUtilise.append((categorie, nomPiece, nombre))
+                        self.listPieceReparationUtilise.append((categorie, nomPiece, nombre))
             #inutile
             # self.labelCacheDate.setText(str(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"]))
             # self.labelCacheDescInt.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
