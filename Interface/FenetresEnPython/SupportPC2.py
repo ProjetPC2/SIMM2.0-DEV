@@ -9,6 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from BDD.EquipementManager import EquipementManager
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.SupportPC2UI import Ui_SupportPC2
 
 
@@ -21,7 +22,7 @@ class SupportPC2(Ui_SupportPC2):
         self.boutonRinitialiserStatistiques.clicked.connect(self.recalculerStatistique)
 
     def recalculerStatistique(self):
-        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.equipementManager._recalculStats()
 
 

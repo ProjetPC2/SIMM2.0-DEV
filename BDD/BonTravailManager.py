@@ -210,7 +210,7 @@ class BonTravailManager:
     def _getDB(self):
         try:
             if not os.path.exists(self._pathname):
-                raise OSError("Oups nous ne trouvons plus la bdd équipements!")    # erreur si le path n'existe pas
+                raise OSError("Oups nous ne trouvons plus la bdd Bon De Travail!")    # erreur si le path n'existe pas
             else:
                 db = TinyDB(self._pathname, storage=YAMLStorage)  # data base des équipements
         except OSError as e:

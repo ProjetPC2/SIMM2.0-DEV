@@ -18,6 +18,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 
 from BDD.EquipementManager import EquipementManager
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.StatistiqueUI import Ui_Statistique
 
 
@@ -43,7 +44,7 @@ class Statistique(Ui_Statistique):
         # self.nombreEquipement = 10
         self.ajoutStatistique()
     def ajoutStatistique(self):
-        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
 
         #Mise en place du layout principal
 

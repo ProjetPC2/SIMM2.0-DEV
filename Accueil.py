@@ -26,6 +26,9 @@ from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeTravail
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
 
+import locale
+
+
 
 class Accueil(Ui_Accueil):
     '''
@@ -44,7 +47,8 @@ class Accueil(Ui_Accueil):
         self.sauvegarde = Accueil.sauvegarde
         self.Accueil = Accueil
         self.finChargment = Communicate()
-
+        # Mise en francais des calendriers
+        locale.setlocale(locale.LC_ALL, "fra")
 
     def ajoutAccueil(self):
         '''
@@ -361,7 +365,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.modificationBonDeTravailRecherche = QtWidgets.QWidget()
 
-            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
+            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, self.finChargment, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
             # self.modificationBonDeTravailRecherche.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.modificationBonDeTravailRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationBonDeTravailRecherche)

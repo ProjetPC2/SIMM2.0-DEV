@@ -1,6 +1,7 @@
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from BDD.PieceManager import PieceManager
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.SuppressionBonDeTravailUI import Ui_SuppressionBonDeTravail
 from PyQt5 import QtWidgets
 
@@ -17,8 +18,8 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.lineEditID.returnPressed.connect(self.chercherEquipement)
 
             # Creation des differents elements utiles pour la sauvegarde
-            self.equipementManager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.yaml')
-            self.bonDeTravailManager = BonTravailManager('DataBase_BDT.yaml', 'DataBase_Equipement.yaml')
+            self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+            self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
             self.pieceManager = PieceManager()
 
             self.equipementDictionnaire = dict()

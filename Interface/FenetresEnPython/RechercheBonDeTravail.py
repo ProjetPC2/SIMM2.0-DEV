@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QTableWidgetItem, QCalendarWidget
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.RechercheBonDeTravailUI import Ui_RechercheBonDeTravail
 
 
@@ -20,8 +21,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
     def ajoutRechercheBonDeTravail(self):
         # Recuperation des differents attributs
-        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
-        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.yaml', 'DataBase_Equipement.yaml')
+        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
         # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
