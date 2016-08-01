@@ -176,6 +176,10 @@ Salle:
 - R207 - Planification familiale
 - R201 - Salle de consultation
 - R101 - Salle de consultation
+- R104 - Salle de consultation
+- "R109 - D\xE9pistage et conseils"
+- "R110 - D\xE9pistage et conseils"
+- "R111 - D\xE9pistage et conseils"
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -201,4 +205,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 666
+dernierID-Equipement: 676
