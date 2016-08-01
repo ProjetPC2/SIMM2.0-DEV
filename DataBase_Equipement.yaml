@@ -10299,7 +10299,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '6563'
       Provenance: Croix-Rouge Canadienne
-      Salle: R101
+      Salle: R101 - Salle de consultation
     state:
       eid: 539
   540: !!python/object/new:tinydb.database.Element
@@ -10319,7 +10319,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R101
+      Salle: R101 - Salle de consultation
     state:
       eid: 540
   541: !!python/object/new:tinydb.database.Element
@@ -10602,7 +10602,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R105
+      Salle: R105 - Poste des infimieres
     state:
       eid: 554
   555: !!python/object/new:tinydb.database.Element
@@ -10702,7 +10702,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R101
+      Salle: R101 - Salle de consultation
     state:
       eid: 559
   560: !!python/object/new:tinydb.database.Element
@@ -11417,7 +11417,9 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: 'C-HSM0078
+
+        '
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11429,14 +11431,16 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: Salle de consultation - R101
+      Salle: R101 - Salle de consultation
     state:
       eid: 597
   598: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: 'C-HSM0081
+
+        '
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11448,14 +11452,16 @@ _default:
       NbBonTravail: 0
       NumeroSerie: KD1510442
       Provenance: Croix-Rouge Canadienne
-      Salle: Salle de consultation - R101
+      Salle: R101 - Salle de consultation
     state:
       eid: 598
   599: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de chevet
+      CategorieEquipement: Chariot de soins
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: 'C-HSM0078
+
+        '
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11467,14 +11473,16 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: Salle de consultation - R101
+      Salle: R101 - Salle de consultation
     state:
       eid: 599
   600: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: 'C-HSM0134
+
+        '
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11486,14 +11494,16 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: Poste des infimieres - R105
+      Salle: R105 - Poste des infimieres
     state:
       eid: 600
   601: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: 'C-HSM0129
+
+        '
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11505,14 +11515,16 @@ _default:
       NbBonTravail: 0
       NumeroSerie: KD1510444
       Provenance: Croix-Rouge Canadienne
-      Salle: Poste des infimieres - R105
+      Salle: R105 - Poste des infimieres
     state:
       eid: 601
   602: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Table de chevet
+      CategorieEquipement: Chariot de soins
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: 'C-HSM0126
+
+        '
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11524,6 +11536,47 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: Poste des infimieres - R105
+      Salle: R105 - Poste des infimieres
     state:
       eid: 602
+  603: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0099
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '658'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R102 - Salle de consultation
+    state:
+      eid: 603
+  604:
+    CategorieEquipement: Lampe d'examen
+    CentreService: Clinique externe
+    CodeAsset: 'C-HSM0094
+
+      '
+    Commentaires: ''
+    DateAcquisition: 2016-07-28
+    DateDernierEntretien: 2016-08-01
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    ID: '659'
+    Marque: ''
+    Modele: ''
+    NbBonTravail: 0
+    NumeroSerie: 'KD1510430
+
+      '
+    Provenance: Croix-Rouge Canadienne
+    Salle: R102 - Salle de consultation

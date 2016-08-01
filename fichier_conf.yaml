@@ -74,6 +74,7 @@ CategorieEquipement:
 - "Pupillom\xE8tre"
 - Laser ophtalmique
 - "Cam\xE9ra r\xE9tinienne"
+- Chariot de soins
 CentreService:
 - Urgences
 - Laboratoire
@@ -200,4 +201,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 657
+dernierID-Equipement: 659
