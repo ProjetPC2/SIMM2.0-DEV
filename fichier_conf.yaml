@@ -157,24 +157,24 @@ Salle:
 - IST
 - BOX 5
 - Entrepot Croix Rouge Jacmel
-- "Station des infimi\xE8res - 1103"
-- "D\xE9pistage et conseils - R108"
-- Salle de consultation - R200
-- "Station des infimi\xE8res - 1203"
-- Salle de traitement - 1301
-- Salle de vaccination - R204
-- "Clinique gyn\xE9cologique - R208"
-- Poste des infimieres - R105
-- Salle de consultation - R106
-- Salle de consultation - R102
-- Salle de consultation - R203
-- Salle de consultation - R107
-- Salle de consultation - R103
+- "1103 - Station des infimi\xE8res"
+- "R108 - D\xE9pistage et conseils"
+- R200 - Salle de consultation
+- "1203 - Station des infimi\xE8res"
+- 1301 - Salle de traitement
+- R204 - Salle de vaccination
+- "R208 - Clinique gyn\xE9cologique"
+- R105 - Poste des infimieres
+- R106 - Salle de consultation
+- R102 - Salle de consultation
+- R203 - Salle de consultation
+- R107 - Salle de consultation
+- R103 - Salle de consultation
 - Salle opthalmologie
-- "Clinique pr\xE9natale - R205"
-- Planification familiale - R207
-- Salle de consultation - R201
-- Salle de consultation - R101
+- "R205 - Clinique pr\xE9natale"
+- R207 - Planification familiale
+- R201 - Salle de consultation
+- R101 - Salle de consultation
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
