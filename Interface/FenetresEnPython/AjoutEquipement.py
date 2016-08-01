@@ -3,7 +3,7 @@ from threading import Thread
 
 import yaml
 from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtCore import QDate
+from PyQt5.QtCore import QDate,QLocale
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
@@ -56,7 +56,24 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
+        calendrierAcquisition = QCalendarWidget()
+        # calendrierAcquisition.setNavigationBarVisible(True)
+        # print("format", calendrierAcquisition.horizontalHeaderFormat())
+        calendrierAcquisition.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrierAcquisition.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        calendrierEntretien = QCalendarWidget()
+        calendrierEntretien.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrierEntretien.setGridVisible(True)
+        calendrierEntretien.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        # calendrierAcquisition.setDateTextFormat("Fr")
+        # self.dateEditDateDaquisition.calendarWidget().setNavigationBarVisible(True)
+        self.dateEditDateDaquisition.setCalendarWidget(calendrierAcquisition)
+        self.dateEditDateDaquisition.setLocale(QLocale(QLocale.French, QLocale.France))
+        self.dateEditDateDuDernierEntretien.setCalendarWidget(calendrierEntretien)
+        self.dateEditDateDuDernierEntretien.setLocale(QLocale(QLocale.French, QLocale.France))
 
+
+        # self.dateEditDateDaquisition.calendarWidget().setStyleSheet("background :grey;\n")
         # Creation de la variable equipement qui servira a l'enregistrement dans la BDD
         self.equipement = Equipement()
         self.equipement.ajoutListeMethodes()

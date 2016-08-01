@@ -3,8 +3,8 @@ from threading import Thread
 
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtCore import Qt, QLocale
+from PyQt5.QtWidgets import QTableWidgetItem, QCalendarWidget
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
@@ -55,6 +55,18 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
 
         fichierConf.close()
+
+        #modification calendrier
+        calendrierApres = QCalendarWidget()
+        calendrierApres.setStyleSheet("background :#F5F5F5;\n color: black;")
+        self.calendrierApres.setCalendarWidget(calendrierApres)
+        calendrierApres.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        self.calendrierApres.setLocale(QLocale(QLocale.French, QLocale.France))
+        calendrierAvant = QCalendarWidget()
+        calendrierAvant.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrierAvant.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        self.calendrierAvant.setCalendarWidget(calendrierAvant)
+        self.calendrierAvant.setLocale(QLocale(QLocale.French, QLocale.France))
 
         #Creation des differents colonnes pour le tableau de resultat
         self.listeCleDonnees = list(["ID-EQ", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])

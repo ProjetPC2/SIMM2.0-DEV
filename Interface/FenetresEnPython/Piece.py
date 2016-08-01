@@ -33,12 +33,15 @@ class Piece(Ui_Piece):
         # self.quantitePiece = dict(self.piece['QuantitePiece'])
         # print(self.pieceSelonCentre)
         # print(self.quantitePiece)
+        # self.listeCategoriePiece = list()
+        # self.listeCategoriePiece.append("")
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+        self.listeCategoriePiece.insert(0, "")
+        # self.listeCategoriePiece.append(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.sort()
 
         self.comboBoxSelectionCategoriePiece.currentTextChanged.connect(self.recuperationPieceCategorie)
         self.comboBoxSelectionCategoriePiece.addItems(self.listeCategoriePiece)
-        self.comboBoxCategorieSelectionnee.addItem("")
         self.comboBoxCategorieSelectionnee.addItems(self.listeCategoriePiece)
         self.comboBoxCategorieSelectionnee.currentTextChanged.connect(self.rechercheCategorie)
         # self.
@@ -98,6 +101,16 @@ class Piece(Ui_Piece):
         self.pieceManager.AjouterPiece(self.listeAjoutPiece)
         self.listeAjoutPiece.clear()
         self.enregistrement.enregistrement.emit()
+        self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+        self.listeCategoriePiece.sort()
+        self.listeCategoriePiece.insert(0,"")
+        self.comboBoxSelectionCategoriePiece.clear()
+        self.comboBoxCategorieSelectionnee.clear()
+        self.comboBoxNomPiece.clear()
+        self.comboBoxNomPiece.setCurrentText("")
+        self.comboBoxCategorieSelectionnee.addItems(self.listeCategoriePiece)
+        self.comboBoxSelectionCategoriePiece.addItems(self.listeCategoriePiece)
+
 
 
     def recuperationPieceCategorie(self):
@@ -148,6 +161,7 @@ class Piece(Ui_Piece):
             self.nombreCliqueResume = 1
             self.tableResume.sortByColumn(numeroColonne, Qt.AscendingOrder)
             self.colonneCliqueResume = numeroColonne
+
 class fonctionPiece (Thread):
     def __init__(self, fonction):
         Thread.__init__(self)

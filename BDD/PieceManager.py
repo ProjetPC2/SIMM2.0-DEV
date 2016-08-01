@@ -94,12 +94,15 @@ class PieceManager:
         if piece['CategoriePiece'] is None:
             return listePiece
         else:
-            if piece['CategoriePiece'][categorie] is None:
+            if categorie not in piece['CategoriePiece']:
                 return listePiece
             else:
-                for piece in piece['CategoriePiece'][categorie]:
-                    listePiece.append(piece)
-                return listePiece
+                if piece['CategoriePiece'][categorie] is None:
+                    return listePiece
+                else:
+                    for piece in piece['CategoriePiece'][categorie]:
+                        listePiece.append(piece)
+                    return listePiece
 
     def _ActualiserPiece(self, pieces):
         try:

@@ -2,6 +2,7 @@ import datetime
 
 import yaml
 from PyQt5 import QtGui, QtWidgets
+from PyQt5.QtCore import QLocale
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
@@ -47,6 +48,19 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
+
+
+        #modification des calendriers
+        calendrier = QCalendarWidget()
+        calendrier.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrier.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        self.dateEditDateDaquisition.setCalendarWidget(calendrier)
+        self.dateEditDateDaquisition.setLocale(QLocale(QLocale.French, QLocale.France))
+        calendrierEntretien = QCalendarWidget()
+        calendrierEntretien.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrierEntretien.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        self.dateEditDateDuDernierEntretien.setCalendarWidget(calendrierEntretien)
+        self.dateEditDateDuDernierEntretien.setLocale(QLocale(QLocale.French, QLocale.France))
 
         # Creation de la variable equipement qui servira a l'enregistrement dans la BDD
         self.equipement = Equipement()

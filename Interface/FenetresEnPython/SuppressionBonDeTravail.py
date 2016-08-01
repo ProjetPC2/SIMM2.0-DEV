@@ -1,5 +1,6 @@
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
+from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.SuppressionBonDeTravailUI import Ui_SuppressionBonDeTravail
 from PyQt5 import QtWidgets
 
@@ -16,11 +17,30 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.lineEditID.returnPressed.connect(self.chercherEquipement)
 
             # Creation des differents elements utiles pour la sauvegarde
-            self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
-            self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
+            self.equipementManager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.json')
+            self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.yaml')
+            self.pieceManager = PieceManager()
+
             self.equipementDictionnaire = dict()
             self.listeBonDeTravail = list()
             self.indiceBonDeTravail = 0
+
+            self.listeLabelCache = list()
+            self.listeLabelCache.append(self.labelCacheNomTech)
+            self.listeLabelCache.append(self.labelCacheDate)
+            self.listeLabelCache.append(self.labelCacheTemps)
+            self.listeLabelCache.append(self.labelCacheDescSit)
+            self.listeLabelCache.append(self.labelCacheDescInt)
+
+            for label in self.listeLabelCache:
+                label.hide()
+
+            self.listeWidget = list()
+            self.listeWidget.append(self.textEditDescIntervention)
+            self.listeWidget.append(self.textEditDescSituation)
+            self.listeWidget.append(self.timeEditTempsEstime)
+            self.listeWidget.append(self.labelEcritureBonTravail)
+            self.listeWidget.append(self.dateEdit)
 
             # Connexion des differents boutons
             self.boutonFlecheGauche.clicked.connect(self.bonTravailPrecedent)
@@ -28,7 +48,8 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
             self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
             self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
-
+            self.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail
+                                                    )
     def chercherEquipement(self):
         '''
             Recuperation de l'equipement associe a l'ID dans le cas ou il existe
@@ -58,13 +79,19 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.chargerBonTravail()
         else:
             # Dans le cas ou on ne trouve pas d'equipement associe a cet ID
-            self.labelEcritureCatEquip.setText("")
-            self.labelEcritureCentreService.setText("")
-            self.labelEcritureMarque.setText("")
-            self.labelEcritureSalle.setText("")
-            self.labelEcritureModele.setText("")
+            self.equipementDictionnaire = None
+            self.labelEcritureCatEquip.clear()
+            self.labelEcritureCentreService.clear()
+            self.labelEcritureMarque.clear()
+            self.labelEcritureSalle.clear()
+            self.labelEcritureModele.clear()
+            self.labelEcritureBonTravail.clear()
+            self.dateEdit.clear()
+            self.timeEditTempsEstime.clear()
+            self.textEditDescSituation.clear()
+            self.textEditDescIntervention.clear()
 
-    def sauvegarderBonDeTravail(self):
+    def supprimerBonDeTravail(self):
         '''
            Methode permettant la sauvegarde du bon de travail
            Recuperation des informations des differents champs
@@ -81,7 +108,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
         if (any(self.equipementDictionnaire)):
             # On ajoute le bon de travail a un equipement existant
-            self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees)
+            self.bonDeTravailManager.SupprimerBonTravail(self.equipementDictionnaire["ID"], self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"])
 
     def chargerBonTravail(self):
         '''
