@@ -204,7 +204,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        # self.equipementManager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
+        # self.equipementManager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.yaml')
         self.equipementManager.ModifierEquipement(self. equipementRecherche["ID"], self.equipement.dictionnaire)
 
     def verificationEquipement(self):
@@ -255,13 +255,15 @@ class ModificationEquipement(Ui_ModificationEquipement):
          Utilisation des donnees entrees par l'utilisateur pour les labels
          """
         equipement = self.equipementRecherche
-        self.labelId.setText(equipement["ID"])
+        self.labelId.setText(str(equipement["ID"]))
         indice = 0
         for widget in self.listeWidgets:
             # self.stockage.dictionnaire
             if type(widget) is QLineEdit:
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             elif type(widget) is QDateEdit:
+                date = equipement[self.listeCleDonnees[indice]]
+
                 widget.setDate(equipement[self.listeCleDonnees[indice]])
             elif type(widget) is QComboBox:
                 widget.setCurrentText(equipement[self.listeCleDonnees[indice]])

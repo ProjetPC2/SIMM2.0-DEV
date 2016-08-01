@@ -39,7 +39,7 @@ class Statistique(QWidget):
            # Création des Boutons
         self.nombreEquipement = 10
 
-        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
 
 
 

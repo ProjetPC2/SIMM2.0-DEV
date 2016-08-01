@@ -43,7 +43,7 @@ class Statistique(Ui_Statistique):
         # self.nombreEquipement = 10
         self.ajoutStatistique()
     def ajoutStatistique(self):
-        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
 
         #Mise en place du layout principal
 

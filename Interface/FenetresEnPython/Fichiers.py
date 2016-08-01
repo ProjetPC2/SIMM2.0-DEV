@@ -1,2 +1,2 @@
 pathEquipementDatabase = "DataBase_Equipement.yaml"
-pathBonTravailDatabase = 'DataBase_BDT.json'
+pathBonTravailDatabase = 'DataBase_BDT.ymal'

@@ -21,7 +21,7 @@ class SupportPC2(Ui_SupportPC2):
         self.boutonRinitialiserStatistiques.clicked.connect(self.recalculerStatistique)
 
     def recalculerStatistique(self):
-        self.equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
         self.equipementManager._recalculStats()
 
 

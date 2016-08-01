@@ -95,7 +95,7 @@ class PDF():
         style = styleSheet["Normal"]
 
         #Recuperation des donnees utiles dans les fichiers de la BDD
-        equipementManager = EquipementManager("DataBase_Equipement.json", 'DataBase_BDT.json')
+        equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
             fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire

@@ -39,6 +39,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.listeProvenance = list(self._conf['Provenance'])
 
         #Trie des differentes listes pour les comboBox
+
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
         self.listeCentreService.sort()
@@ -104,7 +105,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if(cle == "ID"):
                 self.equipementSelectionne[cle] = int(self.tableResultats.item(ligne,indice).data(0))
             elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
-                self.equipementSelectionne[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%d-%m-%Y')
+                self.equipementSelectionne[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%Y-%m-%d')
             else:
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             indice += 1

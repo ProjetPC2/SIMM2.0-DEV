@@ -33,8 +33,8 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         for label in self.listeLabel:
             label.clear()
         # Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.json')
-        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.yaml')
+        self.equipementManager = EquipementManager("DataBase_Equipement.yaml", 'DataBase_BDT.yaml')
+        self.bonDeTravailManager = BonTravailManager('DataBase_BDT.yaml', 'DataBase_Equipement.yaml')
         # self.listeCleDonnees = list()
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
