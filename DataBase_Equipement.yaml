@@ -11560,23 +11560,171 @@ _default:
       Salle: R102 - Salle de consultation
     state:
       eid: 603
-  604:
-    CategorieEquipement: Lampe d'examen
-    CentreService: Clinique externe
-    CodeAsset: 'C-HSM0094
+  604: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0094
 
-      '
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-01
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '659'
-    Marque: ''
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: 'KD1510430
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '659'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: 'KD1510430
 
-      '
-    Provenance: Croix-Rouge Canadienne
-    Salle: R102 - Salle de consultation
+        '
+      Provenance: Croix-Rouge Canadienne
+      Salle: R102 - Salle de consultation
+    state:
+      eid: 604
+  605: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0091
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '660'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510430
+      Provenance: Croix-Rouge Canadienne
+      Salle: R102 - Salle de consultation
+    state:
+      eid: 605
+  606: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0111
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '661'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R103 - Salle de consultation
+    state:
+      eid: 606
+  607: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0106
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '662'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: 'KD1510435
+
+        '
+      Provenance: Croix-Rouge Canadienne
+      Salle: R103 - Salle de consultation
+    state:
+      eid: 607
+  608: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0104
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '663'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R103 - Salle de consultation
+    state:
+      eid: 608
+  609: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Archives
+      CodeAsset: 'C-HSM0147
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-01
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '664'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R106 - Salle de consultation
+    state:
+      eid: 609
+  610: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0142
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '665'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510431
+      Provenance: Croix-Rouge Canadienne
+      Salle: R106 - Salle de consultation
+    state:
+      eid: 610
+  611: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0139
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-07-28
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '666'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R106 - Salle de consultation
+    state:
+      eid: 611
