@@ -10360,7 +10360,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '4999'
       Provenance: Croix-Rouge Canadienne
-      Salle: R200
+      Salle: R200 - Salle de consultation
     state:
       eid: 543
   544: !!python/object/new:tinydb.database.Element
@@ -10380,7 +10380,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R200
+      Salle: R200 - Salle de consultation
     state:
       eid: 544
   545: !!python/object/new:tinydb.database.Element
@@ -10663,7 +10663,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R200
+      Salle: R200 - Salle de consultation
     state:
       eid: 558
   559: !!python/object/new:tinydb.database.Element
@@ -11144,7 +11144,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: E22415-0269
       Provenance: Croix-Rouge Canadienne
-      Salle: R200
+      Salle: R200 - Salle de consultation
     state:
       eid: 583
   584: !!python/object/new:tinydb.database.Element
