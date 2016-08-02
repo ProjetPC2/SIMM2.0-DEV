@@ -1,4 +1,4 @@
-nbEquipement: 630
+nbEquipement: 626
 nbEquipementCentreService:
   Archives:
     Chariot de soins: 1
@@ -55,7 +55,7 @@ nbEquipementCentreService:
     "St\xE9rilisateur portable": 0
     "St\xE9rilisateur \xE0 vapeur": 2
     "Support \xE0 solut\xE9s": 4
-    Table d'examen: 19
+    Table d'examen: 16
     Table d'instruments: 3
     Table de chevet: 0
     "Tensiom\xE8tre": 9
@@ -194,7 +194,7 @@ nbEquipementCentreService:
     "N\xE9bulisateur": 5
     "Saturom\xE8tre (Oxym\xE8tre)": 2
     "Support \xE0 solut\xE9s": 7
-    Table d'examen: 6
+    Table d'examen: 5
     Table d'instruments: 6
     "Tensiom\xE8tre": 8
     "Thermom\xE8tre": 2
@@ -208,26 +208,26 @@ nbEquipementCentreService:
     "Scie \xE0 pl\xE2tre": 1
     "Tensiom\xE8tre": 4
 nbEquipementEtatConservation:
-  Acceptable: 448
+  Acceptable: 447
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 114
+  Quasi neuf: 111
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 553
+  En service: 549
 nbEquipementProvenance:
   ? ''
   : 394
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 98
+  Croix-Rouge Canadienne: 95
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1
   PNS: 1
   SCMS: 3
   SMS: 6
-  UGP: 45
+  UGP: 44
   UNFPA: 4
   UNICEF: 1

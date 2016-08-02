@@ -809,7 +809,7 @@ _default:
       EtatService: En service
       ID: '85'
       Marque: GE
-      Modele: Pro Care 300
+      Modele: ProCare 300
       NbBonTravail: 0
       NumeroSerie: AAW05040238SA
       Provenance: ''
@@ -4124,7 +4124,7 @@ _default:
       EtatService: En service
       ID: '262'
       Marque: GE
-      Modele: Procare 400
+      Modele: ProCare 400
       NbBonTravail: 0
       NumeroSerie: AAW06060118SA
       Provenance: ''
@@ -5880,25 +5880,6 @@ _default:
       Salle: Acceuil
     state:
       eid: 309
-  310: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Table d'examen
-      CentreService: Urgences
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: Acceptable
-      EtatService: En service
-      ID: '355'
-      Marque: ''
-      Modele: ''
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: UGP
-      Salle: Acceuil
-    state:
-      eid: 310
   311: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
@@ -5927,7 +5908,7 @@ _default:
       DateAcquisition: 2016-07-26
       DateDernierEntretien: 2016-07-26
       EtatConservation: Acceptable
-      EtatService: En service
+      EtatService: En maintenance
       ID: '357'
       Marque: TEMP PLUS
       Modele: 2080 DX
@@ -9550,7 +9531,7 @@ _default:
       DateAcquisition: 2015-10-02
       DateDernierEntretien: 2015-10-02
       EtatConservation: Acceptable
-      EtatService: En service
+      EtatService: En maintenance
       ID: '548'
       Marque: TEMP PLUS II
       Modele: '2080'
@@ -9761,7 +9742,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En service
       ID: '559'
-      Marque: Temp Plus II
+      Marque: TEMP PLUS II
       Modele: 2080 DX
       NbBonTravail: 0
       NumeroSerie: '3643465'
@@ -9780,7 +9761,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En maintenance
       ID: '560'
-      Marque: Temp Plus II
+      Marque: TEMP PLUS II
       Modele: 2080 D
       NbBonTravail: 0
       NumeroSerie: '3399024'
@@ -9799,7 +9780,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En maintenance
       ID: '561'
-      Marque: Temp Plus II
+      Marque: TEMP PLUS II
       Modele: 2080 D
       NbBonTravail: 0
       NumeroSerie: '3401441'
@@ -9818,7 +9799,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En maintenance
       ID: '562'
-      Marque: Temp Plus II
+      Marque: TEMP PLUS II
       Modele: 2080 D
       NbBonTravail: 0
       NumeroSerie: '3399007'
@@ -11861,70 +11842,11 @@ _default:
       Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 618
-  619: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Table d'examen
-      CentreService: Clinique externe
-      CodeAsset: C-HSM0185
-      Commentaires: ''
-      DateAcquisition: 2016-07-28
-      DateDernierEntretien: 2016-08-01
-      EtatConservation: Quasi neuf
-      EtatService: En service
-      ID: '674'
-      Marque: ''
-      Modele: ''
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: Croix-Rouge Canadienne
-      Salle: "R109 - D\xE9pistage et conseils"
-    state:
-      eid: 619
-  620: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Table d'examen
-      CentreService: Clinique externe
-      CodeAsset: C-HSM0186
-      Commentaires: ''
-      DateAcquisition: 2016-07-28
-      DateDernierEntretien: 2016-08-01
-      EtatConservation: Quasi neuf
-      EtatService: En service
-      ID: '675'
-      Marque: ''
-      Modele: ''
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: Croix-Rouge Canadienne
-      Salle: "R110 - D\xE9pistage et conseils"
-    state:
-      eid: 620
-  621: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Table d'examen
-      CentreService: Clinique externe
-      CodeAsset: C-HSM0186
-      Commentaires: ''
-      DateAcquisition: 2016-07-28
-      DateDernierEntretien: 2016-08-01
-      EtatConservation: Quasi neuf
-      EtatService: En service
-      ID: '676'
-      Marque: ''
-      Modele: ''
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: Croix-Rouge Canadienne
-      Salle: "R111 - D\xE9pistage et conseils"
-    state:
-      eid: 621
   622: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0185
-
-        '
+      CodeAsset: C-HSM0185
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -11943,9 +11865,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0186
-
-        '
+      CodeAsset: C-HSM0186
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12089,7 +12009,7 @@ _default:
       Marque: Detecto
       Modele: '339'
       NbBonTravail: 0
-      NumeroSerie: 'E03415-0234'
+      NumeroSerie: E03415-0234
       Provenance: Croix-Rouge Canadienne
       Salle: "R108 - D\xE9pistage et conseils"
     state:
@@ -12098,15 +12018,15 @@ _default:
     dictitems:
       CategorieEquipement: "R\xE9frig\xE9rateur"
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0180'
+      CodeAsset: C-HSM0180
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '685'
-      Marque: 'Panasonic'
-      Modele: 'SR-L6111W-PA'
+      Marque: Panasonic
+      Modele: SR-L6111W-PA
       NbBonTravail: 0
       NumeroSerie: '150802361'
       Provenance: Croix-Rouge Canadienne
@@ -12117,7 +12037,7 @@ _default:
     dictitems:
       CategorieEquipement: "Cong\xE9lateur"
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0180'
+      CodeAsset: C-HSM0180
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12125,7 +12045,7 @@ _default:
       EtatService: En service
       ID: '686'
       Marque: Panasonic
-      Modele: 'SF-L6111W-PA'
+      Modele: SF-L6111W-PA
       NbBonTravail: 0
       NumeroSerie: '140900668'
       Provenance: Croix-Rouge Canadienne
