@@ -9938,7 +9938,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '6859'
       Provenance: Croix-Rouge Canadienne
-      Salle: Salle consultation externe R107
+      Salle: R107 - Salle de consultation
     state:
       eid: 522
   523: !!python/object/new:tinydb.database.Element
@@ -9958,7 +9958,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: Salle consultation externe R107
+      Salle: R107 - Salle de consultation
     state:
       eid: 523
   524: !!python/object/new:tinydb.database.Element
@@ -10339,7 +10339,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '4989'
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 541
   542: !!python/object/new:tinydb.database.Element
@@ -10359,7 +10359,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 542
   543: !!python/object/new:tinydb.database.Element
@@ -10440,7 +10440,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: (21)AF15F047433
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 546
   547: !!python/object/new:tinydb.database.Element
@@ -10542,7 +10542,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 1555MFE3045
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 551
   552: !!python/object/new:tinydb.database.Element
@@ -10642,7 +10642,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R102
+      Salle: R102 - Salle de consultation
     state:
       eid: 556
   557: !!python/object/new:tinydb.database.Element
@@ -10762,7 +10762,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R107
+      Salle: R107 - Salle de consultation
     state:
       eid: 562
   563: !!python/object/new:tinydb.database.Element
@@ -11182,7 +11182,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: V1672949
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 584
   585: !!python/object/new:tinydb.database.Element
@@ -11220,7 +11220,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '#VALEUR!'
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 586
   587: !!python/object/new:tinydb.database.Element
@@ -11239,7 +11239,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '#VALEUR!'
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 587
   588: !!python/object/new:tinydb.database.Element
@@ -11258,7 +11258,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '#VALEUR!'
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 588
   589: !!python/object/new:tinydb.database.Element
@@ -11275,9 +11275,9 @@ _default:
       Marque: Welch Allyn
       Modele: CP150-1ENB
       NbBonTravail: 0
-      NumeroSerie: '1.00E+11'
+      NumeroSerie: '100028563315'
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 589
   590: !!python/object/new:tinydb.database.Element
@@ -11315,7 +11315,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: N96176
       Provenance: Croix-Rouge Canadienne
-      Salle: R108
+      Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 591
   592: !!python/object/new:tinydb.database.Element
@@ -11918,3 +11918,217 @@ _default:
       Salle: "R111 - D\xE9pistage et conseils"
     state:
       eid: 621
+  622: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0185
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '677'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 622
+  623: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0186
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '678'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 623
+  624: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0187
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '679'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 624
+  625: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0170
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '680'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: 'KD1510429
+
+        '
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 625
+  626: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0175
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '681'
+      Marque: 'ProBasic
+
+        '
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 626
+  627: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0176
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '682'
+      Marque: 'ProBasic
+
+        '
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 627
+  628: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0177
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '683'
+      Marque: 'ProBasic
+
+        '
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 628
+  629: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Balance
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0174
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '684'
+      Marque: Detecto
+      Modele: '339'
+      NbBonTravail: 0
+      NumeroSerie: 'E03415-0234'
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 629
+  630: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "R\xE9frig\xE9rateur"
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0180'
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '685'
+      Marque: 'Panasonic'
+      Modele: 'SR-L6111W-PA'
+      NbBonTravail: 0
+      NumeroSerie: '150802361'
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 630
+  631: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Cong\xE9lateur"
+      CentreService: Clinique externe
+      CodeAsset: 'C-HSM0180'
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '686'
+      Marque: Panasonic
+      Modele: 'SF-L6111W-PA'
+      NbBonTravail: 0
+      NumeroSerie: '140900668'
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 631

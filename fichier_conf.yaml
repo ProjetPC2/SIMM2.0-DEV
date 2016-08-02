@@ -75,6 +75,7 @@ CategorieEquipement:
 - Laser ophtalmique
 - "Cam\xE9ra r\xE9tinienne"
 - Chariot de soins
+- "Cong\xE9lateur"
 CentreService:
 - Urgences
 - Laboratoire
@@ -205,4 +206,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 676
+dernierID-Equipement: 687
