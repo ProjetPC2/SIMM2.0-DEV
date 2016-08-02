@@ -213,7 +213,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
             self.donnees()
             indice = 0
             font = QtGui.QFont()
-            font.setFamily("Times New Roman")
+            font.setFamily("MS Shell Dlg 2")
             font.setPointSize(10)
             for text in self.listeDonnees:
                 if type(self.listeWidgets[indice]) is QButtonGroup:

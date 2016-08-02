@@ -76,6 +76,7 @@ CategorieEquipement:
 - "Cam\xE9ra r\xE9tinienne"
 - Chariot de soins
 - "Cong\xE9lateur"
+- Table de lit
 CentreService:
 - Urgences
 - Laboratoire
@@ -95,6 +96,7 @@ CentreService:
 - Secretaire de direction medicale
 - hopital general
 - Opthalmologie
+- "Hospitalisation m\xE9decine interne"
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -181,6 +183,7 @@ Salle:
 - "R109 - D\xE9pistage et conseils"
 - "R110 - D\xE9pistage et conseils"
 - "R111 - D\xE9pistage et conseils"
+- "1100 - Unit\xE9 soins intensifs"
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -206,4 +209,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 687
+dernierID-Equipement: 699
