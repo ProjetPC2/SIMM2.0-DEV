@@ -9959,7 +9959,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: hopital general 1103
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 524
   525: !!python/object/new:tinydb.database.Element
@@ -10221,7 +10221,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 536
   537: !!python/object/new:tinydb.database.Element
@@ -10260,7 +10260,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 538
   539: !!python/object/new:tinydb.database.Element
@@ -10400,7 +10400,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: '1203'
+      Salle: "1203 - Station des infimi\xE8res"
     state:
       eid: 545
   546: !!python/object/new:tinydb.database.Element
@@ -10442,7 +10442,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: (21)AF15F047432
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 547
   548: !!python/object/new:tinydb.database.Element
@@ -10463,7 +10463,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '5540'
       Provenance: Croix-Rouge Canadienne
-      Salle: '1301'
+      Salle: 1301 - Salle de traitement
     state:
       eid: 548
   549: !!python/object/new:tinydb.database.Element
@@ -10483,7 +10483,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 1555MFE2686
       Provenance: Croix-Rouge Canadienne
-      Salle: '1203'
+      Salle: "1203 - Station des infimi\xE8res"
     state:
       eid: 549
   550: !!python/object/new:tinydb.database.Element
@@ -10503,7 +10503,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 1555MFE2677
       Provenance: Croix-Rouge Canadienne
-      Salle: R204
+      Salle: R204 - Salle de vaccination
     state:
       eid: 550
   551: !!python/object/new:tinydb.database.Element
@@ -10563,7 +10563,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 1555MFE2682
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 553
   554: !!python/object/new:tinydb.database.Element
@@ -10583,7 +10583,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R105 - Poste des infimieres
+      Salle: "R105 - Poste des infirmi\xE8res"
     state:
       eid: 554
   555: !!python/object/new:tinydb.database.Element
@@ -10643,7 +10643,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R203
+      Salle: R203 - Salle de consultation
     state:
       eid: 557
   558: !!python/object/new:tinydb.database.Element
@@ -10703,7 +10703,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: '1301'
+      Salle: 1301 - Salle de traitement
     state:
       eid: 560
   561: !!python/object/new:tinydb.database.Element
@@ -10763,7 +10763,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R103
+      Salle: R103 - Salle de consultation
     state:
       eid: 563
   564: !!python/object/new:tinydb.database.Element
@@ -11011,7 +11011,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 15HF005175
       Provenance: Croix-Rouge Canadienne
-      Salle: '1203'
+      Salle: "1203 - Station des infimi\xE8res"
     state:
       eid: 576
   577: !!python/object/new:tinydb.database.Element
@@ -11030,7 +11030,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 15HF005156
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 577
   578: !!python/object/new:tinydb.database.Element
@@ -11049,7 +11049,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 15HF005169
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 578
   579: !!python/object/new:tinydb.database.Element
@@ -11068,7 +11068,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 15HF005173
       Provenance: Croix-Rouge Canadienne
-      Salle: '1203'
+      Salle: "1203 - Station des infimi\xE8res"
     state:
       eid: 579
   580: !!python/object/new:tinydb.database.Element
@@ -11087,7 +11087,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 15HF005153
       Provenance: Croix-Rouge Canadienne
-      Salle: R204
+      Salle: R204 - Salle de vaccination
     state:
       eid: 580
   581: !!python/object/new:tinydb.database.Element
@@ -11106,7 +11106,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 304112-M14400920005
       Provenance: Croix-Rouge Canadienne
-      Salle: R205
+      Salle: "R205 - Clinique pr\xE9natale"
     state:
       eid: 581
   582: !!python/object/new:tinydb.database.Element
@@ -11125,7 +11125,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 304112-M14400920004
       Provenance: Croix-Rouge Canadienne
-      Salle: R207
+      Salle: R207 - Planification familiale
     state:
       eid: 582
   583: !!python/object/new:tinydb.database.Element
@@ -11182,7 +11182,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '#VALEUR!'
       Provenance: Croix-Rouge Canadienne
-      Salle: R201
+      Salle: R201 - Salle de consultation
     state:
       eid: 585
   586: !!python/object/new:tinydb.database.Element
@@ -11277,7 +11277,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: E23815-0 55
       Provenance: Croix-Rouge Canadienne
-      Salle: R201
+      Salle: R201 - Salle de consultation
     state:
       eid: 590
   591: !!python/object/new:tinydb.database.Element
@@ -11315,7 +11315,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: N94990
       Provenance: Croix-Rouge Canadienne
-      Salle: R204
+      Salle: R204 - Salle de vaccination
     state:
       eid: 592
   593: !!python/object/new:tinydb.database.Element
@@ -11334,7 +11334,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: N96083
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 593
   594: !!python/object/new:tinydb.database.Element
@@ -11353,7 +11353,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: N96250
       Provenance: Croix-Rouge Canadienne
-      Salle: '1103'
+      Salle: "1103 - Station des infimi\xE8res"
     state:
       eid: 594
   595: !!python/object/new:tinydb.database.Element
@@ -11372,7 +11372,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: N96114
       Provenance: Croix-Rouge Canadienne
-      Salle: '1203'
+      Salle: "1203 - Station des infimi\xE8res"
     state:
       eid: 595
   596: !!python/object/new:tinydb.database.Element
@@ -11391,7 +11391,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: N95522
       Provenance: Croix-Rouge Canadienne
-      Salle: '1203'
+      Salle: "1203 - Station des infimi\xE8res"
     state:
       eid: 596
   597: !!python/object/new:tinydb.database.Element
@@ -11467,7 +11467,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: R105 - Poste des infimieres
+      Salle: "R105 - Poste des infirmi\xE8res"
     state:
       eid: 600
   601: !!python/object/new:tinydb.database.Element
@@ -11486,7 +11486,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: KD1510444
       Provenance: Croix-Rouge Canadienne
-      Salle: R105 - Poste des infimieres
+      Salle: "R105 - Poste des infirmi\xE8res"
     state:
       eid: 601
   602: !!python/object/new:tinydb.database.Element
@@ -11505,7 +11505,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: R105 - Poste des infimieres
+      Salle: "R105 - Poste des infirmi\xE8res"
     state:
       eid: 602
   603: !!python/object/new:tinydb.database.Element
