@@ -1,4 +1,3 @@
-nbEquipement: 735
 nbEquipementCentreService:
   Archives:
     Chariot de soins: 1
@@ -74,6 +73,7 @@ nbEquipementCentreService:
     Incubateur: 2
     Ordinateur: 1
     "R\xE9frig\xE9rateur": 4
+  Hospitalisation chirurgie:
   "Hospitalisation m\xE9decine interne":
     Balance: 1
     Chaise roulante: 4
@@ -224,17 +224,14 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 220
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 658
 nbEquipementProvenance:
   ? ''
   : 395
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 203
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1

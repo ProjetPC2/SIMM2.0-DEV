@@ -77,6 +77,7 @@ CategorieEquipement:
 - Chariot de soins
 - "Cong\xE9lateur"
 - Table de lit
+- "Lit orthop\xE9dique"
 CentreService:
 - Urgences
 - Laboratoire
@@ -186,6 +187,8 @@ Salle:
 - 1101 - Salle hospitalisation femme
 - 1102 - Salle hospitalisation homme
 - 1201 - Salle hospitalisation femme
+- "1200 - Salle hospitalisation p\xE9diatrique"
+- 1202 - Salle hospitalisation homme
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -211,4 +214,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 798
+dernierID-Equipement: 858
