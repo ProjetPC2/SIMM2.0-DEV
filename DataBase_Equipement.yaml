@@ -15200,16 +15200,35 @@ _default:
       Salle: 1202 - Salle hospitalisation homme
     state:
       eid: 801
-  802:
+  802: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0663
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '858'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1202 - Salle hospitalisation homme
+    state:
+      eid: 802
+  803:
     CategorieEquipement: Table de chevet
     CentreService: Hospitalisation chirurgie
-    CodeAsset: H-HSM0663
+    CodeAsset: H-HSM0664
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-03
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '858'
+    ID: '859'
     Marque: MERCURY
     Modele: ''
     NbBonTravail: 0
