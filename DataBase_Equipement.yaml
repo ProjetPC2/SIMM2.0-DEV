@@ -1411,7 +1411,7 @@ _default:
   75: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1424,13 +1424,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 75
   76: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1443,13 +1443,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 76
   77: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1462,13 +1462,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 77
   78: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1481,13 +1481,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 78
   79: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1500,13 +1500,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 79
   80: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1519,13 +1519,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 80
   81: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1538,13 +1538,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 81
   82: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1557,13 +1557,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 82
   83: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1576,13 +1576,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 83
   84: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1595,13 +1595,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 84
   85: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1614,13 +1614,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 85
   86: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1633,13 +1633,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 86
   87: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1652,13 +1652,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 87
   88: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1671,13 +1671,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 88
   89: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1690,13 +1690,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 89
   90: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1709,13 +1709,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 90
   91: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1728,13 +1728,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 91
   92: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1747,13 +1747,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 92
   93: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1766,13 +1766,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 93
   94: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1785,13 +1785,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 94
   95: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1804,13 +1804,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 95
   96: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1823,13 +1823,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 96
   97: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1842,13 +1842,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 97
   98: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1861,13 +1861,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 98
   99: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1880,15 +1880,15 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 99
   100: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Lit
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
-      Commentaires: "Il est completement bris\xE9 mais toujours en medecine interne."
+      Commentaires: "Il est completement bris\xE9 mais toujours en "Hospitalisation m\xE9decine interne"."
       DateAcquisition: 2016-07-26
       DateDernierEntretien: 2016-07-26
       EtatConservation: "D\xE9suet"
@@ -1899,13 +1899,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 100
   101: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1918,13 +1918,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 101
   102: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1937,13 +1937,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 102
   103: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1956,13 +1956,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 103
   104: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Balance
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1975,13 +1975,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 104
   105: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -1994,13 +1994,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 105
   106: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: Stocke
       DateAcquisition: 2016-07-26
@@ -2013,13 +2013,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 106
   107: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Chaise roulante
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2032,13 +2032,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 107
   108: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'instruments
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2051,13 +2051,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 108
   109: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2070,13 +2070,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 109
   110: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2089,13 +2089,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 110
   111: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2108,13 +2108,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 111
   112: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2127,13 +2127,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 112
   113: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2146,13 +2146,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 113
   114: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2165,13 +2165,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 114
   115: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2184,13 +2184,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 115
   116: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2203,13 +2203,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 116
   117: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2222,13 +2222,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 117
   118: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2241,13 +2241,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 118
   119: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2260,13 +2260,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 119
   120: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2279,13 +2279,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 120
   121: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2298,13 +2298,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 121
   122: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2317,13 +2317,13 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 122
   123: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de chevet
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-26
@@ -2336,7 +2336,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: ''
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 123
   124: !!python/object/new:tinydb.database.Element
@@ -9734,7 +9734,7 @@ _default:
   513: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Thermom\xE8tre"
-      CentreService: Medecine interne
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2015-10-16
@@ -9747,7 +9747,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '3643465'
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: "Ancien b\xE2timent"
     state:
       eid: 513
   514: !!python/object/new:tinydb.database.Element
@@ -10603,7 +10603,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: n/d
       Provenance: Croix-Rouge Canadienne
-      Salle: R606
+      Salle: R106 - Salle de consultation
     state:
       eid: 555
   556: !!python/object/new:tinydb.database.Element
