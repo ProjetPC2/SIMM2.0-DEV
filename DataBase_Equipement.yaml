@@ -15582,20 +15582,153 @@ _default:
       Salle: "1203 - Station des infirmi\xE8res"
     state:
       eid: 821
-  822:
-    CategorieEquipement: "Civi\xE8re de transport"
+  822: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0698
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '878'
+      Marque: Pedigo
+      Modele: P-170
+      NbBonTravail: 0
+      NumeroSerie: SN061235
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 822
+  823: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0714
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '879'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 823
+  824: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0715
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '880'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 824
+  825: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0716
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '881'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 825
+  826: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0717
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '882'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 826
+  827: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0718
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '883'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 827
+  828: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0719
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '884'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 828
+  829:
+    CategorieEquipement: Balance
     CentreService: Hospitalisation chirurgie
-    CodeAsset: H-HSM0698
+    CodeAsset: H-HSM0725
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-03
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '878'
-    Marque: Pedigo
-    Modele: P-170
+    ID: '885'
+    Marque: Detecto
+    Modele: ''
     NbBonTravail: 0
-    NumeroSerie: SN061235
+    NumeroSerie: 30215-0345
     Provenance: Croix-Rouge Canadienne
 <<<<<<< HEAD
     Salle: 1202 - Salle hospitalisation homme
