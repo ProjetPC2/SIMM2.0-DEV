@@ -10246,7 +10246,7 @@ _default:
   538: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -15219,19 +15219,22 @@ _default:
       Salle: 1202 - Salle hospitalisation homme
     state:
       eid: 802
-  803:
-    CategorieEquipement: Table de chevet
-    CentreService: Hospitalisation chirurgie
-    CodeAsset: H-HSM0664
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-03
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '859'
-    Marque: MERCURY
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: Croix-Rouge Canadienne
-    Salle: 1202 - Salle hospitalisation homme
+  803: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0664
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '859'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1202 - Salle hospitalisation homme
+    state:
+      eid: 803
