@@ -95,6 +95,7 @@ CentreService:
 - Secretaire de direction medicale
 - Opthalmologie
 - "Hospitalisation m\xE9decine interne"
+- Hospitalisation chirurgie
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -184,6 +185,7 @@ Salle:
 - "1100 - Unit\xE9 soins intensifs"
 - 1101 - Salle hospitalisation femme
 - 1102 - Salle hospitalisation homme
+- 1201 - Salle hospitalisation femme
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement

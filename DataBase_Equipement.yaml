@@ -9905,7 +9905,7 @@ _default:
   522: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Otoscope
-      CentreService: "P\xE9diatrie"
+      CentreService: Clinique externe
       CodeAsset: ''
       Commentaires: Neuf. L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -9945,7 +9945,7 @@ _default:
   524: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: "Hospitalisation m\xE9decine interne"
+      CentreService: Clinique externe
       CodeAsset: ''
       Commentaires: Neuf. L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -9954,18 +9954,18 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '570'
-      Marque: veridian
+      Marque: Veridian
       Modele: 02-131
       NbBonTravail: 0
-      NumeroSerie: n/d
+      NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: "1103 - Station des infirmi\xE8res"
+      Salle: 1301 - Salle de traitement
     state:
       eid: 524
   525: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: Inconnu
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: PROBLEME  DE MISE EN INVENTRAIRE LORS DE LA SEANCE DE TRAVAIL
         A L'ENTREPOT DE LA CROIX ROUGE DE JACMEL (30 JAN). L'etiquette de mise en
@@ -9979,15 +9979,15 @@ _default:
       Marque: Riester ou Veridian
       Modele: RI-former ou 02-131
       NbBonTravail: 0
-      NumeroSerie: 1234 ( a changer)
+      NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: Entrepot Croix Rouge Jacmel
+      Salle: 1201 - Salle hospitalisation femme
     state:
       eid: 525
   526: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: Inconnu
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: PROBLEME  DE MISE EN INVENTRAIRE LORS DE LA SEANCE DE TRAVAIL
         A L'ENTREPOT DE LA CROIX ROUGE DE JACMEL (30 JAN). L'etiquette de mise en
@@ -9998,18 +9998,18 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '581'
-      Marque: Riester ou Veridian
-      Modele: RI-former ou 02-131
+      Marque: Veridian
+      Modele: 02-131
       NbBonTravail: 0
-      NumeroSerie: 1234 ( a changer)
+      NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: Entrepot Croix Rouge Jacmel
+      Salle:  "1103 - Station des infirmi\xE8res"
     state:
       eid: 526
   527: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: Inconnu
+      CentreService: Clinique externe
       CodeAsset: ''
       Commentaires: PROBLEME  DE MISE EN INVENTRAIRE LORS DE LA SEANCE DE TRAVAIL
         A L'ENTREPOT DE LA CROIX ROUGE DE JACMEL (30 JAN). L'etiquette de mise en
@@ -10020,12 +10020,12 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '582'
-      Marque: Riester ou Veridian
+      Marque: Veridian
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
       Provenance: Croix-Rouge Canadienne
-      Salle: Entrepot Croix Rouge Jacmel
+      Salle: "R105 - Poste des infirmi\xE8res"
     state:
       eid: 527
   528: !!python/object/new:tinydb.database.Element
@@ -10042,7 +10042,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '583'
-      Marque: Riester ou Veridian
+      Marque: Veridian
       Modele: RI-former ou 02-131
       NbBonTravail: 0
       NumeroSerie: 1234 ( a changer)
@@ -10386,7 +10386,7 @@ _default:
   545: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10448,7 +10448,7 @@ _default:
   548: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Scie \xE0 pl\xE2tre"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016.
@@ -10469,7 +10469,7 @@ _default:
   549: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Glucom\xE8tre"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10689,7 +10689,7 @@ _default:
   560: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10998,7 +10998,7 @@ _default:
   576: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11055,7 +11055,7 @@ _default:
   579: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11359,7 +11359,7 @@ _default:
   595: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11378,7 +11378,7 @@ _default:
   596: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: "Hospitalisation chirurgie"
+      CentreService: Hospitalisation chirurgie
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -13161,19 +13161,22 @@ _default:
       Salle: 1102 - Salle hospitalisation homme
     state:
       eid: 692
-  693:
-    CategorieEquipement: Table de chevet
-    CentreService: "Hospitalisation m\xE9decine interne"
-    CodeAsset: H-HSM0478
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-02
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '749'
-    Marque: MERCURY
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: Croix-Rouge Canadienne
-    Salle: 1102 - Salle hospitalisation homme
+  693: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0478
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '749'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 693
