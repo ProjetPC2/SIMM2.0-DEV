@@ -13161,19 +13161,461 @@ _default:
       Salle: 1102 - Salle hospitalisation homme
     state:
       eid: 692
-  693:
-    CategorieEquipement: Table de chevet
-    CentreService: "Hospitalisation m\xE9decine interne"
-    CodeAsset: H-HSM0478
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-02
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '749'
-    Marque: MERCURY
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: Croix-Rouge Canadienne
-    Salle: 1102 - Salle hospitalisation homme
+  693: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0478
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '749'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 693
+  694: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0479
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '750'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 694
+  695: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0480
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '751'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 695
+  696: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0481
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '752'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 696
+  697: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0482
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '753'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 697
+  698: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0483
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '754'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 698
+  699: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0484
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '755'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 699
+  700: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0485
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '756'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 700
+  701: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0486
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '757'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 701
+  702: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0487
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '758'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 702
+  703: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0488
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '759'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 703
+  704: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0489
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '760'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 704
+  705: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0490
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '761'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 705
+  706: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0491
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '762'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1102 - Salle hospitalisation homme
+    state:
+      eid: 706
+  707: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0509
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '763'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 707
+  708: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0510
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '764'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 708
+  709: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0511
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '765'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 709
+  710: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0512
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '766'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 710
+  711: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0513
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '767'
+      Marque: Pedigo
+      Modele: P-170
+      NbBonTravail: 0
+      NumeroSerie: SN061236
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 711
+  712: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: 'H-HSM0514
+
+        '
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '768'
+      Marque: Pedigo
+      Modele: P-170
+      NbBonTravail: 0
+      NumeroSerie: SN061234
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 712
+  715: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0531
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '771'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 715
+  716: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0532
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '772'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 716
+  717: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0533
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '773'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 717
+  718: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0534
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '774'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 718
