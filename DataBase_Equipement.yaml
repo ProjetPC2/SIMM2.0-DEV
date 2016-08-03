@@ -1888,7 +1888,7 @@ _default:
       CategorieEquipement: Lit
       CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
-      Commentaires: "Il est completement bris\xE9 mais toujours en "Hospitalisation m\xE9decine interne"."
+      Commentaires: "Il est completement bris\xE9 mais toujours en m\xE9decine interne"
       DateAcquisition: 2016-07-26
       DateDernierEntretien: 2016-07-26
       EtatConservation: "D\xE9suet"
