@@ -15466,19 +15466,133 @@ _default:
       Salle: 1202 - Salle hospitalisation homme
     state:
       eid: 815
-  816:
-    CategorieEquipement: Table de lit
+  816: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0677
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '872'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1202 - Salle hospitalisation homme
+    state:
+      eid: 816
+  817: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0693
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '873'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 817
+  818: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0694
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '874'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 818
+  819: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0695
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '875'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 819
+  820: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0696
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '876'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 820
+  821: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0697
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '877'
+      Marque: Pedigo
+      Modele: P-170
+      NbBonTravail: 0
+      NumeroSerie: SN061233
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 821
+  822:
+    CategorieEquipement: "Civi\xE8re de transport"
     CentreService: Hospitalisation chirurgie
-    CodeAsset: H-HSM0677
+    CodeAsset: H-HSM0698
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-03
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '872'
-    Marque: ''
-    Modele: ''
+    ID: '878'
+    Marque: Pedigo
+    Modele: P-170
     NbBonTravail: 0
-    NumeroSerie: ''
+    NumeroSerie: SN061235
     Provenance: Croix-Rouge Canadienne
-    Salle: 1202 - Salle hospitalisation homme
+    Salle: "1203 - Station des infirmi\xE8res"
