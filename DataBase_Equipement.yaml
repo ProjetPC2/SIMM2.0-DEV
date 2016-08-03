@@ -13180,8 +13180,6 @@ _default:
       Salle: 1102 - Salle hospitalisation homme
     state:
       eid: 693
-<<<<<<< HEAD
-=======
   694: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de lit
@@ -14078,4 +14076,4 @@ _default:
     NumeroSerie: ''
     Provenance: Croix-Rouge Canadienne
     Salle: "1103 - Station des infirmi\xE8res"
->>>>>>> origin/master
+
