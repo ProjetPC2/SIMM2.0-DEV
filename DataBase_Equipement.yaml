@@ -11398,9 +11398,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0078
-
-        '
+      CodeAsset: C-HSM0078
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11419,9 +11417,7 @@ _default:
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0081
-
-        '
+      CodeAsset: C-HSM0081
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11440,9 +11436,7 @@ _default:
     dictitems:
       CategorieEquipement: Chariot de soins
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0078
-
-        '
+      CodeAsset: C-HSM0078
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11461,9 +11455,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0134
-
-        '
+      CodeAsset: C-HSM0134
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11482,9 +11474,7 @@ _default:
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0129
-
-        '
+      CodeAsset: C-HSM0129
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11503,9 +11493,7 @@ _default:
     dictitems:
       CategorieEquipement: Chariot de soins
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0126
-
-        '
+      CodeAsset: C-HSM0126
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-07-28
@@ -11524,9 +11512,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0099
-
-        '
+      CodeAsset: C-HSM0099
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-01
@@ -11545,9 +11531,7 @@ _default:
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0094
-
-        '
+      CodeAsset: C-HSM0094
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-01
@@ -11557,9 +11541,7 @@ _default:
       Marque: ''
       Modele: ''
       NbBonTravail: 0
-      NumeroSerie: 'KD1510430
-
-        '
+      NumeroSerie: KD1510430
       Provenance: Croix-Rouge Canadienne
       Salle: R102 - Salle de consultation
     state:
@@ -11568,9 +11550,7 @@ _default:
     dictitems:
       CategorieEquipement: Chariot de soins
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0091
-
-        '
+      CodeAsset: C-HSM0091
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-01
@@ -11589,9 +11569,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0111
-
-        '
+      CodeAsset: C-HSM0111
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-01
@@ -11610,9 +11588,7 @@ _default:
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0106
-
-        '
+      CodeAsset: C-HSM0106
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-01
@@ -11622,9 +11598,7 @@ _default:
       Marque: ''
       Modele: ''
       NbBonTravail: 0
-      NumeroSerie: 'KD1510435
-
-        '
+      NumeroSerie: KD1510435
       Provenance: Croix-Rouge Canadienne
       Salle: R103 - Salle de consultation
     state:
@@ -11633,9 +11607,7 @@ _default:
     dictitems:
       CategorieEquipement: Chariot de soins
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0104
-
-        '
+      CodeAsset: C-HSM0104
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-01
@@ -11654,9 +11626,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Archives
-      CodeAsset: 'C-HSM0147
-
-        '
+      CodeAsset: C-HSM0147
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-01
@@ -11884,9 +11854,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0187
-
-        '
+      CodeAsset: C-HSM0187
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -11905,9 +11873,7 @@ _default:
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0170
-
-        '
+      CodeAsset: C-HSM0170
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -11917,9 +11883,7 @@ _default:
       Marque: ''
       Modele: ''
       NbBonTravail: 0
-      NumeroSerie: 'KD1510429
-
-        '
+      NumeroSerie: KD1510429
       Provenance: Croix-Rouge Canadienne
       Salle: "R108 - D\xE9pistage et conseils"
     state:
@@ -11928,18 +11892,14 @@ _default:
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0175
-
-        '
+      CodeAsset: C-HSM0175
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '681'
-      Marque: 'ProBasic
-
-        '
+      Marque: ProBasic
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -11951,18 +11911,14 @@ _default:
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0176
-
-        '
+      CodeAsset: C-HSM0176
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '682'
-      Marque: 'ProBasic
-
-        '
+      Marque: ProBasic
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -11974,18 +11930,14 @@ _default:
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0177
-
-        '
+      CodeAsset: C-HSM0177
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '683'
-      Marque: 'ProBasic
-
-        '
+      Marque: ProBasic
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -11997,9 +11949,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: Clinique externe
-      CodeAsset: 'C-HSM0174
-
-        '
+      CodeAsset: C-HSM0174
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12056,9 +12006,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0396
-
-        '
+      CodeAsset: H-HSM0396
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12077,9 +12025,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0397
-
-        '
+      CodeAsset: H-HSM0397
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12098,9 +12044,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0398
-
-        '
+      CodeAsset: H-HSM0398
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12119,9 +12063,7 @@ _default:
     dictitems:
       CategorieEquipement: Lit
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0399
-
-        '
+      CodeAsset: H-HSM0399
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12140,18 +12082,14 @@ _default:
     dictitems:
       CategorieEquipement: Table de chevet
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0400
-
-        '
+      CodeAsset: H-HSM0400
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '692'
-      Marque: 'MERCURY
-
-        '
+      Marque: MERCURY
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -12163,18 +12101,14 @@ _default:
     dictitems:
       CategorieEquipement: Table de chevet
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0401
-
-        '
+      CodeAsset: H-HSM0401
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '693'
-      Marque: 'MERCURY
-
-        '
+      Marque: MERCURY
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -12186,9 +12120,7 @@ _default:
     dictitems:
       CategorieEquipement: Table de chevet
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0402
-
-        '
+      CodeAsset: H-HSM0402
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12207,9 +12139,7 @@ _default:
     dictitems:
       CategorieEquipement: Table de chevet
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0403
-
-        '
+      CodeAsset: H-HSM0403
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12228,9 +12158,7 @@ _default:
     dictitems:
       CategorieEquipement: Table de lit
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0404
-
-        '
+      CodeAsset: H-HSM0404
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12249,9 +12177,7 @@ _default:
     dictitems:
       CategorieEquipement: Table de lit
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0405
-
-        '
+      CodeAsset: H-HSM0405
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12270,9 +12196,7 @@ _default:
     dictitems:
       CategorieEquipement: Table de lit
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0406
-
-        '
+      CodeAsset: H-HSM0406
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-02
@@ -12287,21 +12211,475 @@ _default:
       Salle: "1100 - Unit\xE9 soins intensifs"
     state:
       eid: 642
-  643:
+  643: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0407
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '699'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1100 - Unit\xE9 soins intensifs"
+    state:
+      eid: 643
+  644: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0416
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '700'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 644
+  645: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0417
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '701'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 645
+  646: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0418
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '702'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 646
+  647: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0419
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '703'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 647
+  648: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0420
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '704'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 648
+  649: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0421
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '705'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 649
+  650: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0422
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '706'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 650
+  651: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0423
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '707'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 651
+  652: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0424
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '708'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 652
+  653: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0425
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '709'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 653
+  654: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0426
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '710'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 654
+  655: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0427
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '711'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 655
+  656: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0428
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '712'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 656
+  657: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0429
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '713'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 657
+  658: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0430
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '714'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 658
+  659: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0431
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '715'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 659
+  660: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0432
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '716'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 660
+  661: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0433
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '717'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 661
+  662: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0434
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '718'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 662
+  663: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0435
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '719'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 663
+  664: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0436
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '720'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 664
+  665: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0437
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '721'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 665
+  666: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: H-HSM0438
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-02
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '722'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1101 - Salle hospitalisation femme
+    state:
+      eid: 666
+  667:
     CategorieEquipement: Table de lit
     CentreService: "Hospitalisation m\xE9decine interne"
-    CodeAsset: 'H-HSM0407
-
-      '
+    CodeAsset: H-HSM0439
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-02
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '699'
+    ID: '723'
     Marque: ''
     Modele: ''
     NbBonTravail: 0
     NumeroSerie: ''
     Provenance: Croix-Rouge Canadienne
-    Salle: "1100 - Unit\xE9 soins intensifs"
+    Salle: 1101 - Salle hospitalisation femme

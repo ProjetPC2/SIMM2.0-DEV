@@ -1,4 +1,4 @@
-nbEquipement: 638
+nbEquipement: 662
 nbEquipementCentreService:
   Archives:
     Chariot de soins: 1
@@ -75,9 +75,9 @@ nbEquipementCentreService:
     Ordinateur: 1
     "R\xE9frig\xE9rateur": 4
   "Hospitalisation m\xE9decine interne":
-    Lit: 4
-    Table de chevet: 4
-    Table de lit: 4
+    Lit: 12
+    Table de chevet: 12
+    Table de lit: 12
   Inconnu:
     Analyseur biochimie: 1
     Autre: 1
@@ -215,17 +215,17 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 123
+  Quasi neuf: 147
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 561
+  En service: 585
 nbEquipementProvenance:
   ? ''
   : 394
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 107
+  Croix-Rouge Canadienne: 131
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1

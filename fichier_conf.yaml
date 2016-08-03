@@ -184,6 +184,7 @@ Salle:
 - "R110 - D\xE9pistage et conseils"
 - "R111 - D\xE9pistage et conseils"
 - "1100 - Unit\xE9 soins intensifs"
+- 1101 - Salle hospitalisation femme
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -209,4 +210,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 699
+dernierID-Equipement: 723
