@@ -9945,7 +9945,7 @@ _default:
   524: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: Neuf. L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10207,7 +10207,7 @@ _default:
   536: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10246,7 +10246,7 @@ _default:
   538: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10386,7 +10386,7 @@ _default:
   545: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10427,7 +10427,7 @@ _default:
   547: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016.
@@ -10448,7 +10448,7 @@ _default:
   548: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Scie \xE0 pl\xE2tre"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016.
@@ -10469,7 +10469,7 @@ _default:
   549: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Glucom\xE8tre"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10549,7 +10549,7 @@ _default:
   553: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Glucom\xE8tre"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10689,7 +10689,7 @@ _default:
   560: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
@@ -10998,7 +10998,7 @@ _default:
   576: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11017,7 +11017,7 @@ _default:
   577: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11036,7 +11036,7 @@ _default:
   578: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11055,7 +11055,7 @@ _default:
   579: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11321,7 +11321,7 @@ _default:
   593: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11340,7 +11340,7 @@ _default:
   594: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: hopital general
+      CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11359,7 +11359,7 @@ _default:
   595: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
@@ -11378,7 +11378,7 @@ _default:
   596: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: hopital general
+      CentreService: "Hospitalisation chirurgie"
       CodeAsset: ''
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
