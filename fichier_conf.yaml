@@ -78,6 +78,7 @@ CategorieEquipement:
 - "Cong\xE9lateur"
 - Table de lit
 - "Lit orthop\xE9dique"
+- "Table de consultation gyn\xE9cologique"
 CentreService:
 - Urgences
 - Laboratoire
@@ -97,6 +98,7 @@ CentreService:
 - Opthalmologie
 - "Hospitalisation m\xE9decine interne"
 - Hospitalisation chirurgie
+- "Services g\xE9n\xE9raux"
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -190,6 +192,10 @@ Salle:
 - 1201 - Salle hospitalisation femme
 - "1200 - Salle hospitalisation p\xE9diatrique"
 - 1202 - Salle hospitalisation homme
+- 1404 - Salle d'isolement 1
+- 1405 - Salle d'isolement 2
+- "1504 - Bureau des m\xE9decins"
+- "1505 - Bureau des m\xE9decins"
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -215,4 +221,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 885
+dernierID-Equipement: 934

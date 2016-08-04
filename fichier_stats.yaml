@@ -1,4 +1,4 @@
-nbEquipement: 828
+nbEquipement: 877
 nbEquipementCentreService:
   Archives:
     Chariot de soins: 1
@@ -39,12 +39,12 @@ nbEquipementCentreService:
     Balance: 4
     "Balance p\xE9diatrique": 2
     Chaise dentiste: 1
-    Chariot de soins: 6
+    Chariot de soins: 10
     "Concentrateur d'oxyg\xE8ne": 1
     "Cong\xE9lateur": 1
     "D\xE9fibrilateur": 1
     "Glucom\xE8tre": 3
-    Lampe d'examen: 9
+    Lampe d'examen: 14
     "Moniteur f\u0153tal": 2
     "N\xE9bulisateur": 3
     "N\xE9gatoscope (moniteur de radiographie)": 10
@@ -55,9 +55,10 @@ nbEquipementCentreService:
     "St\xE9rilisateur portable": 0
     "St\xE9rilisateur \xE0 vapeur": 2
     "Support \xE0 solut\xE9s": 4
-    Table d'examen: 16
+    Table d'examen: 19
     Table d'instruments: 3
     Table de chevet: 0
+    "Table de consultation gyn\xE9cologique": 1
     "Tensiom\xE8tre": 9
     Toise: 1
     UPS: 5
@@ -77,12 +78,19 @@ nbEquipementCentreService:
   Hospitalisation chirurgie:
     Balance: 1
     Chaise roulante: 6
-    Chariot de soins: 8
+    Chariot de soins: 9
     "Civi\xE8re de transport": 4
+    "Cong\xE9lateur": 1
+    Lampe d'examen: 1
+    Lit: 2
     "Lit orthop\xE9dique": 25
-    Table de chevet: 25
+    "R\xE9frig\xE9rateur": 1
+    "Support \xE0 solut\xE9s": 20
+    Table d'examen: 1
+    Table d'instruments: 1
+    Table de chevet: 27
+    Table de lit: 26
     "Tensiom\xE8tre": 0
-    Table de lit: 24
   "Hospitalisation m\xE9decine interne":
     Balance: 1
     Chaise roulante: 4
@@ -200,6 +208,9 @@ nbEquipementCentreService:
     Table d'examen: 3
   Secretaire de direction medicale:
     Imprimante: 1
+  "Services g\xE9n\xE9raux":
+    Lit: 2
+    Table de chevet: 2
   Urgences:
     Analyseur biochimie: 1
     "Analyseur h\xE9matologie": 1
@@ -233,17 +244,17 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 313
+  Quasi neuf: 362
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 751
+  En service: 800
 nbEquipementProvenance:
   ? ''
   : 395
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 296
+  Croix-Rouge Canadienne: 345
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1

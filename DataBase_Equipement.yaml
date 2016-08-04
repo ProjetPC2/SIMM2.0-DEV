@@ -15713,20 +15713,950 @@ _default:
       Salle: "1203 - Station des infirmi\xE8res"
     state:
       eid: 828
-  829:
-    CategorieEquipement: Balance
-    CentreService: Hospitalisation chirurgie
-    CodeAsset: H-HSM0725
+  829: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Balance
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0725
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-03
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '885'
+      Marque: Detecto
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: 30215-0345
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 829
+  830: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0726
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '886'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 830
+  831: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0727
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '887'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 831
+  832: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0728
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '888'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 832
+  833: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0729
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '889'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 833
+  834: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0730
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '890'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 834
+  835: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0731
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '891'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 835
+  836: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0732
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '892'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 836
+  837: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0733
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '893'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 837
+  838: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0734
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '894'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 838
+  839: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0735
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '895'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 839
+  840: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0736
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '896'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 840
+  841: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0737
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '897'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 841
+  842: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0738
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '898'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 842
+  843: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0739
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '899'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 843
+  844: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0740
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '900'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 844
+  845: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0741
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '901'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 845
+  846: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0742
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '902'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 846
+  847: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0743
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '903'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 847
+  848: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0744
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '904'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 848
+  849: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0745
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '905'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 849
+  850: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "R\xE9frig\xE9rateur"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0750
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '906'
+      Marque: Panasonic
+      Modele: SR-L6111W
+      NbBonTravail: 0
+      NumeroSerie: '150150802177'
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 850
+  851: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Cong\xE9lateur"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0750
+      Commentaires: "Il manque le num\xE9ro de s\xE9rie"
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '907'
+      Marque: Panasonic
+      Modele: SF-L6111W
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1201 - Salle hospitalisation femme
+    state:
+      eid: 851
+  852: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'instruments
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0755
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '908'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1203 - Station des infirmi\xE8res"
+    state:
+      eid: 852
+  853: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0772
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '909'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1301 - Salle de traitement
+    state:
+      eid: 853
+  854: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0777
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '910'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510436
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1301 - Salle de traitement
+    state:
+      eid: 854
+  855: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0785
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '911'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1301 - Salle de traitement
+    state:
+      eid: 855
+  856: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0787
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '912'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1404 - Salle d'isolement 1
+    state:
+      eid: 856
+  857: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0788
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '913'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1404 - Salle d'isolement 1
+    state:
+      eid: 857
+  858: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0789
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '914'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1404 - Salle d'isolement 1
+    state:
+      eid: 858
+  859: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0791
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '915'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1405 - Salle d'isolement 2
+    state:
+      eid: 859
+  860: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0792
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '916'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1405 - Salle d'isolement 2
+    state:
+      eid: 860
+  861: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de lit
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: H-HSM0793
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '917'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1405 - Salle d'isolement 2
+    state:
+      eid: 861
+  862: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Services g\xE9n\xE9raux"
+      CodeAsset: H-HSM0798
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '918'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1504 - Bureau des m\xE9decins"
+    state:
+      eid: 862
+  863: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Services g\xE9n\xE9raux"
+      CodeAsset: H-HSM0800
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '919'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1504 - Bureau des m\xE9decins"
+    state:
+      eid: 863
+  864: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Services g\xE9n\xE9raux"
+      CodeAsset: H-HSM0805
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '920'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1505 - Bureau des m\xE9decins"
+    state:
+      eid: 864
+  865: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Services g\xE9n\xE9raux"
+      CodeAsset: H-HSM0807
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '921'
+      Marque: MERCURY
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1505 - Bureau des m\xE9decins"
+    state:
+      eid: 865
+  866: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0193
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '922'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R200 - Salle de consultation
+    state:
+      eid: 866
+  867: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0195
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '923'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R200 - Salle de consultation
+    state:
+      eid: 867
+  868: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Table de consultation gyn\xE9cologique"
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0200
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '924'
+      Marque: UMF Medical
+      Modele: 5240-145
+      NbBonTravail: 0
+      NumeroSerie: 123395-0017
+      Provenance: Croix-Rouge Canadienne
+      Salle: R200 - Salle de consultation
+    state:
+      eid: 868
+  869: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '925'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R201 - Salle de consultation
+    state:
+      eid: 869
+  870: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '926'
+      Marque: UMF Medical
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: 123395-0018
+      Provenance: Croix-Rouge Canadienne
+      Salle: R201 - Salle de consultation
+    state:
+      eid: 870
+  871: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '927'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510428
+      Provenance: Croix-Rouge Canadienne
+      Salle: R201 - Salle de consultation
+    state:
+      eid: 871
+  872: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0214
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '928'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R202 - Salle de consultation
+    state:
+      eid: 872
+  873: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0216
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '929'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510438
+      Provenance: Croix-Rouge Canadienne
+      Salle: R202 - Salle de consultation
+    state:
+      eid: 873
+  874: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0221
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '930'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R202 - Salle de consultation
+    state:
+      eid: 874
+  875: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0226
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '931'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R203 - Salle de consultation
+    state:
+      eid: 875
+  876: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0228
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '932'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510440
+      Provenance: Croix-Rouge Canadienne
+      Salle: R203 - Salle de consultation
+    state:
+      eid: 876
+  877: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0233
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '933'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R203 - Salle de consultation
+    state:
+      eid: 877
+  878:
+    CategorieEquipement: Chariot de soins
+    CentreService: Clinique externe
+    CodeAsset: C-HSM0239
     Commentaires: ''
     DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-03
+    DateDernierEntretien: 2016-08-04
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '885'
-    Marque: Detecto
+    ID: '934'
+    Marque: ''
     Modele: ''
     NbBonTravail: 0
-    NumeroSerie: 30215-0345
+    NumeroSerie: ''
     Provenance: Croix-Rouge Canadienne
-    Salle: "1203 - Station des infirmi\xE8res"
-
+    Salle: R204 - Salle de vaccination
