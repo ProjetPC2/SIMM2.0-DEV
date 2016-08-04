@@ -13623,9 +13623,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0540
-
-        '
+      CodeAsset: 'H-HSM0540'
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-03
@@ -13635,9 +13633,7 @@ _default:
       Marque: Detecto
       Modele: ''
       NbBonTravail: 0
-      NumeroSerie: 'E30715-0127
-
-        '
+      NumeroSerie: 'E30715-0127'
       Provenance: Croix-Rouge Canadienne
       Salle: "1103 - Station des infirmi\xE8res"
     state:
