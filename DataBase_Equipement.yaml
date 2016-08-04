@@ -16640,16 +16640,35 @@ _default:
       Salle: R203 - Salle de consultation
     state:
       eid: 877
-  878:
-    CategorieEquipement: Chariot de soins
+  878: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0239
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '934'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R204 - Salle de vaccination
+    state:
+      eid: 878
+  879:
+    CategorieEquipement: Table de chevet
     CentreService: Clinique externe
-    CodeAsset: C-HSM0239
+    CodeAsset: ''
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-04
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '934'
+    ID: '935'
     Marque: ''
     Modele: ''
     NbBonTravail: 0
