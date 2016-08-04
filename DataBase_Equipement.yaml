@@ -15238,8 +15238,6 @@ _default:
       Salle: 1202 - Salle hospitalisation homme
     state:
       eid: 803
-<<<<<<< HEAD
-=======
   804: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table de lit
@@ -15730,9 +15728,5 @@ _default:
     NbBonTravail: 0
     NumeroSerie: 30215-0345
     Provenance: Croix-Rouge Canadienne
-<<<<<<< HEAD
-    Salle: 1202 - Salle hospitalisation homme
->>>>>>> origin/master
-=======
     Salle: "1203 - Station des infirmi\xE8res"
->>>>>>> origin/master
+

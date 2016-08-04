@@ -81,12 +81,8 @@ nbEquipementCentreService:
     "Civi\xE8re de transport": 4
     "Lit orthop\xE9dique": 25
     Table de chevet: 25
-<<<<<<< HEAD
-    Table de lit: 11
     "Tensiom\xE8tre": 0
-=======
     Table de lit: 24
->>>>>>> origin/master
   "Hospitalisation m\xE9decine interne":
     Balance: 1
     Chaise roulante: 4
