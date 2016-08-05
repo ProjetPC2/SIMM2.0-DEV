@@ -17191,19 +17191,190 @@ _default:
       Salle: R307 - Radiographie dentaire
     state:
       eid: 906
-  907:
-    CategorieEquipement: "Unit\xE9 de rayon X intra-oral"
-    CentreService: Clinique externe
-    CodeAsset: D-HSM0331
+  907: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de rayon X intra-oral"
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0331
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '963'
+      Marque: Sirona
+      Modele: Heliodent Plus, Schick Sensors
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R307 - Radiographie dentaire
+    state:
+      eid: 907
+  908: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '571'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1301 - Salle de traitement
+    state:
+      eid: 908
+  909: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Otoscope
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '572'
+      Marque: Riester
+      Modele: RI-former
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R106 - Salle de consultation
+    state:
+      eid: 909
+  910: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '573'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R106 - Salle de consultation
+    state:
+      eid: 910
+  911: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Otoscope
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '574'
+      Marque: Riester
+      Modele: 'RI-former'
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R202 - Salle de consultation
+    state:
+      eid: 911
+  912: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '575'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R202 - Salle de consultation
+    state:
+      eid: 912
+  913: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Otoscope
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '576'
+      Marque: Riester
+      Modele: RI-former
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R203 - Salle de consultation
+    state:
+      eid: 913
+  914: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '577'
+      Marque: 'Veridian'
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R203 - Salle de consultation
+    state:
+      eid: 914
+  915: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '578'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 915
+  916:
+    CategorieEquipement: "Tensiom\xE8tre"
+    CentreService: Hospitalisation chirurgie
+    CodeAsset: ''
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-05
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '963'
-    Marque: Sirona
-    Modele: Heliodent Plus, Schick Sensors
+    ID: '579'
+    Marque: Veridian
+    Modele: 02-131
     NbBonTravail: 0
     NumeroSerie: ''
     Provenance: Croix-Rouge Canadienne
-    Salle: R307 - Radiographie dentaire
+    Salle: 1201 - Salle hospitalisation femme
