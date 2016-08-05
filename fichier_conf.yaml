@@ -79,6 +79,8 @@ CategorieEquipement:
 - Table de lit
 - "Lit orthop\xE9dique"
 - "Table de consultation gyn\xE9cologique"
+- Microscope ophtalmologique
+- Table d'examen ophtalmologie
 CentreService:
 - Urgences
 - Laboratoire
@@ -196,6 +198,9 @@ Salle:
 - 1405 - Salle d'isolement 2
 - "1504 - Bureau des m\xE9decins"
 - "1505 - Bureau des m\xE9decins"
+- "R206 - Clinique pr\xE9natale"
+- R300- Salle de traitement
+- "R303- Salle de r\xE9veil"
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -221,4 +226,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 935
+dernierID-Equipement: 954
