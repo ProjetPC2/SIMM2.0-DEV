@@ -4829,7 +4829,7 @@ _default:
       Marque: SECA
       Modele: 725 102 1009
       NbBonTravail: 0
-      NumeroSerie: '2.73E+12'
+      NumeroSerie: 2725173093112
       Provenance: ''
       Salle: Salle de travail
     state:
@@ -4848,7 +4848,7 @@ _default:
       Marque: SECA
       Modele: 725 102 1009
       NbBonTravail: 0
-      NumeroSerie: '2.73E+12'
+      NumeroSerie: 2725292053721
       Provenance: ''
       Salle: Salle de travail
     state:
@@ -6445,7 +6445,7 @@ _default:
       Marque: RESPIRONICS
       Modele: MILLENIUM
       NbBonTravail: 0
-      NumeroSerie: '6.05E+11'
+      NumeroSerie: 605000014003
       Provenance: ''
       Salle: Observation
     state:
@@ -9856,7 +9856,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En service
       ID: '565'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -10074,7 +10074,7 @@ _default:
       eid: 529
   530: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Tensiom\xE8tre"
+      CategorieEquipement: Otoscope
       CentreService: Clinique externe
       CodeAsset: ''
       Commentaires: PROBLEME  DE MISE EN INVENTRAIRE LORS DE LA SEANCE DE TRAVAIL
@@ -11899,7 +11899,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '681'
-      Marque: ProBasic
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -11918,7 +11918,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '682'
-      Marque: ProBasic
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -11937,7 +11937,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '683'
-      Marque: ProBasic
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13623,7 +13623,7 @@ _default:
     dictitems:
       CategorieEquipement: Balance
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: 'H-HSM0540'
+      CodeAsset: H-HSM0540
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-03
@@ -13633,7 +13633,7 @@ _default:
       Marque: Detecto
       Modele: ''
       NbBonTravail: 0
-      NumeroSerie: 'E30715-0127'
+      NumeroSerie: E30715-0127
       Provenance: Croix-Rouge Canadienne
       Salle: "1103 - Station des infirmi\xE8res"
     state:
@@ -13649,7 +13649,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '776'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13668,7 +13668,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '777'
-      Marque: ''
+      Marque: ProBascis
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13687,7 +13687,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '778'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13706,7 +13706,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '779'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13725,7 +13725,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '780'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13744,7 +13744,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '781'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13763,7 +13763,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '782'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13782,7 +13782,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '783'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13801,7 +13801,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '784'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13820,7 +13820,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '785'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13839,7 +13839,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '786'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13858,7 +13858,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '787'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13877,7 +13877,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '788'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13896,7 +13896,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '789'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13915,7 +13915,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '790'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13934,7 +13934,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '791'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13953,7 +13953,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '792'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13972,7 +13972,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '793'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -13991,7 +13991,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '794'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -14010,7 +14010,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '795'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15739,7 +15739,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '886'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15758,7 +15758,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '887'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15777,7 +15777,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '888'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15796,7 +15796,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '889'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15815,7 +15815,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '890'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15834,7 +15834,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '891'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15853,7 +15853,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '892'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15872,7 +15872,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '893'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15891,7 +15891,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '894'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15910,7 +15910,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '895'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15929,7 +15929,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '896'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15948,7 +15948,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '897'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15967,7 +15967,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '898'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -15986,7 +15986,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '899'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -16005,7 +16005,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '900'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -16024,7 +16024,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '901'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -16043,7 +16043,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '902'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -16062,7 +16062,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '903'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -16081,7 +16081,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '904'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -16100,7 +16100,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '905'
-      Marque: ''
+      Marque: ProBasics
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -16122,7 +16122,7 @@ _default:
       Marque: Panasonic
       Modele: SR-L6111W
       NbBonTravail: 0
-      NumeroSerie: '150150802177'
+      NumeroSerie: '150802177'
       Provenance: Croix-Rouge Canadienne
       Salle: "1203 - Station des infirmi\xE8res"
     state:
@@ -16659,19 +16659,722 @@ _default:
       Salle: R204 - Salle de vaccination
     state:
       eid: 878
-  879:
-    CategorieEquipement: Table de chevet
-    CentreService: Clinique externe
+  879: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-04
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '935'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R204 - Salle de vaccination
+    state:
+      eid: 879
+  880: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Balance
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0244
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '936'
+      Marque: Detecto
+      Modele: '339'
+      NbBonTravail: 0
+      NumeroSerie: E03415-0238
+      Provenance: Croix-Rouge Canadienne
+      Salle: R204 - Salle de vaccination
+    state:
+      eid: 880
+  881: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "R\xE9frig\xE9rateur"
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0245
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '937'
+      Marque: Panasonic
+      Modele: SR-L6111W
+      NbBonTravail: 0
+      NumeroSerie: '150802039'
+      Provenance: Croix-Rouge Canadienne
+      Salle: R204 - Salle de vaccination
+    state:
+      eid: 881
+  882: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Cong\xE9lateur"
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0245
+      Commentaires: "manque le num\xE9ro de s\xE9rie\n"
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '938'
+      Marque: Panasonic
+      Modele: SF-L6111W
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R204 - Salle de vaccination
+    state:
+      eid: 882
+  883: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0248
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '939'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R204 - Salle de vaccination
+    state:
+      eid: 883
+  884: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0249
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '940'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R204 - Salle de vaccination
+    state:
+      eid: 884
+  885: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0251
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '941'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R205 - Clinique pr\xE9natale"
+    state:
+      eid: 885
+  886: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0253
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '942'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510441
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R205 - Clinique pr\xE9natale"
+    state:
+      eid: 886
+  887: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '943'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R205 - Clinique pr\xE9natale"
+    state:
+      eid: 887
+  888: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0262
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '944'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R206 - Clinique pr\xE9natale"
+    state:
+      eid: 888
+  889: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0263
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '945'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: KD1510432
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R206 - Clinique pr\xE9natale"
+    state:
+      eid: 889
+  890: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0266
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '946'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R206 - Clinique pr\xE9natale"
+    state:
+      eid: 890
+  891: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0268
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '947'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R207 - Planification familiale
+    state:
+      eid: 891
+  892: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Balance
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: "Manque le num\xE9ro de s\xE9rie"
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '948'
+      Marque: Detecto
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R207 - Planification familiale
+    state:
+      eid: 892
+  893: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '949'
+      Marque: Detecto
+      Modele: '451'
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R208 - Clinique gyn\xE9cologique"
+    state:
+      eid: 893
+  894: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0294
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '950'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R300 - Salle de traitement
+    state:
+      eid: 894
+  895: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Microscope ophtalmologique
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0300
+      Commentaires: "Autres num\xE9ros de s\xE9rie: 131015002 et 191015001"
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '951'
+      Marque: Leica
+      Modele: M620 F20
+      NbBonTravail: 0
+      NumeroSerie: '201015001'
+      Provenance: Croix-Rouge Canadienne
+      Salle: R300 - Salle de traitement
+    state:
+      eid: 895
+  896: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen ophtalmologie
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0301
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '952'
+      Marque: Leica
+      Modele: 500 XLE
+      NbBonTravail: 0
+      NumeroSerie: 3065-905 175
+      Provenance: Croix-Rouge Canadienne
+      Salle: R300 - Salle de traitement
+    state:
+      eid: 896
+  897: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0307
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '953'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303 - Salle de r\xE9veil"
+    state:
+      eid: 897
+  898: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0308
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '954'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303 - Salle de r\xE9veil"
+    state:
+      eid: 898
+  899: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0309
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '955'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303 - Salle de r\xE9veil"
+    state:
+      eid: 899
+  900: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0310
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '956'
+      Marque: ProBasics
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303 - Salle de r\xE9veil"
+    state:
+      eid: 900
+  901: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0311
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '957'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303 - Salle de r\xE9veil"
+    state:
+      eid: 901
+  902: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0312
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '958'
+      Marque: Probasics
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303 - Salle de r\xE9veil"
+    state:
+      eid: 902
+  903: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Fauteuil pour traitement dentaire
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0320
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '959'
+      Marque: Dental EZ
+      Modele: NuSimplicity Chair 3706-273C
+      NbBonTravail: 0
+      NumeroSerie: BK02953
+      Provenance: Croix-Rouge Canadienne
+      Salle: R305 - Salle de consultation
+    state:
+      eid: 903
+  904: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil \xE0 succion"
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0322
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '960'
+      Marque: Ramvac
+      Modele: Bulldog QT1
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R305 - Salle de consultation
+    state:
+      eid: 904
+  905: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Bain \xE0 ultrasons"
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0326
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '961'
+      Marque: Patterson
+      Modele: PA12
+      NbBonTravail: 0
+      NumeroSerie: 15174-155464
+      Provenance: Croix-Rouge Canadienne
+      Salle: R306 - Laboratoire dentaire
+    state:
+      eid: 905
+  906: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Ordinateur
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0330
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '962'
+      Marque: Lenovo
+      Modele: 'Lenovo ThinkCentre M73 10B6 - Core i3 4130 '
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R307 - Radiographie dentaire
+    state:
+      eid: 906
+  907: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de rayon X intra-oral"
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0331
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '963'
+      Marque: Sirona
+      Modele: Heliodent Plus, Schick Sensors
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R307 - Radiographie dentaire
+    state:
+      eid: 907
+  908: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Hospitalisation chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '571'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: 1301 - Salle de traitement
+    state:
+      eid: 908
+  909: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Otoscope
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '572'
+      Marque: Riester
+      Modele: RI-former
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R106 - Salle de consultation
+    state:
+      eid: 909
+  910: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '573'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R106 - Salle de consultation
+    state:
+      eid: 910
+  911: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Otoscope
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '574'
+      Marque: Riester
+      Modele: 'RI-former'
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R202 - Salle de consultation
+    state:
+      eid: 911
+  912: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '575'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R202 - Salle de consultation
+    state:
+      eid: 912
+  913: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Otoscope
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '576'
+      Marque: Riester
+      Modele: RI-former
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R203 - Salle de consultation
+    state:
+      eid: 913
+  914: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '577'
+      Marque: 'Veridian'
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R203 - Salle de consultation
+    state:
+      eid: 914
+  915: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: "Hospitalisation m\xE9decine interne"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '578'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "1103 - Station des infirmi\xE8res"
+    state:
+      eid: 915
+  916:
+    CategorieEquipement: "Tensiom\xE8tre"
+    CentreService: Hospitalisation chirurgie
     CodeAsset: ''
     Commentaires: ''
     DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-04
+    DateDernierEntretien: 2016-08-05
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '935'
-    Marque: ''
-    Modele: ''
+    ID: '579'
+    Marque: Veridian
+    Modele: 02-131
     NbBonTravail: 0
     NumeroSerie: ''
     Provenance: Croix-Rouge Canadienne
-    Salle: R204 - Salle de vaccination
+    Salle: 1201 - Salle hospitalisation femme
