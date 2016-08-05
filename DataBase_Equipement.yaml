@@ -16960,7 +16960,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: R300- Salle de traitement
+      Salle: R300 - Salle de traitement
     state:
       eid: 894
   895: !!python/object/new:tinydb.database.Element
@@ -16979,7 +16979,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '201015001'
       Provenance: Croix-Rouge Canadienne
-      Salle: R300- Salle de traitement
+      Salle: R300 - Salle de traitement
     state:
       eid: 895
   896: !!python/object/new:tinydb.database.Element
@@ -16998,7 +16998,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 3065-905 175
       Provenance: Croix-Rouge Canadienne
-      Salle: R300- Salle de traitement
+      Salle: R300 - Salle de traitement
     state:
       eid: 896
   897: !!python/object/new:tinydb.database.Element
@@ -17017,7 +17017,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: "R303- Salle de r\xE9veil"
+      Salle: "R303 - Salle de r\xE9veil"
     state:
       eid: 897
   898: !!python/object/new:tinydb.database.Element
@@ -17036,7 +17036,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: "R303- Salle de r\xE9veil"
+      Salle: "R303 - Salle de r\xE9veil"
     state:
       eid: 898
   899: !!python/object/new:tinydb.database.Element
@@ -17055,7 +17055,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: "R303- Salle de r\xE9veil"
+      Salle: "R303 - Salle de r\xE9veil"
     state:
       eid: 899
   900: !!python/object/new:tinydb.database.Element
@@ -17074,7 +17074,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: "R303- Salle de r\xE9veil"
+      Salle: "R303 - Salle de r\xE9veil"
     state:
       eid: 900
   901: !!python/object/new:tinydb.database.Element
@@ -17093,7 +17093,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: "R303- Salle de r\xE9veil"
+      Salle: "R303 - Salle de r\xE9veil"
     state:
       eid: 901
   902: !!python/object/new:tinydb.database.Element
@@ -17112,7 +17112,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Canadienne
-      Salle: "R303- Salle de r\xE9veil"
+      Salle: "R303 - Salle de r\xE9veil"
     state:
       eid: 902
   903: !!python/object/new:tinydb.database.Element
@@ -17192,7 +17192,7 @@ _default:
     state:
       eid: 906
   907:
-    CategorieEquipement: Autre
+    CategorieEquipement: "Unité de rayon X intra-oral"
     CentreService: Clinique externe
     CodeAsset: D-HSM0331
     Commentaires: ''
