@@ -17192,7 +17192,7 @@ _default:
     state:
       eid: 906
   907:
-    CategorieEquipement: "Unité de rayon X intra-oral"
+    CategorieEquipement: "Unit\xE9 de rayon X intra-oral"
     CentreService: Clinique externe
     CodeAsset: D-HSM0331
     Commentaires: ''
