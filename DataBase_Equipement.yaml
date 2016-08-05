@@ -4829,7 +4829,7 @@ _default:
       Marque: SECA
       Modele: 725 102 1009
       NbBonTravail: 0
-      NumeroSerie: '2.73E+12'
+      NumeroSerie: 2725173093112
       Provenance: ''
       Salle: Salle de travail
     state:
@@ -4848,7 +4848,7 @@ _default:
       Marque: SECA
       Modele: 725 102 1009
       NbBonTravail: 0
-      NumeroSerie: '2.73E+12'
+      NumeroSerie: 2725292053721
       Provenance: ''
       Salle: Salle de travail
     state:
@@ -6445,7 +6445,7 @@ _default:
       Marque: RESPIRONICS
       Modele: MILLENIUM
       NbBonTravail: 0
-      NumeroSerie: '6.05E+11'
+      NumeroSerie: 605000014003
       Provenance: ''
       Salle: Observation
     state:
