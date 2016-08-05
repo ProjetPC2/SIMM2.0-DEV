@@ -1,4 +1,4 @@
-nbEquipement: 897
+nbEquipement: 898
 nbEquipementCentreService:
   Archives:
     Chariot de soins: 1
@@ -45,7 +45,7 @@ nbEquipementCentreService:
     "D\xE9fibrilateur": 1
     "Glucom\xE8tre": 3
     Lampe d'examen: 16
-    Lit: 2
+    Lit: 3
     Microscope ophtalmologique: 1
     "Moniteur f\u0153tal": 2
     "N\xE9bulisateur": 3
@@ -247,17 +247,17 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 382
+  Quasi neuf: 383
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 820
+  En service: 821
 nbEquipementProvenance:
   ? ''
   : 395
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 365
+  Croix-Rouge Canadienne: 366
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1
