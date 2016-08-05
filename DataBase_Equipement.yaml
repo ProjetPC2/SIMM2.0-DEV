@@ -16993,7 +16993,7 @@ _default:
       EtatConservation: Quasi neuf
       EtatService: En service
       ID: '952'
-      Marque: UFSK-OSYS
+      Marque: Leica
       Modele: 500 XLE
       NbBonTravail: 0
       NumeroSerie: 3065-905 175
@@ -17039,19 +17039,171 @@ _default:
       Salle: "R303- Salle de r\xE9veil"
     state:
       eid: 898
-  899:
-    CategorieEquipement: Lit
+  899: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0309
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '955'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303- Salle de r\xE9veil"
+    state:
+      eid: 899
+  900: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0310
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '956'
+      Marque: ProBasics
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303- Salle de r\xE9veil"
+    state:
+      eid: 900
+  901: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0311
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '957'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303- Salle de r\xE9veil"
+    state:
+      eid: 901
+  902: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Clinique externe
+      CodeAsset: O-HSM0312
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '958'
+      Marque: Probasics
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R303- Salle de r\xE9veil"
+    state:
+      eid: 902
+  903: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Fauteuil pour traitement dentaire
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0320
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '959'
+      Marque: Dental EZ
+      Modele: NuSimplicity Chair 3706-273C
+      NbBonTravail: 0
+      NumeroSerie: BK02953
+      Provenance: Croix-Rouge Canadienne
+      Salle: R305 - Salle de consultation
+    state:
+      eid: 903
+  904: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil \xE0 succion"
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0322
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '960'
+      Marque: Ramvac
+      Modele: Bulldog QT1
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R305 - Salle de consultation
+    state:
+      eid: 904
+  905: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Bain \xE0 ultrasons"
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0326
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '961'
+      Marque: Patterson
+      Modele: PA12
+      NbBonTravail: 0
+      NumeroSerie: 15174-155464
+      Provenance: Croix-Rouge Canadienne
+      Salle: R306 - Laboratoire dentaire
+    state:
+      eid: 905
+  906: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Ordinateur
+      CentreService: Clinique externe
+      CodeAsset: D-HSM0330
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-05
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '962'
+      Marque: Lenovo
+      Modele: 'Lenovo ThinkCentre M73 10B6 - Core i3 4130 '
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: R307 - Radiographie dentaire
+    state:
+      eid: 906
+  907:
+    CategorieEquipement: Autre
     CentreService: Clinique externe
-    CodeAsset: O-HSM0309
+    CodeAsset: D-HSM0331
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-05
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '955'
-    Marque: ''
-    Modele: ''
+    ID: '963'
+    Marque: Sirona
+    Modele: Heliodent Plus, Schick Sensors
     NbBonTravail: 0
     NumeroSerie: ''
     Provenance: Croix-Rouge Canadienne
-    Salle: "R303- Salle de r\xE9veil"
+    Salle: R307 - Radiographie dentaire

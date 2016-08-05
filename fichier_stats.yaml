@@ -1,4 +1,4 @@
-nbEquipement: 898
+nbEquipement: 906
 nbEquipementCentreService:
   Archives:
     Chariot de soins: 1
@@ -36,6 +36,9 @@ nbEquipementCentreService:
     Table d'instruments: 5
     UPS: 1
   Clinique externe:
+    "Appareil \xE0 succion": 1
+    Autre: 1
+    "Bain \xE0 ultrasons": 1
     Balance: 6
     "Balance p\xE9diatrique": 3
     Chaise dentiste: 1
@@ -43,6 +46,7 @@ nbEquipementCentreService:
     "Concentrateur d'oxyg\xE8ne": 1
     "Cong\xE9lateur": 2
     "D\xE9fibrilateur": 1
+    Fauteuil pour traitement dentaire: 1
     "Glucom\xE8tre": 3
     Lampe d'examen: 16
     Lit: 3
@@ -50,13 +54,13 @@ nbEquipementCentreService:
     "Moniteur f\u0153tal": 2
     "N\xE9bulisateur": 3
     "N\xE9gatoscope (moniteur de radiographie)": 10
-    Ordinateur: 10
+    Ordinateur: 11
     Otoscope: 6
     "R\xE9frig\xE9rateur": 2
     "Saturom\xE8tre (Oxym\xE8tre)": 2
     "St\xE9rilisateur portable": 0
     "St\xE9rilisateur \xE0 vapeur": 2
-    "Support \xE0 solut\xE9s": 4
+    "Support \xE0 solut\xE9s": 7
     Table d'examen: 23
     Table d'examen ophtalmologie: 1
     Table d'instruments: 3
@@ -247,17 +251,17 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 383
+  Quasi neuf: 391
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 821
+  En service: 829
 nbEquipementProvenance:
   ? ''
   : 395
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 366
+  Croix-Rouge Canadienne: 374
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1
