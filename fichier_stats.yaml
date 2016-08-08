@@ -1,7 +1,7 @@
-nbEquipement: 904
+nbEquipement: 903
 nbEquipementCentreService:
   Archives:
-    Analyseur CD4 (VIH): 1
+    Analyseur CD4 (VIH): 0
     Chariot de soins: 1
     Lampe d'examen: 0
     Ordinateur: 3
@@ -253,14 +253,14 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 402
+  Quasi neuf: 401
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 840
+  En service: 839
 nbEquipementProvenance:
   ? ''
-  : 383
+  : 382
   CDC: 10
   CHU Sainte-Justine: 11
   Croix-Rouge Canadienne: 384

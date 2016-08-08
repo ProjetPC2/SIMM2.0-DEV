@@ -17157,22 +17157,3 @@ _default:
       Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 917
-  918: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Analyseur CD4 (VIH)
-      CentreService: Archives
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-08-08
-      DateDernierEntretien: 2016-08-08
-      EtatConservation: Quasi neuf
-      EtatService: En service
-      ID: '965'
-      Marque: ''
-      Modele: ''
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 918
