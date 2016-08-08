@@ -21,8 +21,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
     def __init__(self, AjoutEquipement, sauvegarde):
         self.setupUi(AjoutEquipement)
         self.ajout()
-        self.BoutonEnregistrer.hide()
-        self.BoutonModifier.hide()
         self.sauvegarde = sauvegarde
 
 
@@ -56,39 +54,36 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
+
+        #Creation des calendriers pour qu'ils soient dans la langue desiree
         calendrierAcquisition = QCalendarWidget()
-        # calendrierAcquisition.setNavigationBarVisible(True)
-        # print("format", calendrierAcquisition.horizontalHeaderFormat())
         calendrierAcquisition.setStyleSheet("background :#F5F5F5;\n color: black;")
         calendrierAcquisition.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
         calendrierEntretien = QCalendarWidget()
         calendrierEntretien.setStyleSheet("background :#F5F5F5;\n color: black;")
         calendrierEntretien.setGridVisible(True)
         calendrierEntretien.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
-        # calendrierAcquisition.setDateTextFormat("Fr")
-        # self.dateEditDateDaquisition.calendarWidget().setNavigationBarVisible(True)
+
+        #Mise en place des calendriers dans les champs correspondants
         self.dateEditDateDaquisition.setCalendarWidget(calendrierAcquisition)
         self.dateEditDateDaquisition.setLocale(QLocale(QLocale.French, QLocale.France))
         self.dateEditDateDuDernierEntretien.setCalendarWidget(calendrierEntretien)
         self.dateEditDateDuDernierEntretien.setLocale(QLocale(QLocale.French, QLocale.France))
 
-
-        # self.dateEditDateDaquisition.calendarWidget().setStyleSheet("background :grey;\n")
         # Creation de la variable equipement qui servira a l'enregistrement dans la BDD
         self.equipement = Equipement()
         self.equipement.ajoutListeMethodes()
 
         # Recuperation des differents attributs d''un equipement
-
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeDonnees = list()
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
 
@@ -98,7 +93,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeCentreService = list(self._conf['CentreService'])
         self.listeSalle = list(self._conf['Salle'])
         self.listeProvenance = list(self._conf['Provenance'])
-
+        #Tri des differentes listes
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
         self.listeCentreService.sort()
@@ -114,23 +109,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxCentreDeService.addItems(self.listeCentreService)
         self.comboBoxProvenance.clear()
         self.comboBoxProvenance.addItems(self.listeProvenance)
-
-        # Connexion du bouton valider
-        self.BoutonValider.clicked.connect(self.verificationEquipement)
-        self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
-        # Creation des differents labels pour la verification
-        #self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
-        #self.marqueLabel = QLabel("Ici marque")
-        #self.modeleLabel = QLabel("Ici Modele ")
-        #self.numSerieLabel = QLabel("Ici No. de serie ")
-        #self.salleLabel = QLabel("Ici Label ")
-        #self.centreServiceLabel = QLabel("Ici Centre de service ")
-        #self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
-        #self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
-        #self.provenanceLabel = QLabel()
-        #self.etatServiceLabel = QLabel("Ici Etat de service ")
-        #self.etatConservationLabel = QLabel("Ici Etat de conservation ")
-        # self.commentaire = QLabel("Ici commentaires ")
 
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
@@ -151,7 +129,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
 
         # Masquage des differents labels
         for label in self.listeLabel:
-            # self.layoutChampsNonModifiables.addWidget(label)
             label.hide()
         self.labelID.hide()
         # Traitement de la partie commentaires
@@ -162,9 +139,16 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Redefinition de la taille des champs d'entree de date
         self.dateEditDateDaquisition.setMinimumWidth(200)
         self.dateEditDateDuDernierEntretien.setMinimumWidth(200)
+        #Mise a jour des dates avec la date du jour
         self.dateEditDateDuDernierEntretien.setDate(QDate.currentDate())
         self.dateEditDateDaquisition.setDate(QDate.currentDate())
 
+        # Masquage des boutons non utilises
+        self.BoutonEnregistrer.hide()
+        self.BoutonModifier.hide()
+        # Connexion des boutons
+        self.BoutonValider.clicked.connect(self.verificationEquipement)
+        self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
         self.BoutonModifier.clicked.connect(self.modifierEquipement)
 
@@ -176,9 +160,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxSalle.setEditable(True)
         self.comboBoxProvenance.setEditable(True)
         self.comboBoxCentreDeService.setEditable(True)
-
-        self.dateEditDateDuDernierEntretien.setDate(QDate.currentDate())
-        self.dateEditDateDaquisition.setDate(QDate.currentDate())
 
     def obtenirEtatDeService(self, groupeBoutton):
         """Methode permettant d'obtenir le choix selectionne parmi le groupe
@@ -213,8 +194,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
 
     def sauvegarderEquipement(self):
         """Methode permettant l'enregristrement de l'equipement dans la BDD"""
-
-        # self.donnees()
         i = 0
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
@@ -225,7 +204,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.sauvegarde.sauvegardeTermine.emit()
 
     def verificationEquipement(self):
-        """Methode affichant le recapitulatif de l'equipement"""
+        """Methode affichant le recapitulatif de l'equipement """
         if (self.verificationChamps()):
             self.labelID.show()
             self.donnees()
