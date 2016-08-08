@@ -56,25 +56,6 @@ _default:
       Salle: ''
     state:
       eid: 3
-  4: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Incubateur
-      CentreService: Laboratoire
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '43'
-      Marque: Abbott
-      Modele: Commander
-      NbBonTravail: 0
-      NumeroSerie: IN651133
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 4
   5: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
@@ -94,25 +75,6 @@ _default:
       Salle: ''
     state:
       eid: 5
-  6: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Analyseur biochimie
-      CentreService: Inconnu
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2010-03-09
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '45'
-      Marque: Krober medizintechnik GBMH
-      Modele: Krober 02
-      NbBonTravail: 0
-      NumeroSerie: '1106040776'
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 6
   7: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
@@ -151,25 +113,6 @@ _default:
       Salle: ''
     state:
       eid: 8
-  9: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
-      CentreService: Inconnu
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2015-09-26
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '49'
-      Marque: CPM Scientifica
-      Modele: Autoclave 760
-      NbBonTravail: 0
-      NumeroSerie: '3012'
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 9
   10: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
@@ -189,25 +132,6 @@ _default:
       Salle: Observation
     state:
       eid: 10
-  11: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Autre
-      CentreService: Inconnu
-      CodeAsset: ''
-      Commentaires: Pieces de rechange. Manometre et transformateur.
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: "D\xE9suet"
-      EtatService: Au rebus
-      ID: '51'
-      Marque: Origin
-      Modele: mv-30B
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 11
   12: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "N\xE9bulisateur"
@@ -303,44 +227,6 @@ _default:
       Salle: ''
     state:
       eid: 16
-  17: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xE9"
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '57'
-      Marque: Toshiba
-      Modele: Power Vision 6000
-      NbBonTravail: 0
-      NumeroSerie: F1524778
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 17
-  18: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Table d'examen
-      CentreService: "Maternit\xE9"
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '58'
-      Marque: MidMark
-      Modele: 404-007
-      NbBonTravail: 0
-      NumeroSerie: BB006633
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 18
   19: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
@@ -816,25 +702,6 @@ _default:
       Salle: ''
     state:
       eid: 43
-  44: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: Urgences
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '86'
-      Marque: Ezycheckplus
-      Modele: ''
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 44
   45: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Microscope
@@ -2008,7 +1875,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En maintenance
       ID: '148'
-      Marque: VERIDIAN
+      Marque: Veridian
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -4853,45 +4720,6 @@ _default:
       Salle: Salle de travail
     state:
       eid: 255
-  256: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Balance p\xE9diatrique"
-      CentreService: "Maternit\xE9"
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: "D\xE9suet"
-      EtatService: Au rebus
-      ID: '301'
-      Marque: FAZZINI
-      Modele: S7250
-      NbBonTravail: 0
-      NumeroSerie: '10.2011'
-      Provenance: ''
-      Salle: Salle de travail
-    state:
-      eid: 256
-  257: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: "Maternit\xE9"
-      CodeAsset: ''
-      Commentaires: "\"D'autres \xE9quipements identiques en service,  il est gard\xE9\
-        \ dans l'atelier pour les pi\xE8ces de rechange.\""
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2013-06-11
-      EtatConservation: "D\xE9suet"
-      EtatService: Au rebus
-      ID: '302'
-      Marque: Air sep
-      Modele: New life
-      NbBonTravail: 0
-      NumeroSerie: '118906'
-      Provenance: ''
-      Salle: Salle de travail
-    state:
-      eid: 257
   258: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
@@ -5720,7 +5548,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En service
       ID: '346'
-      Marque: VERIDIAN
+      Marque: Veridian
       Modele: STERLING
       NbBonTravail: 0
       NumeroSerie: ''
@@ -6412,25 +6240,6 @@ _default:
       Salle: ''
     state:
       eid: 338
-  339: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "\xC9lectrocardiographe"
-      CentreService: Urgences
-      CodeAsset: ''
-      Commentaires: "\"Equipement valid\xE9 par tech Ste-Justine,  non-recup\xE9rable\""
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '384'
-      Marque: MARQUETTE
-      Modele: MAC 8
-      NbBonTravail: 0
-      NumeroSerie: A7LM3532F
-      Provenance: ''
-      Salle: Observation
-    state:
-      eid: 339
   340: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
@@ -9197,26 +9006,6 @@ _default:
       Salle: ''
     state:
       eid: 484
-  485: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Balance p\xE9diatrique"
-      CentreService: Inconnu
-      CodeAsset: ''
-      Commentaires: Je la trouve dehors. Je prends en maintenance parcequ'elle n'est
-        pas encore tarrer.
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2016-07-26
-      EtatConservation: "D\xE9suet"
-      EtatService: Au rebus
-      ID: '530'
-      Marque: Sunbeam
-      Modele: ''
-      NbBonTravail: 0
-      NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
-    state:
-      eid: 485
   486: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
@@ -9712,25 +9501,6 @@ _default:
       Salle: ''
     state:
       eid: 511
-  512: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Moniteur PNI
-      CentreService: Urgences
-      CodeAsset: ''
-      Commentaires: ''
-      DateAcquisition: 2016-07-26
-      DateDernierEntretien: 2015-11-25
-      EtatConservation: En fin de vie
-      EtatService: Au rebus
-      ID: '558'
-      Marque: Critikon
-      Modele: Dinamap Plus
-      NbBonTravail: 0
-      NumeroSerie: 730-655 B
-      Provenance: ''
-      Salle: Hospitalisation
-    state:
-      eid: 512
   513: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Thermom\xE8tre"
@@ -17368,19 +17138,41 @@ _default:
       Salle: 1201 - Salle hospitalisation femme
     state:
       eid: 916
-  917:
-    CategorieEquipement: Chariot de soins
-    CentreService: Clinique externe
-    CodeAsset: ''
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-08
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '964'
-    Marque: ''
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: Croix-Rouge Canadienne
-    Salle: "R108 - D\xE9pistage et conseils"
+  917: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Clinique externe
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-08
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '964'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: "R108 - D\xE9pistage et conseils"
+    state:
+      eid: 917
+  918: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Analyseur CD4 (VIH)
+      CentreService: Archives
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-08-08
+      DateDernierEntretien: 2016-08-08
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '965'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: ''
+    state:
+      eid: 918

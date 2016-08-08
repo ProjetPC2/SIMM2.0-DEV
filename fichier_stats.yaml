@@ -1,6 +1,7 @@
-nbEquipement: 916
+nbEquipement: 904
 nbEquipementCentreService:
   Archives:
+    Analyseur CD4 (VIH): 1
     Chariot de soins: 1
     Lampe d'examen: 0
     Ordinateur: 3
@@ -113,9 +114,9 @@ nbEquipementCentreService:
     Table de chevet: 25
     Table de lit: 25
   Inconnu:
-    Analyseur biochimie: 1
-    Autre: 1
-    "Balance p\xE9diatrique": 1
+    Analyseur biochimie: 0
+    Autre: 0
+    "Balance p\xE9diatrique": 0
     Centrifugeuse: 1
     "Concentrateur d'oxyg\xE8ne": 1
     "Four \xE0 orth\xE8se": 1
@@ -123,7 +124,7 @@ nbEquipementCentreService:
     Moniteur physiologique: 1
     "N\xE9bulisateur": 1
     Sonographe (Echographe): 1
-    "St\xE9rilisateur \xE0 vapeur": 1
+    "St\xE9rilisateur \xE0 vapeur": 0
     "Tensiom\xE8tre": 17
     "Thermom\xE8tre": 6
   Laboratoire:
@@ -133,7 +134,7 @@ nbEquipementCentreService:
     Bain chauffant: 2
     Centrifugeuse: 4
     Imprimante: 1
-    Incubateur: 5
+    Incubateur: 4
     Microscope: 10
     "M\xE9langeur": 4
     Ordinateur: 4
@@ -143,18 +144,18 @@ nbEquipementCentreService:
     UPS: 4
   "Maternit\xE9":
     Balance: 1
-    "Balance p\xE9diatrique": 4
+    "Balance p\xE9diatrique": 2
     Chaise roulante: 1
     "Civi\xE8re de transport": 1
-    "Concentrateur d'oxyg\xE8ne": 2
+    "Concentrateur d'oxyg\xE8ne": 1
     Lampe d'examen: 2
     Lit: 16
     "Moniteur f\u0153tal": 1
     Ordinateur: 1
     Otoscope: 1
-    Sonographe (Echographe): 1
+    Sonographe (Echographe): 0
     "Support \xE0 solut\xE9s": 9
-    Table d'examen: 5
+    Table d'examen: 4
     Table d'instruments: 5
     Table de chevet: 2
     "Table de soins n\xE9onataux": 7
@@ -230,16 +231,16 @@ nbEquipementCentreService:
     "D\xE9fibrilateur": 5
     Lampe d'examen: 2
     Lit: 6
-    Moniteur PNI: 6
+    Moniteur PNI: 5
     Moniteur physiologique: 2
     "N\xE9bulisateur": 5
-    "Saturom\xE8tre (Oxym\xE8tre)": 2
+    "Saturom\xE8tre (Oxym\xE8tre)": 1
     "Support \xE0 solut\xE9s": 7
     Table d'examen: 5
     Table d'instruments: 6
     "Tensiom\xE8tre": 8
     "Thermom\xE8tre": 2
-    "\xC9lectrocardiographe": 1
+    "\xC9lectrocardiographe": 0
   hopital general:
     "Concentrateur d'oxyg\xE8ne": 4
     "D\xE9fibrilateur": 1
@@ -250,16 +251,16 @@ nbEquipementCentreService:
     "Tensiom\xE8tre": 4
 nbEquipementEtatConservation:
   Acceptable: 447
-  "D\xE9suet": 17
-  En fin de vie: 51
-  Quasi neuf: 401
+  "D\xE9suet": 12
+  En fin de vie: 43
+  Quasi neuf: 402
 nbEquipementEtatService:
-  Au rebus: 27
+  Au rebus: 14
   En maintenance: 50
-  En service: 839
+  En service: 840
 nbEquipementProvenance:
   ? ''
-  : 395
+  : 383
   CDC: 10
   CHU Sainte-Justine: 11
   Croix-Rouge Canadienne: 384

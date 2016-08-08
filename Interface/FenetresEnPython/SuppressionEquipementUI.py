@@ -390,7 +390,7 @@ class Ui_SuppressionEquipement(object):
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.comboBoxBons = QtWidgets.QComboBox(SuppressionEquipement)
         font = QtGui.QFont()
-        font.setFamily("Times New Roman")
+        font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         self.comboBoxBons.setFont(font)
         self.comboBoxBons.setStyleSheet("QComboBox {\n"
