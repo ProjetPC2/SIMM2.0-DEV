@@ -10174,7 +10174,7 @@ _default:
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0165
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016.
         Tests electriques impossibles a entrepot(pas de mise a la terre)
@@ -10277,7 +10277,7 @@ _default:
     dictitems:
       CategorieEquipement: "Glucom\xE8tre"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0167
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
       DateAcquisition: 2016-01-30
@@ -10908,7 +10908,7 @@ _default:
     dictitems:
       CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0182
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -10946,7 +10946,7 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9bulisateur"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0171
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -10965,7 +10965,7 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9bulisateur"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0172
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -10983,8 +10983,8 @@ _default:
   588: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "N\xE9bulisateur"
-      CentreService: Comptabilite
-      CodeAsset: ''
+      CentreService: Clinique externe
+      CodeAsset: C-HSM0173
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11003,7 +11003,7 @@ _default:
     dictitems:
       CategorieEquipement: "\xC9lectrocardiographe"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0166
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11041,7 +11041,7 @@ _default:
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0181
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -17142,7 +17142,7 @@ _default:
     dictitems:
       CategorieEquipement: Chariot de soins
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0164
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-08
