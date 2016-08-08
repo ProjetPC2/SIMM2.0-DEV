@@ -1,4 +1,4 @@
-nbEquipement: 915
+nbEquipement: 916
 nbEquipementCentreService:
   Archives:
     Chariot de soins: 1
@@ -42,7 +42,7 @@ nbEquipementCentreService:
     Balance: 6
     "Balance p\xE9diatrique": 3
     Chaise dentiste: 1
-    Chariot de soins: 14
+    Chariot de soins: 15
     "Concentrateur d'oxyg\xE8ne": 1
     "Cong\xE9lateur": 2
     "D\xE9fibrilateur": 1
@@ -252,17 +252,17 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 17
   En fin de vie: 51
-  Quasi neuf: 400
+  Quasi neuf: 401
 nbEquipementEtatService:
   Au rebus: 27
   En maintenance: 50
-  En service: 838
+  En service: 839
 nbEquipementProvenance:
   ? ''
   : 395
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 383
+  Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   MSPP: 1
