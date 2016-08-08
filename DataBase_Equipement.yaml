@@ -9927,8 +9927,7 @@ _default:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Clinique externe
       CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-01-30
       EtatConservation: Quasi neuf
@@ -10268,8 +10267,7 @@ _default:
       CategorieEquipement: Otoscope
       CentreService: Clinique externe
       CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10288,8 +10286,7 @@ _default:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Clinique externe
       CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10449,7 +10446,7 @@ _default:
     dictitems:
       CategorieEquipement: "Scie \xE0 pl\xE2tre"
       CentreService: Hospitalisation chirurgie
-      CodeAsset: ''
+      CodeAsset: H-HSM0784
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016.
         Tests electriques impossibles a entrepot(pas de mise a la terre)
@@ -10470,7 +10467,7 @@ _default:
     dictitems:
       CategorieEquipement: "Glucom\xE8tre"
       CentreService: Hospitalisation chirurgie
-      CodeAsset: ''
+      CodeAsset: H-HSM0720
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
       DateAcquisition: 2016-01-30
@@ -10490,7 +10487,7 @@ _default:
     dictitems:
       CategorieEquipement: "Glucom\xE8tre"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0241
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
       DateAcquisition: 2016-01-30
@@ -10530,7 +10527,7 @@ _default:
     dictitems:
       CategorieEquipement: "Glucom\xE8tre"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0280
       Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
         sera installe lors de la mise en service du nouvel hopital vers mai 2016
       DateAcquisition: 2016-01-30
@@ -10571,8 +10568,7 @@ _default:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
       CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10590,9 +10586,8 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
-      CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      CodeAsset: C-HSM0143
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10610,9 +10605,8 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
-      CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      CodeAsset: C-HSM0095
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10630,9 +10624,8 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
-      CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      CodeAsset: C-HSM0229
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10650,9 +10643,8 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
-      CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      CodeAsset: C-HSM0196
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10670,9 +10662,8 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
-      CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      CodeAsset: C-HSM0217
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10690,9 +10681,8 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Hospitalisation chirurgie
-      CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      CodeAsset: H-HSM0778
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10711,8 +10701,7 @@ _default:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
       CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10731,8 +10720,7 @@ _default:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
       CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10750,9 +10738,8 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Clinique externe
-      CodeAsset: ''
-      Commentaires: Neuf.L'appareil est a l'entrepot de la Croix Rouge de Jacmel  et
-        sera installe lors de la mise en service du nouvel hopital vers mai 2016
+      CodeAsset: C-HSM0107
+      Commentaires: ''
       DateAcquisition: 2016-01-30
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
@@ -10999,7 +10986,7 @@ _default:
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Hospitalisation chirurgie
-      CodeAsset: ''
+      CodeAsset: H-HSM0700
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11018,7 +11005,7 @@ _default:
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: ''
+      CodeAsset: H-HSM0515
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11037,7 +11024,7 @@ _default:
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: ''
+      CodeAsset: H-HSM0516
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11056,7 +11043,7 @@ _default:
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Hospitalisation chirurgie
-      CodeAsset: ''
+      CodeAsset: H-HSM0699
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11132,7 +11119,7 @@ _default:
     dictitems:
       CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0188
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11170,7 +11157,7 @@ _default:
     dictitems:
       CategorieEquipement: "N\xE9bulisateur"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0207
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11265,7 +11252,7 @@ _default:
     dictitems:
       CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0202
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11303,7 +11290,7 @@ _default:
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: Clinique externe
-      CodeAsset: ''
+      CodeAsset: C-HSM0246
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11322,7 +11309,7 @@ _default:
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: ''
+      CodeAsset: H-HSM0566
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11341,7 +11328,7 @@ _default:
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "Hospitalisation m\xE9decine interne"
-      CodeAsset: ''
+      CodeAsset: H-HSM0567
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11360,7 +11347,7 @@ _default:
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: Hospitalisation chirurgie
-      CodeAsset: ''
+      CodeAsset: H-HSM0751
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
@@ -11379,7 +11366,7 @@ _default:
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: Hospitalisation chirurgie
-      CodeAsset: ''
+      CodeAsset: H-HSM0752
       Commentaires: "\xC9quipement neuf"
       DateAcquisition: 2016-01-31
       DateDernierEntretien: 2016-07-26
