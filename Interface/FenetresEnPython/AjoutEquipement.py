@@ -209,9 +209,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
             self.labelID.show()
             self.donnees()
             indice = 0
-            font = QtGui.QFont()
-            font.setFamily("MS Shell Dlg 2")
-            font.setPointSize(10)
+            #font = QtGui.QFont()
+            #font.setFamily("MS Shell Dlg 2")
+            #font.setPointSize(10)
             for text in self.listeDonnees:
                 if type(self.listeWidgets[indice]) is QButtonGroup:
                     for radioBouton in self.listeWidgets[indice].buttons():
@@ -236,6 +236,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         """Action lors de l'appuie sur le bouton modifier
         On repasse sur l'ajout d'un equipement avec les champs modifiables"""
         indice = 0
+        self.labelEtatDeService.hide()
+        self.labelEtatDeConservation.hide()
         for text in self.listeDonnees:
             if type(self.listeWidgets[indice]) is QButtonGroup:
                 for radioBouton in self.listeWidgets[indice].buttons():

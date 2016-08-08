@@ -540,9 +540,9 @@ class Accueil(Ui_Accueil):
             self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
         else:
             # Affichage du widget s'il existe deja
-            self.consultationBonDeTravail.show()
+            self.ajoutBonDeTravailEquipement.show()
             self.consultationBonDeTravailUI.equipementDictionnaire = equipement
-            self.consultationBonDeTravailUI.consulterBonTravailSpecifique(self.consultationEquipementUI.listeBonDeTravail(self.consultationEquipementUI.comboBoxBons.currentIndex()))
+            self.consultationBonDeTravailUI.consulterBonTravailSpecifique(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
         self.listeNavigation.append(self.consultationBonDeTravail)
 
     def imprimerInventaire(self):
