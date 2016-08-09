@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SupportPC2(object):
     def setupUi(self, SupportPC2):
         SupportPC2.setObjectName("SupportPC2")
-        SupportPC2.resize(1710, 697)
+        SupportPC2.resize(870, 800)
         SupportPC2.setMaximumSize(QtCore.QSize(11111111, 1111111))
         SupportPC2.setStyleSheet("background: white;")
         self.verticalLayout = QtWidgets.QVBoxLayout(SupportPC2)
@@ -68,6 +68,7 @@ class Ui_SupportPC2(object):
         spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem3)
         self.boutonSupprimerEquipement = QtWidgets.QPushButton(SupportPC2)
+        self.boutonSupprimerEquipement.setEnabled(False)
         font = QtGui.QFont()
         font.setPointSize(-1)
         font.setBold(True)
@@ -105,6 +106,7 @@ class Ui_SupportPC2(object):
         self.boutonSupprimerEquipement.setObjectName("boutonSupprimerEquipement")
         self.horizontalLayout_8.addWidget(self.boutonSupprimerEquipement)
         self.boutonSupprimerBon = QtWidgets.QPushButton(SupportPC2)
+        self.boutonSupprimerBon.setEnabled(False)
         self.boutonSupprimerBon.setStyleSheet("QPushButton {\n"
 "color: black;\n"
 "background-color:rgb(245, 245, 245);\n"
@@ -137,6 +139,7 @@ class Ui_SupportPC2(object):
         self.boutonSupprimerBon.setObjectName("boutonSupprimerBon")
         self.horizontalLayout_8.addWidget(self.boutonSupprimerBon)
         self.boutonRinitialiserStatistiques = QtWidgets.QPushButton(SupportPC2)
+        self.boutonRinitialiserStatistiques.setEnabled(False)
         self.boutonRinitialiserStatistiques.setStyleSheet("QPushButton {\n"
 "color: black;\n"
 "background-color:rgb(245, 245, 245);\n"
@@ -168,6 +171,39 @@ class Ui_SupportPC2(object):
         self.boutonRinitialiserStatistiques.setIconSize(QtCore.QSize(24, 24))
         self.boutonRinitialiserStatistiques.setObjectName("boutonRinitialiserStatistiques")
         self.horizontalLayout_8.addWidget(self.boutonRinitialiserStatistiques)
+        self.BoutonVerrou = QtWidgets.QPushButton(SupportPC2)
+        self.BoutonVerrou.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonVerrou.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
+        self.BoutonVerrou.setText("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("Images/verrou.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonVerrou.setIcon(icon3)
+        self.BoutonVerrou.setObjectName("BoutonVerrou")
+        self.horizontalLayout_8.addWidget(self.BoutonVerrou)
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem4)
         self.verticalLayout.addLayout(self.horizontalLayout_8)
