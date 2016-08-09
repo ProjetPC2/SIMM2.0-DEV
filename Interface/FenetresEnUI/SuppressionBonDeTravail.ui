@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>837</width>
-    <height>710</height>
+    <width>915</width>
+    <height>803</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -798,6 +798,12 @@ color: rgb(81, 81, 81);
          </item>
          <item>
           <widget class="QComboBox" name="comboBoxNomTech">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -856,6 +862,12 @@ backround:rgb(245, 245, 245);
          </item>
          <item>
           <widget class="QDateEdit" name="dateEdit">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -880,6 +892,13 @@ backround:rgb(245, 245, 245);
              <day>1</day>
             </datetime>
            </property>
+           <property name="date">
+            <date>
+             <year>2016</year>
+             <month>2</month>
+             <day>1</day>
+            </date>
+           </property>
            <property name="currentSection">
             <enum>QDateTimeEdit::DaySection</enum>
            </property>
@@ -891,13 +910,6 @@ backround:rgb(245, 245, 245);
            </property>
            <property name="timeSpec">
             <enum>Qt::LocalTime</enum>
-           </property>
-           <property name="date">
-            <date>
-             <year>2016</year>
-             <month>2</month>
-             <day>1</day>
-            </date>
            </property>
           </widget>
          </item>
@@ -1153,6 +1165,12 @@ background:rgb(247, 247, 247)
          </item>
          <item>
           <widget class="QComboBox" name="comboBoxOuvertFerme">
+           <property name="maximumSize">
+            <size>
+             <width>800</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <pointsize>10</pointsize>
