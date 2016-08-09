@@ -297,7 +297,7 @@ background:rgb(247,247,247);
        <item>
         <layout class="QVBoxLayout" name="layoutChamps_2">
          <item>
-          <widget class="QLabel" name="labelId">
+          <widget class="QLabel" name="labelId_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -321,7 +321,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBoxCategorie">
+          <widget class="QComboBox" name="comboBoxCategorie_2">
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
@@ -352,7 +352,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEditMarque">
+          <widget class="QLineEdit" name="lineEditMarque_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -361,7 +361,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEditModele">
+          <widget class="QLineEdit" name="lineEditModele_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -370,7 +370,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEditNoDeSerie">
+          <widget class="QLineEdit" name="lineEditNoDeSerie_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -379,7 +379,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBoxSalle">
+          <widget class="QComboBox" name="comboBoxSalle_2">
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
@@ -410,7 +410,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBoxCentreDeService">
+          <widget class="QComboBox" name="comboBoxCentreDeService_2">
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
@@ -441,7 +441,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QDateEdit" name="dateEditDateDaquisition">
+          <widget class="QDateEdit" name="dateEditDateDaquisition_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -456,7 +456,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QDateEdit" name="dateEditDateDuDernierEntretien">
+          <widget class="QDateEdit" name="dateEditDateDuDernierEntretien_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -471,7 +471,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBoxProvenance">
+          <widget class="QComboBox" name="comboBoxProvenance_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -480,7 +480,7 @@ background:rgb(247,247,247);
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEditCodeASSET">
+          <widget class="QLineEdit" name="lineEditCodeASSET_2">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
