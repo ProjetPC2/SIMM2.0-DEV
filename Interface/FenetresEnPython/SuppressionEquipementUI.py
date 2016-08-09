@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SuppressionEquipement(object):
     def setupUi(self, SuppressionEquipement):
         SuppressionEquipement.setObjectName("SuppressionEquipement")
-        SuppressionEquipement.resize(1420, 1097)
+        SuppressionEquipement.resize(1016, 800)
+        SuppressionEquipement.setMinimumSize(QtCore.QSize(0, 800))
         SuppressionEquipement.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(SuppressionEquipement)
         self.gridLayout.setObjectName("gridLayout")
@@ -390,7 +391,7 @@ class Ui_SuppressionEquipement(object):
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.comboBoxBons = QtWidgets.QComboBox(SuppressionEquipement)
         font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
+        font.setFamily("Times New Roman")
         font.setPointSize(10)
         self.comboBoxBons.setFont(font)
         self.comboBoxBons.setStyleSheet("QComboBox {\n"

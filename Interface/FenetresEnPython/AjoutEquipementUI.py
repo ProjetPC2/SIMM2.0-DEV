@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
-        AjoutEquipement.resize(1710, 697)
+        AjoutEquipement.resize(793, 800)
+        AjoutEquipement.setMinimumSize(QtCore.QSize(0, 800))
         AjoutEquipement.setMaximumSize(QtCore.QSize(11111111, 1111111))
         AjoutEquipement.setStyleSheet("background:white;")
         self.gridLayout = QtWidgets.QGridLayout(AjoutEquipement)
@@ -37,18 +38,30 @@ class Ui_AjoutEquipement(object):
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.labelEtatDeService = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelEtatDeService.setFont(font)
         self.labelEtatDeService.setStyleSheet("background: white;")
         self.labelEtatDeService.setObjectName("labelEtatDeService")
         self.verticalLayout_3.addWidget(self.labelEtatDeService)
         self.radioButtonEnService = QtWidgets.QRadioButton(self.frame)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButtonEnService.setFont(font)
         self.radioButtonEnService.setStyleSheet("background:white;")
         self.radioButtonEnService.setObjectName("radioButtonEnService")
         self.verticalLayout_3.addWidget(self.radioButtonEnService)
         self.radioButtonEnMaintenance = QtWidgets.QRadioButton(self.frame)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButtonEnMaintenance.setFont(font)
         self.radioButtonEnMaintenance.setStyleSheet("background:white;")
         self.radioButtonEnMaintenance.setObjectName("radioButtonEnMaintenance")
         self.verticalLayout_3.addWidget(self.radioButtonEnMaintenance)
         self.radioButtonAuRebus = QtWidgets.QRadioButton(self.frame)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButtonAuRebus.setFont(font)
         self.radioButtonAuRebus.setStyleSheet("background:white;")
         self.radioButtonAuRebus.setObjectName("radioButtonAuRebus")
         self.verticalLayout_3.addWidget(self.radioButtonAuRebus)
@@ -74,22 +87,37 @@ class Ui_AjoutEquipement(object):
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.labelEtatDeConservation = QtWidgets.QLabel(self.frame_2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelEtatDeConservation.setFont(font)
         self.labelEtatDeConservation.setStyleSheet("background: white;")
         self.labelEtatDeConservation.setObjectName("labelEtatDeConservation")
         self.verticalLayout_4.addWidget(self.labelEtatDeConservation)
         self.radioButtonQuasiNeuf = QtWidgets.QRadioButton(self.frame_2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButtonQuasiNeuf.setFont(font)
         self.radioButtonQuasiNeuf.setStyleSheet("background:white;")
         self.radioButtonQuasiNeuf.setObjectName("radioButtonQuasiNeuf")
         self.verticalLayout_4.addWidget(self.radioButtonQuasiNeuf)
         self.radioButtonAcceptable = QtWidgets.QRadioButton(self.frame_2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButtonAcceptable.setFont(font)
         self.radioButtonAcceptable.setStyleSheet("background:white;")
         self.radioButtonAcceptable.setObjectName("radioButtonAcceptable")
         self.verticalLayout_4.addWidget(self.radioButtonAcceptable)
         self.radioButtonEnFinDeVie = QtWidgets.QRadioButton(self.frame_2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButtonEnFinDeVie.setFont(font)
         self.radioButtonEnFinDeVie.setStyleSheet("background:white;")
         self.radioButtonEnFinDeVie.setObjectName("radioButtonEnFinDeVie")
         self.verticalLayout_4.addWidget(self.radioButtonEnFinDeVie)
         self.radioButtonDesuet = QtWidgets.QRadioButton(self.frame_2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButtonDesuet.setFont(font)
         self.radioButtonDesuet.setStyleSheet("background:white;")
         self.radioButtonDesuet.setObjectName("radioButtonDesuet")
         self.verticalLayout_4.addWidget(self.radioButtonDesuet)
@@ -97,6 +125,116 @@ class Ui_AjoutEquipement(object):
         self.horizontalLayout_7.addLayout(self.horizontalLayout_6)
         self.horizontalLayout_2.addWidget(self.frame_2)
         self.gridLayout.addLayout(self.horizontalLayout_2, 2, 0, 1, 2)
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem)
+        self.BoutonValider = QtWidgets.QPushButton(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.BoutonValider.setFont(font)
+        self.BoutonValider.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonValider.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("Images/check-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonValider.setIcon(icon)
+        self.BoutonValider.setObjectName("BoutonValider")
+        self.horizontalLayout_8.addWidget(self.BoutonValider)
+        self.BoutonModifier = QtWidgets.QPushButton(AjoutEquipement)
+        self.BoutonModifier.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonModifier.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("Images/Modify-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonModifier.setIcon(icon1)
+        self.BoutonModifier.setIconSize(QtCore.QSize(32, 32))
+        self.BoutonModifier.setObjectName("BoutonModifier")
+        self.horizontalLayout_8.addWidget(self.BoutonModifier)
+        self.BoutonEnregistrer = QtWidgets.QPushButton(AjoutEquipement)
+        self.BoutonEnregistrer.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonEnregistrer.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("Images/save (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonEnregistrer.setIcon(icon2)
+        self.BoutonEnregistrer.setObjectName("BoutonEnregistrer")
+        self.horizontalLayout_8.addWidget(self.BoutonEnregistrer)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem1)
+        self.gridLayout.addLayout(self.horizontalLayout_8, 4, 0, 1, 2)
         self.layoutTitre = QtWidgets.QHBoxLayout()
         self.layoutTitre.setObjectName("layoutTitre")
         self.label = QtWidgets.QLabel(AjoutEquipement)
@@ -118,11 +256,103 @@ class Ui_AjoutEquipement(object):
         self.titreModificationEquipement.setStyleSheet("background: white;")
         self.titreModificationEquipement.setObjectName("titreModificationEquipement")
         self.layoutTitre.addWidget(self.titreModificationEquipement)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.layoutTitre.addItem(spacerItem)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.layoutTitre.addItem(spacerItem2)
         self.gridLayout.addLayout(self.layoutTitre, 0, 0, 1, 2)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem3)
+        self.layoutTitreLables = QtWidgets.QVBoxLayout()
+        self.layoutTitreLables.setObjectName("layoutTitreLables")
+        self.label_34 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_34.setFont(font)
+        self.label_34.setStyleSheet("background: white;")
+        self.label_34.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_34.setObjectName("label_34")
+        self.layoutTitreLables.addWidget(self.label_34)
+        self.label_37 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_37.setFont(font)
+        self.label_37.setStyleSheet("background: white;")
+        self.label_37.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_37.setObjectName("label_37")
+        self.layoutTitreLables.addWidget(self.label_37)
+        self.label_36 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_36.setFont(font)
+        self.label_36.setStyleSheet("background: white;")
+        self.label_36.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_36.setObjectName("label_36")
+        self.layoutTitreLables.addWidget(self.label_36)
+        self.label_35 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_35.setFont(font)
+        self.label_35.setStyleSheet("background: white;")
+        self.label_35.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_35.setObjectName("label_35")
+        self.layoutTitreLables.addWidget(self.label_35)
+        self.label_30 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_30.setFont(font)
+        self.label_30.setStyleSheet("background: white;")
+        self.label_30.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_30.setObjectName("label_30")
+        self.layoutTitreLables.addWidget(self.label_30)
+        self.label_31 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_31.setFont(font)
+        self.label_31.setStyleSheet("background: white;")
+        self.label_31.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_31.setObjectName("label_31")
+        self.layoutTitreLables.addWidget(self.label_31)
+        self.label_33 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_33.setFont(font)
+        self.label_33.setStyleSheet("background: white;")
+        self.label_33.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_33.setObjectName("label_33")
+        self.layoutTitreLables.addWidget(self.label_33)
+        self.label_29 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_29.setFont(font)
+        self.label_29.setStyleSheet("background: white;")
+        self.label_29.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_29.setObjectName("label_29")
+        self.layoutTitreLables.addWidget(self.label_29)
+        self.label_27 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_27.setFont(font)
+        self.label_27.setStyleSheet("background: white;")
+        self.label_27.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_27.setObjectName("label_27")
+        self.layoutTitreLables.addWidget(self.label_27)
+        self.label_26 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_26.setFont(font)
+        self.label_26.setStyleSheet("background: white;")
+        self.label_26.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_26.setObjectName("label_26")
+        self.layoutTitreLables.addWidget(self.label_26)
+        self.label_2 = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_2.setFont(font)
+        self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_2.setObjectName("label_2")
+        self.layoutTitreLables.addWidget(self.label_2)
+        self.horizontalLayout.addLayout(self.layoutTitreLables)
         self.layoutChampsModifiables = QtWidgets.QVBoxLayout()
         self.layoutChampsModifiables.setObjectName("layoutChampsModifiables")
         self.labelVide = QtWidgets.QLabel(AjoutEquipement)
@@ -279,6 +509,9 @@ class Ui_AjoutEquipement(object):
         self.dateEditDateDuDernierEntretien.setObjectName("dateEditDateDuDernierEntretien")
         self.layoutChampsModifiables.addWidget(self.dateEditDateDuDernierEntretien)
         self.comboBoxProvenance = QtWidgets.QComboBox(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.comboBoxProvenance.setFont(font)
         self.comboBoxProvenance.setStyleSheet("QComboBox {\n"
 "    border: 1px solid gray;\n"
 "    border-radius: 3px;\n"
@@ -291,7 +524,7 @@ class Ui_AjoutEquipement(object):
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
         self.layoutChampsModifiables.addWidget(self.comboBoxProvenance)
         self.lineEditCodeASSET = QtWidgets.QLineEdit(AjoutEquipement)
-        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(127, 0))
+        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(119, 0))
         self.lineEditCodeASSET.setMaximumSize(QtCore.QSize(223, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -308,142 +541,85 @@ class Ui_AjoutEquipement(object):
         self.layoutChampsNonModifiables = QtWidgets.QVBoxLayout()
         self.layoutChampsNonModifiables.setObjectName("layoutChampsNonModifiables")
         self.labelID = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelID.setFont(font)
         self.labelID.setStyleSheet("background: white;")
         self.labelID.setObjectName("labelID")
         self.layoutChampsNonModifiables.addWidget(self.labelID)
         self.labelCategorie = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelCategorie.setFont(font)
         self.labelCategorie.setStyleSheet("background: white;")
         self.labelCategorie.setObjectName("labelCategorie")
         self.layoutChampsNonModifiables.addWidget(self.labelCategorie)
         self.labelMarque = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelMarque.setFont(font)
         self.labelMarque.setStyleSheet("background: white;")
         self.labelMarque.setObjectName("labelMarque")
         self.layoutChampsNonModifiables.addWidget(self.labelMarque)
         self.labelModele = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelModele.setFont(font)
         self.labelModele.setStyleSheet("background: white;")
         self.labelModele.setObjectName("labelModele")
         self.layoutChampsNonModifiables.addWidget(self.labelModele)
         self.labelNoDeSerie = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelNoDeSerie.setFont(font)
         self.labelNoDeSerie.setStyleSheet("background: white;")
         self.labelNoDeSerie.setObjectName("labelNoDeSerie")
         self.layoutChampsNonModifiables.addWidget(self.labelNoDeSerie)
         self.labelSalle = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelSalle.setFont(font)
         self.labelSalle.setStyleSheet("background: white;")
         self.labelSalle.setObjectName("labelSalle")
         self.layoutChampsNonModifiables.addWidget(self.labelSalle)
         self.labelCentreDeService = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelCentreDeService.setFont(font)
         self.labelCentreDeService.setStyleSheet("background: white;")
         self.labelCentreDeService.setObjectName("labelCentreDeService")
         self.layoutChampsNonModifiables.addWidget(self.labelCentreDeService)
         self.labelDateDAquisition = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelDateDAquisition.setFont(font)
         self.labelDateDAquisition.setStyleSheet("background: white;")
         self.labelDateDAquisition.setObjectName("labelDateDAquisition")
         self.layoutChampsNonModifiables.addWidget(self.labelDateDAquisition)
         self.labelDateDernierEntretien = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelDateDernierEntretien.setFont(font)
         self.labelDateDernierEntretien.setStyleSheet("background: white;")
         self.labelDateDernierEntretien.setObjectName("labelDateDernierEntretien")
         self.layoutChampsNonModifiables.addWidget(self.labelDateDernierEntretien)
         self.labelProvenance = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelProvenance.setFont(font)
         self.labelProvenance.setStyleSheet("background: white;")
         self.labelProvenance.setObjectName("labelProvenance")
         self.layoutChampsNonModifiables.addWidget(self.labelProvenance)
         self.labelCodeASSET = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelCodeASSET.setFont(font)
         self.labelCodeASSET.setObjectName("labelCodeASSET")
         self.layoutChampsNonModifiables.addWidget(self.labelCodeASSET)
         self.horizontalLayout.addLayout(self.layoutChampsNonModifiables)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem1)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem4)
         self.gridLayout.addLayout(self.horizontalLayout, 1, 1, 1, 1)
-        self.layoutTitreLables = QtWidgets.QVBoxLayout()
-        self.layoutTitreLables.setObjectName("layoutTitreLables")
-        self.label_34 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_34.setFont(font)
-        self.label_34.setStyleSheet("background: white;")
-        self.label_34.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_34.setObjectName("label_34")
-        self.layoutTitreLables.addWidget(self.label_34)
-        self.label_37 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_37.setFont(font)
-        self.label_37.setStyleSheet("background: white;")
-        self.label_37.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_37.setObjectName("label_37")
-        self.layoutTitreLables.addWidget(self.label_37)
-        self.label_36 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_36.setFont(font)
-        self.label_36.setStyleSheet("background: white;")
-        self.label_36.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_36.setObjectName("label_36")
-        self.layoutTitreLables.addWidget(self.label_36)
-        self.label_35 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_35.setFont(font)
-        self.label_35.setStyleSheet("background: white;")
-        self.label_35.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_35.setObjectName("label_35")
-        self.layoutTitreLables.addWidget(self.label_35)
-        self.label_30 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_30.setFont(font)
-        self.label_30.setStyleSheet("background: white;")
-        self.label_30.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_30.setObjectName("label_30")
-        self.layoutTitreLables.addWidget(self.label_30)
-        self.label_31 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_31.setFont(font)
-        self.label_31.setStyleSheet("background: white;")
-        self.label_31.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_31.setObjectName("label_31")
-        self.layoutTitreLables.addWidget(self.label_31)
-        self.label_33 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_33.setFont(font)
-        self.label_33.setStyleSheet("background: white;")
-        self.label_33.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_33.setObjectName("label_33")
-        self.layoutTitreLables.addWidget(self.label_33)
-        self.label_29 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_29.setFont(font)
-        self.label_29.setStyleSheet("background: white;")
-        self.label_29.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_29.setObjectName("label_29")
-        self.layoutTitreLables.addWidget(self.label_29)
-        self.label_27 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_27.setFont(font)
-        self.label_27.setStyleSheet("background: white;")
-        self.label_27.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_27.setObjectName("label_27")
-        self.layoutTitreLables.addWidget(self.label_27)
-        self.label_26 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_26.setFont(font)
-        self.label_26.setStyleSheet("background: white;")
-        self.label_26.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_26.setObjectName("label_26")
-        self.layoutTitreLables.addWidget(self.label_26)
-        self.label_2 = QtWidgets.QLabel(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_2.setFont(font)
-        self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_2.setObjectName("label_2")
-        self.layoutTitreLables.addWidget(self.label_2)
-        self.gridLayout.addLayout(self.layoutTitreLables, 1, 0, 1, 1)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.labelTitreCommentaires = QtWidgets.QLabel(AjoutEquipement)
@@ -467,121 +643,14 @@ class Ui_AjoutEquipement(object):
         self.textEditCommentaires.setObjectName("textEditCommentaires")
         self.horizontalLayout_3.addWidget(self.textEditCommentaires)
         self.commentaire = QtWidgets.QLabel(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.commentaire.setFont(font)
         self.commentaire.setStyleSheet("background: white;")
         self.commentaire.setWordWrap(True)
         self.commentaire.setObjectName("commentaire")
         self.horizontalLayout_3.addWidget(self.commentaire)
         self.gridLayout.addLayout(self.horizontalLayout_3, 3, 0, 1, 2)
-        self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_8.addItem(spacerItem2)
-        self.BoutonValider = QtWidgets.QPushButton(AjoutEquipement)
-        font = QtGui.QFont()
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setItalic(False)
-        font.setWeight(75)
-        self.BoutonValider.setFont(font)
-        self.BoutonValider.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.BoutonValider.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 80px;\n"
-"max-width:220px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Images/check-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonValider.setIcon(icon)
-        self.BoutonValider.setObjectName("BoutonValider")
-        self.horizontalLayout_8.addWidget(self.BoutonValider)
-        self.BoutonModifier = QtWidgets.QPushButton(AjoutEquipement)
-        self.BoutonModifier.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.BoutonModifier.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 80px;\n"
-"max-width:220px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Images/Modify-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonModifier.setIcon(icon1)
-        self.BoutonModifier.setIconSize(QtCore.QSize(32, 32))
-        self.BoutonModifier.setObjectName("BoutonModifier")
-        self.horizontalLayout_8.addWidget(self.BoutonModifier)
-        self.BoutonEnregistrer = QtWidgets.QPushButton(AjoutEquipement)
-        self.BoutonEnregistrer.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.BoutonEnregistrer.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 80px;\n"
-"max-width:220px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Images/save (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonEnregistrer.setIcon(icon2)
-        self.BoutonEnregistrer.setObjectName("BoutonEnregistrer")
-        self.horizontalLayout_8.addWidget(self.BoutonEnregistrer)
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_8.addItem(spacerItem3)
-        self.gridLayout.addLayout(self.horizontalLayout_8, 4, 0, 1, 2)
 
         self.retranslateUi(AjoutEquipement)
         QtCore.QMetaObject.connectSlotsByName(AjoutEquipement)
@@ -600,7 +669,21 @@ class Ui_AjoutEquipement(object):
         self.radioButtonAcceptable.setText(_translate("AjoutEquipement", "Acceptable"))
         self.radioButtonEnFinDeVie.setText(_translate("AjoutEquipement", "En fin de vie"))
         self.radioButtonDesuet.setText(_translate("AjoutEquipement", "Désuet"))
+        self.BoutonValider.setText(_translate("AjoutEquipement", "Valider"))
+        self.BoutonModifier.setText(_translate("AjoutEquipement", "Modifier"))
+        self.BoutonEnregistrer.setText(_translate("AjoutEquipement", "Enregistrer"))
         self.titreModificationEquipement.setText(_translate("AjoutEquipement", "Ajout d\'équipement"))
+        self.label_34.setText(_translate("AjoutEquipement", "ID : "))
+        self.label_37.setText(_translate("AjoutEquipement", "Catégorie : "))
+        self.label_36.setText(_translate("AjoutEquipement", "Marque : "))
+        self.label_35.setText(_translate("AjoutEquipement", "Modèle : "))
+        self.label_30.setText(_translate("AjoutEquipement", "No. de série : "))
+        self.label_31.setText(_translate("AjoutEquipement", "Salle : "))
+        self.label_33.setText(_translate("AjoutEquipement", "Centre de service : "))
+        self.label_29.setText(_translate("AjoutEquipement", "Date d\'aquisition : "))
+        self.label_27.setText(_translate("AjoutEquipement", "Date du dernier entretien : "))
+        self.label_26.setText(_translate("AjoutEquipement", "Provenance : "))
+        self.label_2.setText(_translate("AjoutEquipement", "Code ASSET :"))
         self.comboBoxCategorie.setItemText(0, _translate("AjoutEquipement", "Catégorie 1"))
         self.comboBoxCategorie.setItemText(1, _translate("AjoutEquipement", "Catégorie 2"))
         self.comboBoxCategorie.setItemText(2, _translate("AjoutEquipement", "Catégorie 3"))
@@ -623,20 +706,6 @@ class Ui_AjoutEquipement(object):
         self.labelDateDernierEntretien.setText(_translate("AjoutEquipement", "Ici Date du dernier entretien"))
         self.labelProvenance.setText(_translate("AjoutEquipement", "Ici Provenance"))
         self.labelCodeASSET.setText(_translate("AjoutEquipement", "Ici Code ASSET"))
-        self.label_34.setText(_translate("AjoutEquipement", "ID : "))
-        self.label_37.setText(_translate("AjoutEquipement", "Catégorie : "))
-        self.label_36.setText(_translate("AjoutEquipement", "Marque : "))
-        self.label_35.setText(_translate("AjoutEquipement", "Modèle : "))
-        self.label_30.setText(_translate("AjoutEquipement", "No. de série : "))
-        self.label_31.setText(_translate("AjoutEquipement", "Salle : "))
-        self.label_33.setText(_translate("AjoutEquipement", "Centre de service : "))
-        self.label_29.setText(_translate("AjoutEquipement", "Date d\'aquisition : "))
-        self.label_27.setText(_translate("AjoutEquipement", "Date du dernier entretien : "))
-        self.label_26.setText(_translate("AjoutEquipement", "Provenance : "))
-        self.label_2.setText(_translate("AjoutEquipement", "Code ASSET :"))
         self.labelTitreCommentaires.setText(_translate("AjoutEquipement", "Commentaires : "))
         self.commentaire.setText(_translate("AjoutEquipement", "commentaires"))
-        self.BoutonValider.setText(_translate("AjoutEquipement", "Valider"))
-        self.BoutonModifier.setText(_translate("AjoutEquipement", "Modifier"))
-        self.BoutonEnregistrer.setText(_translate("AjoutEquipement", "Enregistrer"))
 

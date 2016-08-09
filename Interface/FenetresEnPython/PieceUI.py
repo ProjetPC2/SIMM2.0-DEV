@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Piece(object):
     def setupUi(self, Piece):
         Piece.setObjectName("Piece")
-        Piece.resize(1711, 697)
+        Piece.resize(1120, 800)
+        Piece.setMinimumSize(QtCore.QSize(0, 800))
         Piece.setMaximumSize(QtCore.QSize(11111111, 1111111))
         Piece.setStyleSheet("QWidget {\n"
 "background:white;\n"
@@ -101,7 +102,7 @@ class Ui_Piece(object):
         spacerItem = QtWidgets.QSpacerItem(700, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout.addItem(spacerItem, 4, 5, 1, 2)
         self.labelCategorieSelectionnee = QtWidgets.QLabel(Piece)
-        self.labelCategorieSelectionnee.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.labelCategorieSelectionnee.setMaximumSize(QtCore.QSize(600, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelCategorieSelectionnee.setFont(font)
@@ -113,7 +114,7 @@ class Ui_Piece(object):
         spacerItem1 = QtWidgets.QSpacerItem(40, 50, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
         self.BoutonEnregistrerPiece = QtWidgets.QPushButton(Piece)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.BoutonEnregistrerPiece.sizePolicy().hasHeightForWidth())
@@ -276,7 +277,8 @@ class Ui_Piece(object):
         self.labelSelectionCategorie.setText(_translate("Piece", "Sélectionner la catégorie de la pièce"))
         self.BoutonValider.setText(_translate("Piece", "Valider"))
         self.labelCategorieSelectionnee.setText(_translate("Piece", "Liste des pièces pour la catégorie sélectionnée"))
-        self.BoutonEnregistrerPiece.setText(_translate("Piece", "Enregistrer la pièce"))
+        self.BoutonEnregistrerPiece.setText(_translate("Piece", "Enregistrer \n"
+" la pièce"))
         self.labelResumePiece.setText(_translate("Piece", "Résumé des pièces pour chaque catégorie"))
         self.labelNombrePiece.setText(_translate("Piece", "Nombre de pièces"))
         self.labelTitreConsultationEquipement.setText(_translate("Piece", "Ajouter une pièce"))

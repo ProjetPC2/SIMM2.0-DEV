@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
-        Statistique.resize(1710, 805)
+        Statistique.resize(1029, 800)
+        Statistique.setMinimumSize(QtCore.QSize(0, 800))
         Statistique.setMaximumSize(QtCore.QSize(11111111, 1111111))
         Statistique.setStyleSheet("QWidget{\n"
 "background:white;\n"
@@ -63,6 +64,9 @@ class Ui_Statistique(object):
         self.horizontalLayout_2.addWidget(self.LabelnombreTotalEquipement)
         self.textBrowserNombreTotalEquipements = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserNombreTotalEquipements.setMaximumSize(QtCore.QSize(49, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserNombreTotalEquipements.setFont(font)
         self.textBrowserNombreTotalEquipements.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -128,7 +132,12 @@ class Ui_Statistique(object):
         self.LabelNombreProvenance.setObjectName("LabelNombreProvenance")
         self.horizontalLayout_5.addWidget(self.LabelNombreProvenance)
         self.textBrowserEquipementProvenance = QtWidgets.QTextBrowser(Statistique)
+        self.textBrowserEquipementProvenance.setEnabled(True)
         self.textBrowserEquipementProvenance.setMaximumSize(QtCore.QSize(54, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserEquipementProvenance.setFont(font)
+        self.textBrowserEquipementProvenance.setAcceptDrops(True)
         self.textBrowserEquipementProvenance.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -140,6 +149,9 @@ class Ui_Statistique(object):
 "min-width: 50px;\n"
 "max-width: 50px;\n"
 "}")
+        self.textBrowserEquipementProvenance.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.textBrowserEquipementProvenance.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.textBrowserEquipementProvenance.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserEquipementProvenance.setObjectName("textBrowserEquipementProvenance")
         self.horizontalLayout_5.addWidget(self.textBrowserEquipementProvenance)
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -196,6 +208,9 @@ class Ui_Statistique(object):
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.textBrowserEnMaintenance = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserEnMaintenance.setMaximumSize(QtCore.QSize(44, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserEnMaintenance.setFont(font)
         self.textBrowserEnMaintenance.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -212,6 +227,9 @@ class Ui_Statistique(object):
         self.verticalLayout_7.addWidget(self.textBrowserEnMaintenance)
         self.textBrowserEnService = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserEnService.setMaximumSize(QtCore.QSize(44, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserEnService.setFont(font)
         self.textBrowserEnService.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -228,6 +246,9 @@ class Ui_Statistique(object):
         self.verticalLayout_7.addWidget(self.textBrowserEnService)
         self.textBrowserAuRebus = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserAuRebus.setMaximumSize(QtCore.QSize(44, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserAuRebus.setFont(font)
         self.textBrowserAuRebus.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -302,6 +323,9 @@ class Ui_Statistique(object):
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.textBrowserQuasiNeuf = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserQuasiNeuf.setMaximumSize(QtCore.QSize(44, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserQuasiNeuf.setFont(font)
         self.textBrowserQuasiNeuf.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -318,6 +342,9 @@ class Ui_Statistique(object):
         self.verticalLayout_3.addWidget(self.textBrowserQuasiNeuf)
         self.textBrowserAcceptable = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserAcceptable.setMaximumSize(QtCore.QSize(44, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserAcceptable.setFont(font)
         self.textBrowserAcceptable.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -334,6 +361,9 @@ class Ui_Statistique(object):
         self.verticalLayout_3.addWidget(self.textBrowserAcceptable)
         self.textBrowserEnFinDeVie = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserEnFinDeVie.setMaximumSize(QtCore.QSize(44, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserEnFinDeVie.setFont(font)
         self.textBrowserEnFinDeVie.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -350,6 +380,9 @@ class Ui_Statistique(object):
         self.verticalLayout_3.addWidget(self.textBrowserEnFinDeVie)
         self.textBrowserDesuet = QtWidgets.QTextBrowser(Statistique)
         self.textBrowserDesuet.setMaximumSize(QtCore.QSize(44, 24))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textBrowserDesuet.setFont(font)
         self.textBrowserDesuet.setStyleSheet("QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -379,6 +412,9 @@ class Ui_Statistique(object):
         self.LabelCentreDeService.setObjectName("LabelCentreDeService")
         self.horizontalLayout_10.addWidget(self.LabelCentreDeService)
         self.comboBoxCentreService = QtWidgets.QComboBox(Statistique)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.comboBoxCentreService.setFont(font)
         self.comboBoxCentreService.setStyleSheet("QComboBox {\n"
 "    border: 1px solid gray;\n"
 "    border-radius: 3px;\n"
@@ -409,6 +445,7 @@ class Ui_Statistique(object):
 "background:rgb(247, 247, 247)")
         self.tableResumeInventaire.setLineWidth(10)
         self.tableResumeInventaire.setMidLineWidth(9)
+        self.tableResumeInventaire.setWordWrap(True)
         self.tableResumeInventaire.setObjectName("tableResumeInventaire")
         self.tableResumeInventaire.setColumnCount(2)
         self.tableResumeInventaire.setRowCount(3)
@@ -426,11 +463,13 @@ class Ui_Statistique(object):
         self.tableResumeInventaire.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableResumeInventaire.setHorizontalHeaderItem(1, item)
-        self.tableResumeInventaire.horizontalHeader().setDefaultSectionSize(134)
+        self.tableResumeInventaire.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableResumeInventaire.horizontalHeader().setDefaultSectionSize(170)
         self.tableResumeInventaire.horizontalHeader().setMinimumSectionSize(15)
+        self.tableResumeInventaire.horizontalHeader().setStretchLastSection(False)
         self.tableResumeInventaire.verticalHeader().setDefaultSectionSize(30)
         self.tableResumeInventaire.verticalHeader().setMinimumSectionSize(20)
-        self.tableResumeInventaire.verticalHeader().setSortIndicatorShown(False)
+        self.tableResumeInventaire.verticalHeader().setSortIndicatorShown(True)
         self.tableResumeInventaire.verticalHeader().setStretchLastSection(False)
         self.horizontalLayout_11.addWidget(self.tableResumeInventaire)
         self.verticalLayout_5.addLayout(self.horizontalLayout_11)
@@ -447,7 +486,7 @@ class Ui_Statistique(object):
         self.textBrowserNombreTotalEquipements.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.LabelnombreProvenance.setText(_translate("Statistique", "Équipements par provenance"))
@@ -460,19 +499,19 @@ class Ui_Statistique(object):
         self.textBrowserEnMaintenance.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">400</p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserEnService.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserAuRebus.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.label_11.setText(_translate("Statistique", "Équipements par état de conservation"))
@@ -483,28 +522,29 @@ class Ui_Statistique(object):
         self.textBrowserQuasiNeuf.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserAcceptable.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserEnFinDeVie.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.textBrowserDesuet.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
         self.LabelCentreDeService.setText(_translate("Statistique", "Résumé de l\'inventaire par centre de service"))
+        self.tableResumeInventaire.setSortingEnabled(True)
         item = self.tableResumeInventaire.verticalHeaderItem(0)
         item.setText(_translate("Statistique", "1"))
         item = self.tableResumeInventaire.verticalHeaderItem(1)

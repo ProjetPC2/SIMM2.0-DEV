@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ConsultationEquipement(object):
     def setupUi(self, ConsultationEquipement):
         ConsultationEquipement.setObjectName("ConsultationEquipement")
-        ConsultationEquipement.resize(1710, 697)
+        ConsultationEquipement.resize(1016, 800)
+        ConsultationEquipement.setMinimumSize(QtCore.QSize(0, 800))
         ConsultationEquipement.setMaximumSize(QtCore.QSize(11111111, 1111111))
         ConsultationEquipement.setStyleSheet("background:white;")
         self.gridLayout = QtWidgets.QGridLayout(ConsultationEquipement)
