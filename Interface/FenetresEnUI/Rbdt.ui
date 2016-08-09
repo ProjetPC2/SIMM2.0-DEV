@@ -78,50 +78,18 @@ background: rgb(247,247,247)
   <layout class="QGridLayout" name="gridLayout">
    <item row="2" column="0">
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="1" column="3">
-      <widget class="QPushButton" name="boutonActualiser">
-       <property name="minimumSize">
-        <size>
-         <width>47</width>
-         <height>43</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>47</width>
-         <height>43</height>
-        </size>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>Images/refresh-button-2.png</normaloff>Images/refresh-button-2.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>50</width>
-         <height>50</height>
-        </size>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="0">
       <widget class="QComboBox" name="comboBoxCategorieEquipement">
        <property name="minimumSize">
         <size>
          <width>150</width>
-         <height>0</height>
+         <height>20</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>300</width>
-         <height>500</height>
+         <height>20</height>
         </size>
        </property>
        <property name="font">
@@ -136,13 +104,13 @@ background: rgb(247,247,247)
        <property name="minimumSize">
         <size>
          <width>150</width>
-         <height>0</height>
+         <height>20</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>300</width>
-         <height>500</height>
+         <height>20</height>
         </size>
        </property>
        <property name="font">
@@ -150,18 +118,18 @@ background: rgb(247,247,247)
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="displayFormat">
+        <string>dd-MM-yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
        <property name="date">
         <date>
          <year>2016</year>
          <month>1</month>
          <day>1</day>
         </date>
-       </property>
-       <property name="displayFormat">
-        <string>dd-MM-yyyy</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -170,13 +138,13 @@ background: rgb(247,247,247)
        <property name="minimumSize">
         <size>
          <width>150</width>
-         <height>0</height>
+         <height>20</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>300</width>
-         <height>500</height>
+         <height>20</height>
         </size>
        </property>
        <property name="font">
@@ -184,18 +152,18 @@ background: rgb(247,247,247)
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="displayFormat">
+        <string>dd-MM-yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
        <property name="date">
         <date>
          <year>2016</year>
          <month>1</month>
          <day>1</day>
         </date>
-       </property>
-       <property name="displayFormat">
-        <string>dd-MM-yyyy</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -298,33 +266,6 @@ recherche</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QComboBox" name="comboBoxCentreService">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>150</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>300</width>
-         <height>500</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
      <item row="4" column="2">
       <widget class="QComboBox" name="comboBoxEtat">
        <property name="sizePolicy">
@@ -336,13 +277,13 @@ recherche</string>
        <property name="minimumSize">
         <size>
          <width>150</width>
-         <height>0</height>
+         <height>20</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>300</width>
-         <height>500</height>
+         <height>20</height>
         </size>
        </property>
        <property name="font">
@@ -384,13 +325,13 @@ recherche</string>
        <property name="minimumSize">
         <size>
          <width>200</width>
-         <height>43</height>
+         <height>20</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>16777215</height>
+         <height>20</height>
         </size>
        </property>
        <property name="font">
@@ -450,6 +391,65 @@ background: rgb(247,247,247);</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="boutonActualiser">
+       <property name="minimumSize">
+        <size>
+         <width>47</width>
+         <height>43</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>47</width>
+         <height>43</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Images/refresh-button-2.png</normaloff>Images/refresh-button-2.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QComboBox" name="comboBoxCentreService">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
        </property>
       </widget>
      </item>
@@ -517,7 +517,7 @@ background: rgb(247,247,247);</string>
       <enum>Qt::Vertical</enum>
      </property>
      <property name="sizeType">
-      <enum>QSizePolicy::Minimum</enum>
+      <enum>QSizePolicy::Expanding</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>

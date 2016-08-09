@@ -1,4 +1,4 @@
-nbEquipement: 903
+nbEquipement: 904
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -62,7 +62,7 @@ nbEquipementCentreService:
     "St\xE9rilisateur portable": 0
     "St\xE9rilisateur \xE0 vapeur": 2
     "Support \xE0 solut\xE9s": 7
-    Table d'examen: 23
+    Table d'examen: 24
     Table d'examen ophtalmologie: 1
     Table d'instruments: 3
     Table de chevet: 1
@@ -253,14 +253,14 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 401
+  Quasi neuf: 402
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 839
+  En service: 840
 nbEquipementProvenance:
   ? ''
-  : 382
+  : 383
   CDC: 10
   CHU Sainte-Justine: 11
   Croix-Rouge Canadienne: 384
