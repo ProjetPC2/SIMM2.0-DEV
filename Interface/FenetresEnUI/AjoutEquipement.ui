@@ -467,19 +467,6 @@ background-color: rgb(193, 213, 243);
    <item row="1" column="1">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <spacer name="horizontalSpacer_5">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
       <layout class="QVBoxLayout" name="layoutTitreLables">
        <item>
         <widget class="QLabel" name="label_34">
@@ -701,6 +688,7 @@ background-color: rgb(193, 213, 243);
           <font>
            <family>MS Shell Dlg 2</family>
            <pointsize>10</pointsize>
+           <kerning>true</kerning>
           </font>
          </property>
          <property name="styleSheet">
@@ -739,6 +727,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QLineEdit" name="lineEditMarque">
+         <property name="minimumSize">
+          <size>
+           <width>127</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>223</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -760,6 +760,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QLineEdit" name="lineEditModele">
+         <property name="minimumSize">
+          <size>
+           <width>127</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>223</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -781,6 +793,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QLineEdit" name="lineEditNoDeSerie">
+         <property name="minimumSize">
+          <size>
+           <width>127</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>223</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -962,7 +986,7 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditCodeASSET">
          <property name="minimumSize">
           <size>
-           <width>119</width>
+           <width>127</width>
            <height>0</height>
           </size>
          </property>
