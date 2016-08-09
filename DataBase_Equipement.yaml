@@ -17157,3 +17157,19 @@ _default:
       Salle: "R108 - D\xE9pistage et conseils"
     state:
       eid: 917
+  918:
+    CategorieEquipement: Table d'examen
+    CentreService: Clinique externe
+    CodeAsset: ''
+    Commentaires: ''
+    DateAcquisition: 2016-07-28
+    DateDernierEntretien: 2016-08-09
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    ID: '965'
+    Marque: ''
+    Modele: ''
+    NbBonTravail: 0
+    NumeroSerie: ''
+    Provenance: ''
+    Salle: R207 - Planification familiale
