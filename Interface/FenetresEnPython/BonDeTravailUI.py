@@ -11,9 +11,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_BonDeTravail(object):
     def setupUi(self, BonDeTravail):
         BonDeTravail.setObjectName("BonDeTravail")
-        BonDeTravail.resize(1168, 816)
+        BonDeTravail.resize(1710, 800)
         BonDeTravail.setMinimumSize(QtCore.QSize(0, 0))
-        BonDeTravail.setMaximumSize(QtCore.QSize(11111111, 1111111))
+        BonDeTravail.setMaximumSize(QtCore.QSize(16777215, 16777215))
         BonDeTravail.setStyleSheet("QWidget\n"
 " {\n"
 "\n"
@@ -710,10 +710,10 @@ class Ui_BonDeTravail(object):
         self.dateEdit.setLocale(QtCore.QLocale(QtCore.QLocale.French, QtCore.QLocale.Canada))
         self.dateEdit.setButtonSymbols(QtWidgets.QAbstractSpinBox.UpDownArrows)
         self.dateEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2016, 2, 1), QtCore.QTime(0, 0, 0)))
-        self.dateEdit.setDate(QtCore.QDate(2016, 2, 1))
         self.dateEdit.setCurrentSection(QtWidgets.QDateTimeEdit.DaySection)
         self.dateEdit.setCalendarPopup(True)
         self.dateEdit.setTimeSpec(QtCore.Qt.LocalTime)
+        self.dateEdit.setDate(QtCore.QDate(2016, 2, 1))
         self.dateEdit.setObjectName("dateEdit")
         self.verticalLayout.addWidget(self.dateEdit)
         self.labelCacheDate = QtWidgets.QLabel(BonDeTravail)

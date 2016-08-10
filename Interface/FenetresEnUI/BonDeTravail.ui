@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1168</width>
-    <height>816</height>
+    <width>1710</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>11111111</width>
-    <height>1111111</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -1270,13 +1270,6 @@ background:rgb(247,247,247)
              <day>1</day>
             </datetime>
            </property>
-           <property name="date">
-            <date>
-             <year>2016</year>
-             <month>2</month>
-             <day>1</day>
-            </date>
-           </property>
            <property name="currentSection">
             <enum>QDateTimeEdit::DaySection</enum>
            </property>
@@ -1288,6 +1281,13 @@ background:rgb(247,247,247)
            </property>
            <property name="timeSpec">
             <enum>Qt::LocalTime</enum>
+           </property>
+           <property name="date">
+            <date>
+             <year>2016</year>
+             <month>2</month>
+             <day>1</day>
+            </date>
            </property>
           </widget>
          </item>
