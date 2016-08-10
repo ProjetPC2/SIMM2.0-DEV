@@ -12,9 +12,9 @@ class Ui_RechercheEquipement(object):
     def setupUi(self, RechercheEquipement):
         RechercheEquipement.setObjectName("RechercheEquipement")
         RechercheEquipement.setWindowModality(QtCore.Qt.NonModal)
-        RechercheEquipement.resize(983, 800)
-        RechercheEquipement.setMinimumSize(QtCore.QSize(0, 800))
-        RechercheEquipement.setMaximumSize(QtCore.QSize(11111111, 1111111))
+        RechercheEquipement.resize(1710, 800)
+        RechercheEquipement.setMinimumSize(QtCore.QSize(0, 0))
+        RechercheEquipement.setMaximumSize(QtCore.QSize(16777215, 16777215))
         RechercheEquipement.setStyleSheet("QWidget{\n"
 "background: white;\n"
 "}\n"
