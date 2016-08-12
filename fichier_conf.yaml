@@ -143,6 +143,7 @@ Provenance:
 - MSPP
 - PNS
 - Croix-Rouge Canadienne
+- JICA
 Salle:
 - ''
 - Observation
@@ -207,6 +208,8 @@ Salle:
 - R305 - Salle de consultation
 - R306 - Laboratoire dentaire
 - R307 - Radiographie dentaire
+- R302 - Salle de consultation 1 JICA
+- R303 - Salle de consultation 2 JICA
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -232,4 +235,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 965
+dernierID-Equipement: 969

@@ -17138,3 +17138,57 @@ _default:
       Salle: R207 - Planification familiale
     state:
       eid: 918
+  919: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-08-11
+      DateDernierEntretien: 2016-08-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '966'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R302 - Salle de consultation 1 JICA
+    state:
+      eid: 919
+  920: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '967'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R302 - Salle de consultation 1 JICA
+    state:
+      eid: 920
+  921:
+    CategorieEquipement: Lampe d'examen
+    CentreService: Urgences
+    CodeAsset: ''
+    Commentaires: ''
+    DateAcquisition: 2016-07-28
+    DateDernierEntretien: 2016-08-11
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    ID: '968'
+    Marque: Amilite
+    Modele: LX-3019
+    NbBonTravail: 0
+    NumeroSerie: 11B3X10014000002
+    Provenance: JICA
+    Salle: R303 - Salle de consultation 2 JICA
