@@ -10,13 +10,14 @@ from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.PieceUI import Ui_Piece
+from Interface.FenetresEnPython.Signaux import Communicate
 
 
 class Piece(Ui_Piece):
-    def __init__(self, widget, enregistrement):
+    def __init__(self, widget):
         self.setupUi(widget)
         self.pieceManager = PieceManager()
-        self.enregistrement = enregistrement
+        self.enregistrement = Communicate()
 
         self.ajoutPiece()
         # self.finChargement = finChargement

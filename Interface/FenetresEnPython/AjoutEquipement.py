@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
+from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.Stockage import Equipement
 from Interface.FenetresEnPython.Fichiers import *
 
@@ -18,10 +19,10 @@ class AjoutEquipement(Ui_AjoutEquipement):
         :return:
     '''
     # On masque les autres elements
-    def __init__(self, AjoutEquipement, sauvegarde):
+    def __init__(self, AjoutEquipement):
         self.setupUi(AjoutEquipement)
         self.ajout()
-        self.sauvegarde = sauvegarde
+        self.sauvegarde = Communicate()
 
 
     def ajout(self):
@@ -78,12 +79,12 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeDonnees = list()
         try:
-            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open("fichier_conf.yaml", 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
 
-            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", "fichier_conf.yaml")  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
 
@@ -260,10 +261,10 @@ class AjoutEquipement(Ui_AjoutEquipement):
                 for radioBouton in self.listeWidgets[indice].buttons():
                     radioBouton.show()
             else:
-                self.listeLabel[indice].hide()
                 self.listeWidgets[indice].show()
                 if( isinstance(self.listeWidgets[indice], QLineEdit) or isinstance(self.listeWidgets[indice], QTextEdit)):
                     self.listeWidgets[indice].clear()
+            self.listeLabel[indice].hide()
             indice += 1
         self.labelID.setText("")
         self.BoutonEnregistrer.hide()
@@ -315,7 +316,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     ajoutEquipementWidget = QtWidgets.QWidget()
-    ajoutEquipement = AjoutEquipement(ajoutEquipementWidget, None)
+    ajoutEquipement = AjoutEquipement(ajoutEquipementWidget)
     ajoutEquipementWidget.show()
     sys.exit(app.exec_())
     os.system("pause")

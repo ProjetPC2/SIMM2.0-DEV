@@ -13,10 +13,11 @@ from BDD.EquipementManager import EquipementManager
 from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Signaux import Communicate
 
 
 class BonDeTravail(Ui_BonDeTravail):
-    def __init__(self, widget, chargement, consulterBDT = None, ajouterID = None):
+    def __init__(self, widget, consulterBDT = None, ajouterID = None):
         self.setupUi(widget)
         self.ajoutBonDeTravail()
         self.boutonConsultation.hide()
@@ -30,7 +31,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeAjoutPieceReparation = list()
         self.listPieceReparationUtilise = list()
         self.pushButtonValider.setDisabled(True)
-        self.chargement = chargement
+        self.chargement = Communicate()
         if(consulterBDT is not None):
             self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
             self.chercherEquipement()

@@ -9,12 +9,14 @@ from PyQt5.QtWidgets import QTableWidgetItem
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.RechercheEquipementUI import Ui_RechercheEquipement
+from Interface.FenetresEnPython.Signaux import Communicate
+
 
 class RechercheEquipement(Ui_RechercheEquipement):
-    def __init__(self, widget, finChargement):
+    def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutRechercheEquipement()
-        self.finChargement = finChargement
+        self.chargement = Communicate()
 
     def ajoutRechercheEquipement(self):
         #Recuperation des differents attributs d'un equipement
@@ -141,7 +143,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheEtatDeService(self):
@@ -153,7 +155,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("EtatService")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheCentreService(self):
@@ -165,7 +167,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("CentreService")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheSalle(self):
@@ -177,7 +179,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("Salle")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheProvenance(self):
@@ -188,7 +190,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("Provenance")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheNumeroSerie(self):
@@ -202,7 +204,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if "NumeroSerie" in self.dictionnaireRecherche:
                 self.dictionnaireRecherche.pop("NumeroSerie")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def remplirTableau(self):
@@ -222,7 +224,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
                         colonne += 1
                     self.tableResultats.resizeColumnsToContents()
             else:
-                self.finChargement.aucunResultat.emit()
+                self.chargement.aucunResultat.emit()
         else:
             print("dictionnaire de recherche vide")
 

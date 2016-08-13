@@ -8,14 +8,14 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QWidget, QMainWindow, QTextEdit, QPushButton, QGridLayout
 
 
-class Overlay(QWidget):
-    def __init__(self, parent=None):
+class Attente(QWidget):
+    def __init__(self, texte, parent=None):
 
         QWidget.__init__(self, parent)
         palette = QPalette(self.palette())
         # palette.setColor(palette.Background, Qt.transparent)
         # self.setPalette(palette)
-        self.text = "Chargement"
+        self.text = texte
 
     def paintEvent(self, event):
 
@@ -52,7 +52,7 @@ class Overlay(QWidget):
 
         self.counter += 1
         self.update()
-        if self.counter == 60:
+        if self.counter == 6000:
             self.killTimer(self.timer)
             self.hide()
 
@@ -73,7 +73,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(button, 1, 1, 1, 1)
 
         self.setCentralWidget(widget)
-        self.overlay = Overlay(self.centralWidget())
+        self.overlay = Attente("Chargement", self.centralWidget())
         print(widget.size())
         self.overlay.hide()
         button.clicked.connect(self.overlay.show)

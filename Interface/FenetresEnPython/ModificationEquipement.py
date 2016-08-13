@@ -1,24 +1,29 @@
 import datetime
+from threading import Thread
 
 import yaml
 from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtCore import QLocale
+from PyQt5.QtCore import QLocale, QDate
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
+from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
-from Interface.FenetresEnPython.ModificationEquipementUI import Ui_ModificationEquipement
+from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.Stockage import Equipement
 
-class ModificationEquipement(Ui_ModificationEquipement):
+class ModificationEquipement(Ui_AjoutEquipement):
     def __init__(self, widget, equipement):
         self.setupUi(widget)
         self.equipementRecherche = equipement
         self.ajout()
         self.BoutonEnregistrer.hide()
         self.BoutonModifier.hide()
+        self.sauvegarde = Communicate()
 
     def ajout(self):
+
+        self.titreModificationEquipement.setText("Modification d\'équipement")
 
         # Creation du groupe contenant le choix pour l'etat de service
         self.groupeBoutonEtatService = QButtonGroup()
@@ -102,45 +107,28 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.comboBoxProvenance.clear()
         self.comboBoxProvenance.addItems(self.listeProvenance)
 
-        # Connexion du bouton valider
-        self.BoutonValider.clicked.connect(self.verificationEquipement)
-
-        # Creation des differents labels pour la verification
-        self.categorieEquipementLabel = QLabel("Ici Categorie Equipement  ")
-        self.marqueLabel = QLabel("Ici marque")
-        self.modeleLabel = QLabel("Ici Modele ")
-        self.numSerieLabel = QLabel("Ici No. de serie ")
-        self.salleLabel = QLabel("Ici Label ")
-        self.centreServiceLabel = QLabel("Ici Centre de service ")
-        self.dateAcquisitionLabel = QLabel("Ici Date d'acquisition ")
-        self.dateEntretienLabel = QLabel("Ici Date du dernier entretien")
-        self.provenanceLabel = QLabel()
-        self.codeASSETLabel = QLabel()
-        self.etatServiceLabel = QLabel("Ici Etat de service ")
-        self.etatConservationLabel = QLabel("Ici Etat de conservation ")
-        self.commentaire = QLabel("Ici commentaires ")
-
 
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        self.listeLabel.append(self.categorieEquipementLabel)
-        self.listeLabel.append(self.marqueLabel)
-        self.listeLabel.append(self.modeleLabel)
-        self.listeLabel.append(self.numSerieLabel)
-        self.listeLabel.append(self.salleLabel)
-        self.listeLabel.append(self.centreServiceLabel)
-        self.listeLabel.append(self.dateAcquisitionLabel)
-        self.listeLabel.append(self.dateEntretienLabel)
-        self.listeLabel.append(self.provenanceLabel)
-        self.listeLabel.append(self.codeASSETLabel)
-        self.listeLabel.append(self.etatServiceLabel)
-        self.listeLabel.append(self.etatConservationLabel)
+        # self.listeLabel.append(self.labelID)
+        self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelMarque)
+        self.listeLabel.append(self.labelModele)
+        self.listeLabel.append(self.labelNoDeSerie)
+        self.listeLabel.append(self.labelSalle)
+        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelDateDAquisition)
+        self.listeLabel.append(self.labelDateDernierEntretien)
+        self.listeLabel.append(self.labelProvenance)
+        self.listeLabel.append(self.labelCodeASSET)
+        self.listeLabel.append(self.labelEtatDeService)
+        self.listeLabel.append(self.labelEtatDeConservation)
 
         # Masquage des differents labels
         for label in self.listeLabel:
-            self.layoutChamps.addWidget(label)
             label.hide()
+        self.labelID.hide()
 
         # Traitement de la partie commentaires
         self.listeLabel.append(self.commentaire)
@@ -151,7 +139,9 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.dateEditDateDaquisition.setMinimumWidth(200)
         self.dateEditDateDuDernierEntretien.setMinimumWidth(200)
 
-        self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipement)
+         # Connexion du bouton valider
+        self.BoutonValider.clicked.connect(self.verificationEquipement)
+        self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
         self.BoutonModifier.clicked.connect(self.modifierEquipement)
         # self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
 
@@ -206,27 +196,28 @@ class ModificationEquipement(Ui_ModificationEquipement):
             i += 1
         # self.equipementManager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.yaml')
         self.equipementManager.ModifierEquipement(self. equipementRecherche["ID"], self.equipement.dictionnaire)
+        self.sauvegarde.sauvegardeTermine.emit()
 
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement"""
         if (self.verificationChamps()):
+            self.labelID.show()
+            self.labelVide.hide()
             self.donnees()
             indice = 0
-            font = QtGui.QFont()
-            font.setFamily("MS Shell Dlg 2")
-            font.setPointSize(10)
             for text in self.listeDonnees:
                 if type(self.listeWidgets[indice]) is QButtonGroup:
                     for radioBouton in self.listeWidgets[indice].buttons():
-                        if not radioBouton.isChecked():
+                        #if not radioBouton.isChecked():
                             radioBouton.hide()
+                    self.listeLabel[indice].setText(str(text))
+                    self.listeLabel[indice].show()
                 else:
-                    self.listeLabel[indice].setFont(font)
                     self.listeLabel[indice].setText(str(text))
                     self.listeLabel[indice].show()
                     self.listeWidgets[indice].hide()
                 indice += 1
-            # self.labelId.setText(str(self.equipementManager._ObtenirProchainID()))
+            self.labelID.setText(str(self.equipementRecherche["ID"]))
             self.BoutonEnregistrer.show()
             self.BoutonModifier.show()
             self.BoutonValider.hide()
@@ -237,6 +228,9 @@ class ModificationEquipement(Ui_ModificationEquipement):
         """Action lors de l'appuie sur le bouton modifier
         On repasse sur l'ajout d'un equipement avec les champs modifiables"""
         indice = 0
+        self.labelEtatDeService.hide()
+        self.labelEtatDeConservation.hide()
+        self.labelVide.show()
         for text in self.listeDonnees:
             if type(self.listeWidgets[indice]) is QButtonGroup:
                 for radioBouton in self.listeWidgets[indice].buttons():
@@ -245,7 +239,7 @@ class ModificationEquipement(Ui_ModificationEquipement):
                 self.listeLabel[indice].hide()
                 self.listeWidgets[indice].show()
             indice += 1
-        self.labelId.setText("")
+        self.labelID.hide()
         self.BoutonEnregistrer.hide()
         self.BoutonValider.show()
         self.BoutonModifier.hide()
@@ -255,15 +249,13 @@ class ModificationEquipement(Ui_ModificationEquipement):
          Utilisation des donnees entrees par l'utilisateur pour les labels
          """
         equipement = self.equipementRecherche
-        self.labelId.setText(str(equipement["ID"]))
+        self.labelVide.setText(str(equipement["ID"]))
         indice = 0
         for widget in self.listeWidgets:
             # self.stockage.dictionnaire
             if type(widget) is QLineEdit:
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             elif type(widget) is QDateEdit:
-                date = equipement[self.listeCleDonnees[indice]]
-
                 widget.setDate(equipement[self.listeCleDonnees[indice]])
             elif type(widget) is QComboBox:
                 widget.setCurrentText(equipement[self.listeCleDonnees[indice]])
@@ -301,10 +293,37 @@ class ModificationEquipement(Ui_ModificationEquipement):
         self.BoutonValider.show()
         self.BoutonModifier.hide()
 
+    def sauvegarderEquipementThread(self):
+        thread = SauvergarderEquipement(self.sauvegarderEquipement)
+        thread.start()
+
+class SauvergarderEquipement(Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+
+    def run(self):
+        self.fonction()
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     modificationEquipement = QtWidgets.QWidget()
-    modificationEquipementUI = ModificationEquipement(modificationEquipement, None)
+    equipement = dict({"ID":"9",
+                       "CategorieEquipement":"test",
+                       "Marque":"Apple",
+                       "Modele":"modele",
+                       "NumeroSerie":"3",
+                       "Salle":"",
+                       "CentreService":"5",
+                       "DateAcquisition":QDate.currentDate (),
+                       "DateDernierEntretien":QDate.currentDate (),
+                       "Provenance":"6",
+                       "CodeAsset":"6",
+                       "EtatService":"ok",
+                       "EtatConservation":"ok",
+                       "Commentaires":"Bonjour",})
+    modificationEquipementUI = ModificationEquipement(modificationEquipement, equipement)
     modificationEquipement.show()
     sys.exit(app.exec_())

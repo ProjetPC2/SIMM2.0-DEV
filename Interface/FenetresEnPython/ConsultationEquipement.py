@@ -7,13 +7,14 @@ from Interface.FenetresEnPython.ConsultationEquipementUI import Ui_ConsultationE
 from threading import Thread
 
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Signaux import Communicate
 
 
 class ConsultationEquipement(Ui_ConsultationEquipement):
-    def __init__(self, widget, finChargement):
+    def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutConsultationEquipement()
-        self.finChargement = finChargement
+        self.chargement = Communicate()
 
 
     def ajoutConsultationEquipement(self):
@@ -57,8 +58,8 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
 
         self.listeEdit = list()
         self.equipement = None
-        self.boutonAfficherEquipement.clicked.connect(self.test)
-        self.lineEditId.returnPressed.connect(self.test)
+        self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipementThread)
+        self.lineEditId.returnPressed.connect(self.rechercherEquipementThread)
         self.boutonModifierEquipement.setEnabled(False)
         self.boutonAjouterUnBon.setEnabled(False)
         self.boutonConsulterBon.setEnabled(False)
@@ -75,10 +76,10 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         '''
         #Recuperation du dictionnaire de resultat
         if(self.lineEditId.text() != ""):
+            self.nouvelleRecherche()
             equipementRecherche = dict()
             equipementRecherche["ID"] = self.lineEditId.text()
             listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
-            self.equipement
 
             if(any(listeEquipement)):
                 #Cas ou l'equipement existe
@@ -93,16 +94,23 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                     self.listeLabel[i].setText(str(self.equipement[cle]))
                     i += 1
                 self.rechercherBonDeTravailAssocie()
-                self.finChargement.finProcessus.emit()
+                self.chargement.finChargement.emit()
             else:
                 #Cas ou l'equipement n'existe pas
                 self.boutonModifierEquipement.setEnabled(False)
-                self.finChargement.finProcessus.emit()
-                self.finChargement.aucunResultat.emit()
+                self.chargement.finChargement.emit()
+                self.chargement.aucunResultat.emit()
 
         else:
             print("Champ ID null")
-            self.finChargement.finProcessus.emit()
+            self.chargement.finChargement.emit()
+
+    def nouvelleRecherche(self):
+        for label in self.listeLabel:
+            label.clear()
+        self.boutonSupprimerEquipement.setEnabled(False)
+        self.boutonConsulterBon.setEnabled(False)
+        self.comboBoxBons.clear()
 
     def rechercherBonDeTravailAssocie(self):
         '''
@@ -127,11 +135,11 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
                 self.comboBoxBons.addItem(icon2, affichage)
 
-    def test(self):
+    def rechercherEquipementThread(self):
         a = RechercherEquipement(self.rechercherEquipement)
         a.start()
 
-class RechercherEquipement (Thread):
+class RechercherEquipement(Thread):
     def __init__(self, fonction):
         Thread.__init__(self)
         self.fonction = fonction

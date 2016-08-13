@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import *
 
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
 from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
-from Interface.FenetresEnPython.Attente import Overlay, AttenteThread
+from Interface.FenetresEnPython.Attente import Attente, AttenteThread
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
 from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipement
 from Interface.FenetresEnPython.Enregistrement import Enregistrement
@@ -42,13 +42,15 @@ class Accueil(Ui_Accueil):
         self.ajoutAccueil()
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
-        self.overlay = Accueil.overlay
+        self.attente = Accueil.attente
         self.aucunResultat = Accueil.aucunResultat
         self.sauvegarde = Accueil.sauvegarde
         self.Accueil = Accueil
         self.finChargment = Communicate()
         # Mise en francais des calendriers
         locale.setlocale(locale.LC_ALL, "fra")
+        self.suppression = Attente("Suppression en cours...", Accueil)
+        self.suppression.hide()
 
     def ajoutAccueil(self):
         '''
@@ -91,9 +93,10 @@ class Accueil(Ui_Accueil):
         self.connectionBouton()
 
         self.listeNavigation = list()
-        self.BoutonFlecheNavigation.clicked.connect(self.naviguer)
 
         self.boutonSelectionne = None
+
+
 
 
     def connectionBouton(self):
@@ -116,6 +119,8 @@ class Accueil(Ui_Accueil):
 
         self.BoutonSupportTecnique.clicked.connect(self.afficherSupport)
 
+        self.BoutonFlecheNavigation.clicked.connect(self.naviguer)
+
 
     def afficherAjoutEquipement(self):
         '''
@@ -129,12 +134,11 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonAjouterEquipement)
         if self.ajoutEquipement is None:
             # Creation du widget s'il n'existe pas deja
-
             self.ajoutEquipement = QtWidgets.QWidget()
-            self.ajoutEquipementUI = AjoutEquipement(self.ajoutEquipement, self.finChargment)
-            # self.ajoutEquipement.setStyleSheet("background: white;")
+            self.ajoutEquipementUI = AjoutEquipement(self.ajoutEquipement)
             self.ajoutEquipementUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
             self.listeElementParDefaut.append(self.ajoutEquipement)
+            self.ajoutEquipementUI.sauvegarde.sauvegardeTermine.connect(self.sauvegardeTermine)
             self.layoutAffichagePrincipal.addWidget(self.ajoutEquipement)
         else:
             # Affichage du widget s'il existe deja
@@ -156,17 +160,15 @@ class Accueil(Ui_Accueil):
         if self.consultationEquipement is None:
             # Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
-            self.consultationEquipementUI = ConsultationEquipement(self.consultationEquipement, self.finChargment)
-            # self.consultationEquipement.setStyleSheet("background: white;")
-
+            self.consultationEquipementUI = ConsultationEquipement(self.consultationEquipement)
             # connexion de l'action a l'appuye du bouton modification equipement
-            self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.attente)
-            self.consultationEquipementUI.lineEditId.returnPressed.connect(self.attente)
-            # self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.consultationEquipementUI.rechercherEquipement)
-
+            self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
+            self.consultationEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
             self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.ajouterBonDeTravailEquipement)
             self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
+            self.consultationEquipementUI.chargement.finChargement.connect(self.finChargement)
+
             self.listeElementParDefaut.append(self.consultationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.consultationEquipement)
         else:
@@ -191,18 +193,20 @@ class Accueil(Ui_Accueil):
         if self.rechercheEquipement is None:
             # Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget()
-            self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement, self.finChargment)
+            self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement)
             # self.rechercheEquipement.setStyleSheet("background: white;")
-            self.rechercheEquipementUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.attente)
-            self.rechercheEquipementUI.comboBoxProvenance.currentTextChanged.connect(self.attente)
-            self.rechercheEquipementUI.comboBoxSalle.currentTextChanged.connect(self.attente)
-            self.rechercheEquipementUI.comboBoxCentreService.currentTextChanged.connect(self.attente)
-            self.rechercheEquipementUI.comboBoxEtatService.currentTextChanged.connect(self.attente)
-            self.rechercheEquipementUI.lineEditNumeroSerie.returnPressed.connect(self.attente)
-            self.rechercheEquipementUI.boutonActualiser.clicked.connect(self.attente)
+            self.rechercheEquipementUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheEquipementUI.comboBoxProvenance.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheEquipementUI.comboBoxSalle.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheEquipementUI.comboBoxCentreService.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheEquipementUI.comboBoxEtatService.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheEquipementUI.lineEditNumeroSerie.returnPressed.connect(self.afficherChargement)
+            self.rechercheEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.rechercheEquipementUI.tableResultats.doubleClicked.connect(self.choisirEquipement)
+            self.rechercheEquipementUI.chargement.finChargement.connect(self.finChargement)
+
             self.listeElementParDefaut.append(self.rechercheEquipement)
             self.layoutAffichagePrincipal.addWidget(self.rechercheEquipement)
-            self.rechercheEquipementUI.tableResultats.doubleClicked.connect(self.choisirEquipement)
         else:
             # Affichage du widget s'il existe deja
             self.rechercheEquipement.show()
@@ -210,6 +214,36 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
         self.listeNavigation.append(self.rechercheEquipement)
+
+    def modifierEquipement(self):
+        '''
+            Affichage du widget recapitulant l'equipement que l'on souhaite ajouter
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
+
+        self.BoutonFlecheNavigation.show()
+        self.frameFleche.show()
+        self.masquerElementGraphique()
+        equipement = self.consultationEquipementUI.equipement
+        if self.modificationEquipement is None:
+            # Creation du widget s'il n'existe pas
+            self.modificationEquipement = QtWidgets.QWidget()
+            self.modificationEquipementUI = ModificationEquipement(self.modificationEquipement, equipement)
+            self.modificationEquipementUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
+            self.modificationEquipementUI.sauvegarde.sauvegardeTermine.connect(self.sauvegardeTermine)
+            self.modificationEquipementUI.sauvegarde.sauvegardeTermine.connect(self.modificationTermine)
+            # self.modificationEquipement.setStyleSheet("background: white;")
+            self.listeElementParDefaut.append(self.modificationEquipement)
+            self.layoutAffichagePrincipal.addWidget(self.modificationEquipement)
+        else:
+            # Affichage du widget s'il existe deja
+            self.modificationEquipement.show()
+            self.modificationEquipementUI.equipementRecherche = equipement
+            self.modificationEquipementUI.remplirEquipement()
+        self.listeNavigation.append(self.modificationEquipement)
 
     def choisirEquipement(self):
         # On masque les autres elements
@@ -221,8 +255,9 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.modificationEquipementRecherche = QtWidgets.QWidget()
             self.modificationEquipementRechercheUI = ModificationEquipement(self.modificationEquipementRecherche, equipement)
-            # self.modificationEquipementRecherche.setStyleSheet("background: white;")
-
+            self.modificationEquipementRechercheUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
+            self.modificationEquipementRechercheUI.sauvegarde.sauvegardeTermine.connect(self.sauvegardeTermine)
+            self.modificationEquipementRechercheUI.sauvegarde.sauvegardeTermine.connect(self.modificationTermine)
             self.listeElementParDefaut.append(self.modificationEquipementRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipementRecherche)
         else:
@@ -241,8 +276,12 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.supprimeEquipement = QtWidgets.QWidget()
             self.supprimeEquipementUI = SuppressionEquipement(self.supprimeEquipement)
-            # self.supprimeEquipement.setStyleSheet("background: white;")
-
+            self.supprimeEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
+            self.supprimeEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
+            self.supprimeEquipementUI.suppression.finChargement.connect(self.finChargement)
+            self.supprimeEquipementUI.boutonSupprimerEquipement.clicked.connect(self.afficherSuppression)
+            self.supprimeEquipementUI.suppression.suppressionTermine.connect(self.suppressionTermine)
+            self.supprimeEquipementUI.suppression.aucunResultat.connect(self.afficherAucunResultat)
             self.listeElementParDefaut.append(self.supprimeEquipement)
             self.layoutAffichagePrincipal.addWidget(self.supprimeEquipement)
         else:
@@ -304,8 +343,8 @@ class Accueil(Ui_Accueil):
             self.ajoutBonDeTravail = QtWidgets.QWidget()
             self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail, self.finChargment)
             # self.ajoutBonDeTravail.setStyleSheet("background: white;")
-            self.bonDeTravailUI.boutonActualiser.clicked.connect(self.attente)
-            self.bonDeTravailUI.lineEditID.returnPressed.connect(self.attente)
+            self.bonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.bonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.bonDeTravailUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
@@ -332,11 +371,11 @@ class Accueil(Ui_Accueil):
             self.rechercheBonDeTravail = QtWidgets.QWidget()
             self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail, self.finChargment)
             # self.rechercheBonDeTravail.setStyleSheet("background: white;")
-            self.rechercheBonDeTravailUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.attente)
-            self.rechercheBonDeTravailUI.comboBoxCentreService.currentTextChanged.connect(self.attente)
-            self.rechercheBonDeTravailUI.comboBoxEtat.currentTextChanged.connect(self.attente)
-            self.rechercheBonDeTravailUI.calendrierApres.dateChanged.connect(self.attente)
-            self.rechercheBonDeTravailUI.calendrierAvant.dateChanged.connect(self.attente)
+            self.rechercheBonDeTravailUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheBonDeTravailUI.comboBoxCentreService.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheBonDeTravailUI.comboBoxEtat.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheBonDeTravailUI.calendrierApres.dateChanged.connect(self.afficherChargement)
+            self.rechercheBonDeTravailUI.calendrierAvant.dateChanged.connect(self.afficherChargement)
 
             self.rechercheBonDeTravailUI.tableResultats.doubleClicked.connect(self.choisirBonDeTravailTableau)
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)
@@ -415,7 +454,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
             self.supportPC2UI = SupportPC2(self.support)
-            # self.support.setStyleSheet("background: white;")
+            self.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
             self.listeElementParDefaut.append(self.support)
@@ -427,8 +466,8 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
         self.listeNavigation.append(self.support)
-        # self.overlay.raise_()
-        # self.overlay.show()
+        # self.attente.raise_()
+        # self.attente.show()
 
 
     def afficherAccueil(self):
@@ -459,32 +498,6 @@ class Accueil(Ui_Accueil):
         for elementGraphique in self.listeElementParDefaut:
             elementGraphique.hide()
 
-    def modifierEquipement(self):
-        '''
-            Affichage du widget recapitulant l'equipement que l'on souhaite ajouter
-            Masquage des autres elements graphiques de la partie principale
-            :param: None
-            :return:
-        '''
-        # On masque les autres elements
-
-        self.BoutonFlecheNavigation.show()
-        self.frameFleche.show()
-        self.masquerElementGraphique()
-        equipement = self.consultationEquipementUI.equipement
-        if self.modificationEquipement is None:
-            # Creation du widget s'il n'existe pas
-            self.modificationEquipement = QtWidgets.QWidget()
-            self.modificationEquipementUI = ModificationEquipement(self.modificationEquipement, equipement)
-            # self.modificationEquipement.setStyleSheet("background: white;")
-            self.listeElementParDefaut.append(self.modificationEquipement)
-            self.layoutAffichagePrincipal.addWidget(self.modificationEquipement)
-        else:
-            # Affichage du widget s'il existe deja
-            self.modificationEquipement.show()
-            self.modificationEquipementUI.equipementRecherche = equipement
-            self.modificationEquipementUI.remplirEquipement()
-        self.listeNavigation.append(self.modificationEquipement)
 
     def ajouterBonDeTravailEquipement(self):
         '''
@@ -582,13 +595,13 @@ class Accueil(Ui_Accueil):
         if (self.boutonSelectionne != self.BoutonAccueil):
             self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
 
-    def attente(self):
-        self.overlay.raise_()
-        self.overlay.show()
+    def afficherChargement(self):
+        self.attente.raise_()
+        self.attente.show()
 
     def finChargement(self):
         print("fin chargement")
-        self.overlay.hide()
+        self.attente.hide()
 
     def afficherAucunResultat(self):
         print("Aurcun resultat")
@@ -596,16 +609,28 @@ class Accueil(Ui_Accueil):
         self.aucunResultat.show()
 
     def sauvegardeEnCours(self):
+        print("Sauvegarde en cours")
         self.sauvegarde.raise_()
         self.sauvegarde.show()
 
-    def sauvegarderTermine(self):
+    def sauvegardeTermine(self):
         print("Sauvegarde termine")
         self.sauvegarde.hide()
 
     def enregistrer(self):
         self.enregistrement.raise_()
         self.enregistrement.show()
+
+    def modificationTermine(self):
+        self.naviguer()
+
+    def afficherSuppression(self):
+        self.suppression.raise_()
+        self.suppression.show()
+
+    def suppressionTermine(self):
+        self.suppression.hide()
+
 class SIMM():
     '''
         Fonction de lancement de la page d'accueil de SIMM
@@ -623,13 +648,13 @@ class SIMM():
         # MainFrame.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         # MainFrame.setWindowTitle("SIMM 2.0")
         # print(MainFrame.centralWidget())
-        # self.overlay = Overlay(MainFrame.centralWidget())
-        # self.overlay.hide()
-        # self.ui.BoutonAccueil.clicked.connect(self.overlay.show)
+        # self.attente = Overlay(MainFrame.centralWidget())
+        # self.attente.hide()
+        # self.ui.BoutonAccueil.clicked.connect(self.attente.show)
         # MainFrame.show()
         # print(MainFrame.size())
         # MainFrame.resize(self.resizeEvent())
-        # self.overlay.move(250,250)
+        # self.attente.move(250,250)
         MainFrame = MainWindow()
         MainFrame.show()
         sys.exit(app.exec_())
@@ -641,7 +666,7 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self, parent)
         self.mapper = QSignalMapper(self)
         self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
-        self.overlay = None
+        self.attente = None
         self.aucunResultat = None
         self.sauvegarde = None
         self.enregistrement = None
@@ -650,34 +675,35 @@ class MainWindow(QMainWindow):
         self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.setWindowTitle("SIMM 2.0")
-        self.overlay = Overlay(self.centralWidget())
+        self.attente = Attente("Chargement...", self.centralWidget())
         self.aucunResultat = FinAction(self.centralWidget())
-        self.sauvegarde = Sauvegarde(self.centralWidget())
+        self.sauvegarde = Attente("Sauvegarde en cours...", self.centralWidget())
         self.enregistrement = Enregistrement(self.centralWidget())
-        self.overlay.hide()
+        self.attente.hide()
         self.aucunResultat.hide()
         self.sauvegarde.hide()
         self.enregistrement.hide()
-        self.ui.overlay = self.overlay
+        self.ui.attente = self.attente
         self.ui.aucunResultat = self.aucunResultat
         self.ui.sauvegarde = self.sauvegarde
         self.ui.enregistrement = self.enregistrement
-        self.ui.finChargment.finProcessus.connect(self.ui.finChargement)
+        self.ui.finChargment.finChargement.connect(self.ui.finChargement)
         self.ui.finChargment.aucunResultat.connect(self.ui.afficherAucunResultat)
-        self.ui.finChargment.sauvegardeTermine.connect(self.ui.sauvegarderTermine)
+        self.ui.finChargment.sauvegardeTermine.connect(self.ui.sauvegardeTermine)
         self.ui.finChargment.enregistrement.connect(self.ui.enregistrer)
 
-        # self.ui.BoutonRechercherEquipement.clicked.connect(self.overlay.show)
-        # self.attente = AttenteThread(self)
-        # self.attente.start()
-        # self.overlay.hide()
+        # self.ui.BoutonRechercherEquipement.clicked.connect(self.attente.show)
+        # self.afficherChargement = AttenteThread(self)
+        # self.afficherChargement.start()
+        # self.attente.hide()
 
     def resizeEvent(self, event):
         print(event)
         print("size", event.size())
-        self.overlay.resize(event.size())
+        self.attente.resize(event.size())
         self.aucunResultat.resize(event.size())
         self.sauvegarde.resize(event.size())
+        self.ui.suppression.resize(event.size())
         self.enregistrement.resize(event.size())
         event.accept()
 

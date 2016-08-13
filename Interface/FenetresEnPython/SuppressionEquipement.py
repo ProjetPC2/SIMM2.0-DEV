@@ -1,9 +1,12 @@
+from threading import Thread
+
 import yaml
 from PyQt5 import QtGui, QtWidgets
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.SuppressionEquipementUI import Ui_SuppressionEquipement
 
 
@@ -11,6 +14,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutSuppressionEquipement()
+        self.suppression = Communicate()
 
     def ajoutSuppressionEquipement(self):
         # Creation de la liste pour manipuler les labels
@@ -50,11 +54,11 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
 
         self.listeEdit = list()
         self.equipement = None
-        self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipement)
-        self.lineEditId.returnPressed.connect(self.rechercherEquipement)
+        self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipementThread)
+        self.lineEditId.returnPressed.connect(self.rechercherEquipementThread)
         self.boutonConsulterBon.setEnabled(False)
         self.boutonSupprimerEquipement.setEnabled(False)
-        self.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
+        self.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipementThread)
         self.comboBoxBons.clear()
 
 
@@ -67,6 +71,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         '''
         # Recuperation du dictionnaire de resultat
         if (self.lineEditId.text() != ""):
+            self.nouvelleRecherche()
             equipementRecherche = dict()
             equipementRecherche["ID"] = self.lineEditId.text()
             listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
@@ -82,12 +87,22 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
                     self.listeLabel[i].setText(str(self.equipement[cle]))
                     i += 1
                 self.rechercherBonDeTravailAssocie()
-                self.rechercherBonDeTravailAssocie()
+                self.suppression.finChargement.emit()
             else:
                 # Cas ou l'equipement n'existe pas
                 self.boutonSupprimerEquipement.setEnabled(False)
+                self.suppression.finChargement.emit()
+                self.suppression.aucunResultat.emit()
         else:
             print("Champ ID null")
+            self.suppression.finChargement.emit()
+
+    def nouvelleRecherche(self):
+        for label in self.listeLabel:
+            label.clear()
+        self.boutonSupprimerEquipement.setEnabled(False)
+        self.boutonConsulterBon.setEnabled(False)
+        self.comboBoxBons.clear()
 
     def rechercherBonDeTravailAssocie(self):
         '''
@@ -98,7 +113,6 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         '''
         # Recuperation des bons associees a l'equipement
         dictionnaireBDTRecherche = dict()
-        # TODO : verifier que l'ID-EQ recupere bien que cet ID
         dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
         listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
         self.comboBoxBons.clear()
@@ -107,7 +121,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
             self.boutonConsulterBon.setEnabled(True)
             icon2 = QtGui.QIcon()
             icon2.addPixmap(
-                QtGui.QPixmap("../../../SIMM-2.0/Apprentissage Python/exercices/Hatim/Accueil/view-icon.png"),
+                QtGui.QPixmap("Images/view-icon.png"),
                 QtGui.QIcon.Normal, QtGui.QIcon.Off)
             for bdt in listeBonDeTravail:
                 affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
@@ -115,6 +129,23 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
 
     def supprimerEquipement(self):
         self.equipementManager.SupprimerEquipement(self.equipement["ID"])
+        self.suppression.suppressionTermine.emit()
+
+    def rechercherEquipementThread(self):
+        a = fonctionThread(self.rechercherEquipement)
+        a.start()
+
+    def supprimerEquipementThread(self):
+        thread = fonctionThread(self.supprimerEquipement)
+        thread.start()
+
+class fonctionThread(Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+    def run(self):
+        self.fonction()
 
 if __name__ == "__main__":
     import sys
