@@ -8,6 +8,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
+from Interface.FenetresEnPython.AffichageMessage import AffichageMessage
 from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
 from Interface.FenetresEnPython.Attente import Attente, AttenteThread
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
@@ -49,8 +50,11 @@ class Accueil(Ui_Accueil):
         self.finChargment = Communicate()
         # Mise en francais des calendriers
         locale.setlocale(locale.LC_ALL, "fra")
+        self.enregistrementReussi =  AffichageMessage("Enregistrement réussie", Accueil)
+        self.enregistrementReussi.hide()
         self.suppression = Attente("Suppression en cours...", Accueil)
         self.suppression.hide()
+
 
     def ajoutAccueil(self):
         '''
@@ -267,45 +271,6 @@ class Accueil(Ui_Accueil):
             self.modificationEquipementRechercheUI.remplirEquipement()
         self.listeNavigation.append(self.modificationEquipementRecherche)
 
-    def supprimerEquipement(self):
-        # On masque les autres elements
-        self.masquerElementGraphique()
-        self.frameFleche.show()
-        self.BoutonFlecheNavigation.show()
-        if self.supprimeEquipement is None:
-            # Creation du widget s'il n'existe pas
-            self.supprimeEquipement = QtWidgets.QWidget()
-            self.supprimeEquipementUI = SuppressionEquipement(self.supprimeEquipement)
-            self.supprimeEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
-            self.supprimeEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
-            self.supprimeEquipementUI.suppression.finChargement.connect(self.finChargement)
-            self.supprimeEquipementUI.boutonSupprimerEquipement.clicked.connect(self.afficherSuppression)
-            self.supprimeEquipementUI.suppression.suppressionTermine.connect(self.suppressionTermine)
-            self.supprimeEquipementUI.suppression.aucunResultat.connect(self.afficherAucunResultat)
-            self.listeElementParDefaut.append(self.supprimeEquipement)
-            self.layoutAffichagePrincipal.addWidget(self.supprimeEquipement)
-        else:
-            # Affichage du widget s'il existe deja
-            self.supprimeEquipement.show()
-        self.listeNavigation.append(self.supprimeEquipement)
-
-    def supprimerBonDeTravail(self):
-        # On masque les autres elements
-        self.masquerElementGraphique()
-        self.frameFleche.show()
-        self.BoutonFlecheNavigation.show()
-        if self.supprimeBonDeTravail is None:
-            # Creation du widget s'il n'existe pas
-            self.supprimeBonDeTravail = QtWidgets.QWidget()
-            self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
-            # self.supprimeBonDeTravail.setStyleSheet("background: white;")
-
-            self.listeElementParDefaut.append(self.supprimeBonDeTravail)
-            self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
-        else:
-            # Affichage du widget s'il existe deja
-            self.supprimeBonDeTravail.show()
-        self.listeNavigation.append(self.supprimeBonDeTravail)
 
     def afficherAjoutPiece(self):
         '''
@@ -318,8 +283,9 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonAjouterPiece)
         if self.ajoutPiece is None:
             self.ajoutPiece = QtWidgets.QWidget()
-            self.pieceUI = Piece(self.ajoutPiece, self.finChargment)
+            self.pieceUI = Piece(self.ajoutPiece)
             self.pieceUI.BoutonEnregistrerPiece.clicked.connect(self.enregistrer)
+            self.pieceUI.enregistrement.enregistrementTermine.connect(self.enregistrementTermine)
             self.listeElementParDefaut.append(self.ajoutPiece)
             self.layoutAffichagePrincipal.addWidget(self.ajoutPiece)
         else:
@@ -327,6 +293,7 @@ class Accueil(Ui_Accueil):
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.listeNavigation.clear()
+
 
     def afficherAjoutBonDeTravail(self):
         '''
@@ -440,34 +407,6 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
 
-    def afficherSupport(self):
-        '''
-            Affichage du widget Support
-            Masquage des autres elements graphiques de la partie principale
-            :param: None
-            :return:
-        '''
-        # On masque les autres elements
-        self.masquerElementGraphique()
-        self.selectionnerBouton(self.BoutonSupportTecnique)
-        if self.support is None:
-            # Creation du widget support s'il n'existe pas
-            self.support = QtWidgets.QWidget()
-            self.supportPC2UI = SupportPC2(self.support)
-            self.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
-            self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
-            self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
-            self.listeElementParDefaut.append(self.support)
-            self.layoutAffichagePrincipal.addWidget(self.support)
-        else:
-            # Affichage du widget support
-            self.support.show()
-        self.BoutonFlecheNavigation.hide()
-        self.frameFleche.hide()
-        self.listeNavigation.clear()
-        self.listeNavigation.append(self.support)
-        # self.attente.raise_()
-        # self.attente.show()
 
 
     def afficherAccueil(self):
@@ -566,6 +505,76 @@ class Accueil(Ui_Accueil):
         # pdf.join()
         self.BoutonImprimerInventaire.setDisabled(True)
 
+    def afficherSupport(self):
+        '''
+            Affichage du widget Support
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
+        # On masque les autres elements
+        self.masquerElementGraphique()
+        self.selectionnerBouton(self.BoutonSupportTecnique)
+        if self.support is None:
+            # Creation du widget support s'il n'existe pas
+            self.support = QtWidgets.QWidget()
+            self.supportPC2UI = SupportPC2(self.support)
+            self.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
+            self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
+            self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
+            self.listeElementParDefaut.append(self.support)
+            self.layoutAffichagePrincipal.addWidget(self.support)
+        else:
+            # Affichage du widget support
+            self.support.show()
+        self.BoutonFlecheNavigation.hide()
+        self.frameFleche.hide()
+        self.listeNavigation.clear()
+        self.listeNavigation.append(self.support)
+        # self.attente.raise_()
+        # self.attente.show()
+
+
+    def supprimerEquipement(self):
+        # On masque les autres elements
+        self.masquerElementGraphique()
+        self.frameFleche.show()
+        self.BoutonFlecheNavigation.show()
+        if self.supprimeEquipement is None:
+            # Creation du widget s'il n'existe pas
+            self.supprimeEquipement = QtWidgets.QWidget()
+            self.supprimeEquipementUI = SuppressionEquipement(self.supprimeEquipement)
+            self.supprimeEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
+            self.supprimeEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
+            self.supprimeEquipementUI.suppression.finChargement.connect(self.finChargement)
+            self.supprimeEquipementUI.boutonSupprimerEquipement.clicked.connect(self.afficherSuppression)
+            self.supprimeEquipementUI.suppression.suppressionTermine.connect(self.suppressionTermine)
+            self.supprimeEquipementUI.suppression.aucunResultat.connect(self.afficherAucunResultat)
+            self.listeElementParDefaut.append(self.supprimeEquipement)
+            self.layoutAffichagePrincipal.addWidget(self.supprimeEquipement)
+        else:
+            # Affichage du widget s'il existe deja
+            self.supprimeEquipement.show()
+        self.listeNavigation.append(self.supprimeEquipement)
+
+    def supprimerBonDeTravail(self):
+        # On masque les autres elements
+        self.masquerElementGraphique()
+        self.frameFleche.show()
+        self.BoutonFlecheNavigation.show()
+        if self.supprimeBonDeTravail is None:
+            # Creation du widget s'il n'existe pas
+            self.supprimeBonDeTravail = QtWidgets.QWidget()
+            self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
+            # self.supprimeBonDeTravail.setStyleSheet("background: white;")
+
+            self.listeElementParDefaut.append(self.supprimeBonDeTravail)
+            self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
+        else:
+            # Affichage du widget s'il existe deja
+            self.supprimeBonDeTravail.show()
+        self.listeNavigation.append(self.supprimeBonDeTravail)
+
     def naviguer(self):
         if (len(self.listeNavigation) > 1):
             widget = self.listeNavigation.pop(len(self.listeNavigation) - 1)
@@ -620,6 +629,12 @@ class Accueil(Ui_Accueil):
     def enregistrer(self):
         self.enregistrement.raise_()
         self.enregistrement.show()
+
+    def enregistrementTermine(self):
+        self.enregistrement.hide()
+        print("EnregistrementTermine")
+        self.enregistrementReussi.raise_()
+        self.enregistrementReussi.show()
 
     def modificationTermine(self):
         self.naviguer()
@@ -678,7 +693,7 @@ class MainWindow(QMainWindow):
         self.attente = Attente("Chargement...", self.centralWidget())
         self.aucunResultat = FinAction(self.centralWidget())
         self.sauvegarde = Attente("Sauvegarde en cours...", self.centralWidget())
-        self.enregistrement = Enregistrement(self.centralWidget())
+        self.enregistrement = Attente("Enregistrement en cours...", self.centralWidget())
         self.attente.hide()
         self.aucunResultat.hide()
         self.sauvegarde.hide()
@@ -690,7 +705,7 @@ class MainWindow(QMainWindow):
         self.ui.finChargment.finChargement.connect(self.ui.finChargement)
         self.ui.finChargment.aucunResultat.connect(self.ui.afficherAucunResultat)
         self.ui.finChargment.sauvegardeTermine.connect(self.ui.sauvegardeTermine)
-        self.ui.finChargment.enregistrement.connect(self.ui.enregistrer)
+        self.ui.finChargment.enregistrementTermine.connect(self.ui.enregistrer)
 
         # self.ui.BoutonRechercherEquipement.clicked.connect(self.attente.show)
         # self.afficherChargement = AttenteThread(self)
@@ -704,6 +719,7 @@ class MainWindow(QMainWindow):
         self.aucunResultat.resize(event.size())
         self.sauvegarde.resize(event.size())
         self.ui.suppression.resize(event.size())
+        self.ui.enregistrementReussi.resize(event.size())
         self.enregistrement.resize(event.size())
         event.accept()
 

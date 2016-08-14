@@ -63,7 +63,7 @@ class Piece(Ui_Piece):
         # self.tableCategoriePiece.resizeColumnsToContents()
         # self.tableCategoriePiece.
         self.BoutonValider.clicked.connect(self.ajouterPiece)
-        self.BoutonEnregistrerPiece.clicked.connect(self.enregistrerPiece)
+        self.BoutonEnregistrerPiece.clicked.connect(self.enregistrerPieceThread)
 
         self.tableCategoriePiece.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableCategoriePiece.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
@@ -101,7 +101,6 @@ class Piece(Ui_Piece):
         self.tableCategoriePiece.setRowCount(0)
         self.pieceManager.AjouterPiece(self.listeAjoutPiece)
         self.listeAjoutPiece.clear()
-        self.enregistrement.enregistrement.emit()
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.sort()
         self.listeCategoriePiece.insert(0,"")
@@ -111,6 +110,7 @@ class Piece(Ui_Piece):
         self.comboBoxNomPiece.setCurrentText("")
         self.comboBoxCategorieSelectionnee.addItems(self.listeCategoriePiece)
         self.comboBoxSelectionCategoriePiece.addItems(self.listeCategoriePiece)
+        self.enregistrement.enregistrementTermine.emit()
 
 
 
@@ -163,7 +163,11 @@ class Piece(Ui_Piece):
             self.tableResume.sortByColumn(numeroColonne, Qt.AscendingOrder)
             self.colonneCliqueResume = numeroColonne
 
-class fonctionPiece (Thread):
+    def enregistrerPieceThread(self):
+        thread = fonctionPiece(self.enregistrerPiece)
+        thread.start()
+
+class fonctionPiece(Thread):
     def __init__(self, fonction):
         Thread.__init__(self)
         self.fonction = fonction

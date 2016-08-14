@@ -6,5 +6,5 @@ class Communicate(QObject):
     aucunResultat = pyqtSignal()
     finChargement = pyqtSignal()
     sauvegardeTermine = pyqtSignal()
-    enregistrement = pyqtSignal()
+    enregistrementTermine = pyqtSignal()
     suppressionTermine = pyqtSignal()

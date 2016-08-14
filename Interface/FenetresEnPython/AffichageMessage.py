@@ -8,12 +8,12 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QWidget, QMainWindow, QTextEdit, QPushButton, QGridLayout
 
 
-class Enregistrement(QWidget):
-    def __init__(self, parent=None):
+class AffichageMessage(QWidget):
+    def __init__(self, texte, parent=None):
 
         QWidget.__init__(self, parent)
         palette = QPalette(self.palette())
-        self.text = "Sauvegarde réussie"
+        self.text = texte
 
 
     def paintEvent(self, event):
