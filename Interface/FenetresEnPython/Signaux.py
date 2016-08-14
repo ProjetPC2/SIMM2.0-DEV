@@ -8,3 +8,4 @@ class Communicate(QObject):
     sauvegardeTermine = pyqtSignal()
     enregistrementTermine = pyqtSignal()
     suppressionTermine = pyqtSignal()
+    rechercheTermine = pyqtSignal()

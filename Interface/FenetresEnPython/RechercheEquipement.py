@@ -238,6 +238,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         # self.tableResultats.clear()
         # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.setRowCount(0)
+        print(self.dictionnaireRecherche)
 
     def rechercheCategorieThread(self):
         thread = RechercherEquipement(self.rechercheCategorieEquipement)
@@ -277,6 +278,6 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     rechercheEquipement = QtWidgets.QWidget()
-    rechercheEquipementUI = RechercheEquipement(rechercheEquipement, None)
+    rechercheEquipementUI = RechercheEquipement(rechercheEquipement)
     rechercheEquipement.show()
     sys.exit(app.exec_())

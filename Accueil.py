@@ -306,13 +306,16 @@ class Accueil(Ui_Accueil):
         self.masquerElementGraphique()
         self.selectionnerBouton(self.BoutonAjouterBonTravail)
         if self.ajoutBonDeTravail is None:
+            #TODO: Verifier la partie confirmation pour l'ajout d'un bon de travail
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
-            self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail, self.finChargment)
+            self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail)
             # self.ajoutBonDeTravail.setStyleSheet("background: white;")
             self.bonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.bonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
+            self.bonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.bonDeTravailUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
+            self.bonDeTravailUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
         else:
@@ -336,14 +339,13 @@ class Accueil(Ui_Accueil):
         if self.rechercheBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.rechercheBonDeTravail = QtWidgets.QWidget()
-            self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail, self.finChargment)
-            # self.rechercheBonDeTravail.setStyleSheet("background: white;")
+            self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail)
             self.rechercheBonDeTravailUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.comboBoxCentreService.currentTextChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.comboBoxEtat.currentTextChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.calendrierApres.dateChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.calendrierAvant.dateChanged.connect(self.afficherChargement)
-
+            self.rechercheBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.rechercheBonDeTravailUI.tableResultats.doubleClicked.connect(self.choisirBonDeTravailTableau)
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.rechercheBonDeTravail)
@@ -645,6 +647,7 @@ class Accueil(Ui_Accueil):
 
     def suppressionTermine(self):
         self.suppression.hide()
+
 
 class SIMM():
     '''

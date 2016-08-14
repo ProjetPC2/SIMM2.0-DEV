@@ -10,13 +10,14 @@ from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.RechercheBonDeTravailUI import Ui_RechercheBonDeTravail
+from Interface.FenetresEnPython.Signaux import Communicate
 
 
 class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
-    def __init__(self, widget, finChargement):
+    def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutRechercheBonDeTravail()
-        self.finChargement = finChargement
+        self.chargement = Communicate()
 
 
     def ajoutRechercheBonDeTravail(self):
@@ -79,7 +80,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         # self.tableResultats.setColumnCount(0)
 
         self.dictionnaireRecherche = dict()
-        self.dictionnaireRecherche = dict()
 
         #Connexion des differentes recherches pour la mise a jour automatique
         self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipementThread)
@@ -90,7 +90,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.calendrierAvant.dateChanged.connect(self.rechercheDateAvantThread)
         self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituationThread)
         self.calendrierApres.dateChanged.connect(self.rechercheDateApresThread)
-
+        self.boutonNouvelleRecherche.clicked.connect(self.nouvelleRecherche)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
         self.colonneClique = None
         self.nombreClique = 0
@@ -153,7 +153,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheDateAvant(self):
@@ -164,7 +164,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         self.dictionnaireRecherche["AvantLe"] = self.calendrierAvant.date().toPyDate()
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheDateApres(self):
@@ -175,7 +175,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         self.dictionnaireRecherche["ApresLe"] = self.calendrierApres.date().toPyDate()
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheDescriptionSituation(self):
@@ -187,7 +187,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         if (self.lineEditDescriptionSituation.text() != ""):
             self.dictionnaireRecherche["DescriptionSituation"] = self.lineEditDescriptionSituation.text()
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheCategorieEquipement(self):
@@ -202,7 +202,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
 
@@ -218,7 +218,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("EtatService")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def rechercheCentreService(self):
@@ -233,7 +233,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("CentreService")
         self.remplirTableau()
-        self.finChargement.finProcessus.emit()
+        self.chargement.finChargement.emit()
 
 
     def remplirTableau(self):
@@ -314,12 +314,19 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                     print("Aucun resultat")
                     self.tableResultats.clearContents()
                     self.tableResultats.setRowCount(0)
-                    self.finChargement.aucunResultat.emit()
+                    self.chargement.aucunResultat.emit()
             else:
                 print("dictionnaire de recherche vide")
                 self.tableResultats.clearContents()
                 self.tableResultats.setRowCount(0)
 
+    def nouvelleRecherche(self):
+        self.comboBoxCategorieEquipement.setCurrentText("")
+        self.comboBoxCentreService.setCurrentText("")
+        self.comboBoxEtat.setCurrentText("")
+        self.lineEditDescriptionSituation.setText("")
+        self.tableResultats.setRowCount(0)
+        self.dictionnaireRecherche.clear()
 
     def rechercheCategorieEquipementThread(self):
         thread = RechercherBonDeTravail(self.rechercheCategorieEquipement)
