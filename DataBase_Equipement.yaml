@@ -17326,7 +17326,7 @@ _default:
       CentreService: Urgences
       CodeAsset: ''
       Commentaires: ''
-      DateAcquisition: 2016-08-11
+      DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-11
       EtatConservation: Quasi neuf
       EtatService: En service
@@ -17358,19 +17358,684 @@ _default:
       Salle: R302 - Salle de consultation 1 JICA
     state:
       eid: 920
-  921:
-    CategorieEquipement: Lampe d'examen
-    CentreService: Urgences
+  921: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-11
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '968'
+      Marque: Amilite
+      Modele: LX-3019
+      NbBonTravail: 0
+      NumeroSerie: 202163
+      Provenance: JICA
+      Salle: R303 - Salle de consultation 2 JICA
+    state:
+      eid: 921
+  922: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '969'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R303 - Salle de consultation 2 JICA
+    state:
+      eid: 922
+  923: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '970'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R301 - Petite chirurgie JICA
+    state:
+      eid: 923
+  924: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '971'
+      Marque: Amilite
+      Modele: LX-3019
+      NbBonTravail: 0
+      NumeroSerie: '202162'
+      Provenance: JICA
+      Salle: R301 - Petite chirurgie JICA
+    state:
+      eid: 924
+  925: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '972'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 925
+  926: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '973'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 926
+  927: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '974'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 927
+  928: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '975'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 928
+  929: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '976'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 929
+  930: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '977'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 930
+  931: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '978'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 931
+  932: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '979'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 932
+  933: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '980'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 933
+  934: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '981'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 934
+  935: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '982'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 935
+  936: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '983'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 936
+  937: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '984'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 937
+  938: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '985'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 938
+  939: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de secours
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '986'
+      Marque: CIhealthcare
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 939
+  940: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '987'
+      Marque: CIhealthcare
+      Modele: SS21
+      NbBonTravail: 0
+      NumeroSerie: 0-21-16-000
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 940
+  941: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '988'
+      Marque: Drive
+      Modele: Silver Sport II
+      NbBonTravail: 0
+      NumeroSerie: SSP220DDA-ELR
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 941
+  942: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "N\xE9bulisateur"
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '989'
+      Marque: DeVilbiss
+      Modele: Pulmo-Aide
+      NbBonTravail: 0
+      NumeroSerie: D7030612
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 942
+  943: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil \xE0 succion"
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '990'
+      Marque: CIhealthcare
+      Modele: JX820D
+      NbBonTravail: 0
+      NumeroSerie: 4-820-16-000
+      Provenance: JICA
+      Salle: Urgences JICA
+    state:
+      eid: 943
+  944: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '991'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R303 - Salle de consultation 2 JICA
+    state:
+      eid: 944
+  945: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: Urgences
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '992'
+      Marque: Mabis
+      Modele: Legacy
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R302 - Salle de consultation 1 JICA
+    state:
+      eid: 945
+  946: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '993'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "R420 - \xC9chographie JICA"
+    state:
+      eid: 946
+  947: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "\xC9chographe"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '994'
+      Marque: Hitachi Aloka Medical
+      Modele: Prosound6
+      NbBonTravail: 0
+      NumeroSerie: 204B9586
+      Provenance: JICA
+      Salle: "R420 - \xC9chographie JICA"
+    state:
+      eid: 947
+  948: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: UPS
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '995'
+      Marque: Matsunaga Manufacturing
+      Modele: US-A128-J
+      NbBonTravail: 0
+      NumeroSerie: '151002'
+      Provenance: JICA
+      Salle: "R420 - \xC9chographie JICA"
+    state:
+      eid: 948
+  949: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '996'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "R421 - \xC9lectrocardiogramme JICA"
+    state:
+      eid: 949
+  950: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "\xC9lectrocardiographe"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '997'
+      Marque: Nihon Kohden Corporation
+      Modele: ECG-1250K
+      NbBonTravail: 0
+      NumeroSerie: '12329'
+      Provenance: JICA
+      Salle: "R421 - \xC9lectrocardiogramme JICA"
+    state:
+      eid: 950
+  951: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "D\xE9veloppeur automatique"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '998'
+      Marque: Daito Mitech
+      Modele: XP-9000
+      NbBonTravail: 0
+      NumeroSerie: '1165081356'
+      Provenance: JICA
+      Salle: R409 - Chambre noire JICA
+    state:
+      eid: 951
+  952: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 radio de type plafonnier"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '999'
+      Marque: Shimadzu Rika
+      Modele: CH-200M
+      NbBonTravail: 0
+      NumeroSerie: 563-58100-03/LZC5C135A001
+      Provenance: JICA
+      Salle: R402 - Radiographie 2 JICA
+    state:
+      eid: 952
+  953: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Console de contr\xF4le rayons X"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1000'
+      Marque: Shimadzu Rika
+      Modele: GCS-2002S
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R402 - Radiographie 2 JICA
+    state:
+      eid: 953
+  954: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Cabinet de contr\xF4le rayons X"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1001'
+      Marque: Shimadzu Rika
+      Modele: UD150L-40E
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: R402 - Radiographie 2 JICA
+    state:
+      eid: 954
+  955: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Collimateur
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1002'
+      Marque: Shimadzu Rika
+      Modele: R-20J
+      NbBonTravail: 0
+      NumeroSerie: 563-55051-10/LZ7B5165A004
+      Provenance: JICA
+      Salle: R402 - Radiographie 2 JICA
+    state:
+      eid: 955
+  956:
+    CategorieEquipement: Table bucky - rayons X
+    CentreService: Archives
     CodeAsset: ''
     Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-11
+    DateAcquisition: 2016-08-04
+    DateDernierEntretien: 2016-08-15
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '968'
-    Marque: Amilite
-    Modele: LX-3019
+    ID: '1003'
+    Marque: Shimadzu Rika
+    Modele: BK-12HK
     NbBonTravail: 0
-    NumeroSerie: 11B3X10014000002
+    NumeroSerie: 563-42575-22/LY3EDF257008
     Provenance: JICA
-    Salle: R303 - Salle de consultation 2 JICA
+    Salle: R402 - Radiographie 2 JICA

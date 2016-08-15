@@ -84,6 +84,14 @@ CategorieEquipement:
 - Fauteuil pour traitement dentaire
 - "Bain \xE0 ultrasons"
 - "Unit\xE9 de rayon X intra-oral"
+- Chariot de secours
+- "\xC9chographe"
+- "D\xE9veloppeur automatique"
+- "Unit\xE9 radio de type plafonnier"
+- "Console de contr\xF4le rayons X"
+- "Cabinet de contr\xF4le rayons X"
+- Collimateur
+- Table bucky - rayons X
 CentreService:
 - Urgences
 - Laboratoire
@@ -210,6 +218,12 @@ Salle:
 - R307 - Radiographie dentaire
 - R302 - Salle de consultation 1 JICA
 - R303 - Salle de consultation 2 JICA
+- R301 - Petite chirurgie JICA
+- Urgences JICA
+- "R420 - \xC9chographie JICA"
+- "R421 - \xC9lectrocardiogramme JICA"
+- R409 - Chambre noire JICA
+- R402 - Radiographie 2 JICA
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -235,4 +249,3 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 969
