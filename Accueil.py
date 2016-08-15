@@ -172,7 +172,7 @@ class Accueil(Ui_Accueil):
             self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.ajouterBonDeTravailEquipement)
             self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
             self.consultationEquipementUI.chargement.finChargement.connect(self.finChargement)
-
+            self.consultationEquipementUI.chargement.aucunResultat.connect(self.afficherAucunResultat)
             self.listeElementParDefaut.append(self.consultationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.consultationEquipement)
         else:
@@ -365,6 +365,9 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # TODO passer les informations a la nouvelle fenetre
+        # TODO : Faire un retour sur la page d'accueil
+        # TODO: La fonction ne fonctionne pas pour l'instant
+
         # On masque les autres elements
         self.BoutonFlecheNavigation.show()
         self.frameFleche.show()
@@ -372,9 +375,12 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.modificationBonDeTravailRecherche = QtWidgets.QWidget()
-
-            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, self.finChargment, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
-            # self.modificationBonDeTravailRecherche.setStyleSheet("background: white;")
+            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
+            self.modificationBonDeTravailRechercheUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.modificationBonDeTravailRechercheUI.lineEditID.returnPressed.connect(self.afficherChargement)
+            self.modificationBonDeTravailRechercheUI.chargement.finChargement.connect(self.finChargement)
+            self.modificationBonDeTravailRechercheUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
+            self.modificationBonDeTravailRechercheUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
             self.listeElementParDefaut.append(self.modificationBonDeTravailRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationBonDeTravailRecherche)
         else:
@@ -397,7 +403,6 @@ class Accueil(Ui_Accueil):
             # Creation du widget Statistique s'il n'existe pas
             self.statistique = QtWidgets.QWidget()
             self.statistiqueUI = Statistique(self.statistique)
-            # self.statistique.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.statistique)
             self.layoutAffichagePrincipal.addWidget(self.statistique)
         else:
@@ -455,8 +460,15 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
-            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, self.finChargment, ajouterID=self.consultationEquipementUI.equipement["ID"])
-            # self.ajoutBonDeTravailEquipement.setStyleSheet("background: white;")
+            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
+            #TODO: garder seulement ce qui est utile, modifier la fenetre en conséquent
+            #TODO: Afficher le temps de chargement pour le changement de fenetre
+            self.ajoutBonDeTravailEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.ajoutBonDeTravailEquipementUI.lineEditID.returnPressed.connect(self.afficherChargement)
+            self.ajoutBonDeTravailEquipementUI.chargement.finChargement.connect(self.finChargement)
+            self.ajoutBonDeTravailEquipementUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
+            self.ajoutBonDeTravailEquipementUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
+
             self.listeElementParDefaut.append(self.ajoutBonDeTravailEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravailEquipement)
         else:
@@ -488,8 +500,15 @@ class Accueil(Ui_Accueil):
             # listeID = indice.split("-")
             # dictID["ID-BDT"] = listeID(len(listeID) - 1)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.finChargment, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            # self.consultationBonDeTravail.setStyleSheet("background: white;")
+            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
+            #TODO: garder seulement ce qui est utile, modifier la fenetre en conséquent
+            #TODO: Afficher le temps de chargement pour le changement de fenetre
+            self.consultationBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.consultationBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
+            self.consultationBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
+            self.consultationBonDeTravailUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
+            self.consultationBonDeTravailUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
+
             self.listeElementParDefaut.append(self.consultationBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
         else:

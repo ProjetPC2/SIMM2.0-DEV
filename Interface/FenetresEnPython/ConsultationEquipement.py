@@ -108,7 +108,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
     def nouvelleRecherche(self):
         for label in self.listeLabel:
             label.clear()
-        self.boutonSupprimerEquipement.setEnabled(False)
+        self.boutonModifierEquipement.setEnabled(False)
         self.boutonConsulterBon.setEnabled(False)
         self.comboBoxBons.clear()
 

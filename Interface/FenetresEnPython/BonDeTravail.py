@@ -41,7 +41,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 print("id recupere", consulterBDT["ID-BDT"])
                 indice += 1
             self.indiceBonDeTravail = indice
-            self.rechercherBonTravailThread()
+            self.chargerBonTravail()
             self.ajoutBonDeTravail()
         if(ajouterID is not None):
             self.lineEditID.setText(ajouterID)
