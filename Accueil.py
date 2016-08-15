@@ -54,7 +54,7 @@ class Accueil(Ui_Accueil):
         self.suppression = Attente("Suppression en cours...", Accueil)
         self.suppression.hide()
         self.suppressionTermine = AffichageMessage("Suppression réussie", Accueil)
-        self.suppression.hide()
+        self.suppressionTermine.hide()
 
 
     def ajoutAccueil(self):
@@ -170,6 +170,8 @@ class Accueil(Ui_Accueil):
             self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
             self.consultationEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
+            #self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.afficherChargement)
+
             self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.ajouterBonDeTravailEquipement)
             self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
             self.consultationEquipementUI.chargement.finChargement.connect(self.finChargement)

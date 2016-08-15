@@ -48,6 +48,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.chercherEquipement()
             self.nouveauBondeTravail()
         self.chargement.rechercheTermine.connect(self.chargerBonTravail)
+        self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
 
 
     def ajoutBonDeTravail(self):
@@ -155,7 +156,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
             self.listeCategoriePiece.sort()
             self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
-            self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
+            print("Connection")
             self.rechercherBonTravail()
             #self.textEditDescIntervention.setEnabled(True)
             #self.textEditDescIntervention.setText("Bonjour")
@@ -421,8 +422,11 @@ class BonDeTravail(Ui_BonDeTravail):
         thread.start()
 
     def choisirCategoriePiece(self):
+        print("Choix de piece")
+
         self.comboBoxNomPiece.clear()
         listePiece = self.pieceManager.ObtenirListePiece(self.comboBoxCategoriePiece.currentText())
+        print(self.comboBoxCategoriePiece.currentText())
         self.comboBoxNomPiece.addItems(listePiece)
 
     def validerChoixPiece(self):
