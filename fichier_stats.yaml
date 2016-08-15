@@ -1,4 +1,4 @@
-nbEquipement: 963
+nbEquipement: 964
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -39,6 +39,7 @@ nbEquipementCentreService:
     UPS: 1
   Chirurgie:
     "Appareil d'anesth\xE9sie": 3
+    Autoclave: 1
     "D\xE9fibrilateur": 1
     "Lampe d'op\xE9ration": 3
     "N\xE9gatoscope (moniteur de radiographie)": 2
@@ -276,11 +277,11 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 461
+  Quasi neuf: 462
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 899
+  En service: 900
 nbEquipementProvenance:
   ? ''
   : 387
@@ -289,7 +290,7 @@ nbEquipementProvenance:
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
-  JICA: 55
+  JICA: 56
   MSPP: 1
   PNS: 1
   SCMS: 3

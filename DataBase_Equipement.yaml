@@ -18405,8 +18405,27 @@ _default:
       Salle: "R209 - Salle d'op\xE9ration 1 JICA"
     state:
       eid: 975
-  976:
-    CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
+  976: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1023'
+      Marque: Moriyama X-ray
+      Modele: LH-32D
+      NbBonTravail: 0
+      NumeroSerie: 0143395
+      Provenance: JICA
+      Salle: "R209 - Salle d'op\xE9ration 1 JICA"
+    state:
+      eid: 976
+  977:
+    CategorieEquipement: Autoclave
     CentreService: Chirurgie
     CodeAsset: ''
     Commentaires: ''
@@ -18414,10 +18433,10 @@ _default:
     DateDernierEntretien: 2016-08-15
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '1023'
-    Marque: Moriyama X-ray
-    Modele: LH-32D
+    ID: '1024'
+    Marque: HIRAYAMA
+    Modele: HRG-140
     NbBonTravail: 0
-    NumeroSerie: 0143395
+    NumeroSerie: '33715080037'
     Provenance: JICA
-    Salle: "R209 - Salle d'op\xE9ration 1 JICA"
+    Salle: "R107 - Salle de st\xE9rilisation JICA"

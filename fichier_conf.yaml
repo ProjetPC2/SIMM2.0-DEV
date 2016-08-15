@@ -12,6 +12,10 @@ BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
 CategorieEquipement:
+- Autoclave
+- "St\xE9rilisateur \xE0 vapeur de haute pression"
+- Infusions seringue pompe
+- Pompe pour perfusion
 - "Table d'op\xE9ration chirurgicale"
 - "Table d'op\xE9ration orthop\xE9dique"
 - "Lampe d'op\xE9ration"
@@ -236,6 +240,8 @@ Salle:
 - R401 - Radiographie 1 JICA
 - R402 - Radiographie 2 JICA
 - R411 - JICA
+- "R107 - Salle de st\xE9rilisation JICA"
+- Salle de chirurgie JICA
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -261,4 +267,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 1023
+dernierID-Equipement: 1024
