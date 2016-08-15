@@ -1,4 +1,4 @@
-nbEquipement: 943
+nbEquipement: 963
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -37,6 +37,13 @@ nbEquipementCentreService:
     Table d'examen: 7
     Table d'instruments: 5
     UPS: 1
+  Chirurgie:
+    "Appareil d'anesth\xE9sie": 3
+    "D\xE9fibrilateur": 1
+    "Lampe d'op\xE9ration": 3
+    "N\xE9gatoscope (moniteur de radiographie)": 2
+    "Table d'op\xE9ration chirurgicale": 2
+    "Table d'op\xE9ration orthop\xE9dique": 1
   Clinique externe:
     "Appareil \xE0 succion": 1
     Autre: 1
@@ -209,16 +216,20 @@ nbEquipementCentreService:
     "\xC9lectrocardiographe": 1
   Radiologie:
     Appareil de radiographie: 2
-    "Cabinet de contr\xF4le rayons X": 1
-    Collimateur: 1
-    "Console de contr\xF4le rayons X": 1
+    "Cabinet de contr\xF4le rayons X": 2
+    Collimateur: 2
+    "Console de contr\xF4le rayons X": 2
     "D\xE9veloppeur automatique": 1
     "N\xE9gatoscope (moniteur de radiographie)": 2
+    "Support \xE0 tubes - rayons X": 1
     "S\xE9choir": 1
+    Table bucky - rayons X: 1
     Table d'examen: 3
     Table d'instruments: 1
     UPS: 1
+    "Unit\xE9 de radio mobile": 1
     "Unit\xE9 radio de type plafonnier": 1
+    Vertical bucky stand - rayons X: 2
     "\xC9chographe": 1
     "\xC9lectrocardiographe": 1
   "R\xE9adaptation":
@@ -265,20 +276,20 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 441
+  Quasi neuf: 461
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 879
+  En service: 899
 nbEquipementProvenance:
   ? ''
-  : 384
+  : 387
   CDC: 10
   CHU Sainte-Justine: 11
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
-  JICA: 38
+  JICA: 55
   MSPP: 1
   PNS: 1
   SCMS: 3

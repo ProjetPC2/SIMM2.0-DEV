@@ -18023,19 +18023,401 @@ _default:
       Salle: R402 - Radiographie 2 JICA
     state:
       eid: 955
-  956:
-    CategorieEquipement: Table bucky - rayons X
-    CentreService: Archives
+  956: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table bucky - rayons X
+      CentreService: Archives
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-08-04
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1003'
+      Marque: Shimadzu Rika
+      Modele: BK-12HK
+      NbBonTravail: 0
+      NumeroSerie: 563-42575-22/LY3EDF257008
+      Provenance: JICA
+      Salle: R402 - Radiographie 2 JICA
+    state:
+      eid: 956
+  957: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Vertical bucky stand - rayons X
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1004'
+      Marque: Shimadzu Rika
+      Modele: BR-120M
+      NbBonTravail: 0
+      NumeroSerie: 563-77185-02/M1AF6A659019
+      Provenance: JICA
+      Salle: R402 - Radiographie 2 JICA
+    state:
+      eid: 957
+  958: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 tubes - rayons X"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1005'
+      Marque: Shimadzu Rika
+      Modele: FH-20HR
+      NbBonTravail: 0
+      NumeroSerie: 563-43000-16/LY493F058004
+      Provenance: ''
+      Salle: R401 - Radiographie 1 JICA
+    state:
+      eid: 958
+  959: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Cabinet de contr\xF4le rayons X"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1006'
+      Marque: Shimadzu Rika
+      Modele: UD150L-40E
+      NbBonTravail: 0
+      NumeroSerie: 562-23374-55/LM262F5A005
+      Provenance: ''
+      Salle: R401 - Radiographie 1 JICA
+    state:
+      eid: 959
+  960: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Console de contr\xF4le rayons X"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1007'
+      Marque: Shimadzu Rika
+      Modele: 'GCS-2002S
+
+        '
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: ''
+      Salle: R401 - Radiographie 1 JICA
+    state:
+      eid: 960
+  961: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Collimateur
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1008'
+      Marque: Shimadzu Rika
+      Modele: R-20J
+      NbBonTravail: 0
+      NumeroSerie: 563-55051-10/LZ7B5165A003
+      Provenance: JICA
+      Salle: R401 - Radiographie 1 JICA
+    state:
+      eid: 961
+  962: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table bucky - rayons X
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1009'
+      Marque: Shimadzu Rika
+      Modele: BK-12HK
+      NbBonTravail: 0
+      NumeroSerie: 563-42580-23/LY3EFE75A003
+      Provenance: JICA
+      Salle: R401 - Radiographie 1 JICA
+    state:
+      eid: 962
+  963: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Vertical bucky stand - rayons X
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1010'
+      Marque: Shimadzu Rika
+      Modele: BR-120M
+      NbBonTravail: 0
+      NumeroSerie: 563-77185-02/M1AF6A659018
+      Provenance: JICA
+      Salle: R401 - Radiographie 1 JICA
+    state:
+      eid: 963
+  964: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de radio mobile"
+      CentreService: Radiologie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1011'
+      Marque: Shimadzu Rika
+      Modele: MUX-10
+      NbBonTravail: 0
+      NumeroSerie: 503-48510-01/3YCFC3958005
+      Provenance: JICA
+      Salle: R411 - JICA
+    state:
+      eid: 964
+  965: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Table d'op\xE9ration chirurgicale"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1012'
+      Marque: Mizuho
+      Modele: SPL-331
+      NbBonTravail: 0
+      NumeroSerie: MAC-20139-1132
+      Provenance: JICA
+      Salle: "R208-2 - Salle d'op\xE9ration 3 JICA"
+    state:
+      eid: 965
+  966: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lampe d'op\xE9ration"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1013'
+      Marque: Million Light
+      Modele: LA-404
+      NbBonTravail: 0
+      NumeroSerie: '151112'
+      Provenance: JICA
+      Salle: "R208-2 - Salle d'op\xE9ration 3 JICA"
+    state:
+      eid: 966
+  967: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil d'anesth\xE9sie"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1014'
+      Marque: Acoma
+      Modele: CE-3000
+      NbBonTravail: 0
+      NumeroSerie: '152101590'
+      Provenance: JICA
+      Salle: "R208-2 - Salle d'op\xE9ration 3 JICA"
+    state:
+      eid: 967
+  968: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "D\xE9fibrilateur"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1015'
+      Marque: Nihon Kohden
+      Modele: TEC-5521K
+      NbBonTravail: 0
+      NumeroSerie: '18322'
+      Provenance: JICA
+      Salle: "R208-2 - Salle d'op\xE9ration 3 JICA"
+    state:
+      eid: 968
+  969: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1016'
+      Marque: Moriyama X-ray
+      Modele: LH-32D
+      NbBonTravail: 0
+      NumeroSerie: 0143395
+      Provenance: JICA
+      Salle: "R208-2 - Salle d'op\xE9ration 3 JICA"
+    state:
+      eid: 969
+  970: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Table d'op\xE9ration chirurgicale"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1017'
+      Marque: Mizuho
+      Modele: SPL-331
+      NbBonTravail: 0
+      NumeroSerie: MAC-20149-1133
+      Provenance: JICA
+      Salle: "R208-1 - Salle d'op\xE9ration 2 JICA"
+    state:
+      eid: 970
+  971: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lampe d'op\xE9ration"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1018'
+      Marque: Million Light
+      Modele: LA-404
+      NbBonTravail: 0
+      NumeroSerie: '151111'
+      Provenance: JICA
+      Salle: "R208-1 - Salle d'op\xE9ration 2 JICA"
+    state:
+      eid: 971
+  972: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil d'anesth\xE9sie"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1019'
+      Marque: Acoma
+      Modele: CE-3000
+      NbBonTravail: 0
+      NumeroSerie: '152101592'
+      Provenance: JICA
+      Salle: "R208-1 - Salle d'op\xE9ration 2 JICA"
+    state:
+      eid: 972
+  973: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Table d'op\xE9ration orthop\xE9dique"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1020'
+      Marque: Mizuho
+      Modele: MOT-5602SRMB
+      NbBonTravail: 0
+      NumeroSerie: MAC-20157-0174
+      Provenance: JICA
+      Salle: "R209 - Salle d'op\xE9ration 1 JICA"
+    state:
+      eid: 973
+  974: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lampe d'op\xE9ration"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1021'
+      Marque: Million Light
+      Modele: LA-404
+      NbBonTravail: 0
+      NumeroSerie: '151113'
+      Provenance: JICA
+      Salle: "R209 - Salle d'op\xE9ration 1 JICA"
+    state:
+      eid: 974
+  975: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil d'anesth\xE9sie"
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-15
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1022'
+      Marque: Acoma
+      Modele: CE-3000
+      NbBonTravail: 0
+      NumeroSerie: '152101591'
+      Provenance: JICA
+      Salle: "R209 - Salle d'op\xE9ration 1 JICA"
+    state:
+      eid: 975
+  976:
+    CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
+    CentreService: Chirurgie
     CodeAsset: ''
     Commentaires: ''
-    DateAcquisition: 2016-08-04
+    DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-15
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '1003'
-    Marque: Shimadzu Rika
-    Modele: BK-12HK
+    ID: '1023'
+    Marque: Moriyama X-ray
+    Modele: LH-32D
     NbBonTravail: 0
-    NumeroSerie: 563-42575-22/LY3EDF257008
+    NumeroSerie: 0143395
     Provenance: JICA
-    Salle: R402 - Radiographie 2 JICA
+    Salle: "R209 - Salle d'op\xE9ration 1 JICA"
