@@ -47,12 +47,13 @@ class Accueil(Ui_Accueil):
         self.aucunResultat = Accueil.aucunResultat
         self.sauvegarde = Accueil.sauvegarde
         self.Accueil = Accueil
-        self.finChargment = Communicate()
         # Mise en francais des calendriers
         locale.setlocale(locale.LC_ALL, "fra")
         self.enregistrementReussi =  AffichageMessage("Enregistrement réussie", Accueil)
         self.enregistrementReussi.hide()
         self.suppression = Attente("Suppression en cours...", Accueil)
+        self.suppression.hide()
+        self.suppressionTermine = AffichageMessage("Suppression réussie", Accueil)
         self.suppression.hide()
 
 
@@ -540,7 +541,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
             self.supportPC2UI = SupportPC2(self.support)
-            self.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
+            self.supportPC2UI.boutonSupprimerBon.setEnabled(True)
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
             self.listeElementParDefaut.append(self.support)
@@ -587,7 +588,12 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.supprimeBonDeTravail = QtWidgets.QWidget()
             self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
-            # self.supprimeBonDeTravail.setStyleSheet("background: white;")
+
+            self.supprimeBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.supprimeBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
+            self.supprimeBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
+            self.supprimeBonDeTravailUI.boutonSupprimerBon.clicked.connect(self.afficherSuppression)
+            self.supprimeBonDeTravailUI.chargement.suppressionTermine.connect(self.suppressionTermine)
 
             self.listeElementParDefaut.append(self.supprimeBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
@@ -666,7 +672,8 @@ class Accueil(Ui_Accueil):
 
     def suppressionTermine(self):
         self.suppression.hide()
-
+        self.suppression.raise_()
+        self.suppression.show()
 
 class SIMM():
     '''
@@ -724,15 +731,6 @@ class MainWindow(QMainWindow):
         self.ui.aucunResultat = self.aucunResultat
         self.ui.sauvegarde = self.sauvegarde
         self.ui.enregistrement = self.enregistrement
-        self.ui.finChargment.finChargement.connect(self.ui.finChargement)
-        self.ui.finChargment.aucunResultat.connect(self.ui.afficherAucunResultat)
-        self.ui.finChargment.sauvegardeTermine.connect(self.ui.sauvegardeTermine)
-        self.ui.finChargment.enregistrementTermine.connect(self.ui.enregistrer)
-
-        # self.ui.BoutonRechercherEquipement.clicked.connect(self.attente.show)
-        # self.afficherChargement = AttenteThread(self)
-        # self.afficherChargement.start()
-        # self.attente.hide()
 
     def resizeEvent(self, event):
         print(event)
@@ -742,6 +740,7 @@ class MainWindow(QMainWindow):
         self.sauvegarde.resize(event.size())
         self.ui.suppression.resize(event.size())
         self.ui.enregistrementReussi.resize(event.size())
+        self.ui.suppressionTermine.resize(event.size())
         self.enregistrement.resize(event.size())
         event.accept()
 

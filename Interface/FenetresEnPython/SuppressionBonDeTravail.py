@@ -1,7 +1,11 @@
+import datetime
+from threading import Thread
+
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
 from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.SuppressionBonDeTravailUI import Ui_SuppressionBonDeTravail
 from PyQt5 import QtWidgets
 
@@ -10,13 +14,15 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutSuppressionBonDeTravail()
-
+        self.chargement = Communicate()
+        self.boutonSupprimerBon.setEnabled(False)
+        self.chargement.rechercheTermine.connect(self.chargerBonTravail)
     def ajoutSuppressionBonDeTravail(self):
 
             self.lineEditID.setText("")
             # Connexion de l'appuie de la touche entree
-            self.lineEditID.returnPressed.connect(self.chercherEquipement)
-
+            self.lineEditID.returnPressed.connect(self.chercherEquipementThread)
+            self.boutonActualiser.clicked.connect(self.chercherEquipementThread)
             # Creation des differents elements utiles pour la sauvegarde
             self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
             self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
@@ -49,8 +55,8 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
             self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
             self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
-            self.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail
-                                                    )
+            self.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravailThread)
+
     def chercherEquipement(self):
         '''
             Recuperation de l'equipement associe a l'ID dans le cas ou il existe
@@ -77,7 +83,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             # On fait la recheche des bons de travail
             self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
-            self.chargerBonTravail()
+            self.rechercherBonDeTravailThread()
         else:
             # Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
@@ -91,6 +97,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.timeEditTempsEstime.clear()
             self.textEditDescSituation.clear()
             self.textEditDescIntervention.clear()
+        self.chargement.finChargement.emit()
 
     def supprimerBonDeTravail(self):
         '''
@@ -110,6 +117,18 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         if (any(self.equipementDictionnaire)):
             # On ajoute le bon de travail a un equipement existant
             self.bonDeTravailManager.SupprimerBonTravail(self.equipementDictionnaire["ID"], self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"])
+            self.chargement.suppressionTermine.emit()
+
+    def rechercherBonTravail(self):
+        '''
+            Methode permettant le chargement des informations d'un bon de travail
+            Mise des informations du bon de travall dans les differents champs
+             :param: None
+             :return:
+         '''
+        print("Lancement de la recherche des bons de travail")
+        if(any(self.listeBonDeTravail)):
+            self.chargement.rechercheTermine.emit()
 
     def chargerBonTravail(self):
         '''
@@ -118,21 +137,21 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
              :param: None
              :return:
          '''
-        if (any(self.listeBonDeTravail)):
-            # Si un bon de travail a ete trouve, on remplit les differents champs associes
-            self.dateEdit.setDate(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"])
-            self.textEditDescSituation.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
-            self.textEditDescSituation.wordWrapMode()
-            self.textEditDescIntervention.setText(
-                self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
-            self.textEditDescIntervention.wordWrapMode()
-            # Remplir le temps estime
-            # TODO: Remplir la date associe au bon de travail
-            # self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
-            if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
-                self.comboBoxOuvertFerme.setCurrentText("Fermé")
-            idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
-            self.labelEcritureBonTravail.setText(idBDT)
+        # Si un bon de travail a ete trouve, on remplit les differents champs associes
+        self.dateEdit.setDate(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"])
+        self.textEditDescSituation.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
+        self.textEditDescSituation.wordWrapMode()
+        self.textEditDescIntervention.setText(
+            self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
+        self.textEditDescIntervention.wordWrapMode()
+        # Remplir le temps estime
+        if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
+            self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
+        if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
+            self.comboBoxOuvertFerme.setCurrentText("Fermé")
+        idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
+        self.labelEcritureBonTravail.setText(idBDT)
+        self.boutonSupprimerBon.setEnabled(True)
 
     def bonTravailSuivant(self):
         '''
@@ -142,7 +161,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
          '''
         if (self.indiceBonDeTravail < len(self.listeBonDeTravail) - 1):
             self.indiceBonDeTravail += 1
-            self.chargerBonTravail()
+            self.rechercherBonTravail()
 
     def bonTravailPrecedent(self):
         '''
@@ -152,7 +171,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
          '''
         if (self.indiceBonDeTravail > 0):
             self.indiceBonDeTravail -= 1
-            self.chargerBonTravail()
+            self.rechercherBonTravail()
 
     def bonTravailPremier(self):
         '''
@@ -161,7 +180,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
              :return:
          '''
         self.indiceBonDeTravail = 0
-        self.chargerBonTravail()
+        self.rechercherBonTravail()
 
     def bonTravailDernier(self):
         '''
@@ -170,7 +189,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
              :return:
          '''
         self.indiceBonDeTravail = len(self.listeBonDeTravail) - 1
-        self.chargerBonTravail()
+        self.rechercherBonTravail()
 
     def editionBonDeTravail(self):
         print("edition")
@@ -184,6 +203,29 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.timeEditTempsEstime.setDisabled(True)
             self.textEditDescSituation.setDisabled(True)
             self.textEditDescIntervention.setDisabled(True)
+
+    def chercherEquipementThread(self):
+        thread = BonDeTravailThread(self.chercherEquipement)
+        thread.start()
+
+    def supprimerBonDeTravailThread(self):
+        print("Lancement du Thread de sauvegarde")
+        thread = BonDeTravailThread(self.supprimerBonDeTravail)
+        thread.start()
+
+    def rechercherBonDeTravailThread(self):
+        thread = BonDeTravailThread(self.rechercherBonTravail)
+        thread.start()
+
+class BonDeTravailThread(Thread):
+    def __init__(self, fonction):
+        Thread.__init__(self)
+        self.fonction = fonction
+
+
+    def run(self):
+        self.fonction()
+
 if __name__ == "__main__":
     import sys
 
