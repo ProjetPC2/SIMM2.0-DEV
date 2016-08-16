@@ -85,29 +85,6 @@ _default:
         AAAAAAAA
     state:
       eid: 4
-  5: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
-      CentreService: Inconnu
-      Date: 2015-08-25
-      DescriptionIntervention: "Les fusibles avaient \xE9t\xE9 short\xE9s et ils \xE9\
-        taient manquants. C'est tr\xE8s dangereux pour un appareil qui chauffe autant.\
-        \ On a enlev\xE9 les connections directes et remplac\xE9 les fusibles l'appareil\
-        \ semble maintenant fonctionner."
-      DescriptionSituation: "V\xE9rification et diagnostic"
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '49'
-      Marque: CPM Scientifica
-      Modele: Autoclave 760
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAYAAAAA
-    state:
-      eid: 5
   6: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
@@ -580,28 +557,6 @@ _default:
         AAgAAAAA
     state:
       eid: 26
-  27: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Balance p\xE9diatrique"
-      CentreService: "Maternit\xE9"
-      Date: 2015-07-23
-      DescriptionIntervention: "Support trouv\xE9 et replac\xE9 sur l'appareil.  Il\
-        \ faut maintenant la callibrer."
-      DescriptionSituation: "Non fonctionnelle. . Il manque le support \xE0 droite\
-        \ de la balance."
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '301'
-      Marque: FAZZINI
-      Modele: S7250
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: Salle de travail
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAQAAAAA
-    state:
-      eid: 27
   28: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur PNI
@@ -951,29 +906,6 @@ _default:
         AAgAAAAA
     state:
       eid: 43
-  44: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Incubateur
-      CentreService: Laboratoire
-      Date: 2015-07-30
-      DescriptionIntervention: "L'appareil ne s'allume pas du tout.  J'ai ouvert le\
-        \ boitier et trouv\xE9 un Fusible  saut\xE9 - Mod\xE8le T250 V 6 Amp\xE8res.\
-        \  j'ai trouv\xE9 un fusible 250 V 4 A mais celui ci ne suffit pas."
-      DescriptionSituation: "Diagnostic de l'appareil.  Le fusible a saut\xE9. Il\
-        \ manque un fusible 250 V 6 A"
-      EtatBDT: Ouvert
-      ID-BDT: '1'
-      ID-EQ: '43'
-      Marque: Abbott
-      Modele: Commander
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAAAAAAA
-    state:
-      eid: 44
   45: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
@@ -1015,26 +947,6 @@ _default:
         AAAAAAAA
     state:
       eid: 46
-  47: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Incubateur
-      CentreService: Laboratoire
-      Date: 2015-07-30
-      DescriptionIntervention: ''
-      DescriptionSituation: ''
-      EtatBDT: Ouvert
-      ID-BDT: '2'
-      ID-EQ: '43'
-      Marque: Abbott
-      Modele: Commander
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAAAAAAA
-    state:
-      eid: 47
   48: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Moniteur physiologique
@@ -1096,27 +1008,6 @@ _default:
         AAEAAAAA
     state:
       eid: 50
-  51: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: Urgences
-      Date: 2015-07-30
-      DescriptionIntervention: "J'ai remplac\xE9 les batteries 1.5v AA ca fonctionne\
-        \ bien."
-      DescriptionSituation: "Remplacement de batterie de specifit\xE9 1.5 v    AA"
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '86'
-      Marque: Ezycheckplus
-      Modele: ''
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAEAAAAA
-    state:
-      eid: 51
   52: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
@@ -1398,26 +1289,6 @@ _default:
         AAIAAAAA
     state:
       eid: 64
-  65: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: Urgences
-      Date: 2015-08-05
-      DescriptionIntervention: "\"J'ai nettoy\xE9 avec du blowoff,  ca ne va pas encore.\""
-      DescriptionSituation: L'appareil ne peut pas fermer.
-      EtatBDT: Ouvert
-      ID-BDT: '2'
-      ID-EQ: '86'
-      Marque: Ezycheckplus
-      Modele: ''
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAAAAAAA
-    state:
-      eid: 65
   66: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Incubateur n\xE9onatal"
@@ -1467,58 +1338,6 @@ _default:
         AAgAAAAA
     state:
       eid: 67
-  68: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Analyseur biochimie
-      CentreService: Inconnu
-      Date: 2015-08-05
-      DescriptionIntervention: "\"Consultation le manuel d'utilisation.  L'appareil\
-        \ s'allume mais un message d'erreur affiche lorsqu'on fait l'autotest.Selon\
-        \ le manuel,  le message d'erreur est peut etre reli\xE9 aux fusibles. J'ai\
-        \ v\xE9rifi\xE9 les fusibles. Ils sont encore bons.   Cela peut \xEAtre aussi\
-        \ une fuite d'oxyg\xE8ne dans les tuyaux. J'ai ouvert l'appareil,  j'ai enlev\xE9\
-        \ le couvercle. On note : -Le couvercle est abim\xE9 au niveau de la partie\
-        \ d'a\xE9ration. - beaucoup de corosion sur les composantes internes. -De\
-        \ la rouille -beaucoup de d\xE9brits \xE0 l'int\xE9rieur de l'appareil. -\
-        \ Il fil \xE9lectrique de coup\xE9 - Un tuyau fondu et perc\xE9 \xE0 plusieurs\
-        \ endroits.     Aussi,  le r\xE9glage du d\xE9bit d'oxyg\xE8ne ne marche pas.\
-        \ On soupsonne une souris qui a rentr\xE9 par le troue du couvercle dans le\
-        \ circuit interne.\""
-      DescriptionSituation: Diagnostic de l'appareil.
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '45'
-      Marque: Krober medizintechnik GBMH
-      Modele: Krober 02
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAcAAAAA
-    state:
-      eid: 68
-  69: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Analyseur biochimie
-      CentreService: Inconnu
-      Date: 2015-08-05
-      DescriptionIntervention: ''
-      DescriptionSituation: "Message d'erreur lors de l'autotest.  Fuite dans les\
-        \ tuyaux (c'est constat\xE9 dans le diagnostic) Fil d\xE9coup\xE9."
-      EtatBDT: Ouvert
-      ID-BDT: '2'
-      ID-EQ: '45'
-      Marque: Krober medizintechnik GBMH
-      Modele: Krober 02
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAAAAAAA
-    state:
-      eid: 69
   70: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
@@ -1614,31 +1433,6 @@ _default:
         AAAAAAAA
     state:
       eid: 73
-  74: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
-      CentreService: "Maternit\xE9"
-      Date: 2015-08-07
-      DescriptionIntervention: "La batterie est defectueuse. Le compresseur marche.\
-        \ Pas d'alarme. Le condensateur est d\xE9fectueux. sa marque est de : Icar\
-        \ Ecofill de specificit\xE9 : 15uF 450v et 50 hz.   Apr\xE8s v\xE9rification\
-        \ avec les techniciens de ste justine on constate que sa carte \xE9lectronique\
-        \ est d\xE9fectueuse."
-      DescriptionSituation: "L'appareil est bris\xE9. Je verifie avec le manuel de\
-        \ service."
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '302'
-      Marque: Air sep
-      Modele: New life
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: Salle de travail
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAYAAAAA
-    state:
-      eid: 74
   75: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
@@ -1660,35 +1454,6 @@ _default:
         AAAAAAAA
     state:
       eid: 75
-  76: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xE9"
-      Date: 2015-08-07
-      DescriptionIntervention: "\"On a \xE9t\xE9 vu le manuel de service. On a d\xE9\
-        cid\xE9 de faire la proc\xE9dure de nettoyage.  On a ouvert l'appareil,  on\
-        \ a vu qu'il n'y a rien qui se passe dans le power supply principal. On a\
-        \ suivi la proc\xE9dure du manuel de service pour le sortir et on observe\
-        \ les branchements. Les cables \xE9taient mals branch\xE9s. On a vu que les\
-        \ grounds et les VO 5 volts ont permut\xE9s. On a replac\xE9 les connecteurs\
-        \ comme il faut et on allume l'appareil \xE0 nouveau. Il allume et l'ecran\
-        \ affiche certains indicateurs.\""
-      DescriptionSituation: "On entendu juste un seul ventilateur fonctionner au niveau\
-        \ du power supply. L'entr\xE9e est a 220 V au lieu de 230V. Aucun affichage\
-        \ a l'ecran et l'appareil pas non plus."
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '57'
-      Marque: Toshiba
-      Modele: Power Vision 6000
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        ABMAAAAA
-    state:
-      eid: 76
   77: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
@@ -1712,27 +1477,6 @@ _default:
         AAEAAAAA
     state:
       eid: 77
-  78: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xE9"
-      Date: 2015-08-11
-      DescriptionIntervention: ''
-      DescriptionSituation: "v\xE9rification du bon fonctionnement et tests. Il faut\
-        \ un clinicien qualifi\xE9."
-      EtatBDT: Ouvert
-      ID-BDT: '2'
-      ID-EQ: '57'
-      Marque: Toshiba
-      Modele: Power Vision 6000
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAAAAAAA
-    state:
-      eid: 78
   79: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Table d'examen
@@ -1776,27 +1520,6 @@ _default:
         AAIAAAAA
     state:
       eid: 80
-  81: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Sonographe (Echographe)
-      CentreService: "Maternit\xE9"
-      Date: 2015-08-12
-      DescriptionIntervention: ''
-      DescriptionSituation: alimentation SW HV anormale. sonde en court-circuit. CPUI
-        local HS (T & R )
-      EtatBDT: Ouvert
-      ID-BDT: '3'
-      ID-EQ: '57'
-      Marque: Toshiba
-      Modele: Power Vision 6000
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAAAAAAA
-    state:
-      eid: 81
   82: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
@@ -2128,28 +1851,6 @@ _default:
         AAAAAAAA
     state:
       eid: 97
-  98: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Balance p\xE9diatrique"
-      CentreService: "Maternit\xE9"
-      Date: 2015-08-24
-      DescriptionIntervention: "On a plac\xE9 le support \xE0 droite. On a tarrer\
-        \ normalement avec le reglage et la vis ebas \xE0 gauche de la balance. maintenant\
-        \ c'est fonctionnelle."
-      DescriptionSituation: Balance dysfonctionnelle.
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '2'
-      ID-EQ: '301'
-      Marque: FAZZINI
-      Modele: S7250
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: Salle de travail
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAIAAAAA
-    state:
-      eid: 98
   99: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
@@ -2261,28 +1962,6 @@ _default:
         AAAAAAAA
     state:
       eid: 103
-  104: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Balance p\xE9diatrique"
-      CentreService: "Maternit\xE9"
-      Date: 2015-08-26
-      DescriptionIntervention: "Le callibnrage n'est jamais correctement. Cette balance\
-        \ peutmetren une source d'erreur . C'est la raison pour laquelle on l'a mis\
-        \ au rebus mais elle est disponible dans l'atelier pour les pi\xE8ces de rechange."
-      DescriptionSituation: Calibration de la balance
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '3'
-      ID-EQ: '301'
-      Marque: FAZZINI
-      Modele: S7250
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: Salle de travail
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAQAAAAA
-    state:
-      eid: 104
   105: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Balance p\xE9diatrique"
@@ -2385,29 +2064,6 @@ _default:
         AAAAAAAA
     state:
       eid: 109
-  110: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
-      CentreService: Urgences
-      Date: 2015-08-31
-      DescriptionIntervention: "J'ai demont\xE9 le materiel. Je l'ai nettoy\xE9 avec\
-        \ du blow off. Il s'allume et etteint. Il ne fonctionne pas encore. Il donne\
-        \ erreur E13."
-      DescriptionSituation: "Verification du mat\xE9riel. Il s'allume et etteint tr\xE8\
-        s vite."
-      EtatBDT: Ouvert
-      ID-BDT: '3'
-      ID-EQ: '86'
-      Marque: Ezycheckplus
-      Modele: ''
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAAAAAAA
-    state:
-      eid: 110
   111: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
@@ -2827,30 +2483,6 @@ _default:
         AAAAAAAA
     state:
       eid: 130
-  131: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: "Balance p\xE9diatrique"
-      CentreService: Inconnu
-      Date: 2015-09-16
-      DescriptionIntervention: "\"J'ai apport\xE9 \xE0 l'atelier pour le diagnostiquer.\
-        \ Je l'ai n\xE9ttoy\xE9. le mecanisme de reglage est defectueux compl\xE8\
-        tement m\xE8me le vis du reglage est oxyd\xE9. L'aiguille ne peut pas ram\xE8\
-        ner au zero.  C'est pourquoi,  on l'a mis au rebut.\""
-      DescriptionSituation: "verification du materiel. recouvert de poussi\xE8re sur\
-        \ la cour de l'hopital l'aiguille est d\xE9regl\xE9e."
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '530'
-      Marque: Sunbeam
-      Modele: ''
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: ''
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAMAAAAA
-    state:
-      eid: 131
   132: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: Centrifugeuse
@@ -3213,28 +2845,7 @@ _default:
         AAIAAAAA
     state:
       eid: 148
-  149: !!python/object/new:tinydb.database.Element
-    dictitems:
-      CategorieEquipement: Moniteur PNI
-      CentreService: Urgences
-      Date: 2015-11-19
-      DescriptionIntervention: '"J''ai enleve les deux connecteurs et j''ai remplace
-        deux autres. J''ai ajoute deux dans l''autre extremite ,  un brassard. J''ai
-        place une cable d''alimentation. fonctionnel"'
-      DescriptionSituation: Il manque tous les cables.
-      EtatBDT: "Ferm\xE9"
-      ID-BDT: '1'
-      ID-EQ: '558'
-      Marque: Critikon
-      Modele: Dinamap Plus
-      NomTechnicien: Kerlin Hyppolite
-      Pieces: []
-      Salle: Hospitalisation
-      TempsEstime: !!python/object/apply:datetime.time
-      - !!binary |
-        AAQAAAAA
-    state:
-      eid: 149
+
   150: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
