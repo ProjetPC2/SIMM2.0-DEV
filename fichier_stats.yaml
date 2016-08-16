@@ -1,4 +1,4 @@
-nbEquipement: 981
+nbEquipement: 991
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -167,15 +167,15 @@ nbEquipementCentreService:
     "Civi\xE8re de transport": 1
     "Concentrateur d'oxyg\xE8ne": 1
     Lampe d'examen: 2
-    Lit: 16
+    Lit: 22
     "Moniteur f\u0153tal": 1
     Ordinateur: 1
     Otoscope: 1
     Sonographe (Echographe): 0
     "Support \xE0 solut\xE9s": 9
-    Table d'examen: 4
+    Table d'examen: 5
     Table d'instruments: 5
-    Table de chevet: 2
+    Table de chevet: 5
     "Table de soins n\xE9onataux": 7
     "Tensiom\xE8tre": 1
     "Thermom\xE8tre": 1
@@ -286,11 +286,11 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 479
+  Quasi neuf: 489
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 917
+  En service: 927
 nbEquipementProvenance:
   ? ''
   : 387
@@ -299,7 +299,7 @@ nbEquipementProvenance:
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
-  JICA: 73
+  JICA: 83
   MSPP: 1
   PNS: 1
   SCMS: 3
