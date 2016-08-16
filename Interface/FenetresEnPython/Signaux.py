@@ -9,3 +9,5 @@ class Communicate(QObject):
     enregistrementTermine = pyqtSignal()
     suppressionTermine = pyqtSignal()
     rechercheTermine = pyqtSignal()
+    supportCree = pyqtSignal()
+    motDePasseCorrect = pyqtSignal()

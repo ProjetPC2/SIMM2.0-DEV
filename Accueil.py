@@ -7,6 +7,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
+from Interface.FenetresEnPython.AbstractWindow import AbstractWindow
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
 from Interface.FenetresEnPython.AffichageMessage import AffichageMessage
 from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
@@ -55,7 +56,7 @@ class Accueil(Ui_Accueil):
         self.suppression.hide()
         self.suppressionTermine = AffichageMessage("Suppression réussie", Accueil)
         self.suppressionTermine.hide()
-
+        self.creation = Communicate()
 
     def ajoutAccueil(self):
         '''
@@ -92,6 +93,8 @@ class Accueil(Ui_Accueil):
 
         # Creation de la partie Support
         self.support = None
+        #self.supportPC2UI = None
+
         self.supprimeEquipement = None
         self.supprimeBonDeTravail = None
         #Connexion des differents elements
@@ -446,6 +449,12 @@ class Accueil(Ui_Accueil):
         # print("salut", self.horizontalLayout_2.minimumSize())
         for elementGraphique in self.listeElementParDefaut:
             elementGraphique.hide()
+        if self.support is not None:
+            print("verrouillage")
+            self.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(False)
+            self.supportPC2UI.boutonSupprimerEquipement.setEnabled(False)
+            self.supportPC2UI.boutonSupprimerBon.setEnabled(False)
+            self.supportPC2UI.BoutonVerrou.setEnabled(True)
 
 
     def ajouterBonDeTravailEquipement(self):
@@ -543,11 +552,12 @@ class Accueil(Ui_Accueil):
             # Creation du widget support s'il n'existe pas
             self.support = QtWidgets.QWidget()
             self.supportPC2UI = SupportPC2(self.support)
-            self.supportPC2UI.boutonSupprimerBon.setEnabled(True)
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
+
             self.listeElementParDefaut.append(self.support)
             self.layoutAffichagePrincipal.addWidget(self.support)
+            self.creation.supportCree.emit()
         else:
             # Affichage du widget support
             self.support.show()
@@ -557,7 +567,6 @@ class Accueil(Ui_Accueil):
         self.listeNavigation.append(self.support)
         # self.attente.raise_()
         # self.attente.show()
-
 
     def supprimerEquipement(self):
         # On masque les autres elements
@@ -707,7 +716,7 @@ class SIMM():
         os.system("pause")
 
 
-class MainWindow(QMainWindow):
+class MainWindow(QMainWindow, AbstractWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
         self.mapper = QSignalMapper(self)
@@ -733,6 +742,9 @@ class MainWindow(QMainWindow):
         self.ui.aucunResultat = self.aucunResultat
         self.ui.sauvegarde = self.sauvegarde
         self.ui.enregistrement = self.enregistrement
+        self.ui.creation.supportCree.connect(self.verrou)
+        self.signal = Communicate()
+        self.signal.motDePasseCorrect.connect(self.deverouillage)
 
     def resizeEvent(self, event):
         print(event)
@@ -746,6 +758,26 @@ class MainWindow(QMainWindow):
         self.enregistrement.resize(event.size())
         event.accept()
 
+    def verrou(self):
+        self.ui.supportPC2UI.BoutonVerrou.clicked.connect(self.demanderMotDePasse)
+
+    def demanderMotDePasse(self):
+
+        text, ok = QInputDialog.getText(self, 'Mot de passe',
+            'Veuillez saisir le mot de passe:', QLineEdit.Password)
+
+        if ok:
+            if(text == "hopitalstmichel123" ):
+                print(str(text))
+                self.signal.motDePasseCorrect.emit()
+            else:
+                print("erreur de mot de passe")
+
+    def deverouillage(self):
+        self.ui.supportPC2UI.BoutonVerrou.setEnabled(False)
+        self.ui.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
+        self.ui.supportPC2UI.boutonSupprimerBon.setEnabled(True)
+        self.ui.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(True)
 
 def impressionPDF(bouton):
     print(bouton)
