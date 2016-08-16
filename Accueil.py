@@ -572,7 +572,7 @@ class Accueil(Ui_Accueil):
             self.supprimeEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
             self.supprimeEquipementUI.suppression.finChargement.connect(self.finChargement)
             self.supprimeEquipementUI.boutonSupprimerEquipement.clicked.connect(self.afficherSuppression)
-            self.supprimeEquipementUI.suppression.suppressionTermine.connect(self.suppressionTermine)
+            self.supprimeEquipementUI.suppression.suppressionTermine.connect(self.afficherSuppressionTermine)
             self.supprimeEquipementUI.suppression.aucunResultat.connect(self.afficherAucunResultat)
             self.listeElementParDefaut.append(self.supprimeEquipement)
             self.layoutAffichagePrincipal.addWidget(self.supprimeEquipement)
@@ -595,7 +595,7 @@ class Accueil(Ui_Accueil):
             self.supprimeBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.supprimeBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.supprimeBonDeTravailUI.boutonSupprimerBon.clicked.connect(self.afficherSuppression)
-            self.supprimeBonDeTravailUI.chargement.suppressionTermine.connect(self.suppressionTermine)
+            self.supprimeBonDeTravailUI.chargement.suppressionTermine.connect(self.afficherSuppressionTermine)
 
             self.listeElementParDefaut.append(self.supprimeBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
@@ -672,10 +672,10 @@ class Accueil(Ui_Accueil):
         self.suppression.raise_()
         self.suppression.show()
 
-    def suppressionTermine(self):
+    def afficherSuppressionTermine(self):
         self.suppression.hide()
-        self.suppression.raise_()
-        self.suppression.show()
+        self.suppressionTermine.raise_()
+        self.suppressionTermine.show()
 
 class SIMM():
     '''
