@@ -23,9 +23,7 @@ class AbstractWindow(QWidget):
                                         "max-width:220px;\n"
                                         "min-height: 30px;\n"
                                         "max-height: 30px;\n"
-                                        "}\n"
-                                        "background-color:white;"
-                                        "font-color:white")
+                                        "}\n")
         self.messageBox.setText("Etes-vous sûr de vouloir quitter ?")
         self.messageBox.setWindowTitle("SIMM 2.0")
         self.messageBox.setWindowIcon(QIcon('Images/SIMM2.0.png'))

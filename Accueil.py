@@ -370,7 +370,7 @@ class Accueil(Ui_Accueil):
             :param: None
             :return:
         '''
-        # TODO passer les informations a la nouvelle fenetre
+        # TODO passer les informations a la nouvelle fenetreMDP
         # TODO : Faire un retour sur la page d'accueil
         # TODO: La fonction ne fonctionne pas pour l'instant
 
@@ -473,8 +473,8 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
             self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
-            #TODO: garder seulement ce qui est utile, modifier la fenetre en conséquent
-            #TODO: Afficher le temps de chargement pour le changement de fenetre
+            #TODO: garder seulement ce qui est utile, modifier la fenetreMDP en conséquent
+            #TODO: Afficher le temps de chargement pour le changement de fenetreMDP
             self.ajoutBonDeTravailEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.chargement.finChargement.connect(self.finChargement)
@@ -497,7 +497,7 @@ class Accueil(Ui_Accueil):
             :param: None
             :return:
         '''
-        #TODO passer les informations a la nouvelle fenetre
+        #TODO passer les informations a la nouvelle fenetreMDP
         # On masque les autres elements
         self.BoutonFlecheNavigation.show()
         self.frameFleche.show()
@@ -513,8 +513,8 @@ class Accueil(Ui_Accueil):
             # dictID["ID-BDT"] = listeID(len(listeID) - 1)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
             self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            #TODO: garder seulement ce qui est utile, modifier la fenetre en conséquent
-            #TODO: Afficher le temps de chargement pour le changement de fenetre
+            #TODO: garder seulement ce qui est utile, modifier la fenetreMDP en conséquent
+            #TODO: Afficher le temps de chargement pour le changement de fenetreMDP
             self.consultationBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.consultationBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.consultationBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
@@ -763,15 +763,37 @@ class MainWindow(QMainWindow, AbstractWindow):
 
     def demanderMotDePasse(self):
 
-        text, ok = QInputDialog.getText(self, 'Mot de passe',
-            'Veuillez saisir le mot de passe:', QLineEdit.Password)
-
-        if ok:
-            if(text == "hopitalstmichel123" ):
-                print(str(text))
+        self.fenetreMDP = QInputDialog()
+        self.fenetreMDP.setStyleSheet("QPushButton {\n"
+                                        "color: black;\n"
+                                        "background-color:rgb(245, 245, 245);\n"
+                                        "border-width: 1px;\n"
+                                        "border-color: grey;\n"
+                                        "border-style: solid;\n"
+                                        "border-radius: 4px;\n"
+                                        "padding: 3px;\n"
+                                        "font: bold 12px;\n"
+                                        "padding-left: 5px;\n"
+                                        "padding-right: 5px;\n"
+                                        "min-width: 80px;\n"
+                                        "max-width:220px;\n"
+                                        "min-height: 30px;\n"
+                                        "max-height: 30px;\n"
+                                        "}\n")
+        self.fenetreMDP.setCancelButtonText("Annuler")
+        self.fenetreMDP.setTextEchoMode(QLineEdit.Password)
+        self.fenetreMDP.setLabelText("Veuillez entrer le mot de passe :")
+        self.fenetreMDP.setWindowTitle("SIMM 2.0")
+        self.fenetreMDP.setWindowIcon(QIcon('Images/SIMM2.0.png'))
+        retour = self.fenetreMDP.exec()
+        if(retour == QInputDialog.Accepted):
+            if(self.fenetreMDP.textValue() == "hopitalstmichel123" ):
+                print(str(self.fenetreMDP.textValue()))
                 self.signal.motDePasseCorrect.emit()
             else:
                 print("erreur de mot de passe")
+
+
 
     def deverouillage(self):
         self.ui.supportPC2UI.BoutonVerrou.setEnabled(False)
