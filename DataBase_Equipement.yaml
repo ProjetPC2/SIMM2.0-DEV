@@ -61,6 +61,7 @@ _default:
       CategorieEquipement: Incubateur
       CentreService: Laboratoire
       Commentaires: ''
+      CodeAsset: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
       EtatConservation: En fin de vie
@@ -97,6 +98,7 @@ _default:
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Inconnu
+      CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2010-03-09
       DateDernierEntretien: 2016-06-29
@@ -153,6 +155,7 @@ _default:
     dictitems:
       CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: Inconnu
+      CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -285,6 +288,7 @@ _default:
     dictitems:
       CategorieEquipement: "Sonographe (\xE9chographe)"
       CentreService: "Maternit\xE9"
+      CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -303,6 +307,7 @@ _default:
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "Maternit\xE9"
+      CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -796,6 +801,7 @@ _default:
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: Urgences
+      CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4832,6 +4838,7 @@ _default:
     dictitems:
       CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: "Maternit\xE9"
+      CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-06-29
       DateDernierEntretien: 2016-06-29
@@ -4850,6 +4857,7 @@ _default:
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "Maternit\xE9"
+      CodeAsset: ''
       Commentaires: "\"D'autres \xE9quipements identiques en service,  il est gard\xE9\
         \ dans l'atelier pour les pi\xE8ces de rechange.\""
       DateAcquisition: 2016-06-29
@@ -9155,6 +9163,7 @@ _default:
     dictitems:
       CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: Inconnu
+      CodeAsset: ''
       Commentaires: Je la trouve dehors. Je prends en maintenance parcequ'elle n'est
         pas encore tarrer.
       DateAcquisition: 2016-06-29
@@ -9669,6 +9678,7 @@ _default:
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
+      CodeAsset: ''
       Commentaires: ''
       DateAcquisition: 2016-07-18
       DateDernierEntretien: 2015-11-24

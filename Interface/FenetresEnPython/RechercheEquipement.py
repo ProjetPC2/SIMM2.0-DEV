@@ -1,6 +1,7 @@
 import datetime
 from threading import Thread
 
+import re
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
@@ -138,7 +139,9 @@ class RechercheEquipement(Ui_RechercheEquipement):
         """Methode permettant la recherche par rapport au champ de recherche
         de categorie d'equipement"""
         if(self.comboBoxCategorieEquipement.currentText() != ""):
-            self.dictionnaireRecherche["CategorieEquipement"] = self.comboBoxCategorieEquipement.currentText()
+            recherche = verificationTexte(self.comboBoxCategorieEquipement.currentText())
+            print("recherche", recherche)
+            self.dictionnaireRecherche["CategorieEquipement"] = recherche
 
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
@@ -264,6 +267,22 @@ class RechercheEquipement(Ui_RechercheEquipement):
         thread = RechercherEquipement(self.rechercheNumeroSerie)
         thread.start()
 
+def verificationTexte(texte):
+    print("Verification en cours")
+    print(texte)
+    copie = str(texte)
+    listeOccurence = []
+    for occ in re.finditer('[()]', texte):
+        print(occ)
+        listeOccurence.append(occ.start())
+    print(listeOccurence)
+    modification = 0
+    for indice in listeOccurence:
+        local = copie[:indice + modification] + '\\' + copie[indice + modification:]
+        modification += 1
+        copie = local
+    print("Nouveau texte", copie)
+    return copie
 
 class RechercherEquipement (Thread):
     def __init__(self, fonction):

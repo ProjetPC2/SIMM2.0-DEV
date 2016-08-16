@@ -1,6 +1,7 @@
 import datetime
 from threading import Thread
 
+import re
 import yaml
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, QLocale
@@ -148,7 +149,9 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         """Methode permettant la recherche par rapport au champ de recherche
         de categorie d'equipement"""
         if (self.comboBoxCategorieEquipement.currentText() != ""):
-            self.dictionnaireRecherche["CategorieEquipement"] = self.comboBoxCategorieEquipement.currentText()
+            recherche = verificationTexte(self.comboBoxCategorieEquipement.currentText())
+            print("recherche", recherche)
+            self.dictionnaireRecherche["CategorieEquipement"] = recherche
 
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
@@ -186,21 +189,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         if (self.lineEditDescriptionSituation.text() != ""):
             self.dictionnaireRecherche["DescriptionSituation"] = self.lineEditDescriptionSituation.text()
-        self.remplirTableau()
-        self.chargement.finChargement.emit()
-
-
-    def rechercheCategorieEquipement(self):
-        '''
-            Recuperation des bons de travails associe a une categorie d'equipement
-            :param: None
-            :return:
-        '''
-        if (self.comboBoxCategorieEquipement.currentText() != ""):
-            self.dictionnaireRecherche["CategorieEquipement"] = self.comboBoxCategorieEquipement.currentText()
-
-        else:
-            self.dictionnaireRecherche.pop("CategorieEquipement")
         self.remplirTableau()
         self.chargement.finChargement.emit()
 
@@ -273,6 +261,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         # else:
             #Recherche parmi les coordonnes
             if (any(self.dictionnaireRecherche)):
+                print("Affichage dictionnaire de recherche :", self.dictionnaireRecherche)
                 liste = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRecherche)
                 print(liste)
                 listeDonnees = list()
@@ -352,6 +341,24 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         thread = RechercherBonDeTravail(self.rechercheDescriptionSituation)
         thread.start()
 
+def verificationTexte(texte):
+    print("Verification en cours")
+    print(texte)
+    copie = str(texte)
+    listeOccurence = []
+    for occ in re.finditer('[()]', texte):
+        print(occ)
+        listeOccurence.append(occ.start())
+    print(listeOccurence)
+    modification = 0
+    for indice in listeOccurence:
+        local = copie[:indice + modification] + '\\' + copie[indice + modification:]
+        modification += 1
+        copie = local
+    print("Nouveau texte", copie)
+    return copie
+
+
 class RechercherBonDeTravail (Thread):
     def __init__(self, fonction):
         Thread.__init__(self)
@@ -360,6 +367,7 @@ class RechercherBonDeTravail (Thread):
 
     def run(self):
         self.fonction()
+
 
 if __name__ == "__main__":
     import sys

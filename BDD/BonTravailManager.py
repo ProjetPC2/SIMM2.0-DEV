@@ -233,7 +233,7 @@ class BonTravailManager:
 if __name__ == "__main__":  # Execution lorsque le fichier est lance
 #if True:
     # TESTS
-    manager = BonTravailManager('DataBase_BDT.json', 'DataBase_Equipement.json')
+    manager = BonTravailManager('DataBase_BDT.yaml', 'DataBase_Equipement.yaml')
 
     data1 = {'Date': datetime.date(2016, 2, 22),
              'TempsEstime': datetime.time(2, 30),
@@ -242,7 +242,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
              'EtatBDT': 'Ouvert',
              'NomTechnicien': 'Kerlin'}
 
-    dict_request = {'DescriptionSituation': 'bris'}
+    dic_request = {'CategorieEquipement': 'Saturomètre \(Oxymètre\)'}
 
     #dic_request = {'AvantLe': datetime.date(2016, 03, 12)}
     #               'ApresLe': datetime.date(2016, 06, 10)}
@@ -250,7 +250,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     #print(manager.AjouterBonTravail('2', data1))                       # Ajout de 2 équipements de suite (pour tester...
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
-    #print(len(manager.RechercherBonTravail(dic_request)))
+    print((manager.RechercherBonTravail(dic_request)))
     #print(manager.RechercherBonTravail(dict_request))
     #print(manager.ModifierBonTravail('2', '3', data1))                     # id_modif en int
 

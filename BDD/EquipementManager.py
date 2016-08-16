@@ -404,7 +404,7 @@ class EquipementManager:
 if __name__ == "__main__":#Execution lorsque le fichier est lance
     if True:
         #  TESTS
-        manager = EquipementManager('DataBase_Equipement.json', 'DataBase_BDT.json')
+        manager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.yaml')
 
         data = {'CategorieEquipement': 'Stéthoscope',
                 'Marque': 'Lit de la muerte',
@@ -424,7 +424,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #dic_request = {'CategorieEquipement': 'ECG',
         #               'Marque': 'Peter',
         #               'Modele': 'blabla'}
-        #dic_request = {'CategorieEquipement': '',
+        dic_request = {'CategorieEquipement': 'Analyseur CD4 \(VIH\)'}
         #               'Salle': 'B',
         #               'CentreService': '',
         #               'NumeroSerie': '',
@@ -434,8 +434,10 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
 
         #dic_request = {'Marque': 'uerte'}
         #print(manager.AjouterEquipement(data))
-        #print(manager.SupprimerEquipement('1'))                     # id_supp en int
-        #print(manager.RechercherEquipement(dic_request))
+        #print(manager.SupprimerEquipement('1'))
+        #  id_supp en int
+        print(dic_request)
+        print(manager.RechercherEquipement(dic_request))
         #print(manager.ModifierEquipement('3', data))               # id_modif en int
 
         # Stats
@@ -445,7 +447,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager._statsNbEquipementProvenance())
         #print(manager._statsNbEquipementCentreServiceCategorie())
 
-        manager._recalculStats()
+        #manager._recalculStats()
 
 
 
