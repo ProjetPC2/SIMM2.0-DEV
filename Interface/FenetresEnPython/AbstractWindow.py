@@ -1,3 +1,5 @@
+from IPython.core.inputtransformer import tr
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import *
 
 class AbstractWindow(QWidget):
@@ -5,25 +7,43 @@ class AbstractWindow(QWidget):
     def closeEvent(self, event):
         """Fonction gerant la creation d'une fenetre de verification
         lors de la fermeture de la fenetre"""
-        reply = QMessageBox.question(self, 'Message',
-                                     "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
-                                     QMessageBox.No, QMessageBox.No)
+        self.messageBox = QMessageBox()
+        self.messageBox.setStyleSheet("QPushButton {\n"
+                                        "color: black;\n"
+                                        "background-color:rgb(245, 245, 245);\n"
+                                        "border-width: 1px;\n"
+                                        "border-color: grey;\n"
+                                        "border-style: solid;\n"
+                                        "border-radius: 4px;\n"
+                                        "padding: 3px;\n"
+                                        "font: bold 12px;\n"
+                                        "padding-left: 5px;\n"
+                                        "padding-right: 5px;\n"
+                                        "min-width: 80px;\n"
+                                        "max-width:220px;\n"
+                                        "min-height: 30px;\n"
+                                        "max-height: 30px;\n"
+                                        "}\n"
+                                        "background-color:white;"
+                                        "font-color:white")
+        self.messageBox.setText("Etes-vous sûr de vouloir quitter ?")
+        self.messageBox.setWindowTitle("SIMM 2.0")
+        self.messageBox.setWindowIcon(QIcon('Images/SIMM2.0.png'))
 
-        # Selon le choix on fait une action precise
-        if reply == QMessageBox.Yes:
+        #self.messageBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel);
+        self.boutonOk = QPushButton("Ok")
+        self.boutonAnnuler = QPushButton("Annuler")
+        self.messageBox.addButton(self.boutonOk, QMessageBox.AcceptRole)
+        self.messageBox.addButton(self.boutonAnnuler, QMessageBox.RejectRole)
+        retour = self.messageBox.exec()
+        print(retour)
+        if(retour == QMessageBox.AcceptRole):
             event.accept()
         else:
             event.ignore()
 
 
-    def quitter(self):
-        reply = QMessageBox.question(self, 'Message',
-                                      "Etes-vous sur de vouloir quitter ?", QMessageBox.Yes |
-                                      QMessageBox.No, QMessageBox.No)
-        if reply == QMessageBox.Yes:
-             # self.hide()
-             # self.close()
-            self.destroy()
+
 
     def center(self):
         """Methode permettant de centrer la fenetre"""
