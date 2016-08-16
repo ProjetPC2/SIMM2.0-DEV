@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 import datetime
-import locale
 from threading import Thread
 
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt, QLocale
 from PyQt5.QtWidgets import QTableWidgetItem,QCalendarWidget
-from PyQt5.uic.properties import QtCore
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager

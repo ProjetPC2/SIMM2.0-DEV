@@ -2,15 +2,16 @@ import datetime
 from threading import Thread
 
 import yaml
-from PyQt5 import QtGui, QtWidgets
+from PyQt5 import QtWidgets
 from PyQt5.QtCore import QDate,QLocale
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
+from Interface.FenetresEnPython.Fichiers import *
 from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.Stockage import Equipement
-from Interface.FenetresEnPython.Fichiers import *
+
 
 class AjoutEquipement(Ui_AjoutEquipement):
     '''

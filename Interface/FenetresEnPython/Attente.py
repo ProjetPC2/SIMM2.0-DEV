@@ -1,9 +1,9 @@
-import math, sys
+import math
+import sys
 from threading import Thread
 
 from PyQt5 import QtWidgets
-
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QWidget, QMainWindow, QTextEdit, QPushButton, QGridLayout
 

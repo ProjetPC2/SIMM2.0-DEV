@@ -1,9 +1,9 @@
 import datetime
+import re
 from threading import Thread
 
-import re
 import yaml
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt, QLocale
 from PyQt5.QtWidgets import QTableWidgetItem, QCalendarWidget
 

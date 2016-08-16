@@ -7,15 +7,11 @@ Dans cette exemple vous pourrez voir comment :
 -exemple d'utilisation des layouts pour gerer le placemenet
 """
 
-import sys
-from PyQt5 import QtWidgets
-
 import yaml
-from PyQt5.QtCore import QDate
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon, QFont
-from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
+from PyQt5 import QtWidgets
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
