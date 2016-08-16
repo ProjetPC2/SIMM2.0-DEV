@@ -1,3 +1,4 @@
+import locale
 import os
 import sys
 from multiprocessing import Process
@@ -11,25 +12,19 @@ from Interface.FenetresEnPython.AbstractWindow import AbstractWindow
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
 from Interface.FenetresEnPython.AffichageMessage import AffichageMessage
 from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
-from Interface.FenetresEnPython.Attente import Attente, AttenteThread
+from Interface.FenetresEnPython.Attente import Attente
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
 from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipement
-from Interface.FenetresEnPython.Enregistrement import Enregistrement
-from Interface.FenetresEnPython.FinAction import FinAction
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.PDF2 import PDF
 from Interface.FenetresEnPython.Piece import Piece
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
-from Interface.FenetresEnPython.Sauvegarde import Sauvegarde
 from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.Statistique import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeTravail
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
-
-import locale
-
 
 
 class Accueil(Ui_Accueil):
@@ -731,7 +726,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.setWindowTitle("SIMM 2.0")
         self.attente = Attente("Chargement...", self.centralWidget())
-        self.aucunResultat = FinAction(self.centralWidget())
+        self.aucunResultat = AffichageMessage("Aucun résultat !", self.centralWidget())
         self.sauvegarde = Attente("Sauvegarde en cours...", self.centralWidget())
         self.enregistrement = Attente("Enregistrement en cours...", self.centralWidget())
         self.attente.hide()
