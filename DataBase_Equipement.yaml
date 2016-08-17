@@ -18436,7 +18436,7 @@ _default:
       eid: 976
   977: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Autoclave
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: Chirurgie
       CodeAsset: ''
       Commentaires: ''
