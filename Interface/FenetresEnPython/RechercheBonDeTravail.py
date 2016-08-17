@@ -154,8 +154,9 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             self.dictionnaireRecherche["CategorieEquipement"] = recherche
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
-        self.chargement.finChargement.emit()
         self.remplirTableau()
+        self.chargement.finChargement.emit()
+
 
 
     def rechercheDateAvant(self):

@@ -40,7 +40,6 @@ class BonDeTravail(Ui_BonDeTravail):
                 indice += 1
             self.indiceBonDeTravail = indice
             self.chargerBonTravail()
-            self.ajoutBonDeTravail()
         if(ajouterID is not None):
             self.lineEditID.setText(ajouterID)
             self.chercherEquipement()
