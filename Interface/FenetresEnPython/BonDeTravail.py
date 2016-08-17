@@ -47,7 +47,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.nouveauBondeTravail()
         self.chargement.rechercheTermine.connect(self.chargerBonTravail)
         self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
-
+        self.nombreBonAjoute = 0
 
     def ajoutBonDeTravail(self):
 
@@ -132,6 +132,7 @@ class BonDeTravail(Ui_BonDeTravail):
         print("recherche equipement")
         self.dic_request['ID'] = self.lineEditID.text()
         listeTrouve = self.equipementManager.RechercherEquipement(self.dic_request)
+        self.nombreBonAjoute = 0
         #On efface les bons de travail deja affiche
         self.listeBonDeTravail.clear()
         if(any(listeTrouve)):
@@ -209,13 +210,12 @@ class BonDeTravail(Ui_BonDeTravail):
                 print(dicRetour)
                 if dicRetour["Reussite"]:
                     print("Reussi")
-                    idBDT = self.bonDeTravailManager._ObtenirProchainIDdeBDT(self.dic_request["ID"])
+                    print("bon de travail d'id :", idBDT)
                     dictionnaireDonnees["ID-BDT"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
-
-
             self.confirmation()
             self.chargement.sauvegardeTermine.emit()
+            self.nombreBonAjoute += 1
 
     def rechercherBonTravail(self):
         '''
@@ -235,6 +235,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelCacheTemps.setText(str(self.timeEditTempsEstime.time().toPyTime()))
         self.labelCacheDescSit.setText(self.textEditDescSituation.toPlainText())
         self.labelCacheDescInt.setText(self.textEditDescIntervention.toPlainText())
+        self.labelNomTechnicien.setText(self.comboBoxNomTech.currentText())
 
     def chargerBonTravail(self):
         #Si un bon de travail a ete trouve, on remplit les differents champs associes
@@ -244,6 +245,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.textEditDescSituation.wordWrapMode()
         self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
         self.textEditDescIntervention.wordWrapMode()
+        self.boutonSauvegarde.setVisible(True)
         #Remplir le temps estime
 
         if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
@@ -321,13 +323,6 @@ class BonDeTravail(Ui_BonDeTravail):
             self.textEditDescIntervention.setDisabled(True)
 
     def nouveauBondeTravail(self):
-        # self.textEditDescIntervention.clear()
-        # self.textEditDescIntervention.show()
-        # self.textEditDescSituation.clear()
-        # self.timeEditTempsEstime.clear()
-        # self.labelEcritureBonTravail.clear()
-        # self.dateEdit.clear()
-        # self.comboBoxNomTech.setCurrentText()
         for widget in self.listeWidget:
             widget.show()
             widget.clear()
@@ -342,10 +337,12 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonConsultation.show()
         if(any(self.listeBonDeTravail)):
             self.boutonSauvegarde.show()
-
+        id = self.equipementDictionnaire["ID"] + "-" + str(self.equipementDictionnaire["NbBonTravail"] + 1 + self.nombreBonAjoute)
+        self.labelEcritureBonTravail.setText(str(id))
         for label in self.listeLabelCache:
             label.hide()
         self.listeAjoutPieceReparation.clear()
+        self.tableWidgetPiecesAssociees.setRowCount(0)
 
     def consulterBonDeTravail(self):
         self.comboBoxNomTech.show()
@@ -357,6 +354,8 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonConsultation.show()
         self.boutonSauvegarde.show()
         self.boutonAjoutBDT.show()
+        self.textEditDescIntervention.show()
+        self.textEditDescSituation.show()
         self.boutonConsultation.hide()
         self.comboBoxOuvertFerme.setDisabled(False)
         for label in self.listeLabelCache:
@@ -431,13 +430,14 @@ class BonDeTravail(Ui_BonDeTravail):
         categorie = self.comboBoxCategoriePiece.currentText()
         nomPiece = self.comboBoxNomPiece.currentText()
         nombre = self.spinBoxNombrePiece.text()
-        self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
 
+        self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
         self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 0, QTableWidgetItem(categorie))
         self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 1, QTableWidgetItem(nomPiece))
         self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 2, QTableWidgetItem((nombre)))
-
-        self.listeAjoutPieceReparation.append((categorie, nomPiece, int(nombre)))
+        if(int(nombre)>0):
+            #On ne comptabilise les pièces que s'il y a un nombre non nul
+            self.listeAjoutPieceReparation.append((categorie, nomPiece, int(nombre)))
         print(self.listeAjoutPieceReparation)
 
     def trier(self, numeroColonne):
