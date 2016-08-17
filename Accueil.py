@@ -51,6 +51,8 @@ class Accueil(Ui_Accueil):
         self.suppression.hide()
         self.suppressionTermine = AffichageMessage("Suppression réussie", Accueil)
         self.suppressionTermine.hide()
+        self.sauvegardeReussi = AffichageMessage("Sauvegarde réussie", Accueil)
+        self.sauvegardeReussi.hide()
         self.creation = Communicate()
 
     def ajoutAccueil(self):
@@ -658,6 +660,8 @@ class Accueil(Ui_Accueil):
     def sauvegardeTermine(self):
         print("Sauvegarde termine")
         self.sauvegarde.hide()
+        self.sauvegardeReussi.raise_()
+        self.sauvegardeReussi.show()
 
     def enregistrer(self):
         self.enregistrement.raise_()
