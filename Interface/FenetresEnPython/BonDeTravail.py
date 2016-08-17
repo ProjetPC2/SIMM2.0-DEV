@@ -210,6 +210,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 print(dicRetour)
                 if dicRetour["Reussite"]:
                     print("Reussi")
+                    idBDT = str(int(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"]) + 1 + self.nombreBonAjoute)
                     print("bon de travail d'id :", idBDT)
                     dictionnaireDonnees["ID-BDT"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
