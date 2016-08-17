@@ -28,7 +28,7 @@ class AbstractWindow(QWidget):
         self.messageBox.setWindowIcon(QIcon('Images/SIMM2.0.png'))
 
         #self.messageBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel);
-        self.boutonOk = QPushButton("Ok")
+        self.boutonOk = QPushButton("Oui")
         self.boutonAnnuler = QPushButton("Annuler")
         self.messageBox.addButton(self.boutonOk, QMessageBox.AcceptRole)
         self.messageBox.addButton(self.boutonAnnuler, QMessageBox.RejectRole)
