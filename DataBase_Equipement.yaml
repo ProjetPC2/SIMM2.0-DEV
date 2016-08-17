@@ -19694,19 +19694,1330 @@ _default:
       Salle: "Hospitalisation maternit\xE9 JICA"
     state:
       eid: 1042
-  1043:
-    CategorieEquipement: Lit
-    CentreService: "Hospitalisation maternit\xE9"
+  1043: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1089'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1043
+  1044: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1090'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1044
+  1045: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1091'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1045
+  1046: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1092'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1046
+  1047: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1093'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1047
+  1048: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1094'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1048
+  1049: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1095'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1049
+  1050: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1096'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1050
+  1051: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1097'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1051
+  1052: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1098'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1052
+  1053: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1099'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1053
+  1054: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1100'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1054
+  1055: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1101'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1055
+  1056: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1102'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1056
+  1057: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1103'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1057
+  1058: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1104'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1058
+  1059: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1105'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1059
+  1060: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1106'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1060
+  1061: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1107'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1061
+  1062: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1108'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1062
+  1063: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1109'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1063
+  1064: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1110'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1064
+  1065: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1111'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1065
+  1066: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1112'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1066
+  1067: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1113'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1067
+  1068: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1114'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1068
+  1069: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1115'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1069
+  1070: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1116'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1070
+  1071: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1117'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1071
+  1072: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1118'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1072
+  1073: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1119'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1073
+  1074: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1120'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1074
+  1075: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1121'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1075
+  1076: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1122'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1076
+  1077: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1123'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1077
+  1078: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1124'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1078
+  1079: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1125'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1079
+  1080: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1126'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1080
+  1081: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1127'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1081
+  1082: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1128'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1082
+  1083: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1129'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1083
+  1084: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1130'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1084
+  1085: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1131'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1085
+  1086: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1132'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1086
+  1087: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1133'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: 0-30-16-009
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1087
+  1088: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1134'
+      Marque: drive
+      Modele: Blue Streak Series
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1088
+  1089: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: UPS
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1135'
+      Marque: Matsunaga Manufacturing
+      Modele: US-A128-J
+      NbBonTravail: 0
+      NumeroSerie: C151001
+      Provenance: JICA
+      Salle: 1201 - Salle de consultation JICA
+    state:
+      eid: 1089
+  1090: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Sonographe (\xC9chographe)"
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1136'
+      Marque: Hitachi Aloka Medical
+      Modele: prosound6
+      NbBonTravail: 0
+      NumeroSerie: 204B9587
+      Provenance: JICA
+      Salle: 1201 - Salle de consultation JICA
+    state:
+      eid: 1090
+  1091: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Incubateur n\xE9onatal"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1137'
+      Marque: Nakamura
+      Modele: H-2000 LCS-ICU
+      NbBonTravail: 0
+      NumeroSerie: 0696
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1091
+  1092: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Incubateur n\xE9onatal"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1138'
+      Marque: Nakamura
+      Modele: H-2000 LCS-ICU
+      NbBonTravail: 0
+      NumeroSerie: 0697
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1092
+  1093: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1139'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1093
+  1094: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1140'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1094
+  1095: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1141'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1095
+  1096: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1142'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1096
+  1097: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1143'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1097
+  1098: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1144'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1098
+  1099: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de phototh\xE9rapie n\xE9onatale"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1145'
+      Marque: Nakamura
+      Modele: NIW-3500
+      NbBonTravail: 0
+      NumeroSerie: '2710386'
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1099
+  1100: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1146'
+      Marque: Nakamura
+      Modele: M-1000
+      NbBonTravail: 0
+      NumeroSerie: '1062'
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1100
+  1101: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de phototh\xE9rapie n\xE9onatale"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1147'
+      Marque: Nakamura
+      Modele: PT-2000H
+      NbBonTravail: 0
+      NumeroSerie: '1406019'
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1101
+  1102: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de secours
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1148'
+      Marque: CIhealthcare
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1102
+  1103: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1149'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1303 - Salle de consultation JICA
+    state:
+      eid: 1103
+  1104: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1150'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie"
+    state:
+      eid: 1104
+  1105: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1151'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: 0-30-16-004
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1105
+  1106: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1152'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: 0-30-16-008
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1106
+  1107: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1153'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1107
+  1108: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1154'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1108
+  1109: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1155'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1109
+  1110: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1156'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1110
+  1111: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1157'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1111
+  1112:
+    CategorieEquipement: "Lit p\xE9diatrique"
+    CentreService: "P\xE9diatrie"
     CodeAsset: ''
     Commentaires: ''
     DateAcquisition: 2016-07-28
     DateDernierEntretien: 2016-08-17
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '1089'
+    ID: '1158'
     Marque: ''
     Modele: ''
     NbBonTravail: 0
     NumeroSerie: ''
     Provenance: JICA
-    Salle: "Hospitalisation maternit\xE9 JICA"
+    Salle: "Hospitalisation p\xE9diatrie JICA"

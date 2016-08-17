@@ -1,4 +1,4 @@
-nbEquipement: 1030
+nbEquipement: 1099
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -119,7 +119,14 @@ nbEquipementCentreService:
     Table de lit: 26
     "Tensiom\xE8tre": 3
   "Hospitalisation maternit\xE9":
-    Lit: 8
+    Chaise roulante: 1
+    Chariot de soins: 1
+    "Civi\xE8re de transport": 1
+    Lit: 24
+    "Sonographe (\xC9chographe)": 1
+    "Support \xE0 solut\xE9s": 1
+    Table de chevet: 25
+    UPS: 1
   "Hospitalisation m\xE9decine interne":
     Balance: 1
     Chaise roulante: 4
@@ -216,9 +223,13 @@ nbEquipementCentreService:
   "P\xE9diatrie":
     Balance: 6
     "Balance p\xE9diatrique": 6
-    "Incubateur n\xE9onatal": 2
-    Lampe d'examen: 5
+    Chariot de secours: 1
+    Chariot de soins: 1
+    "Civi\xE8re de transport": 1
+    "Incubateur n\xE9onatal": 4
+    Lampe d'examen: 6
     Lit: 12
+    "Lit p\xE9diatrique": 8
     Moniteur PNI: 1
     Moniteur physiologique: 1
     "N\xE9gatoscope (moniteur de radiographie)": 1
@@ -226,13 +237,15 @@ nbEquipementCentreService:
     Otoscope: 4
     "R\xE9frig\xE9rateur": 1
     "Saturom\xE8tre (Oxym\xE8tre)": 1
-    "Support \xE0 solut\xE9s": 8
-    Table d'examen: 8
+    "Support \xE0 solut\xE9s": 10
+    Table d'examen: 9
     Table d'instruments: 3
+    Table de chevet: 2
     "Table de soins n\xE9onataux": 13
     "Tensiom\xE8tre": 1
     Toise: 2
     UPS: 1
+    "Unit\xE9 de phototh\xE9rapie n\xE9onatale": 3
     "\xC9lectrocardiographe": 1
   Radiologie:
     Appareil de radiographie: 2
@@ -296,11 +309,11 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 528
+  Quasi neuf: 597
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 966
+  En service: 1035
 nbEquipementProvenance:
   ? ''
   : 387
@@ -309,7 +322,7 @@ nbEquipementProvenance:
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
-  JICA: 122
+  JICA: 191
   MSPP: 1
   PNS: 1
   SCMS: 3
