@@ -12,6 +12,13 @@ BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
 CategorieEquipement:
+- Berceau
+- "Doppler f\u0153tal \xE0 ultrasons"
+- Humidificateur
+- "Unit\xE9 de phototh\xE9rapie n\xE9onatale"
+- Enregistreur
+- Table d'accouchement
+- "Dispositif de l'eau \xE0 faible duret\xE9"
 - Autoclave
 - "St\xE9rilisateur \xE0 vapeur de haute pression"
 - Infusions seringue pompe
@@ -102,6 +109,7 @@ CategorieEquipement:
 - Table bucky - rayons X
 - Vertical bucky stand - rayons X
 CentreService:
+- "Hospitalisation maternit\xE9"
 - Chirurgie
 - Urgences
 - Laboratoire
@@ -163,6 +171,18 @@ Provenance:
 - Croix-Rouge Canadienne
 - JICA
 Salle:
+- 1110 - Salle d'accouchement 1 JICA
+- 1112 - Salle d'ablution JICA
+- 1111 - Salle d'accouchement 2 JICA
+- "Hospitalisation maternit\xE9 JICA"
+- 1222 - Soins critiques JICA
+- 1201 - Salle de consultation JICA
+- "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+- 1303 - Salle de consultation JICA
+- "Hospitalisation p\xE9diatrie JICA"
+- 1312 - Salle de malnutrition JICA
+- 1320 - Salle isolement 1 JICA
+- 1321 - Salle isolement 2 JICA
 - ''
 - Observation
 - Lab 1
@@ -242,7 +262,6 @@ Salle:
 - "R107 - Salle de st\xE9rilisation JICA"
 - Salle de chirurgie JICA
 - "1103 - Bureau des m\xE9decins JICA"
-- "Hospitalisation maternit\xE9 JICA"
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -268,4 +287,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 1056
+dernierID-Equipement: 1089
