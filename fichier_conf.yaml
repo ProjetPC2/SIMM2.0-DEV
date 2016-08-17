@@ -33,7 +33,7 @@ CategorieEquipement:
 - "N\xE9bulisateur"
 - Centrifugeuse
 - "Incubateur n\xE9onatal"
-- Sonographe (Echographe)
+- "Sonographe (\xC9chographe)"
 - Table d'examen
 - "Appareil \xE0 succion"
 - Ordinateur
@@ -94,7 +94,6 @@ CategorieEquipement:
 - "Bain \xE0 ultrasons"
 - "Unit\xE9 de rayon X intra-oral"
 - Chariot de secours
-- "\xC9chographe"
 - "D\xE9veloppeur automatique"
 - "Unit\xE9 radio de type plafonnier"
 - "Console de contr\xF4le rayons X"
@@ -269,4 +268,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 1051
+dernierID-Equipement: 1054

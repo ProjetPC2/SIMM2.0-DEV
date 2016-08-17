@@ -286,7 +286,7 @@ _default:
       eid: 16
   17: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Sonographe (\xE9chographe)"
+      CategorieEquipement: "Sonographe (\xC9chographe)"
       CentreService: "Maternit\xE9"
       CodeAsset: ''
       Commentaires: ''
@@ -2331,7 +2331,7 @@ _default:
       EtatConservation: Acceptable
       EtatService: En service
       ID: '166'
-      Marque: ezycheckplus
+      Marque: Ezycheckplus
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -9361,7 +9361,7 @@ _default:
       EtatConservation: En fin de vie
       EtatService: En maintenance
       ID: '541'
-      Marque: ezycheckplus
+      Marque: Ezycheckplus
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
@@ -10718,7 +10718,7 @@ _default:
       eid: 565
   566: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sonographe (Echographe)
+      CategorieEquipement: "Sonographe (\xC9chographe)"
       CentreService: Inconnu
       CodeAsset: ''
       Commentaires: "\xC0 mettre en service lors de la mission de Dr Dubois"
@@ -17864,7 +17864,7 @@ _default:
       eid: 946
   947: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "\xC9chographe"
+      CategorieEquipement: "Sonographe (\xC9chographe)"
       CentreService: Radiologie
       CodeAsset: ''
       Commentaires: ''
@@ -18953,19 +18953,98 @@ _default:
       Salle: "Hospitalisation maternit\xE9 JICA"
     state:
       eid: 1003
-  1004:
-    CategorieEquipement: Table de chevet
-    CentreService: "Maternit\xE9"
-    CodeAsset: ''
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-16
-    EtatConservation: Quasi neuf
-    EtatService: En service
-    ID: '1051'
-    Marque: ''
-    Modele: ''
-    NbBonTravail: 0
-    NumeroSerie: ''
-    Provenance: JICA
-    Salle: "Hospitalisation maternit\xE9 JICA"
+  1004: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-16
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1051'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1004
+  1005: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1052'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1005
+  1006: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1053'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1006
+  1007: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1053'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1007
+  1008: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1054'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1008
