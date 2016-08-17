@@ -19048,3 +19048,38 @@ _default:
       Salle: "Hospitalisation maternit\xE9 JICA"
     state:
       eid: 1008
+  1009: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1055'
+      Marque: Drive
+      Modele: Blue Streak Series
+      NbBonTravail: 0
+      NumeroSerie: BLS18FBD-ELR
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1009
+  1010:
+    CategorieEquipement: "Civi\xE8re de transport"
+    CentreService: "Maternit\xE9"
+    CodeAsset: ''
+    Commentaires: ''
+    DateAcquisition: 2016-07-28
+    DateDernierEntretien: 2016-08-17
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    ID: '1056'
+    Marque: ''
+    Modele: ''
+    NbBonTravail: 0
+    NumeroSerie: ''
+    Provenance: JICA
+    Salle: "Hospitalisation maternit\xE9 JICA"

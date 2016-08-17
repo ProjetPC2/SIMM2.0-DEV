@@ -1,4 +1,4 @@
-nbEquipement: 995
+nbEquipement: 997
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -163,8 +163,8 @@ nbEquipementCentreService:
   "Maternit\xE9":
     Balance: 1
     "Balance p\xE9diatrique": 2
-    Chaise roulante: 1
-    "Civi\xE8re de transport": 1
+    Chaise roulante: 2
+    "Civi\xE8re de transport": 2
     "Concentrateur d'oxyg\xE8ne": 1
     Lampe d'examen: 2
     Lit: 22
@@ -286,11 +286,11 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 493
+  Quasi neuf: 495
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 931
+  En service: 933
 nbEquipementProvenance:
   ? ''
   : 387
@@ -299,7 +299,7 @@ nbEquipementProvenance:
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
-  JICA: 87
+  JICA: 89
   MSPP: 1
   PNS: 1
   SCMS: 3
