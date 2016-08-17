@@ -152,11 +152,10 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             recherche = verificationTexte(self.comboBoxCategorieEquipement.currentText())
             print("recherche", recherche)
             self.dictionnaireRecherche["CategorieEquipement"] = recherche
-
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
-        self.remplirTableau()
         self.chargement.finChargement.emit()
+        self.remplirTableau()
 
 
     def rechercheDateAvant(self):
@@ -294,6 +293,10 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                         for cle in self.listeCleDonnees:
                             if(isinstance(dictionnaire[cle], datetime.date)):
                                 self.tableResultats.setItem(i, colonne, QTableWidgetItem((str(dictionnaire[cle]))))
+                            elif (cle == "ID-EQ" or cle == "ID-BDT"):
+                                item = QTableWidgetItem()
+                                item.setData(Qt.EditRole, int(dictionnaire[cle]))
+                                self.tableResultats.setItem(i, colonne, item)
                             else:
                                 self.tableResultats.setItem(i, colonne, QTableWidgetItem((dictionnaire[cle])))
                             colonne += 1
@@ -308,6 +311,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                 print("dictionnaire de recherche vide")
                 self.tableResultats.clearContents()
                 self.tableResultats.setRowCount(0)
+
 
     def nouvelleRecherche(self):
         self.comboBoxCategorieEquipement.setCurrentText("")

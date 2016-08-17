@@ -211,7 +211,7 @@ class Accueil(Ui_Accueil):
             self.rechercheEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.rechercheEquipementUI.tableResultats.doubleClicked.connect(self.choisirEquipement)
             self.rechercheEquipementUI.chargement.finChargement.connect(self.finChargement)
-
+            self.rechercheEquipementUI.chargement.aucunResultat.connect(self.afficherAucunResultat)
             self.listeElementParDefaut.append(self.rechercheEquipement)
             self.layoutAffichagePrincipal.addWidget(self.rechercheEquipement)
         else:
@@ -349,6 +349,7 @@ class Accueil(Ui_Accueil):
             self.rechercheBonDeTravailUI.calendrierApres.dateChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.calendrierAvant.dateChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
+            self.rechercheBonDeTravailUI.chargement.aucunResultat.connect(self.afficherAucunResultat)
             self.rechercheBonDeTravailUI.tableResultats.doubleClicked.connect(self.choisirBonDeTravailTableau)
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.rechercheBonDeTravail)

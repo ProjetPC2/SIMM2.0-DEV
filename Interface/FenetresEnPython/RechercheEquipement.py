@@ -223,7 +223,12 @@ class RechercheEquipement(Ui_RechercheEquipement):
                     # print(dictionnaire)
                     # print(self.listeCleDonnees)
                     for cle in self.listeCleDonnees:
-                        self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
+                        if(cle == "ID"):
+                            item = QTableWidgetItem()
+                            item.setData(Qt.EditRole, int(dictionnaire[cle]))
+                            self.tableResultats.setItem(i, colonne, item)
+                        else:
+                            self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                         colonne += 1
                     self.tableResultats.resizeColumnsToContents()
             else:
