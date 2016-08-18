@@ -1,3 +1,4 @@
+nbEquipement: 1128
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -224,12 +225,13 @@ nbEquipementCentreService:
   "P\xE9diatrie":
     Balance: 6
     "Balance p\xE9diatrique": 6
+    Chaise roulante: 1
     Chariot de secours: 1
     Chariot de soins: 1
     "Civi\xE8re de transport": 1
     "Incubateur n\xE9onatal": 4
     Lampe d'examen: 6
-    Chaise roulante: 1
+    Lit: 21
     "Lit p\xE9diatrique": 13
     Moniteur PNI: 1
     Moniteur physiologique: 1
@@ -310,9 +312,11 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
+  Quasi neuf: 626
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
+  En service: 1064
 nbEquipementProvenance:
   ? ''
   : 387
@@ -321,6 +325,7 @@ nbEquipementProvenance:
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
+  JICA: 220
   MSPP: 1
   PNS: 1
   SCMS: 3
