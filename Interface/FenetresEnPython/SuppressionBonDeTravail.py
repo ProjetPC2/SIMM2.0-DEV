@@ -17,6 +17,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         self.chargement = Communicate()
         self.boutonSupprimerBon.setEnabled(False)
         self.chargement.rechercheTermine.connect(self.chargerBonTravail)
+
     def ajoutSuppressionBonDeTravail(self):
 
             self.lineEditID.setText("")

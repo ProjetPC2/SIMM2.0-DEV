@@ -5,7 +5,7 @@ from PyQt5 import QtGui, QtWidgets
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.SuppressionEquipementUI import Ui_SuppressionEquipement
 
@@ -40,14 +40,12 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         # Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
-        # self.listeCleDonnees = list()
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
         fichierConf.close()

@@ -106,7 +106,7 @@ class Accueil(Ui_Accueil):
 
     def connectionBouton(self):
         '''
-            Methode qui va faire la connection des differents boutons
+            Methode qui va faire la connection des differents boutons de la page d'accueil
             :param:
             :return:
         '''
@@ -130,7 +130,7 @@ class Accueil(Ui_Accueil):
     def afficherAjoutEquipement(self):
         '''
             Affichage du widget permet l'ajout d'un equipement
-            Masquage des autres elements graphiques de la partie principale
+            Mise en retrait des autres elements graphiques
             :param: None
             :return:
         '''
@@ -170,8 +170,6 @@ class Accueil(Ui_Accueil):
             self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
             self.consultationEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
-            #self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.afficherChargement)
-
             self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.ajouterBonDeTravailEquipement)
             self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
             self.consultationEquipementUI.chargement.finChargement.connect(self.finChargement)
@@ -201,7 +199,6 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget()
             self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement)
-            # self.rechercheEquipement.setStyleSheet("background: white;")
             self.rechercheEquipementUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
             self.rechercheEquipementUI.comboBoxProvenance.currentTextChanged.connect(self.afficherChargement)
             self.rechercheEquipementUI.comboBoxSalle.currentTextChanged.connect(self.afficherChargement)
@@ -242,7 +239,6 @@ class Accueil(Ui_Accueil):
             self.modificationEquipementUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
             self.modificationEquipementUI.sauvegarde.sauvegardeTermine.connect(self.sauvegardeTermine)
             self.modificationEquipementUI.sauvegarde.sauvegardeTermine.connect(self.modificationTermine)
-            # self.modificationEquipement.setStyleSheet("background: white;")
             self.listeElementParDefaut.append(self.modificationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipement)
         else:
@@ -309,11 +305,9 @@ class Accueil(Ui_Accueil):
         self.masquerElementGraphique()
         self.selectionnerBouton(self.BoutonAjouterBonTravail)
         if self.ajoutBonDeTravail is None:
-            #TODO: Verifier la partie confirmation pour l'ajout d'un bon de travail
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravail = QtWidgets.QWidget()
             self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail)
-            # self.ajoutBonDeTravail.setStyleSheet("background: white;")
             self.bonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.bonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.bonDeTravailUI.chargement.finChargement.connect(self.finChargement)
@@ -368,10 +362,6 @@ class Accueil(Ui_Accueil):
             :param: None
             :return:
         '''
-        # TODO passer les informations a la nouvelle fenetreMDP
-        # TODO : Faire un retour sur la page d'accueil
-        # TODO: La fonction ne fonctionne pas pour l'instant
-
         # On masque les autres elements
         self.BoutonFlecheNavigation.show()
         self.frameFleche.show()
@@ -471,8 +461,6 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
             self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
-            #TODO: garder seulement ce qui est utile, modifier la fenetreMDP en conséquent
-            #TODO: Afficher le temps de chargement pour le changement de fenetreMDP
             self.ajoutBonDeTravailEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.chargement.finChargement.connect(self.finChargement)
@@ -495,7 +483,6 @@ class Accueil(Ui_Accueil):
             :param: None
             :return:
         '''
-        #TODO passer les informations a la nouvelle fenetreMDP
         # On masque les autres elements
         self.BoutonFlecheNavigation.show()
         self.frameFleche.show()
@@ -511,7 +498,6 @@ class Accueil(Ui_Accueil):
             # dictID["ID-BDT"] = listeID(len(listeID) - 1)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
             self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            #TODO: garder seulement ce qui est utile, modifier la fenetreMDP en conséquent
             #TODO: Afficher le temps de chargement pour le changement de fenetreMDP
             self.consultationBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.consultationBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
@@ -529,11 +515,6 @@ class Accueil(Ui_Accueil):
         self.listeNavigation.append(self.consultationBonDeTravail)
 
     def imprimerInventaire(self):
-        # pdf = PDF()
-        # # pdf.creationPDF(pdf.fileName[0])
-        # pdf.start()
-        # # On attend la fin du thread, on annule le lancement en parallele pour l'instant car le logiciel repond mal
-        # pdf.join()
         self.BoutonImprimerInventaire.setDisabled(True)
 
     def afficherSupport(self):
@@ -563,8 +544,6 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
         self.listeNavigation.append(self.support)
-        # self.attente.raise_()
-        # self.attente.show()
 
     def supprimerEquipement(self):
         # On masque les autres elements
@@ -597,7 +576,6 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.supprimeBonDeTravail = QtWidgets.QWidget()
             self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
-
             self.supprimeBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.supprimeBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.supprimeBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
@@ -628,14 +606,18 @@ class Accueil(Ui_Accueil):
 
     def selectionnerBouton(self, bouton):
         if self.boutonSelectionne is not None:
-            self.boutonSelectionne.setStyleSheet("QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}\n"
-"\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{ background-color: #cccccc; }")
+            self.boutonSelectionne.setStyleSheet("QPushButton{ padding : 5px; "
+                                                 "border-radius: 8px; "
+                                                 "background-color: transparent ;"
+                                                 "color : white;}\n"
+                                                "\n"
+                                                "\n"
+                                                "QPushButton:hover {\n"
+                                                "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,"
+                                                " stop: 0 #cccccc , stop: 1#f2f2f2);\n"
+                                                "}\n"
+                                                "\n"
+                                                "QPushButton:pressed{ background-color: #cccccc; }")
         self.boutonSelectionne = bouton
         if (self.boutonSelectionne != self.BoutonAccueil):
             self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
@@ -695,21 +677,6 @@ class SIMM():
     # On masque les autres elements
     def __init__(self):
         app = QtWidgets.QApplication(sys.argv)
-        # MainFrame = QtWidgets.QMainWindow()
-        # self.mapper = QSignalMapper(MainFrame)
-        # self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
-        # self.ui = Accueil(MainFrame)
-        # ui.BoutonImprimerInventaire.clicked.connect(impressionPDF)
-        # MainFrame.setWindowIcon(QIcon('Images/SIMM2.0.png'))
-        # MainFrame.setWindowTitle("SIMM 2.0")
-        # print(MainFrame.centralWidget())
-        # self.attente = Overlay(MainFrame.centralWidget())
-        # self.attente.hide()
-        # self.ui.BoutonAccueil.clicked.connect(self.attente.show)
-        # MainFrame.show()
-        # print(MainFrame.size())
-        # MainFrame.resize(self.resizeEvent())
-        # self.attente.move(250,250)
         MainFrame = MainWindow()
         MainFrame.show()
         sys.exit(app.exec_())
@@ -802,9 +769,6 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(True)
 
 def impressionPDF(bouton):
-    print(bouton)
-
-    # ui.BoutonImprimerInventaire.disabled(True)
     print("impression en cours")
     filter = "PDF (*.pdf)"
     fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"),
@@ -820,9 +784,6 @@ def imprimer(path, bouton):
 
     print("Impression en cours de chez cours")
     pdf = PDF(path, bouton)
-    print("Impression en cours de chez cours")
-    # pdf.creationPDF(path)
-    print("Impression en cours de chez cours")
 
 if __name__ == "__main__":
     SIMM()

@@ -14,10 +14,7 @@ class Piece(Ui_Piece):
         self.setupUi(widget)
         self.pieceManager = PieceManager()
         self.enregistrement = Communicate()
-
         self.ajoutPiece()
-        # self.finChargement = finChargement
-        # self.tableCategoriePiece.setHorizontalHeaderLabels("Nom Piece")
         self.listeAjoutPiece = list()
         self.nombreLigne  = 0
 
@@ -27,22 +24,14 @@ class Piece(Ui_Piece):
         if(self.piece['CategoriePiece'] is None):
             self.piece['CategoriePiece'] = dict()
         self.pieceSelonCentre = dict(self.piece['CategoriePiece'])
-        # self.quantitePiece = dict(self.piece['QuantitePiece'])
-        # print(self.pieceSelonCentre)
-        # print(self.quantitePiece)
-        # self.listeCategoriePiece = list()
-        # self.listeCategoriePiece.append("")
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.insert(0, "")
-        # self.listeCategoriePiece.append(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.sort()
 
         self.comboBoxSelectionCategoriePiece.currentTextChanged.connect(self.recuperationPieceCategorie)
         self.comboBoxSelectionCategoriePiece.addItems(self.listeCategoriePiece)
         self.comboBoxCategorieSelectionnee.addItems(self.listeCategoriePiece)
         self.comboBoxCategorieSelectionnee.currentTextChanged.connect(self.rechercheCategorie)
-        # self.
-        # self.lineEdit.returnPressed.connect()
 
         self.colonneClique = None
         self.nombreClique = 0
@@ -56,8 +45,6 @@ class Piece(Ui_Piece):
         self.listeCleResume = list(["Nom Piece", "Nombre"])
         self.tableResume.setColumnCount(len(self.listeCleResume))
         self.tableResume.setHorizontalHeaderLabels(self.listeCleResume)
-        # self.tableCategoriePiece.resizeColumnsToContents()
-        # self.tableCategoriePiece.
         self.BoutonValider.clicked.connect(self.ajouterPiece)
         self.BoutonEnregistrerPiece.clicked.connect(self.enregistrerPieceThread)
 
@@ -69,13 +56,6 @@ class Piece(Ui_Piece):
         self.tableResume.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableResume.horizontalHeader().sectionClicked.connect(self.trierResume)
 
-    def choisirCategorie(self):
-        categorie = self.comboBoxCategorieSelectionnee.currentText()
-        print(categorie)
-        # print(model)
-        # self.listViewCategoriePiece.setModel(model)
-        # self.pieceManager.AjouterNombrePiece()
-
     def ajouterPiece(self):
         print("ajout Piece")
         categorie = self.comboBoxSelectionCategoriePiece.currentText()
@@ -83,7 +63,6 @@ class Piece(Ui_Piece):
         nomPiece = self.comboBoxNomPiece.currentText()
         nombre = (self.spinBoxNombreEquipement.text())
         self.tableCategoriePiece.setRowCount(self.tableCategoriePiece.rowCount() + 1)
-
         self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 0, QTableWidgetItem(categorie))
         self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 1, QTableWidgetItem(nomPiece))
         self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 2, QTableWidgetItem((nombre)))

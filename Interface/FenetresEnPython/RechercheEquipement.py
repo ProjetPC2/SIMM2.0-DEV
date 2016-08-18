@@ -8,7 +8,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from BDD.EquipementManager import EquipementManager
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.RechercheEquipementUI import Ui_RechercheEquipement
 from Interface.FenetresEnPython.Signaux import Communicate
 
@@ -23,18 +23,16 @@ class RechercheEquipement(Ui_RechercheEquipement):
         #Recuperation des differents attributs d'un equipement
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeCleDonnees = list()
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees.append("ID")
         for element in self._conf['champsAcceptes-Equipement']:
             self.listeCleDonnees.append(element)
-        # self.listeCleDonnees = ()
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
@@ -69,10 +67,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
         #Mise en forme de la page d'accueil
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
-        # self.tableResultats.setHorizontalHeaderLabels("ID")
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.setRowCount(0)
-
 
         self.dictionnaireRecherche = dict()
 
@@ -112,12 +108,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
             else:
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             indice += 1
-        # self.modificationEquipement = QtWidgets.QWidget()
-        # self.modificationEquipementUI = ModificationEquipementUI()
-        # self.modificationEquipementUI.setupUi(self.modificationEquipement, equipement)
-        # # self.modificationEquipement.setStyleSheet("background: white;")
         print (self.equipementSelectionne)
-        # self.hide()
 
     def trier(self, numeroColonne):
         """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
