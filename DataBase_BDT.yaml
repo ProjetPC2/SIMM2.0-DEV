@@ -2510,9 +2510,9 @@ _default:
       Date: 2015-09-18
       DescriptionIntervention: "j'ai d\xE9mont\xE9 l'appareil. J'ai test\xE9 la batteire.\
         \ Elle est \xE0 2.17 v. sa charge est trop faible. Elle ne peut pas actualiser.\
-        \ Elle est defectueuse. J'ai d\xE9mont\xE9 les connecteurs de la batterie.\
+        \ Elle est d\xE9fectueuse. J'ai d\xE9mont\xE9 les connecteurs de la batterie.\
         \ Maintenant c'est fonctionnel."
-      DescriptionSituation: "Lappareil s'allume et etteint sans avoir affich\xE9 le\
+      DescriptionSituation: "Lappareil s'allume et \xE9teint sans avoir affich\xE9 le\
         \ r\xE9sultat."
       EtatBDT: "Ferm\xE9"
       ID-BDT: '1'
