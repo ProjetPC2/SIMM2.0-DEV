@@ -21157,7 +21157,83 @@ _default:
       Salle: "Hospitalisation p\xE9diatrie JICA"
     state:
       eid: 1119
-  1120:
+  1120: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1166'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1120
+  1121: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1167'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1121
+  1122: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1168'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1122
+  1123: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1169'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1123
+  1124:
     CategorieEquipement: Table de chevet
     CentreService: "P\xE9diatrie"
     CodeAsset: ''
@@ -21166,7 +21242,7 @@ _default:
     DateDernierEntretien: 2016-08-18
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '1166'
+    ID: '1170'
     Marque: CIhealthcare
     Modele: CM20
     NbBonTravail: 0
