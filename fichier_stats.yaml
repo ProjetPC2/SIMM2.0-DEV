@@ -1,3 +1,4 @@
+nbEquipement: 1111
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -239,6 +240,7 @@ nbEquipementCentreService:
     "Support \xE0 solut\xE9s": 10
     Table d'examen: 9
     Table d'instruments: 3
+    Table de chevet: 7
     "Table de soins n\xE9onataux": 13
     "Tensiom\xE8tre": 1
     Toise: 2
@@ -307,9 +309,11 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
+  Quasi neuf: 609
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
+  En service: 1047
 nbEquipementProvenance:
   ? ''
   : 387
@@ -318,6 +322,7 @@ nbEquipementProvenance:
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
+  JICA: 203
   MSPP: 1
   PNS: 1
   SCMS: 3
