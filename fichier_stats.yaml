@@ -1,4 +1,3 @@
-nbEquipement: 1111
 nbEquipementCentreService:
   Archives:
     Analyseur CD4 (VIH): 0
@@ -44,6 +43,7 @@ nbEquipementCentreService:
     Chariot de secours: 1
     "Civi\xE8re de transport": 1
     "D\xE9fibrilateur": 1
+    Enregistreur: 1
     Infusions seringue pompe: 2
     "Lampe d'op\xE9ration": 3
     Lit: 3
@@ -54,6 +54,7 @@ nbEquipementCentreService:
     "Table d'op\xE9ration chirurgicale": 2
     "Table d'op\xE9ration orthop\xE9dique": 1
     Table de chevet: 3
+    UPS: 1
   Clinique externe:
     "Appareil \xE0 succion": 1
     Autre: 1
@@ -228,7 +229,7 @@ nbEquipementCentreService:
     "Civi\xE8re de transport": 1
     "Incubateur n\xE9onatal": 4
     Lampe d'examen: 6
-    Lit: 14
+    Chaise roulante: 1
     "Lit p\xE9diatrique": 13
     Moniteur PNI: 1
     Moniteur physiologique: 1
@@ -240,7 +241,7 @@ nbEquipementCentreService:
     "Support \xE0 solut\xE9s": 10
     Table d'examen: 9
     Table d'instruments: 3
-    Table de chevet: 7
+    Table de chevet: 14
     "Table de soins n\xE9onataux": 13
     "Tensiom\xE8tre": 1
     Toise: 2
@@ -309,11 +310,9 @@ nbEquipementEtatConservation:
   Acceptable: 447
   "D\xE9suet": 12
   En fin de vie: 43
-  Quasi neuf: 609
 nbEquipementEtatService:
   Au rebus: 14
   En maintenance: 50
-  En service: 1047
 nbEquipementProvenance:
   ? ''
   : 387
@@ -322,7 +321,6 @@ nbEquipementProvenance:
   Croix-Rouge Canadienne: 384
   Croix-Rouge Haitienne: 5
   I-TECH: 51
-  JICA: 203
   MSPP: 1
   PNS: 1
   SCMS: 3
