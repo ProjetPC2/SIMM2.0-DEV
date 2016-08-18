@@ -2,15 +2,16 @@ import datetime
 from threading import Thread
 
 import yaml
-from PyQt5 import QtGui, QtWidgets
+from PyQt5 import QtWidgets
 from PyQt5.QtCore import QLocale, QDate
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.Stockage import Equipement
+
 
 class ModificationEquipement(Ui_AjoutEquipement):
     def __init__(self, widget, equipement):
@@ -74,13 +75,12 @@ class ModificationEquipement(Ui_AjoutEquipement):
         # Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeDonnees = list()
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
 
@@ -188,13 +188,10 @@ class ModificationEquipement(Ui_AjoutEquipement):
 
     def sauvegarderEquipement(self):
         """Methode permettant l'enregristrement de l'equipement dans la BDD"""
-
-        # self.donnees()
         i = 0
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        # self.equipementManager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.yaml')
         self.equipementManager.ModifierEquipement(self. equipementRecherche["ID"], self.equipement.dictionnaire)
         self.sauvegarde.sauvegardeTermine.emit()
 
@@ -208,7 +205,6 @@ class ModificationEquipement(Ui_AjoutEquipement):
             for text in self.listeDonnees:
                 if type(self.listeWidgets[indice]) is QButtonGroup:
                     for radioBouton in self.listeWidgets[indice].buttons():
-                        #if not radioBouton.isChecked():
                             radioBouton.hide()
                     self.listeLabel[indice].setText(str(text))
                     self.listeLabel[indice].show()

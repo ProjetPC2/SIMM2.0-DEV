@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QTableWidgetItem, QCalendarWidget
 
 from BDD.BonTravailManager import BonTravailManager
 from BDD.EquipementManager import EquipementManager
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.RechercheBonDeTravailUI import Ui_RechercheBonDeTravail
 from Interface.FenetresEnPython.Signaux import Communicate
 
@@ -25,17 +25,12 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         # Recuperation des differents attributs
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
-        # self.listeCleDonnees = list()
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
-        # récupère la liste des 'accepted keys' dans le fichier de configuration
-        # self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
-        # print("liste des cles : ", self.listeCleDonnees)
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
 
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeCategorieEquipement.sort()
@@ -43,7 +38,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.listeCentreService.sort()
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeEtatService.sort()
-        # self.listeProvenance = list(self._conf['Provenance'])
 
         #Mise a jour des differentes listes deroulantes
         self.comboBoxCategorieEquipement.clear()
@@ -55,7 +49,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.comboBoxCentreService.clear()
         self.comboBoxCentreService.addItem("")
         self.comboBoxCentreService.addItems(self.listeCentreService)
-
 
         fichierConf.close()
 
@@ -78,7 +71,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.resizeColumnsToContents()
         self.tableResultats.setRowCount(0)
-        # self.tableResultats.setColumnCount(0)
 
         self.dictionnaireRecherche = dict()
 
@@ -86,8 +78,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipementThread)
         self.comboBoxEtat.currentTextChanged.connect(self.rechercheEtatDeService)
         self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreServiceThread)
-        # self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
-        # self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
         self.calendrierAvant.dateChanged.connect(self.rechercheDateAvantThread)
         self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituationThread)
         self.calendrierApres.dateChanged.connect(self.rechercheDateApresThread)
@@ -122,12 +112,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             else:
                 self.bonDeTravailSelectionne[cle] = self.tableResultats.item(ligne, indice).data(0)
             indice += 1
-        # self.modificationEquipement = QtWidgets.QWidget()
-        # self.modificationEquipementUI = ModificationEquipementUI()
-        # self.modificationEquipementUI.setupUi(self.modificationEquipement, equipement)
-        # # self.modificationEquipement.setStyleSheet("background: white;")
         print(self.bonDeTravailSelectionne)
-        # self.hide()
 
     def trier(self, numeroColonne):
         """Methode permettant le tri des colonnes lors du clique sur l'une d'entre elle
@@ -230,35 +215,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                 :param: None
                 :return:
             '''
-        # if (any(self.dictionnaireRecherche)):
-        #     liste = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
-        #     listeBonTravail = list()
-        #     listeDonnees = list()
-        #     for element in liste:
-        #         #Recherche a partir des attributs des equipements
-        #         listeBDT = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": element["ID"]})
-        #         for bonTravail in listeBDT:
-        #             #Recuperation des bons de travail associe a un equipement
-        #             listeBonTravail.append(bonTravail)
-        #             dictDonnees = dict()
-        #             dictDonnees["ID-EQ"] = element["ID"]
-        #             dictDonnees["CategorieEquipement"] = element["CategorieEquipement"]
-        #             dictDonnees["Modele"] = element["Modele"]
-        #             dictDonnees["CentreService"] = element["CentreService"]
-        #             dictDonnees["EtatBDT"] = bonTravail["EtatBDT"]
-        #             dictDonnees["Date"] = bonTravail["Date"]
-        #             dictDonnees["ID-BDT"] = bonTravail["ID-BDT"]
-        #             dictDonnees["DescriptionSituation"] = bonTravail["DescriptionSituation"]
-        #             listeDonnees.append(dictDonnees)
-        #     self.tableResultats.setRowCount(len(listeDonnees))
-        #     for i, dictionnaire in enumerate(listeDonnees):
-        #         # Creation des QTableWidgetItem
-        #         colonne = 0
-        #         for cle in self.listeCleDonnees:
-        #             self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
-        #             colonne += 1
-        #
-        # else:
             #Recherche parmi les coordonnes
             if (any(self.dictionnaireRecherche)):
                 print("Affichage dictionnaire de recherche :", self.dictionnaireRecherche)

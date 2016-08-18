@@ -14,31 +14,16 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.StatistiqueUI import Ui_Statistique
 
 
 class Statistique(Ui_Statistique):
-    """La classe Statistique est la classe qui est va servir a creer la fenetre principal
-    Cette classe va contenir les attributs suivants :
-    -Un titre
-    -Une statusBar
-    -un formulaire
-    -un formulaire rempli
-    -des options
-    -un attribut de stockage
-    -une liste temporaire pour le stockage des informations"""
+
     def __init__(self, widget):
         self.setupUi(widget)
-
-        # # Création des differents éléments
-        # self.titre = QLabel("Statistique")
-        # self.titre.setFont((QFont('SansSerif', 24)))
-        # self.titre.setAlignment(Qt.AlignCenter)
-        #
-        #    # Création des Boutons
-        # self.nombreEquipement = 10
         self.ajoutStatistique()
+
     def ajoutStatistique(self):
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
 
@@ -64,34 +49,19 @@ class Statistique(Ui_Statistique):
         self.textBrowserDesuet.setText(str(self.nombreDesuet))
 
         self.nombreEquipementProvenance = 0
-        #
-        # self.tableResumeInventaire.resizeColumnToContents(0)
-        # self.tableResumeInventaire.resizeRowsToContents()
 
-        # On fait en sorte que la table prend la largeur de la fenetre
-        # self.table.horizontalHeader().setStretchLastSection(True)
-
-
-        #Mise en place de la forme de la fenetre
-        # self.setGeometry(200, 100, 200, 1000)
-
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
-        # self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
-        # print("liste des cles : ", self.listeCleDonnees)
+
         self.listeProvenance = list(self._conf['Provenance'])
         self.listeProvenance.sort()
-        # self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
-        # self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
         self.listeCentreService.sort()
-        # self.listeSalle = list(self._conf['Salle'])
         print(self.listeProvenance)
         self.comboBoxProvenance.addItem("")
         self.comboBoxProvenance.addItem("Tous")
@@ -166,27 +136,6 @@ class Statistique(Ui_Statistique):
         self.textBrowserEquipementProvenance.setText(str(self.nombreEquipementProvenance))
 
     def affichageCenreService(self):
-        # if(self.comboBoxCentreService.currentText() == ""):
-        #     dictionnaireResultat = dict()
-        #     for dictionnaire in self.statsCategorie.values():
-        #         for cle, valeur in dictionnaire.items():
-        #             if cle in dictionnaireResultat:
-        #                 dictionnaireResultat[cle] += valeur
-        #             else:
-        #                 dictionnaireResultat[cle] = valeur
-        #     self.table.setRowCount(len(dictionnaireResultat))
-        #     ligne = 0
-        #     for cle,valeur in dictionnaireResultat.items():
-        #         self.table.setItem(ligne, 0, QTableWidgetItem(cle))
-        #         self.table.setItem(ligne, 1, QTableWidgetItem(valeur))
-        #         ligne += 1
-        # else:
-        #     ligne = 0
-        #     self.table.setRowCount(len(self.statsCategorie[self.comboBoxCentreService.currentText()]))
-        #     for cle, valeur in self.statsCategorie[self.comboBoxCentreService.currentText()].items():
-        #         self.table.setItem(ligne, 0, QTableWidgetItem(cle))
-        #         self.table.setItem(ligne, 1, QTableWidgetItem(valeur))
-        #         ligne += 1
         if (self.comboBoxCentreService.currentText() != ""):
             dictionnaireResultat = dict()
             if self.comboBoxCentreService.currentText() == "Tous":

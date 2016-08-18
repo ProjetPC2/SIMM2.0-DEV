@@ -80,12 +80,11 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.listeDonnees = list()
         try:
-            fichierConf = open("fichier_conf.yaml", 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-
-            print("Could not read file: ", "fichier_conf.yaml")  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
 
@@ -211,18 +210,13 @@ class AjoutEquipement(Ui_AjoutEquipement):
             self.labelID.show()
             self.donnees()
             indice = 0
-            #font = QtGui.QFont()
-            #font.setFamily("MS Shell Dlg 2")
-            #font.setPointSize(10)
             for text in self.listeDonnees:
                 if type(self.listeWidgets[indice]) is QButtonGroup:
                     for radioBouton in self.listeWidgets[indice].buttons():
-                        # if not radioBouton.isChecked():
                             radioBouton.hide()
                     self.listeLabel[indice].setText(str(text))
                     self.listeLabel[indice].show()
                 else:
-                    # self.listeLabel[indice].setFont(font)
                     self.listeLabel[indice].setText(str(text))
                     self.listeLabel[indice].show()
                     self.listeWidgets[indice].hide()
@@ -279,7 +273,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         equipement = self.equipementRecherche
         indice = 0
         for widget in self.listeWidgets:
-            # self.stockage.dictionnaire
             if type(widget) is QLineEdit:
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             elif type(widget) is QDateEdit:

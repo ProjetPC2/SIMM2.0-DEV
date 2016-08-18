@@ -13,7 +13,6 @@ from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.Signaux import Communicate
 
-
 class BonDeTravail(Ui_BonDeTravail):
     def __init__(self, widget, consulterBDT = None, ajouterID = None):
         self.setupUi(widget)
@@ -77,7 +76,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeWidget.append(self.timeEditTempsEstime)
         self.listeWidget.append(self.labelEcritureBonTravail)
         self.listeWidget.append(self.dateEdit)
-        # self.listeWidget.append(self.comboBoxNomTech)
+        #self.listeWidget.append(self.comboBoxNomTech)
 
         self.colonneClique = None
         self.nombreClique = 0

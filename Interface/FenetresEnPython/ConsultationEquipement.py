@@ -6,7 +6,7 @@ from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.ConsultationEquipementUI import Ui_ConsultationEquipement
 from threading import Thread
 
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.Signaux import Communicate
 
 
@@ -43,14 +43,12 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         #Recuperation des differents attributs d''un equipement
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
-            # self.listeCleDonnees = list()
-        conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
         fichierConf.close()
@@ -64,8 +62,6 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.boutonAjouterUnBon.setEnabled(False)
         self.boutonConsulterBon.setEnabled(False)
         self.comboBoxBons.clear()
-
-        # self.comboBoxBons.addItem(icon2, "")
 
     def rechercherEquipement(self):
         '''
@@ -87,7 +83,6 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 self.boutonAjouterUnBon.setEnabled(True)
                 self.boutonConsulterBon.setEnabled(False)
                 self.equipement = listeEquipement[0]
-                # self.equipement["ID"] = self.lineEditId.text()
                 i = 0
                 for cle in self.listeCleDonnees:
                     #Recuperation des donnees sous forme de string
