@@ -2,7 +2,7 @@ from PyQt5.QtCore import pyqtSignal, QObject
 
 
 class Communicate(QObject):
-
+    #classe permettant la gestion des differents signaux
     aucunResultat = pyqtSignal()
     finChargement = pyqtSignal()
     sauvegardeTermine = pyqtSignal()

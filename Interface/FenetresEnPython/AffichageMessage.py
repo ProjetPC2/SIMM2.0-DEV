@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 from threading import Thread
 
@@ -8,24 +10,24 @@ from PyQt5.QtWidgets import QWidget, QMainWindow, QTextEdit, QPushButton, QGridL
 
 
 class AffichageMessage(QWidget):
+    '''
+        Classe destinée à afficher un message après une action spécifique
+    '''
+
     def __init__(self, texte, parent=None):
 
         QWidget.__init__(self, parent)
         palette = QPalette(self.palette())
         self.text = texte
 
-
     def paintEvent(self, event):
-
         qp = QPainter()
         qp.begin(self)
         qp.fillRect(event.rect(), QBrush(QColor(255, 255, 255, 127)))
-
         self.drawText(event, qp)
         qp.end()
 
     def drawText(self, event, qp):
-
         qp.setPen(QColor(0, 0, 0))
         qp.setFont(QFont('Decorative', 12, QFont.Bold))
         qp.drawText(event.rect(), Qt.AlignCenter, self.text)
@@ -60,7 +62,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(button, 1, 1, 1, 1)
 
         self.setCentralWidget(widget)
-        self.enregistrement = Enregistrement(self.centralWidget())
+        self.enregistrement = AffichageMessage("Test", self.centralWidget())
         print(widget.size())
         self.enregistrement.hide()
         button.clicked.connect(self.enregistrement.show)

@@ -19,7 +19,7 @@ from Interface.FenetresEnPython.StatistiqueUI import Ui_Statistique
 
 
 class Statistique(Ui_Statistique):
-
+    #Classe permettant la gestion de la fenetre des statistiques
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutStatistique()

@@ -14,6 +14,7 @@ from Interface.Stockage import Equipement
 
 
 class ModificationEquipement(Ui_AjoutEquipement):
+    #Classe gerant la fenetre permettant la modification d'un equipement
     def __init__(self, widget, equipement):
         self.setupUi(widget)
         self.equipementRecherche = equipement

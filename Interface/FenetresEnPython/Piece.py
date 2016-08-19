@@ -10,6 +10,7 @@ from Interface.FenetresEnPython.Signaux import Communicate
 
 
 class Piece(Ui_Piece):
+    #Classe permettant de gerer la fenetre permettant l'ajout de pieces dans la base de donnees
     def __init__(self, widget):
         self.setupUi(widget)
         self.pieceManager = PieceManager()

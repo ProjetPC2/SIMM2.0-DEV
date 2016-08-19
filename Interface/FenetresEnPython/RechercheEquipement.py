@@ -14,6 +14,7 @@ from Interface.FenetresEnPython.Signaux import Communicate
 
 
 class RechercheEquipement(Ui_RechercheEquipement):
+    #Classe permettant la gestion de la fenetre de recherche d'equipement
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutRechercheEquipement()

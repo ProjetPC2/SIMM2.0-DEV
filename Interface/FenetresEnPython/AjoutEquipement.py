@@ -15,16 +15,13 @@ from Interface.Stockage import Equipement
 
 class AjoutEquipement(Ui_AjoutEquipement):
     '''
-        Fonction de lancement de la page d'accueil de SIMM
-        :param: None
-        :return:
+        Classe gérant la fenetre d'ajout d'un equipement
     '''
     # On masque les autres elements
     def __init__(self, AjoutEquipement):
         self.setupUi(AjoutEquipement)
         self.ajout()
         self.sauvegarde = Communicate()
-
 
     def ajout(self):
 
@@ -144,7 +141,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.dateEditDateDuDernierEntretien.setDate(QDate.currentDate())
         self.dateEditDateDaquisition.setDate(QDate.currentDate())
 
-        # Masquage des boutons non utilises
+        # Masque des boutons non utilises
         self.BoutonEnregistrer.hide()
         self.BoutonModifier.hide()
         # Connexion des boutons
@@ -152,7 +149,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
         self.BoutonModifier.clicked.connect(self.modifierEquipement)
-
 
         # Selection des choix par defaut pour les radio boutons
         self.radioButtonEnService.setChecked(True)
@@ -199,7 +195,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        # self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
         self.equipement.dictionnaire.clear()
         self.sauvegarde.sauvegardeTermine.emit()

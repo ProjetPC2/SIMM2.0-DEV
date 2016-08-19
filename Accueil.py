@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import locale
 import os
 import sys
@@ -29,9 +31,7 @@ from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipeme
 
 class Accueil(Ui_Accueil):
     '''
-        Fonction de lancement de la page d'accueil de SIMM
-        :param: None
-        :return:
+        Class permettant la mise en place des différents widgets et fenetre la page d'accueil de SIMM
     '''
     # On masque les autres elements
     def __init__(self, Accueil):
@@ -39,10 +39,15 @@ class Accueil(Ui_Accueil):
         self.ajoutAccueil()
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
-        self.attente = Accueil.attente
-        self.aucunResultat = Accueil.aucunResultat
-        self.sauvegarde = Accueil.sauvegarde
         self.Accueil = Accueil
+        self.attente = Attente("Chargement...", Accueil)
+        self.attente.hide()
+        self.aucunResultat = AffichageMessage("Aucun résultat !", Accueil)
+        self.aucunResultat.hide()
+        self.sauvegarde = Attente("Sauvegarde en cours...", Accueil)
+        self.sauvegarde.hide()
+        self.enregistrement = Attente("Enregistrement en cours...", Accueil)
+        self.enregistrement.hide()
         # Mise en francais des calendriers
         locale.setlocale(locale.LC_ALL, "fra")
         self.enregistrementReussi =  AffichageMessage("Enregistrement réussie", Accueil)
@@ -90,11 +95,9 @@ class Accueil(Ui_Accueil):
 
         # Creation de la partie Support
         self.support = None
-        #self.supportPC2UI = None
-
         self.supprimeEquipement = None
         self.supprimeBonDeTravail = None
-        #Connexion des differents elements
+
         self.connectionBouton()
 
         self.listeNavigation = list()
@@ -166,7 +169,7 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas encore
             self.consultationEquipement = QtWidgets.QWidget()
             self.consultationEquipementUI = ConsultationEquipement(self.consultationEquipement)
-            # connexion de l'action a l'appuye du bouton modification equipement
+            # connexion des differents elements de chargement
             self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
             self.consultationEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
             self.consultationEquipementUI.boutonModifierEquipement.clicked.connect(self.modifierEquipement)
@@ -227,7 +230,6 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # On masque les autres elements
-
         self.BoutonFlecheNavigation.show()
         self.frameFleche.show()
         self.masquerElementGraphique()
@@ -235,6 +237,7 @@ class Accueil(Ui_Accueil):
         if self.modificationEquipement is None:
             # Creation du widget s'il n'existe pas
             self.modificationEquipement = QtWidgets.QWidget()
+            #Connexion des differents elemnts pour l'affichage
             self.modificationEquipementUI = ModificationEquipement(self.modificationEquipement, equipement)
             self.modificationEquipementUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
             self.modificationEquipementUI.sauvegarde.sauvegardeTermine.connect(self.sauvegardeTermine)
@@ -408,8 +411,6 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
 
-
-
     def afficherAccueil(self):
         '''
             Affichage du widget Support
@@ -434,7 +435,6 @@ class Accueil(Ui_Accueil):
             :return:
         '''
         # On masque les autres elements
-        # print("salut", self.horizontalLayout_2.minimumSize())
         for elementGraphique in self.listeElementParDefaut:
             elementGraphique.hide()
         if self.support is not None:
@@ -491,14 +491,8 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.consultationBonDeTravail = QtWidgets.QWidget()
-            # dictID = dict()
-            # dictID["ID-EQ"] = self.consultationEquipementUI.equipement["ID"]
-            # indice = self.consultationEquipementUI.comboBoxBons.currentText()
-            # listeID = indice.split("-")
-            # dictID["ID-BDT"] = listeID(len(listeID) - 1)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
             self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            #TODO: Afficher le temps de chargement pour le changement de fenetreMDP
             self.consultationBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.consultationBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.consultationBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
@@ -533,7 +527,6 @@ class Accueil(Ui_Accueil):
             self.supportPC2UI = SupportPC2(self.support)
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
-
             self.listeElementParDefaut.append(self.support)
             self.layoutAffichagePrincipal.addWidget(self.support)
             self.creation.supportCree.emit()
@@ -546,6 +539,12 @@ class Accueil(Ui_Accueil):
         self.listeNavigation.append(self.support)
 
     def supprimerEquipement(self):
+        '''
+            Affichage du widget permettant de supprimer un equipement
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
         # On masque les autres elements
         self.masquerElementGraphique()
         self.frameFleche.show()
@@ -568,6 +567,12 @@ class Accueil(Ui_Accueil):
         self.listeNavigation.append(self.supprimeEquipement)
 
     def supprimerBonDeTravail(self):
+        '''
+            Affichage du widget permettant de supprimer un bon de travail selectionne
+            Masquage des autres elements graphiques de la partie principale
+            :param: None
+            :return:
+        '''
         # On masque les autres elements
         self.masquerElementGraphique()
         self.frameFleche.show()
@@ -581,7 +586,6 @@ class Accueil(Ui_Accueil):
             self.supprimeBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.supprimeBonDeTravailUI.boutonSupprimerBon.clicked.connect(self.afficherSuppression)
             self.supprimeBonDeTravailUI.chargement.suppressionTermine.connect(self.afficherSuppressionTermine)
-
             self.listeElementParDefaut.append(self.supprimeBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.supprimeBonDeTravail)
         else:
@@ -590,6 +594,11 @@ class Accueil(Ui_Accueil):
         self.listeNavigation.append(self.supprimeBonDeTravail)
 
     def naviguer(self):
+        '''
+           methode permettant de gerer la navigation
+            :param: None
+            :return:
+        '''
         if (len(self.listeNavigation) > 1):
             widget = self.listeNavigation.pop(len(self.listeNavigation) - 1)
             widget.hide()
@@ -602,9 +611,12 @@ class Accueil(Ui_Accueil):
             self.BoutonFlecheNavigation.hide()
             self.frameFleche.hide()
 
-
-
     def selectionnerBouton(self, bouton):
+        '''
+            methode permettant de changer la couleur du bouton selectionner
+            :param: bouton
+            :return:
+        '''
         if self.boutonSelectionne is not None:
             self.boutonSelectionne.setStyleSheet("QPushButton{ padding : 5px; "
                                                  "border-radius: 8px; "
@@ -647,6 +659,7 @@ class Accueil(Ui_Accueil):
         self.sauvegardeReussi.show()
 
     def enregistrer(self):
+        print("enregistrer")
         self.enregistrement.raise_()
         self.enregistrement.show()
 
@@ -688,48 +701,34 @@ class MainWindow(QMainWindow, AbstractWindow):
         QMainWindow.__init__(self, parent)
         self.mapper = QSignalMapper(self)
         self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
-        self.attente = None
-        self.aucunResultat = None
-        self.sauvegarde = None
-        self.enregistrement = None
         self.ui = Accueil(self)
         self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
         self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.setWindowTitle("SIMM 2.0")
-        self.attente = Attente("Chargement...", self.centralWidget())
-        self.aucunResultat = AffichageMessage("Aucun résultat !", self.centralWidget())
-        self.sauvegarde = Attente("Sauvegarde en cours...", self.centralWidget())
-        self.enregistrement = Attente("Enregistrement en cours...", self.centralWidget())
-        self.attente.hide()
-        self.aucunResultat.hide()
-        self.sauvegarde.hide()
-        self.enregistrement.hide()
-        self.ui.attente = self.attente
-        self.ui.aucunResultat = self.aucunResultat
-        self.ui.sauvegarde = self.sauvegarde
-        self.ui.enregistrement = self.enregistrement
         self.ui.creation.supportCree.connect(self.verrou)
         self.signal = Communicate()
         self.signal.motDePasseCorrect.connect(self.deverouillage)
 
     def resizeEvent(self, event):
+        #methode permettant de sur la fenetre entiere le message
         print(event)
         print("size", event.size())
-        self.attente.resize(event.size())
-        self.aucunResultat.resize(event.size())
-        self.sauvegarde.resize(event.size())
+        self.ui.attente.resize(event.size())
+        self.ui.aucunResultat.resize(event.size())
+        self.ui.sauvegarde.resize(event.size())
         self.ui.suppression.resize(event.size())
         self.ui.enregistrementReussi.resize(event.size())
         self.ui.suppressionTermine.resize(event.size())
-        self.enregistrement.resize(event.size())
+        self.ui.sauvegardeReussi.resize(event.size())
+        self.ui.enregistrement.resize(event.size())
         event.accept()
 
     def verrou(self):
         self.ui.supportPC2UI.BoutonVerrou.clicked.connect(self.demanderMotDePasse)
 
     def demanderMotDePasse(self):
-
+        #Methode ouvrant la fenetre pop-up pour demander le mot de passe
         self.fenetreMDP = QInputDialog()
         self.fenetreMDP.setStyleSheet("QPushButton {\n"
                                         "color: black;\n"

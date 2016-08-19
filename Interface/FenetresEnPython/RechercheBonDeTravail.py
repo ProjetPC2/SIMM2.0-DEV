@@ -15,6 +15,7 @@ from Interface.FenetresEnPython.Signaux import Communicate
 
 
 class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
+    #Classe permettant la gestion de la recherche d'un bon de travail
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutRechercheBonDeTravail()

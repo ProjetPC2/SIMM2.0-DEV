@@ -11,6 +11,7 @@ from Interface.FenetresEnPython.SuppressionEquipementUI import Ui_SuppressionEqu
 
 
 class SuppressionEquipement(Ui_SuppressionEquipement):
+    #Classe permettant la gestion de la suppression des equipements
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutSuppressionEquipement()

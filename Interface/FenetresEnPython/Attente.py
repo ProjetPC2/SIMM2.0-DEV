@@ -9,8 +9,11 @@ from PyQt5.QtWidgets import QWidget, QMainWindow, QTextEdit, QPushButton, QGridL
 
 
 class Attente(QWidget):
+    '''
+        Classe permettant l'affichage d'un message pour faire patienter l'utilisateur
+        lors du traitement de certaines requetes
+    '''
     def __init__(self, texte, parent=None):
-
         QWidget.__init__(self, parent)
         palette = QPalette(self.palette())
         # palette.setColor(palette.Background, Qt.transparent)
@@ -18,16 +21,15 @@ class Attente(QWidget):
         self.text = texte
 
     def paintEvent(self, event):
+        '''
+            Methode gerant la creation de l'affichage graphique
+        '''
 
         painter = QPainter()
         painter.begin(self)
-        #painter.setRenderHint(QPainter.Antialiasing)
-        #painter.fillRect(event.rect(), QBrush(QColor(255, 255, 255, 127)))
         painter.setPen(QPen(Qt.NoPen))
 
         for i in range(6):
-            # if (self.counter / 5) % 6 == i:
-            #     painter.setBrush(QBrush(QColor(127 + (self.counter % 5) * 32, 0, 0)))
             if (self.counter) % 6 == i:
                 painter.setBrush(QBrush(QColor(200 , 0, 0)))
             else:
@@ -40,8 +42,6 @@ class Attente(QWidget):
         painter.setFont(QFont('Decorative', 12, QFont.Bold))
         painter.drawText(event.rect(), Qt.AlignCenter, self.text)
         painter.end()
-        # print(self.width(), self.height())
-
 
     def showEvent(self, event):
 

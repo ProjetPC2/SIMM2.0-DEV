@@ -95,7 +95,6 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 self.boutonModifierEquipement.setEnabled(False)
                 self.chargement.finChargement.emit()
                 self.chargement.aucunResultat.emit()
-
         else:
             print("Champ ID null")
             self.chargement.finChargement.emit()

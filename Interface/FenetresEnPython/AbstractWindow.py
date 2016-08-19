@@ -2,6 +2,9 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import *
 
 class AbstractWindow(QWidget):
+    '''
+        Class permettant la demande de confirmation pour fermer la fenetre
+    '''
 
     def closeEvent(self, event):
         """Fonction gerant la creation d'une fenetre de verification
@@ -26,8 +29,6 @@ class AbstractWindow(QWidget):
         self.messageBox.setText("Etes-vous sûr de vouloir quitter ?")
         self.messageBox.setWindowTitle("SIMM 2.0")
         self.messageBox.setWindowIcon(QIcon('Images/SIMM2.0.png'))
-
-        #self.messageBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel);
         self.boutonOk = QPushButton("Oui")
         self.boutonAnnuler = QPushButton("Annuler")
         self.messageBox.addButton(self.boutonOk, QMessageBox.AcceptRole)

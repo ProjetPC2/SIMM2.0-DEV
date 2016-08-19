@@ -11,6 +11,7 @@ from PyQt5 import QtWidgets
 
 
 class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
+    #Classe permettant la gestion de la fenetre de suppression de bon de travail
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutSuppressionBonDeTravail()

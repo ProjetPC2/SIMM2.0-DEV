@@ -6,6 +6,7 @@ from Interface.FenetresEnPython.SupportPC2UI import Ui_SupportPC2
 
 
 class SupportPC2(Ui_SupportPC2):
+    #Classe permettant la gestion de la fenetre support
     def __init__(self, widget):
         self.setupUi(widget)
         self.ajoutSupport()

@@ -14,6 +14,9 @@ from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonT
 from Interface.FenetresEnPython.Signaux import Communicate
 
 class BonDeTravail(Ui_BonDeTravail):
+    '''
+        Classe gerant la fenetre permettant l'ajout et la modification des bons de travail
+    '''
     def __init__(self, widget, consulterBDT = None, ajouterID = None):
         self.setupUi(widget)
         self.ajoutBonDeTravail()
@@ -30,6 +33,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.pushButtonValider.setDisabled(True)
         self.chargement = Communicate()
         if(consulterBDT is not None):
+            #Cas ou on consulter un bon de travail
             self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
             self.chercherEquipement()
             indice = 0
@@ -40,6 +44,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.indiceBonDeTravail = indice
             self.chargerBonTravail()
         if(ajouterID is not None):
+            #Cas ou on va ajouter un bon de travail pour un equipement
             self.lineEditID.setText(ajouterID)
             self.chercherEquipement()
             self.nouveauBondeTravail()
@@ -127,7 +132,6 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonAjoutBDT.show()
         self.boutonAjoutBDT.setDisabled(True)
         self.comboBoxOuvertFerme.setDisabled(False)
-        print("recherche equipement")
         self.dic_request['ID'] = self.lineEditID.text()
         listeTrouve = self.equipementManager.RechercherEquipement(self.dic_request)
         self.nombreBonAjoute = 0
@@ -153,10 +157,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
             self.listeCategoriePiece.sort()
             self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
-            print("Connection")
             self.rechercherBonTravail()
-            #self.textEditDescIntervention.setEnabled(True)
-            #self.textEditDescIntervention.setText("Bonjour")
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
@@ -228,7 +229,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.chargement.rechercheTermine.emit()
 
     def remplirBonDeTravail(self):
-
+        #Methode permettant le remplissage des differents champs
         self.labelCacheNomTech.setText(self.comboBoxNomTech.currentText())
         self.labelCacheDate.setText(str(self.dateEdit.date().toPyDate()))
         self.labelCacheTemps.setText(str(self.timeEditTempsEstime.time().toPyTime()))
@@ -363,6 +364,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.rechercherBonTravail()
 
     def confirmation(self):
+        #Methode affichant le bon de travail une fois enregistre
         self.boutonConsultation.hide()
         self.textEditDescIntervention.hide()
         self.textEditDescSituation.hide()
@@ -386,17 +388,8 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonAjoutBDT.show()
         self.listeAjoutPieceReparation.clear()
 
-
-
-    def afficheSaisi(self):
-
-        self.dateEdit.hide()
-        self.comboBoxNomTech.hide()
-        self.timeEditTempsEstime.hide()
-        self.textEditDescIntervention.hide()
-        self.textEditDescSituation.hide()
-
     def chargerEquipement(self):
+        #Methode permettant le chargement d'un equipement
         self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
         self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
         self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
@@ -407,6 +400,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.nouveauBondeTravail()
 
     def consulterBonTravailSpecifique(self, dict):
+        #Methode permettant le chargement d'un bon de travail precis
         self.lineEditID.setText(dict["ID-EQ"])
         self.chercherEquipement()
         self.indiceBonDeTravail = dict["ID-BDT"] - 1
@@ -418,18 +412,16 @@ class BonDeTravail(Ui_BonDeTravail):
         thread.start()
 
     def choisirCategoriePiece(self):
-        print("Choix de piece")
-
         self.comboBoxNomPiece.clear()
         listePiece = self.pieceManager.ObtenirListePiece(self.comboBoxCategoriePiece.currentText())
         print(self.comboBoxCategoriePiece.currentText())
         self.comboBoxNomPiece.addItems(listePiece)
 
     def validerChoixPiece(self):
+        #Methode permettant la validation du choix des pieces
         categorie = self.comboBoxCategoriePiece.currentText()
         nomPiece = self.comboBoxNomPiece.currentText()
         nombre = self.spinBoxNombrePiece.text()
-
         self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
         self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 0, QTableWidgetItem(categorie))
         self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 1, QTableWidgetItem(nomPiece))
@@ -472,7 +464,6 @@ class BonDeTravailThread(Thread):
 
     def run(self):
         self.fonction()
-
 
 if __name__ == "__main__":
     import sys
