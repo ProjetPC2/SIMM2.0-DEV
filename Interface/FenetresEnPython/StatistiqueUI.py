@@ -472,6 +472,43 @@ class Ui_Statistique(object):
         self.tableResumeInventaire.verticalHeader().setSortIndicatorShown(True)
         self.tableResumeInventaire.verticalHeader().setStretchLastSection(False)
         self.horizontalLayout_11.addWidget(self.tableResumeInventaire)
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_11.addItem(spacerItem7)
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
+        spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_10.addItem(spacerItem8)
+        self.pushButton = QtWidgets.QPushButton(Statistique)
+        self.pushButton.setMinimumSize(QtCore.QSize(100, 50))
+        self.pushButton.setMaximumSize(QtCore.QSize(100, 50))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("QPushButton {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 4px;\n"
+"background: rgb(247,247,247);\n"
+"}\n"
+"\n"
+"QPushButton::pressed {\n"
+"padding: 1px;\n"
+"color: black;\n"
+"border-style: solid;\n"
+"border: 1px solid gray;\n"
+"border-radius: 8px;\n"
+"background:rgb(169, 167, 170);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}")
+        self.pushButton.setObjectName("pushButton")
+        self.verticalLayout_10.addWidget(self.pushButton)
+        self.horizontalLayout_11.addLayout(self.verticalLayout_10)
         self.verticalLayout_5.addLayout(self.horizontalLayout_11)
         self.gridLayout.addLayout(self.verticalLayout_5, 5, 0, 1, 2)
 
@@ -555,4 +592,6 @@ class Ui_Statistique(object):
         item.setText(_translate("Statistique", "Catégorie d\'équipement"))
         item = self.tableResumeInventaire.horizontalHeaderItem(1)
         item.setText(_translate("Statistique", "Quantité"))
+        self.pushButton.setText(_translate("Statistique", "Faire un\n"
+"backup"))
 
