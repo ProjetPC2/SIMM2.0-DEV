@@ -220,13 +220,13 @@ background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, s
        <property name="minimumSize">
         <size>
          <width>140</width>
-         <height>40</height>
+         <height>25</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>140</width>
-         <height>40</height>
+         <height>20</height>
         </size>
        </property>
        <property name="font">
