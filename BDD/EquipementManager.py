@@ -295,6 +295,7 @@ class EquipementManager:
     # d'avoir les statistiques à jour
     def _recalculStats(self):
         stats = self._getStats()
+        print("fichier actuel de stats", stats)
         conf = self._getConf()
         db = self._getDB()
         Equipement = Query()
@@ -309,7 +310,7 @@ class EquipementManager:
         list_CentreService = list(conf['CentreService'])
         # récupère les champs possibles pour la CategorieEquipement
         list_CategorieEquipement = list(conf['CategorieEquipement'])
-
+        print("Fin recuperation des differents listes")
         # Nombre total d'équipements
         stats['nbEquipement'] = len(db)
 
@@ -323,7 +324,7 @@ class EquipementManager:
 
         stats['nbEquipementProvenance'] = dict()
         stats['nbEquipementCentreService'] = dict()
-
+        print("Debut comptage selon provenance")
         # Nombre d'équipement selon la provenance
         for element in list_Provenance:
             print((stats['nbEquipementProvenance']))
@@ -332,20 +333,24 @@ class EquipementManager:
             # if element not in stats:  # ajoute la provenance au fichier de stats
             #     stats['nbEquipementProvenance'][element] = 0
             stats['nbEquipementProvenance'][element] = db.count(Equipement['Provenance'] == element)
-
+        print("Debut comptage selon categorie par centre de service")
         # Nombre d'équipement de chaque catégorie par centre de service
+        print(list_CentreService)
         for centre in list_CentreService:
+            print("Calcul pour le centre : ", centre)
             if stats['nbEquipementCentreService'] is None:
                 stats['nbEquipementCentreService'] = dict()
             if centre not in stats['nbEquipementCentreService']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
                 stats['nbEquipementCentreService'][centre] = dict()  # si non, ajout du centre de service
             for categorie in list_CategorieEquipement:
+                print("recherche pour la categorie : ", categorie)
                 recherche_temp = db.count((Equipement['CentreService'] == centre) &
                                           (Equipement['CategorieEquipement'] == categorie))
                 if recherche_temp != 0:
                     stats['nbEquipementCentreService'][centre][categorie] = recherche_temp
+        print("Fin comptage")
         self._ActualiserStats(stats)
-
+        print("Actualisation des stats finie")
 
     def _ActualiserStats(self, stats):
         try:
@@ -436,8 +441,8 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager.AjouterEquipement(data))
         #print(manager.SupprimerEquipement('1'))
         #  id_supp en int
-        print(dic_request)
-        print(manager.RechercherEquipement(dic_request))
+        #print(dic_request)
+        #print(manager.RechercherEquipement(dic_request))
         #print(manager.ModifierEquipement('3', data))               # id_modif en int
 
         # Stats
@@ -447,7 +452,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager._statsNbEquipementProvenance())
         #print(manager._statsNbEquipementCentreServiceCategorie())
 
-        #manager._recalculStats()
+        manager._recalculStats()
 
 
 
