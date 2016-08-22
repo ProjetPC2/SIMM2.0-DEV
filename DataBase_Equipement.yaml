@@ -21556,19 +21556,266 @@ _default:
       Salle: 1312 - Salle de malnutrition JICA
     state:
       eid: 1140
-  1141:
-    CategorieEquipement: Lit
+  1141: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1187'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1141
+  1142: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1188'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1142
+  1143: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1189'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1143
+  1144: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1190'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1144
+  1145: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1191'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1145
+  1146: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1192'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1146
+  1147: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1193'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1147
+  1148: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1194'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1148
+  1149: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1195'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1149
+  1150: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1196'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1150
+  1151: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1197'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1320 - Salle isolement 1 JICA
+    state:
+      eid: 1151
+  1152: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1198'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1320 - Salle isolement 1 JICA
+    state:
+      eid: 1152
+  1153: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1199'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1321 - Salle isolement 2 JICA
+    state:
+      eid: 1153
+  1154:
+    CategorieEquipement: Table de chevet
     CentreService: "P\xE9diatrie"
     CodeAsset: ''
     Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-18
+    DateAcquisition: 2016-06-28
+    DateDernierEntretien: 2016-08-22
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '1187'
-    Marque: ''
-    Modele: ''
+    ID: '1200'
+    Marque: CIhealthcare
+    Modele: CM20
     NbBonTravail: 0
     NumeroSerie: ''
     Provenance: JICA
-    Salle: 1312 - Salle de malnutrition JICA
+    Salle: 1321 - Salle isolement 2 JICA
