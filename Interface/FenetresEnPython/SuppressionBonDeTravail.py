@@ -51,12 +51,17 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.listeWidget.append(self.labelEcritureBonTravail)
             self.listeWidget.append(self.dateEdit)
 
+            #Signaux
+            self.signalSuppression = Communicate()
+            self.signalSuppression.editionBonTravail.connect(self.editionBonDeTravail)
+            self.signalSuppression.chargerEquipement.connect(self.chargerEquipement)
+            self.signalSuppression.aucunEquipement.connect(self.aucunEquipement)
             # Connexion des differents boutons
             self.boutonFlecheGauche.clicked.connect(self.bonTravailPrecedent)
             self.boutonFlecheDroite.clicked.connect(self.bonTravailSuivant)
             self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
             self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
-            self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
+            self.comboBoxOuvertFerme.currentTextChanged.connect(self.signalSuppression.editionBonTravail.emit)
             self.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravailThread)
 
     def chercherEquipement(self):
@@ -77,11 +82,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         if (any(listeTrouve)):
             # Si on a trouve un equipement correspondant, on affiche les informations correspondantes
             self.equipementDictionnaire = listeTrouve[0]
-            self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
-            self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
-            self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
-            self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
-            self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
+            self.signalSuppression.chargerEquipement.emit()
             # On fait la recheche des bons de travail
             self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
@@ -89,17 +90,27 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         else:
             # Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
-            self.labelEcritureCatEquip.clear()
-            self.labelEcritureCentreService.clear()
-            self.labelEcritureMarque.clear()
-            self.labelEcritureSalle.clear()
-            self.labelEcritureModele.clear()
-            self.labelEcritureBonTravail.clear()
-            self.dateEdit.clear()
-            self.timeEditTempsEstime.clear()
-            self.textEditDescSituation.clear()
-            self.textEditDescIntervention.clear()
+            self.signalSuppression.aucunResultat.emit()
         self.chargement.finChargement.emit()
+
+    def chargerEquipement(self):
+        self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
+        self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
+        self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
+        self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
+        self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
+
+    def aucunEquipement(self):
+        self.labelEcritureCatEquip.clear()
+        self.labelEcritureCentreService.clear()
+        self.labelEcritureMarque.clear()
+        self.labelEcritureSalle.clear()
+        self.labelEcritureModele.clear()
+        self.labelEcritureBonTravail.clear()
+        self.dateEdit.clear()
+        self.timeEditTempsEstime.clear()
+        self.textEditDescSituation.clear()
+        self.textEditDescIntervention.clear()
 
     def supprimerBonDeTravail(self):
         '''

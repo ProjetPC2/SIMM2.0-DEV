@@ -10,11 +10,12 @@ Dans cette exemple vous pourrez voir comment :
 import yaml
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QObject, pyqtSignal
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
+from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.StatistiqueUI import Ui_Statistique
 
 
@@ -70,7 +71,7 @@ class Statistique(Ui_Statistique):
         self.comboBoxCentreService.addItem("")
         self.comboBoxCentreService.addItem("Tous")
         self.comboBoxCentreService.addItems(self.listeCentreService)
-
+        fichierConf.close()
         self.tableResumeInventaire.clear()
         self.tableResumeInventaire.setHorizontalHeaderLabels(["Categorie equipement", "Quantite"])
         self.tableResumeInventaire.setWordWrap(True)
@@ -82,8 +83,13 @@ class Statistique(Ui_Statistique):
         self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
         self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
         print(self.statsCategorie)
-        self.comboBoxProvenance.currentTextChanged.connect(self.affichageProvenance)
-        self.comboBoxCentreService.currentTextChanged.connect(self.affichageCenreService)
+
+        self.signalStatistique = Communicate()
+        self.signalStatistique.affichageProvenance.connect(self.affichageProvenance)
+        self.signalStatistique.affichageCentreService.connect(self.affichageCentreService)
+
+        self.comboBoxProvenance.currentTextChanged.connect(self.signalStatistique.affichageProvenance.emit)
+        self.comboBoxCentreService.currentTextChanged.connect(self.signalStatistique.affichageCentreService.emit)
         self.tableResumeInventaire.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers);
         self.tableResumeInventaire.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
 
@@ -135,7 +141,7 @@ class Statistique(Ui_Statistique):
             self.nombreEquipementProvenance = 0
         self.textBrowserEquipementProvenance.setText(str(self.nombreEquipementProvenance))
 
-    def affichageCenreService(self):
+    def affichageCentreService(self):
         if (self.comboBoxCentreService.currentText() != ""):
             dictionnaireResultat = dict()
             if self.comboBoxCentreService.currentText() == "Tous":
@@ -164,6 +170,7 @@ class Statistique(Ui_Statistique):
         self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
         self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
         self.miseAJourDonnees()
+
 
 if __name__ == "__main__": #Si le fichier est lancé tout seul
 

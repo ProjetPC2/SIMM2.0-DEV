@@ -37,5 +37,9 @@ class Communicate(QObject):
 
     remplirTableau = pyqtSignal()
     nouvelleRecherche = pyqtSignal()
+
+    #Statistique
+    affichageProvenance = pyqtSignal()
+    affichageCentreService = pyqtSignal()
     #Fenetre support
     motDePasseCorrect = pyqtSignal()

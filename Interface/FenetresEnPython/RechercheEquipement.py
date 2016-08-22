@@ -32,6 +32,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
             print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
         self.listeCleDonnees.append("ID")
+
         for element in self._conf['champsAcceptes-Equipement']:
             self.listeCleDonnees.append(element)
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
@@ -71,6 +72,9 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.setRowCount(0)
 
+        self.signalRechercheEquipement = Communicate()
+        self.signalRechercheEquipement.remplirTableau.connect(self.remplirTableau)
+        self.signalRechercheEquipement.nouvelleRecherche.connect(self.nouvelleRecherche)
         self.dictionnaireRecherche = dict()
 
         #Connexion des differents champs de selections
@@ -81,7 +85,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenanceThread)
         self.lineEditNumeroSerie.returnPressed.connect(self.rechercheNumeroSerieThread)
         self.boutonActualiser.clicked.connect(self.rechercheNumeroSerieThread)
-        self.boutonNouvelleRecherche.clicked.connect(self.nouvelleRecherche)
+        self.boutonNouvelleRecherche.clicked.connect(self.signalRechercheEquipement.nouvelleRecherche.emit)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
 
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
@@ -137,7 +141,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
-        self.remplirTableau()
+        self.rechercherEquipement()
         self.chargement.finChargement.emit()
 
 
@@ -149,7 +153,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
         else:
             self.dictionnaireRecherche.pop("EtatService")
-        self.remplirTableau()
+        self.rechercherEquipement()
         self.chargement.finChargement.emit()
 
 
@@ -161,7 +165,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
         else:
             self.dictionnaireRecherche.pop("CentreService")
-        self.remplirTableau()
+        self.rechercherEquipement()
         self.chargement.finChargement.emit()
 
 
@@ -173,7 +177,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
         else:
             self.dictionnaireRecherche.pop("Salle")
-        self.remplirTableau()
+        self.rechercherEquipement()
         self.chargement.finChargement.emit()
 
 
@@ -184,7 +188,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
             self.dictionnaireRecherche["Provenance"] = self.comboBoxProvenance.currentText()
         else:
             self.dictionnaireRecherche.pop("Provenance")
-        self.remplirTableau()
+        self.rechercherEquipement()
         self.chargement.finChargement.emit()
 
 
@@ -198,35 +202,39 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             if "NumeroSerie" in self.dictionnaireRecherche:
                 self.dictionnaireRecherche.pop("NumeroSerie")
-        self.remplirTableau()
+        self.rechercherEquipement()
         self.chargement.finChargement.emit()
 
 
-    def remplirTableau(self):
+    def rechercherEquipement(self):
         """Methode permettant de remplir la table des resultats
         Le remplissage se fait avec le resultat des donnees"""
         if(any(self.dictionnaireRecherche)):
             self.listeResultat = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
-            self.tableResultats.setRowCount(len(self.listeResultat))
-            if(any(self.listeResultat)):
-                for i, dictionnaire in enumerate(self.listeResultat):
-                    # Creation des QTableWidgetItem
-                    colonne = 0
-                    # print(dictionnaire)
-                    # print(self.listeCleDonnees)
-                    for cle in self.listeCleDonnees:
-                        if(cle == "ID"):
-                            item = QTableWidgetItem()
-                            item.setData(Qt.EditRole, int(dictionnaire[cle]))
-                            self.tableResultats.setItem(i, colonne, item)
-                        else:
-                            self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
-                        colonne += 1
-                    self.tableResultats.resizeColumnsToContents()
-            else:
-                self.chargement.aucunResultat.emit()
+            self.signalRechercheEquipement.remplirTableau.emit()
         else:
             print("dictionnaire de recherche vide")
+
+
+    def remplirTableau(self):
+        self.tableResultats.setRowCount(len(self.listeResultat))
+        if(any(self.listeResultat)):
+            for i, dictionnaire in enumerate(self.listeResultat):
+                # Creation des QTableWidgetItem
+                colonne = 0
+                # print(dictionnaire)
+                # print(self.listeCleDonnees)
+                for cle in self.listeCleDonnees:
+                    if(cle == "ID"):
+                        item = QTableWidgetItem()
+                        item.setData(Qt.EditRole, int(dictionnaire[cle]))
+                        self.tableResultats.setItem(i, colonne, item)
+                    else:
+                        self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
+                    colonne += 1
+                self.tableResultats.resizeColumnsToContents()
+        else:
+            self.chargement.aucunResultat.emit()
 
     def nouvelleRecherche(self):
         self.comboBoxProvenance.setCurrentText("")

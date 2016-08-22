@@ -53,6 +53,12 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
 
         self.listeEdit = list()
         self.equipement = None
+
+        self.signalSuppresion = Communicate()
+        self.signalSuppresion.chargerEquipement.connect(self.chargerEquipement)
+        self.signalSuppresion.nouvelleRecherche.connect(self.nouvelleRecherche)
+        self.signalSuppresion.chargerBonTravail.connect(self.chargerBonTravail)
+
         self.boutonAfficherEquipement.clicked.connect(self.rechercherEquipementThread)
         self.lineEditId.returnPressed.connect(self.rechercherEquipementThread)
         self.boutonConsulterBon.setEnabled(False)
@@ -69,22 +75,17 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
             :return:
         '''
         # Recuperation du dictionnaire de resultat
+        self.signalSuppresion.nouvelleRecherche.emit()
         if (self.lineEditId.text() != ""):
-            self.nouvelleRecherche()
             equipementRecherche = dict()
             equipementRecherche["ID"] = self.lineEditId.text()
             listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
 
             if (any(listeEquipement)):
                 # Cas ou l'equipement existe
-                self.boutonSupprimerEquipement.setEnabled(True)
-                self.boutonConsulterBon.setEnabled(False)
+
                 self.equipement = listeEquipement[0]
-                i = 0
-                for cle in self.listeCleDonnees:
-                    # Recuperation des donnees sous forme de string
-                    self.listeLabel[i].setText(str(self.equipement[cle]))
-                    i += 1
+                self.signalSuppresion.chargerEquipement.emit()
                 self.rechercherBonDeTravailAssocie()
                 self.suppression.finChargement.emit()
             else:
@@ -95,6 +96,15 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         else:
             print("Champ ID null")
             self.suppression.finChargement.emit()
+
+    def chargerEquipement(self):
+        self.boutonSupprimerEquipement.setEnabled(True)
+        self.boutonConsulterBon.setEnabled(False)
+        i = 0
+        for cle in self.listeCleDonnees:
+            # Recuperation des donnees sous forme de string
+            self.listeLabel[i].setText(str(self.equipement[cle]))
+            i += 1
 
     def nouvelleRecherche(self):
         for label in self.listeLabel:
@@ -113,18 +123,20 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         # Recuperation des bons associees a l'equipement
         dictionnaireBDTRecherche = dict()
         dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
-        listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
-        self.comboBoxBons.clear()
-        if (any(listeBonDeTravail)):
-            # Dans le cas ou on a trouve des bons de travail, on les affiche
-            self.boutonConsulterBon.setEnabled(True)
-            icon2 = QtGui.QIcon()
-            icon2.addPixmap(
-                QtGui.QPixmap("Images/view-icon.png"),
-                QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            for bdt in listeBonDeTravail:
-                affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
-                self.comboBoxBons.addItem(icon2, affichage)
+        self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
+        if (any(self.listeBonDeTravail)):
+            self.signalSuppresion.chargerBonTravail.emit()
+
+    def chargerBonTravail(self):
+        # Dans le cas ou on a trouve des bons de travail, on les affiche
+        self.boutonConsulterBon.setEnabled(True)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(
+            QtGui.QPixmap("Images/view-icon.png"),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        for bdt in self.listeBonDeTravail:
+            affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
+            self.comboBoxBons.addItem(icon2, affichage)
 
     def supprimerEquipement(self):
         self.equipementManager.SupprimerEquipement(self.equipement["ID"])
