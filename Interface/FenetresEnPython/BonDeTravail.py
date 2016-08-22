@@ -54,9 +54,6 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def ajoutBonDeTravail(self):
 
-        #Connexion de l'appuie de la touche entree
-        self.lineEditID.returnPressed.connect(self.chercherEquipementThread)
-
         #Creation des differents elements utiles pour la sauvegarde
         self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
@@ -99,6 +96,9 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
 
         self.boutonConsultation.clicked.connect(self.consulterBonDeTravail)
+        #Connexion de l'appuie de la touche entree
+        self.lineEditID.returnPressed.connect(self.chercherEquipementThread)
+
         self.listeCategoriePiece = None
 
         # self.listePieceReparation = list()

@@ -20,9 +20,12 @@ class AjoutEquipement(Ui_AjoutEquipement):
     # On masque les autres elements
     def __init__(self, AjoutEquipement):
         self.setupUi(AjoutEquipement)
-        self.ajout()
         self.sauvegarde = Communicate()
-
+        self.signalFenetre = Communicate()
+        self.ajout()
+        self.signalFenetre.signalNouvelEquipement.connect(self.nouvelEquipement)
+        self.signalFenetre.signalVerificationEquipement.connect(self.verificationEquipement)
+        self.signalFenetre.signalModifierEquipement.connect(self.modifierEquipement)
     def ajout(self):
 
         # Creation du groupe contenant le choix pour l'etat de service
@@ -145,10 +148,10 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonEnregistrer.hide()
         self.BoutonModifier.hide()
         # Connexion des boutons
-        self.BoutonValider.clicked.connect(self.verificationEquipement)
-        self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
+        self.BoutonValider.clicked.connect(self.signalFenetre.signalVerificationEquipement.emit)
+        self.BoutonEnregistrer.clicked.connect(self.signalFenetre.signalNouvelEquipement.emit)
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
-        self.BoutonModifier.clicked.connect(self.modifierEquipement)
+        self.BoutonModifier.clicked.connect(self.signalFenetre.signalModifierEquipement.emit)
 
         # Selection des choix par defaut pour les radio boutons
         self.radioButtonEnService.setChecked(True)
@@ -300,6 +303,7 @@ class SauvergarderEquipement (Thread):
 
     def run(self):
         self.fonction()
+
 
 if __name__ == "__main__":
     import sys

@@ -142,7 +142,7 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonAjouterEquipement)
         if self.ajoutEquipement is None:
             # Creation du widget s'il n'existe pas deja
-            self.ajoutEquipement = QtWidgets.QWidget()
+            self.ajoutEquipement = QtWidgets.QWidget(self.Accueil)
             self.ajoutEquipementUI = AjoutEquipement(self.ajoutEquipement)
             self.ajoutEquipementUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
             self.listeElementParDefaut.append(self.ajoutEquipement)
@@ -167,7 +167,7 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonModifierConsulterEquipement)
         if self.consultationEquipement is None:
             # Creation du widget s'il n'existe pas encore
-            self.consultationEquipement = QtWidgets.QWidget()
+            self.consultationEquipement = QtWidgets.QWidget(self.Accueil)
             self.consultationEquipementUI = ConsultationEquipement(self.consultationEquipement)
             # connexion des differents elements de chargement
             self.consultationEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
@@ -200,7 +200,7 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonRechercherEquipement)
         if self.rechercheEquipement is None:
             # Creation du widget s'il n'existe pas
-            self.rechercheEquipement = QtWidgets.QWidget()
+            self.rechercheEquipement = QtWidgets.QWidget(self.Accueil)
             self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement)
             self.rechercheEquipementUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
             self.rechercheEquipementUI.comboBoxProvenance.currentTextChanged.connect(self.afficherChargement)
@@ -236,7 +236,7 @@ class Accueil(Ui_Accueil):
         equipement = self.consultationEquipementUI.equipement
         if self.modificationEquipement is None:
             # Creation du widget s'il n'existe pas
-            self.modificationEquipement = QtWidgets.QWidget()
+            self.modificationEquipement = QtWidgets.QWidget(self.Accueil)
             #Connexion des differents elemnts pour l'affichage
             self.modificationEquipementUI = ModificationEquipement(self.modificationEquipement, equipement)
             self.modificationEquipementUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
@@ -259,7 +259,7 @@ class Accueil(Ui_Accueil):
         equipement = self.rechercheEquipementUI.equipementSelectionne
         if self.modificationEquipementRecherche is None:
             # Creation du widget s'il n'existe pas
-            self.modificationEquipementRecherche = QtWidgets.QWidget()
+            self.modificationEquipementRecherche = QtWidgets.QWidget(self.Accueil)
             self.modificationEquipementRechercheUI = ModificationEquipement(self.modificationEquipementRecherche, equipement)
             self.modificationEquipementRechercheUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
             self.modificationEquipementRechercheUI.sauvegarde.sauvegardeTermine.connect(self.sauvegardeTermine)
@@ -284,7 +284,7 @@ class Accueil(Ui_Accueil):
         self.masquerElementGraphique()
         self.selectionnerBouton(self.BoutonAjouterPiece)
         if self.ajoutPiece is None:
-            self.ajoutPiece = QtWidgets.QWidget()
+            self.ajoutPiece = QtWidgets.QWidget(self.Accueil)
             self.pieceUI = Piece(self.ajoutPiece)
             self.pieceUI.BoutonEnregistrerPiece.clicked.connect(self.enregistrer)
             self.pieceUI.enregistrement.enregistrementTermine.connect(self.enregistrementTermine)
@@ -309,7 +309,7 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonAjouterBonTravail)
         if self.ajoutBonDeTravail is None:
             # Creation du widget s'il n'existe pas
-            self.ajoutBonDeTravail = QtWidgets.QWidget()
+            self.ajoutBonDeTravail = QtWidgets.QWidget(self.Accueil)
             self.bonDeTravailUI = BonDeTravail(self.ajoutBonDeTravail)
             self.bonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.bonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
@@ -338,7 +338,7 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonRechercherBonTravail)
         if self.rechercheBonDeTravail is None:
             # Creation du widget s'il n'existe pas
-            self.rechercheBonDeTravail = QtWidgets.QWidget()
+            self.rechercheBonDeTravail = QtWidgets.QWidget(self.Accueil)
             self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail)
             self.rechercheBonDeTravailUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.comboBoxCentreService.currentTextChanged.connect(self.afficherChargement)
@@ -371,7 +371,7 @@ class Accueil(Ui_Accueil):
         self.masquerElementGraphique()
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
-            self.modificationBonDeTravailRecherche = QtWidgets.QWidget()
+            self.modificationBonDeTravailRecherche = QtWidgets.QWidget(self.Accueil)
             self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
             self.modificationBonDeTravailRechercheUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.modificationBonDeTravailRechercheUI.lineEditID.returnPressed.connect(self.afficherChargement)
@@ -398,7 +398,7 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonStatistiques)
         if self.statistique is None:
             # Creation du widget Statistique s'il n'existe pas
-            self.statistique = QtWidgets.QWidget()
+            self.statistique = QtWidgets.QWidget(self.Accueil)
             self.statistiqueUI = Statistique(self.statistique)
             self.listeElementParDefaut.append(self.statistique)
             self.layoutAffichagePrincipal.addWidget(self.statistique)
@@ -459,7 +459,7 @@ class Accueil(Ui_Accueil):
         equipement = self.consultationEquipementUI.equipement
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
-            self.ajoutBonDeTravailEquipement = QtWidgets.QWidget()
+            self.ajoutBonDeTravailEquipement = QtWidgets.QWidget(self.Accueil)
             self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
             self.ajoutBonDeTravailEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.lineEditID.returnPressed.connect(self.afficherChargement)
@@ -490,7 +490,7 @@ class Accueil(Ui_Accueil):
         equipement = self.consultationEquipementUI.equipement
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
-            self.consultationBonDeTravail = QtWidgets.QWidget()
+            self.consultationBonDeTravail = QtWidgets.QWidget(self.Accueil)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
             self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
             self.consultationBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
@@ -523,7 +523,7 @@ class Accueil(Ui_Accueil):
         self.selectionnerBouton(self.BoutonSupportTecnique)
         if self.support is None:
             # Creation du widget support s'il n'existe pas
-            self.support = QtWidgets.QWidget()
+            self.support = QtWidgets.QWidget(self.Accueil)
             self.supportPC2UI = SupportPC2(self.support)
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
@@ -551,7 +551,7 @@ class Accueil(Ui_Accueil):
         self.BoutonFlecheNavigation.show()
         if self.supprimeEquipement is None:
             # Creation du widget s'il n'existe pas
-            self.supprimeEquipement = QtWidgets.QWidget()
+            self.supprimeEquipement = QtWidgets.QWidget(self.Accueil)
             self.supprimeEquipementUI = SuppressionEquipement(self.supprimeEquipement)
             self.supprimeEquipementUI.boutonAfficherEquipement.clicked.connect(self.afficherChargement)
             self.supprimeEquipementUI.lineEditId.returnPressed.connect(self.afficherChargement)
@@ -579,7 +579,7 @@ class Accueil(Ui_Accueil):
         self.BoutonFlecheNavigation.show()
         if self.supprimeBonDeTravail is None:
             # Creation du widget s'il n'existe pas
-            self.supprimeBonDeTravail = QtWidgets.QWidget()
+            self.supprimeBonDeTravail = QtWidgets.QWidget(self.Accueil)
             self.supprimeBonDeTravailUI = SuppressionBonDeTravail(self.supprimeBonDeTravail)
             self.supprimeBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.supprimeBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
