@@ -14,6 +14,7 @@ from PyQt5.QtCore import Qt, QObject, pyqtSignal
 from PyQt5.QtWidgets import *
 
 from BDD.EquipementManager import EquipementManager
+from BackUp import backUp
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.StatistiqueUI import Ui_Statistique
@@ -92,6 +93,7 @@ class Statistique(Ui_Statistique):
         self.comboBoxCentreService.currentTextChanged.connect(self.signalStatistique.affichageCentreService.emit)
         self.tableResumeInventaire.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers);
         self.tableResumeInventaire.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.pushButton.clicked.connect(backUp)
 
         self.colonneClique = None
         self.nombreClique = 0
