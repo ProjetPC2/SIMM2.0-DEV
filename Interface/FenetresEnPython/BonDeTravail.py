@@ -62,6 +62,13 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeBonDeTravail = list()
         self.indiceBonDeTravail = 0
 
+        self.signalFenetreBonTravail = Communicate()
+        self.signalFenetreBonTravail.chargerEquipement.connect(self.chargerEquipement)
+        self.signalFenetreBonTravail.aucunEquipement.connect(self.aucunEquipementTrouve)
+        self.signalFenetreBonTravail.confirmation.connect(self.confirmation)
+        self.signalFenetreBonTravail.consultationBonTravail.connect(self.consulterBonDeTravail)
+        self.signalFenetreBonTravail.editionBonTravail.connect(self.editionBonDeTravail)
+        self.signalFenetreBonTravail.validerChoixPiece.connect(self.validerChoixPiece)
         self.listeLabelCache = list()
         self.listeLabelCache.append(self.labelCacheNomTech)
         self.listeLabelCache.append(self.labelCacheDate)
@@ -90,19 +97,19 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDroite.clicked.connect(self.bonTravailSuivant)
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
         self.boutonFlecheDoubleGauche.clicked.connect(self.bonTravailPremier)
-        self.comboBoxOuvertFerme.currentTextChanged.connect(self.editionBonDeTravail)
+        self.comboBoxOuvertFerme.currentTextChanged.connect(self.signalFenetreBonTravail.editionBonTravail.emit)
 
         self.boutonActualiser.clicked.connect(self.chercherEquipementThread)
         self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
 
-        self.boutonConsultation.clicked.connect(self.consulterBonDeTravail)
+        self.boutonConsultation.clicked.connect(self.signalFenetreBonTravail.consultationBonTravail.emit)
         #Connexion de l'appuie de la touche entree
         self.lineEditID.returnPressed.connect(self.chercherEquipementThread)
 
         self.listeCategoriePiece = None
 
         # self.listePieceReparation = list()
-        self.pushButtonValider.clicked.connect(self.validerChoixPiece)
+        self.pushButtonValider.clicked.connect(self.signalFenetreBonTravail.validerChoixPiece.emit)
         #modification calendrierBDT
         calendrierBDT = QCalendarWidget()
         calendrierBDT.setStyleSheet("background :#F5F5F5;\n color: black;")
@@ -127,58 +134,64 @@ class BonDeTravail(Ui_BonDeTravail):
             :return:
         '''
         #On fait la requete a la BDD
+        self.dic_request['ID'] = self.lineEditID.text()
+        listeTrouve = self.equipementManager.RechercherEquipement(self.dic_request)
         self.boutonConsultation.hide()
         self.boutonSauvegarde.hide()
         self.boutonAjoutBDT.show()
         self.boutonAjoutBDT.setDisabled(True)
         self.comboBoxOuvertFerme.setDisabled(False)
-        self.dic_request['ID'] = self.lineEditID.text()
-        listeTrouve = self.equipementManager.RechercherEquipement(self.dic_request)
         self.nombreBonAjoute = 0
         #On efface les bons de travail deja affiche
         self.listeBonDeTravail.clear()
         if(any(listeTrouve)):
             #Si on a trouve un equipement correspondant, on affiche les informations correspondantes
             self.equipementDictionnaire = listeTrouve[0]
-            self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
-            self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
-            self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
-            self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
-            self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
             #On fait la recheche des bons de travail
             self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
-            self.boutonAjoutBDT.setDisabled(False)
-            self.boutonFlecheDoubleDroite.show()
-            self.boutonFlecheDroite.show()
-            self.boutonFlecheGauche.show()
-            self.boutonFlecheDoubleGauche.show()
-            self.pushButtonValider.setDisabled(False)
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
-            self.listeCategoriePiece.sort()
-            self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
+
+            self.signalFenetreBonTravail.chargerEquipement.emit()
+            #self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
+            #self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
+            #self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
+            #self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
+            #self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
+
+            # self.boutonAjoutBDT.setDisabled(False)
+            # self.boutonFlecheDoubleDroite.show()
+            # self.boutonFlecheDroite.show()
+            # self.boutonFlecheGauche.show()
+            # self.boutonFlecheDoubleGauche.show()
+            # self.pushButtonValider.setDisabled(False)
+            # self.listeCategoriePiece.sort()
+            # self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             self.rechercherBonTravail()
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
-            self.labelEcritureCatEquip.clear()
-            self.labelEcritureCentreService.clear()
-            self.labelEcritureMarque.clear()
-            self.labelEcritureSalle.clear()
-            self.labelEcritureModele.clear()
-            self.labelEcritureBonTravail.clear()
-            self.dateEdit.clear()
-            self.timeEditTempsEstime.clear()
-            self.textEditDescSituation.clear()
-            self.textEditDescIntervention.clear()
-            self.boutonAjoutBDT.setDisabled(True)
-            self.comboBoxOuvertFerme.setDisabled(True)
-            self.boutonFlecheDoubleDroite.hide()
-            self.boutonFlecheDroite.hide()
-            self.boutonFlecheGauche.hide()
-            self.boutonFlecheDoubleGauche.hide()
-            self.pushButtonValider.setDisabled(True)
+            self.signalFenetreBonTravail.aucunEquipement.emit()
         self.chargement.finChargement.emit()
+
+    def aucunEquipementTrouve(self):
+         self.labelEcritureCatEquip.clear()
+         self.labelEcritureCentreService.clear()
+         self.labelEcritureMarque.clear()
+         self.labelEcritureSalle.clear()
+         self.labelEcritureModele.clear()
+         self.labelEcritureBonTravail.clear()
+         self.dateEdit.clear()
+         self.timeEditTempsEstime.clear()
+         self.textEditDescSituation.clear()
+         self.textEditDescIntervention.clear()
+         self.boutonAjoutBDT.setDisabled(True)
+         self.comboBoxOuvertFerme.setDisabled(True)
+         self.boutonFlecheDoubleDroite.hide()
+         self.boutonFlecheDroite.hide()
+         self.boutonFlecheGauche.hide()
+         self.boutonFlecheDoubleGauche.hide()
+         self.pushButtonValider.setDisabled(True)
 
     def sauvegarderBonDeTravail(self):
         '''
@@ -213,7 +226,7 @@ class BonDeTravail(Ui_BonDeTravail):
                     print("bon de travail d'id :", idBDT)
                     dictionnaireDonnees["ID-BDT"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
-            self.confirmation()
+            self.signalFenetreBonTravail.confirmation.emit()
             self.chargement.sauvegardeTermine.emit()
             self.nombreBonAjoute += 1
 
@@ -247,6 +260,13 @@ class BonDeTravail(Ui_BonDeTravail):
         self.textEditDescIntervention.wordWrapMode()
         self.boutonSauvegarde.setVisible(True)
         #Remplir le temps estime
+        self.boutonFlecheDoubleDroite.show()
+        self.boutonFlecheDroite.show()
+        self.boutonFlecheGauche.show()
+        self.boutonFlecheDoubleGauche.show()
+        self.pushButtonValider.setDisabled(False)
+        self.listeCategoriePiece.sort()
+        self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
 
         if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
             self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
@@ -396,8 +416,10 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
         self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
         self.lineEditID.setText(self.equipementDictionnaire["ID"])
-        self.rechercherBonTravail()
-        self.nouveauBondeTravail()
+        self.boutonAjoutBDT.setDisabled(False)
+        #A modifier
+        # self.rechercherBonTravail()
+        # self.nouveauBondeTravail()
 
     def consulterBonTravailSpecifique(self, dict):
         #Methode permettant le chargement d'un bon de travail precis
@@ -405,7 +427,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.chercherEquipement()
         self.indiceBonDeTravail = dict["ID-BDT"] - 1
         self.rechercherBonTravail()
-        self.consulterBonDeTravail()
+        self.signalFenetreBonTravail.consultationBonTravail.emit()
 
     def chercherEquipementThread(self):
         thread = BonDeTravailThread(self.chercherEquipement)

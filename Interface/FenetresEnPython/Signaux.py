@@ -22,8 +22,12 @@ class Communicate(QObject):
     chargerBonTravail = pyqtSignal()
     choisirCategoriePiecce = pyqtSignal()
     editionBonTravail = pyqtSignal()
-    chercherEquipement = pyqtSignal()
+    chargerEquipement = pyqtSignal()
     nouveauBonTravail = pyqtSignal()
     consultationBonTravail = pyqtSignal()
+    validerChoixPiece = pyqtSignal()
+    aucunEquipement = pyqtSignal()
+    confirmation = pyqtSignal()
+    trier = pyqtSignal()
     #Fenetre support
     motDePasseCorrect = pyqtSignal()
