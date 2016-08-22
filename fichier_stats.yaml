@@ -1,4 +1,4 @@
-nbEquipement: 1133
+nbEquipement: 1146
 nbEquipementCentreService:
   Archives:
     Ordinateur: 3
@@ -138,7 +138,8 @@ nbEquipementCentreService:
     "Civi\xE8re de transport": 1
     "Incubateur n\xE9onatal": 4
     Lampe d'examen: 6
-    Lit: 21
+    Lit: 22
+    "Lit p\xE9diatrique": 15
     Moniteur PNI: 1
     Moniteur physiologique: 1
     "N\xE9gatoscope (moniteur de radiographie)": 1
@@ -149,7 +150,7 @@ nbEquipementCentreService:
     "Support \xE0 solut\xE9s": 10
     Table d'examen: 9
     Table d'instruments: 3
-    Table de chevet: 14
+    Table de chevet: 24
     "Table de soins n\xE9onataux": 14
     "Tensiom\xE8tre": 1
     Toise: 2
@@ -195,11 +196,11 @@ nbEquipementEtatConservation:
   Desuet: 4
   "D\xE9suet": 13
   En fin de vie: 47
-  Quasi neuf: 620
+  Quasi neuf: 633
 nbEquipementEtatService:
   Au rebus: 18
   En maintenance: 57
-  En service: 1058
+  En service: 1071
 nbEquipementProvenance:
   ? ''
   : 396
