@@ -779,6 +779,9 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.supportPC2UI.boutonSupprimerBon.setEnabled(True)
         self.ui.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(True)
 
+    def activeImpression(self):
+        self.ui.BoutonImprimerInventaire.setDisabled(False)
+
 def impressionPDF(bouton):
     print("impression en cours")
     filter = "PDF (*.pdf)"
@@ -795,6 +798,8 @@ def imprimer(path, bouton):
 
     print("Impression en cours de chez cours")
     pdf = PDF(path, bouton)
+    print("finImpression imprimer")
+    pdf.finImpression.finImpression.connect(MainWindow.activeImpression)
 
 if __name__ == "__main__":
     SIMM()

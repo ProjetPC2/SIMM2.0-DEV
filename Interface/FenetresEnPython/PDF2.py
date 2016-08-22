@@ -4,6 +4,7 @@ import time
 from multiprocessing.pool import Pool
 
 import yaml
+from PyQt5.QtCore import QObject, pyqtSignal
 from PyQt5.QtWidgets import QFileDialog, QApplication, QPushButton
 from multiprocessing import Process
 from reportlab.lib import colors
@@ -35,7 +36,8 @@ class PDF():
         #On ouvre une fenetre de dialogue pour demander ou placer le fichier
         #On place le fichier par defaut dans le bureau avec le nom SIMM2.0.pdf
         # self.fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"), self.filter)
-        print("bouton", bouton.text())
+        # print("bouton", bouton.text())
+        self.finImpression = Signal()
         self.creationPDF(path, bouton)
 
     def myFirstPage(self, canvas, doc):
@@ -125,6 +127,7 @@ class PDF():
                 # Cas ou l'equipement existe
                 for i, dictionnaire in enumerate(listeEquipement):
                     # Recuperation des donnees sous forme de string
+                    print(dictionnaire)
                     listTemp = list()
                     # for element in dictionnaire.values():
                     #     listTemp.append(element)
@@ -132,6 +135,7 @@ class PDF():
                     listTemp.append(Paragraph(dictionnaire["CategorieEquipement"],styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["Marque"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["Modele"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["CentreService"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["EtatService"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["Provenance"], styleSheet['Normal']))
 
@@ -164,8 +168,9 @@ class PDF():
         # Ecriture du document pdf
         doc.build(elements, onFirstPage=self.myFirstPage, onLaterPages= self.myLaterPages)
         print("termine")
-        if(bouton is not None):
-            bouton.setDisabled(False)
+        self.finImpression.finImpression.emit()
+        # if(bouton is not None):
+        #     bouton.setDisabled(False)
 
 
     def get_image(self, path, width=1*cm):
@@ -185,6 +190,8 @@ class PDF():
         else:
             print("Sauvegarde annule")
 
+class Signal(QObject):
+    finImpression = pyqtSignal()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
