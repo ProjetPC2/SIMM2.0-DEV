@@ -17,6 +17,9 @@ class Communicate(QObject):
     signalNouvelEquipement = pyqtSignal()
     signalModifierEquipement = pyqtSignal()
 
+    #Fenetre Consultation Equipement
+    afficherBonDeTravailAssocie = pyqtSignal()
+
 
     #Fenetre Bon de travail
     chargerBonTravail = pyqtSignal()
@@ -29,5 +32,10 @@ class Communicate(QObject):
     aucunEquipement = pyqtSignal()
     confirmation = pyqtSignal()
     trier = pyqtSignal()
+
+    #Fenetre Recherche Bon De Travail
+
+    remplirTableau = pyqtSignal()
+    nouvelleRecherche = pyqtSignal()
     #Fenetre support
     motDePasseCorrect = pyqtSignal()

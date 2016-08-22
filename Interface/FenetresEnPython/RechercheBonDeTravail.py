@@ -53,6 +53,10 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
         fichierConf.close()
 
+        self.signalRechercheBon = Communicate()
+        self.signalRechercheBon.aucunResultat.connect(self.aucunResultat)
+        self.signalRechercheBon.remplirTableau.connect(self.remplirTableau)
+        self.signalRechercheBon.nouvelleRecherche.connect(self.nouvelleRecherche)
         #modification calendrier
         calendrierApres = QCalendarWidget()
         calendrierApres.setStyleSheet("background :#F5F5F5;\n color: black;")
@@ -67,6 +71,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
         #Creation des differents colonnes pour le tableau de resultat
         self.listeCleDonnees = list(["ID-EQ", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
+        self.listeDonnees = list()
 
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
@@ -82,7 +87,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.calendrierAvant.dateChanged.connect(self.rechercheDateAvantThread)
         self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituationThread)
         self.calendrierApres.dateChanged.connect(self.rechercheDateApresThread)
-        self.boutonNouvelleRecherche.clicked.connect(self.nouvelleRecherche)
+        self.boutonNouvelleRecherche.clicked.connect(self.signalRechercheBon.nouvelleRecherche.emit)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
         self.colonneClique = None
         self.nombreClique = 0
@@ -140,7 +145,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             self.dictionnaireRecherche["CategorieEquipement"] = recherche
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
-        self.remplirTableau()
+        self.rechercherBonTravail()
         self.chargement.finChargement.emit()
 
 
@@ -152,7 +157,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             :return:
         '''
         self.dictionnaireRecherche["AvantLe"] = self.calendrierAvant.date().toPyDate()
-        self.remplirTableau()
+        self.rechercherBonTravail()
         self.chargement.finChargement.emit()
 
 
@@ -163,7 +168,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             :return:
         '''
         self.dictionnaireRecherche["ApresLe"] = self.calendrierApres.date().toPyDate()
-        self.remplirTableau()
+        self.rechercherBonTravail()
         self.chargement.finChargement.emit()
 
 
@@ -175,7 +180,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         if (self.lineEditDescriptionSituation.text() != ""):
             self.dictionnaireRecherche["DescriptionSituation"] = self.lineEditDescriptionSituation.text()
-        self.remplirTableau()
+        self.rechercherBonTravail()
         self.chargement.finChargement.emit()
 
 
@@ -191,7 +196,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
         else:
             self.dictionnaireRecherche.pop("EtatService")
-        self.remplirTableau()
+        self.rechercherBonTravail()
         self.chargement.finChargement.emit()
 
 
@@ -206,11 +211,11 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
         else:
             self.dictionnaireRecherche.pop("CentreService")
-        self.remplirTableau()
+        self.rechercherBonTravail()
         self.chargement.finChargement.emit()
 
 
-    def remplirTableau(self):
+    def rechercherBonTravail(self):
             '''
                 Remplissage du tableau de resultat avec les eventuels bons de travail trouves
                 :param: None
@@ -221,19 +226,11 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                 print("Affichage dictionnaire de recherche :", self.dictionnaireRecherche)
                 liste = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRecherche)
                 print(liste)
-                listeDonnees = list()
-                dictionnaireEquipementAssocie = dict()
+                self.listeDonnees.clear()
                 indice = 0
                 if(len(liste) > 0):
                     for bdt in liste :
                             print(bdt["ID-EQ"])
-                            # if bdt["ID-EQ"] in dictionnaireEquipementAssocie:
-                            #     equipement = dictionnaireEquipementAssocie["ID-EQ"]
-                            # else:
-                                # equipement = self.equipementManager.RechercherEquipement({"ID": bdt["ID-EQ"]})[0]
-                                # dictionnaireEquipementAssocie["ID-EQ"] = equipement
-                            # print(equipement)
-                            # print(bdt)
                             dictDonnees = dict()
                             dictDonnees["ID-EQ"] = bdt["ID-EQ"]
                             dictDonnees["CategorieEquipement"] = bdt["CategorieEquipement"]
@@ -243,32 +240,36 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                             dictDonnees["Date"] = bdt["Date"]
                             dictDonnees["ID-BDT"] = bdt["ID-BDT"]
                             dictDonnees["DescriptionSituation"] = bdt["DescriptionSituation"]
-                            listeDonnees.append(dictDonnees)
-                    self.tableResultats.setRowCount(len(listeDonnees))
-                    for i, dictionnaire in enumerate(listeDonnees):
-                        # Creation des QTableWidgetItem
-                        colonne = 0
-                        for cle in self.listeCleDonnees:
-                            if(isinstance(dictionnaire[cle], datetime.date)):
-                                self.tableResultats.setItem(i, colonne, QTableWidgetItem((str(dictionnaire[cle]))))
-                            elif (cle == "ID-EQ" or cle == "ID-BDT"):
-                                item = QTableWidgetItem()
-                                item.setData(Qt.EditRole, int(dictionnaire[cle]))
-                                self.tableResultats.setItem(i, colonne, item)
-                            else:
-                                self.tableResultats.setItem(i, colonne, QTableWidgetItem((dictionnaire[cle])))
-                            colonne += 1
-                        self.tableResultats.resizeColumnsToContents()
-
+                            self.listeDonnees.append(dictDonnees)
+                    self.signalRechercheBon.remplirTableau.emit()
                 else:
                     print("Aucun resultat")
-                    self.tableResultats.clearContents()
-                    self.tableResultats.setRowCount(0)
+                    self.signalRechercheBon.aucunResultat.emit()
                     self.chargement.aucunResultat.emit()
             else:
                 print("dictionnaire de recherche vide")
-                self.tableResultats.clearContents()
-                self.tableResultats.setRowCount(0)
+                self.signalRechercheBon.aucunResultat.emit()
+
+    def remplirTableau(self):
+        self.tableResultats.setRowCount(len(self.listeDonnees))
+        for i, dictionnaire in enumerate(self.listeDonnees):
+            # Creation des QTableWidgetItem
+            colonne = 0
+            for cle in self.listeCleDonnees:
+                if(isinstance(dictionnaire[cle], datetime.date)):
+                    self.tableResultats.setItem(i, colonne, QTableWidgetItem((str(dictionnaire[cle]))))
+                elif (cle == "ID-EQ" or cle == "ID-BDT"):
+                    item = QTableWidgetItem()
+                    item.setData(Qt.EditRole, int(dictionnaire[cle]))
+                    self.tableResultats.setItem(i, colonne, item)
+                else:
+                    self.tableResultats.setItem(i, colonne, QTableWidgetItem((dictionnaire[cle])))
+                colonne += 1
+            self.tableResultats.resizeColumnsToContents()
+
+    def aucunResultat(self):
+        self.tableResultats.clearContents()
+        self.tableResultats.setRowCount(0)
 
 
     def nouvelleRecherche(self):

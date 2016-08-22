@@ -53,6 +53,8 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
         fichierConf.close()
 
+        self.signalFenetreConsultation = Communicate()
+        self.signalFenetreConsultation.afficherBonDeTravailAssocie.connect(self.rechercherBonDeTravailAssocie)
 
         self.listeEdit = list()
         self.equipement = None
@@ -79,25 +81,29 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
 
             if(any(listeEquipement)):
                 #Cas ou l'equipement existe
-                self.boutonModifierEquipement.setEnabled(True)
-                self.boutonAjouterUnBon.setEnabled(True)
-                self.boutonConsulterBon.setEnabled(False)
                 self.equipement = listeEquipement[0]
                 i = 0
                 for cle in self.listeCleDonnees:
                     #Recuperation des donnees sous forme de string
                     self.listeLabel[i].setText(str(self.equipement[cle]))
                     i += 1
-                self.rechercherBonDeTravailAssocie()
-                self.chargement.finChargement.emit()
+                self.boutonModifierEquipement.setEnabled(True)
+                self.boutonAjouterUnBon.setEnabled(True)
+                self.boutonConsulterBon.setEnabled(False)
+                dictionnaireBDTRecherche = dict()
+                dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
+                self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
+
+                self.signalFenetreConsultation.afficherBonDeTravailAssocie.emit()
+                # self.chargement.finChargement.emit()
             else:
                 #Cas ou l'equipement n'existe pas
                 self.boutonModifierEquipement.setEnabled(False)
-                self.chargement.finChargement.emit()
+                # self.chargement.finChargement.emit()
                 self.chargement.aucunResultat.emit()
         else:
             print("Champ ID null")
-            self.chargement.finChargement.emit()
+        self.chargement.finChargement.emit()
 
     def nouvelleRecherche(self):
         for label in self.listeLabel:
@@ -114,9 +120,6 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
             :return:
         '''
         #Recuperation des bons associees a l'equipement
-        dictionnaireBDTRecherche = dict()
-        dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
-        self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
         self.comboBoxBons.clear()
         if(any(self.listeBonDeTravail)):
             #Dans le cas ou on a trouve des bons de travail, on les affiche

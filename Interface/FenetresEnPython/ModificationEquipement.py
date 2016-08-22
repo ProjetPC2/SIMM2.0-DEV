@@ -22,6 +22,11 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.BoutonEnregistrer.hide()
         self.BoutonModifier.hide()
         self.sauvegarde = Communicate()
+        self.signalFenetre = Communicate()
+        self.signalFenetre.signalNouvelEquipement.connect(self.nouvelEquipement)
+        self.signalFenetre.signalVerificationEquipement.connect(self.verificationEquipement)
+        self.signalFenetre.signalModifierEquipement.connect(self.modifierEquipement)
+
 
     def ajout(self):
 
@@ -141,9 +146,9 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.dateEditDateDuDernierEntretien.setMinimumWidth(200)
 
          # Connexion du bouton valider
-        self.BoutonValider.clicked.connect(self.verificationEquipement)
+        self.BoutonValider.clicked.connect(self.signalFenetre.signalVerificationEquipement.emit)
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
-        self.BoutonModifier.clicked.connect(self.modifierEquipement)
+        self.BoutonModifier.clicked.connect(self.signalFenetre.signalModifierEquipement.emit)
         # self.BoutonEnregistrer.clicked.connect(self.nouvelEquipement)
 
         # Selection des choix par defaut pour les radio boutons

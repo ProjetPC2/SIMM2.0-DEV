@@ -460,6 +460,7 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget(self.Accueil)
+            # self.afficherChargement()
             self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
             self.ajoutBonDeTravailEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.lineEditID.returnPressed.connect(self.afficherChargement)
@@ -472,8 +473,10 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.ajoutBonDeTravailEquipement.show()
-            self.ajoutBonDeTravailEquipementUI.equipementRecherche = equipement
-            self.ajoutBonDeTravailEquipement.remplirEquipement()
+            # self.afficherChargement()
+            self.ajoutBonDeTravailEquipementUI.lineEditID.setText(self.consultationEquipementUI.lineEditId.text())
+            self.ajoutBonDeTravailEquipementUI.chercherEquipement()
+            self.ajoutBonDeTravailEquipementUI.signalFenetreBonTravail.nouveauBonTravail.emit()
         self.listeNavigation.append(self.ajoutBonDeTravailEquipement)
 
     def consulterBonDeTravail(self):
@@ -504,6 +507,15 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.ajoutBonDeTravailEquipement.show()
+            # if(self.consultationEquipementUI.lineEditId.text() != self.consultationBonDeTravailUI.lineEditID.text()):
+            #     self.consultationBonDeTravailUI.lineEditID.setText(self.consultationEquipementUI.lineEditId.text())
+            #     self.consultationBonDeTravailUI.chercherEquipement()
+            #     indice = 0
+            #     while(self.consultationBonDeTravailUI.listeBonDeTravail[indice]["ID-BDT"] != str(self.consultationEquipementUI.comboBoxBons.currentIndex())):
+            #         indice += 1
+            #     self.consultationBonDeTravailUI.indiceBonDeTravail = indice
+            #     self.consultationBonDeTravailUI.chargerBonTravail()
+            #TODO voir pour optimiser le chargement
             self.consultationBonDeTravailUI.equipementDictionnaire = equipement
             self.consultationBonDeTravailUI.consulterBonTravailSpecifique(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
         self.listeNavigation.append(self.consultationBonDeTravail)

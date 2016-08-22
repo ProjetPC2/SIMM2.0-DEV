@@ -47,7 +47,7 @@ class BonDeTravail(Ui_BonDeTravail):
             #Cas ou on va ajouter un bon de travail pour un equipement
             self.lineEditID.setText(ajouterID)
             self.chercherEquipement()
-            self.nouveauBondeTravail()
+            self.signalFenetreBonTravail.nouveauBonTravail.emit()
         self.chargement.rechercheTermine.connect(self.chargerBonTravail)
         self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
         self.nombreBonAjoute = 0
@@ -69,6 +69,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.signalFenetreBonTravail.consultationBonTravail.connect(self.consulterBonDeTravail)
         self.signalFenetreBonTravail.editionBonTravail.connect(self.editionBonDeTravail)
         self.signalFenetreBonTravail.validerChoixPiece.connect(self.validerChoixPiece)
+        self.signalFenetreBonTravail.nouveauBonTravail.connect(self.nouveauBondeTravail)
         self.listeLabelCache = list()
         self.listeLabelCache.append(self.labelCacheNomTech)
         self.listeLabelCache.append(self.labelCacheDate)
@@ -100,7 +101,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.comboBoxOuvertFerme.currentTextChanged.connect(self.signalFenetreBonTravail.editionBonTravail.emit)
 
         self.boutonActualiser.clicked.connect(self.chercherEquipementThread)
-        self.boutonAjoutBDT.clicked.connect(self.nouveauBondeTravail)
+        self.boutonAjoutBDT.clicked.connect(self.signalFenetreBonTravail.nouveauBonTravail.emit)
 
         self.boutonConsultation.clicked.connect(self.signalFenetreBonTravail.consultationBonTravail.emit)
         #Connexion de l'appuie de la touche entree
