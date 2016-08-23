@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
-        Statistique.resize(1710, 807)
+        Statistique.resize(1182, 843)
         Statistique.setMinimumSize(QtCore.QSize(0, 0))
         Statistique.setMaximumSize(QtCore.QSize(16777215, 16777215))
         Statistique.setStyleSheet("QWidget{\n"
@@ -27,31 +27,6 @@ class Ui_Statistique(object):
 "}")
         self.gridLayout = QtWidgets.QGridLayout(Statistique)
         self.gridLayout.setObjectName("gridLayout")
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setContentsMargins(-1, 2, -1, 2)
-        self.horizontalLayout.setSpacing(8)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.label_2 = QtWidgets.QLabel(Statistique)
-        self.label_2.setStyleSheet("background:white;")
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("Images/pie-chart (1).png"))
-        self.label_2.setObjectName("label_2")
-        self.horizontalLayout.addWidget(self.label_2)
-        self.Labeltitre = QtWidgets.QLabel(Statistique)
-        self.Labeltitre.setMaximumSize(QtCore.QSize(800, 150))
-        font = QtGui.QFont()
-        font.setPointSize(18)
-        font.setBold(True)
-        font.setWeight(75)
-        self.Labeltitre.setFont(font)
-        self.Labeltitre.setStyleSheet("background:white;")
-        self.Labeltitre.setObjectName("Labeltitre")
-        self.horizontalLayout.addWidget(self.Labeltitre)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
-        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 5, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        self.gridLayout.addItem(spacerItem1, 1, 0, 1, 1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.LabelnombreTotalEquipement = QtWidgets.QLabel(Statistique)
@@ -81,9 +56,34 @@ class Ui_Statistique(object):
         self.textBrowserNombreTotalEquipements.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowserNombreTotalEquipements.setObjectName("textBrowserNombreTotalEquipements")
         self.horizontalLayout_2.addWidget(self.textBrowserNombreTotalEquipements)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem2)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem)
         self.gridLayout.addLayout(self.horizontalLayout_2, 2, 0, 1, 1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setContentsMargins(-1, 2, -1, 2)
+        self.horizontalLayout.setSpacing(8)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label_2 = QtWidgets.QLabel(Statistique)
+        self.label_2.setStyleSheet("background:white;")
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("Images/pie-chart (1).png"))
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout.addWidget(self.label_2)
+        self.Labeltitre = QtWidgets.QLabel(Statistique)
+        self.Labeltitre.setMaximumSize(QtCore.QSize(800, 150))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.Labeltitre.setFont(font)
+        self.Labeltitre.setStyleSheet("background:white;")
+        self.Labeltitre.setObjectName("Labeltitre")
+        self.horizontalLayout.addWidget(self.Labeltitre)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 5, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.gridLayout.addItem(spacerItem2, 1, 0, 1, 1)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
@@ -438,6 +438,7 @@ class Ui_Statistique(object):
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         self.tableResumeInventaire.setFont(font)
+        self.tableResumeInventaire.setAutoFillBackground(False)
         self.tableResumeInventaire.setStyleSheet("padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
@@ -464,9 +465,9 @@ class Ui_Statistique(object):
         item = QtWidgets.QTableWidgetItem()
         self.tableResumeInventaire.setHorizontalHeaderItem(1, item)
         self.tableResumeInventaire.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableResumeInventaire.horizontalHeader().setDefaultSectionSize(170)
+        self.tableResumeInventaire.horizontalHeader().setDefaultSectionSize(200)
         self.tableResumeInventaire.horizontalHeader().setMinimumSectionSize(15)
-        self.tableResumeInventaire.horizontalHeader().setStretchLastSection(False)
+        self.tableResumeInventaire.horizontalHeader().setStretchLastSection(True)
         self.tableResumeInventaire.verticalHeader().setDefaultSectionSize(30)
         self.tableResumeInventaire.verticalHeader().setMinimumSectionSize(20)
         self.tableResumeInventaire.verticalHeader().setSortIndicatorShown(True)
@@ -478,15 +479,15 @@ class Ui_Statistique(object):
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_10.addItem(spacerItem8)
-        self.pushButton = QtWidgets.QPushButton(Statistique)
-        self.pushButton.setMinimumSize(QtCore.QSize(100, 50))
-        self.pushButton.setMaximumSize(QtCore.QSize(100, 50))
+        self.ButtonBackUp = QtWidgets.QPushButton(Statistique)
+        self.ButtonBackUp.setMinimumSize(QtCore.QSize(100, 50))
+        self.ButtonBackUp.setMaximumSize(QtCore.QSize(100, 50))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet("QPushButton {\n"
+        self.ButtonBackUp.setFont(font)
+        self.ButtonBackUp.setStyleSheet("QPushButton {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
@@ -506,8 +507,8 @@ class Ui_Statistique(object):
 "QPushButton:hover {\n"
 "background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
 "}")
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout_10.addWidget(self.pushButton)
+        self.ButtonBackUp.setObjectName("ButtonBackUp")
+        self.verticalLayout_10.addWidget(self.ButtonBackUp)
         self.horizontalLayout_11.addLayout(self.verticalLayout_10)
         self.verticalLayout_5.addLayout(self.horizontalLayout_11)
         self.gridLayout.addLayout(self.verticalLayout_5, 5, 0, 1, 2)
@@ -518,7 +519,6 @@ class Ui_Statistique(object):
     def retranslateUi(self, Statistique):
         _translate = QtCore.QCoreApplication.translate
         Statistique.setWindowTitle(_translate("Statistique", "Form"))
-        self.Labeltitre.setText(_translate("Statistique", "Statistiques"))
         self.LabelnombreTotalEquipement.setText(_translate("Statistique", "Nombre total d\'équipements"))
         self.textBrowserNombreTotalEquipements.setHtml(_translate("Statistique", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -526,6 +526,7 @@ class Ui_Statistique(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
+        self.Labeltitre.setText(_translate("Statistique", "Statistiques"))
         self.LabelnombreProvenance.setText(_translate("Statistique", "Équipements par provenance"))
         self.LabelProvenance.setText(_translate("Statistique", "Provenance choisie :"))
         self.LabelNombreProvenance.setText(_translate("Statistique", "Équipements de cette provenance :"))
@@ -592,6 +593,6 @@ class Ui_Statistique(object):
         item.setText(_translate("Statistique", "Catégorie d\'équipement"))
         item = self.tableResumeInventaire.horizontalHeaderItem(1)
         item.setText(_translate("Statistique", "Quantité"))
-        self.pushButton.setText(_translate("Statistique", "Faire un\n"
+        self.ButtonBackUp.setText(_translate("Statistique", "Faire un\n"
 "backup"))
 

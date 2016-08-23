@@ -526,10 +526,11 @@ class Ui_AjoutEquipement(object):
 "background:rgb(247, 247, 247);\n"
 "}\n"
 "    ")
+        self.comboBoxProvenance.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
         self.layoutChampsModifiables.addWidget(self.comboBoxProvenance)
         self.lineEditCodeASSET = QtWidgets.QLineEdit(AjoutEquipement)
-        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(127, 0))
+        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(119, 0))
         self.lineEditCodeASSET.setMaximumSize(QtCore.QSize(223, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
