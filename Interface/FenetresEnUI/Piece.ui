@@ -493,7 +493,7 @@ color: black;
      </property>
     </widget>
    </item>
-   <item row="7" column="0" colspan="8">
+   <item row="7" column="1" colspan="6">
     <widget class="QTableWidget" name="tableCategoriePiece">
      <property name="font">
       <font>
@@ -504,9 +504,12 @@ color: black;
      <property name="styleSheet">
       <string notr="true">background: white;</string>
      </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
     </widget>
    </item>
-   <item row="12" column="0" colspan="8">
+   <item row="12" column="1" colspan="6">
     <widget class="QTableWidget" name="tableResume">
      <property name="font">
       <font>
@@ -517,6 +520,9 @@ color: black;
      <property name="styleSheet">
       <string notr="true">background: white;</string>
      </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
     </widget>
    </item>
   </layout>

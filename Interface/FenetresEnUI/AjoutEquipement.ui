@@ -980,13 +980,16 @@ background:rgb(247, 247, 247);
 }
 	</string>
          </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QLineEdit" name="lineEditCodeASSET">
          <property name="minimumSize">
           <size>
-           <width>127</width>
+           <width>119</width>
            <height>0</height>
           </size>
          </property>

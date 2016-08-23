@@ -118,18 +118,18 @@ background: rgb(247,247,247)
          <pointsize>10</pointsize>
         </font>
        </property>
-       <property name="displayFormat">
-        <string>dd-MM-yyyy</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
        <property name="date">
         <date>
          <year>2016</year>
          <month>1</month>
          <day>1</day>
         </date>
+       </property>
+       <property name="displayFormat">
+        <string>dd-MM-yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -152,18 +152,18 @@ background: rgb(247,247,247)
          <pointsize>10</pointsize>
         </font>
        </property>
-       <property name="displayFormat">
-        <string>dd-MM-yyyy</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
        <property name="date">
         <date>
          <year>2016</year>
          <month>1</month>
          <day>1</day>
         </date>
+       </property>
+       <property name="displayFormat">
+        <string>dd-MM-yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -584,10 +584,13 @@ background:rgb(247, 247, 247)</string>
         <bool>true</bool>
        </attribute>
        <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>180</number>
+        <number>200</number>
        </attribute>
        <attribute name="horizontalHeaderMinimumSectionSize">
         <number>30</number>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
        </attribute>
        <attribute name="verticalHeaderDefaultSectionSize">
         <number>30</number>
