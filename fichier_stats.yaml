@@ -1,5 +1,9 @@
-nbEquipement: 1146
+nbEquipement: 1149
 nbEquipementCentreService:
+  ? ''
+  : "Balance p\xE9diatrique": 1
+    "N\xE9gatoscope (moniteur de radiographie)": 1
+    "\xC9lectrocardiographe": 1
   Archives:
     Ordinateur: 3
     Table bucky - rayons X: 1
@@ -296,17 +300,17 @@ nbEquipementEtatConservation:
   Desuet: 4
   "D\xE9suet": 13
   En fin de vie: 47
-  Quasi neuf: 633
+  Quasi neuf: 636
 nbEquipementEtatService:
   Au rebus: 18
-  En maintenance: 57
-  En service: 1071
+  En maintenance: 58
+  En service: 1073
 nbEquipementProvenance:
   ? ''
   : 396
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 380
+  Croix-Rouge Canadienne: 383
   Croix-Rouge Haitienne: 5
   I-TECH: 51
   JICA: 233

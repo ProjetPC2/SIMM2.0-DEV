@@ -129,6 +129,7 @@ CentreService:
 - "Hospitalisation m\xE9decine interne"
 - Hospitalisation chirurgie
 - "Services g\xE9n\xE9raux"
+- ''
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -286,4 +287,4 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 1200
+dernierID-Equipement: 1203
