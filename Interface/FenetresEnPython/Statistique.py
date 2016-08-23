@@ -93,7 +93,7 @@ class Statistique(Ui_Statistique):
         self.comboBoxCentreService.currentTextChanged.connect(self.signalStatistique.affichageCentreService.emit)
         self.tableResumeInventaire.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers);
         self.tableResumeInventaire.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
-        self.pushButton.clicked.connect(backUp)
+        self.ButtonBackUp.clicked.connect(backUp)
 
         self.colonneClique = None
         self.nombreClique = 0

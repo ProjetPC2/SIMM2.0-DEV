@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1710</width>
+    <width>1572</width>
     <height>800</height>
    </rect>
   </property>
@@ -153,6 +153,13 @@
      </property>
      <property name="text">
       <string>Contact : pc2poly@gmail.com</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelBackup">
+     <property name="text">
+      <string>Backup : backup.hsmj@gmail.com</string>
      </property>
     </widget>
    </item>
