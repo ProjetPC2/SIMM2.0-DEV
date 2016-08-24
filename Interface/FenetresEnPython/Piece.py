@@ -63,12 +63,12 @@ class Piece(Ui_Piece):
         print(categorie)
         nomPiece = self.comboBoxNomPiece.currentText()
         nombre = (self.spinBoxNombreEquipement.text())
-        self.tableCategoriePiece.setRowCount(self.tableCategoriePiece.rowCount() + 1)
-        self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 0, QTableWidgetItem(categorie))
-        self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 1, QTableWidgetItem(nomPiece))
-        self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 2, QTableWidgetItem((nombre)))
-
-        self.listeAjoutPiece.append((categorie, nomPiece, int(nombre)))
+        if(int(nombre)>0):
+            self.tableCategoriePiece.setRowCount(self.tableCategoriePiece.rowCount() + 1)
+            self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 0, QTableWidgetItem(categorie))
+            self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 1, QTableWidgetItem(nomPiece))
+            self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 2, QTableWidgetItem((nombre)))
+            self.listeAjoutPiece.append((categorie, nomPiece, int(nombre)))
         print(self.listeAjoutPiece)
 
     def enregistrerPiece(self):

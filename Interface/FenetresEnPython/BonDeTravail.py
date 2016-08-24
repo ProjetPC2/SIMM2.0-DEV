@@ -47,7 +47,6 @@ class BonDeTravail(Ui_BonDeTravail):
             else:
                 self.equipementDictionnaire = {"ID":self.listeBonDeTravail[self.indiceBonDeTravail]["ID-EQ"]}
             self.lineEditID.setText(self.equipementDictionnaire["ID"])
-
             self.signalFenetreBonTravail.chargerEquipementAPartirBon.emit()
             self.consulterBonTravailSpecifique()
             self.boutonActualiser.setDisabled(True)
@@ -69,6 +68,9 @@ class BonDeTravail(Ui_BonDeTravail):
             self.equipementDictionnaire = equipement
             self.signalFenetreBonTravail.chargerEquipement.emit()
             self.listeBonDeTravail = listeBonTravail
+            self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+            self.listeCategoriePiece.sort()
+            self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             self.signalFenetreBonTravail.nouveauBonTravail.emit()
 
     def ajoutBonDeTravail(self):
@@ -232,7 +234,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 print(dicRetour)
                 if dicRetour["Reussite"]:
                     print("Reussi")
-                    idBDT = str(int(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"]) + 1 + self.nombreBonAjoute)
+                    idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail)-1]["ID-BDT"]) + 1 + self.nombreBonAjoute)
                     print("bon de travail d'id :", idBDT)
                     dictionnaireDonnees["ID-BDT"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
@@ -271,7 +273,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelCacheTemps.setText(str(self.timeEditTempsEstime.time().toPyTime()))
         self.labelCacheDescSit.setText(self.textEditDescSituation.toPlainText())
         self.labelCacheDescInt.setText(self.textEditDescIntervention.toPlainText())
-        self.labelNomTechnicien.setText(self.comboBoxNomTech.currentText())
+        self.labelCacheNomTech.setText(self.comboBoxNomTech.currentText())
 
     def chargerBonTravail(self):
         #Si un bon de travail a ete trouve, on remplit les differents champs associes
@@ -379,6 +381,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheGauche.hide()
         self.boutonFlecheDoubleGauche.hide()
         self.boutonConsultation.show()
+        self.pushButtonValider.setDisabled(False)
         if(any(self.listeBonDeTravail)):
             self.boutonSauvegarde.show()
         id = self.equipementDictionnaire["ID"] + "-" + str(self.equipementDictionnaire["NbBonTravail"] + 1 + self.nombreBonAjoute)

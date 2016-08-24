@@ -174,7 +174,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
             de salle """
         if (self.comboBoxSalle.currentText() != ""):
             self.dictionnaireRecherche["Salle"] = self.comboBoxSalle.currentText()
-
         else:
             self.dictionnaireRecherche.pop("Salle")
         self.rechercherEquipement()
@@ -243,8 +242,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxCentreService.setCurrentText("")
         self.comboBoxEtatService.setCurrentText("")
         self.lineEditNumeroSerie.setText("")
-        # self.tableResultats.clear()
-        # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.setRowCount(0)
         print(self.dictionnaireRecherche)
 
@@ -288,6 +285,8 @@ def verificationTexte(texte):
         copie = local
     print("Nouveau texte", copie)
     return copie
+
+
 
 class RechercherEquipement (Thread):
     def __init__(self, fonction):

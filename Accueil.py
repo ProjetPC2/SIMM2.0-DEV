@@ -481,8 +481,10 @@ class Accueil(Ui_Accueil):
             # Affichage du widget s'il existe deja
             self.ajoutBonDeTravailEquipement.show()
             # self.afficherChargement()
-            self.ajoutBonDeTravailEquipementUI.equipementDictionnaire = equipement
-            self.ajoutBonDeTravailEquipementUI.lineEditID.setText(equipement["ID"])
+            if(self.ajoutBonDeTravailEquipementUI.equipementDictionnaire["ID"] != equipement["ID"]):
+                self.ajoutBonDeTravailEquipementUI.equipementDictionnaire = equipement
+                self.ajoutBonDeTravailEquipementUI.lineEditID.setText(equipement["ID"])
+                self.ajoutBonDeTravailEquipementUI.nombreBonAjoute = 0
             self.ajoutBonDeTravailEquipementUI.listeBonDeTravail = listeBonTravail
             self.ajoutBonDeTravailEquipementUI.signalFenetreBonTravail.nouveauBonTravail.emit()
             # self.ajoutBonDeTravailEquipementUI.lineEditID.setText(self.consultationEquipementUI.lineEditId.text())
@@ -518,9 +520,11 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.consultationBonDeTravail.show()
-            self.consultationBonDeTravailUI.equipementDictionnaire = equipement
+            if(self.consultationBonDeTravailUI.equipementDictionnaire["ID"] != equipement["ID"]):
+                self.consultationBonDeTravailUI.equipementDictionnaire = equipement
+                self.consultationBonDeTravailUI.lineEditID.setText(equipement["ID"])
+                self.consultationBonDeTravailUI.nombreBonAjoute = 0
             self.consultationBonDeTravailUI.listeBonDeTravail = listeBonTravail
-            self.consultationBonDeTravailUI.lineEditID.setText(equipement["ID"])
             self.consultationBonDeTravailUI.consulterBDT = self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()]
             self.consultationBonDeTravailUI.consulterBonTravailSpecifique()
         self.listeNavigation.append(self.consultationBonDeTravail)
