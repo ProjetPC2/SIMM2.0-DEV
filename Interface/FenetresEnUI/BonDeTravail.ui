@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1710</width>
-    <height>800</height>
+    <width>1168</width>
+    <height>816</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -625,11 +625,11 @@ color: rgb(81, 81, 81);
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeType">
-            <enum>QSizePolicy::Maximum</enum>
+            <enum>QSizePolicy::Expanding</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>600</width>
+             <width>20</width>
              <height>20</height>
             </size>
            </property>
@@ -708,6 +708,12 @@ color: rgb(81, 81, 81);
          </item>
          <item>
           <widget class="QSpinBox" name="spinBoxNombrePiece">
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="maximum">
             <number>999</number>
            </property>
@@ -719,11 +725,11 @@ color: rgb(81, 81, 81);
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeType">
-            <enum>QSizePolicy::Maximum</enum>
+            <enum>QSizePolicy::Expanding</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>285</width>
+             <width>40</width>
              <height>20</height>
             </size>
            </property>
@@ -765,14 +771,52 @@ color: rgb(81, 81, 81);
         </layout>
        </item>
        <item>
-        <widget class="QTableWidget" name="tableWidgetPiecesAssociees">
-         <property name="font">
-          <font>
-           <family>MS Shell Dlg 2</family>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidgetPiecesAssociees">
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>120</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Categorie</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Nombre Piece</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Nombre</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
@@ -1275,6 +1319,13 @@ background:rgb(247,247,247)
              <day>1</day>
             </datetime>
            </property>
+           <property name="date">
+            <date>
+             <year>2016</year>
+             <month>2</month>
+             <day>1</day>
+            </date>
+           </property>
            <property name="currentSection">
             <enum>QDateTimeEdit::DaySection</enum>
            </property>
@@ -1286,13 +1337,6 @@ background:rgb(247,247,247)
            </property>
            <property name="timeSpec">
             <enum>Qt::LocalTime</enum>
-           </property>
-           <property name="date">
-            <date>
-             <year>2016</year>
-             <month>2</month>
-             <day>1</day>
-            </date>
            </property>
           </widget>
          </item>
@@ -1453,7 +1497,12 @@ background:rgb(247,247,247)
           <string notr="true">background: white;</string>
          </property>
          <property name="text">
-          <string>Ce que j'ai écrit</string>
+          <string>Description Situation</string>
+         </property>
+         <property name="textFormat">
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -1517,7 +1566,10 @@ background:rgb(247,247,247)
           <string notr="true">background: white;</string>
          </property>
          <property name="text">
-          <string>Ce que j'ai écrit</string>
+          <string>Description Intervention</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
