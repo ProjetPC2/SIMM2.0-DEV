@@ -18,7 +18,6 @@ class ModificationEquipement(Ui_AjoutEquipement):
     def __init__(self, widget, equipement):
         self.setupUi(widget)
         self.equipementRecherche = equipement
-        self.ajout()
         self.BoutonEnregistrer.hide()
         self.BoutonModifier.hide()
         self.sauvegarde = Communicate()
@@ -26,6 +25,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.signalFenetre.signalNouvelEquipement.connect(self.nouvelEquipement)
         self.signalFenetre.signalVerificationEquipement.connect(self.verificationEquipement)
         self.signalFenetre.signalModifierEquipement.connect(self.modifierEquipement)
+        self.ajout()
 
 
     def ajout(self):
