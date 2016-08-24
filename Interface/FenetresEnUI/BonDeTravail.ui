@@ -1500,6 +1500,7 @@ background:rgb(247,247,247)
           <string>Description Situation</string>
          </property>
          <property name="textFormat">
+          <enum>Qt::AutoText</enum>
          </property>
          <property name="wordWrap">
           <bool>true</bool>

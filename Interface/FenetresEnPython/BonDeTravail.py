@@ -3,7 +3,7 @@ import datetime
 from threading import Thread
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt, QLocale
+from PyQt5.QtCore import Qt, QLocale, QDate
 from PyQt5.QtWidgets import QTableWidgetItem,QCalendarWidget
 
 from BDD.BonTravailManager import BonTravailManager
@@ -17,7 +17,7 @@ class BonDeTravail(Ui_BonDeTravail):
     '''
         Classe gerant la fenetre permettant l'ajout et la modification des bons de travail
     '''
-    def __init__(self, widget, consulterBDT = None, ajouterID = None):
+    def __init__(self, widget, consulterBDT = None, ajouterID = None, equipement = None, listeBonTravail = None, bonSpecifique = False):
         self.setupUi(widget)
         self.ajoutBonDeTravail()
         self.boutonConsultation.hide()
@@ -32,25 +32,44 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listPieceReparationUtilise = list()
         self.pushButtonValider.setDisabled(True)
         self.chargement = Communicate()
-        if(consulterBDT is not None):
-            #Cas ou on consulter un bon de travail
-            self.lineEditID.setText(str(consulterBDT["ID-EQ"]))
-            self.chercherEquipement()
-            indice = 0
-            while(self.listeBonDeTravail[indice]["ID-BDT"] != str(consulterBDT["ID-BDT"])):
-                print("id dans la liste", self.listeBonDeTravail[indice]["ID-BDT"])
-                print("id recupere", consulterBDT["ID-BDT"])
-                indice += 1
-            self.indiceBonDeTravail = indice
-            self.chargerBonTravail()
-        if(ajouterID is not None):
-            #Cas ou on va ajouter un bon de travail pour un equipement
-            self.lineEditID.setText(ajouterID)
-            self.chercherEquipement()
-            self.signalFenetreBonTravail.nouveauBonTravail.emit()
+        self.consulterBDT = consulterBDT
+        self.ajouterID = ajouterID
+        self.modificationBon = True
         self.chargement.rechercheTermine.connect(self.chargerBonTravail)
         self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
-        self.nombreBonAjoute = 0
+
+        if(self.consulterBDT is not None):
+            #Cas ou on consulter un bon de travail
+            # self.chercherEquipementThread()
+            self.listeBonDeTravail = listeBonTravail
+            if(self.equipementDictionnaire is not None):
+                self.equipementDictionnaire = equipement
+            else:
+                self.equipementDictionnaire = {"ID":self.listeBonDeTravail[self.indiceBonDeTravail]["ID-EQ"]}
+            self.lineEditID.setText(self.equipementDictionnaire["ID"])
+
+            self.signalFenetreBonTravail.chargerEquipementAPartirBon.emit()
+            self.consulterBonTravailSpecifique()
+            self.boutonActualiser.setDisabled(True)
+            self.lineEditID.setDisabled(True)
+            self.boutonAjoutBDT.hide()
+            self.boutonAjoutBDT.setDisabled(True)
+            self.modificationBon = True
+            if(bonSpecifique):
+                self.boutonFlecheDoubleDroite.hide()
+                self.boutonFlecheDroite.hide()
+                self.boutonFlecheGauche.hide()
+                self.boutonFlecheDoubleGauche.hide()
+        if(ajouterID is not None):
+            #Cas ou on va ajouter un bon de travail pour un equipement
+            self.lineEditID.setText(equipement["ID"])
+            self.lineEditID.setDisabled(True)
+            self.boutonActualiser.setDisabled(True)
+            self.boutonConsultation.setDisabled(True)
+            self.equipementDictionnaire = equipement
+            self.signalFenetreBonTravail.chargerEquipement.emit()
+            self.listeBonDeTravail = listeBonTravail
+            self.signalFenetreBonTravail.nouveauBonTravail.emit()
 
     def ajoutBonDeTravail(self):
 
@@ -70,6 +89,8 @@ class BonDeTravail(Ui_BonDeTravail):
         self.signalFenetreBonTravail.editionBonTravail.connect(self.editionBonDeTravail)
         self.signalFenetreBonTravail.validerChoixPiece.connect(self.validerChoixPiece)
         self.signalFenetreBonTravail.nouveauBonTravail.connect(self.nouveauBondeTravail)
+        self.signalFenetreBonTravail.chargerBonTravail.connect(self.chargerBonTravail)
+        self.signalFenetreBonTravail.chargerEquipementAPartirBon.connect(self.chargerEquipementAPartirBon)
         self.listeLabelCache = list()
         self.listeLabelCache.append(self.labelCacheNomTech)
         self.listeLabelCache.append(self.labelCacheDate)
@@ -90,6 +111,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
         self.colonneClique = None
         self.nombreClique = 0
+        self.nombreBonAjoute = 0
 
 
         #Connexion des differents boutons
@@ -115,9 +137,10 @@ class BonDeTravail(Ui_BonDeTravail):
         calendrierBDT = QCalendarWidget()
         calendrierBDT.setStyleSheet("background :#F5F5F5;\n color: black;")
         calendrierBDT.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        calendrierBDT.setGridVisible(True)
         self.dateEdit.setCalendarWidget(calendrierBDT)
         self.dateEdit.setLocale(QLocale(QLocale.French, QLocale.France))
-
+        self.dateEdit.setDate(QDate.currentDate())
 
         self.listeCleDonnees = list(["Categorie","Nom Piece", "Nombre"])
         self.tableWidgetPiecesAssociees.setColumnCount(len(self.listeCleDonnees))
@@ -152,22 +175,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
-
             self.signalFenetreBonTravail.chargerEquipement.emit()
-            #self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
-            #self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
-            #self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
-            #self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
-            #self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
-
-            # self.boutonAjoutBDT.setDisabled(False)
-            # self.boutonFlecheDoubleDroite.show()
-            # self.boutonFlecheDroite.show()
-            # self.boutonFlecheGauche.show()
-            # self.boutonFlecheDoubleGauche.show()
-            # self.pushButtonValider.setDisabled(False)
-            # self.listeCategoriePiece.sort()
-            # self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             self.rechercherBonTravail()
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
@@ -203,22 +211,23 @@ class BonDeTravail(Ui_BonDeTravail):
             :return:
         '''
         #Recuperation des differentes informations dans les champs de BDT
-        if(self.equipementDictionnaire is not None):
-            dictionnaireDonnees = dict()
-            dictionnaireDonnees["Date"] = self.dateEdit.date().toPyDate()
-            dictionnaireDonnees["TempsEstime"] = (self.timeEditTempsEstime.time().toPyTime())
-            dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
-            dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
-            dictionnaireDonnees["NomTechnicien"] = self.comboBoxNomTech.currentText()
-            if(self.comboBoxOuvertFerme.currentText() != "Ouvert"):
-                dictionnaireDonnees["EtatBDT"] = "Ferme"
-            else:
-                dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
-            dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
-            #Decrementation des pieces dans le stock
-            self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation)
-            if(any(self.equipementDictionnaire)):
-                #On ajoute le bon de travail a un equipement existant
+        #if(self.equipementDictionnaire is not None):
+        dictionnaireDonnees = dict()
+        dictionnaireDonnees["Date"] = self.dateEdit.date().toPyDate()
+        dictionnaireDonnees["TempsEstime"] = (self.timeEditTempsEstime.time().toPyTime())
+        dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
+        dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
+        dictionnaireDonnees["NomTechnicien"] = self.comboBoxNomTech.currentText()
+        if(self.comboBoxOuvertFerme.currentText() != "Ouvert"):
+            dictionnaireDonnees["EtatBDT"] = "Fermé"
+        else:
+            dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
+        dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
+        #Decrementation des pieces dans le stock
+        self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation)
+        if(any(self.equipementDictionnaire)):
+            #On ajoute le bon de travail a un equipement existant
+            if not self.modificationBon:
                 dicRetour = (self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees))
                 print(dicRetour)
                 if dicRetour["Reussite"]:
@@ -227,9 +236,20 @@ class BonDeTravail(Ui_BonDeTravail):
                     print("bon de travail d'id :", idBDT)
                     dictionnaireDonnees["ID-BDT"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
-            self.signalFenetreBonTravail.confirmation.emit()
-            self.chargement.sauvegardeTermine.emit()
-            self.nombreBonAjoute += 1
+                    self.nombreBonAjoute += 1
+                    self.signalFenetreBonTravail.confirmation.emit()
+            else:
+                dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["ID"], self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"], dictionnaireDonnees))
+                if dicRetour["Reussite"]:
+                    pass
+                    print("Modification Réussie")
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = dictionnaireDonnees["Date"]
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"] = dictionnaireDonnees["TempsEstime"]
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"] = dictionnaireDonnees["DescriptionSituation"]
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"] = dictionnaireDonnees["DescriptionIntervention"]
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["NomTechnicien"] = dictionnaireDonnees["NomTechnicien"]
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] = dictionnaireDonnees["EtatBDT"]
+        self.chargement.sauvegardeTermine.emit()
 
     def rechercherBonTravail(self):
         '''
@@ -241,6 +261,8 @@ class BonDeTravail(Ui_BonDeTravail):
         print("Lancement de la recherche des bons de travail")
         if(any(self.listeBonDeTravail)):
             self.chargement.rechercheTermine.emit()
+        else:
+            print("Aucun bon de travail")
 
     def remplirBonDeTravail(self):
         #Methode permettant le remplissage des differents champs
@@ -349,6 +371,7 @@ class BonDeTravail(Ui_BonDeTravail):
             widget.clear()
         self.comboBoxOuvertFerme.setDisabled(False)
         self.comboBoxOuvertFerme.setCurrentIndex(0)
+        self.modificationBon = False
         self.comboBoxNomTech.show()
         self.boutonAjoutBDT.hide()
         self.boutonFlecheDoubleDroite.hide()
@@ -367,13 +390,15 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def consulterBonDeTravail(self):
         self.comboBoxNomTech.show()
-        self.boutonAjoutBDT.hide()
+        self.dateEdit.show()
+        self.timeEditTempsEstime.show()
         self.boutonFlecheDoubleDroite.show()
         self.boutonFlecheDroite.show()
         self.boutonFlecheGauche.show()
         self.boutonFlecheDoubleGauche.show()
         self.boutonConsultation.show()
         self.boutonSauvegarde.show()
+        self.modificationBon = True
         self.boutonAjoutBDT.show()
         self.textEditDescIntervention.show()
         self.textEditDescSituation.show()
@@ -381,7 +406,6 @@ class BonDeTravail(Ui_BonDeTravail):
         self.comboBoxOuvertFerme.setDisabled(False)
         for label in self.listeLabelCache:
             label.hide()
-
         self.rechercherBonTravail()
 
     def confirmation(self):
@@ -393,9 +417,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelCacheDescInt.hide()
         self.dateEdit.hide()
         self.comboBoxNomTech.hide()
-
         self.boutonSauvegarde.hide()
-        self.boutonAjoutBDT.hide()
         self.boutonFlecheDoubleDroite.hide()
         self.boutonFlecheDroite.hide()
         self.boutonFlecheGauche.hide()
@@ -422,13 +444,28 @@ class BonDeTravail(Ui_BonDeTravail):
         # self.rechercherBonTravail()
         # self.nouveauBondeTravail()
 
-    def consulterBonTravailSpecifique(self, dict):
-        #Methode permettant le chargement d'un bon de travail precis
-        self.lineEditID.setText(dict["ID-EQ"])
-        self.chercherEquipement()
-        self.indiceBonDeTravail = dict["ID-BDT"] - 1
-        self.rechercherBonTravail()
-        self.signalFenetreBonTravail.consultationBonTravail.emit()
+    def chargerEquipementAPartirBon(self):
+        #Methode permettant le chargement d'un equipement
+        self.labelEcritureCatEquip.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["CategorieEquipement"])
+        self.labelEcritureCentreService.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["CentreService"])
+        self.labelEcritureMarque.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Marque"])
+        self.labelEcritureSalle.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Salle"])
+        self.labelEcritureModele.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Modele"])
+        self.lineEditID.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-EQ"])
+        self.boutonAjoutBDT.setDisabled(False)
+        #A modifier
+        # self.rechercherBonTravail()
+        # self.nouveauBondeTravail()
+
+    def consulterBonTravailSpecifique(self):
+        self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+        indice = 0
+        while(self.listeBonDeTravail[indice]["ID-BDT"] != str(self.consulterBDT["ID-BDT"])):
+            print("id dans la liste", self.listeBonDeTravail[indice]["ID-BDT"])
+            print("id recupere", self.consulterBDT["ID-BDT"])
+            indice += 1
+        self.indiceBonDeTravail = indice
+        self.signalFenetreBonTravail.chargerBonTravail.emit()
 
     def chercherEquipementThread(self):
         thread = BonDeTravailThread(self.chercherEquipement)
@@ -445,12 +482,12 @@ class BonDeTravail(Ui_BonDeTravail):
         categorie = self.comboBoxCategoriePiece.currentText()
         nomPiece = self.comboBoxNomPiece.currentText()
         nombre = self.spinBoxNombrePiece.text()
-        self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
-        self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 0, QTableWidgetItem(categorie))
-        self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 1, QTableWidgetItem(nomPiece))
-        self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 2, QTableWidgetItem((nombre)))
         if(int(nombre)>0):
             #On ne comptabilise les pièces que s'il y a un nombre non nul
+            self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
+            self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 0, QTableWidgetItem(categorie))
+            self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 1, QTableWidgetItem(nomPiece))
+            self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 2, QTableWidgetItem((nombre)))
             self.listeAjoutPieceReparation.append((categorie, nomPiece, int(nombre)))
         print(self.listeAjoutPieceReparation)
 

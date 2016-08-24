@@ -4,11 +4,10 @@ from threading import Thread
 
 import yaml
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt, QLocale
+from PyQt5.QtCore import Qt, QLocale, QDate
 from PyQt5.QtWidgets import QTableWidgetItem, QCalendarWidget
 
 from BDD.BonTravailManager import BonTravailManager
-from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.RechercheBonDeTravailUI import Ui_RechercheBonDeTravail
 from Interface.FenetresEnPython.Signaux import Communicate
@@ -24,7 +23,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
     def ajoutRechercheBonDeTravail(self):
         # Recuperation des differents attributs
-        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
         self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
         try:
             fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
@@ -60,18 +58,30 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         #modification calendrier
         calendrierApres = QCalendarWidget()
         calendrierApres.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrierApres.setGridVisible(True)
         self.calendrierApres.setCalendarWidget(calendrierApres)
         calendrierApres.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
         self.calendrierApres.setLocale(QLocale(QLocale.French, QLocale.France))
         calendrierAvant = QCalendarWidget()
         calendrierAvant.setStyleSheet("background :#F5F5F5;\n color: black;")
         calendrierAvant.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
+        calendrierAvant.setGridVisible(True)
         self.calendrierAvant.setCalendarWidget(calendrierAvant)
         self.calendrierAvant.setLocale(QLocale(QLocale.French, QLocale.France))
 
+        self.calendrierAvant.setDate(QDate.currentDate())
+        self.calendrierApres.setDate(QDate.currentDate())
+
         #Creation des differents colonnes pour le tableau de resultat
+        # self.listeCleDonnees = list(["ID-EQ", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
         self.listeCleDonnees = list(["ID-EQ", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
+
+
+        #liste contenant les bons résultant de la recherche
+        self.listeResultat = list()
+        #liste contenant les informations des bons a afficher
         self.listeDonnees = list()
+
 
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
@@ -81,43 +91,34 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.dictionnaireRecherche = dict()
 
         #Connexion des differentes recherches pour la mise a jour automatique
-        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipementThread)
+        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipement)
         self.comboBoxEtat.currentTextChanged.connect(self.rechercheEtatDeService)
-        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreServiceThread)
-        self.calendrierAvant.dateChanged.connect(self.rechercheDateAvantThread)
-        self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituationThread)
-        self.calendrierApres.dateChanged.connect(self.rechercheDateApresThread)
+        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
+        self.calendrierAvant.dateChanged.connect(self.rechercheDateAvant)
+        self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituation)
+        self.calendrierApres.dateChanged.connect(self.rechercheDateApres)
         self.boutonNouvelleRecherche.clicked.connect(self.signalRechercheBon.nouvelleRecherche.emit)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
+        self.boutonActualiser.clicked.connect(self.rechercherBonTravailThread)
         self.colonneClique = None
         self.nombreClique = 0
         # Empeche la modification de la table
         self.tableResultats.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers);
         self.tableResultats.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableResultats.cellDoubleClicked.connect(self.choisirBonDeTravail)
-        self.listeResultat = list()
-        self.modificationEquipement = None
         self.bonDeTravailSelectionne = None
 
     def choisirBonDeTravail(self, ligne, colonne):
-        #TODO A remanier
         print("ligne", ligne)
         print("colonne", colonne)
         print(self.tableResultats.item(ligne, 0).data(0))
         self.bonDeTravailSelectionne = dict()
-        indice = 0
-        for cle in self.listeCleDonnees:
-            if (cle == "ID-EQ" or cle == "ID-BDT"):
-                self.bonDeTravailSelectionne[cle] = int(self.tableResultats.item(ligne, indice).data(0))
-            elif cle == "Date" :
-                self.bonDeTravailSelectionne[cle] = datetime.datetime.strptime(
-                    self.tableResultats.item(ligne, indice).data(0), '%Y-%m-%d')
-            elif cle == "TempsEstime":
-                self.bonDeTravailSelectionne[cle] = datetime.time.strptime(
-                    self.tableResultats.item(ligne, indice).data(0), '%H:%M')
-            else:
-                self.bonDeTravailSelectionne[cle] = self.tableResultats.item(ligne, indice).data(0)
-            indice += 1
+        print(self.listeResultat)
+        for bon in self.listeResultat:
+            print((self.tableResultats.item(ligne,0).data(0)))
+            print((self.tableResultats.item(ligne,1).data(0)))
+            if(bon["ID-EQ"] == str(self.tableResultats.item(ligne,0).data(0)) and bon["ID-BDT"] == str(self.tableResultats.item(ligne, 1).data(0))):
+                self.bonDeTravailSelectionne = bon
         print(self.bonDeTravailSelectionne)
 
     def trier(self, numeroColonne):
@@ -145,8 +146,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             self.dictionnaireRecherche["CategorieEquipement"] = recherche
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
-        self.rechercherBonTravail()
-        self.chargement.finChargement.emit()
+        self.rechercherBonTravailThread()
+
 
 
 
@@ -157,8 +158,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             :return:
         '''
         self.dictionnaireRecherche["AvantLe"] = self.calendrierAvant.date().toPyDate()
-        self.rechercherBonTravail()
-        self.chargement.finChargement.emit()
+        self.rechercherBonTravailThread()
 
 
     def rechercheDateApres(self):
@@ -168,8 +168,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             :return:
         '''
         self.dictionnaireRecherche["ApresLe"] = self.calendrierApres.date().toPyDate()
-        self.rechercherBonTravail()
-        self.chargement.finChargement.emit()
+        self.rechercherBonTravailThread()
 
 
     def rechercheDescriptionSituation(self):
@@ -180,8 +179,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         if (self.lineEditDescriptionSituation.text() != ""):
             self.dictionnaireRecherche["DescriptionSituation"] = self.lineEditDescriptionSituation.text()
-        self.rechercherBonTravail()
-        self.chargement.finChargement.emit()
+        self.rechercherBonTravailThread()
 
 
 
@@ -196,8 +194,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
         else:
             self.dictionnaireRecherche.pop("EtatService")
-        self.rechercherBonTravail()
-        self.chargement.finChargement.emit()
+        self.rechercherBonTravailThread()
 
 
     def rechercheCentreService(self):
@@ -211,8 +208,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
         else:
             self.dictionnaireRecherche.pop("CentreService")
-        self.rechercherBonTravail()
-        self.chargement.finChargement.emit()
+        self.rechercherBonTravailThread()
 
 
     def rechercherBonTravail(self):
@@ -222,14 +218,15 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                 :return:
             '''
             #Recherche parmi les coordonnes
+            self.listeResultat.clear()
             if (any(self.dictionnaireRecherche)):
                 print("Affichage dictionnaire de recherche :", self.dictionnaireRecherche)
-                liste = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRecherche)
-                print(liste)
+                self.listeResultat = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRecherche)
+                print(self.listeResultat)
                 self.listeDonnees.clear()
                 indice = 0
-                if(len(liste) > 0):
-                    for bdt in liste :
+                if(len(self.listeResultat) > 0):
+                    for bdt in self.listeResultat :
                             print(bdt["ID-EQ"])
                             dictDonnees = dict()
                             dictDonnees["ID-EQ"] = bdt["ID-EQ"]
@@ -249,6 +246,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             else:
                 print("dictionnaire de recherche vide")
                 self.signalRechercheBon.aucunResultat.emit()
+            self.chargement.finChargement.emit()
 
     def remplirTableau(self):
         self.tableResultats.setRowCount(len(self.listeDonnees))
@@ -280,29 +278,11 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.tableResultats.setRowCount(0)
         self.dictionnaireRecherche.clear()
 
-    def rechercheCategorieEquipementThread(self):
-        thread = RechercherBonDeTravail(self.rechercheCategorieEquipement)
+
+    def rechercherBonTravailThread(self):
+        thread = RechercherBonDeTravail(self.rechercherBonTravail)
         thread.start()
 
-    def rechercheEtatDeServiceThread(self):
-        thread = RechercherBonDeTravail(self.rechercheEtatService)
-        thread.start()
-
-    def rechercheCentreServiceThread(self):
-        thread = RechercherBonDeTravail(self.rechercheCentreService)
-        thread.start()
-
-    def rechercheDateAvantThread(self):
-        thread = RechercherBonDeTravail(self.rechercheDateAvant)
-        thread.start()
-
-    def rechercheDateApresThread(self):
-        thread = RechercherBonDeTravail(self.rechercheDateApres)
-        thread.start()
-
-    def rechercheDescriptionSituationThread(self):
-        thread = RechercherBonDeTravail(self.rechercheDescriptionSituation)
-        thread.start()
 
 def verificationTexte(texte):
     print("Verification en cours")

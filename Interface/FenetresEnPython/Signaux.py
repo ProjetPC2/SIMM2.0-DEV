@@ -32,6 +32,7 @@ class Communicate(QObject):
     aucunEquipement = pyqtSignal()
     confirmation = pyqtSignal()
     trier = pyqtSignal()
+    chargerEquipementAPartirBon = pyqtSignal()
 
     #Fenetre Recherche Bon De Travail
 

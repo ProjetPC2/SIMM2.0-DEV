@@ -48,9 +48,7 @@ class Accueil(Ui_Accueil):
         self.sauvegarde.hide()
         self.enregistrement = Attente("Enregistrement en cours...", Accueil)
         self.enregistrement.hide()
-        # Mise en francais des calendriers
-        locale.setlocale(locale.LC_ALL, "fra")
-        self.enregistrementReussi =  AffichageMessage("Enregistrement réussie", Accueil)
+        self.enregistrementReussi =  AffichageMessage("Enregistrement réussi", Accueil)
         self.enregistrementReussi.hide()
         self.suppression = Attente("Suppression en cours...", Accueil)
         self.suppression.hide()
@@ -177,6 +175,8 @@ class Accueil(Ui_Accueil):
             self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.consulterBonDeTravail)
             self.consultationEquipementUI.chargement.finChargement.connect(self.finChargement)
             self.consultationEquipementUI.chargement.aucunResultat.connect(self.afficherAucunResultat)
+            # self.consultationEquipementUI.boutonAjouterUnBon.clicked.connect(self.afficherChargement)
+            # self.consultationEquipementUI.boutonConsulterBon.clicked.connect(self.afficherChargement)
             self.listeElementParDefaut.append(self.consultationEquipement)
             self.layoutAffichagePrincipal.addWidget(self.consultationEquipement)
         else:
@@ -348,6 +348,7 @@ class Accueil(Ui_Accueil):
             self.rechercheBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.rechercheBonDeTravailUI.chargement.aucunResultat.connect(self.afficherAucunResultat)
             self.rechercheBonDeTravailUI.tableResultats.doubleClicked.connect(self.choisirBonDeTravailTableau)
+            self.rechercheBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.listeElementParDefaut.append(self.rechercheBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.rechercheBonDeTravail)
         else:
@@ -372,7 +373,7 @@ class Accueil(Ui_Accueil):
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.modificationBonDeTravailRecherche = QtWidgets.QWidget(self.Accueil)
-            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
+            self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT=self.rechercheBonDeTravailUI.bonDeTravailSelectionne, listeBonTravail=[self.rechercheBonDeTravailUI.bonDeTravailSelectionne], bonSpecifique=True)
             self.modificationBonDeTravailRechercheUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.modificationBonDeTravailRechercheUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.modificationBonDeTravailRechercheUI.chargement.finChargement.connect(self.finChargement)
@@ -383,7 +384,13 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.modificationBonDeTravailRecherche.show()
-            self.modificationBonDeTravailRechercheUI.consulterBonTravailSpecifique(self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
+            # self.modificationBonDeTravailRechercheUI.consulterBonTravailSpecifique(self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
+            self.modificationBonDeTravailRechercheUI.equipementDictionnaire = {"ID":self.rechercheBonDeTravailUI.bonDeTravailSelectionne["ID-EQ"]}
+            self.modificationBonDeTravailRechercheUI.listeBonDeTravail = [self.rechercheBonDeTravailUI.bonDeTravailSelectionne]
+            self.modificationBonDeTravailRechercheUI.lineEditID.setText(self.rechercheBonDeTravailUI.bonDeTravailSelectionne["ID-EQ"])
+            self.modificationBonDeTravailRechercheUI.consulterBDT = self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()]
+            self.modificationBonDeTravailRechercheUI.consulterBonTravailSpecifique()
+
         self.listeNavigation.append(self.modificationBonDeTravailRecherche)
 
     def afficherStatistique(self):
@@ -406,7 +413,6 @@ class Accueil(Ui_Accueil):
             # Affichage du widget s'il existe deja
             self.statistiqueUI.miseAJourStats()
             self.statistique.show()
-
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.listeNavigation.clear()
@@ -457,11 +463,12 @@ class Accueil(Ui_Accueil):
         self.frameFleche.show()
         self.masquerElementGraphique()
         equipement = self.consultationEquipementUI.equipement
+        listeBonTravail = self.consultationEquipementUI.listeBonDeTravail
         if self.ajoutBonDeTravailEquipement is None:
             # Creation du widget s'il n'existe pas
             self.ajoutBonDeTravailEquipement = QtWidgets.QWidget(self.Accueil)
             # self.afficherChargement()
-            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=self.consultationEquipementUI.equipement["ID"])
+            self.ajoutBonDeTravailEquipementUI = BonDeTravail(self.ajoutBonDeTravailEquipement, ajouterID=equipement["ID"], equipement=equipement, listeBonTravail=listeBonTravail)
             self.ajoutBonDeTravailEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.ajoutBonDeTravailEquipementUI.chargement.finChargement.connect(self.finChargement)
@@ -474,9 +481,13 @@ class Accueil(Ui_Accueil):
             # Affichage du widget s'il existe deja
             self.ajoutBonDeTravailEquipement.show()
             # self.afficherChargement()
-            self.ajoutBonDeTravailEquipementUI.lineEditID.setText(self.consultationEquipementUI.lineEditId.text())
-            self.ajoutBonDeTravailEquipementUI.chercherEquipement()
+            self.ajoutBonDeTravailEquipementUI.equipementDictionnaire = equipement
+            self.ajoutBonDeTravailEquipementUI.lineEditID.setText(equipement["ID"])
+            self.ajoutBonDeTravailEquipementUI.listeBonDeTravail = listeBonTravail
             self.ajoutBonDeTravailEquipementUI.signalFenetreBonTravail.nouveauBonTravail.emit()
+            # self.ajoutBonDeTravailEquipementUI.lineEditID.setText(self.consultationEquipementUI.lineEditId.text())
+            # self.ajoutBonDeTravailEquipementUI.chercherEquipement()
+            # self.ajoutBonDeTravailEquipementUI.signalFenetreBonTravail.nouveauBonTravail.emit()
         self.listeNavigation.append(self.ajoutBonDeTravailEquipement)
 
     def consulterBonDeTravail(self):
@@ -491,33 +502,27 @@ class Accueil(Ui_Accueil):
         self.frameFleche.show()
         self.masquerElementGraphique()
         equipement = self.consultationEquipementUI.equipement
-        if self.ajoutBonDeTravailEquipement is None:
+        listeBonTravail = self.consultationEquipementUI.listeBonDeTravail
+        if self.consultationBonDeTravail is None:
             # Creation du widget s'il n'existe pas
             self.consultationBonDeTravail = QtWidgets.QWidget(self.Accueil)
             print(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
-            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
+            self.consultationBonDeTravailUI = BonDeTravail(self.consultationBonDeTravail, self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()], equipement=equipement, listeBonTravail=listeBonTravail)
             self.consultationBonDeTravailUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.consultationBonDeTravailUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.consultationBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.consultationBonDeTravailUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
             self.consultationBonDeTravailUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
-
             self.listeElementParDefaut.append(self.consultationBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
         else:
             # Affichage du widget s'il existe deja
-            self.ajoutBonDeTravailEquipement.show()
-            # if(self.consultationEquipementUI.lineEditId.text() != self.consultationBonDeTravailUI.lineEditID.text()):
-            #     self.consultationBonDeTravailUI.lineEditID.setText(self.consultationEquipementUI.lineEditId.text())
-            #     self.consultationBonDeTravailUI.chercherEquipement()
-            #     indice = 0
-            #     while(self.consultationBonDeTravailUI.listeBonDeTravail[indice]["ID-BDT"] != str(self.consultationEquipementUI.comboBoxBons.currentIndex())):
-            #         indice += 1
-            #     self.consultationBonDeTravailUI.indiceBonDeTravail = indice
-            #     self.consultationBonDeTravailUI.chargerBonTravail()
-            #TODO voir pour optimiser le chargement
+            self.consultationBonDeTravail.show()
             self.consultationBonDeTravailUI.equipementDictionnaire = equipement
-            self.consultationBonDeTravailUI.consulterBonTravailSpecifique(self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()])
+            self.consultationBonDeTravailUI.listeBonDeTravail = listeBonTravail
+            self.consultationBonDeTravailUI.lineEditID.setText(equipement["ID"])
+            self.consultationBonDeTravailUI.consulterBDT = self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()]
+            self.consultationBonDeTravailUI.consulterBonTravailSpecifique()
         self.listeNavigation.append(self.consultationBonDeTravail)
 
     def imprimerInventaire(self):
