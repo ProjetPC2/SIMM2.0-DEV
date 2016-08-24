@@ -22,6 +22,11 @@
     <height>16777125</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -684,6 +689,18 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QComboBox" name="comboBoxCategorie">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MS Shell Dlg 2</family>
@@ -710,12 +727,7 @@ background:rgb(247, 247, 247);
          </property>
          <item>
           <property name="text">
-           <string>Catégorie 1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Catégorie 2</string>
+           <string>&quot;N\xE9gatoscope (moniteur de radiographie)&quot;</string>
           </property>
          </item>
          <item>
@@ -729,13 +741,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditMarque">
          <property name="minimumSize">
           <size>
-           <width>54</width>
+           <width>300</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>224</width>
+           <width>300</width>
            <height>16777215</height>
           </size>
          </property>
@@ -762,13 +774,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditModele">
          <property name="minimumSize">
           <size>
-           <width>54</width>
+           <width>300</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>224</width>
+           <width>300</width>
            <height>16777215</height>
           </size>
          </property>
@@ -795,13 +807,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditNoDeSerie">
          <property name="minimumSize">
           <size>
-           <width>54</width>
+           <width>300</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>224</width>
+           <width>300</width>
            <height>16777215</height>
           </size>
          </property>
@@ -826,6 +838,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QComboBox" name="comboBoxSalle">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MS Shell Dlg 2</family>
@@ -868,6 +892,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QComboBox" name="comboBoxCentreDeService">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MS Shell Dlg 2</family>
@@ -910,6 +946,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QDateEdit" name="dateEditDateDaquisition">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -937,6 +985,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QDateEdit" name="dateEditDateDuDernierEntretien">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -964,6 +1024,18 @@ background:rgb(247, 247, 247);
        </item>
        <item>
         <widget class="QComboBox" name="comboBoxProvenance">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -989,13 +1061,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditCodeASSET">
          <property name="minimumSize">
           <size>
-           <width>119</width>
+           <width>300</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>223</width>
+           <width>300</width>
            <height>16777215</height>
           </size>
          </property>
