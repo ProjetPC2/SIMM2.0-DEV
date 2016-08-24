@@ -773,19 +773,6 @@ color: rgb(81, 81, 81);
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <spacer name="horizontalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
           <widget class="QTableWidget" name="tableWidgetPiecesAssociees">
            <property name="font">
             <font>
@@ -1319,13 +1306,6 @@ background:rgb(247,247,247)
              <day>1</day>
             </datetime>
            </property>
-           <property name="date">
-            <date>
-             <year>2016</year>
-             <month>2</month>
-             <day>1</day>
-            </date>
-           </property>
            <property name="currentSection">
             <enum>QDateTimeEdit::DaySection</enum>
            </property>
@@ -1337,6 +1317,13 @@ background:rgb(247,247,247)
            </property>
            <property name="timeSpec">
             <enum>Qt::LocalTime</enum>
+           </property>
+           <property name="date">
+            <date>
+             <year>2016</year>
+             <month>2</month>
+             <day>1</day>
+            </date>
            </property>
           </widget>
          </item>
