@@ -60,6 +60,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         #Creation des calendriers pour qu'ils soient dans la langue desiree
         calendrierAcquisition = QCalendarWidget()
         calendrierAcquisition.setStyleSheet("background :#F5F5F5;\n color: black;")
+        calendrierAcquisition.setGridVisible(True)
         calendrierAcquisition.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
         calendrierEntretien = QCalendarWidget()
         calendrierEntretien.setStyleSheet("background :#F5F5F5;\n color: black;")
