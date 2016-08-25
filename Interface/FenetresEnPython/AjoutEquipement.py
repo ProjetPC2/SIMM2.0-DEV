@@ -106,10 +106,13 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxCategorie.clear()
         self.comboBoxCategorie.addItems(self.listeCategorieEquipement)
         self.comboBoxSalle.clear()
+        self.comboBoxSalle.addItem("")
         self.comboBoxSalle.addItems(self.listeSalle)
         self.comboBoxCentreDeService.clear()
+        self.comboBoxCentreDeService.addItem("")
         self.comboBoxCentreDeService.addItems(self.listeCentreService)
         self.comboBoxProvenance.clear()
+        self.comboBoxProvenance.addItem("")
         self.comboBoxProvenance.addItems(self.listeProvenance)
 
         # Creation du liste pour manipuler plus facilement ces differents labels
@@ -184,7 +187,13 @@ class AjoutEquipement(Ui_AjoutEquipement):
                 else:
                     print("probleme avec format date")
             elif type(widget) is QComboBox:
-                self.listeDonnees.append(widget.currentText())
+                if(widget.currentText() == ''):
+                    if(widget == self.comboBoxCentreDeService):
+                        self.listeDonnees.append("Inconnu")
+                    else:
+                        self.listeDonnees.append("Inconnue")
+                else:
+                    self.listeDonnees.append(widget.currentText())
             elif type(widget) is QButtonGroup:
                 bouton = widget.checkedButton()
                 etatDeService = bouton.text()

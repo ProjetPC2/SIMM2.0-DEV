@@ -1,9 +1,5 @@
 nbEquipement: 1149
 nbEquipementCentreService:
-  ? ''
-  : "Balance p\xE9diatrique": 1
-    "N\xE9gatoscope (moniteur de radiographie)": 1
-    "\xC9lectrocardiographe": 1
   Archives:
     Ordinateur: 3
     Table bucky - rayons X: 1
@@ -151,7 +147,9 @@ nbEquipementCentreService:
     "Tensiom\xE8tre": 5
     "Thermom\xE8tre": 1
   Inconnu:
-    "Balance p\xE9diatrique": 1
+    "N\xE9gatoscope (moniteur de radiographie)": 1
+    "\xC9lectrocardiographe": 1
+    "Balance p\xE9diatrique": 2
     Centrifugeuse: 1
     "Concentrateur d'oxyg\xE8ne": 2
     "Four \xE0 orth\xE8se": 1
@@ -306,8 +304,7 @@ nbEquipementEtatService:
   En maintenance: 58
   En service: 1073
 nbEquipementProvenance:
-  ? ''
-  : 396
+  Inconnue: 396
   CDC: 10
   CHU Sainte-Justine: 11
   Croix-Rouge Canadienne: 383

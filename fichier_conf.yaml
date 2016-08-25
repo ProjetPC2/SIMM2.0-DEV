@@ -129,7 +129,6 @@ CentreService:
 - "Hospitalisation m\xE9decine interne"
 - Hospitalisation chirurgie
 - "Services g\xE9n\xE9raux"
-- ''
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -156,7 +155,7 @@ EtatService:
 - En maintenance
 - Au rebus
 Provenance:
-- ''
+- Inconnue
 - SMS
 - I-TECH
 - SCMS
@@ -183,7 +182,7 @@ Salle:
 - 1312 - Salle de malnutrition JICA
 - 1320 - Salle isolement 1 JICA
 - 1321 - Salle isolement 2 JICA
-- ''
+- Inconnue
 - Observation
 - Lab 1
 - Lab 2

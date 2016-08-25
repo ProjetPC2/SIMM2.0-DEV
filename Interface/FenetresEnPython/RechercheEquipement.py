@@ -63,6 +63,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxSalle.addItem("")
         self.comboBoxSalle.addItems(self.listeSalle)
         self.comboBoxProvenance.clear()
+        self.comboBoxProvenance.addItem("")
         self.comboBoxProvenance.addItems(self.listeProvenance)
 
         fichierConf.close()
