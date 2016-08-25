@@ -69,7 +69,7 @@ _default:
       ID: '43'
       Marque: Abbott
       Modele: Commander
-      NbBonTravail: 2
+      NbBonTravail: 0
       NumeroSerie: IN651133
       Provenance: ''
       Salle: ''
@@ -107,7 +107,7 @@ _default:
       ID: '45'
       Marque: Krober medizintechnik GBMH
       Modele: Krober 02
-      NbBonTravail: 2
+      NbBonTravail: 0
       NumeroSerie: '1106040776'
       Provenance: ''
       Salle: ''
