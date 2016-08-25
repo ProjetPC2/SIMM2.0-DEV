@@ -335,7 +335,7 @@ _default:
       ID: '59'
       Marque: Atmos
       Modele: Atmoport N
-      NbBonTravail: 3
+      NbBonTravail: 4
       NumeroSerie: '60000659'
       Provenance: ''
       Salle: ''
@@ -8447,7 +8447,7 @@ _default:
       ID: '492'
       Marque: TAYLOR
       Modele: ''
-      NbBonTravail: 0
+      NbBonTravail: 1
       NumeroSerie: ''
       Provenance: ''
       Salle: ''
@@ -8504,7 +8504,7 @@ _default:
       ID: '495'
       Marque: SIBIR
       Modele: ''
-      NbBonTravail: 0
+      NbBonTravail: 1
       NumeroSerie: ''
       Provenance: MSPP
       Salle: ''
@@ -8542,7 +8542,7 @@ _default:
       ID: '497'
       Marque: PREMIUM
       Modele: ''
-      NbBonTravail: 1
+      NbBonTravail: 2
       NumeroSerie: ''
       Provenance: ''
       Salle: ''
@@ -8619,7 +8619,7 @@ _default:
       ID: '501'
       Marque: WEST POINT
       Modele: ''
-      NbBonTravail: 1
+      NbBonTravail: 2
       NumeroSerie: ''
       Provenance: ''
       Salle: ''
@@ -21856,23 +21856,26 @@ _default:
       Modele: MAC 5000
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: Croix-Rouge Canadienne
+      Provenance: CHU Sainte-Justine
       Salle: ''
     state:
       eid: 1156
-  1157:
-    CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
-    CentreService: ''
-    CodeAsset: ''
-    Commentaires: ''
-    DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-23
-    EtatConservation: Quasi neuf
-    EtatService: En maintenance
-    ID: '1203'
-    Marque: SEERITE
-    Modele: PC1624DY
-    NbBonTravail: 0
-    NumeroSerie: LL076088
-    Provenance: Croix-Rouge Canadienne
-    Salle: ''
+  1157: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
+      CentreService: ''
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-23
+      EtatConservation: Quasi neuf
+      EtatService: En maintenance
+      ID: '1203'
+      Marque: SEERITE
+      Modele: PC1624DY
+      NbBonTravail: 0
+      NumeroSerie: LL076088
+      Provenance: CHU Sainte-Justine
+      Salle: ''
+    state:
+      eid: 1157

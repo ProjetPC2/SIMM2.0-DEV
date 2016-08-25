@@ -2512,8 +2512,8 @@ _default:
         \ Elle est \xE0 2.17 v. sa charge est trop faible. Elle ne peut pas actualiser.\
         \ Elle est d\xE9fectueuse. J'ai d\xE9mont\xE9 les connecteurs de la batterie.\
         \ Maintenant c'est fonctionnel."
-      DescriptionSituation: "Lappareil s'allume et \xE9teint sans avoir affich\xE9 le\
-        \ r\xE9sultat."
+      DescriptionSituation: "Lappareil s'allume et \xE9teint sans avoir affich\xE9\
+        \ le r\xE9sultat."
       EtatBDT: "Ferm\xE9"
       ID-BDT: '1'
       ID-EQ: '546'
@@ -2845,7 +2845,6 @@ _default:
         AAIAAAAA
     state:
       eid: 148
-
   150: !!python/object/new:tinydb.database.Element
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
@@ -3077,21 +3076,104 @@ _default:
         AAgAAAAA
     state:
       eid: 160
-  161:
-    CategorieEquipement: Moniteur physiologique
-    CentreService: Urgences
-    Date: 2016-02-05
-    DescriptionIntervention: Remplacement de la batterie. Reparation du boitier pour
-      le capteur SpO2. Nettoyage du contact du bouton de demarrage.
-    DescriptionSituation: Batterie faible.
-    EtatBDT: "Ferm\xE9"
-    ID-BDT: '3'
-    ID-EQ: '85'
-    Marque: GE
-    Modele: Pro Care 300
+  161: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Moniteur physiologique
+      CentreService: Urgences
+      Date: 2016-02-05
+      DescriptionIntervention: Remplacement de la batterie. Reparation du boitier
+        pour le capteur SpO2. Nettoyage du contact du bouton de demarrage.
+      DescriptionSituation: Batterie faible.
+      EtatBDT: "Ferm\xE9"
+      ID-BDT: '3'
+      ID-EQ: '85'
+      Marque: GE
+      Modele: Pro Care 300
+      NomTechnicien: Kerlin Hyppolite
+      Pieces: []
+      Salle: ''
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        AAgAAAAA
+    state:
+      eid: 161
+  162: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "R\xE9frig\xE9rateur"
+      CentreService: Don de sang
+      Date: 2015-07-29
+      DescriptionIntervention: "Les composants du compresseur fonctionnent mais le\
+        \ compresseur est irr\xE9cuperable. Pour cela, on entrepose le r\xE9frigerateur\
+        \ pour les pi\xE8ces de rechange. "
+      DescriptionSituation: 'L''appareil s''allume mais le compresseur est dysfonctionnel. '
+      EtatBDT: Ouvert
+      ID-BDT: '2'
+      ID-EQ: '501'
+      Marque: WEST POINT
+      Modele: ''
+      NomTechnicien: Kerlin Hyppolite
+      Pieces: []
+      Salle: ''
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        AAEAAAAA
+    state:
+      eid: 162
+  163: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "R\xE9frig\xE9rateur"
+      CentreService: Don de sang
+      Date: 2016-08-08
+      DescriptionIntervention: On nettoie le ventillateur et on verifie avec le thermometre.
+      DescriptionSituation: L'appareil ne peut pas refroidir en dessous de 5 degre
+      EtatBDT: Ouvert
+      ID-BDT: '2'
+      ID-EQ: '497'
+      Marque: PREMIUM
+      Modele: ''
+      NomTechnicien: Kerlin Hyppolite
+      Pieces: []
+      Salle: ''
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        AB4AAAAA
+    state:
+      eid: 163
+  164: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Balance
+      CentreService: Don de sang
+      Date: 2016-08-08
+      DescriptionIntervention: "on a demont\xE9 l'appareil et on fixe l'aiguille a\
+        \ z\xE9ro."
+      DescriptionSituation: "Elle ne ram\xE8ne pas a z\xE9ro."
+      EtatBDT: "Ferm\xE9"
+      ID-BDT: '1'
+      ID-EQ: '492'
+      Marque: TAYLOR
+      Modele: ''
+      NomTechnicien: Kerlin Hyppolite
+      Pieces: []
+      Salle: ''
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        AB4AAAAA
+    state:
+      eid: 164
+  165:
+    CategorieEquipement: "R\xE9frig\xE9rateur"
+    CentreService: Don de sang
+    Date: 2016-08-08
+    DescriptionIntervention: 'On essaie de trouver du gaz propane. '
+    DescriptionSituation: Il ne fonctionne pas
+    EtatBDT: Ouvert
+    ID-BDT: '1'
+    ID-EQ: '495'
+    Marque: SIBIR
+    Modele: ''
     NomTechnicien: Kerlin Hyppolite
     Pieces: []
     Salle: ''
     TempsEstime: !!python/object/apply:datetime.time
     - !!binary |
-      AAgAAAAA
+      AB4AAAAA
