@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1710</width>
+    <width>1202</width>
     <height>800</height>
    </rect>
   </property>
@@ -691,13 +691,13 @@ background-color: rgb(193, 213, 243);
         <widget class="QComboBox" name="comboBoxCategorie">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -714,8 +714,7 @@ background-color: rgb(193, 213, 243);
     border-radius: 3px;
     padding: 1px 18px 1px 3px;
     min-width: 8em;
-	max-width: 200px;
-background:rgb(247, 247, 247);
+	background:rgb(247, 247, 247);
 }
 	</string>
          </property>
@@ -723,7 +722,7 @@ background:rgb(247, 247, 247);
           <number>2147483645</number>
          </property>
          <property name="sizeAdjustPolicy">
-          <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+          <enum>QComboBox::AdjustToMinimumContentsLength</enum>
          </property>
          <item>
           <property name="text">
@@ -741,13 +740,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditMarque">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -764,7 +763,6 @@ border: 1px solid gray;
 border-radius: 4px;
 background:white;
 min-width: 50px;
-max-width: 220px;
 background:rgb(247, 247, 247);
 }</string>
          </property>
@@ -774,13 +772,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditModele">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -797,7 +795,6 @@ border: 1px solid gray;
 border-radius: 4px;
 background:white;
 min-width: 50px;
-max-width: 220px;
 background:rgb(247, 247, 247);
 }</string>
          </property>
@@ -807,13 +804,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditNoDeSerie">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -830,7 +827,6 @@ border: 1px solid gray;
 border-radius: 4px;
 background:white;
 min-width: 50px;
-max-width: 220px;
 background:rgb(247, 247, 247);
 }</string>
          </property>
@@ -840,13 +836,13 @@ background:rgb(247, 247, 247);
         <widget class="QComboBox" name="comboBoxSalle">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -862,7 +858,6 @@ background:rgb(247, 247, 247);
     border-radius: 3px;
     padding: 1px 18px 1px 3px;
     min-width: 8em;
-	max-width: 200px;
 background:rgb(247, 247, 247);
 }
 	</string>
@@ -894,13 +889,13 @@ background:rgb(247, 247, 247);
         <widget class="QComboBox" name="comboBoxCentreDeService">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -916,7 +911,6 @@ background:rgb(247, 247, 247);
     border-radius: 3px;
     padding: 1px 18px 1px 3px;
     min-width: 8em;
-	max-width: 200px;
 background:rgb(247, 247, 247);
 }
 	</string>
@@ -954,7 +948,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>150</width>
+           <width>109</width>
            <height>16777215</height>
           </size>
          </property>
@@ -962,6 +956,9 @@ background:rgb(247, 247, 247);
           <font>
            <pointsize>10</pointsize>
           </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QDateEdit{
@@ -993,7 +990,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>150</width>
+           <width>109</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1026,13 +1023,13 @@ background:rgb(247, 247, 247);
         <widget class="QComboBox" name="comboBoxProvenance">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1047,7 +1044,6 @@ background:rgb(247, 247, 247);
     border-radius: 3px;
     padding: 1px 18px 1px 3px;
     min-width: 8em;
-	max-width: 200px;
 background:rgb(247, 247, 247);
 }
 	</string>
@@ -1061,13 +1057,13 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditCodeASSET">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>450</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1081,7 +1077,6 @@ background:rgb(247, 247, 247);
     border-radius: 3px;
     padding: 1px 18px 1px 3px;
     min-width: 8em;
-	max-width: 200px;
 background:rgb(247, 247, 247);</string>
          </property>
         </widget>
