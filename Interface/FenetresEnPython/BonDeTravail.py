@@ -93,6 +93,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.signalFenetreBonTravail.nouveauBonTravail.connect(self.nouveauBondeTravail)
         self.signalFenetreBonTravail.chargerBonTravail.connect(self.chargerBonTravail)
         self.signalFenetreBonTravail.chargerEquipementAPartirBon.connect(self.chargerEquipementAPartirBon)
+        self.signalFenetreBonTravail.aucunBon.connect(self.aucunBonDeTravail)
         self.listeLabelCache = list()
         self.listeLabelCache.append(self.labelCacheNomTech)
         self.listeLabelCache.append(self.labelCacheDate)
@@ -182,27 +183,47 @@ class BonDeTravail(Ui_BonDeTravail):
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
+            self.listeBonDeTravail.clear()
             self.signalFenetreBonTravail.aucunEquipement.emit()
         self.chargement.finChargement.emit()
 
     def aucunEquipementTrouve(self):
-         self.labelEcritureCatEquip.clear()
-         self.labelEcritureCentreService.clear()
-         self.labelEcritureMarque.clear()
-         self.labelEcritureSalle.clear()
-         self.labelEcritureModele.clear()
-         self.labelEcritureBonTravail.clear()
-         self.dateEdit.clear()
-         self.timeEditTempsEstime.clear()
-         self.textEditDescSituation.clear()
-         self.textEditDescIntervention.clear()
-         self.boutonAjoutBDT.setDisabled(True)
-         self.comboBoxOuvertFerme.setDisabled(True)
-         self.boutonFlecheDoubleDroite.hide()
-         self.boutonFlecheDroite.hide()
-         self.boutonFlecheGauche.hide()
-         self.boutonFlecheDoubleGauche.hide()
-         self.pushButtonValider.setDisabled(True)
+        self.labelEcritureCatEquip.clear()
+        self.labelEcritureCentreService.clear()
+        self.labelEcritureMarque.clear()
+        self.labelEcritureSalle.clear()
+        self.labelEcritureModele.clear()
+        self.labelEcritureBonTravail.clear()
+        # self.dateEdit.clear()
+        # self.timeEditTempsEstime.clear()
+        # self.textEditDescSituation.clear()
+        # self.textEditDescIntervention.clear()
+        # self.boutonAjoutBDT.setDisabled(True)
+        # self.comboBoxOuvertFerme.setDisabled(True)
+        # self.boutonFlecheDoubleDroite.hide()
+        # self.boutonFlecheDroite.hide()
+        # self.boutonFlecheGauche.hide()
+        # self.boutonFlecheDoubleGauche.hide()
+        # self.pushButtonValider.setDisabled(True)
+        self.boutonAjoutBDT.setDisabled(True)
+        self.signalFenetreBonTravail.aucunBon.emit()
+
+
+    def aucunBonDeTravail(self):
+        self.listeAjoutPieceReparation.clear()
+        self.tableWidgetPiecesAssociees.setRowCount(0)
+        self.dateEdit.clear()
+        self.timeEditTempsEstime.clear()
+        self.textEditDescSituation.clear()
+        self.textEditDescIntervention.clear()
+        self.labelEcritureBonTravail.clear()
+        self.comboBoxOuvertFerme.setDisabled(True)
+        self.boutonSauvegarde.setVisible(False)
+        self.boutonFlecheDoubleDroite.hide()
+        self.boutonFlecheDroite.hide()
+        self.boutonFlecheGauche.hide()
+        self.boutonFlecheDoubleGauche.hide()
+        self.pushButtonValider.setDisabled(True)
 
     def sauvegarderBonDeTravail(self):
         '''
@@ -234,7 +255,10 @@ class BonDeTravail(Ui_BonDeTravail):
                 print(dicRetour)
                 if dicRetour["Reussite"]:
                     print("Reussi")
-                    idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail)-1]["ID-BDT"]) + 1 + self.nombreBonAjoute)
+                    if(len(self.listeBonDeTravail)>0):
+                        idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail)-1]["ID-BDT"]) + 1 )#+ self.nombreBonAjoute)
+                    else:
+                        idBDT = 1
                     print("bon de travail d'id :", idBDT)
                     dictionnaireDonnees["ID-BDT"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
@@ -243,7 +267,6 @@ class BonDeTravail(Ui_BonDeTravail):
             else:
                 dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["ID"], self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"], dictionnaireDonnees))
                 if dicRetour["Reussite"]:
-                    pass
                     print("Modification Réussie")
                     self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = dictionnaireDonnees["Date"]
                     self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"] = dictionnaireDonnees["TempsEstime"]
@@ -265,6 +288,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.chargement.rechercheTermine.emit()
         else:
             print("Aucun bon de travail")
+            self.signalFenetreBonTravail.aucunBon.emit()
 
     def remplirBonDeTravail(self):
         #Methode permettant le remplissage des differents champs
@@ -278,43 +302,46 @@ class BonDeTravail(Ui_BonDeTravail):
     def chargerBonTravail(self):
         #Si un bon de travail a ete trouve, on remplit les differents champs associes
         self.listeAjoutPieceReparation.clear()
-        self.dateEdit.setDate(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"])
-        self.textEditDescSituation.setPlainText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
-        self.textEditDescSituation.wordWrapMode()
-        self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
-        self.textEditDescIntervention.wordWrapMode()
-        self.boutonSauvegarde.setVisible(True)
-        #Remplir le temps estime
-        self.boutonFlecheDoubleDroite.show()
-        self.boutonFlecheDroite.show()
-        self.boutonFlecheGauche.show()
-        self.boutonFlecheDoubleGauche.show()
-        self.pushButtonValider.setDisabled(False)
-        self.listeCategoriePiece.sort()
-        self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
-
-        if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
-            self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
-        if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
-            self.comboBoxOuvertFerme.setCurrentText("Fermé")
-        idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"])
-        print("idBDT", idBDT)
-        self.labelEcritureBonTravail.setText(idBDT)
         self.tableWidgetPiecesAssociees.setRowCount(0)
-        if "Pieces" in self.listeBonDeTravail[self.indiceBonDeTravail]:
-            if self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"] is not None:
-                print(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
-                self.tableWidgetPiecesAssociees.setRowCount(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
-                ligne = 0
-                for tuple in self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]:
-                    print(tuple)
-                    categorie, nomPiece, nombre = tuple
-                    self.tableWidgetPiecesAssociees.setItem(ligne, 0,
-                                                     QTableWidgetItem(categorie))
-                    self.tableWidgetPiecesAssociees.setItem(ligne, 1, QTableWidgetItem(nomPiece))
-                    self.tableWidgetPiecesAssociees.setItem(ligne, 2, QTableWidgetItem(str(nombre)))
-                    ligne += 1
-                    self.listPieceReparationUtilise.append((categorie, nomPiece, nombre))
+
+        if(len(self.listeBonDeTravail)>0):
+            self.dateEdit.setDate(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"])
+            self.textEditDescSituation.setPlainText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
+            self.textEditDescSituation.wordWrapMode()
+            self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
+            self.textEditDescIntervention.wordWrapMode()
+            self.boutonSauvegarde.setVisible(True)
+            if(len(self.listeBonDeTravail)>1):
+                self.boutonFlecheDoubleDroite.show()
+                self.boutonFlecheDroite.show()
+                self.boutonFlecheGauche.show()
+                self.boutonFlecheDoubleGauche.show()
+            self.pushButtonValider.setDisabled(False)
+            self.listeCategoriePiece.sort()
+            self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
+            if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
+                self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
+            if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
+                self.comboBoxOuvertFerme.setCurrentText("Fermé")
+            idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"])
+            print("idBDT", idBDT)
+            self.labelEcritureBonTravail.setText(idBDT)
+            if "Pieces" in self.listeBonDeTravail[self.indiceBonDeTravail]:
+                if self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"] is not None:
+                    print(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
+                    self.tableWidgetPiecesAssociees.setRowCount(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
+                    ligne = 0
+                    for tuple in self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]:
+                        print(tuple)
+                        categorie, nomPiece, nombre = tuple
+                        self.tableWidgetPiecesAssociees.setItem(ligne, 0,
+                                                         QTableWidgetItem(categorie))
+                        self.tableWidgetPiecesAssociees.setItem(ligne, 1, QTableWidgetItem(nomPiece))
+                        self.tableWidgetPiecesAssociees.setItem(ligne, 2, QTableWidgetItem(str(nombre)))
+                        ligne += 1
+                        self.listPieceReparationUtilise.append((categorie, nomPiece, nombre))
+        else:
+            self.signalFenetreBonTravail.aucunBon.emit()
 
     def bonTravailSuivant(self):
         '''
@@ -373,6 +400,8 @@ class BonDeTravail(Ui_BonDeTravail):
             widget.clear()
         self.comboBoxOuvertFerme.setDisabled(False)
         self.comboBoxOuvertFerme.setCurrentIndex(0)
+        self.lineEditID.setDisabled(True)
+        self.boutonActualiser.setDisabled(True)
         self.modificationBon = False
         self.comboBoxNomTech.show()
         self.boutonAjoutBDT.hide()
@@ -382,9 +411,11 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonFlecheDoubleGauche.hide()
         self.boutonConsultation.show()
         self.pushButtonValider.setDisabled(False)
-        if(any(self.listeBonDeTravail)):
-            self.boutonSauvegarde.show()
+        self.boutonSauvegarde.setVisible(True)
         id = self.equipementDictionnaire["ID"] + "-" + str(self.equipementDictionnaire["NbBonTravail"] + 1 + self.nombreBonAjoute)
+        print("nombre bon de travail:",self.equipementDictionnaire["NbBonTravail"])
+        print("nombre bon ajoute", self.nombreBonAjoute)
+        print("id bdt :", id)
         self.labelEcritureBonTravail.setText(str(id))
         for label in self.listeLabelCache:
             label.hide()
@@ -407,6 +438,8 @@ class BonDeTravail(Ui_BonDeTravail):
         self.textEditDescSituation.show()
         self.boutonConsultation.hide()
         self.comboBoxOuvertFerme.setDisabled(False)
+        self.lineEditID.setDisabled(False)
+        self.boutonActualiser.setDisabled(False)
         for label in self.listeLabelCache:
             label.hide()
         self.rechercherBonTravail()

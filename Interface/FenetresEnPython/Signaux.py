@@ -33,7 +33,7 @@ class Communicate(QObject):
     confirmation = pyqtSignal()
     trier = pyqtSignal()
     chargerEquipementAPartirBon = pyqtSignal()
-
+    aucunBon = pyqtSignal()
     #Fenetre Recherche Bon De Travail
 
     remplirTableau = pyqtSignal()
