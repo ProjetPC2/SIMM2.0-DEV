@@ -13438,8 +13438,6 @@ _default:
       CategorieEquipement: "Civi\xE8re de transport"
       CentreService: "Hospitalisation m\xE9decine interne"
       CodeAsset: 'H-HSM0514
-
-        '
       Commentaires: ''
       DateAcquisition: 2016-07-28
       DateDernierEntretien: 2016-08-03
@@ -18615,8 +18613,6 @@ _default:
       EtatService: En service
       ID: '1033'
       Marque: 'CIhealthcare
-
-        '
       Modele: CH30
       NbBonTravail: 0
       NumeroSerie: 0-30-16-005
@@ -18675,12 +18671,8 @@ _default:
       ID: '1036'
       Marque: CIhealthcare
       Modele: 'YX930D
-
-        '
       NbBonTravail: 0
       NumeroSerie: '4-30-16-000
-
-        '
       Provenance: JICA
       Salle: Salle de chirurgie JICA
     state:
