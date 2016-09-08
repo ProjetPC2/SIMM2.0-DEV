@@ -14,8 +14,8 @@ _default:
       Modele: Lifepak 300
       NbBonTravail: 1
       NumeroSerie: '14749'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 1
   2: !!python/object/new:tinydb.database.Element
@@ -33,8 +33,8 @@ _default:
       Modele: M1728B
       NbBonTravail: 2
       NumeroSerie: US00104416
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 2
   3: !!python/object/new:tinydb.database.Element
@@ -52,8 +52,8 @@ _default:
       Modele: 302 (Imperial III)
       NbBonTravail: 2
       NumeroSerie: 0407-4924
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 3
   4: !!python/object/new:tinydb.database.Element
@@ -69,10 +69,10 @@ _default:
       ID: '43'
       Marque: Abbott
       Modele: Commander
-      NbBonTravail: 2
+      NbBonTravail: 0
       NumeroSerie: IN651133
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 4
   5: !!python/object/new:tinydb.database.Element
@@ -90,8 +90,8 @@ _default:
       Modele: Bx-5000
       NbBonTravail: 1
       NumeroSerie: '40803'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 5
   6: !!python/object/new:tinydb.database.Element
@@ -107,10 +107,10 @@ _default:
       ID: '45'
       Marque: Krober medizintechnik GBMH
       Modele: Krober 02
-      NbBonTravail: 2
+      NbBonTravail: 0
       NumeroSerie: '1106040776'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 6
   7: !!python/object/new:tinydb.database.Element
@@ -128,8 +128,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 7
   8: !!python/object/new:tinydb.database.Element
@@ -147,8 +147,8 @@ _default:
       Modele: TS -21
       NbBonTravail: 0
       NumeroSerie: '1775'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 8
   9: !!python/object/new:tinydb.database.Element
@@ -166,8 +166,8 @@ _default:
       Modele: Autoclave 760
       NbBonTravail: 1
       NumeroSerie: '3012'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 9
   10: !!python/object/new:tinydb.database.Element
@@ -185,7 +185,7 @@ _default:
       Modele: ProCare 400
       NbBonTravail: 3
       NumeroSerie: AAW06060119SA
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 10
@@ -204,8 +204,8 @@ _default:
       Modele: NE-C16 COMP-AIR
       NbBonTravail: 1
       NumeroSerie: '323917'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 12
   13: !!python/object/new:tinydb.database.Element
@@ -223,8 +223,8 @@ _default:
       Modele: 52 000 series
       NbBonTravail: 3
       NumeroSerie: '2003007782'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 13
   14: !!python/object/new:tinydb.database.Element
@@ -242,8 +242,8 @@ _default:
       Modele: E8
       NbBonTravail: 1
       NumeroSerie: 800-726-7345
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 14
   15: !!python/object/new:tinydb.database.Element
@@ -261,8 +261,8 @@ _default:
       Modele: Cl00/200-2
       NbBonTravail: 2
       NumeroSerie: EDO 1471
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 15
   16: !!python/object/new:tinydb.database.Element
@@ -280,13 +280,13 @@ _default:
       Modele: Cl 00/ 200-2
       NbBonTravail: 2
       NumeroSerie: EDO 1456
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 16
   17: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "Sonographe (\xE9chographe)"
+      CategorieEquipement: "Sonographe (\xC9chographe)"
       CentreService: "Maternit\xE9"
       CodeAsset: ''
       Commentaires: ''
@@ -299,8 +299,8 @@ _default:
       Modele: Power Vision 6000
       NbBonTravail: 3
       NumeroSerie: F1524778
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 17
   18: !!python/object/new:tinydb.database.Element
@@ -318,8 +318,8 @@ _default:
       Modele: 404-007
       NbBonTravail: 0
       NumeroSerie: BB006633
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 18
   19: !!python/object/new:tinydb.database.Element
@@ -335,10 +335,10 @@ _default:
       ID: '59'
       Marque: Atmos
       Modele: Atmoport N
-      NbBonTravail: 3
+      NbBonTravail: 4
       NumeroSerie: '60000659'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 19
   20: !!python/object/new:tinydb.database.Element
@@ -356,8 +356,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 20
   21: !!python/object/new:tinydb.database.Element
@@ -375,8 +375,8 @@ _default:
       Modele: AFP imaging Corp
       NbBonTravail: 1
       NumeroSerie: '18243'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 21
   22: !!python/object/new:tinydb.database.Element
@@ -622,8 +622,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 34
   35: !!python/object/new:tinydb.database.Element
@@ -641,8 +641,8 @@ _default:
       Modele: F280
       NbBonTravail: 2
       NumeroSerie: YC698-0908
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 35
   36: !!python/object/new:tinydb.database.Element
@@ -660,8 +660,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 36
   37: !!python/object/new:tinydb.database.Element
@@ -679,8 +679,8 @@ _default:
       Modele: '60502'
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 37
   38: !!python/object/new:tinydb.database.Element
@@ -698,8 +698,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 38
   39: !!python/object/new:tinydb.database.Element
@@ -718,7 +718,7 @@ _default:
       NbBonTravail: 2
       NumeroSerie: US00104422
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 39
   40: !!python/object/new:tinydb.database.Element
@@ -736,7 +736,7 @@ _default:
       Modele: DYNAMAP 1846SX
       NbBonTravail: 2
       NumeroSerie: 8260 K 4290
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 40
@@ -755,7 +755,7 @@ _default:
       Modele: DINAMP 1846SX
       NbBonTravail: 2
       NumeroSerie: 8260 K 6092
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 41
@@ -775,7 +775,7 @@ _default:
       NbBonTravail: 2
       NumeroSerie: '103000156'
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 42
   43: !!python/object/new:tinydb.database.Element
@@ -793,8 +793,8 @@ _default:
       Modele: ProCare 300
       NbBonTravail: 3
       NumeroSerie: AAW05040238SA
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 43
   44: !!python/object/new:tinydb.database.Element
@@ -812,8 +812,8 @@ _default:
       Modele: ''
       NbBonTravail: 3
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 44
   45: !!python/object/new:tinydb.database.Element
@@ -851,7 +851,7 @@ _default:
       Modele: REVELATION III
       NbBonTravail: 1
       NumeroSerie: '102126'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 46
@@ -870,7 +870,7 @@ _default:
       Modele: REVELATION III
       NbBonTravail: 1
       NumeroSerie: '125303'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 47
@@ -889,7 +889,7 @@ _default:
       Modele: CX31RBSFA
       NbBonTravail: 1
       NumeroSerie: 3D06077
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 48
@@ -908,7 +908,7 @@ _default:
       Modele: CX31RBSFA
       NbBonTravail: 1
       NumeroSerie: 3D06079
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 49
@@ -927,7 +927,7 @@ _default:
       Modele: MAX II 1202 4000
       NbBonTravail: 0
       NumeroSerie: '306'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 50
@@ -946,7 +946,7 @@ _default:
       Modele: CXR
       NbBonTravail: 5
       NumeroSerie: '1000196'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 51
@@ -984,7 +984,7 @@ _default:
       Modele: Mini incubator
       NbBonTravail: 0
       NumeroSerie: '290'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 53
@@ -1003,7 +1003,7 @@ _default:
       Modele: CX31RSFA
       NbBonTravail: 0
       NumeroSerie: 3D05901
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 54
@@ -1022,7 +1022,7 @@ _default:
       Modele: CH30RF100
       NbBonTravail: 0
       NumeroSerie: '#VALEUR!'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 55
@@ -1041,7 +1041,7 @@ _default:
       Modele: REVELATION III
       NbBonTravail: 0
       NumeroSerie: '3900'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 56
@@ -1060,7 +1060,7 @@ _default:
       Modele: COMPACT II
       NbBonTravail: 0
       NumeroSerie: '3800099'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 57
@@ -1079,7 +1079,7 @@ _default:
       Modele: LW 210
       NbBonTravail: 0
       NumeroSerie: '907152'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 58
@@ -1098,7 +1098,7 @@ _default:
       Modele: PA-600T
       NbBonTravail: 0
       NumeroSerie: '710291'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 59
@@ -1117,7 +1117,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 60
@@ -1136,7 +1136,7 @@ _default:
       Modele: ABS-1 MAGNETIC STIRRER
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 61
@@ -1155,7 +1155,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 62
@@ -1213,7 +1213,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: MXL30701XS
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 65
   66: !!python/object/new:tinydb.database.Element
@@ -1269,7 +1269,7 @@ _default:
       Modele: TROPICAL
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 68
@@ -1288,7 +1288,7 @@ _default:
       Modele: TROPICAL
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 69
@@ -1366,7 +1366,7 @@ _default:
       Modele: HERATERM IGS180
       NbBonTravail: 0
       NumeroSerie: '41444426'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 73
@@ -1404,7 +1404,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 75
@@ -1423,7 +1423,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 76
@@ -1442,7 +1442,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 77
@@ -1461,7 +1461,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 78
@@ -1480,7 +1480,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 79
@@ -1499,7 +1499,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 80
@@ -1518,7 +1518,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 81
@@ -1537,7 +1537,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 82
@@ -1556,7 +1556,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 83
@@ -1575,7 +1575,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 84
@@ -1594,7 +1594,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 85
@@ -1613,7 +1613,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 86
@@ -1632,7 +1632,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 87
@@ -1651,7 +1651,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 88
@@ -1670,7 +1670,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 89
@@ -1689,7 +1689,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 90
@@ -1708,7 +1708,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 91
@@ -1727,7 +1727,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 92
@@ -1746,7 +1746,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 93
@@ -1765,7 +1765,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 94
@@ -1784,7 +1784,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 95
@@ -1803,7 +1803,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 96
@@ -1822,7 +1822,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 97
@@ -1841,7 +1841,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 98
@@ -1860,7 +1860,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 99
@@ -1879,7 +1879,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 100
@@ -1898,7 +1898,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 101
@@ -1917,7 +1917,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 102
@@ -1936,7 +1936,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 103
@@ -1974,7 +1974,7 @@ _default:
       Modele: ''
       NbBonTravail: 2
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 105
@@ -1993,7 +1993,7 @@ _default:
       Modele: ''
       NbBonTravail: 2
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 106
@@ -2012,7 +2012,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 107
@@ -2031,7 +2031,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 108
@@ -2050,7 +2050,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 109
@@ -2069,7 +2069,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 110
@@ -2088,7 +2088,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 111
@@ -2107,7 +2107,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 112
@@ -2126,7 +2126,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 113
@@ -2145,7 +2145,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 114
@@ -2164,7 +2164,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 115
@@ -2183,7 +2183,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 116
@@ -2202,7 +2202,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 117
@@ -2221,7 +2221,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 118
@@ -2240,7 +2240,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 119
@@ -2259,7 +2259,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 120
@@ -2278,7 +2278,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 121
@@ -2297,7 +2297,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 122
@@ -2316,7 +2316,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Ancien b\xE2timent"
     state:
       eid: 123
@@ -2331,11 +2331,11 @@ _default:
       EtatConservation: Acceptable
       EtatService: En service
       ID: '166'
-      Marque: ezycheckplus
+      Marque: Ezycheckplus
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 124
@@ -2354,7 +2354,7 @@ _default:
       Modele: AB
       NbBonTravail: 2
       NumeroSerie: 2-23-41-323
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 125
@@ -2373,7 +2373,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 126
@@ -2392,7 +2392,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 127
@@ -2411,7 +2411,7 @@ _default:
       Modele: quiet Life 5
       NbBonTravail: 1
       NumeroSerie: A1012740
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 128
@@ -2430,7 +2430,7 @@ _default:
       Modele: Sequal
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 129
@@ -2449,7 +2449,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 130
@@ -2468,7 +2468,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 131
@@ -2487,7 +2487,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 132
@@ -2506,7 +2506,7 @@ _default:
       Modele: F8A1884B
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 133
@@ -2525,7 +2525,7 @@ _default:
       Modele: E-8006
       NbBonTravail: 0
       NumeroSerie: 22oo8-3
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 134
@@ -2544,7 +2544,7 @@ _default:
       Modele: Excalibur Plus 60-6250-001
       NbBonTravail: 0
       NumeroSerie: 98LGE031
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 135
@@ -2563,7 +2563,7 @@ _default:
       Modele: 2150x
       NbBonTravail: 0
       NumeroSerie: '610'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 136
@@ -2582,7 +2582,7 @@ _default:
       Modele: PM-1000E
       NbBonTravail: 0
       NumeroSerie: '158499983'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 137
@@ -2601,7 +2601,7 @@ _default:
       Modele: '6003'
       NbBonTravail: 1
       NumeroSerie: K1027
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 138
@@ -2620,7 +2620,7 @@ _default:
       Modele: PM-1000E
       NbBonTravail: 0
       NumeroSerie: '158499988'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 139
@@ -2639,7 +2639,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 140
@@ -2658,7 +2658,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 141
@@ -2677,7 +2677,7 @@ _default:
       Modele: SAM300P
       NbBonTravail: 0
       NumeroSerie: O9A00053661
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 142
@@ -2696,7 +2696,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 143
@@ -2715,7 +2715,7 @@ _default:
       Modele: '7200'
       NbBonTravail: 0
       NumeroSerie: '920549'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 144
@@ -2735,7 +2735,7 @@ _default:
       Modele: Magna Clave
       NbBonTravail: 3
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 145
@@ -2754,7 +2754,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 146
@@ -2773,7 +2773,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 147
@@ -2792,7 +2792,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 148
@@ -2811,7 +2811,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 149
@@ -2830,7 +2830,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 150
@@ -2849,7 +2849,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 151
@@ -2868,7 +2868,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 152
@@ -2887,7 +2887,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 153
@@ -2906,7 +2906,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 154
@@ -2925,7 +2925,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 155
@@ -2944,7 +2944,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 156
@@ -2963,7 +2963,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 157
@@ -2982,7 +2982,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 158
@@ -3001,7 +3001,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 159
@@ -3020,7 +3020,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 160
@@ -3039,7 +3039,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 161
@@ -3058,7 +3058,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 162
@@ -3077,7 +3077,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 163
@@ -3096,7 +3096,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 164
@@ -3115,7 +3115,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 165
@@ -3134,7 +3134,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 166
@@ -3153,7 +3153,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 167
@@ -3172,7 +3172,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 168
@@ -3191,7 +3191,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 169
@@ -3210,7 +3210,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 170
@@ -3229,7 +3229,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 171
@@ -3248,7 +3248,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 172
@@ -3267,7 +3267,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 173
@@ -3286,7 +3286,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 174
@@ -3305,7 +3305,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 175
@@ -3324,7 +3324,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 176
@@ -3343,7 +3343,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 177
@@ -3362,7 +3362,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 178
@@ -3381,7 +3381,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 179
@@ -3400,7 +3400,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 180
@@ -3419,7 +3419,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 181
@@ -3438,7 +3438,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 182
@@ -3457,7 +3457,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 183
@@ -3476,7 +3476,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 184
@@ -3495,7 +3495,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 185
@@ -3514,7 +3514,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 186
@@ -3533,7 +3533,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 187
@@ -3552,7 +3552,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 188
@@ -3571,7 +3571,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 189
@@ -3590,7 +3590,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: "Salle de r\xE9cup\xE9ration"
     state:
       eid: 190
@@ -3609,7 +3609,7 @@ _default:
       Modele: OPEN RES SCAV
       NbBonTravail: 0
       NumeroSerie: '4557'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 191
@@ -3628,7 +3628,7 @@ _default:
       Modele: EXCEL 210
       NbBonTravail: 0
       NumeroSerie: AMAT00962
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 192
@@ -3647,7 +3647,7 @@ _default:
       Modele: K. TAKAOKA
       NbBonTravail: 1
       NumeroSerie: '1235'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 193
@@ -3666,7 +3666,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 194
@@ -3685,7 +3685,7 @@ _default:
       Modele: ESU-400
       NbBonTravail: 0
       NumeroSerie: US01090211
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 195
@@ -3704,7 +3704,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 196
@@ -3723,7 +3723,7 @@ _default:
       Modele: Presciption plus
       NbBonTravail: 1
       NumeroSerie: 9R-021000
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 197
@@ -3742,7 +3742,7 @@ _default:
       Modele: Stills
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 198
@@ -3761,7 +3761,7 @@ _default:
       Modele: OHMEDA 7810
       NbBonTravail: 0
       NumeroSerie: ABQY00270
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 199
@@ -3780,7 +3780,7 @@ _default:
       Modele: '7621019004'
       NbBonTravail: 0
       NumeroSerie: '2.76E+12'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 200
@@ -3802,7 +3802,7 @@ _default:
       Modele: Dash 4000
       NbBonTravail: 2
       NumeroSerie: 12SL
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 201
@@ -3840,7 +3840,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'isolation
     state:
       eid: 203
@@ -3859,7 +3859,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'isolation
     state:
       eid: 204
@@ -3878,7 +3878,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'isolation
     state:
       eid: 205
@@ -3897,7 +3897,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'isolation
     state:
       eid: 206
@@ -3916,7 +3916,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'isolation
     state:
       eid: 207
@@ -3935,7 +3935,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 208
@@ -3954,7 +3954,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 209
@@ -3974,7 +3974,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 210
@@ -3993,7 +3993,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 211
@@ -4012,7 +4012,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 212
@@ -4031,7 +4031,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: '102011'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 213
@@ -4069,7 +4069,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: '54980'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 215
@@ -4089,7 +4089,7 @@ _default:
       Modele: ELITE
       NbBonTravail: 1
       NumeroSerie: '11140499'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 216
@@ -4108,7 +4108,7 @@ _default:
       Modele: ProCare 400
       NbBonTravail: 1
       NumeroSerie: AAW06060118SA
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 217
@@ -4127,7 +4127,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 218
@@ -4146,7 +4146,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 219
@@ -4165,7 +4165,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 220
@@ -4184,7 +4184,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 221
@@ -4203,7 +4203,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 222
@@ -4222,7 +4222,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 223
@@ -4241,7 +4241,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 224
@@ -4260,7 +4260,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 225
@@ -4279,7 +4279,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 226
@@ -4298,7 +4298,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 227
@@ -4317,7 +4317,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 228
@@ -4336,7 +4336,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 229
@@ -4355,7 +4355,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 230
@@ -4374,7 +4374,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 231
@@ -4393,7 +4393,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 232
@@ -4412,7 +4412,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 233
@@ -4450,7 +4450,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 235
@@ -4469,7 +4469,7 @@ _default:
       Modele: 235 6S
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 236
@@ -4507,7 +4507,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 238
@@ -4526,7 +4526,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 239
@@ -4545,7 +4545,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 240
@@ -4564,7 +4564,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 241
@@ -4583,7 +4583,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 242
@@ -4602,7 +4602,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 243
@@ -4621,7 +4621,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 244
@@ -4640,7 +4640,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 245
@@ -4659,7 +4659,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 246
@@ -4678,7 +4678,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 247
@@ -4697,7 +4697,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 248
@@ -4716,7 +4716,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 249
@@ -4735,7 +4735,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 250
@@ -4754,7 +4754,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 251
@@ -4773,7 +4773,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 252
@@ -4792,7 +4792,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 253
@@ -4811,7 +4811,7 @@ _default:
       Modele: 725 102 1009
       NbBonTravail: 0
       NumeroSerie: 2725173093112
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 254
@@ -4830,7 +4830,7 @@ _default:
       Modele: 725 102 1009
       NbBonTravail: 0
       NumeroSerie: 2725292053721
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 255
@@ -4849,7 +4849,7 @@ _default:
       Modele: S7250
       NbBonTravail: 3
       NumeroSerie: '10.2011'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 256
@@ -4869,7 +4869,7 @@ _default:
       Modele: New life
       NbBonTravail: 1
       NumeroSerie: '118906'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 257
@@ -4888,7 +4888,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: 1107 166011
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 258
@@ -4907,7 +4907,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 259
@@ -4926,7 +4926,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: T1107 16592
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 260
@@ -4945,7 +4945,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 261
@@ -4964,7 +4964,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 262
@@ -4983,7 +4983,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 263
@@ -5002,7 +5002,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 264
@@ -5021,7 +5021,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 265
@@ -5040,7 +5040,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 266
@@ -5059,7 +5059,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 267
@@ -5078,7 +5078,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 268
@@ -5097,7 +5097,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 269
@@ -5116,7 +5116,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de consultation
     state:
       eid: 270
@@ -5135,7 +5135,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de consultation
     state:
       eid: 271
@@ -5154,7 +5154,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de consultation
     state:
       eid: 272
@@ -5173,7 +5173,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de consultation
     state:
       eid: 273
@@ -5192,7 +5192,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de consultation
     state:
       eid: 274
@@ -5211,7 +5211,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de consultation
     state:
       eid: 275
@@ -5230,7 +5230,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 276
@@ -5249,7 +5249,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 277
@@ -5268,7 +5268,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 278
@@ -5287,7 +5287,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 279
@@ -5306,7 +5306,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 280
@@ -5325,7 +5325,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 281
@@ -5344,7 +5344,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 282
@@ -5363,7 +5363,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 283
@@ -5382,7 +5382,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 284
@@ -5401,7 +5401,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 285
@@ -5420,7 +5420,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 286
@@ -5439,7 +5439,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 287
@@ -5458,7 +5458,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 288
@@ -5477,7 +5477,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 289
@@ -5496,7 +5496,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 290
@@ -5515,7 +5515,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 291
@@ -5534,7 +5534,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 292
@@ -5553,7 +5553,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 293
@@ -5572,7 +5572,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 294
@@ -5591,7 +5591,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 295
@@ -5610,7 +5610,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 296
@@ -5629,7 +5629,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 297
@@ -5648,7 +5648,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 298
@@ -5667,7 +5667,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 299
@@ -5686,7 +5686,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 300
@@ -5705,7 +5705,7 @@ _default:
       Modele: STERLING
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle de travail
     state:
       eid: 301
@@ -5724,7 +5724,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 302
@@ -5743,7 +5743,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 303
@@ -5762,7 +5762,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 304
@@ -5781,7 +5781,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 305
@@ -5800,7 +5800,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 306
@@ -5838,7 +5838,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Acceuil
     state:
       eid: 308
@@ -5895,8 +5895,8 @@ _default:
       Modele: 2080 DX
       NbBonTravail: 0
       NumeroSerie: '3643436'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 312
   313: !!python/object/new:tinydb.database.Element
@@ -5914,7 +5914,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Acceuil
     state:
       eid: 313
@@ -5933,7 +5933,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Acceuil
     state:
       eid: 314
@@ -5952,7 +5952,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Acceuil
     state:
       eid: 315
@@ -5971,7 +5971,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Acceuil
     state:
       eid: 316
@@ -5990,7 +5990,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Pansement
     state:
       eid: 317
@@ -6009,7 +6009,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Pansement
     state:
       eid: 318
@@ -6047,8 +6047,8 @@ _default:
       Modele: SAM300P
       NbBonTravail: 0
       NumeroSerie: 09A00053673
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 320
   321: !!python/object/new:tinydb.database.Element
@@ -6066,8 +6066,8 @@ _default:
       Modele: IP55
       NbBonTravail: 0
       NumeroSerie: X10I469612
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 321
   322: !!python/object/new:tinydb.database.Element
@@ -6085,8 +6085,8 @@ _default:
       Modele: HB 301
       NbBonTravail: 1
       NumeroSerie: '946813164'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 322
   323: !!python/object/new:tinydb.database.Element
@@ -6161,7 +6161,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 326
@@ -6218,7 +6218,7 @@ _default:
       Modele: ''
       NbBonTravail: 2
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 329
@@ -6237,8 +6237,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 330
   331: !!python/object/new:tinydb.database.Element
@@ -6256,8 +6256,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 331
   332: !!python/object/new:tinydb.database.Element
@@ -6275,8 +6275,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 332
   333: !!python/object/new:tinydb.database.Element
@@ -6294,8 +6294,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 333
   334: !!python/object/new:tinydb.database.Element
@@ -6313,7 +6313,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 334
@@ -6352,7 +6352,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 336
   337: !!python/object/new:tinydb.database.Element
@@ -6389,8 +6389,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 338
   340: !!python/object/new:tinydb.database.Element
@@ -6408,7 +6408,7 @@ _default:
       Modele: MILLENIUM
       NbBonTravail: 2
       NumeroSerie: 605000014003
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 340
@@ -6427,7 +6427,7 @@ _default:
       Modele: '500'
       NbBonTravail: 1
       NumeroSerie: '33473'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 341
@@ -6446,8 +6446,8 @@ _default:
       Modele: Temp Plus II 2080DX
       NbBonTravail: 1
       NumeroSerie: '3667829'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 342
   343: !!python/object/new:tinydb.database.Element
@@ -6465,8 +6465,8 @@ _default:
       Modele: ASSURE II
       NbBonTravail: 0
       NumeroSerie: '7100068427'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 343
   344: !!python/object/new:tinydb.database.Element
@@ -6484,8 +6484,8 @@ _default:
       Modele: 767 SERIES
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 344
   345: !!python/object/new:tinydb.database.Element
@@ -6503,8 +6503,8 @@ _default:
       Modele: 52000 SERIES
       NbBonTravail: 0
       NumeroSerie: '200307780'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 345
   346: !!python/object/new:tinydb.database.Element
@@ -6522,8 +6522,8 @@ _default:
       Modele: 507 NJC
       NbBonTravail: 0
       NumeroSerie: '103000156'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 346
   347: !!python/object/new:tinydb.database.Element
@@ -6541,8 +6541,8 @@ _default:
       Modele: '46502'
       NbBonTravail: 0
       NumeroSerie: '22615643'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 347
   348: !!python/object/new:tinydb.database.Element
@@ -6560,8 +6560,8 @@ _default:
       Modele: INSPIRATION 626
       NbBonTravail: 0
       NumeroSerie: '307094'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 348
   349: !!python/object/new:tinydb.database.Element
@@ -6579,8 +6579,8 @@ _default:
       Modele: HCS 30004
       NbBonTravail: 0
       NumeroSerie: '5471516'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 349
   350: !!python/object/new:tinydb.database.Element
@@ -6598,8 +6598,8 @@ _default:
       Modele: '3003'
       NbBonTravail: 0
       NumeroSerie: '426'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 350
   351: !!python/object/new:tinydb.database.Element
@@ -6617,8 +6617,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 351
   352: !!python/object/new:tinydb.database.Element
@@ -6636,8 +6636,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 352
   353: !!python/object/new:tinydb.database.Element
@@ -6655,8 +6655,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 353
   354: !!python/object/new:tinydb.database.Element
@@ -6675,7 +6675,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 354
   355: !!python/object/new:tinydb.database.Element
@@ -6694,7 +6694,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: MXL938092AL
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 355
   356: !!python/object/new:tinydb.database.Element
@@ -6713,7 +6713,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UNFPA
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 356
   357: !!python/object/new:tinydb.database.Element
@@ -6731,8 +6731,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 357
   358: !!python/object/new:tinydb.database.Element
@@ -6751,7 +6751,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 358
   359: !!python/object/new:tinydb.database.Element
@@ -6770,7 +6770,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 359
   360: !!python/object/new:tinydb.database.Element
@@ -6788,8 +6788,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 360
   361: !!python/object/new:tinydb.database.Element
@@ -6808,7 +6808,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: CDC
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 361
   362: !!python/object/new:tinydb.database.Element
@@ -6827,7 +6827,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 362
   363: !!python/object/new:tinydb.database.Element
@@ -6846,7 +6846,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 363
   364: !!python/object/new:tinydb.database.Element
@@ -6865,7 +6865,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 364
   365: !!python/object/new:tinydb.database.Element
@@ -6885,7 +6885,7 @@ _default:
       NbBonTravail: 1
       NumeroSerie: ''
       Provenance: CDC
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 365
   366: !!python/object/new:tinydb.database.Element
@@ -6903,8 +6903,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 366
   367: !!python/object/new:tinydb.database.Element
@@ -6922,8 +6922,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 367
   368: !!python/object/new:tinydb.database.Element
@@ -6941,8 +6941,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 368
   369: !!python/object/new:tinydb.database.Element
@@ -6960,8 +6960,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 369
   370: !!python/object/new:tinydb.database.Element
@@ -6979,8 +6979,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 370
   371: !!python/object/new:tinydb.database.Element
@@ -6998,8 +6998,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 371
   372: !!python/object/new:tinydb.database.Element
@@ -7017,8 +7017,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 372
   373: !!python/object/new:tinydb.database.Element
@@ -7037,7 +7037,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UNFPA
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 373
   374: !!python/object/new:tinydb.database.Element
@@ -7056,7 +7056,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 374
   375: !!python/object/new:tinydb.database.Element
@@ -7075,7 +7075,7 @@ _default:
       NbBonTravail: 2
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 375
   376: !!python/object/new:tinydb.database.Element
@@ -7093,8 +7093,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 376
   377: !!python/object/new:tinydb.database.Element
@@ -7113,7 +7113,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: MXL3061NOR
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 377
   378: !!python/object/new:tinydb.database.Element
@@ -7151,7 +7151,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: CDC
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 379
   380: !!python/object/new:tinydb.database.Element
@@ -7169,8 +7169,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: MXL9380DRJ
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 380
   381: !!python/object/new:tinydb.database.Element
@@ -7188,8 +7188,8 @@ _default:
       Modele: COMPAQ
       NbBonTravail: 0
       NumeroSerie: CZC8411N8X
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 381
   382: !!python/object/new:tinydb.database.Element
@@ -7226,7 +7226,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 1
     state:
       eid: 383
@@ -7283,7 +7283,7 @@ _default:
       Modele: '74710'
       NbBonTravail: 0
       NumeroSerie: SEP61929
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 1
     state:
       eid: 386
@@ -7322,7 +7322,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 388
   389: !!python/object/new:tinydb.database.Element
@@ -7340,8 +7340,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 389
   390: !!python/object/new:tinydb.database.Element
@@ -7360,7 +7360,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 390
   391: !!python/object/new:tinydb.database.Element
@@ -7379,7 +7379,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 391
   392: !!python/object/new:tinydb.database.Element
@@ -7492,7 +7492,7 @@ _default:
       Modele: '74710'
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 3
     state:
       eid: 397
@@ -7530,7 +7530,7 @@ _default:
       Modele: YAXI A800
       NbBonTravail: 1
       NumeroSerie: '6204'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 4
     state:
       eid: 399
@@ -7549,7 +7549,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 4
     state:
       eid: 400
@@ -7568,7 +7568,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 4
     state:
       eid: 401
@@ -7587,7 +7587,7 @@ _default:
       Modele: 2540EA
       NbBonTravail: 0
       NumeroSerie: '1101386'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 4
     state:
       eid: 402
@@ -7796,7 +7796,7 @@ _default:
       Modele: ECG1103LW
       NbBonTravail: 0
       NumeroSerie: RM15021004
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Vaccination
     state:
       eid: 413
@@ -7948,7 +7948,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Vaccination
     state:
       eid: 421
@@ -8043,7 +8043,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Vaccination
     state:
       eid: 426
@@ -8062,7 +8062,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Vaccination
     state:
       eid: 427
@@ -8081,8 +8081,8 @@ _default:
       Modele: Dinamap TM Plus
       NbBonTravail: 2
       NumeroSerie: L7761
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 428
   429: !!python/object/new:tinydb.database.Element
@@ -8101,7 +8101,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: WB11126368
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 429
   430: !!python/object/new:tinydb.database.Element
@@ -8119,7 +8119,7 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: IST
     state:
       eid: 430
@@ -8140,7 +8140,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 431
   432: !!python/object/new:tinydb.database.Element
@@ -8159,8 +8159,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: 153484HPUPB8AZF7
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 432
   433: !!python/object/new:tinydb.database.Element
@@ -8254,7 +8254,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: BOX 5
     state:
       eid: 437
@@ -8313,7 +8313,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: CDC
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 440
   441: !!python/object/new:tinydb.database.Element
@@ -8333,7 +8333,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 441
   442: !!python/object/new:tinydb.database.Element
@@ -8353,7 +8353,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 442
   443: !!python/object/new:tinydb.database.Element
@@ -8373,7 +8373,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 443
   444: !!python/object/new:tinydb.database.Element
@@ -8393,7 +8393,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: MXL9380DVG
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 444
   445: !!python/object/new:tinydb.database.Element
@@ -8412,7 +8412,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: CN18TG31PN
       Provenance: Croix-Rouge Haitienne
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 445
   446: !!python/object/new:tinydb.database.Element
@@ -8431,7 +8431,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 14LNPN1
       Provenance: Croix-Rouge Haitienne
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 446
   447: !!python/object/new:tinydb.database.Element
@@ -8447,10 +8447,10 @@ _default:
       ID: '492'
       Marque: TAYLOR
       Modele: ''
-      NbBonTravail: 0
+      NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 447
   448: !!python/object/new:tinydb.database.Element
@@ -8468,8 +8468,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 448
   449: !!python/object/new:tinydb.database.Element
@@ -8487,8 +8487,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 449
   450: !!python/object/new:tinydb.database.Element
@@ -8504,10 +8504,10 @@ _default:
       ID: '495'
       Marque: SIBIR
       Modele: ''
-      NbBonTravail: 0
+      NbBonTravail: 1
       NumeroSerie: ''
       Provenance: MSPP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 450
   451: !!python/object/new:tinydb.database.Element
@@ -8525,8 +8525,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 451
   452: !!python/object/new:tinydb.database.Element
@@ -8542,10 +8542,10 @@ _default:
       ID: '497'
       Marque: PREMIUM
       Modele: ''
-      NbBonTravail: 1
+      NbBonTravail: 2
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 452
   453: !!python/object/new:tinydb.database.Element
@@ -8564,7 +8564,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Haitienne
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 453
   454: !!python/object/new:tinydb.database.Element
@@ -8583,7 +8583,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: PNS
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 454
   455: !!python/object/new:tinydb.database.Element
@@ -8602,8 +8602,8 @@ _default:
       Modele: BT 200
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 455
   456: !!python/object/new:tinydb.database.Element
@@ -8619,10 +8619,10 @@ _default:
       ID: '501'
       Marque: WEST POINT
       Modele: ''
-      NbBonTravail: 1
+      NbBonTravail: 2
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 456
   457: !!python/object/new:tinydb.database.Element
@@ -8641,7 +8641,7 @@ _default:
       NbBonTravail: 1
       NumeroSerie: AS-BSH2-1580
       Provenance: Croix-Rouge Haitienne
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 457
   458: !!python/object/new:tinydb.database.Element
@@ -8660,7 +8660,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: Croix-Rouge Haitienne
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 458
   459: !!python/object/new:tinydb.database.Element
@@ -8679,7 +8679,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: ''
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 459
   460: !!python/object/new:tinydb.database.Element
@@ -8698,7 +8698,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '36858441601'
       Provenance: UNFPA
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 460
   461: !!python/object/new:tinydb.database.Element
@@ -8717,7 +8717,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: U62674J3N458118
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 461
   462: !!python/object/new:tinydb.database.Element
@@ -8737,7 +8737,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: VND3C46974
       Provenance: UNFPA
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 462
   463: !!python/object/new:tinydb.database.Element
@@ -8755,8 +8755,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 463
   464: !!python/object/new:tinydb.database.Element
@@ -8774,7 +8774,7 @@ _default:
       Modele: ABS-1 MAGNETIC STIRRER
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 1
     state:
       eid: 464
@@ -8794,7 +8794,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: 304046-M12C02530013
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 465
   466: !!python/object/new:tinydb.database.Element
@@ -8832,7 +8832,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: STAB07313081
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 467
   468: !!python/object/new:tinydb.database.Element
@@ -8850,8 +8850,8 @@ _default:
       Modele: SONOTRAX
       NbBonTravail: 0
       NumeroSerie: STAB07313083
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 468
   469: !!python/object/new:tinydb.database.Element
@@ -8907,8 +8907,8 @@ _default:
       Modele: VANGUARD V6500
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 471
   472: !!python/object/new:tinydb.database.Element
@@ -8926,8 +8926,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 472
   473: !!python/object/new:tinydb.database.Element
@@ -8945,8 +8945,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 473
   474: !!python/object/new:tinydb.database.Element
@@ -8964,8 +8964,8 @@ _default:
       Modele: ''
       NbBonTravail: 3
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 474
   475: !!python/object/new:tinydb.database.Element
@@ -8983,8 +8983,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 475
   476: !!python/object/new:tinydb.database.Element
@@ -9003,7 +9003,7 @@ _default:
       NbBonTravail: 1
       NumeroSerie: ''
       Provenance: UGP
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 476
   477: !!python/object/new:tinydb.database.Element
@@ -9022,8 +9022,8 @@ _default:
       Modele: ''
       NbBonTravail: 3
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 477
   478: !!python/object/new:tinydb.database.Element
@@ -9061,7 +9061,7 @@ _default:
       NbBonTravail: 2
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 479
   480: !!python/object/new:tinydb.database.Element
@@ -9080,7 +9080,7 @@ _default:
       NbBonTravail: 1
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 480
   481: !!python/object/new:tinydb.database.Element
@@ -9099,7 +9099,7 @@ _default:
       NbBonTravail: 2
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 481
   482: !!python/object/new:tinydb.database.Element
@@ -9118,7 +9118,7 @@ _default:
       NbBonTravail: 3
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 482
   483: !!python/object/new:tinydb.database.Element
@@ -9137,7 +9137,7 @@ _default:
       NbBonTravail: 3
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 483
   484: !!python/object/new:tinydb.database.Element
@@ -9156,7 +9156,7 @@ _default:
       NbBonTravail: 2
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 484
   485: !!python/object/new:tinydb.database.Element
@@ -9175,8 +9175,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 485
   486: !!python/object/new:tinydb.database.Element
@@ -9195,7 +9195,7 @@ _default:
       NbBonTravail: 1
       NumeroSerie: ''
       Provenance: I-TECH
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 486
   487: !!python/object/new:tinydb.database.Element
@@ -9213,7 +9213,7 @@ _default:
       Modele: 730-932A
       NbBonTravail: 2
       NumeroSerie: W1122
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 487
@@ -9232,7 +9232,7 @@ _default:
       Modele: 525KS
       NbBonTravail: 1
       NumeroSerie: J717789KS
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 488
@@ -9251,8 +9251,8 @@ _default:
       Modele: M165 B
       NbBonTravail: 0
       NumeroSerie: EDSF002235
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 489
   490: !!python/object/new:tinydb.database.Element
@@ -9270,8 +9270,8 @@ _default:
       Modele: ASPIRE 4752 series
       NbBonTravail: 1
       NumeroSerie: LXRSP02006140056A2000
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 490
   491: !!python/object/new:tinydb.database.Element
@@ -9289,7 +9289,7 @@ _default:
       Modele: 525KS
       NbBonTravail: 1
       NumeroSerie: J717789KS
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Observation
     state:
       eid: 491
@@ -9308,8 +9308,8 @@ _default:
       Modele: ''
       NbBonTravail: 1
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 492
   493: !!python/object/new:tinydb.database.Element
@@ -9327,7 +9327,7 @@ _default:
       Modele: kompak
       NbBonTravail: 1
       NumeroSerie: W66337
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 493
@@ -9346,8 +9346,8 @@ _default:
       Modele: ''
       NbBonTravail: 2
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 494
   495: !!python/object/new:tinydb.database.Element
@@ -9361,12 +9361,12 @@ _default:
       EtatConservation: En fin de vie
       EtatService: En maintenance
       ID: '541'
-      Marque: ezycheckplus
+      Marque: Ezycheckplus
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 495
   496: !!python/object/new:tinydb.database.Element
@@ -9384,8 +9384,8 @@ _default:
       Modele: ''
       NbBonTravail: 2
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 496
   497: !!python/object/new:tinydb.database.Element
@@ -9403,7 +9403,7 @@ _default:
       Modele: SC-55
       NbBonTravail: 2
       NumeroSerie: H-3526
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Lab 2
     state:
       eid: 497
@@ -9442,8 +9442,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 499
   500: !!python/object/new:tinydb.database.Element
@@ -9461,7 +9461,7 @@ _default:
       Modele: 3700 pilse oximeter
       NbBonTravail: 1
       NumeroSerie: FMAB0117
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 500
@@ -9499,8 +9499,8 @@ _default:
       Modele: '2080'
       NbBonTravail: 0
       NumeroSerie: '24329'
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 502
   503: !!python/object/new:tinydb.database.Element
@@ -9518,8 +9518,8 @@ _default:
       Modele: '2080'
       NbBonTravail: 0
       NumeroSerie: 2080B 3083 441*
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 503
   504: !!python/object/new:tinydb.database.Element
@@ -9537,7 +9537,7 @@ _default:
       Modele: 2080D
       NbBonTravail: 0
       NumeroSerie: 355 1354
-      Provenance: ''
+      Provenance: Inconnue
       Salle: SOP
     state:
       eid: 504
@@ -9556,7 +9556,7 @@ _default:
       Modele: 2080A
       NbBonTravail: 0
       NumeroSerie: 2080D 3242 300*
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 505
@@ -9575,8 +9575,8 @@ _default:
       Modele: sMART ups 1000
       NbBonTravail: 0
       NumeroSerie: AS0444330234
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 506
   507: !!python/object/new:tinydb.database.Element
@@ -9594,7 +9594,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 507
@@ -9613,7 +9613,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle sterilisateur
     state:
       eid: 508
@@ -9632,7 +9632,7 @@ _default:
       Modele: Sunrise Medical HHG
       NbBonTravail: 0
       NumeroSerie: PD212326
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'accouchement
     state:
       eid: 509
@@ -9651,8 +9651,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 510
   511: !!python/object/new:tinydb.database.Element
@@ -9670,8 +9670,8 @@ _default:
       Modele: Dinamap Plus
       NbBonTravail: 0
       NumeroSerie: M7082
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 511
   512: !!python/object/new:tinydb.database.Element
@@ -9689,7 +9689,7 @@ _default:
       Modele: Dinamap Plus
       NbBonTravail: 1
       NumeroSerie: 730-655 B
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Hospitalisation
     state:
       eid: 512
@@ -9728,7 +9728,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '3399024'
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 514
   515: !!python/object/new:tinydb.database.Element
@@ -9747,7 +9747,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '3401441'
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 515
   516: !!python/object/new:tinydb.database.Element
@@ -9766,7 +9766,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: '3399007'
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 516
   517: !!python/object/new:tinydb.database.Element
@@ -9784,8 +9784,8 @@ _default:
       Modele: Laser Jet 1020
       NbBonTravail: 0
       NumeroSerie: CNBKS57734
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 517
   518: !!python/object/new:tinydb.database.Element
@@ -9803,8 +9803,8 @@ _default:
       Modele: professionnal
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 518
   519: !!python/object/new:tinydb.database.Element
@@ -9822,8 +9822,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 519
   520: !!python/object/new:tinydb.database.Element
@@ -9841,8 +9841,8 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 520
   521: !!python/object/new:tinydb.database.Element
@@ -9860,7 +9860,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle d'hospitalisation
     state:
       eid: 521
@@ -10693,8 +10693,8 @@ _default:
       Modele: '6003'
       NbBonTravail: 1
       NumeroSerie: G2-2866
-      Provenance: ''
-      Salle: ''
+      Provenance: Inconnue
+      Salle: Inconnue
     state:
       eid: 564
   565: !!python/object/new:tinydb.database.Element
@@ -10718,7 +10718,7 @@ _default:
       eid: 565
   566: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Sonographe (Echographe)
+      CategorieEquipement: "Sonographe (\xC9chographe)"
       CentreService: Inconnu
       CodeAsset: ''
       Commentaires: "\xC0 mettre en service lors de la mission de Dr Dubois"
@@ -10732,7 +10732,7 @@ _default:
       NbBonTravail: 0
       NumeroSerie: A1G10X3102
       Provenance: CHU Sainte-Justine
-      Salle: ''
+      Salle: Inconnue
     state:
       eid: 566
   567: !!python/object/new:tinydb.database.Element
@@ -10750,7 +10750,7 @@ _default:
       Modele: SL-5D
       NbBonTravail: 0
       NumeroSerie: '501374'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 567
@@ -10769,7 +10769,7 @@ _default:
       Modele: SL-3D
       NbBonTravail: 0
       NumeroSerie: '203234'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 568
@@ -10788,7 +10788,7 @@ _default:
       Modele: NL-1A
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 569
@@ -10807,7 +10807,7 @@ _default:
       Modele: ACP-5D
       NbBonTravail: 0
       NumeroSerie: '421500'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 570
@@ -10826,7 +10826,7 @@ _default:
       Modele: '595'
       NbBonTravail: 0
       NumeroSerie: 595 5202
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 571
@@ -10845,7 +10845,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 572
@@ -10864,7 +10864,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 573
@@ -10883,7 +10883,7 @@ _default:
       Modele: GDx Access
       NbBonTravail: 0
       NumeroSerie: 50C-000-0670
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 574
@@ -10902,7 +10902,7 @@ _default:
       Modele: TRC-NW6S
       NbBonTravail: 0
       NumeroSerie: '287060'
-      Provenance: ''
+      Provenance: Inconnue
       Salle: Salle opthalmologie
     state:
       eid: 575
@@ -17326,7 +17326,7 @@ _default:
       Modele: ''
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: R207 - Planification familiale
     state:
       eid: 918
@@ -17864,7 +17864,7 @@ _default:
       eid: 946
   947: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "\xC9chographe"
+      CategorieEquipement: "Sonographe (\xC9chographe)"
       CentreService: Radiologie
       CodeAsset: ''
       Commentaires: ''
@@ -18086,7 +18086,7 @@ _default:
       Modele: FH-20HR
       NbBonTravail: 0
       NumeroSerie: 563-43000-16/LY493F058004
-      Provenance: ''
+      Provenance: Inconnue
       Salle: R401 - Radiographie 1 JICA
     state:
       eid: 958
@@ -18105,7 +18105,7 @@ _default:
       Modele: UD150L-40E
       NbBonTravail: 0
       NumeroSerie: 562-23374-55/LM262F5A005
-      Provenance: ''
+      Provenance: Inconnue
       Salle: R401 - Radiographie 1 JICA
     state:
       eid: 959
@@ -18126,7 +18126,7 @@ _default:
         '
       NbBonTravail: 0
       NumeroSerie: ''
-      Provenance: ''
+      Provenance: Inconnue
       Salle: R401 - Radiographie 1 JICA
     state:
       eid: 960
@@ -18436,7 +18436,7 @@ _default:
       eid: 976
   977: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: Autoclave
+      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: Chirurgie
       CodeAsset: ''
       Commentaires: ''
@@ -18455,7 +18455,7 @@ _default:
       eid: 977
   978: !!python/object/new:tinydb.database.Element
     dictitems:
-      CategorieEquipement: "St\xE9rilisateur \xE0 vapeur de haute pression"
+      CategorieEquipement: "Dispositif de l'eau \xE0 faible duret\xE9"
       CentreService: Chirurgie
       CodeAsset: ''
       Commentaires: ''
@@ -18657,7 +18657,7 @@ _default:
       EtatService: En service
       ID: '1035'
       Marque: CIhealthcare
-      Modele: YX390D
+      Modele: YX930D
       NbBonTravail: 0
       NumeroSerie: '4-30-16-001 '
       Provenance: JICA
@@ -18676,7 +18676,7 @@ _default:
       EtatService: En service
       ID: '1036'
       Marque: CIhealthcare
-      Modele: 'YX390D
+      Modele: 'YX930D
 
         '
       NbBonTravail: 0
@@ -18953,19 +18953,2945 @@ _default:
       Salle: "Hospitalisation maternit\xE9 JICA"
     state:
       eid: 1003
-  1004:
-    CategorieEquipement: Table de chevet
+  1004: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-16
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1051'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1004
+  1005: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1052'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1005
+  1006: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1053'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1006
+  1007: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1053'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1007
+  1008: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1054'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1008
+  1009: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1055'
+      Marque: Drive
+      Modele: Blue Streak Series
+      NbBonTravail: 0
+      NumeroSerie: BLS18FBD-ELR
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1009
+  1010: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1056'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1010
+  1011: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'accouchement
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1057'
+      Marque: CIhealthcare
+      Modele: A4
+      NbBonTravail: 0
+      NumeroSerie: 2-14-16-004
+      Provenance: JICA
+      Salle: 1110 - Salle d'accouchement 1 JICA
+    state:
+      eid: 1011
+  1012: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'accouchement
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1058'
+      Marque: CIhealthcare
+      Modele: A4
+      NbBonTravail: 0
+      NumeroSerie: 2-14-16-003
+      Provenance: JICA
+      Salle: 1110 - Salle d'accouchement 1 JICA
+    state:
+      eid: 1012
+  1013: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1059'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: 0-30-16-002
+      Provenance: JICA
+      Salle: 1110 - Salle d'accouchement 1 JICA
+    state:
+      eid: 1013
+  1014: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1060'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1110 - Salle d'accouchement 1 JICA
+    state:
+      eid: 1014
+  1015: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1061'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1110 - Salle d'accouchement 1 JICA
+    state:
+      eid: 1015
+  1016: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1062'
+      Marque: Custom Comfort Medtek
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: '136410'
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1016
+  1017: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Berceau
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1063'
+      Marque: CIhealthcare
+      Modele: YCB
+      NbBonTravail: 0
+      NumeroSerie: 8-13-16-002
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1017
+  1018: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Berceau
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1064'
+      Marque: CIhealthcare
+      Modele: YCB
+      NbBonTravail: 0
+      NumeroSerie: 8-13-16-000
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1018
+  1019: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Berceau
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1065'
+      Marque: CIhealthcare
+      Modele: YCB
+      NbBonTravail: 0
+      NumeroSerie: 8-13-16-001
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1019
+  1020: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil \xE0 succion"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1066'
+      Marque: CIhealthcare
+      Modele: YX930D
+      NbBonTravail: 0
+      NumeroSerie: 4-30-16-003
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1020
+  1021: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Appareil \xE0 succion"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1067'
+      Marque: CIIhealthcare
+      Modele: YX930D
+      NbBonTravail: 0
+      NumeroSerie: 4-30-16-002
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1021
+  1022: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1068'
+      Marque: RICE LAKE
+      Modele: RL-DBS
+      NbBonTravail: 0
+      NumeroSerie: 06051301428
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1022
+  1023: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: UPS
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1069'
+      Marque: forza
+      Modele: SL-1011LCD-D
+      NbBonTravail: 0
+      NumeroSerie: '421512300517'
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1023
+  1024: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de secours
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1070'
+      Marque: CIhealthcare
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1024
+  1025: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Doppler f\u0153tal \xE0 ultrasons"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1071'
+      Marque: COMeN
+      Modele: STAR5000A
+      NbBonTravail: 0
+      NumeroSerie: '88192308'
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1025
+  1026: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Doppler f\u0153tal \xE0 ultrasons"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1072'
+      Marque: COMeN
+      Modele: STAR5000A
+      NbBonTravail: 0
+      NumeroSerie: '88192303'
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1026
+  1027: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Doppler f\u0153tal \xE0 ultrasons"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1073'
+      Marque: COMeN
+      Modele: STAR5000A
+      NbBonTravail: 0
+      NumeroSerie: '88192304'
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1027
+  1028: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Humidificateur
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1074'
+      Marque: c&u Medical Systems
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1028
+  1029: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Humidificateur
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1075'
+      Marque: c&u Medical Systems
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1112 - Salle d'ablution JICA
+    state:
+      eid: 1029
+  1030: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'accouchement
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1076'
+      Marque: CIhealthcare
+      Modele: A4
+      NbBonTravail: 0
+      NumeroSerie: 2-14-16-002
+      Provenance: JICA
+      Salle: 1111 - Salle d'accouchement 2 JICA
+    state:
+      eid: 1030
+  1031: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'accouchement
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1077'
+      Marque: CIhealthcare
+      Modele: A4
+      NbBonTravail: 0
+      NumeroSerie: 2-14-16-002
+      Provenance: JICA
+      Salle: 1111 - Salle d'accouchement 2 JICA
+    state:
+      eid: 1031
+  1032: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1078'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1111 - Salle d'accouchement 2 JICA
+    state:
+      eid: 1032
+  1033: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1079'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1111 - Salle d'accouchement 2 JICA
+    state:
+      eid: 1033
+  1034: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de phototh\xE9rapie n\xE9onatale"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1080'
+      Marque: Nakamura
+      Modele: NIW-3500
+      NbBonTravail: 0
+      NumeroSerie: '2710387'
+      Provenance: JICA
+      Salle: 1111 - Salle d'accouchement 2 JICA
+    state:
+      eid: 1034
+  1035: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Tensiom\xE8tre"
+      CentreService: "Maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1081'
+      Marque: Veridian
+      Modele: 02-131
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1111 - Salle d'accouchement 2 JICA
+    state:
+      eid: 1035
+  1036: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1082'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1036
+  1037: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1083'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1037
+  1038: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1084'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1038
+  1039: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1085'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1039
+  1040: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1086'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1040
+  1041: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1087'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1041
+  1042: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1088'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1042
+  1043: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1089'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1043
+  1044: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1090'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1044
+  1045: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1091'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1045
+  1046: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1092'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1046
+  1047: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1093'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1047
+  1048: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1094'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1048
+  1049: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1095'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1049
+  1050: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1096'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1050
+  1051: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1097'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1051
+  1052: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1098'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1052
+  1053: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1099'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1053
+  1054: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1100'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1054
+  1055: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1101'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1055
+  1056: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1102'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1056
+  1057: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1103'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1057
+  1058: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1104'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1058
+  1059: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1105'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1059
+  1060: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1106'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1060
+  1061: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1107'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1061
+  1062: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1108'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1062
+  1063: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1109'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1063
+  1064: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1110'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1064
+  1065: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1111'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1065
+  1066: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1112'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1066
+  1067: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1113'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1067
+  1068: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1114'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1068
+  1069: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1115'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1069
+  1070: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1116'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1070
+  1071: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1117'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1071
+  1072: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1118'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1072
+  1073: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1119'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1073
+  1074: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1120'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1074
+  1075: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1121'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1075
+  1076: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1122'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1076
+  1077: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1123'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1077
+  1078: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1124'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1078
+  1079: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1125'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1079
+  1080: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1126'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1080
+  1081: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1127'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1081
+  1082: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1128'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1082
+  1083: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1129'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1083
+  1084: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1130'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1084
+  1085: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1131'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1085
+  1086: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1132'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1086
+  1087: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1133'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: 0-30-16-009
+      Provenance: JICA
+      Salle: 1222 - Soins critiques JICA
+    state:
+      eid: 1087
+  1088: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1134'
+      Marque: drive
+      Modele: Blue Streak Series
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation maternit\xE9 JICA"
+    state:
+      eid: 1088
+  1089: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: UPS
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1135'
+      Marque: Matsunaga Manufacturing
+      Modele: US-A128-J
+      NbBonTravail: 0
+      NumeroSerie: C151001
+      Provenance: JICA
+      Salle: 1201 - Salle de consultation JICA
+    state:
+      eid: 1089
+  1090: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Sonographe (\xC9chographe)"
+      CentreService: "Hospitalisation maternit\xE9"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1136'
+      Marque: Hitachi Aloka Medical
+      Modele: prosound6
+      NbBonTravail: 0
+      NumeroSerie: 204B9587
+      Provenance: JICA
+      Salle: 1201 - Salle de consultation JICA
+    state:
+      eid: 1090
+  1091: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Incubateur n\xE9onatal"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1137'
+      Marque: Nakamura
+      Modele: H-2000 LCS-ICU
+      NbBonTravail: 0
+      NumeroSerie: 0696
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1091
+  1092: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Incubateur n\xE9onatal"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1138'
+      Marque: Nakamura
+      Modele: H-2000 LCS-ICU
+      NbBonTravail: 0
+      NumeroSerie: 0697
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1092
+  1093: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Civi\xE8re de transport"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1139'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1093
+  1094: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1140'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1094
+  1095: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1141'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1095
+  1096: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1142'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1096
+  1097: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1143'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1097
+  1098: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1144'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1098
+  1099: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de phototh\xE9rapie n\xE9onatale"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1145'
+      Marque: Nakamura
+      Modele: NIW-3500
+      NbBonTravail: 0
+      NumeroSerie: '2710386'
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1099
+  1100: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Table de soins n\xE9onataux"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1146'
+      Marque: Nakamura
+      Modele: M-1000
+      NbBonTravail: 0
+      NumeroSerie: '1062'
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1100
+  1101: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Unit\xE9 de phototh\xE9rapie n\xE9onatale"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1147'
+      Marque: Nakamura
+      Modele: PT-2000H
+      NbBonTravail: 0
+      NumeroSerie: '1406019'
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1101
+  1102: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de secours
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1148'
+      Marque: CIhealthcare
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "1401 - Unit\xE9 de soins intensifs des nouveaux-n\xE9s JICA"
+    state:
+      eid: 1102
+  1103: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table d'examen
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1149'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1303 - Salle de consultation JICA
+    state:
+      eid: 1103
+  1104: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chariot de soins
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1150'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie"
+    state:
+      eid: 1104
+  1105: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1151'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: 0-30-16-004
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1105
+  1106: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Support \xE0 solut\xE9s"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1152'
+      Marque: CIhealthcare
+      Modele: CH30
+      NbBonTravail: 0
+      NumeroSerie: 0-30-16-008
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1106
+  1107: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lampe d'examen
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1153'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1107
+  1108: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1154'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1108
+  1109: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1155'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1109
+  1110: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1156'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1110
+  1111: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1157'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1111
+  1112: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-17
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1158'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1112
+  1113: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1159'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1113
+  1114: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1160'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1114
+  1115: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1161'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1115
+  1116: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1162'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1116
+  1117: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1163'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1117
+  1118: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1164'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1118
+  1119: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1165'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1119
+  1120: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1166'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1120
+  1121: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1167'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1121
+  1122: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1168'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1122
+  1123: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1169'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1123
+  1124: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1170'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1124
+  1125: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1171'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1125
+  1126: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1172'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1126
+  1127: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1173'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1127
+  1128: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1174'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1128
+  1129: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1175'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1129
+  1130: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1176'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1130
+  1131: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1177'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1131
+  1132: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Chaise roulante
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1178'
+      Marque: Drive
+      Modele: Silver Sport II
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "Hospitalisation p\xE9diatrie JICA"
+    state:
+      eid: 1132
+  1133: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: UPS
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1179'
+      Marque: Toyozumi
+      Modele: '49121'
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: "R107 - Salle de st\xE9rilisation JICA"
+    state:
+      eid: 1133
+  1134: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Enregistreur
+      CentreService: Chirurgie
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1180'
+      Marque: Yokogawa
+      Modele: '436106'
+      NbBonTravail: 0
+      NumeroSerie: S5R805604
+      Provenance: JICA
+      Salle: "R107 - Salle de st\xE9rilisation JICA"
+    state:
+      eid: 1134
+  1135: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1181'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1135
+  1136: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1182'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1136
+  1137: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1183'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1137
+  1138: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1184'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1138
+  1139: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1185'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1139
+  1140: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1186'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1140
+  1141: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-18
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1187'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1141
+  1142: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Lit
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1188'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1142
+  1143: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1189'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1143
+  1144: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1190'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1144
+  1145: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1191'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1145
+  1146: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1192'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1146
+  1147: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1193'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1147
+  1148: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1194'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1148
+  1149: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1195'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1149
+  1150: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1196'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1312 - Salle de malnutrition JICA
+    state:
+      eid: 1150
+  1151: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1197'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1320 - Salle isolement 1 JICA
+    state:
+      eid: 1151
+  1152: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1198'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1320 - Salle isolement 1 JICA
+    state:
+      eid: 1152
+  1153: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Lit p\xE9diatrique"
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1199'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1321 - Salle isolement 2 JICA
+    state:
+      eid: 1153
+  1154: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: Table de chevet
+      CentreService: "P\xE9diatrie"
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-06-28
+      DateDernierEntretien: 2016-08-22
+      EtatConservation: Quasi neuf
+      EtatService: En service
+      ID: '1200'
+      Marque: CIhealthcare
+      Modele: CM20
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: JICA
+      Salle: 1321 - Salle isolement 2 JICA
+    state:
+      eid: 1154
+  1155: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "Balance p\xE9diatrique"
+      CentreService: Inconnu
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-23
+      EtatConservation: Quasi neuf
+      EtatService: En maintenance
+      ID: '1201'
+      Marque: ''
+      Modele: ''
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: Croix-Rouge Canadienne
+      Salle: Inconnue
+    state:
+      eid: 1155
+  1156: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "\xC9lectrocardiographe"
+      CentreService: Inconnu
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-23
+      EtatConservation: Quasi neuf
+      EtatService: En maintenance
+      ID: '1202'
+      Marque: GE
+      Modele: MAC 5000
+      NbBonTravail: 0
+      NumeroSerie: ''
+      Provenance: CHU Sainte-Justine
+      Salle: Inconnue
+    state:
+      eid: 1156
+  1157: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
+      CentreService: Inconnu
+      CodeAsset: ''
+      Commentaires: ''
+      DateAcquisition: 2016-07-28
+      DateDernierEntretien: 2016-08-23
+      EtatConservation: Quasi neuf
+      EtatService: En maintenance
+      ID: '1203'
+      Marque: SEERITE
+      Modele: PC1624DY
+      NbBonTravail: 0
+      NumeroSerie: LL076088
+      Provenance: CHU Sainte-Justine
+      Salle: Inconnue
+    state:
+      eid: 1157
+  1158:
+    CategorieEquipement: "Support \xE0 solut\xE9s"
     CentreService: "Maternit\xE9"
     CodeAsset: ''
     Commentaires: ''
     DateAcquisition: 2016-07-28
-    DateDernierEntretien: 2016-08-16
+    DateDernierEntretien: 2016-08-26
     EtatConservation: Quasi neuf
     EtatService: En service
-    ID: '1051'
-    Marque: ''
-    Modele: ''
+    ID: '1204'
+    Marque: CIhealthcare
+    Modele: CH30
     NbBonTravail: 0
-    NumeroSerie: ''
+    NumeroSerie: 0-30-16-000
     Provenance: JICA
     Salle: "Hospitalisation maternit\xE9 JICA"

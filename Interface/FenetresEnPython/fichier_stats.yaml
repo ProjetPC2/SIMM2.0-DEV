@@ -1,7 +1,9 @@
-nbEquipement: 596
+nbEquipement: 1150
 nbEquipementCentreService:
   Archives:
     Ordinateur: 3
+    Table bucky - rayons X: 1
+    Table d'examen: 1
   "Bloc op\xE9ratoire":
     "Appareil d'anesth\xE9sie": 4
     "Appareil d'\xE9lectrochirurgie": 4
@@ -32,30 +34,60 @@ nbEquipementCentreService:
     Table d'examen: 7
     Table d'instruments: 5
     UPS: 1
-  Clinique externe:
-    Balance: 3
-    "Balance p\xE9diatrique": 2
-    Chaise dentiste: 1
-    "Concentrateur d'oxyg\xE8ne": 1
+  Chirurgie:
+    "Appareil d'anesth\xE9sie": 3
+    "Appareil \xE0 succion": 2
+    Chariot de secours: 1
+    "Civi\xE8re de transport": 1
+    "Dispositif de l'eau \xE0 faible duret\xE9": 1
     "D\xE9fibrilateur": 1
+    Enregistreur: 1
+    Infusions seringue pompe: 2
+    "Lampe d'op\xE9ration": 3
+    Lit: 3
+    "N\xE9gatoscope (moniteur de radiographie)": 2
+    Pompe pour perfusion: 2
+    "St\xE9rilisateur \xE0 vapeur": 1
+    "Support \xE0 solut\xE9s": 2
+    "Table d'op\xE9ration chirurgicale": 2
+    "Table d'op\xE9ration orthop\xE9dique": 1
+    Table de chevet: 3
+    UPS: 1
+  Clinique externe:
+    "Appareil \xE0 succion": 1
+    "Bain \xE0 ultrasons": 1
+    Balance: 6
+    "Balance p\xE9diatrique": 3
+    Chaise dentiste: 1
+    Chariot de soins: 17
+    "Concentrateur d'oxyg\xE8ne": 1
+    "Cong\xE9lateur": 2
+    "D\xE9fibrilateur": 1
+    Fauteuil pour traitement dentaire: 1
     "Glucom\xE8tre": 3
-    Lampe d'examen: 1
+    Lampe d'examen: 15
+    Lit: 3
+    Microscope ophtalmologique: 1
     "Moniteur f\u0153tal": 2
-    "N\xE9bulisateur": 3
+    "N\xE9bulisateur": 4
     "N\xE9gatoscope (moniteur de radiographie)": 10
-    Ordinateur: 10
-    Otoscope: 6
+    Ordinateur: 11
+    Otoscope: 14
+    "R\xE9frig\xE9rateur": 2
     "Saturom\xE8tre (Oxym\xE8tre)": 2
     "St\xE9rilisateur \xE0 vapeur": 2
-    "Support \xE0 solut\xE9s": 1
-    Table d'examen: 7
+    "Support \xE0 solut\xE9s": 7
+    Table d'examen: 25
+    Table d'examen ophtalmologie: 1
     Table d'instruments: 3
-    "Tensiom\xE8tre": 9
+    Table de chevet: 1
+    "Table de consultation gyn\xE9cologique": 1
+    "Tensiom\xE8tre": 16
     Toise: 1
     UPS: 5
+    "Unit\xE9 de rayon X intra-oral": 1
     "\xC9lectrocardiographe": 1
   Comptabilite:
-    "N\xE9bulisateur": 1
     Ordinateur: 1
   Don de sang:
     Autre: 2
@@ -66,20 +98,68 @@ nbEquipementCentreService:
     Incubateur: 2
     Ordinateur: 1
     "R\xE9frig\xE9rateur": 4
+  Hospitalisation chirurgie:
+    Balance: 1
+    Chaise roulante: 6
+    Chariot de soins: 5
+    "Civi\xE8re de transport": 2
+    "Concentrateur d'oxyg\xE8ne": 2
+    "Cong\xE9lateur": 1
+    "Glucom\xE8tre": 1
+    Lampe d'examen: 1
+    Lit: 2
+    "Lit orthop\xE9dique": 25
+    "N\xE9gatoscope (moniteur de radiographie)": 1
+    "R\xE9frig\xE9rateur": 1
+    "Saturom\xE8tre (Oxym\xE8tre)": 2
+    "Scie \xE0 pl\xE2tre": 1
+    "Support \xE0 solut\xE9s": 20
+    Table d'examen: 1
+    Table d'instruments: 1
+    Table de chevet: 27
+    Table de lit: 26
+    "Tensiom\xE8tre": 6
+  "Hospitalisation maternit\xE9":
+    Chaise roulante: 1
+    Chariot de soins: 1
+    "Civi\xE8re de transport": 1
+    Lit: 24
+    "Sonographe (\xC9chographe)": 1
+    "Support \xE0 solut\xE9s": 1
+    Table de chevet: 25
+    UPS: 1
+  "Hospitalisation m\xE9decine interne":
+    Balance: 2
+    Chaise roulante: 5
+    Chariot de soins: 4
+    "Civi\xE8re de transport": 2
+    "Concentrateur d'oxyg\xE8ne": 3
+    "Cong\xE9lateur": 1
+    "D\xE9fibrilateur": 1
+    "Glucom\xE8tre": 1
+    Lit: 51
+    "R\xE9frig\xE9rateur": 1
+    "Saturom\xE8tre (Oxym\xE8tre)": 2
+    "Support \xE0 solut\xE9s": 29
+    Table d'instruments: 4
+    Table de chevet: 32
+    Table de lit: 25
+    "Tensiom\xE8tre": 5
+    "Thermom\xE8tre": 1
   Inconnu:
-    Analyseur biochimie: 1
-    Autre: 1
-    "Balance p\xE9diatrique": 1
+    "Balance p\xE9diatrique": 2
     Centrifugeuse: 1
-    "Concentrateur d'oxyg\xE8ne": 1
+    "Concentrateur d'oxyg\xE8ne": 2
     "Four \xE0 orth\xE8se": 1
     Moniteur PNI: 1
     Moniteur physiologique: 1
     "N\xE9bulisateur": 1
-    Sonographe (Echographe): 1
+    "N\xE9gatoscope (moniteur de radiographie)": 1
+    "Sonographe (\xC9chographe)": 1
     "St\xE9rilisateur \xE0 vapeur": 1
-    "Tensiom\xE8tre": 17
+    "Tensiom\xE8tre": 6
     "Thermom\xE8tre": 6
+    "\xC9lectrocardiographe": 1
   Laboratoire:
     Analyseur CD4 (VIH): 1
     Analyseur biochimie: 1
@@ -96,34 +176,32 @@ nbEquipementCentreService:
     "Spectrophotom\xE8tre": 1
     UPS: 4
   "Maternit\xE9":
+    "Appareil \xE0 succion": 2
     Balance: 1
-    "Balance p\xE9diatrique": 4
-    Chaise roulante: 1
-    "Civi\xE8re de transport": 1
+    "Balance p\xE9diatrique": 5
+    Berceau: 3
+    Chaise roulante: 2
+    Chariot de secours: 1
+    "Civi\xE8re de transport": 2
     "Concentrateur d'oxyg\xE8ne": 2
-    Lampe d'examen: 2
-    Lit: 16
+    "Doppler f\u0153tal \xE0 ultrasons": 3
+    Humidificateur: 2
+    Lampe d'examen: 4
+    Lit: 22
     "Moniteur f\u0153tal": 1
     Ordinateur: 1
     Otoscope: 1
-    Sonographe (Echographe): 1
-    "Support \xE0 solut\xE9s": 9
-    Table d'examen: 5
+    "Sonographe (\xC9chographe)": 1
+    "Support \xE0 solut\xE9s": 12
+    Table d'accouchement: 4
+    Table d'examen: 6
     Table d'instruments: 5
-    Table de chevet: 2
-    "Table de soins n\xE9onataux": 7
-    "Tensiom\xE8tre": 1
+    Table de chevet: 9
+    "Table de soins n\xE9onataux": 8
+    "Tensiom\xE8tre": 3
     "Thermom\xE8tre": 1
-  Medecine interne:
-    Balance: 1
-    Chaise roulante: 1
-    "Concentrateur d'oxyg\xE8ne": 1
-    Lit: 26
-    "Support \xE0 solut\xE9s": 9
-    Table d'instruments: 3
-    Table de chevet: 7
-    "Tensiom\xE8tre": 1
-    "Thermom\xE8tre": 1
+    UPS: 1
+    "Unit\xE9 de phototh\xE9rapie n\xE9onatale": 1
   Opthalmologie:
     "Autor\xE9fractom\xE8tre": 1
     "Cam\xE9ra r\xE9tinienne": 1
@@ -141,85 +219,102 @@ nbEquipementCentreService:
   "P\xE9diatrie":
     Balance: 6
     "Balance p\xE9diatrique": 6
-    "Incubateur n\xE9onatal": 2
-    Lampe d'examen: 5
-    Lit: 12
+    Chaise roulante: 1
+    Chariot de secours: 1
+    Chariot de soins: 1
+    "Civi\xE8re de transport": 1
+    "Incubateur n\xE9onatal": 4
+    Lampe d'examen: 6
+    Lit: 22
+    "Lit p\xE9diatrique": 15
     Moniteur PNI: 1
     Moniteur physiologique: 1
     "N\xE9gatoscope (moniteur de radiographie)": 1
     Ordinateur: 2
-    Otoscope: 4
+    Otoscope: 3
     "R\xE9frig\xE9rateur": 1
     "Saturom\xE8tre (Oxym\xE8tre)": 1
-    "Support \xE0 solut\xE9s": 8
-    Table d'examen: 8
+    "Support \xE0 solut\xE9s": 10
+    Table d'examen: 9
     Table d'instruments: 3
-    "Table de soins n\xE9onataux": 13
+    Table de chevet: 24
+    "Table de soins n\xE9onataux": 14
     "Tensiom\xE8tre": 1
     Toise: 2
     UPS: 1
+    "Unit\xE9 de phototh\xE9rapie n\xE9onatale": 2
     "\xC9lectrocardiographe": 1
   Radiologie:
     Appareil de radiographie: 2
+    "Cabinet de contr\xF4le rayons X": 2
+    Collimateur: 2
+    "Console de contr\xF4le rayons X": 2
+    "D\xE9veloppeur automatique": 1
     "N\xE9gatoscope (moniteur de radiographie)": 2
+    "Sonographe (\xC9chographe)": 1
+    "Support \xE0 tubes - rayons X": 1
     "S\xE9choir": 1
-    Table d'examen: 1
+    Table bucky - rayons X: 1
+    Table d'examen: 3
     Table d'instruments: 1
+    UPS: 1
+    "Unit\xE9 de radio mobile": 1
+    "Unit\xE9 radio de type plafonnier": 1
+    Vertical bucky stand - rayons X: 2
+    "\xC9lectrocardiographe": 1
   "R\xE9adaptation":
     Ordinateur: 1
     Table d'examen: 3
   Secretaire de direction medicale:
     Imprimante: 1
+  "Services g\xE9n\xE9raux":
+    Lit: 2
+    Table de chevet: 2
   Urgences:
     Analyseur biochimie: 1
     "Analyseur h\xE9matologie": 1
-    "Appareil \xE0 succion": 2
+    "Appareil \xE0 succion": 3
     Balance: 1
-    Chaise roulante: 2
-    "Civi\xE8re de transport": 1
+    Chaise roulante: 3
+    Chariot de secours: 1
+    Chariot de soins: 1
+    "Civi\xE8re de transport": 2
     "Concentrateur d'oxyg\xE8ne": 4
     "D\xE9fibrilateur": 5
-    Lampe d'examen: 2
-    Lit: 6
-    Moniteur PNI: 6
-    Moniteur physiologique: 2
-    "N\xE9bulisateur": 5
+    Lampe d'examen: 5
+    Lit: 11
+    Moniteur PNI: 5
+    Moniteur physiologique: 3
+    "N\xE9bulisateur": 6
     "Saturom\xE8tre (Oxym\xE8tre)": 2
-    "Support \xE0 solut\xE9s": 7
-    Table d'examen: 6
+    "Support \xE0 solut\xE9s": 9
+    Table d'examen: 9
     Table d'instruments: 6
-    "Tensiom\xE8tre": 8
+    Table de chevet: 5
+    "Tensiom\xE8tre": 10
     "Thermom\xE8tre": 2
-    "\xC9lectrocardiographe": 1
-  hopital general:
-    "Concentrateur d'oxyg\xE8ne": 4
-    "D\xE9fibrilateur": 1
-    "Glucom\xE8tre": 2
-    "N\xE9gatoscope (moniteur de radiographie)": 1
-    "Saturom\xE8tre (Oxym\xE8tre)": 4
-    "Scie \xE0 pl\xE2tre": 1
-    "Tensiom\xE8tre": 4
 nbEquipementEtatConservation:
-  Acceptable: 448
-  "D\xE9suet": 17
-  En fin de vie: 51
-  Quasi neuf: 80
+  Acceptable: 449
+  Desuet: 4
+  "D\xE9suet": 13
+  En fin de vie: 47
+  Quasi neuf: 637
 nbEquipementEtatService:
-  Au rebus: 27
-  En maintenance: 50
-  En service: 519
+  Au rebus: 18
+  En maintenance: 58
+  En service: 1074
 nbEquipementProvenance:
-  ? ''
-  : 394
   CDC: 10
   CHU Sainte-Justine: 11
-  Croix-Rouge Canadienne: 64
+  Croix-Rouge Canadienne: 383
   Croix-Rouge Haitienne: 5
   I-TECH: 51
+  Inconnue: 396
+  JICA: 234
   MSPP: 1
   PNS: 1
   SCMS: 3
   SMS: 6
-  UGP: 45
+  UGP: 44
   UNFPA: 4
   UNICEF: 1
