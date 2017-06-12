@@ -27,6 +27,7 @@ from Interface.FenetresEnPython.Statistique import Statistique
 from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeTravail
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
+from Interface.FenetresEnPython.FenetrePersonnalisable import FenetrePersonnalisable
 
 
 class Accueil(Ui_Accueil):
@@ -95,6 +96,7 @@ class Accueil(Ui_Accueil):
         self.support = None
         self.supprimeEquipement = None
         self.supprimeBonDeTravail = None
+        self.fenetrePersonnalisee= None
 
         self.connectionBouton()
 
@@ -448,6 +450,7 @@ class Accueil(Ui_Accueil):
             self.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(False)
             self.supportPC2UI.boutonSupprimerEquipement.setEnabled(False)
             self.supportPC2UI.boutonSupprimerBon.setEnabled(False)
+            self.supportPC2UI.boutonFenetrePersonnalisable.setEnabled(False)
             self.supportPC2UI.BoutonVerrou.setEnabled(True)
 
 
@@ -548,6 +551,7 @@ class Accueil(Ui_Accueil):
             self.supportPC2UI = SupportPC2(self.support)
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
+            self.supportPC2UI.boutonFenetrePersonnalisable.clicked.connect(self.fenetrePersonnalisable)
             self.listeElementParDefaut.append(self.support)
             self.layoutAffichagePrincipal.addWidget(self.support)
             self.creation.supportCree.emit()
@@ -558,6 +562,32 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
         self.listeNavigation.append(self.support)
+
+    def fenetrePersonnalisable(self):
+        '''
+                    Affichage du widget permettant de personnaliser les fenetres
+                    Masquage des autres elements graphiques de la partie principale
+                    :param: None
+                    :return:
+                '''
+        # On masque les autres elements
+        self.masquerElementGraphique()
+        self.frameFleche.show()
+        self.BoutonFlecheNavigation.show()
+        if self.fenetrePersonnalisee is None:
+            # Creation du widget s'il n'existe pas
+            self.fenetrePersonnalisee = QtWidgets.QWidget(self.Accueil)
+            print("2")
+            self.fenetrePersonnaliseeUI = FenetrePersonnalisable (self.fenetrePersonnalisee)
+            print("3)")
+            self.listeElementParDefaut.append(self.fenetrePersonnalisee)
+            print("4")
+            self.layoutAffichagePrincipal.addWidget(self.fenetrePersonnalisee)
+            print("yolo")
+        else:
+            # Affichage du widget s'il existe deja
+            self.fenetrePersonnalisee.show()
+        self.listeNavigation.append(self.fenetrePersonnalisee)
 
     def supprimerEquipement(self):
         '''
@@ -786,6 +816,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.supportPC2UI.BoutonVerrou.setEnabled(False)
         self.ui.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
         self.ui.supportPC2UI.boutonSupprimerBon.setEnabled(True)
+        self.ui.supportPC2UI.boutonFenetrePersonnalisable.setEnabled(True)
         self.ui.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(True)
 
     def activeImpression(self):
