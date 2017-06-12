@@ -325,6 +325,57 @@ background-color: rgb(193, 213, 243);
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="boutonFenetrePersonnalisable">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Fenêtre
+ Personnalisable</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Images/list.png</normaloff>Images/list.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="BoutonVerrou">
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
