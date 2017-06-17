@@ -433,7 +433,7 @@ class Ui_AjoutEquipement(object):
         self.verticalLayout_5.addItem(spacerItem1)
         self.labelIconAjoutPDF = QtWidgets.QLabel(AjoutEquipement)
         self.labelIconAjoutPDF.setText("")
-        self.labelIconAjoutPDF.setPixmap(QtGui.QPixmap("../FenetresEnPython/Images/pdf.png"))
+        self.labelIconAjoutPDF.setPixmap(QtGui.QPixmap("Images/pdf.png"))
         self.labelIconAjoutPDF.setScaledContents(False)
         self.labelIconAjoutPDF.setAlignment(QtCore.Qt.AlignCenter)
         self.labelIconAjoutPDF.setObjectName("labelIconAjoutPDF")
