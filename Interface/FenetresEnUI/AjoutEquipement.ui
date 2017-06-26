@@ -963,6 +963,13 @@ background-color: rgb(193, 213, 243);
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QLabel" name="labelPDF">
+           <property name="text">
+            <string>fichier pdf</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>

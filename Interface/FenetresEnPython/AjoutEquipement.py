@@ -1,10 +1,15 @@
 import datetime
+import os
 from threading import Thread
 
 import yaml
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QDate,QLocale
 from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from shutil import copyfile
 
 from BDD.EquipementManager import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
@@ -56,6 +61,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
+        #self.listeWidgets.append(self.BoutonPDF)
 
         #Creation des calendriers pour qu'ils soient dans la langue desiree
         calendrierAcquisition = QCalendarWidget()
@@ -131,6 +137,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelCodeASSET)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
+        #self.listeLabel.append(self.labelPDF)
 
         # Masquage des differents labels
         for label in self.listeLabel:
@@ -165,6 +172,11 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxProvenance.setEditable(True)
         self.comboBoxCentreDeService.setEditable(True)
 
+        #connexion du bouton de sauvegarde du pdf
+        self.BoutonPDF.clicked.connect(self.ouvrirPDF)
+        self.fileToSave = ""
+
+
     def obtenirEtatDeService(self, groupeBoutton):
         """Methode permettant d'obtenir le choix selectionne parmi le groupe
         de radio bouton"""
@@ -198,6 +210,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
                 bouton = widget.checkedButton()
                 etatDeService = bouton.text()
                 self.listeDonnees.append(etatDeService)
+            elif type(widget) is QPushButton:
+                pass
             else:
                 self.listeDonnees.append(widget.toPlainText())
         print(self.listeDonnees)
@@ -304,6 +318,21 @@ class AjoutEquipement(Ui_AjoutEquipement):
     def sauvegarderEquipementThread(self):
         thread = SauvergarderEquipement(self.sauvegarderEquipement)
         thread.start()
+
+    def ouvrirPDF(self):
+        filter = "PDF (*.pdf)"
+        fileName = QFileDialog.getOpenFileName(None, "Open File",
+                                                  os.path.expanduser("~/Desktop"),
+                                                filter);
+        print(fileName[0])
+        self.filePath = fileName[0]
+        splitFileName = self.filePath.split("/")
+        self.fileToSave = splitFileName[len(splitFileName) - 1]
+        self.labelPDF.setText(self.fileToSave)
+
+    def savePDF(self):
+        print(self.fileToSave)
+        copyfile(self.fileToSave, "PDF/" + self.fileToSave)
 
 class SauvergarderEquipement (Thread):
     def __init__(self, fonction):

@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
-        AjoutEquipement.resize(1202, 800)
+        AjoutEquipement.resize(1729, 1378)
         AjoutEquipement.setMinimumSize(QtCore.QSize(0, 0))
         AjoutEquipement.setMaximumSize(QtCore.QSize(16777125, 16777125))
         font = QtGui.QFont()
@@ -154,7 +154,7 @@ class Ui_AjoutEquipement(object):
         self.labelVide.setObjectName("labelVide")
         self.layoutChampsModifiables.addWidget(self.labelVide)
         self.comboBoxCategorie = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxCategorie.setMinimumSize(QtCore.QSize(151, 0))
+        self.comboBoxCategorie.setMinimumSize(QtCore.QSize(287, 0))
         self.comboBoxCategorie.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -227,7 +227,7 @@ class Ui_AjoutEquipement(object):
         self.lineEditNoDeSerie.setObjectName("lineEditNoDeSerie")
         self.layoutChampsModifiables.addWidget(self.lineEditNoDeSerie)
         self.comboBoxSalle = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxSalle.setMinimumSize(QtCore.QSize(151, 0))
+        self.comboBoxSalle.setMinimumSize(QtCore.QSize(287, 0))
         self.comboBoxSalle.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -249,7 +249,7 @@ class Ui_AjoutEquipement(object):
         self.comboBoxSalle.addItem("")
         self.layoutChampsModifiables.addWidget(self.comboBoxSalle)
         self.comboBoxCentreDeService = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxCentreDeService.setMinimumSize(QtCore.QSize(151, 0))
+        self.comboBoxCentreDeService.setMinimumSize(QtCore.QSize(287, 0))
         self.comboBoxCentreDeService.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -310,7 +310,7 @@ class Ui_AjoutEquipement(object):
         self.dateEditDateDuDernierEntretien.setObjectName("dateEditDateDuDernierEntretien")
         self.layoutChampsModifiables.addWidget(self.dateEditDateDuDernierEntretien)
         self.comboBoxProvenance = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxProvenance.setMinimumSize(QtCore.QSize(151, 0))
+        self.comboBoxProvenance.setMinimumSize(QtCore.QSize(287, 0))
         self.comboBoxProvenance.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -327,7 +327,7 @@ class Ui_AjoutEquipement(object):
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
         self.layoutChampsModifiables.addWidget(self.comboBoxProvenance)
         self.lineEditCodeASSET = QtWidgets.QLineEdit(AjoutEquipement)
-        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(151, 0))
+        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(287, 0))
         self.lineEditCodeASSET.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -431,13 +431,50 @@ class Ui_AjoutEquipement(object):
         self.verticalLayout_5.addWidget(self.labelAjoutPDF)
         spacerItem1 = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.verticalLayout_5.addItem(spacerItem1)
-        self.labelIconAjoutPDF = QtWidgets.QLabel(AjoutEquipement)
-        self.labelIconAjoutPDF.setText("")
-        self.labelIconAjoutPDF.setPixmap(QtGui.QPixmap("Images/pdf.png"))
-        self.labelIconAjoutPDF.setScaledContents(False)
-        self.labelIconAjoutPDF.setAlignment(QtCore.Qt.AlignCenter)
-        self.labelIconAjoutPDF.setObjectName("labelIconAjoutPDF")
-        self.verticalLayout_5.addWidget(self.labelIconAjoutPDF)
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.BoutonPDF = QtWidgets.QPushButton(AjoutEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.BoutonPDF.setFont(font)
+        self.BoutonPDF.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonPDF.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("Images/pdf.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonPDF.setIcon(icon)
+        self.BoutonPDF.setObjectName("BoutonPDF")
+        self.horizontalLayout_9.addWidget(self.BoutonPDF)
+        self.labelPDF = QtWidgets.QLabel(AjoutEquipement)
+        self.labelPDF.setObjectName("labelPDF")
+        self.horizontalLayout_9.addWidget(self.labelPDF)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_9)
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_5.addItem(spacerItem2)
         self.horizontalLayout.addLayout(self.verticalLayout_5)
@@ -481,9 +518,9 @@ class Ui_AjoutEquipement(object):
 "background-color: rgb(193, 213, 243);\n"
 "}\n"
 "")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Images/check-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonValider.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("Images/check-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonValider.setIcon(icon1)
         self.BoutonValider.setObjectName("BoutonValider")
         self.horizontalLayout_8.addWidget(self.BoutonValider)
         self.BoutonModifier = QtWidgets.QPushButton(AjoutEquipement)
@@ -513,9 +550,9 @@ class Ui_AjoutEquipement(object):
 "background-color: rgb(193, 213, 243);\n"
 "}\n"
 "")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Images/Modify-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonModifier.setIcon(icon1)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("Images/Modify-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonModifier.setIcon(icon2)
         self.BoutonModifier.setIconSize(QtCore.QSize(32, 32))
         self.BoutonModifier.setObjectName("BoutonModifier")
         self.horizontalLayout_8.addWidget(self.BoutonModifier)
@@ -546,9 +583,9 @@ class Ui_AjoutEquipement(object):
 "background-color: rgb(193, 213, 243);\n"
 "}\n"
 "")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Images/save (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonEnregistrer.setIcon(icon2)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("Images/save (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonEnregistrer.setIcon(icon3)
         self.BoutonEnregistrer.setObjectName("BoutonEnregistrer")
         self.horizontalLayout_8.addWidget(self.BoutonEnregistrer)
         spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -728,6 +765,8 @@ class Ui_AjoutEquipement(object):
         self.labelProvenance.setText(_translate("AjoutEquipement", "Ici Provenance"))
         self.labelCodeASSET.setText(_translate("AjoutEquipement", "Ici Code ASSET"))
         self.labelAjoutPDF.setText(_translate("AjoutEquipement", "Ajouter un datasheet/ usermanual"))
+        self.BoutonPDF.setText(_translate("AjoutEquipement", "Choisir PDF"))
+        self.labelPDF.setText(_translate("AjoutEquipement", "fichier pdf"))
         self.BoutonValider.setText(_translate("AjoutEquipement", "Valider"))
         self.BoutonModifier.setText(_translate("AjoutEquipement", "Modifier"))
         self.BoutonEnregistrer.setText(_translate("AjoutEquipement", "Enregistrer"))
