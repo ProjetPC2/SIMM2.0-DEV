@@ -161,6 +161,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Connexion des boutons
         self.BoutonValider.clicked.connect(self.signalFenetre.signalVerificationEquipement.emit)
         self.BoutonEnregistrer.clicked.connect(self.signalFenetre.signalNouvelEquipement.emit)
+        self.BoutonEnregistrer.clicked.connect(self.sauvegarde.sauvegardePDF.emit)
+        self.sauvegarde.sauvegardePDF.connect(self.savePDF)
+        #self.BoutonEnregistrer.clicked.connect(self.savePDF)
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
         self.BoutonModifier.clicked.connect(self.signalFenetre.signalModifierEquipement.emit)
 
@@ -224,7 +227,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
             i += 1
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
         self.equipement.dictionnaire.clear()
+        print("EMISSION DES SIGNAUX DE SAUVEGARDE")
         self.sauvegarde.sauvegardeTermine.emit()
+
 
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement """
@@ -247,6 +252,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             self.BoutonEnregistrer.show()
             self.BoutonModifier.show()
             self.BoutonValider.hide()
+            self.BoutonPDF.hide()
         else:
             print("Champs obligatoire(s) manquant(s)")
 
@@ -268,6 +274,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonEnregistrer.hide()
         self.BoutonValider.show()
         self.BoutonModifier.hide()
+        self.BoutonPDF.show()
 
     def nouvelEquipement(self):
         """Remet en place un formulaire vide pour l'ajout d'un equipement
@@ -286,6 +293,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.labelID.setText("")
         self.BoutonEnregistrer.hide()
         self.BoutonValider.show()
+        self.BoutonPDF.show()
         self.BoutonModifier.hide()
 
     def remplirEquipement(self):
@@ -332,8 +340,15 @@ class AjoutEquipement(Ui_AjoutEquipement):
 
     def savePDF(self):
         print(self.fileToSave)
-        copyfile(self.fileToSave, "PDF/" + self.fileToSave)
-
+        if(self.fileToSave != ""):
+            print("Saving file")
+            #ATTENTION : Il faut mettre un double /
+            path = "PDF//"
+            path += self.fileToSave
+            copyfile(self.filePath, path)
+            print("Finish Saving")
+        else:
+            print("No selected file")
 class SauvergarderEquipement (Thread):
     def __init__(self, fonction):
         Thread.__init__(self)

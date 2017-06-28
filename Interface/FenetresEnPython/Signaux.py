@@ -11,8 +11,10 @@ class Communicate(QObject):
     rechercheTermine = pyqtSignal()
     supportCree = pyqtSignal()
 
+
     #Fenetre Ajout Equipement
 
+    sauvegardePDF = pyqtSignal()
     signalVerificationEquipement = pyqtSignal()
     signalNouvelEquipement = pyqtSignal()
     signalModifierEquipement = pyqtSignal()
