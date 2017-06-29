@@ -3,6 +3,7 @@
 import locale
 import os
 import sys
+import yaml
 from multiprocessing import Process
 
 from PyQt5 import QtWidgets
@@ -113,7 +114,13 @@ class Accueil(Ui_Accueil):
             :param:
             :return:
         '''
+
+        #Commande qui sert à masquer un bouton
+        #self.BoutonAjouterEquipement.hide()
+
+
         self.BoutonAccueil.clicked.connect(self.afficherAccueil)
+
         self.BoutonAjouterEquipement.clicked.connect(self.afficherAjoutEquipement)
         self.BoutonModifierConsulterEquipement.clicked.connect(self.afficherConsultationEquipement)
         self.BoutonRechercherEquipement.clicked.connect(self.afficherRechercheEquipement)
@@ -129,6 +136,7 @@ class Accueil(Ui_Accueil):
 
         self.BoutonFlecheNavigation.clicked.connect(self.naviguer)
 
+        self.masquerFenetre()
 
     def afficherAjoutEquipement(self):
         '''
@@ -436,6 +444,7 @@ class Accueil(Ui_Accueil):
         self.frameFleche.hide()
         self.listeNavigation.clear()
 
+
     def masquerElementGraphique(self):
         '''
             Masquage les elements graphiques de listeELementParDefaut
@@ -452,8 +461,7 @@ class Accueil(Ui_Accueil):
             self.supportPC2UI.boutonSupprimerBon.setEnabled(False)
             self.supportPC2UI.boutonFenetrePersonnalisable.setEnabled(False)
             self.supportPC2UI.BoutonVerrou.setEnabled(True)
-
-
+        self.masquerFenetre()
     def ajouterBonDeTravailEquipement(self):
         '''
             Affichage du widget permettant l'ajout d'un bon de travail par rapport a un equipement
@@ -552,6 +560,7 @@ class Accueil(Ui_Accueil):
             self.supportPC2UI.boutonSupprimerEquipement.clicked.connect(self.supprimerEquipement)
             self.supportPC2UI.boutonSupprimerBon.clicked.connect(self.supprimerBonDeTravail)
             self.supportPC2UI.boutonFenetrePersonnalisable.clicked.connect(self.fenetrePersonnalisable)
+            self.masquerFenetre()
             self.listeElementParDefaut.append(self.support)
             self.layoutAffichagePrincipal.addWidget(self.support)
             self.creation.supportCree.emit()
@@ -577,13 +586,9 @@ class Accueil(Ui_Accueil):
         if self.fenetrePersonnalisee is None:
             # Creation du widget s'il n'existe pas
             self.fenetrePersonnalisee = QtWidgets.QWidget(self.Accueil)
-            print("2")
-            self.fenetrePersonnaliseeUI = FenetrePersonnalisable (self.fenetrePersonnalisee)
-            print("3)")
+            self.fenetrePersonnaliseeUI = FenetrePersonnalisable(self.fenetrePersonnalisee)
             self.listeElementParDefaut.append(self.fenetrePersonnalisee)
-            print("4")
             self.layoutAffichagePrincipal.addWidget(self.fenetrePersonnalisee)
-            print("yolo")
         else:
             # Affichage du widget s'il existe deja
             self.fenetrePersonnalisee.show()
@@ -732,6 +737,59 @@ class Accueil(Ui_Accueil):
         self.suppressionTermine.raise_()
         self.suppressionTermine.show()
 
+    def masquerFenetre(self):
+
+        #Méthode qui permet de masquer les fenetres non-utilisées
+        with open('fichier_fentre_personnalisable.yaml', 'r') as fichierConf:  #  ouvrir le fichier et le lire
+            data = yaml.load(fichierConf)
+
+        for key, value in data.items():
+            if key == 'Ajout Equipement':
+                    if value:
+                        self.BoutonAjouterEquipement.show()
+                    else:
+                        self.BoutonAjouterEquipement.hide()
+            if key == 'Ajout Bon de travail':
+                    if value:
+                        self.BoutonAjouterBonTravail.show()
+                    else:
+                        self.BoutonAjouterBonTravail.hide()
+            if key == 'Ajout Piece':
+                    if value:
+                        self.BoutonAjouterPiece.show()
+                    else:
+                        self.BoutonAjouterPiece.hide()
+            if key == 'Imprimer':
+                if value:
+                    self.BoutonImprimerInventaire.show()
+                else:
+                    self.BoutonImprimerInventaire.hide()
+            if key == 'Modification Equipement':
+                if value:
+                    self.BoutonModifierConsulterEquipement.show()
+                else:
+                    self.BoutonModifierConsulterEquipement.hide()
+            if key == 'Recherche bon travail':
+                if value:
+                    self.BoutonRechercherBonTravail.show()
+                else:
+                    self.BoutonRechercherBonTravail.hide()
+            if key == 'Recherche equipement':
+                    if value:
+                        self.BoutonRechercherEquipement.show()
+                    else:
+                        self.BoutonRechercherEquipement.hide()
+            if key == 'Statistique':
+                    if value:
+                        self.BoutonStatistiques.show()
+                    else:
+                        self.BoutonStatistiques.hide()
+            if key == 'Support technique':
+                    if value:
+                        self.BoutonSupportTecnique.show()
+                    else:
+                        self.BoutonSupportTecnique.hide()
+
 class SIMM():
     '''
         Fonction de lancement de la page d'accueil de SIMM
@@ -760,6 +818,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.creation.supportCree.connect(self.verrou)
         self.signal = Communicate()
         self.signal.motDePasseCorrect.connect(self.deverouillage)
+
 
     def resizeEvent(self, event):
         #methode permettant de sur la fenetre entiere le message
