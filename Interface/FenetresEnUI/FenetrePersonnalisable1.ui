@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>FenetrePersonnalisable</class>
+ <widget class="QWidget" name="FenetrePersonnalisable">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1252</width>
-    <height>727</height>
+    <width>979</width>
+    <height>598</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <property name="styleSheet">
+   <string notr="true">background: white;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -89,10 +92,13 @@
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>40</height>
+         <height>20</height>
         </size>
        </property>
       </spacer>
@@ -118,10 +124,13 @@
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>40</height>
+         <height>20</height>
         </size>
        </property>
       </spacer>
@@ -151,6 +160,9 @@
                <pointsize>10</pointsize>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -172,6 +184,9 @@
              </property>
              <property name="pixmap">
               <pixmap>Images/add1.png</pixmap>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -656,6 +671,61 @@
      </item>
      <item>
       <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QPushButton" name="boutonEnregistrer">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+color: black;
+background-color:rgb(245, 245, 245);
+border-width: 1px;
+border-color: grey;
+border-style: solid;
+border-radius: 4px;
+padding: 3px;
+font: bold 12px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 80px;
+max-width:220px;
+min-height: 30px;
+max-height: 30px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
+}
+
+QPushButton:pressed {
+background-color: rgb(193, 213, 243);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Enregistrer</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Images/save (1).png</normaloff>Images/save (1).png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
