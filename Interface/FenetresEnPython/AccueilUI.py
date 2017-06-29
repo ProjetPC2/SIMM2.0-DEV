@@ -7,13 +7,21 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import ctypes
 
 class Ui_Accueil(object):
     def setupUi(self, Accueil):
         Accueil.setObjectName("Accueil")
         Accueil.setWindowModality(QtCore.Qt.NonModal)
         Accueil.setEnabled(True)
-        Accueil.resize(1710, 803)
+
+        #Fonction qui détermine la largeur et longueur de l'écran utilisé et resize la fenetre en conséquence
+        user32 = ctypes.windll.user32
+        width = user32.GetSystemMetrics(0)
+        length=user32.GetSystemMetrics(1)
+        facteurGrandissement=0.75
+        Accueil.resize(width*facteurGrandissement, length*facteurGrandissement)
+
         Accueil.setMaximumSize(QtCore.QSize(11111111, 1111111))
         font = QtGui.QFont()
         font.setFamily("Cambria")
