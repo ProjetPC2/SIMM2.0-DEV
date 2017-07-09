@@ -4,7 +4,7 @@ import yaml
 from PyQt5 import QtGui, QtWidgets
 
 from BDD.BonTravailManager import BonTravailManager
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.SuppressionEquipementUI import Ui_SuppressionEquipement

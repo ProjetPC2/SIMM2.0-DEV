@@ -740,55 +740,60 @@ class Accueil(Ui_Accueil):
     def masquerFenetre(self):
 
         #Méthode qui permet de masquer les fenetres non-utilisées
-        with open('fichier_fentre_personnalisable.yaml', 'r') as fichierConf:  #  ouvrir le fichier et le lire
-            data = yaml.load(fichierConf)
+        try:
 
-        for key, value in data.items():
-            if key == 'Ajout Equipement':
+            with open('fichier_fenetre_personnalisable.yaml', 'r') as fichierConf:  #  ouvrir le fichier et le lire
+                data = yaml.load(fichierConf)
+
+            for key, value in data.items():
+                if key == 'Ajout Equipement':
+                        if value:
+                            self.BoutonAjouterEquipement.show()
+                        else:
+                            self.BoutonAjouterEquipement.hide()
+                if key == 'Ajout Bon de travail':
+                        if value:
+                            self.BoutonAjouterBonTravail.show()
+                        else:
+                            self.BoutonAjouterBonTravail.hide()
+                if key == 'Ajout Piece':
+                        if value:
+                            self.BoutonAjouterPiece.show()
+                        else:
+                            self.BoutonAjouterPiece.hide()
+                if key == 'Imprimer':
                     if value:
-                        self.BoutonAjouterEquipement.show()
+                        self.BoutonImprimerInventaire.show()
                     else:
-                        self.BoutonAjouterEquipement.hide()
-            if key == 'Ajout Bon de travail':
+                        self.BoutonImprimerInventaire.hide()
+                if key == 'Modification Equipement':
                     if value:
-                        self.BoutonAjouterBonTravail.show()
+                        self.BoutonModifierConsulterEquipement.show()
                     else:
-                        self.BoutonAjouterBonTravail.hide()
-            if key == 'Ajout Piece':
+                        self.BoutonModifierConsulterEquipement.hide()
+                if key == 'Recherche bon travail':
                     if value:
-                        self.BoutonAjouterPiece.show()
+                        self.BoutonRechercherBonTravail.show()
                     else:
-                        self.BoutonAjouterPiece.hide()
-            if key == 'Imprimer':
-                if value:
-                    self.BoutonImprimerInventaire.show()
-                else:
-                    self.BoutonImprimerInventaire.hide()
-            if key == 'Modification Equipement':
-                if value:
-                    self.BoutonModifierConsulterEquipement.show()
-                else:
-                    self.BoutonModifierConsulterEquipement.hide()
-            if key == 'Recherche bon travail':
-                if value:
-                    self.BoutonRechercherBonTravail.show()
-                else:
-                    self.BoutonRechercherBonTravail.hide()
-            if key == 'Recherche equipement':
-                    if value:
-                        self.BoutonRechercherEquipement.show()
-                    else:
-                        self.BoutonRechercherEquipement.hide()
-            if key == 'Statistique':
-                    if value:
-                        self.BoutonStatistiques.show()
-                    else:
-                        self.BoutonStatistiques.hide()
-            if key == 'Support technique':
-                    if value:
-                        self.BoutonSupportTecnique.show()
-                    else:
-                        self.BoutonSupportTecnique.hide()
+                        self.BoutonRechercherBonTravail.hide()
+                if key == 'Recherche equipement':
+                        if value:
+                            self.BoutonRechercherEquipement.show()
+                        else:
+                            self.BoutonRechercherEquipement.hide()
+                if key == 'Statistique':
+                        if value:
+                            self.BoutonStatistiques.show()
+                        else:
+                            self.BoutonStatistiques.hide()
+                if key == 'Support technique':
+                        if value:
+                            self.BoutonSupportTecnique.show()
+                        else:
+                            self.BoutonSupportTecnique.hide()
+        except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
+            print("Could not read file: ", self.fichierConf)  # définir ce qu'il faut faire pour corriger
+
 
 class SIMM():
     '''

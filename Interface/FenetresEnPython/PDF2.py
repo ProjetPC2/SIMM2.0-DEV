@@ -20,7 +20,7 @@ import sys
 from threading import Thread
 import time
 
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 
 class PDF():
     def __init__(self, path, bouton):

@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.SupportPC2UI import Ui_SupportPC2
 

@@ -6,7 +6,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import QLocale, QDate
 from PyQt5.QtWidgets import *
 
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.Signaux import Communicate

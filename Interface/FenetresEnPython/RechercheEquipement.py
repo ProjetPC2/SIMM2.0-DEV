@@ -7,7 +7,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.RechercheEquipementUI import Ui_RechercheEquipement
 from Interface.FenetresEnPython.Signaux import Communicate

@@ -2,7 +2,7 @@ import datetime
 from threading import Thread
 
 from BDD.BonTravailManager import BonTravailManager
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.Signaux import Communicate

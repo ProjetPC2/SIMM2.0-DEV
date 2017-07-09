@@ -11,7 +11,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from shutil import copyfile
 
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
 from Interface.FenetresEnPython.Fichiers import *
 from Interface.FenetresEnPython.Signaux import Communicate
