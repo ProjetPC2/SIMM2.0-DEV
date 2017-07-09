@@ -45,7 +45,7 @@ class EquipementManager:
         conf = self._getConf()
         stats = self._getStats()
         try:
-            con = lite.connect('equipement1.db')
+            con = lite.connect(self._pathnameEQ)
             cur = con.cursor()
             cur.execute(
                 "CREATE TABLE IF NOT EXISTS Equipement(Id INTEGER PRIMARY KEY, CategorieEquipement TEXT, Marque TEXT, Modele TEXT, "
@@ -99,7 +99,7 @@ class EquipementManager:
         dict_renvoi = {'Reussite': False}
         # ouverture de la base des données contenant les équipements
         try:
-            con = lite.connect('equipement1.db')
+            con = lite.connect(self._pathnameEQ)
             cur = con.cursor()
             '''cur.execute("SELECT * FROM Equipement")
 
@@ -133,7 +133,7 @@ class EquipementManager:
 
     def RechercherEquipement(self, regex_dict):
 
-        con = lite.connect('equipement1.db')
+        con = lite.connect(self._pathnameEQ)
         with con:
             con.row_factory = lite.Row
 
@@ -169,7 +169,7 @@ class EquipementManager:
         conf = self._getConf()
         stats = self._getStats()
 
-        con = lite.connect('equipement1.db')
+        con = lite.connect(self._pathnameEQ)
         with con:
             cur = con.cursor()
 
@@ -202,7 +202,7 @@ class EquipementManager:
 
 
     def _AfficherBD(self):
-        con = lite.connect('equipement1.db')
+        con = lite.connect(self._pathnameEQ)
 
         with con:
             cur = con.cursor()
@@ -489,7 +489,7 @@ class EquipementManager:
 if __name__ == "__main__":  # Execution lorsque le fichier est lance
     if True:
         #  TESTS
-        manager = EquipementManager('DataBase_Equipement.yaml', 'DataBase_BDT.yaml')
+        manager = EquipementManager('equipement1.db', 'DataBase_BDT.yaml')
 
         data = {'CategorieEquipement': 'Stéthoscope',
                 'Marque': 'Lit de la muerte',
