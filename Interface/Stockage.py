@@ -27,10 +27,10 @@ class Equipement():
             # self.remplissage()
             self.ajoutListeMethodes()
 
-        def _getDictionnaire(self):  # accesseur sur la variable _age
+        def _getDictionnaire(self):  # accesseur sur la variable dictionnaire
             return self._dictionnaire
 
-        def _setDictionnaire(self, dict):  # mutateur sur la variabe _age
+        def _setDictionnaire(self, dict):  # mutateur sur la variabe _dictionnaire
             self._dictionnaire = dict
 
 
