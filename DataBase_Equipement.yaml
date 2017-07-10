@@ -1,0 +1,22 @@
+_default:
+  1: !!python/object/new:tinydb.database.Element
+    dictitems:
+      CategorieEquipement: test
+      CentreService: CCU
+      CodeAsset: ''
+      Commentaires: "ce Equipement fonctione avec un courant de 110-125V AC, \nEviter\
+        \ les Zones d'interference Electrique.\nEviter les Zones  de Vibration\nIl\
+        \ faut entretenir l'equipement Chaque deux mois."
+      DateAcquisition: 2017-07-03
+      DateDernierEntretien: 2017-07-10
+      EtatConservation: Acceptable
+      EtatService: En maintenance
+      ID: '1'
+      Marque: Medtronic
+      Modele: Prestige Cervical Disc System
+      NbBonTravail: 0
+      NumeroSerie: '6972260'
+      Provenance: ' Kombit Sante'
+      Salle: '10'
+    state:
+      eid: 1
