@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'AjoutEquipement.ui'
+# Form implementation generated from reading ui file 'FenetresEnUI/AjoutEquipement.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
-        AjoutEquipement.resize(1729, 1378)
+        AjoutEquipement.resize(1440, 810)
         AjoutEquipement.setMinimumSize(QtCore.QSize(0, 0))
         AjoutEquipement.setMaximumSize(QtCore.QSize(16777125, 16777125))
         font = QtGui.QFont()
@@ -154,7 +154,7 @@ class Ui_AjoutEquipement(object):
         self.labelVide.setObjectName("labelVide")
         self.layoutChampsModifiables.addWidget(self.labelVide)
         self.comboBoxCategorie = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxCategorie.setMinimumSize(QtCore.QSize(287, 0))
+        self.comboBoxCategorie.setMinimumSize(QtCore.QSize(127, 0))
         self.comboBoxCategorie.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -227,7 +227,7 @@ class Ui_AjoutEquipement(object):
         self.lineEditNoDeSerie.setObjectName("lineEditNoDeSerie")
         self.layoutChampsModifiables.addWidget(self.lineEditNoDeSerie)
         self.comboBoxSalle = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxSalle.setMinimumSize(QtCore.QSize(287, 0))
+        self.comboBoxSalle.setMinimumSize(QtCore.QSize(127, 0))
         self.comboBoxSalle.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -249,7 +249,7 @@ class Ui_AjoutEquipement(object):
         self.comboBoxSalle.addItem("")
         self.layoutChampsModifiables.addWidget(self.comboBoxSalle)
         self.comboBoxCentreDeService = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxCentreDeService.setMinimumSize(QtCore.QSize(287, 0))
+        self.comboBoxCentreDeService.setMinimumSize(QtCore.QSize(127, 0))
         self.comboBoxCentreDeService.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -310,7 +310,7 @@ class Ui_AjoutEquipement(object):
         self.dateEditDateDuDernierEntretien.setObjectName("dateEditDateDuDernierEntretien")
         self.layoutChampsModifiables.addWidget(self.dateEditDateDuDernierEntretien)
         self.comboBoxProvenance = QtWidgets.QComboBox(AjoutEquipement)
-        self.comboBoxProvenance.setMinimumSize(QtCore.QSize(287, 0))
+        self.comboBoxProvenance.setMinimumSize(QtCore.QSize(127, 0))
         self.comboBoxProvenance.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -327,7 +327,7 @@ class Ui_AjoutEquipement(object):
         self.comboBoxProvenance.setObjectName("comboBoxProvenance")
         self.layoutChampsModifiables.addWidget(self.comboBoxProvenance)
         self.lineEditCodeASSET = QtWidgets.QLineEdit(AjoutEquipement)
-        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(287, 0))
+        self.lineEditCodeASSET.setMinimumSize(QtCore.QSize(127, 0))
         self.lineEditCodeASSET.setMaximumSize(QtCore.QSize(450, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)

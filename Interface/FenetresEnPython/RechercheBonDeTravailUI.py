@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Rbdt.ui'
+# Form implementation generated from reading ui file 'FenetresEnUI/Rbdt.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_RechercheBonDeTravail(object):
     def setupUi(self, RechercheBonDeTravail):
         RechercheBonDeTravail.setObjectName("RechercheBonDeTravail")
-        RechercheBonDeTravail.resize(1710, 800)
+        RechercheBonDeTravail.resize(1440, 810)
         RechercheBonDeTravail.setMinimumSize(QtCore.QSize(0, 0))
         RechercheBonDeTravail.setMaximumSize(QtCore.QSize(16777215, 16777215))
         icon = QtGui.QIcon()
@@ -78,8 +78,8 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.calendrierAvant.setFont(font)
-        self.calendrierAvant.setDate(QtCore.QDate(2016, 1, 1))
         self.calendrierAvant.setCalendarPopup(True)
+        self.calendrierAvant.setDate(QtCore.QDate(2016, 1, 1))
         self.calendrierAvant.setObjectName("calendrierAvant")
         self.gridLayout_3.addWidget(self.calendrierAvant, 1, 1, 1, 1)
         self.calendrierApres = QtWidgets.QDateEdit(RechercheBonDeTravail)
@@ -88,8 +88,8 @@ class Ui_RechercheBonDeTravail(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.calendrierApres.setFont(font)
-        self.calendrierApres.setDate(QtCore.QDate(2016, 1, 1))
         self.calendrierApres.setCalendarPopup(True)
+        self.calendrierApres.setDate(QtCore.QDate(2016, 1, 1))
         self.calendrierApres.setObjectName("calendrierApres")
         self.gridLayout_3.addWidget(self.calendrierApres, 1, 2, 1, 1)
         self.boutonNouvelleRecherche = QtWidgets.QPushButton(RechercheBonDeTravail)

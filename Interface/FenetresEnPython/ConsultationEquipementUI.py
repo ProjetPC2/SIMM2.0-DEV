@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ConsultationEquipement.ui'
+# Form implementation generated from reading ui file 'FenetresEnUI/ConsultationEquipement.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ConsultationEquipement(object):
     def setupUi(self, ConsultationEquipement):
         ConsultationEquipement.setObjectName("ConsultationEquipement")
-        ConsultationEquipement.resize(1115, 817)
+        ConsultationEquipement.resize(1557, 1269)
         ConsultationEquipement.setMinimumSize(QtCore.QSize(0, 0))
         ConsultationEquipement.setMaximumSize(QtCore.QSize(16777125, 16777125))
         ConsultationEquipement.setStyleSheet("background:white;")
@@ -494,12 +494,47 @@ class Ui_ConsultationEquipement(object):
         self.verticalLayout_8.addWidget(self.labelConsultPDF)
         spacerItem7 = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.verticalLayout_8.addItem(spacerItem7)
-        self.labelIconConsultPDF = QtWidgets.QLabel(ConsultationEquipement)
-        self.labelIconConsultPDF.setText("")
-        self.labelIconConsultPDF.setPixmap(QtGui.QPixmap("../FenetresEnPython/Images/pdf (1).png"))
-        self.labelIconConsultPDF.setAlignment(QtCore.Qt.AlignCenter)
-        self.labelIconConsultPDF.setObjectName("labelIconConsultPDF")
-        self.verticalLayout_8.addWidget(self.labelIconConsultPDF)
+        self.layoutBoutonPDF = QtWidgets.QHBoxLayout()
+        self.layoutBoutonPDF.setObjectName("layoutBoutonPDF")
+        self.BoutonPDF = QtWidgets.QPushButton(ConsultationEquipement)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.BoutonPDF.setFont(font)
+        self.BoutonPDF.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonPDF.setStyleSheet("QPushButton {\n"
+"color: black;\n"
+"background-color:rgb(245, 245, 245);\n"
+"border-width: 1px;\n"
+"border-color: grey;\n"
+"border-style: solid;\n"
+"border-radius: 4px;\n"
+"padding: 3px;\n"
+"font: bold 12px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 80px;\n"
+"max-width:220px;\n"
+"min-height: 30px;\n"
+"max-height: 30px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"background-color: rgb(193, 213, 243);\n"
+"}\n"
+"")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("Images/pdf.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonPDF.setIcon(icon5)
+        self.BoutonPDF.setObjectName("BoutonPDF")
+        self.layoutBoutonPDF.addWidget(self.BoutonPDF)
+        self.verticalLayout_8.addLayout(self.layoutBoutonPDF)
         spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_8.addItem(spacerItem8)
         self.gridLayout.addLayout(self.verticalLayout_8, 4, 3, 1, 1)
@@ -552,4 +587,5 @@ class Ui_ConsultationEquipement(object):
 "vous ne pouvez vous arrêter de le lire, car\n"
 "nous sommes programmés ainsi."))
         self.labelConsultPDF.setText(_translate("ConsultationEquipement", "Consulter le datasheet/usermanual"))
+        self.BoutonPDF.setText(_translate("ConsultationEquipement", "Ouvrir PDF"))
 

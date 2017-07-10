@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Piece.ui'
+# Form implementation generated from reading ui file 'FenetresEnUI/Piece.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Piece(object):
     def setupUi(self, Piece):
         Piece.setObjectName("Piece")
-        Piece.resize(1710, 800)
+        Piece.resize(1440, 810)
         Piece.setMinimumSize(QtCore.QSize(0, 0))
         Piece.setMaximumSize(QtCore.QSize(16777125, 16777125))
         Piece.setStyleSheet("QWidget {\n"
