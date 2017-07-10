@@ -81,6 +81,8 @@ class Equipement():
         def modifierCommentaire(self, commentaire):
             self.dictionnaire["Commentaires"] = commentaire
 
+        def modifierPDF(self, pdfPath):
+            self.dictionnaire["PdfPath"] = pdfPath
 
         def ajoutListeMethodes(self):
             self.listeMethodes = list()
@@ -97,6 +99,7 @@ class Equipement():
             self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierEtatConversation)
             self.listeMethodes.append(self.modifierCommentaire)
+            self.listeMethodes.append(self.modifierPDF)
 
 
 class BonDeTravail():

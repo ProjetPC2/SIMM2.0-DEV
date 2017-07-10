@@ -51,7 +51,7 @@ class EquipementManager:
             cur.execute(
                 "CREATE TABLE IF NOT EXISTS Equipement(Id INTEGER PRIMARY KEY, CategorieEquipement TEXT, Marque TEXT, Modele TEXT, "
                 + " NumeroSerie TEXT, Salle TEXT, CentreService TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, "
-                + " Provenance TEXT, CodeAsset TEXT, EtatService TEXT, EtatConservation INT, Commentaires TEXT)")
+                + " Provenance TEXT, CodeAsset TEXT, EtatService TEXT, EtatConservation INT, Commentaires TEXT, PdfPath TEXT)")
 
             if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf,stats):  # ARRANGER FONCTION AVANT
                 '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService," \
@@ -63,13 +63,13 @@ class EquipementManager:
                 '''
                 commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
                               + "DateAcquisition, DateDernierEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
-                              + " Commentaires)" \
+                              + " Commentaires, PdfPath)" \
                               + " VALUES ('" + dictio["CategorieEquipement"]  \
                               + "', '" + dictio["Marque"] + "', '" + dictio["Modele"] + "', '" + dictio["NumeroSerie"] \
                               + "', '" + dictio["Salle"] + "', '" + dictio["CentreService"] + "', '" + str(dictio["DateAcquisition"]) \
                               + "', '" + str(dictio["DateDernierEntretien"]) + "', '" + dictio["Provenance"] \
                               + "', '" + dictio["CodeAsset"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"] \
-                              + "', '" + dictio["Commentaires"] + "');"
+                              + "', '" + dictio["Commentaires"] + "', '" + dictio["PdfPath"] + "');"
                 cur.execute(commandeSQL)
 
                 dict_renvoi['Reussite'] = True  # ajout du nouvel équipement dans la base de données
@@ -140,9 +140,11 @@ class EquipementManager:
 
             cur = con.cursor()
             commmand_sql = "SELECT * FROM Equipement "
+            compteur = 0
             if(len(regex_dict) > 0):
                 commmand_sql += "WHERE "
                 for key, value in regex_dict.items():
+                    compteur += 1
                     '''if(key == "Id"):
                         try:
                             id = int(regex_dict["Id"])
@@ -151,6 +153,8 @@ class EquipementManager:
                             print("Conversion impossible")
                     '''
                     commmand_sql += key + "=:" + key
+                    if (compteur < len(regex_dict)):
+                        commmand_sql += " AND "
 
                 print("Commande: ", commmand_sql)
                 print("Recherche d'equipement en cours")
@@ -526,7 +530,9 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
                 'EtatService': 'En service',
                 'EtatConservation': 'Quasi neuf',
                 'CodeAsset': '1234',
-                'Commentaires': ''}
+                'Commentaires': '',
+                'PdfPath': ''}
+
 
         # manager._ObtenirProchainID()
         # print(manager._VerifierDict(data))

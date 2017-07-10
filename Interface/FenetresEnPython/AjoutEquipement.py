@@ -31,6 +31,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.signalFenetre.signalNouvelEquipement.connect(self.nouvelEquipement)
         self.signalFenetre.signalVerificationEquipement.connect(self.verificationEquipement)
         self.signalFenetre.signalModifierEquipement.connect(self.modifierEquipement)
+
     def ajout(self):
 
         # Creation du groupe contenant le choix pour l'etat de service
@@ -178,6 +179,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         #connexion du bouton de sauvegarde du pdf
         self.BoutonPDF.clicked.connect(self.ouvrirPDF)
         self.fileToSave = ""
+        self.filePath = ""
 
 
     def obtenirEtatDeService(self, groupeBoutton):
@@ -225,6 +227,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
+        self.equipement.dictionnaire["PdfPath"] = self.filePath
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
         self.equipement.dictionnaire.clear()
         print("EMISSION DES SIGNAUX DE SAUVEGARDE")
@@ -291,6 +294,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
             self.listeLabel[indice].hide()
             indice += 1
         self.labelID.setText("")
+        self.fileToSave = ""
+        self.filePath = ""
+        self.labelPDF.setText("Fichier pdf")
         self.BoutonEnregistrer.hide()
         self.BoutonValider.show()
         self.BoutonPDF.show()
@@ -336,7 +342,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.filePath = fileName[0]
         splitFileName = self.filePath.split("/")
         self.fileToSave = splitFileName[len(splitFileName) - 1]
+        print(self.fileToSave)
         self.labelPDF.setText(self.fileToSave)
+        print("Sauvegarde terminee")
 
     def savePDF(self):
         print(self.fileToSave)
