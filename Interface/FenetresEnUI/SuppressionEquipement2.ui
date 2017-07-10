@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>672</width>
-    <height>566</height>
+    <width>1440</width>
+    <height>810</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -653,14 +653,13 @@ background:rgb(247, 247, 247)</string>
      </layout>
     </item>
    </layout>
-   <zorder>horizontalSpacer_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>672</width>
+     <width>1440</width>
      <height>21</height>
     </rect>
    </property>

@@ -12,13 +12,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1710</width>
-    <height>803</height>
+    <width>1440</width>
+    <height>810</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>11111111</width>
+    <width>11111112</width>
     <height>1111111</height>
    </size>
   </property>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1729</width>
-    <height>1378</height>
+    <width>1440</width>
+    <height>810</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -311,7 +311,7 @@ background:white
         <widget class="QComboBox" name="comboBoxCategorie">
          <property name="minimumSize">
           <size>
-           <width>287</width>
+           <width>127</width>
            <height>0</height>
           </size>
          </property>
@@ -456,7 +456,7 @@ background:rgb(247, 247, 247);
         <widget class="QComboBox" name="comboBoxSalle">
          <property name="minimumSize">
           <size>
-           <width>287</width>
+           <width>127</width>
            <height>0</height>
           </size>
          </property>
@@ -509,7 +509,7 @@ background:rgb(247, 247, 247);
         <widget class="QComboBox" name="comboBoxCentreDeService">
          <property name="minimumSize">
           <size>
-           <width>287</width>
+           <width>127</width>
            <height>0</height>
           </size>
          </property>
@@ -643,7 +643,7 @@ background:rgb(247, 247, 247);
         <widget class="QComboBox" name="comboBoxProvenance">
          <property name="minimumSize">
           <size>
-           <width>287</width>
+           <width>127</width>
            <height>0</height>
           </size>
          </property>
@@ -677,7 +677,7 @@ background:rgb(247, 247, 247);
         <widget class="QLineEdit" name="lineEditCodeASSET">
          <property name="minimumSize">
           <size>
-           <width>287</width>
+           <width>127</width>
            <height>0</height>
           </size>
          </property>

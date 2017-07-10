@@ -380,4 +380,3 @@ class Ui_FenetrePersonnalisable(object):
         self.labelRechercheBonTravail_2.setText(_translate("FenetrePersonnalisable", "Rechercher un bon de travail"))
         self.labelStatistique.setText(_translate("FenetrePersonnalisable", "Voir les statistiques"))
         self.boutonEnregistrer.setText(_translate("FenetrePersonnalisable", "Enregistrer"))
-
