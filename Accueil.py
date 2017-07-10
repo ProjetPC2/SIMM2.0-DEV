@@ -651,7 +651,7 @@ class Accueil(Ui_Accueil):
 
     def naviguer(self):
         '''
-           methode permettant de gerer la navigation
+           methode permettant de fgerer la navigation
             :param: None
             :return:
         '''

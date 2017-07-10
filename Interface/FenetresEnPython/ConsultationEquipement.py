@@ -2,7 +2,7 @@ import yaml
 from PyQt5 import QtGui, QtWidgets
 
 from BDD.BonTravailManager import BonTravailManager
-from BDD.EquipementManager import EquipementManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.ConsultationEquipementUI import Ui_ConsultationEquipement
 from threading import Thread
 
@@ -76,9 +76,9 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         if(self.lineEditId.text() != ""):
             self.nouvelleRecherche()
             equipementRecherche = dict()
-            equipementRecherche["ID"] = self.lineEditId.text()
+            equipementRecherche["Id"] = self.lineEditId.text()
             listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
-
+            print(listeEquipement)
             if(any(listeEquipement)):
                 #Cas ou l'equipement existe
                 self.equipement = listeEquipement[0]

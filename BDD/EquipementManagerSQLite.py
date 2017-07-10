@@ -44,6 +44,7 @@ class EquipementManager:
     def AjouterEquipement(self, dictio):
         conf = self._getConf()
         stats = self._getStats()
+        dict_renvoi = {'Reussite': False}
         try:
             con = lite.connect(self._pathnameEQ)
             cur = con.cursor()
@@ -52,7 +53,6 @@ class EquipementManager:
                 + " NumeroSerie TEXT, Salle TEXT, CentreService TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, "
                 + " Provenance TEXT, CodeAsset TEXT, EtatService TEXT, EtatConservation INT, Commentaires TEXT)")
 
-            dict_renvoi = {'Reussite': False}
             if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf,stats):  # ARRANGER FONCTION AVANT
                 '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService," \
                               + " Provenance, CodeAsset, EtatService, EtatConservation,"\
@@ -134,7 +134,8 @@ class EquipementManager:
     def RechercherEquipement(self, regex_dict):
 
         con = lite.connect(self._pathnameEQ)
-        with con:
+        rows = list()
+        try:
             con.row_factory = lite.Row
 
             cur = con.cursor()
@@ -142,10 +143,18 @@ class EquipementManager:
             if(len(regex_dict) > 0):
                 commmand_sql += "WHERE "
                 for key, value in regex_dict.items():
+                    '''if(key == "Id"):
+                        try:
+                            id = int(regex_dict["Id"])
+                            regex_dict["Id"] = id
+                        except ValueError:
+                            print("Conversion impossible")
+                    '''
                     commmand_sql += key + "=:" + key
 
                 print("Commande: ", commmand_sql)
                 print("Recherche d'equipement en cours")
+                print("REGEX", regex_dict)
                 cur.execute(commmand_sql, regex_dict)
             else:
                 cur.execute(commmand_sql)
@@ -155,15 +164,29 @@ class EquipementManager:
                 print("Element trouve")
             else:
                 print("Aucun element trouve")
-
+            print(type(rows))
             for row in rows:
+                dictTemp = dict()
+                print("OHEQJOQIJD")
+                print("type de row ", row)
                 #ATTENTION : le format de la date contient les heures
             #    print("%s %s %s" % (row["Id"], row["DateDernierEntretien"], datetime.datetime.strptime(row["DateAcquisition"],"%Y-%m-%d" )))
             #    print("%s %s %s" % (type(row["Id"]), type(row["DateDernierEntretien"]), type(datetime.datetime.strptime(row["DateAcquisition"],"%Y-%m-%d" ))))
                 print(row)
-        con.close()
-        result = dict()
-        return result
+            con.close()
+            self._AfficherBD()
+
+        except lite.Error as e:
+            if con:
+                con.rollback()
+
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
+            return rows
 
     def ModifierEquipement(self, id_modif, dict_modif):
         conf = self._getConf()
