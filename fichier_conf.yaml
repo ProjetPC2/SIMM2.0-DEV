@@ -272,7 +272,7 @@ champsAcceptes-BDT:
 - DescriptionIntervention
 - EtatBDT
 - NomTechnicien
-- Pieces
+- Assistance
 champsAcceptes-Equipement:
 - CategorieEquipement
 - Marque

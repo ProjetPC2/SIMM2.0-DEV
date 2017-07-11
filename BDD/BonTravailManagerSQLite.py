@@ -54,11 +54,13 @@ class BonTravailManager:
             cur = con.cursor()
             id_bdt = self._ObtenirProchainIDdeBDT(id_equipement)
             print("ID PROCHAIN BDT", id_bdt)
+            print(self._verifierChamps(dictio, conf))
+            print(self._verifierDict(dictio, conf))
             if id_bdt == -1:  # Equipement non existant
                 print("The equipment doesn't exist. ID :", id_equipement)
-                return dict_renvoi
+
             elif self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf):  # Vérification du dictionnaire
-                dictio["IdEquipement"] = id_equipement
+                dictio["IdEquipement"] = str(id_equipement)
                 dictio["NumeroBonTravail"] = str(id_bdt)
                 print(dictio)
                 commandeSQL = "INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, " \
@@ -66,7 +68,7 @@ class BonTravailManager:
                               + dictio["IdEquipement"] + "', '" + dictio["NumeroBonTravail"] + "', '"\
                               + dictio["DescriptionSituation"] + "', '" + dictio["NomTechnicien"] + "', '" + str(dictio["Date"]) \
                               + "', '" + str(dictio["TempsEstime"]) + "', '" + dictio["DescriptionIntervention"] + "', '" \
-                              + dictio["EtatBDT"] + "', '" + dictio["NomTechnicien"] + "' );"
+                              + dictio["EtatBDT"] + "', '" + dictio["Assistance"] + "' );"
 
                 '''
                 commandeSQL = "INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, " \
@@ -251,11 +253,12 @@ class BonTravailManager:
                 print(row)
 
     def _ObtenirProchainIDdeBDT(self, id_equip):
+        print("Fonction obtention")
         con = lite.connect(self._pathname)
         dernier_ID = 0
         with con:
             cur = con.cursor()
-            cur.execute("SELECT * FROM BonTravail WHERE IdEquipement = ?", id_equip)
+            cur.execute("SELECT * FROM BonTravail WHERE IdEquipement = ?", str(id_equip))
             rows = cur.fetchall()
             dernier_ID = len(rows)
         prochain_ID = int(dernier_ID) + 1

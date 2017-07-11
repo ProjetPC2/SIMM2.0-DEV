@@ -245,7 +245,8 @@ class BonDeTravail(Ui_BonDeTravail):
             dictionnaireDonnees["EtatBDT"] = "Fermé"
         else:
             dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
-        dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
+        #dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
+        dictionnaireDonnees["Assistance"] = "ECI"
         #Decrementation des pieces dans le stock
         self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation)
         if(any(self.equipementDictionnaire)):
@@ -413,8 +414,11 @@ class BonDeTravail(Ui_BonDeTravail):
         self.pushButtonValider.setDisabled(False)
         self.boutonSauvegarde.setVisible(True)
         print(self.equipementDictionnaire["Id"])
-        print(self.bonDeTravailManager._ObtenirProchainIDdeBDT(self.equipementDictionnaire["Id"]))
-        id = self.equipementDictionnaire["Id"] + "-" + self.bonDeTravailManager._ObtenirProchainIDdeBDT(self.equipementDictionnaire["Id"])
+        self.equipementManager._AfficherBD()
+        self.bonDeTravailManager._AfficherBD()
+        id_bdt = (self.bonDeTravailManager._ObtenirProchainIDdeBDT(self.equipementDictionnaire["Id"]))
+        print(id_bdt)
+        id = str(self.equipementDictionnaire["Id"]) + "-" + str(id_bdt)
         self.labelEcritureBonTravail.setText(str(id))
         for label in self.listeLabelCache:
             label.hide()
