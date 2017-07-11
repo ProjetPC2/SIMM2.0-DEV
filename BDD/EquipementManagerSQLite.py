@@ -86,7 +86,7 @@ class EquipementManager:
 
                 dict_renvoi['Reussite'] = True  # ajout du nouvel équipement dans la base de données
                 con.commit()
-
+                self._AfficherBD()
         except lite.Error as e:
             if con:
                 con.rollback()

@@ -286,4 +286,5 @@ champsAcceptes-Equipement:
 - EtatService
 - EtatConservation
 - Commentaires
+- PDfPath
 dernierID-Equipement: 1200
