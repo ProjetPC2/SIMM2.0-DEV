@@ -79,7 +79,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.equipement.ajoutListeMethodes()
 
         # Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+        self.equipementManager = EquipementManager(pathEquipementDatabase)
         self.listeDonnees = list()
         try:
             fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire

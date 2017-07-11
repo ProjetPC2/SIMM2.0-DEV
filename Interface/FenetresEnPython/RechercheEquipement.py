@@ -22,7 +22,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
     def ajoutRechercheEquipement(self):
         #Recuperation des differents attributs d'un equipement
-        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+        self.equipementManager = EquipementManager(pathEquipementDatabase)
         self.listeCleDonnees = list()
         try:
             fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire

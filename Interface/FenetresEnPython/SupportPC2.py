@@ -15,7 +15,7 @@ class SupportPC2(Ui_SupportPC2):
         self.boutonRinitialiserStatistiques.clicked.connect(self.recalculerStatistique)
 
     def recalculerStatistique(self):
-        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+        self.equipementManager = EquipementManager(pathEquipementDatabase)
         self.equipementManager._recalculStats()
 
 

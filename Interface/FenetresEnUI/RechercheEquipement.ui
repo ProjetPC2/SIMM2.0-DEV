@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>RechercheEquipement</class>
+ <widget class="QWidget" name="RechercheEquipement">
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
@@ -549,7 +549,7 @@ background:rgb(247,247,247);</string>
       <number>1</number>
      </property>
      <property name="columnCount">
-      <number>13</number>
+      <number>14</number>
      </property>
      <attribute name="horizontalHeaderDefaultSectionSize">
       <number>200</number>
@@ -566,6 +566,11 @@ background:rgb(247,247,247);</string>
      <column>
       <property name="text">
        <string>ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Date dernier entretien</string>
       </property>
      </column>
      <column>

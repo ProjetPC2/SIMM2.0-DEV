@@ -35,11 +35,28 @@ import time
 
 
 class EquipementManager:
-    def __init__(self, pathname_eq, pathname_bdt):
-        self._pathnameEQ = pathname_eq  # pathname de la base de données des équipements
-        self._pathnameBDT = pathname_bdt
+    def __init__(self, pathname):
+        self._pathnameEQ = pathname  # pathname de la base de données des équipements
         self.conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         self.stats_file = 'fichier_stats.yaml'
+
+        try:
+            con = lite.connect(self._pathnameEQ)
+            cur = con.cursor()
+            cur.execute(
+                "CREATE TABLE IF NOT EXISTS Equipement(Id INTEGER PRIMARY KEY, CategorieEquipement TEXT, Marque TEXT, Modele TEXT, "
+                + " NumeroSerie TEXT, Salle TEXT, CentreService TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, "
+                + " Provenance TEXT, CodeAsset TEXT, EtatService TEXT, EtatConservation TEXT, Commentaires TEXT, PdfPath TEXT)")
+        except lite.Error as e:
+            if con:
+                con.rollback()
+
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
 
     def AjouterEquipement(self, dictio):
         conf = self._getConf()
@@ -48,11 +65,6 @@ class EquipementManager:
         try:
             con = lite.connect(self._pathnameEQ)
             cur = con.cursor()
-            cur.execute(
-                "CREATE TABLE IF NOT EXISTS Equipement(Id INTEGER PRIMARY KEY, CategorieEquipement TEXT, Marque TEXT, Modele TEXT, "
-                + " NumeroSerie TEXT, Salle TEXT, CentreService TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, "
-                + " Provenance TEXT, CodeAsset TEXT, EtatService TEXT, EtatConservation INT, Commentaires TEXT, PdfPath TEXT)")
-
             if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf,stats):  # ARRANGER FONCTION AVANT
                 '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService," \
                               + " Provenance, CodeAsset, EtatService, EtatConservation,"\
@@ -241,9 +253,18 @@ class EquipementManager:
                 print(row)
 
     def _ObtenirProchainID(self):
-        conf = self._getConf()
-        dernier_ID = conf['dernierID-Equipement']
+        con = lite.connect(self._pathnameEQ)
+        dernier_ID = 0
+        with con:
+            cur = con.cursor()
+            print(type(cur.lastrowid))
+            cur.execute("SELECT * From Equipement")
+
+            rows = cur.fetchall()
+            dernier_ID = len(rows)
+
         prochain_ID = int(dernier_ID) + 1
+
         return prochain_ID
 
     def _verifierChamps(self, dictio, conf):
@@ -500,23 +521,13 @@ class EquipementManager:
 
         return db
 
-    def _getDB_BDT(self):
-        try:
-            if not os.path.exists(self._pathnameBDT):
-                raise OSError(
-                    "Oups nous ne trouvons plus la bdd des bons de travail!")  # erreur si le path n'existe pas
-            else:
-                db = TinyDB(self._pathnameBDT, storage=YAMLStorage)  # data base des équipements
-        except OSError as e:
-            print(e)
 
-        return db
 
 
 if __name__ == "__main__":  # Execution lorsque le fichier est lance
     if True:
         #  TESTS
-        manager = EquipementManager('equipement1.db', 'DataBase_BDT.yaml')
+        manager = EquipementManager('equipement1.db')
 
         data = {'CategorieEquipement': 'Stéthoscope',
                 'Marque': 'Lit de la muerte',
@@ -534,7 +545,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
                 'PdfPath': ''}
 
 
-        # manager._ObtenirProchainID()
+        print("PROCHAIN ID, ", manager._ObtenirProchainID())
         # print(manager._VerifierDict(data))
         # dic_request = {'CategorieEquipement': 'ECG',
         #               'Marque': 'Peter',

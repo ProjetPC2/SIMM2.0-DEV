@@ -137,7 +137,7 @@ class BonDeTravail():
         self.dictionnaire["DescriptionSituation"] = ""
         self.dictionnaire["date"] = ""
         self.dictionnaire["tempsEstime"] = ""
-        self.dictionnaire["descriptionInventaire"] = ""
+        self.dictionnaire["descriptionIntervention"] = ""
         self.dictionnaire["etat"] = ""
 
     def modifierCategorieEquipement(self, categorieEquipement):
@@ -167,11 +167,14 @@ class BonDeTravail():
     def modifierTempsEstime(self, tempsEstime):
         self.dictionnaire["tempsEstime"] = tempsEstime
 
-    def modifierDescriptionInventaire(self, descriptionInventaire):
-        self.dictionnaire["descriptionInventaire"] = descriptionInventaire
+    def modifierDescriptionIntervention(self, descriptionIntervention):
+        self.dictionnaire["descriptionIntervention"] = descriptionIntervention
 
     def modifierEtat(self, etat):
         self.dictionnaire["etat"] = etat
+
+    def modifierAssistance(self, assistance):
+        self.dictionnaire["assistance"] = assistance
 
     def ajoutListeMethodes(self):
         self.listeMethodes = list()
@@ -185,8 +188,9 @@ class BonDeTravail():
         self.listeMethodes.append(self.modifierDescriptionSituation)
         self.listeMethodes.append(self.modifierDate)
         self.listeMethodes.append(self.modifierTempsEstime)
-        self.listeMethodes.append(self.modifierDescriptionInventaire)
+        self.listeMethodes.append(self.modifierDescriptionIntervention)
         self.listeMethodes.append(self.modifierEtat)
+        self.listeMethodes.append(self.modifierAssistance)
 
 def listeCle(dictionnaire) :
     cles = list()

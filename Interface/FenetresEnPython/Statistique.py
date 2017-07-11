@@ -27,7 +27,7 @@ class Statistique(Ui_Statistique):
         self.ajoutStatistique()
 
     def ajoutStatistique(self):
-        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
+        self.equipementManager = EquipementManager(pathEquipementDatabase)
 
         #Mise en place du layout principal
 

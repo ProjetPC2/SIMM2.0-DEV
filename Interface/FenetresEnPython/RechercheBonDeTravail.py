@@ -7,7 +7,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt, QLocale, QDate
 from PyQt5.QtWidgets import QTableWidgetItem, QCalendarWidget
 
-from BDD.BonTravailManager import BonTravailManager
+from BDD.BonTravailManagerSQLite import BonTravailManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.RechercheBonDeTravailUI import Ui_RechercheBonDeTravail
 from Interface.FenetresEnPython.Signaux import Communicate
@@ -23,7 +23,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
     def ajoutRechercheBonDeTravail(self):
         # Recuperation des differents attributs
-        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
+        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase)
         try:
             fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
@@ -73,8 +73,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.calendrierApres.setDate(QDate.currentDate())
 
         #Creation des differents colonnes pour le tableau de resultat
-        # self.listeCleDonnees = list(["ID-EQ", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
-        self.listeCleDonnees = list(["ID-EQ", "ID-BDT", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
+        # self.listeCleDonnees = list(["IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
+        self.listeCleDonnees = list(["IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
 
 
         #liste contenant les bons résultant de la recherche
@@ -117,7 +117,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         for bon in self.listeResultat:
             print((self.tableResultats.item(ligne,0).data(0)))
             print((self.tableResultats.item(ligne,1).data(0)))
-            if(bon["ID-EQ"] == str(self.tableResultats.item(ligne,0).data(0)) and bon["ID-BDT"] == str(self.tableResultats.item(ligne, 1).data(0))):
+            if(bon["IdEquipement"] == str(self.tableResultats.item(ligne,0).data(0)) and bon["NumeroBonTravail"] == str(self.tableResultats.item(ligne, 1).data(0))):
                 self.bonDeTravailSelectionne = bon
         print(self.bonDeTravailSelectionne)
 
@@ -227,15 +227,15 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                 indice = 0
                 if(len(self.listeResultat) > 0):
                     for bdt in self.listeResultat :
-                            print(bdt["ID-EQ"])
+                            print(bdt["IdEquipement"])
                             dictDonnees = dict()
-                            dictDonnees["ID-EQ"] = bdt["ID-EQ"]
+                            dictDonnees["IdEquipement"] = bdt["IdEquipement"]
                             dictDonnees["CategorieEquipement"] = bdt["CategorieEquipement"]
                             dictDonnees["Modele"] = bdt["Modele"]
                             dictDonnees["CentreService"] = bdt["CentreService"]
                             dictDonnees["EtatBDT"] = bdt["EtatBDT"]
                             dictDonnees["Date"] = bdt["Date"]
-                            dictDonnees["ID-BDT"] = bdt["ID-BDT"]
+                            dictDonnees["NumeroBonTravail"] = bdt["NumeroBonTravail"]
                             dictDonnees["DescriptionSituation"] = bdt["DescriptionSituation"]
                             self.listeDonnees.append(dictDonnees)
                     self.signalRechercheBon.remplirTableau.emit()
@@ -256,7 +256,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             for cle in self.listeCleDonnees:
                 if(isinstance(dictionnaire[cle], datetime.date)):
                     self.tableResultats.setItem(i, colonne, QTableWidgetItem((str(dictionnaire[cle]))))
-                elif (cle == "ID-EQ" or cle == "ID-BDT"):
+                elif (cle == "IdEquipement" or cle == "NumeroBonTravail"):
                     item = QTableWidgetItem()
                     item.setData(Qt.EditRole, int(dictionnaire[cle]))
                     self.tableResultats.setItem(i, colonne, item)

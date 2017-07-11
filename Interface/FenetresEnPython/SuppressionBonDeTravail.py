@@ -1,7 +1,7 @@
 import datetime
 from threading import Thread
 
-from BDD.BonTravailManager import BonTravailManager
+from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
@@ -26,8 +26,8 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.lineEditID.returnPressed.connect(self.chercherEquipementThread)
             self.boutonActualiser.clicked.connect(self.chercherEquipementThread)
             # Creation des differents elements utiles pour la sauvegarde
-            self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
-            self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
+            self.equipementManager = EquipementManager(pathEquipementDatabase)
+            self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase)
             self.pieceManager = PieceManager()
 
             self.equipementDictionnaire = dict()

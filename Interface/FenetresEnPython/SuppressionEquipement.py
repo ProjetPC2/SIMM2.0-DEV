@@ -3,7 +3,7 @@ from threading import Thread
 import yaml
 from PyQt5 import QtGui, QtWidgets
 
-from BDD.BonTravailManager import BonTravailManager
+from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathFichierConf
 from Interface.FenetresEnPython.Signaux import Communicate
@@ -39,8 +39,8 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         for label in self.listeLabel:
             label.clear()
         # Recuperation des differents attributs d''un equipement
-        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
-        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
+        self.equipementManager = EquipementManager(pathEquipementDatabase)
+        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase)
         try:
             fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:

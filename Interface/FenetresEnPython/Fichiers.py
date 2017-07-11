@@ -1,3 +1,3 @@
 pathEquipementDatabase = "Equipement.db"
-pathBonTravailDatabase = 'DataBase_BDT.yaml'
+pathBonTravailDatabase = 'Equipement.db'
 pathFichierConf = 'fichier_conf.yaml'

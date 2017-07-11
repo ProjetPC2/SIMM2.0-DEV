@@ -6,8 +6,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt, QLocale, QDate
 from PyQt5.QtWidgets import QTableWidgetItem,QCalendarWidget
 
-from BDD.BonTravailManager import BonTravailManager
-from BDD.EquipementManager import EquipementManager
+from BDD.BonTravailManagerSQLite import BonTravailManager
+from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManager import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI import Ui_BonDeTravail
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
@@ -45,8 +45,8 @@ class BonDeTravail(Ui_BonDeTravail):
             if(self.equipementDictionnaire is not None):
                 self.equipementDictionnaire = equipement
             else:
-                self.equipementDictionnaire = {"ID":self.listeBonDeTravail[self.indiceBonDeTravail]["ID-EQ"]}
-            self.lineEditID.setText(self.equipementDictionnaire["ID"])
+                self.equipementDictionnaire = {"Id":self.listeBonDeTravail[self.indiceBonDeTravail]["IdEquipement"]}
+            self.lineEditID.setText(self.equipementDictionnaire["Id"])
             self.signalFenetreBonTravail.chargerEquipementAPartirBon.emit()
             self.consulterBonTravailSpecifique()
             self.boutonActualiser.setDisabled(True)
@@ -61,7 +61,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 self.boutonFlecheDoubleGauche.hide()
         if(ajouterID is not None):
             #Cas ou on va ajouter un bon de travail pour un equipement
-            self.lineEditID.setText(equipement["ID"])
+            self.lineEditID.setText(equipement["Id"])
             self.lineEditID.setDisabled(True)
             self.boutonActualiser.setDisabled(True)
             self.boutonConsultation.setDisabled(True)
@@ -76,8 +76,8 @@ class BonDeTravail(Ui_BonDeTravail):
     def ajoutBonDeTravail(self):
 
         #Creation des differents elements utiles pour la sauvegarde
-        self.equipementManager = EquipementManager(pathEquipementDatabase, pathBonTravailDatabase)
-        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase, pathEquipementDatabase)
+        self.equipementManager = EquipementManager(pathEquipementDatabase)
+        self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase)
         self.pieceManager = PieceManager()
         self.equipementDictionnaire = None
         self.listeBonDeTravail = list()
@@ -161,7 +161,7 @@ class BonDeTravail(Ui_BonDeTravail):
             :return:
         '''
         #On fait la requete a la BDD
-        self.dic_request['ID'] = self.lineEditID.text()
+        self.dic_request['Id'] = self.lineEditID.text()
         listeTrouve = self.equipementManager.RechercherEquipement(self.dic_request)
         self.boutonConsultation.hide()
         self.boutonSauvegarde.hide()
@@ -175,7 +175,7 @@ class BonDeTravail(Ui_BonDeTravail):
             #Si on a trouve un equipement correspondant, on affiche les informations correspondantes
             self.equipementDictionnaire = listeTrouve[0]
             #On fait la recheche des bons de travail
-            self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": self.lineEditID.text()})
+            self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
             self.signalFenetreBonTravail.chargerEquipement.emit()
@@ -251,21 +251,21 @@ class BonDeTravail(Ui_BonDeTravail):
         if(any(self.equipementDictionnaire)):
             #On ajoute le bon de travail a un equipement existant
             if not self.modificationBon:
-                dicRetour = (self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["ID"], dictionnaireDonnees))
+                dicRetour = (self.bonDeTravailManager.AjouterBonTravail(self.equipementDictionnaire["Id"], dictionnaireDonnees))
                 print(dicRetour)
                 if dicRetour["Reussite"]:
                     print("Reussi")
                     if(len(self.listeBonDeTravail)>0):
-                        idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail)-1]["ID-BDT"]) + 1 )#+ self.nombreBonAjoute)
+                        idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail)-1]["NumeroBonTravail"]) + 1 )#+ self.nombreBonAjoute)
                     else:
                         idBDT = 1
                     print("bon de travail d'id :", idBDT)
-                    dictionnaireDonnees["ID-BDT"] = idBDT
+                    dictionnaireDonnees["NumeroBonTravail"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
                     self.nombreBonAjoute += 1
                     self.signalFenetreBonTravail.confirmation.emit()
             else:
-                dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["ID"], self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"], dictionnaireDonnees))
+                dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["Id"], self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], dictionnaireDonnees))
                 if dicRetour["Reussite"]:
                     print("Modification Réussie")
                     self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = dictionnaireDonnees["Date"]
@@ -323,7 +323,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
-            idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"])
+            idBDT = str(self.equipementDictionnaire["Id"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"])
             print("idBDT", idBDT)
             self.labelEcritureBonTravail.setText(idBDT)
             if "Pieces" in self.listeBonDeTravail[self.indiceBonDeTravail]:
@@ -412,10 +412,9 @@ class BonDeTravail(Ui_BonDeTravail):
         self.boutonConsultation.show()
         self.pushButtonValider.setDisabled(False)
         self.boutonSauvegarde.setVisible(True)
-        id = self.equipementDictionnaire["ID"] + "-" + str(self.equipementDictionnaire["NbBonTravail"] + 1 + self.nombreBonAjoute)
-        print("nombre bon de travail:",self.equipementDictionnaire["NbBonTravail"])
-        print("nombre bon ajoute", self.nombreBonAjoute)
-        print("id bdt :", id)
+        print(self.equipementDictionnaire["Id"])
+        print(self.bonDeTravailManager._ObtenirProchainIDdeBDT(self.equipementDictionnaire["Id"]))
+        id = self.equipementDictionnaire["Id"] + "-" + self.bonDeTravailManager._ObtenirProchainIDdeBDT(self.equipementDictionnaire["Id"])
         self.labelEcritureBonTravail.setText(str(id))
         for label in self.listeLabelCache:
             label.hide()
@@ -474,7 +473,8 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
         self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
         self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
-        self.lineEditID.setText(self.equipementDictionnaire["ID"])
+        print(self.equipementDictionnaire["Id"])
+        self.lineEditID.setText(str(self.equipementDictionnaire["Id"]))
         self.boutonAjoutBDT.setDisabled(False)
         #A modifier
         # self.rechercherBonTravail()
@@ -487,7 +487,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelEcritureMarque.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Marque"])
         self.labelEcritureSalle.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Salle"])
         self.labelEcritureModele.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Modele"])
-        self.lineEditID.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["ID-EQ"])
+        self.lineEditID.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["IdEquipement"])
         self.boutonAjoutBDT.setDisabled(False)
         #A modifier
         # self.rechercherBonTravail()
@@ -496,9 +496,9 @@ class BonDeTravail(Ui_BonDeTravail):
     def consulterBonTravailSpecifique(self):
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         indice = 0
-        while(self.listeBonDeTravail[indice]["ID-BDT"] != str(self.consulterBDT["ID-BDT"])):
-            print("id dans la liste", self.listeBonDeTravail[indice]["ID-BDT"])
-            print("id recupere", self.consulterBDT["ID-BDT"])
+        while(self.listeBonDeTravail[indice]["NumeroBonTravail"] != str(self.consulterBDT["NumeroBonTravail"])):
+            print("id dans la liste", self.listeBonDeTravail[indice]["NumeroBonTravail"])
+            print("id recupere", self.consulterBDT["NumeroBonTravail"])
             indice += 1
         self.indiceBonDeTravail = indice
         self.signalFenetreBonTravail.chargerBonTravail.emit()
