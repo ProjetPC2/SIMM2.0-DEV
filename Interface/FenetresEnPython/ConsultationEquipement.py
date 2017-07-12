@@ -92,7 +92,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 self.boutonAjouterUnBon.setEnabled(True)
                 self.boutonConsulterBon.setEnabled(False)
                 dictionnaireBDTRecherche = dict()
-                dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
+                dictionnaireBDTRecherche["IdEquipement"] = self.lineEditId.text()
                 self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
 
                 self.signalFenetreConsultation.afficherBonDeTravailAssocie.emit()
@@ -130,7 +130,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 QtGui.QPixmap("Images/view-icon.png"),
                 QtGui.QIcon.Normal, QtGui.QIcon.Off)
             for bdt in self.listeBonDeTravail:
-                affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
+                affichage = self.lineEditId.text() + "-" + bdt["NumeroBonTravail"]
                 self.comboBoxBons.addItem(icon2, affichage)
 
     def rechercherEquipementThread(self):
