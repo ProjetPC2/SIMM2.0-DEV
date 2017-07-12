@@ -397,7 +397,7 @@ background-color: rgb(193, 213, 243);
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelTitreUnite">
+      <widget class="QLabel" name="labelTitreCentreDeService">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -505,7 +505,7 @@ background-color: rgb(193, 213, 243);
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelTitreVoltageCourant">
+      <widget class="QLabel" name="labelTitreCodeASSET">
        <property name="font">
         <font>
          <pointsize>10</pointsize>

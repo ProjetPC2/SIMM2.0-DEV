@@ -280,7 +280,7 @@ color: rgb(81, 81, 81);
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLabel" name="labelUnite">
+          <widget class="QLabel" name="labelCentreService">
            <property name="font">
             <font>
              <pointsize>10</pointsize>

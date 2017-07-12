@@ -686,7 +686,7 @@ technique</string>
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="LabelSIMM20HopitalJustinien">
+         <widget class="QLabel" name="LabelSIMM20HopitalSaintMichel">
           <property name="font">
            <font>
             <family>MS Shell Dlg 2</family>
