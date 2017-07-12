@@ -214,7 +214,7 @@ background:rgb(247,247,247);
           <string notr="true">background: white;</string>
          </property>
          <property name="text">
-          <string>Centre de service : </string>
+          <string>Unité : </string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -283,7 +283,7 @@ background:rgb(247,247,247);
           </font>
          </property>
          <property name="text">
-          <string>Code ASSET :</string>
+          <string>Voltage/Courant :</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

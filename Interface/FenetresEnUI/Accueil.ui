@@ -686,7 +686,7 @@ technique</string>
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="LabelSIMM20HopitalSaintMichel">
+         <widget class="QLabel" name="LabelSIMM20HopitalJustinien">
           <property name="font">
            <font>
             <family>MS Shell Dlg 2</family>
@@ -709,7 +709,7 @@ color: white;
           </property>
           <property name="text">
            <string>S.I.M.M. 2.0
-Hôpital Saint-Michel </string>
+Hôpital Universitaire Justinien</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignHCenter|Qt::AlignTop</set>

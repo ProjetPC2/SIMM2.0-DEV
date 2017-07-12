@@ -397,7 +397,7 @@ background-color: rgb(193, 213, 243);
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelTitreCentreDeService">
+      <widget class="QLabel" name="labelTitreUnite">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -407,7 +407,7 @@ background-color: rgb(193, 213, 243);
         <string notr="true">background:white;</string>
        </property>
        <property name="text">
-        <string>Centre de service : </string>
+        <string>Unité :</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -505,14 +505,14 @@ background-color: rgb(193, 213, 243);
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelTitreCodeASSET">
+      <widget class="QLabel" name="labelTitreVoltageCourant">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>Code ASSET :</string>
+        <string>Voltage/Courant :</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
