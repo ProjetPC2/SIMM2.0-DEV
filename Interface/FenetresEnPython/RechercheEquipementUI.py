@@ -279,7 +279,7 @@ class Ui_RechercheEquipement(object):
     def retranslateUi(self, RechercheEquipement):
         _translate = QtCore.QCoreApplication.translate
         RechercheEquipement.setWindowTitle(_translate("RechercheEquipement", "Form"))
-        self.labelCentreService.setText(_translate("RechercheEquipement", "Centre de service"))
+        self.labelCentreService.setText(_translate("RechercheEquipement", "Unité"))
         self.labelCategorieEquipement.setText(_translate("RechercheEquipement", "Catégorie d\'équipement"))
         self.labelEtatService.setText(_translate("RechercheEquipement", "État de service"))
         self.labelProvenance.setText(_translate("RechercheEquipement", "Provenance"))
@@ -303,7 +303,7 @@ class Ui_RechercheEquipement(object):
         item = self.tableResultats.horizontalHeaderItem(6)
         item.setText(_translate("RechercheEquipement", "Salle"))
         item = self.tableResultats.horizontalHeaderItem(7)
-        item.setText(_translate("RechercheEquipement", "Centre de service"))
+        item.setText(_translate("RechercheEquipement", "Unité"))
         item = self.tableResultats.horizontalHeaderItem(8)
         item.setText(_translate("RechercheEquipement", "Date d\'acquisition"))
         item = self.tableResultats.horizontalHeaderItem(9)
