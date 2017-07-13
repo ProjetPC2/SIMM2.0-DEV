@@ -69,6 +69,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         fichierConf.close()
 
         #Mise en forme de la page d'accueil
+        # on déplace date du dernier entretien à la 2eme colonne
+        self.listeCleDonnees.insert(1, self.listeCleDonnees.pop(self.listeCleDonnees.index('DateDernierEntretien')))
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
         self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.setRowCount(0)
@@ -220,11 +222,12 @@ class RechercheEquipement(Ui_RechercheEquipement):
     def remplirTableau(self):
         self.tableResultats.setRowCount(len(self.listeResultat))
         if(any(self.listeResultat)):
+
             for i, dictionnaire in enumerate(self.listeResultat):
                 # Creation des QTableWidgetItem
                 colonne = 0
-                # print(dictionnaire)
-                # print(self.listeCleDonnees)
+                #print(dictionnaire)
+                #print(self.listeCleDonnees)
                 for cle in self.listeCleDonnees:
                     if(cle == "Id"):
                         item = QTableWidgetItem()
@@ -234,6 +237,11 @@ class RechercheEquipement(Ui_RechercheEquipement):
                         self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                     colonne += 1
                 self.tableResultats.resizeColumnsToContents()
+                #on change le nom du header
+                self.listeCleDonnees[self.listeCleDonnees.index('CentreService')] = 'Unite'
+                self.listeCleDonnees[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
+                self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
+
         else:
             self.chargement.aucunResultat.emit()
 
