@@ -1,3 +1,4 @@
+import subprocess
 import yaml
 from PyQt5 import QtGui, QtWidgets
 
@@ -66,7 +67,9 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.boutonModifierEquipement.setEnabled(False)
         self.boutonAjouterUnBon.setEnabled(False)
         self.boutonConsulterBon.setEnabled(False)
+        self.BoutonPDF.setEnabled(False)
         self.comboBoxBons.clear()
+        self.BoutonPDF.clicked.connect(self.ouvrirPDF)
 
     def rechercherEquipement(self):
         '''
@@ -90,6 +93,10 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                     #Recuperation des donnees sous forme de string
                     self.listeLabel[i].setText(str(self.equipement[cle]))
                     i += 1
+                if (self.equipement["PdfPath"] != ""):
+                    self.BoutonPDF.setEnabled(True)
+                else:
+                    self.BoutonPDF.setEnabled(False)
                 self.boutonModifierEquipement.setEnabled(True)
                 self.boutonAjouterUnBon.setEnabled(True)
                 self.boutonConsulterBon.setEnabled(False)
@@ -138,6 +145,11 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
     def rechercherEquipementThread(self):
         a = RechercherEquipement(self.rechercherEquipement)
         a.start()
+
+    def ouvrirPDF(self):
+        if(self.equipement is not None):
+            if(self.equipement["PdfPath"] != ""):
+                subprocess.Popen(self.equipement["PdfPath"], shell=True)
 
 class RechercherEquipement(Thread):
     def __init__(self, fonction):
