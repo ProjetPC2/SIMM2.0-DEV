@@ -778,7 +778,12 @@ color: rgb(81, 81, 81);
            </property>
            <item>
             <property name="text">
-             <string>Kerlin Hyppolite</string>
+             <string>Gary</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Sony</string>
             </property>
            </item>
           </widget>
