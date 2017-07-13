@@ -394,6 +394,6 @@ class Ui_Accueil(object):
         self.BoutonSupportTecnique.setText(_translate("Accueil", "Support\n"
 "technique"))
         self.LabelSIMM20HopitalSaintMichel.setText(_translate("Accueil", "S.I.M.M. 2.0\n"
-"Hôpital Saint-Michel "))
+"Hôpital Universitaire Justinien"))
         self.LabelDefinitionSIMM.setText(_translate("Accueil", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 

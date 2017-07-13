@@ -347,7 +347,7 @@ color: rgb(81, 81, 81);
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLabel" name="labelCentreService">
+          <widget class="QLabel" name="labelUnite">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -357,7 +357,7 @@ color: rgb(81, 81, 81);
             <string notr="true">background: white;</string>
            </property>
            <property name="text">
-            <string>Centre de service</string>
+            <string>Unité</string>
            </property>
           </widget>
          </item>
