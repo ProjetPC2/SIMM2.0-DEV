@@ -198,7 +198,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
-        self.equipementManager.ModifierEquipement(self. equipementRecherche["ID"], self.equipement.dictionnaire)
+        self.equipementManager.ModifierEquipement(self. equipementRecherche["Id"], self.equipement.dictionnaire)
         self.sauvegarde.sauvegardeTermine.emit()
 
     def verificationEquipement(self):
@@ -219,7 +219,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
                     self.listeLabel[indice].show()
                     self.listeWidgets[indice].hide()
                 indice += 1
-            self.labelID.setText(str(self.equipementRecherche["ID"]))
+            self.labelID.setText(str(self.equipementRecherche["Id"]))
             self.BoutonEnregistrer.show()
             self.BoutonModifier.show()
             self.BoutonValider.hide()
@@ -251,12 +251,12 @@ class ModificationEquipement(Ui_AjoutEquipement):
          Utilisation des donnees entrees par l'utilisateur pour les labels
          """
         equipement = self.equipementRecherche
-        self.labelVide.setText(str(equipement["ID"]))
+        self.labelVide.setText(str(equipement["Id"]))
         indice = 0
         for widget in self.listeWidgets:
             # self.stockage.dictionnaire
             if type(widget) is QLineEdit:
-                widget.setText(equipement[self.listeCleDonnees[indice]])
+                widget.setText(str(equipement[self.listeCleDonnees[indice]]))
             elif type(widget) is QDateEdit:
                 widget.setDate(datetime.datetime.strptime(equipement[self.listeCleDonnees[indice]] ,"%Y-%m-%d"))
             elif type(widget) is QComboBox:
@@ -312,7 +312,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     modificationEquipement = QtWidgets.QWidget()
-    equipement = dict({"ID":"9",
+    equipement = dict({"Id":"9",
                        "CategorieEquipement":"test",
                        "Marque":"Apple",
                        "Modele":"modele",

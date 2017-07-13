@@ -130,7 +130,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 QtGui.QPixmap("Images/view-icon.png"),
                 QtGui.QIcon.Normal, QtGui.QIcon.Off)
             for bdt in self.listeBonDeTravail:
-                affichage = self.lineEditId.text() + "-" + bdt["NumeroBonTravail"]
+                affichage = self.lineEditId.text() + "-" + str(bdt["NumeroBonTravail"])
                 self.comboBoxBons.addItem(icon2, affichage)
 
     def rechercherEquipementThread(self):
