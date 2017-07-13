@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'FenetresEnUI/ConsultationEquipement.ui'
+# Form implementation generated from reading ui file 'ConsultationEquipement.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -558,7 +558,7 @@ class Ui_ConsultationEquipement(object):
         self.labelTitreProvenance.setText(_translate("ConsultationEquipement", "Provenance : "))
         self.labelTitreEtatDeService.setText(_translate("ConsultationEquipement", "État de service : "))
         self.labelTitreEtatDeConservation.setText(_translate("ConsultationEquipement", "État de conservation : "))
-        self.labelTitreCodeASSET.setText(_translate("ConsultationEquipement", "Voltage/courant :"))
+        self.labelTitreCodeASSET.setText(_translate("ConsultationEquipement", "Voltage/Courant :"))
         self.labelCategorie.setText(_translate("ConsultationEquipement", "Équipement de Néonatologie"))
         self.labelMarque.setText(_translate("ConsultationEquipement", "Bosch"))
         self.labelModele.setText(_translate("ConsultationEquipement", "XR310b"))

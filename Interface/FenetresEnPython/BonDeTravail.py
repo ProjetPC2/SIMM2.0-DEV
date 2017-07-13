@@ -45,8 +45,10 @@ class BonDeTravail(Ui_BonDeTravail):
             if(self.equipementDictionnaire is not None):
                 self.equipementDictionnaire = equipement
             else:
-                self.equipementDictionnaire = {"Id":self.listeBonDeTravail[self.indiceBonDeTravail]["IdEquipement"]}
-            self.lineEditID.setText(self.equipementDictionnaire["Id"])
+                #id_equipement = str(self.listeBonDeTravail[self.indiceBonDeTravail]["IdEquipement"])
+                #self.equipementDictionnaire = EquipementManager.RechercherEquipement({"Id":id_equipement})
+                self.equipementDictionnaire = equipement
+            self.lineEditID.setText(str(self.equipementDictionnaire["Id"]))
             self.signalFenetreBonTravail.chargerEquipementAPartirBon.emit()
             self.consulterBonTravailSpecifique()
             self.boutonActualiser.setDisabled(True)
@@ -61,7 +63,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 self.boutonFlecheDoubleGauche.hide()
         if(ajouterID is not None):
             #Cas ou on va ajouter un bon de travail pour un equipement
-            self.lineEditID.setText(equipement["Id"])
+            self.lineEditID.setText(str(equipement["Id"]))
             self.lineEditID.setDisabled(True)
             self.boutonActualiser.setDisabled(True)
             self.boutonConsultation.setDisabled(True)
@@ -175,7 +177,7 @@ class BonDeTravail(Ui_BonDeTravail):
             #Si on a trouve un equipement correspondant, on affiche les informations correspondantes
             self.equipementDictionnaire = listeTrouve[0]
             #On fait la recheche des bons de travail
-            self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": self.lineEditID.text()})
+
             self.indiceBonDeTravail = 0
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
             self.signalFenetreBonTravail.chargerEquipement.emit()
@@ -269,12 +271,13 @@ class BonDeTravail(Ui_BonDeTravail):
                 dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["Id"], self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], dictionnaireDonnees))
                 if dicRetour["Reussite"]:
                     print("Modification Réussie")
-                    self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = dictionnaireDonnees["Date"]
-                    self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"] = dictionnaireDonnees["TempsEstime"]
+                    '''self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = str(dictionnaireDonnees["Date"])
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"] = str(dictionnaireDonnees["TempsEstime"])
                     self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"] = dictionnaireDonnees["DescriptionSituation"]
                     self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"] = dictionnaireDonnees["DescriptionIntervention"]
                     self.listeBonDeTravail[self.indiceBonDeTravail]["NomTechnicien"] = dictionnaireDonnees["NomTechnicien"]
-                    self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] = dictionnaireDonnees["EtatBDT"]
+                    self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] = dictionnaireDonnees["EtatBDT"]'''
+                    self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": self.lineEditID.text()})
         self.chargement.sauvegardeTermine.emit()
 
     def rechercherBonTravail(self):
@@ -306,7 +309,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.tableWidgetPiecesAssociees.setRowCount(0)
 
         if(len(self.listeBonDeTravail)>0):
-            self.dateEdit.setDate(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"])
+            self.dateEdit.setDate(datetime.datetime.strptime(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"], "%Y-%m-%d"))
             self.textEditDescSituation.setPlainText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
             self.textEditDescSituation.wordWrapMode()
             self.textEditDescIntervention.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionIntervention"])
@@ -321,7 +324,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeCategoriePiece.sort()
             self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
-                self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
+                self.timeEditTempsEstime.setTime(datetime.datetime.strptime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], "%H-%m"))
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
                 self.comboBoxOuvertFerme.setCurrentText("Fermé")
             idBDT = str(self.equipementDictionnaire["Id"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"])
@@ -486,12 +489,12 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def chargerEquipementAPartirBon(self):
         #Methode permettant le chargement d'un equipement
-        self.labelEcritureCatEquip.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["CategorieEquipement"])
-        self.labelEcritureCentreService.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["CentreService"])
-        self.labelEcritureMarque.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Marque"])
-        self.labelEcritureSalle.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Salle"])
-        self.labelEcritureModele.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["Modele"])
-        self.lineEditID.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["IdEquipement"])
+        self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
+        self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
+        self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
+        self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
+        self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
+        self.lineEditID.setText(str(self.equipementDictionnaire["Id"]))
         self.boutonAjoutBDT.setDisabled(False)
         #A modifier
         # self.rechercherBonTravail()
@@ -500,7 +503,7 @@ class BonDeTravail(Ui_BonDeTravail):
     def consulterBonTravailSpecifique(self):
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         indice = 0
-        while(self.listeBonDeTravail[indice]["NumeroBonTravail"] != str(self.consulterBDT["NumeroBonTravail"])):
+        while str(self.listeBonDeTravail[indice]["NumeroBonTravail"]) != str(self.consulterBDT["NumeroBonTravail"]):
             print("id dans la liste", self.listeBonDeTravail[indice]["NumeroBonTravail"])
             print("id recupere", self.consulterBDT["NumeroBonTravail"])
             indice += 1

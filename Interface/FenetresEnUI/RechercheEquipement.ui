@@ -100,7 +100,7 @@ background-color: rgb(193, 213, 243);
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QLabel" name="labelUnite">
+        <widget class="QLabel" name="labelCentreService">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -383,12 +383,12 @@ background:rgb(247,247,247);</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png</normaloff>SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png</iconset>
+           <normaloff>Images/Refresh2.png</normaloff>Images/Refresh2.png</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>50</width>
-           <height>50</height>
+           <width>40</width>
+           <height>40</height>
           </size>
          </property>
         </widget>
@@ -475,7 +475,7 @@ background:rgb(247,247,247);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/magnifier.png</pixmap>
+        <pixmap>Images/magnifier.png</pixmap>
        </property>
       </widget>
      </item>

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'FenetresEnUI/AjoutEquipement.ui'
+# Form implementation generated from reading ui file 'AjoutEquipement.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -742,12 +742,13 @@ class Ui_AjoutEquipement(object):
         self.label_29.setText(_translate("AjoutEquipement", "Date d\'aquisition : "))
         self.label_27.setText(_translate("AjoutEquipement", "Date du dernier entretien : "))
         self.label_26.setText(_translate("AjoutEquipement", "Provenance : "))
-        self.label_2.setText(_translate("AjoutEquipement", "Voltage/courant :"))
+        self.label_2.setText(_translate("AjoutEquipement", "Voltage/Courant :"))
         self.comboBoxCategorie.setItemText(0, _translate("AjoutEquipement", "\"N\\xE9gatoscope (moniteur de radiographie)\""))
         self.comboBoxCategorie.setItemText(1, _translate("AjoutEquipement", "Catégorie 3"))
         self.comboBoxSalle.setItemText(0, _translate("AjoutEquipement", "Salle 1"))
         self.comboBoxSalle.setItemText(1, _translate("AjoutEquipement", "Salle 2"))
         self.comboBoxSalle.setItemText(2, _translate("AjoutEquipement", "Salle 3"))
+        self.comboBoxCentreDeService.setCurrentText(_translate("AjoutEquipement", "Centre de service X"))
         self.comboBoxCentreDeService.setItemText(0, _translate("AjoutEquipement", "Centre de service X"))
         self.comboBoxCentreDeService.setItemText(1, _translate("AjoutEquipement", "Centre de service Y"))
         self.comboBoxCentreDeService.setItemText(2, _translate("AjoutEquipement", "Centre de service Z"))
@@ -759,11 +760,11 @@ class Ui_AjoutEquipement(object):
         self.labelModele.setText(_translate("AjoutEquipement", "Ici Modèle"))
         self.labelNoDeSerie.setText(_translate("AjoutEquipement", "Ici No. de serie"))
         self.labelSalle.setText(_translate("AjoutEquipement", "Ici Salle"))
-        self.labelCentreDeService.setText(_translate("AjoutEquipement", "Ici Centre de service"))
+        self.labelCentreDeService.setText(_translate("AjoutEquipement", "Ici Unite"))
         self.labelDateDAquisition.setText(_translate("AjoutEquipement", "Ici Date d\'aquisition"))
         self.labelDateDernierEntretien.setText(_translate("AjoutEquipement", "Ici Date du dernier entretien"))
         self.labelProvenance.setText(_translate("AjoutEquipement", "Ici Provenance"))
-        self.labelCodeASSET.setText(_translate("AjoutEquipement", "Ici Code ASSET"))
+        self.labelCodeASSET.setText(_translate("AjoutEquipement", "Ici Voltage/Courant"))
         self.labelAjoutPDF.setText(_translate("AjoutEquipement", "Ajouter un datasheet/ usermanual"))
         self.BoutonPDF.setText(_translate("AjoutEquipement", "Choisir PDF"))
         self.labelPDF.setText(_translate("AjoutEquipement", "fichier pdf"))

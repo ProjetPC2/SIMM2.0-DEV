@@ -1,3 +1,4 @@
+import subprocess
 import yaml
 from PyQt5 import QtGui, QtWidgets
 
@@ -33,11 +34,13 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeLabel.append(self.labelCodeASSET)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
-        self.listeLabel.append(self.labelConsultPDF)
+
 
 
         # A voir pour les bons de travaux
         self.listeLabel.append(self.labelCommentaires)
+        self.listeLabel.append(self.labelConsultPDF)
+
         #Efface le contenu des differents champs par defaut
         for label in self.listeLabel:
             label.clear()
@@ -64,7 +67,9 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.boutonModifierEquipement.setEnabled(False)
         self.boutonAjouterUnBon.setEnabled(False)
         self.boutonConsulterBon.setEnabled(False)
+        self.BoutonPDF.setEnabled(False)
         self.comboBoxBons.clear()
+        self.BoutonPDF.clicked.connect(self.ouvrirPDF)
 
     def rechercherEquipement(self):
         '''
@@ -88,6 +93,10 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                     #Recuperation des donnees sous forme de string
                     self.listeLabel[i].setText(str(self.equipement[cle]))
                     i += 1
+                if (self.equipement["PdfPath"] != ""):
+                    self.BoutonPDF.setEnabled(True)
+                else:
+                    self.BoutonPDF.setEnabled(False)
                 self.boutonModifierEquipement.setEnabled(True)
                 self.boutonAjouterUnBon.setEnabled(True)
                 self.boutonConsulterBon.setEnabled(False)
@@ -130,12 +139,17 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 QtGui.QPixmap("Images/view-icon.png"),
                 QtGui.QIcon.Normal, QtGui.QIcon.Off)
             for bdt in self.listeBonDeTravail:
-                affichage = self.lineEditId.text() + "-" + bdt["NumeroBonTravail"]
+                affichage = self.lineEditId.text() + "-" + str(bdt["NumeroBonTravail"])
                 self.comboBoxBons.addItem(icon2, affichage)
 
     def rechercherEquipementThread(self):
         a = RechercherEquipement(self.rechercherEquipement)
         a.start()
+
+    def ouvrirPDF(self):
+        if(self.equipement is not None):
+            if(self.equipement["PdfPath"] != ""):
+                subprocess.Popen(self.equipement["PdfPath"], shell=True)
 
 class RechercherEquipement(Thread):
     def __init__(self, fonction):

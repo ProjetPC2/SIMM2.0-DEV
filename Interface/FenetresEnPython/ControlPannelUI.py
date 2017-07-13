@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'FenetresEnUI/controlPannel.ui'
+# Form implementation generated from reading ui file 'controlPannel.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -13,7 +13,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.setEnabled(True)
-        MainWindow.resize(1440, 810)
+        MainWindow.resize(1571, 703)
         font = QtGui.QFont()
         font.setFamily("Cambria")
         MainWindow.setFont(font)
@@ -58,6 +58,12 @@ class Ui_MainWindow(object):
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.layoutBoutonEquipement.addItem(spacerItem2)
         self.BoutonAjouterEquipement = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonAjouterEquipement.sizePolicy().hasHeightForWidth())
+        self.BoutonAjouterEquipement.setSizePolicy(sizePolicy)
+        self.BoutonAjouterEquipement.setMinimumSize(QtCore.QSize(50, 50))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
@@ -99,6 +105,11 @@ class Ui_MainWindow(object):
         self.BoutonModifierConsulterEquipement.setObjectName("BoutonModifierConsulterEquipement")
         self.layoutBoutonEquipement.addWidget(self.BoutonModifierConsulterEquipement)
         self.BoutonRechercherEquipement = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonRechercherEquipement.sizePolicy().hasHeightForWidth())
+        self.BoutonRechercherEquipement.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
@@ -127,6 +138,11 @@ class Ui_MainWindow(object):
         spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.layoutBoutonBdT.addItem(spacerItem4)
         self.BoutonRechercherBonTravail = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonRechercherBonTravail.sizePolicy().hasHeightForWidth())
+        self.BoutonRechercherBonTravail.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
@@ -147,6 +163,11 @@ class Ui_MainWindow(object):
         self.BoutonRechercherBonTravail.setObjectName("BoutonRechercherBonTravail")
         self.layoutBoutonBdT.addWidget(self.BoutonRechercherBonTravail)
         self.BoutonAjouterBonTravail = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonAjouterBonTravail.sizePolicy().hasHeightForWidth())
+        self.BoutonAjouterBonTravail.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
@@ -175,6 +196,11 @@ class Ui_MainWindow(object):
         spacerItem7 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.layoutBoutonExtra.addItem(spacerItem7)
         self.BoutonImprimerInventaire = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonImprimerInventaire.sizePolicy().hasHeightForWidth())
+        self.BoutonImprimerInventaire.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
@@ -195,6 +221,11 @@ class Ui_MainWindow(object):
         self.BoutonImprimerInventaire.setObjectName("BoutonImprimerInventaire")
         self.layoutBoutonExtra.addWidget(self.BoutonImprimerInventaire)
         self.BoutonStatistiques = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonStatistiques.sizePolicy().hasHeightForWidth())
+        self.BoutonStatistiques.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
@@ -214,6 +245,30 @@ class Ui_MainWindow(object):
         self.BoutonStatistiques.setIconSize(QtCore.QSize(40, 40))
         self.BoutonStatistiques.setObjectName("BoutonStatistiques")
         self.layoutBoutonExtra.addWidget(self.BoutonStatistiques)
+        self.BoutonRapport = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonRapport.sizePolicy().hasHeightForWidth())
+        self.BoutonRapport.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BoutonRapport.setFont(font)
+        self.BoutonRapport.setStyleSheet("QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);\n"
+"}\n"
+"QPushButton:pressed{ background-color: #cccccc; }")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("Images/Rapport.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonRapport.setIcon(icon8)
+        self.BoutonRapport.setIconSize(QtCore.QSize(40, 40))
+        self.BoutonRapport.setObjectName("BoutonRapport")
+        self.layoutBoutonExtra.addWidget(self.BoutonRapport)
         spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.layoutBoutonExtra.addItem(spacerItem8)
         self.layoutBouton.addLayout(self.layoutBoutonExtra)
@@ -238,9 +293,9 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QPushButton:pressed{ background-color: #cccccc; }")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("../Images/PC2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.BoutonSuportTecnique.setIcon(icon8)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("../Images/PC2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BoutonSuportTecnique.setIcon(icon9)
         self.BoutonSuportTecnique.setIconSize(QtCore.QSize(40, 40))
         self.BoutonSuportTecnique.setAutoDefault(False)
         self.BoutonSuportTecnique.setDefault(False)
@@ -313,9 +368,10 @@ class Ui_MainWindow(object):
 "l\'inventaire"))
         self.BoutonStatistiques.setText(_translate("MainWindow", "Voir les\n"
 "statistiques"))
+        self.BoutonRapport.setText(_translate("MainWindow", "Rapport"))
         self.BoutonSuportTecnique.setText(_translate("MainWindow", "Support\n"
 "technique"))
         self.LabelSIMM20HopitalSaintMichel.setText(_translate("MainWindow", "S.I.M.M. 2.0\n"
-"Hôpital Saint-Michel "))
+"Hôpital Universitaire Justinien "))
         self.LabelDefinitionSIMM.setText(_translate("MainWindow", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 

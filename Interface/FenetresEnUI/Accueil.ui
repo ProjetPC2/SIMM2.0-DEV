@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1440</width>
-    <height>810</height>
+    <width>846</width>
+    <height>729</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -152,6 +152,12 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonAjouterEquipement">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -199,6 +205,12 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonModifierConsulterEquipement">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -242,6 +254,12 @@ un équipement</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonRechercherEquipement">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -316,6 +334,12 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
          <layout class="QVBoxLayout" name="layoutBoutonBdT">
           <item>
            <widget class="QPushButton" name="BoutonAjouterPiece">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -359,6 +383,12 @@ pièce</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonAjouterBonTravail">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -401,6 +431,12 @@ de travail</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonRechercherBonTravail">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -474,6 +510,12 @@ bon de travail</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonImprimerInventaire">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -517,6 +559,12 @@ l'inventaire</string>
           </item>
           <item>
            <widget class="QPushButton" name="BoutonStatistiques">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>350</width>
@@ -552,6 +600,45 @@ statistiques</string>
             <property name="icon">
              <iconset>
               <normaloff>Images/pie-chart (1).png</normaloff>Images/pie-chart (1).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="BoutonRapport">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{ padding : 5px; border-radius: 8px; background-color: transparent ;color : white;}
+
+QPushButton:hover {
+background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #cccccc , stop: 1#f2f2f2);
+}
+
+QPushButton:pressed{ background-color: #cccccc; }</string>
+            </property>
+            <property name="text">
+             <string>Rapport</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Images/Rapport.png</normaloff>Images/Rapport.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -686,7 +773,7 @@ technique</string>
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="LabelSIMM20HopitalJustinien">
+         <widget class="QLabel" name="LabelSIMM20HopitalSaintMichel">
           <property name="font">
            <font>
             <family>MS Shell Dlg 2</family>

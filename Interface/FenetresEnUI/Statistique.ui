@@ -890,7 +890,7 @@ p, li { white-space: pre-wrap; }
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_10">
        <item>
-        <widget class="QLabel" name="LabelUnite">
+        <widget class="QLabel" name="LabelCentreDeService">
          <property name="font">
           <font>
            <pointsize>10</pointsize>

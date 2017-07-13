@@ -32,10 +32,9 @@ from Interface.FenetresEnPython.FenetrePersonnalisable import FenetrePersonnalis
 
 
 class Accueil(Ui_Accueil):
-    '''
-        Class permettant la mise en place des différents widgets et fenetre la page d'accueil de SIMM
-    '''
-    # On masque les autres elements
+
+    #Class permettant la mise en place des differents widgets et fenetre la page d'accueil de SIMM. On masque les autres elements
+
     def __init__(self, Accueil):
         self.setupUi(Accueil)
         self.ajoutAccueil()

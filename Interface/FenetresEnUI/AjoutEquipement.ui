@@ -506,7 +506,7 @@ background:rgb(247, 247, 247);
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxUnite">
+        <widget class="QComboBox" name="comboBoxCentreDeService">
          <property name="minimumSize">
           <size>
            <width>127</width>
@@ -859,7 +859,7 @@ background:rgb(247, 247, 247);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="labelVoltageCourant">
+        <widget class="QLabel" name="labelCodeASSET">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
