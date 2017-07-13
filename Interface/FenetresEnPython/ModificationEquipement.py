@@ -1,10 +1,12 @@
 import datetime
+import os
 from threading import Thread
 
 import yaml
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QLocale, QDate
 from PyQt5.QtWidgets import *
+from shutil import copyfile
 
 from BDD.EquipementManagerSQLite import EquipementManager
 from Interface.FenetresEnPython.AjoutEquipementUI import Ui_AjoutEquipement
@@ -159,8 +161,14 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.comboBoxProvenance.setEditable(True)
         self.comboBoxCentreDeService.setEditable(True)
 
+        self.BoutonPDF.clicked.connect(self.ouvrirPDF)
+        self.fileToSave = ""
+        self.filePath = ""
+
         if self.equipementRecherche is not None:
             self.remplirEquipement()
+            # connexion du bouton de sauvegarde du pdf
+
 
     def obtenirEtatDeService(self, groupeBoutton):
         """Methode permettant d'obtenir le choix selectionne parmi le groupe
@@ -198,6 +206,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         for donnees in self.listeDonnees:
             self.equipement.listeMethodes[i](donnees)
             i += 1
+        self.equipement.dictionnaire["PdfPath"] = self.filePath
         self.equipementManager.ModifierEquipement(self. equipementRecherche["Id"], self.equipement.dictionnaire)
         self.sauvegarde.sauvegardeTermine.emit()
 
@@ -223,6 +232,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
             self.BoutonEnregistrer.show()
             self.BoutonModifier.show()
             self.BoutonValider.hide()
+            self.BoutonPDF.hide()
         else:
             print("Champs obligatoire(s) manquant(s)")
 
@@ -245,6 +255,8 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.BoutonEnregistrer.hide()
         self.BoutonValider.show()
         self.BoutonModifier.hide()
+        self.BoutonPDF.show()
+
 
     def remplirEquipement(self):
         """Methode permettant le remplissage des differents labels
@@ -268,6 +280,9 @@ class ModificationEquipement(Ui_AjoutEquipement):
             else:
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             indice += 1
+        self.parsingPath(equipement["PdfPath"])
+
+
 
     def verificationChamps(self):
         if (self.comboBoxCategorie.currentText() == ""):
@@ -298,6 +313,34 @@ class ModificationEquipement(Ui_AjoutEquipement):
     def sauvegarderEquipementThread(self):
         thread = SauvergarderEquipement(self.sauvegarderEquipement)
         thread.start()
+
+    def ouvrirPDF(self):
+        filter = "PDF (*.pdf)"
+        fileName = QFileDialog.getOpenFileName(None, "Open File",
+                                                  os.path.expanduser("~/Desktop"),
+                                                filter);
+        print(fileName[0])
+        self.parsingPath(fileName[0])
+
+    def parsingPath(self, fileName):
+        self.filePath = fileName
+        splitFileName = self.filePath.split("/")
+        self.fileToSave = splitFileName[len(splitFileName) - 1]
+        print(self.fileToSave)
+        self.labelPDF.setText(self.fileToSave)
+        print("Sauvegarde terminee")
+
+    def savePDF(self):
+        print(self.fileToSave)
+        if(self.fileToSave != ""):
+            print("Saving file")
+            #ATTENTION : Il faut mettre un double /
+            path = "PDF//"
+            path += self.fileToSave
+            copyfile(self.filePath, path)
+            print("Finish Saving")
+        else:
+            print("No selected file")
 
 class SauvergarderEquipement(Thread):
     def __init__(self, fonction):

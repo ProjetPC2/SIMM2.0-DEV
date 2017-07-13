@@ -33,11 +33,13 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeLabel.append(self.labelCodeASSET)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
-        self.listeLabel.append(self.labelConsultPDF)
+
 
 
         # A voir pour les bons de travaux
         self.listeLabel.append(self.labelCommentaires)
+        self.listeLabel.append(self.labelConsultPDF)
+
         #Efface le contenu des differents champs par defaut
         for label in self.listeLabel:
             label.clear()

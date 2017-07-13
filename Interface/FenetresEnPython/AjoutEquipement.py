@@ -322,6 +322,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             else:
                 widget.setText(equipement[self.listeCleDonnees[indice]])
             indice += 1
+        self.labelPDF = self.parsingPath(self.filePath)
 
     def verificationChamps(self):
         if (self.comboBoxCategorie.currentText() == ""):
@@ -339,7 +340,10 @@ class AjoutEquipement(Ui_AjoutEquipement):
                                                   os.path.expanduser("~/Desktop"),
                                                 filter);
         print(fileName[0])
-        self.filePath = fileName[0]
+        self.parsingPath(fileName[0])
+
+    def parsingPath(self, fileName):
+        self.filePath = fileName
         splitFileName = self.filePath.split("/")
         self.fileToSave = splitFileName[len(splitFileName) - 1]
         print(self.fileToSave)
@@ -357,6 +361,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             print("Finish Saving")
         else:
             print("No selected file")
+
 class SauvergarderEquipement (Thread):
     def __init__(self, fonction):
         Thread.__init__(self)
