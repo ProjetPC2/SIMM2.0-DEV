@@ -1,5 +1,10 @@
 nbEquipement: 1149
 nbEquipementCentreService:
+  '1':
+    A Ajouter: 0
+    Analyseur CD4 (VIH): 0
+  1e21:
+    A Ajouter: 0
   Archives:
     Ordinateur: 3
     Table bucky - rayons X: 1
@@ -147,8 +152,6 @@ nbEquipementCentreService:
     "Tensiom\xE8tre": 5
     "Thermom\xE8tre": 1
   Inconnu:
-    "N\xE9gatoscope (moniteur de radiographie)": 1
-    "\xC9lectrocardiographe": 1
     "Balance p\xE9diatrique": 2
     Centrifugeuse: 1
     "Concentrateur d'oxyg\xE8ne": 2
@@ -156,10 +159,12 @@ nbEquipementCentreService:
     Moniteur PNI: 1
     Moniteur physiologique: 1
     "N\xE9bulisateur": 1
+    "N\xE9gatoscope (moniteur de radiographie)": 1
     "Sonographe (\xC9chographe)": 1
     "St\xE9rilisateur \xE0 vapeur": 1
     "Tensiom\xE8tre": 6
     "Thermom\xE8tre": 6
+    "\xC9lectrocardiographe": 1
   Laboratoire:
     Analyseur CD4 (VIH): 1
     Analyseur biochimie: 1
@@ -293,6 +298,8 @@ nbEquipementCentreService:
     Table de chevet: 5
     "Tensiom\xE8tre": 10
     "Thermom\xE8tre": 2
+  wd:
+    A Ajouter: 0
 nbEquipementEtatConservation:
   Acceptable: 449
   Desuet: 4
@@ -304,12 +311,13 @@ nbEquipementEtatService:
   En maintenance: 58
   En service: 1073
 nbEquipementProvenance:
-  Inconnue: 396
+  '12': 0
   CDC: 10
   CHU Sainte-Justine: 11
   Croix-Rouge Canadienne: 383
   Croix-Rouge Haitienne: 5
   I-TECH: 51
+  Inconnue: 396
   JICA: 233
   MSPP: 1
   PNS: 1
@@ -318,3 +326,4 @@ nbEquipementProvenance:
   UGP: 44
   UNFPA: 4
   UNICEF: 1
+  dw: 0

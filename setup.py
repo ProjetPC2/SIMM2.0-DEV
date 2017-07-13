@@ -2,18 +2,18 @@ from cx_Freeze import setup, Executable
 
 # Dependencies are automatically detected, but it might need
 # fine tuning.
-buildOptions = dict(packages = ["C:\\Users\\Alexandre MAO\\Documents\\GitHub\\SIMM2.0-DEV\\BDD", "Images"],include_files = ["DataBase_Equipement.json",
-"fichier_stats.yaml","fichier_conf.yaml","DataBase_BDT.json"], excludes = [])
+buildOptions = dict(packages = ['BDD', 'Interface/FenetresEnPython'], includes = ["BDD"] ,include_files = [
+"fichier_stats.yaml","fichier_conf.yaml","fichier_pieces.yaml", "fichier_fenetre_personnalisable.yaml", "Images/", "PDF/"], excludes = [])
 
 import sys
-base = 'Win32GUI' if sys.platform=='win32' else None
+base = 'None' if sys.platform=='win32' else None
 
 executables = [
-    Executable('Accueil.py', base=base, targetName = 'SIMM-2.0.exe')
+    Executable('Accueil.py', icon = "Images\SIMM2.0.ico")
 ]
 
-setup(name='SIMM 2.0',
-      version = '1.0',
-      description = "Logiciel d'inventaire medical",
+setup(name='SIMM',
+      version = '2.0',
+      description = "Logiciel d'inventorisation pour les equipements medicaux",
       options = dict(build_exe = buildOptions),
       executables = executables)

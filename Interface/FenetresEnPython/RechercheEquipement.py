@@ -31,7 +31,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
             print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
-        self.listeCleDonnees.append("ID")
+        self.listeCleDonnees.append("Id")
 
         for element in self._conf['champsAcceptes-Equipement']:
             self.listeCleDonnees.append(element)
@@ -107,10 +107,11 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.equipementSelectionne = dict()
         indice = 0
         for cle in self.listeCleDonnees:
-            if(cle == "ID"):
-                self.equipementSelectionne[cle] = int(self.tableResultats.item(ligne,indice).data(0))
+            if(cle == "Id"):
+                self.equipementSelectionne[cle] = (self.tableResultats.item(ligne,indice).data(0))
             elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
-                self.equipementSelectionne[cle] = datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%Y-%m-%d')
+                #self.equipementSelectionne[cle] = str(datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%Y-%m-%d'))
+                self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             else:
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             indice += 1
@@ -225,7 +226,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 # print(dictionnaire)
                 # print(self.listeCleDonnees)
                 for cle in self.listeCleDonnees:
-                    if(cle == "ID"):
+                    if(cle == "Id"):
                         item = QTableWidgetItem()
                         item.setData(Qt.EditRole, int(dictionnaire[cle]))
                         self.tableResultats.setItem(i, colonne, item)
