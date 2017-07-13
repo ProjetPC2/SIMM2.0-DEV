@@ -37,7 +37,6 @@ class BonDeTravail(Ui_BonDeTravail):
         self.modificationBon = True
         self.chargement.rechercheTermine.connect(self.chargerBonTravail)
         self.comboBoxCategoriePiece.currentTextChanged.connect(self.choisirCategoriePiece)
-
         if(self.consulterBDT is not None):
             #Cas ou on consulter un bon de travail
             # self.chercherEquipementThread()

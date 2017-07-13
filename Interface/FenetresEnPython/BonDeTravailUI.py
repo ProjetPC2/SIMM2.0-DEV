@@ -6,7 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt5 import QtCore, QtGui
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -25,8 +25,8 @@ except AttributeError:
 class Ui_BonDeTravail(object):
     def setupUi(self, BonDeTravail):
         BonDeTravail.setObjectName(_fromUtf8("BonDeTravail"))
-        BonDeTravail.resize(1248, 738)
-        BonDeTravail.setMaximumSize(QtCore.QSize(1440, 810))
+        BonDeTravail.resize(1440, 921)
+        BonDeTravail.setMaximumSize(QtCore.QSize(16777125, 16777125))
         BonDeTravail.setStyleSheet(_fromUtf8("QWidget\n"
 " {\n"
 "\n"
@@ -191,13 +191,13 @@ class Ui_BonDeTravail(object):
         self.labelSalle.setStyleSheet(_fromUtf8("background: white;"))
         self.labelSalle.setObjectName(_fromUtf8("labelSalle"))
         self.gridLayout_3.addWidget(self.labelSalle, 3, 2, 1, 1)
-        self.labelUnite = QtGui.QLabel(BonDeTravail)
+        self.labelCentreService = QtGui.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelUnite.setFont(font)
-        self.labelUnite.setStyleSheet(_fromUtf8("background: white;"))
-        self.labelUnite.setObjectName(_fromUtf8("labelUnite"))
-        self.gridLayout_3.addWidget(self.labelUnite, 3, 1, 1, 1)
+        self.labelCentreService.setFont(font)
+        self.labelCentreService.setStyleSheet(_fromUtf8("background: white;"))
+        self.labelCentreService.setObjectName(_fromUtf8("labelCentreService"))
+        self.gridLayout_3.addWidget(self.labelCentreService, 3, 1, 1, 1)
         self.labelModele = QtGui.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -613,7 +613,7 @@ class Ui_BonDeTravail(object):
         self.boutonConsultation.setText(_translate("BonDeTravail", "Consultation d\'un bon de travail", None))
         self.labelCategorieEquip.setText(_translate("BonDeTravail", "Catégorie d\'équipement", None))
         self.labelSalle.setText(_translate("BonDeTravail", "Salle", None))
-        self.labelUnite.setText(_translate("BonDeTravail", "Unité", None))
+        self.labelCentreService.setText(_translate("BonDeTravail", "Unité", None))
         self.labelModele.setText(_translate("BonDeTravail", "Modèle", None))
         self.labelMarque.setText(_translate("BonDeTravail", "Marque", None))
         self.labelBonTravail.setText(_translate("BonDeTravail", "ID bon de travail", None))
