@@ -11,8 +11,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_BonDeTravail(object):
     def setupUi(self, BonDeTravail):
         BonDeTravail.setObjectName("BonDeTravail")
-        BonDeTravail.resize(1248, 738)
-        BonDeTravail.setMaximumSize(QtCore.QSize(1440, 810))
+        BonDeTravail.resize(1440, 810)
+        BonDeTravail.setMinimumSize(QtCore.QSize(0,0))
+        BonDeTravail.setMaximumSize(QtCore.QSize(16777125, 16777125))
         BonDeTravail.setStyleSheet("QWidget\n"
 " {\n"
 "\n"
@@ -177,13 +178,13 @@ class Ui_BonDeTravail(object):
         self.labelSalle.setStyleSheet("background: white;")
         self.labelSalle.setObjectName("labelSalle")
         self.gridLayout_3.addWidget(self.labelSalle, 3, 2, 1, 1)
-        self.labelUnite = QtWidgets.QLabel(BonDeTravail)
+        self.labelCentreService = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelUnite.setFont(font)
-        self.labelUnite.setStyleSheet("background: white;")
-        self.labelUnite.setObjectName("labelUnite")
-        self.gridLayout_3.addWidget(self.labelUnite, 3, 1, 1, 1)
+        self.labelCentreService.setFont(font)
+        self.labelCentreService.setStyleSheet("background: white;")
+        self.labelCentreService.setObjectName("labelCentreService")
+        self.gridLayout_3.addWidget(self.labelCentreService, 3, 1, 1, 1)
         self.labelModele = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -599,7 +600,7 @@ class Ui_BonDeTravail(object):
         self.boutonConsultation.setText(_translate("BonDeTravail", "Consultation d\'un bon de travail"))
         self.labelCategorieEquip.setText(_translate("BonDeTravail", "Catégorie d\'équipement"))
         self.labelSalle.setText(_translate("BonDeTravail", "Salle"))
-        self.labelUnite.setText(_translate("BonDeTravail", "Unité"))
+        self.labelCentreService.setText(_translate("BonDeTravail", "Unité"))
         self.labelModele.setText(_translate("BonDeTravail", "Modèle"))
         self.labelMarque.setText(_translate("BonDeTravail", "Marque"))
         self.labelBonTravail.setText(_translate("BonDeTravail", "ID bon de travail"))
