@@ -6,20 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1440</width>
-    <height>810</height>
+    <width>1248</width>
+    <height>738</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>0</width>
-    <height>0</height>
-   </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
-    <height>16777215</height>
+    <width>1440</width>
+    <height>810</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -66,15 +60,7 @@ padding: 1px;
 border-style: solid;
 border: 1px solid gray;
 border-radius: 4px;
-background:rgb(247,247,247);
-}
-
-QSpinBox {
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247);
+background:rgb(247,247,247)
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -105,6 +91,22 @@ background:rgb(247,247,247);
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
      <item>
       <widget class="QLabel" name="labelTitre">
@@ -190,39 +192,12 @@ background:rgb(247,247,247);
           <widget class="QPushButton" name="boutonActualiser">
            <property name="maximumSize">
             <size>
-             <width>42</width>
-             <height>38</height>
+             <width>100</width>
+             <height>40</height>
             </size>
            </property>
            <property name="cursor">
             <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 30px;
-max-width: 30px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
            </property>
            <property name="text">
             <string/>
@@ -290,58 +265,24 @@ background:rgb(247,247,247);
           <widget class="QPushButton" name="boutonConsultation">
            <property name="maximumSize">
             <size>
-             <width>232</width>
-             <height>38</height>
+             <width>500</width>
+             <height>150</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <pointsize>-1</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
+             <pointsize>10</pointsize>
             </font>
            </property>
            <property name="cursor">
             <cursorShape>PointingHandCursor</cursorShape>
            </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 220px;
-max-width: 220px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
-           </property>
            <property name="text">
             <string>Consultation d'un bon de travail</string>
            </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>Images/magnifying-glass.png</normaloff>Images/magnifying-glass.png</iconset>
-           </property>
            <property name="iconSize">
             <size>
-             <width>16</width>
+             <width>20</width>
              <height>16</height>
             </size>
            </property>
@@ -405,8 +346,61 @@ color: rgb(81, 81, 81);
            </property>
           </widget>
          </item>
-         <item row="4" column="2">
-          <widget class="QLabel" name="labelEcritureSalle">
+         <item row="3" column="1">
+          <widget class="QLabel" name="labelUnite">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: white;</string>
+           </property>
+           <property name="text">
+            <string>Unité</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="labelModele">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: white;</string>
+           </property>
+           <property name="text">
+            <string>Modèle</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="labelEcritureMarque">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"> QLabel{
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247,247,247);
+color: rgb(81, 81, 81);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="labelEcritureModele">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -466,61 +460,8 @@ color: rgb(81, 81, 81);
            </property>
           </widget>
          </item>
-         <item row="3" column="1">
-          <widget class="QLabel" name="labelCentreService">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background: white;</string>
-           </property>
-           <property name="text">
-            <string>Unité</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QLabel" name="labelEcritureModele">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"> QLabel{
-padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247);
-color: rgb(81, 81, 81);
-}
-</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="labelModele">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background: white;</string>
-           </property>
-           <property name="text">
-            <string>Modèle</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLabel" name="labelEcritureMarque">
+         <item row="4" column="2">
+          <widget class="QLabel" name="labelEcritureSalle">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -552,260 +493,15 @@ color: rgb(81, 81, 81);
         <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
+        <enum>QSizePolicy::Expanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>100</width>
+         <width>30</width>
          <height>40</height>
         </size>
        </property>
       </spacer>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QLabel" name="labelPieceAssociees">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Pièces associées à la réparation</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <widget class="QLabel" name="labelCategoriePiece">
-           <property name="maximumSize">
-            <size>
-             <width>500</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Catégorie de la pièce</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBoxCategoriePiece">
-           <property name="minimumSize">
-            <size>
-             <width>225</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>225</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_8">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Expanding</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <widget class="QLabel" name="labelNomPiece">
-           <property name="maximumSize">
-            <size>
-             <width>500</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Nom de la pièce</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_11">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Maximum</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>30</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBoxNomPiece">
-           <property name="minimumSize">
-            <size>
-             <width>225</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>225</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="labelNomPiece_2">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Nombre de pièces</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="spinBoxNombrePiece">
-           <property name="maximumSize">
-            <size>
-             <width>60</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="maximum">
-            <number>999</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_9">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Expanding</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButtonValider">
-           <property name="minimumSize">
-            <size>
-             <width>110</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>110</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="text">
-            <string>Valider</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>Images/check-symbol.png</normaloff>Images/check-symbol.png</iconset>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
-         <item>
-          <widget class="QTableWidget" name="tableWidgetPiecesAssociees">
-           <property name="font">
-            <font>
-             <family>MS Shell Dlg 2</family>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <attribute name="horizontalHeaderDefaultSectionSize">
-            <number>120</number>
-           </attribute>
-           <attribute name="horizontalHeaderStretchLastSection">
-            <bool>true</bool>
-           </attribute>
-           <column>
-            <property name="text">
-             <string>Categorie</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Nombre Piece</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Nombre</string>
-            </property>
-           </column>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
      </item>
     </layout>
    </item>
@@ -854,33 +550,6 @@ color: rgb(81, 81, 81);
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 30px;
-max-width: 30px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
-             </property>
              <property name="text">
               <string/>
              </property>
@@ -900,8 +569,8 @@ background-color: rgb(193, 213, 243);
             <widget class="QPushButton" name="boutonSauvegarde">
              <property name="maximumSize">
               <size>
-               <width>42</width>
-               <height>38</height>
+               <width>50</width>
+               <height>180</height>
               </size>
              </property>
              <property name="cursor">
@@ -911,31 +580,7 @@ background-color: rgb(193, 213, 243);
               <bool>false</bool>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 30px;
-max-width: 30px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
+              <string notr="true"/>
              </property>
              <property name="text">
               <string/>
@@ -956,39 +601,15 @@ background-color: rgb(193, 213, 243);
             <widget class="QPushButton" name="boutonFlecheDoubleGauche">
              <property name="maximumSize">
               <size>
-               <width>27</width>
-               <height>38</height>
+               <width>50</width>
+               <height>150</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 15px;
-max-width:15px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
+              <string notr="true"/>
              </property>
              <property name="text">
               <string/>
@@ -1003,39 +624,15 @@ background-color: rgb(193, 213, 243);
             <widget class="QPushButton" name="boutonFlecheGauche">
              <property name="maximumSize">
               <size>
-               <width>27</width>
-               <height>38</height>
+               <width>50</width>
+               <height>180</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 15px;
-max-width:15px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
+              <string notr="true"/>
              </property>
              <property name="text">
               <string/>
@@ -1050,39 +647,15 @@ background-color: rgb(193, 213, 243);
             <widget class="QPushButton" name="boutonFlecheDroite">
              <property name="maximumSize">
               <size>
-               <width>27</width>
-               <height>38</height>
+               <width>50</width>
+               <height>180</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 15px;
-max-width:15px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
+              <string notr="true"/>
              </property>
              <property name="text">
               <string/>
@@ -1097,39 +670,15 @@ background-color: rgb(193, 213, 243);
             <widget class="QPushButton" name="boutonFlecheDoubleDroite">
              <property name="maximumSize">
               <size>
-               <width>27</width>
-               <height>38</height>
+               <width>60</width>
+               <height>180</height>
               </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton {
-color: black;
-background-color:rgb(245, 245, 245);
-border-width: 1px;
-border-color: grey;
-border-style: solid;
-border-radius: 4px;
-padding: 3px;
-font: bold 12px;
-padding-left: 5px;
-padding-right: 5px;
-min-width: 15px;
-max-width:15px;
-min-height: 30px;
-max-height: 30px;
-}
-
-QPushButton:hover {
-background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);
-}
-
-QPushButton:pressed {
-background-color: rgb(193, 213, 243);
-}
-</string>
+              <string notr="true"/>
              </property>
              <property name="text">
               <string/>
@@ -1432,7 +981,7 @@ background:rgb(247,247,247)
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>35</width>
+         <width>43</width>
          <height>20</height>
         </size>
        </property>
@@ -1484,13 +1033,7 @@ background:rgb(247,247,247)
           <string notr="true">background: white;</string>
          </property>
          <property name="text">
-          <string>Description Situation</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::AutoText</enum>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
+          <string>Ce que j'ai écrit</string>
          </property>
         </widget>
        </item>
@@ -1554,10 +1097,7 @@ background:rgb(247,247,247)
           <string notr="true">background: white;</string>
          </property>
          <property name="text">
-          <string>Description Intervention</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
+          <string>Ce que j'ai écrit</string>
          </property>
         </widget>
        </item>
@@ -1602,7 +1142,7 @@ background:rgb(247,247,247)
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <spacer name="verticalSpacer_8">
+        <spacer name="verticalSpacer_9">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -1615,7 +1155,7 @@ background:rgb(247,247,247)
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="labelBesoinAssistance">
+        <widget class="QLabel" name="Assistancelabel">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -1627,7 +1167,7 @@ background:rgb(247,247,247)
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBoxOutil">
+        <widget class="QCheckBox" name="checkBox">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -1639,7 +1179,7 @@ background:rgb(247,247,247)
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBoxPiece">
+        <widget class="QCheckBox" name="checkBox_2">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -1651,7 +1191,7 @@ background:rgb(247,247,247)
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBoxFormation">
+        <widget class="QCheckBox" name="checkBox_3">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -1663,7 +1203,7 @@ background:rgb(247,247,247)
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBoxManuelUtilisation">
+        <widget class="QCheckBox" name="checkBox_4">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -1675,7 +1215,19 @@ background:rgb(247,247,247)
         </widget>
        </item>
        <item>
-        <spacer name="verticalSpacer_9">
+        <widget class="QLabel" name="labelCacheBesoinAssistance">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ce que j'ai écrit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_8">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -1690,14 +1242,14 @@ background:rgb(247,247,247)
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_9">
          <item>
-          <widget class="QLabel" name="labelSiRepare">
+          <widget class="QLabel" name="SiReparelabel">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>Réparé :</string>
+            <string>Réparé: </string>
            </property>
           </widget>
          </item>
@@ -1708,8 +1260,14 @@ background:rgb(247,247,247)
              <pointsize>10</pointsize>
             </font>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::WheelFocus</enum>
+           </property>
            <property name="styleSheet">
             <string notr="true"/>
+           </property>
+           <property name="currentText">
+            <string>Ouvert</string>
            </property>
            <item>
             <property name="text">

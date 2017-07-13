@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'FenetresEnUI/RechercheEquipement.ui'
+# Form implementation generated from reading ui file 'RechercheEquipement.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -174,9 +174,9 @@ class Ui_RechercheEquipement(object):
         self.boutonActualiser.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonActualiser.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Images/Refresh2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonActualiser.setIcon(icon)
-        self.boutonActualiser.setIconSize(QtCore.QSize(50, 50))
+        self.boutonActualiser.setIconSize(QtCore.QSize(40, 40))
         self.boutonActualiser.setObjectName("boutonActualiser")
         self.gridLayout.addWidget(self.boutonActualiser, 1, 4, 1, 1)
         spacerItem3 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
@@ -208,7 +208,7 @@ class Ui_RechercheEquipement(object):
         self.logoLoupe.setFont(font)
         self.logoLoupe.setStyleSheet("background: white;")
         self.logoLoupe.setText("")
-        self.logoLoupe.setPixmap(QtGui.QPixmap("SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/magnifier.png"))
+        self.logoLoupe.setPixmap(QtGui.QPixmap("Images/magnifier.png"))
         self.logoLoupe.setObjectName("logoLoupe")
         self.gridLayout_2.addWidget(self.logoLoupe, 0, 0, 1, 1)
         spacerItem4 = QtWidgets.QSpacerItem(180, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -303,7 +303,7 @@ class Ui_RechercheEquipement(object):
         item = self.tableResultats.horizontalHeaderItem(6)
         item.setText(_translate("RechercheEquipement", "Salle"))
         item = self.tableResultats.horizontalHeaderItem(7)
-        item.setText(_translate("RechercheEquipement", "Unité"))
+        item.setText(_translate("RechercheEquipement", "Centre de service"))
         item = self.tableResultats.horizontalHeaderItem(8)
         item.setText(_translate("RechercheEquipement", "Date d\'acquisition"))
         item = self.tableResultats.horizontalHeaderItem(9)

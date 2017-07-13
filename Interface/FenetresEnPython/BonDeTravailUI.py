@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'BonDeTravail.ui'
+# Form implementation generated from reading ui file 'BondeTravail.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,9 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_BonDeTravail(object):
     def setupUi(self, BonDeTravail):
         BonDeTravail.setObjectName("BonDeTravail")
-        BonDeTravail.resize(1168, 816)
-        BonDeTravail.setMinimumSize(QtCore.QSize(0, 0))
-        BonDeTravail.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        BonDeTravail.resize(1248, 738)
+        BonDeTravail.setMaximumSize(QtCore.QSize(1440, 810))
         BonDeTravail.setStyleSheet("QWidget\n"
 " {\n"
 "\n"
@@ -54,15 +53,7 @@ class Ui_BonDeTravail(object):
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
 "border-radius: 4px;\n"
-"background:rgb(247,247,247);\n"
-"}\n"
-"\n"
-"QSpinBox {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 1px solid gray;\n"
-"border-radius: 4px;\n"
-"background:rgb(247,247,247);\n"
+"background:rgb(247,247,247)\n"
 "}")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(BonDeTravail)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -78,6 +69,8 @@ class Ui_BonDeTravail(object):
         self.labelPhotoPlus.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.labelPhotoPlus.setObjectName("labelPhotoPlus")
         self.horizontalLayout.addWidget(self.labelPhotoPlus)
+        spacerItem = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
         self.labelTitre = QtWidgets.QLabel(BonDeTravail)
         self.labelTitre.setMaximumSize(QtCore.QSize(20000, 40))
         font = QtGui.QFont()
@@ -90,11 +83,11 @@ class Ui_BonDeTravail(object):
         self.labelTitre.setStyleSheet("background: white;")
         self.labelTitre.setObjectName("labelTitre")
         self.horizontalLayout.addWidget(self.labelTitre)
-        spacerItem = QtWidgets.QSpacerItem(40, 40, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 40, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
         self.verticalLayout_3.addLayout(self.horizontalLayout)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        self.verticalLayout_3.addItem(spacerItem1)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.verticalLayout_3.addItem(spacerItem2)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout()
@@ -110,33 +103,8 @@ class Ui_BonDeTravail(object):
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.boutonActualiser = QtWidgets.QPushButton(BonDeTravail)
-        self.boutonActualiser.setMaximumSize(QtCore.QSize(42, 38))
+        self.boutonActualiser.setMaximumSize(QtCore.QSize(100, 40))
         self.boutonActualiser.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonActualiser.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 30px;\n"
-"max-width: 30px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
         self.boutonActualiser.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Images/actualize-arrows-couple-in-circle.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -144,8 +112,8 @@ class Ui_BonDeTravail(object):
         self.boutonActualiser.setIconSize(QtCore.QSize(30, 30))
         self.boutonActualiser.setObjectName("boutonActualiser")
         self.gridLayout_2.addWidget(self.boutonActualiser, 1, 2, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(200, 19, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem2, 1, 3, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(200, 19, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem3, 1, 3, 1, 1)
         self.lineEditID = QtWidgets.QLineEdit(BonDeTravail)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
@@ -167,43 +135,12 @@ class Ui_BonDeTravail(object):
         self.lineEditID.setObjectName("lineEditID")
         self.gridLayout_2.addWidget(self.lineEditID, 1, 0, 1, 1)
         self.boutonConsultation = QtWidgets.QPushButton(BonDeTravail)
-        self.boutonConsultation.setMaximumSize(QtCore.QSize(232, 38))
+        self.boutonConsultation.setMaximumSize(QtCore.QSize(500, 150))
         font = QtGui.QFont()
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setItalic(False)
-        font.setWeight(75)
+        font.setPointSize(10)
         self.boutonConsultation.setFont(font)
         self.boutonConsultation.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonConsultation.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 220px;\n"
-"max-width: 220px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Images/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boutonConsultation.setIcon(icon1)
-        self.boutonConsultation.setIconSize(QtCore.QSize(16, 16))
+        self.boutonConsultation.setIconSize(QtCore.QSize(20, 16))
         self.boutonConsultation.setObjectName("boutonConsultation")
         self.gridLayout_2.addWidget(self.boutonConsultation, 1, 4, 1, 1)
         self.verticalLayout_6.addLayout(self.gridLayout_2)
@@ -240,13 +177,13 @@ class Ui_BonDeTravail(object):
         self.labelSalle.setStyleSheet("background: white;")
         self.labelSalle.setObjectName("labelSalle")
         self.gridLayout_3.addWidget(self.labelSalle, 3, 2, 1, 1)
-        self.labelCentreService = QtWidgets.QLabel(BonDeTravail)
+        self.labelUnite = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelCentreService.setFont(font)
-        self.labelCentreService.setStyleSheet("background: white;")
-        self.labelCentreService.setObjectName("labelCentreService")
-        self.gridLayout_3.addWidget(self.labelCentreService, 3, 1, 1, 1)
+        self.labelUnite.setFont(font)
+        self.labelUnite.setStyleSheet("background: white;")
+        self.labelUnite.setObjectName("labelUnite")
+        self.gridLayout_3.addWidget(self.labelUnite, 3, 1, 1, 1)
         self.labelModele = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -327,328 +264,85 @@ class Ui_BonDeTravail(object):
         self.gridLayout_3.addWidget(self.labelEcritureSalle, 4, 2, 1, 1)
         self.verticalLayout_6.addLayout(self.gridLayout_3)
         self.horizontalLayout_2.addLayout(self.verticalLayout_6)
-        spacerItem3 = QtWidgets.QSpacerItem(100, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem3)
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.labelPieceAssociees = QtWidgets.QLabel(BonDeTravail)
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.labelPieceAssociees.setFont(font)
-        self.labelPieceAssociees.setObjectName("labelPieceAssociees")
-        self.verticalLayout_4.addWidget(self.labelPieceAssociees)
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.labelCategoriePiece = QtWidgets.QLabel(BonDeTravail)
-        self.labelCategoriePiece.setMaximumSize(QtCore.QSize(500, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.labelCategoriePiece.setFont(font)
-        self.labelCategoriePiece.setObjectName("labelCategoriePiece")
-        self.horizontalLayout_4.addWidget(self.labelCategoriePiece)
-        self.comboBoxCategoriePiece = QtWidgets.QComboBox(BonDeTravail)
-        self.comboBoxCategoriePiece.setMinimumSize(QtCore.QSize(225, 20))
-        self.comboBoxCategoriePiece.setMaximumSize(QtCore.QSize(225, 20))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.comboBoxCategoriePiece.setFont(font)
-        self.comboBoxCategoriePiece.setObjectName("comboBoxCategoriePiece")
-        self.horizontalLayout_4.addWidget(self.comboBoxCategoriePiece)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem4)
-        self.verticalLayout_4.addLayout(self.horizontalLayout_4)
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.labelNomPiece = QtWidgets.QLabel(BonDeTravail)
-        self.labelNomPiece.setMaximumSize(QtCore.QSize(500, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.labelNomPiece.setFont(font)
-        self.labelNomPiece.setObjectName("labelNomPiece")
-        self.horizontalLayout_5.addWidget(self.labelNomPiece)
-        spacerItem5 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem5)
-        self.comboBoxNomPiece = QtWidgets.QComboBox(BonDeTravail)
-        self.comboBoxNomPiece.setMinimumSize(QtCore.QSize(225, 20))
-        self.comboBoxNomPiece.setMaximumSize(QtCore.QSize(225, 20))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.comboBoxNomPiece.setFont(font)
-        self.comboBoxNomPiece.setObjectName("comboBoxNomPiece")
-        self.horizontalLayout_5.addWidget(self.comboBoxNomPiece)
-        self.labelNomPiece_2 = QtWidgets.QLabel(BonDeTravail)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.labelNomPiece_2.setFont(font)
-        self.labelNomPiece_2.setObjectName("labelNomPiece_2")
-        self.horizontalLayout_5.addWidget(self.labelNomPiece_2)
-        self.spinBoxNombrePiece = QtWidgets.QSpinBox(BonDeTravail)
-        self.spinBoxNombrePiece.setMaximumSize(QtCore.QSize(60, 16777215))
-        self.spinBoxNombrePiece.setMaximum(999)
-        self.spinBoxNombrePiece.setObjectName("spinBoxNombrePiece")
-        self.horizontalLayout_5.addWidget(self.spinBoxNombrePiece)
-        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem6)
-        self.pushButtonValider = QtWidgets.QPushButton(BonDeTravail)
-        self.pushButtonValider.setMinimumSize(QtCore.QSize(110, 20))
-        self.pushButtonValider.setMaximumSize(QtCore.QSize(110, 20))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButtonValider.setFont(font)
-        self.pushButtonValider.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Images/check-symbol.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButtonValider.setIcon(icon2)
-        self.pushButtonValider.setObjectName("pushButtonValider")
-        self.horizontalLayout_5.addWidget(self.pushButtonValider)
-        self.verticalLayout_4.addLayout(self.horizontalLayout_5)
-        self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        self.tableWidgetPiecesAssociees = QtWidgets.QTableWidget(BonDeTravail)
-        font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(10)
-        self.tableWidgetPiecesAssociees.setFont(font)
-        self.tableWidgetPiecesAssociees.setObjectName("tableWidgetPiecesAssociees")
-        self.tableWidgetPiecesAssociees.setColumnCount(3)
-        self.tableWidgetPiecesAssociees.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidgetPiecesAssociees.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidgetPiecesAssociees.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidgetPiecesAssociees.setHorizontalHeaderItem(2, item)
-        self.tableWidgetPiecesAssociees.horizontalHeader().setDefaultSectionSize(120)
-        self.tableWidgetPiecesAssociees.horizontalHeader().setStretchLastSection(True)
-        self.horizontalLayout_8.addWidget(self.tableWidgetPiecesAssociees)
-        self.verticalLayout_4.addLayout(self.horizontalLayout_8)
-        self.horizontalLayout_2.addLayout(self.verticalLayout_4)
+        spacerItem4 = QtWidgets.QSpacerItem(30, 40, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem4)
         self.verticalLayout_3.addLayout(self.horizontalLayout_2)
-        spacerItem7 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        self.verticalLayout_3.addItem(spacerItem7)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.verticalLayout_3.addItem(spacerItem5)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.verticalLayout_7 = QtWidgets.QVBoxLayout()
         self.verticalLayout_7.setObjectName("verticalLayout_7")
-        spacerItem8 = QtWidgets.QSpacerItem(20, 7, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        self.verticalLayout_7.addItem(spacerItem8)
+        spacerItem6 = QtWidgets.QSpacerItem(20, 7, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.verticalLayout_7.addItem(spacerItem6)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.boutonAjoutBDT = QtWidgets.QPushButton(BonDeTravail)
         self.boutonAjoutBDT.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonAjoutBDT.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 30px;\n"
-"max-width: 30px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
         self.boutonAjoutBDT.setText("")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Images/plus_64.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boutonAjoutBDT.setIcon(icon3)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("Images/plus_64.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.boutonAjoutBDT.setIcon(icon1)
         self.boutonAjoutBDT.setIconSize(QtCore.QSize(35, 35))
         self.boutonAjoutBDT.setObjectName("boutonAjoutBDT")
         self.horizontalLayout_3.addWidget(self.boutonAjoutBDT)
         self.boutonSauvegarde = QtWidgets.QPushButton(BonDeTravail)
-        self.boutonSauvegarde.setMaximumSize(QtCore.QSize(42, 38))
+        self.boutonSauvegarde.setMaximumSize(QtCore.QSize(50, 180))
         self.boutonSauvegarde.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonSauvegarde.setAutoFillBackground(False)
-        self.boutonSauvegarde.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 30px;\n"
-"max-width: 30px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
+        self.boutonSauvegarde.setStyleSheet("")
         self.boutonSauvegarde.setText("")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("Images/save (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boutonSauvegarde.setIcon(icon4)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("Images/save (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.boutonSauvegarde.setIcon(icon2)
         self.boutonSauvegarde.setIconSize(QtCore.QSize(35, 35))
         self.boutonSauvegarde.setObjectName("boutonSauvegarde")
         self.horizontalLayout_3.addWidget(self.boutonSauvegarde)
         self.boutonFlecheDoubleGauche = QtWidgets.QPushButton(BonDeTravail)
-        self.boutonFlecheDoubleGauche.setMaximumSize(QtCore.QSize(27, 38))
+        self.boutonFlecheDoubleGauche.setMaximumSize(QtCore.QSize(50, 150))
         self.boutonFlecheDoubleGauche.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheDoubleGauche.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 15px;\n"
-"max-width:15px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
+        self.boutonFlecheDoubleGauche.setStyleSheet("")
         self.boutonFlecheDoubleGauche.setText("")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("Images/double-left-chevron.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boutonFlecheDoubleGauche.setIcon(icon5)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("Images/double-left-chevron.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.boutonFlecheDoubleGauche.setIcon(icon3)
         self.boutonFlecheDoubleGauche.setObjectName("boutonFlecheDoubleGauche")
         self.horizontalLayout_3.addWidget(self.boutonFlecheDoubleGauche)
         self.boutonFlecheGauche = QtWidgets.QPushButton(BonDeTravail)
-        self.boutonFlecheGauche.setMaximumSize(QtCore.QSize(27, 38))
+        self.boutonFlecheGauche.setMaximumSize(QtCore.QSize(50, 180))
         self.boutonFlecheGauche.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheGauche.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 15px;\n"
-"max-width:15px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
+        self.boutonFlecheGauche.setStyleSheet("")
         self.boutonFlecheGauche.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("Images/angle-pointing-to-left (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boutonFlecheGauche.setIcon(icon6)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("Images/angle-pointing-to-left (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.boutonFlecheGauche.setIcon(icon4)
         self.boutonFlecheGauche.setObjectName("boutonFlecheGauche")
         self.horizontalLayout_3.addWidget(self.boutonFlecheGauche)
         self.boutonFlecheDroite = QtWidgets.QPushButton(BonDeTravail)
-        self.boutonFlecheDroite.setMaximumSize(QtCore.QSize(27, 38))
+        self.boutonFlecheDroite.setMaximumSize(QtCore.QSize(50, 180))
         self.boutonFlecheDroite.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheDroite.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 15px;\n"
-"max-width:15px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
+        self.boutonFlecheDroite.setStyleSheet("")
         self.boutonFlecheDroite.setText("")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("Images/angle-arrow-pointing-to-right.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boutonFlecheDroite.setIcon(icon7)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("Images/angle-arrow-pointing-to-right.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.boutonFlecheDroite.setIcon(icon5)
         self.boutonFlecheDroite.setObjectName("boutonFlecheDroite")
         self.horizontalLayout_3.addWidget(self.boutonFlecheDroite)
         self.boutonFlecheDoubleDroite = QtWidgets.QPushButton(BonDeTravail)
-        self.boutonFlecheDoubleDroite.setMaximumSize(QtCore.QSize(27, 38))
+        self.boutonFlecheDoubleDroite.setMaximumSize(QtCore.QSize(60, 180))
         self.boutonFlecheDoubleDroite.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.boutonFlecheDoubleDroite.setStyleSheet("QPushButton {\n"
-"color: black;\n"
-"background-color:rgb(245, 245, 245);\n"
-"border-width: 1px;\n"
-"border-color: grey;\n"
-"border-style: solid;\n"
-"border-radius: 4px;\n"
-"padding: 3px;\n"
-"font: bold 12px;\n"
-"padding-left: 5px;\n"
-"padding-right: 5px;\n"
-"min-width: 15px;\n"
-"max-width:15px;\n"
-"min-height: 30px;\n"
-"max-height: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #edf2f8, stop: 1 #c8d9ea);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: rgb(193, 213, 243);\n"
-"}\n"
-"")
+        self.boutonFlecheDoubleDroite.setStyleSheet("")
         self.boutonFlecheDoubleDroite.setText("")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("Images/double-angle-pointing-to-right.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boutonFlecheDoubleDroite.setIcon(icon8)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("Images/double-angle-pointing-to-right.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.boutonFlecheDoubleDroite.setIcon(icon6)
         self.boutonFlecheDoubleDroite.setObjectName("boutonFlecheDoubleDroite")
         self.horizontalLayout_3.addWidget(self.boutonFlecheDoubleDroite)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
-        spacerItem9 = QtWidgets.QSpacerItem(220, 13, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        self.verticalLayout.addItem(spacerItem9)
+        spacerItem7 = QtWidgets.QSpacerItem(220, 13, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.verticalLayout.addItem(spacerItem7)
         self.labelBonTravail = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -768,12 +462,12 @@ class Ui_BonDeTravail(object):
         self.labelCacheTemps.setStyleSheet("background: white;")
         self.labelCacheTemps.setObjectName("labelCacheTemps")
         self.verticalLayout.addWidget(self.labelCacheTemps)
-        spacerItem10 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem10)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem8)
         self.verticalLayout_7.addLayout(self.verticalLayout)
         self.horizontalLayout_6.addLayout(self.verticalLayout_7)
-        spacerItem11 = QtWidgets.QSpacerItem(35, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem11)
+        spacerItem9 = QtWidgets.QSpacerItem(43, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem9)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.labelDescSituation = QtWidgets.QLabel(BonDeTravail)
@@ -796,12 +490,10 @@ class Ui_BonDeTravail(object):
         font.setPointSize(10)
         self.labelCacheDescSit.setFont(font)
         self.labelCacheDescSit.setStyleSheet("background: white;")
-        self.labelCacheDescSit.setTextFormat(QtCore.Qt.AutoText)
-        self.labelCacheDescSit.setWordWrap(True)
         self.labelCacheDescSit.setObjectName("labelCacheDescSit")
         self.verticalLayout_2.addWidget(self.labelCacheDescSit)
-        spacerItem12 = QtWidgets.QSpacerItem(30, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
-        self.verticalLayout_2.addItem(spacerItem12)
+        spacerItem10 = QtWidgets.QSpacerItem(30, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
+        self.verticalLayout_2.addItem(spacerItem10)
         self.labelDescIntervention = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -822,31 +514,78 @@ class Ui_BonDeTravail(object):
         font.setPointSize(10)
         self.labelCacheDescInt.setFont(font)
         self.labelCacheDescInt.setStyleSheet("background: white;")
-        self.labelCacheDescInt.setWordWrap(True)
         self.labelCacheDescInt.setObjectName("labelCacheDescInt")
         self.verticalLayout_2.addWidget(self.labelCacheDescInt)
+        self.verticalLayout_9 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_9.setObjectName("verticalLayout_9")
+        spacerItem11 = QtWidgets.QSpacerItem(50, 45, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
+        self.verticalLayout_9.addItem(spacerItem11)
+        self.verticalLayout_2.addLayout(self.verticalLayout_9)
+        self.horizontalLayout_6.addLayout(self.verticalLayout_2)
+        spacerItem12 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem12)
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        spacerItem13 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem13)
+        self.Assistancelabel = QtWidgets.QLabel(BonDeTravail)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.Assistancelabel.setFont(font)
+        self.Assistancelabel.setObjectName("Assistancelabel")
+        self.verticalLayout_5.addWidget(self.Assistancelabel)
+        self.checkBox = QtWidgets.QCheckBox(BonDeTravail)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox.setFont(font)
+        self.checkBox.setObjectName("checkBox")
+        self.verticalLayout_5.addWidget(self.checkBox)
+        self.checkBox_2 = QtWidgets.QCheckBox(BonDeTravail)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox_2.setFont(font)
+        self.checkBox_2.setObjectName("checkBox_2")
+        self.verticalLayout_5.addWidget(self.checkBox_2)
+        self.checkBox_3 = QtWidgets.QCheckBox(BonDeTravail)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox_3.setFont(font)
+        self.checkBox_3.setObjectName("checkBox_3")
+        self.verticalLayout_5.addWidget(self.checkBox_3)
+        self.checkBox_4 = QtWidgets.QCheckBox(BonDeTravail)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox_4.setFont(font)
+        self.checkBox_4.setObjectName("checkBox_4")
+        self.verticalLayout_5.addWidget(self.checkBox_4)
+        self.labelCacheBesoinAssistance = QtWidgets.QLabel(BonDeTravail)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.labelCacheBesoinAssistance.setFont(font)
+        self.labelCacheBesoinAssistance.setObjectName("labelCacheBesoinAssistance")
+        self.verticalLayout_5.addWidget(self.labelCacheBesoinAssistance)
+        spacerItem14 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem14)
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        spacerItem13 = QtWidgets.QSpacerItem(40, 45, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_9.addItem(spacerItem13)
+        self.SiReparelabel = QtWidgets.QLabel(BonDeTravail)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.SiReparelabel.setFont(font)
+        self.SiReparelabel.setObjectName("SiReparelabel")
+        self.horizontalLayout_9.addWidget(self.SiReparelabel)
         self.comboBoxOuvertFerme = QtWidgets.QComboBox(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.comboBoxOuvertFerme.setFont(font)
+        self.comboBoxOuvertFerme.setFocusPolicy(QtCore.Qt.WheelFocus)
         self.comboBoxOuvertFerme.setStyleSheet("")
         self.comboBoxOuvertFerme.setObjectName("comboBoxOuvertFerme")
         self.comboBoxOuvertFerme.addItem("")
         self.comboBoxOuvertFerme.addItem("")
         self.horizontalLayout_9.addWidget(self.comboBoxOuvertFerme)
-        self.verticalLayout_2.addLayout(self.horizontalLayout_9)
-        self.verticalLayout_9 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_9.setObjectName("verticalLayout_9")
-        spacerItem14 = QtWidgets.QSpacerItem(50, 45, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
-        self.verticalLayout_9.addItem(spacerItem14)
-        self.verticalLayout_2.addLayout(self.verticalLayout_9)
-        self.horizontalLayout_6.addLayout(self.verticalLayout_2)
-        spacerItem15 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem15)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_9)
+        self.horizontalLayout_6.addLayout(self.verticalLayout_5)
         self.verticalLayout_3.addLayout(self.horizontalLayout_6)
 
         self.retranslateUi(BonDeTravail)
@@ -860,25 +599,12 @@ class Ui_BonDeTravail(object):
         self.boutonConsultation.setText(_translate("BonDeTravail", "Consultation d\'un bon de travail"))
         self.labelCategorieEquip.setText(_translate("BonDeTravail", "Catégorie d\'équipement"))
         self.labelSalle.setText(_translate("BonDeTravail", "Salle"))
-        self.labelCentreService.setText(_translate("BonDeTravail", "Unité"))
+        self.labelUnite.setText(_translate("BonDeTravail", "Unité"))
         self.labelModele.setText(_translate("BonDeTravail", "Modèle"))
         self.labelMarque.setText(_translate("BonDeTravail", "Marque"))
-        self.labelPieceAssociees.setText(_translate("BonDeTravail", "Pièces associées à la réparation"))
-        self.labelCategoriePiece.setText(_translate("BonDeTravail", "Catégorie de la pièce"))
-        self.labelNomPiece.setText(_translate("BonDeTravail", "Nom de la pièce"))
-        self.labelNomPiece_2.setText(_translate("BonDeTravail", "Nombre de pièces"))
-        self.pushButtonValider.setText(_translate("BonDeTravail", "Valider"))
-        item = self.tableWidgetPiecesAssociees.horizontalHeaderItem(0)
-        item.setText(_translate("BonDeTravail", "Categorie"))
-        item = self.tableWidgetPiecesAssociees.horizontalHeaderItem(1)
-        item.setText(_translate("BonDeTravail", "Nombre Piece"))
-        item = self.tableWidgetPiecesAssociees.horizontalHeaderItem(2)
-        item.setText(_translate("BonDeTravail", "Nombre"))
         self.labelBonTravail.setText(_translate("BonDeTravail", "ID bon de travail"))
         self.labelNomTechnicien.setText(_translate("BonDeTravail", "Nom du technicien"))
-        self.comboBoxNomTech.setItemText(0, _translate("BonDeTravail", "Gary"))
-        self.comboBoxNomTech.setItemText(1, _translate("BonDeTravail", "Sony"))
-        self.comboBoxNomTech.setItemText(2, _translate("BonDeTravail", "..."))
+        self.comboBoxNomTech.setItemText(0, _translate("BonDeTravail", "Kerlin Hyppolite"))
         self.labelCacheNomTech.setText(_translate("BonDeTravail", "Ce que j\'ai écrit"))
         self.labelDate.setText(_translate("BonDeTravail", "Date"))
         self.dateEdit.setDisplayFormat(_translate("BonDeTravail", "dd-MM-yyyy"))
@@ -887,8 +613,17 @@ class Ui_BonDeTravail(object):
         self.timeEditTempsEstime.setDisplayFormat(_translate("BonDeTravail", "h:mm"))
         self.labelCacheTemps.setText(_translate("BonDeTravail", "Ce que j\'ai écrit"))
         self.labelDescSituation.setText(_translate("BonDeTravail", "Description de la situation"))
-        self.labelCacheDescSit.setText(_translate("BonDeTravail", "Description Situation"))
+        self.labelCacheDescSit.setText(_translate("BonDeTravail", "Ce que j\'ai écrit"))
         self.labelDescIntervention.setText(_translate("BonDeTravail", "Description de l\'intervention"))
-        self.labelCacheDescInt.setText(_translate("BonDeTravail", "Description Intervention"))
+        self.labelCacheDescInt.setText(_translate("BonDeTravail", "Ce que j\'ai écrit"))
+        self.Assistancelabel.setText(_translate("BonDeTravail", "Besoin d\'assistance ?"))
+        self.checkBox.setText(_translate("BonDeTravail", "Outil"))
+        self.checkBox_2.setText(_translate("BonDeTravail", "Pièce"))
+        self.checkBox_3.setText(_translate("BonDeTravail", "Formation"))
+        self.checkBox_4.setText(_translate("BonDeTravail", "Manuel d\'utilisation"))
+        self.labelCacheBesoinAssistance.setText(_translate("BonDeTravail", "Ce que j\'ai écrit"))
+        self.SiReparelabel.setText(_translate("BonDeTravail", "Réparé: "))
+        self.comboBoxOuvertFerme.setCurrentText(_translate("BonDeTravail", "Ouvert"))
         self.comboBoxOuvertFerme.setItemText(0, _translate("BonDeTravail", "Ouvert"))
         self.comboBoxOuvertFerme.setItemText(1, _translate("BonDeTravail", "Fermé"))
+
