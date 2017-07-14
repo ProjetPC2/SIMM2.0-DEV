@@ -17,6 +17,7 @@ from tinydb.operations import increment
 from BDD.yamlStorage import YAMLStorage
 import datetime
 import os
+import sqlite3 as lite
 
 
 # vérifier l'ouverture du fichier de conf, fichier de BDD equipement, fichier BDD BdT avec des exceptions
@@ -49,8 +50,26 @@ class PieceManager:
         try:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
-            for row in cur.execture("SELECT Nombre FROM Piece WHERE Categorie=listeTuple[0] AND NomPiece=listeTuple[1]"):  #à corriger (introduire correctement les valeur dans la CHAR)
-                valeur = row+listeTuple[2]
-                cur.execute("UPDATE Piece SET Nombre=valeur WHERE Categorie=listeTuple[0] AND NomPiece=listeTuple[1]")
+            commandeSQL = "SELECT Nombre FROM Piece WHERE Categorie={0} AND NomPiece={1}".format(listeTuple[0],listeTuple[1])
+            cur.execute(commandeSQL)
+            indice = cur.fetchall()
+            if not indice:
+                commandeSQLajout = "INSERT INTO Piece VALUES({0},{1},{2})".format(listeTuple[0],listeTuple[1],listeTuple[2])
+                cur.execute(commandeSQLajout)
+            else:
+                valeur = indice+listeTuple[2]
+                commandeSQL2="UPDATE Piece SET Nombre={0} WHERE Categorie={1} AND NomPiece={2}".format(valeur,listeTuple[0],listeTuple[1])
+                cur.execute(commandeSQL2)
+        except lite.Error as e:
+            if con:
+                con.rollback()
 
-# à continuer
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
+            return dict_renvoi
+
+#la BD ne reconnaît pas les champs entrées. Revoir le typo de la chaîne de caractère pour toutes les commdandes SQL
