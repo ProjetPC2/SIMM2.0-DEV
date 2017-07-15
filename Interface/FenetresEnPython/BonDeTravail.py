@@ -10,7 +10,7 @@ from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManagerSQLite import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI6 import Ui_BonDeTravail
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathPieceDatabase
 from Interface.FenetresEnPython.Signaux import Communicate
 
 class BonDeTravail(Ui_BonDeTravail):
@@ -43,6 +43,9 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeBonDeTravail = listeBonTravail
             if(self.equipementDictionnaire is not None):
                 self.equipementDictionnaire = equipement
+                if (any(self.listeBonDeTravail)):
+                    self.boutonConsultation.show()
+
             else:
                 #id_equipement = str(self.listeBonDeTravail[self.indiceBonDeTravail]["IdEquipement"])
                 #self.equipementDictionnaire = EquipementManager.RechercherEquipement({"Id":id_equipement})
@@ -79,7 +82,7 @@ class BonDeTravail(Ui_BonDeTravail):
         #Creation des differents elements utiles pour la sauvegarde
         self.equipementManager = EquipementManager(pathEquipementDatabase)
         self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase)
-        self.pieceManager = PieceManager()
+        self.pieceManager = PieceManager(pathPieceDatabase)
         self.equipementDictionnaire = None
         self.listeBonDeTravail = list()
         self.indiceBonDeTravail = 0
@@ -176,7 +179,7 @@ class BonDeTravail(Ui_BonDeTravail):
             #Si on a trouve un equipement correspondant, on affiche les informations correspondantes
             self.equipementDictionnaire = listeTrouve[0]
             #On fait la recheche des bons de travail
-
+            self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
             self.signalFenetreBonTravail.chargerEquipement.emit()
@@ -290,6 +293,7 @@ class BonDeTravail(Ui_BonDeTravail):
              :return:
          '''
         print("Lancement de la recherche des bons de travail")
+        self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": self.lineEditID.text()})
         if(any(self.listeBonDeTravail)):
             self.chargement.rechercheTermine.emit()
         else:
