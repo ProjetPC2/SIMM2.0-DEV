@@ -3,7 +3,7 @@
 # NOM : Projet PC2
 # DATE DE LA DERNIÈRE MODIFICATION : 15 juin 2016
 #
-# DESCRIPTION : CLASSE BON_TRAVAIL_MANAGER
+# DESCRIPTION : CLASSE PIECE_MANAGER
 # Permet la gestion de bons de travails dans une base de données. Ces bons de travail sont associés à des
 # équipements d'une autre base de données (voir la classe EquipementManager).
 # Les fonctions possibles sont : AjouterPiece, SupprimerPiece, ModificerPiece,
