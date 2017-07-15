@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QTableWidgetItem,QCalendarWidget
 
 from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
-from BDD.PieceManager import PieceManager
+from BDD.PieceManagerSQLite import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI6 import Ui_BonDeTravail
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase
 from Interface.FenetresEnPython.Signaux import Communicate

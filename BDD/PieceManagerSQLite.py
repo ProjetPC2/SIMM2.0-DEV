@@ -164,7 +164,6 @@ class PieceManager:
                 con.close()
             return listeCategorie
 
-
     def ObtenirListePiece(self, categorie):
         try:
             con = lite.connect(self._pathnamePiece)
@@ -192,6 +191,36 @@ class PieceManager:
             if con:
                 con.close()
             return listeCategorie
+
+    def ObtenirCategorie(self, categorie):
+        pieces = dict()
+        try:
+            con = lite.connect(self._pathnamePiece)
+            con.row_factory = lite.Row
+            cur = con.cursor()
+
+            commandeSQL = "SELECT NomPiece, Nombre FROM Piece WHERE Categorie ='{0}'".format(categorie)
+            print(commandeSQL)
+
+            cur.execute(commandeSQL)
+            rows = cur.fetchall()
+
+            if len(rows) == 0:
+                print("ERREUR PAS DE CATEGORIE")
+            else:
+                for row in rows:
+                    pieces[row[0]] = (row[1])
+        except lite.Error as e:
+            if con:
+                con.rollback()
+
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
+            return pieces
 
     def selectionnerPiece(self, id, idPiece, quantity, modification = False):
         print("METHODE SELECTIONNE PIECE")
@@ -292,8 +321,8 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     list1.append(("vis", "1", 100, ))
     list1.append(("vis", "10mm", 100, ))
     list2 = list()
-    list2.append(("vis", "1", 5,))
-    list2.append(("vis", "10mm", 5,))
+    list2.append(("vis", "1", 1300,))
+    list2.append(("vis", "10mm", 15,))
 
     manager.AjouterPiece(list1)
     manager._AfficherBD()

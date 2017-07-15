@@ -4,7 +4,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem
 
-from BDD.PieceManager import PieceManager
+from BDD.PieceManagerSQLite import PieceManager
+from Interface.FenetresEnPython.Fichiers import pathPieceDatabase
 from Interface.FenetresEnPython.PieceUI import Ui_Piece
 from Interface.FenetresEnPython.Signaux import Communicate
 
@@ -13,7 +14,7 @@ class Piece(Ui_Piece):
     #Classe permettant de gerer la fenetre permettant l'ajout de pieces dans la base de donnees
     def __init__(self, widget):
         self.setupUi(widget)
-        self.pieceManager = PieceManager()
+        self.pieceManager = PieceManager(pathPieceDatabase)
         self.enregistrement = Communicate()
         self.ajoutPiece()
         self.listeAjoutPiece = list()
@@ -21,10 +22,6 @@ class Piece(Ui_Piece):
 
 
     def ajoutPiece(self):
-        self.piece = self.pieceManager._getPiece()
-        if(self.piece['CategoriePiece'] is None):
-            self.piece['CategoriePiece'] = dict()
-        self.pieceSelonCentre = dict(self.piece['CategoriePiece'])
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.insert(0, "")
         self.listeCategoriePiece.sort()
@@ -77,6 +74,7 @@ class Piece(Ui_Piece):
         self.tableCategoriePiece.setRowCount(0)
         self.pieceManager.AjouterPiece(self.listeAjoutPiece)
         self.listeAjoutPiece.clear()
+        print("Obtention de la liste de categorie")
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.sort()
         self.listeCategoriePiece.insert(0,"")
@@ -98,10 +96,10 @@ class Piece(Ui_Piece):
     def rechercheCategorie(self):
         self.tableResume.setRowCount(0)
         if(self.comboBoxCategorieSelectionnee.currentText() != ""):
-            dictPiece = self.pieceManager._getPiece()
-            self.tableResume.setRowCount(len(dictPiece['CategoriePiece'][self.comboBoxCategorieSelectionnee.currentText()]))
+            dictPiece = self.pieceManager.ObtenirCategorie(self.comboBoxCategorieSelectionnee.currentText())
+            self.tableResume.setRowCount(len(dictPiece))
             ligne = 0
-            for piece, nombre in dictPiece['CategoriePiece'][self.comboBoxCategorieSelectionnee.currentText()].items():
+            for piece, nombre in dictPiece.items():
                 print(piece, nombre)
                 self.tableResume.setItem(ligne, 0, QTableWidgetItem(piece))
                 self.tableResume.setItem(ligne, 1, QTableWidgetItem(str(nombre)))
