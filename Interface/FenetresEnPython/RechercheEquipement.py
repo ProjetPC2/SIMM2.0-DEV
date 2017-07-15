@@ -238,9 +238,10 @@ class RechercheEquipement(Ui_RechercheEquipement):
                     colonne += 1
                 self.tableResultats.resizeColumnsToContents()
                 #on change le nom du header
-                self.listeCleDonnees[self.listeCleDonnees.index('CentreService')] = 'Unite'
-                self.listeCleDonnees[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
-                self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
+                self.listeCleDonneesTemp = list(self.listeCleDonnees)
+                self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
+                self.listeCleDonneesTemp[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
+                self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
 
         else:
             self.chargement.aucunResultat.emit()
