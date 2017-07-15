@@ -248,8 +248,13 @@ class BonDeTravail(Ui_BonDeTravail):
             dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
         #dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
         dictionnaireDonnees["Assistance"] = "ECI"
+
+        if (len(self.listeBonDeTravail) > 0):
+            idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail) - 1][
+                                "NumeroBonTravail"]) + 1)  # + self.nombreBonAjoute)
+        else:
+            idBDT = 1
         #Decrementation des pieces dans le stock
-        self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation)
         if(any(self.equipementDictionnaire)):
             #On ajoute le bon de travail a un equipement existant
             if not self.modificationBon:
@@ -257,18 +262,16 @@ class BonDeTravail(Ui_BonDeTravail):
                 print(dicRetour)
                 if dicRetour["Reussite"]:
                     print("Reussi")
-                    if(len(self.listeBonDeTravail)>0):
-                        idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail)-1]["NumeroBonTravail"]) + 1 )#+ self.nombreBonAjoute)
-                    else:
-                        idBDT = 1
                     print("bon de travail d'id :", idBDT)
                     dictionnaireDonnees["NumeroBonTravail"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
                     self.nombreBonAjoute += 1
+                    self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, idBDT)
                     self.signalFenetreBonTravail.confirmation.emit()
             else:
                 dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["Id"], self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], dictionnaireDonnees))
                 if dicRetour["Reussite"]:
+                    self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, idBDT, True)
                     print("Modification Réussie")
                     '''self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = str(dictionnaireDonnees["Date"])
                     self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"] = str(dictionnaireDonnees["TempsEstime"])

@@ -30,7 +30,9 @@ class PieceManager:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
             cur.execute(
-                "CREATE TABLE IF NOT EXISTS Piece(Categorie TEXT, NomPiece TEXT, Nombre Integer)")
+                "CREATE TABLE IF NOT EXISTS Piece(IdPiece INTEGER PRIMARY KEY, Categorie TEXT, NomPiece TEXT, Nombre Integer)")
+            cur.execute(
+                "CREATE TABLE IF NOT EXISTS PieceUtilisee(IdBonTravail INTEGER, IdPiece, NombreUtilise Integer, FOREIGN KEY(idPiece) REFERENCES Piece(IdPiece))")
             con.commit()
         except lite.Error as e:
             if con:
@@ -55,10 +57,10 @@ class PieceManager:
                 cur.execute(commandeSQL)
                 rows = cur.fetchall()
                 if len(rows) == 0:
-                    commandeSQL= "INSERT INTO Piece VALUES('{0}','{1}',{2})".format(tup[0],tup[1], tup[2])
-
+                    commandeSQL= "INSERT INTO Piece(Categorie, NomPiece, Nombre) VALUES('{0}','{1}',{2})".format(tup[0],tup[1], tup[2])
                 else:
                     valeur = rows[0][0] + tup[2]
+                    print(rows[0][0], tup[2])
                     commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(valeur,tup[0],tup[1])
                 print(commandeSQL)
 
@@ -77,14 +79,14 @@ class PieceManager:
                 con.close()
             return dict_renvoi
 
-    def ChoisirPiece(self, listeTuple):
+    def ChoisirPiece(self, listeTuple, idBDt, modification = False):
         print(listeTuple)
         dict_renvoi = {'Reussite': False}
         try:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
             for tup in listeTuple:
-                commandeSQL = "SELECT Nombre FROM Piece WHERE Categorie='{0}' AND NomPiece='{1}'".format(tup[0], tup[1])
+                commandeSQL = "SELECT Nombre, IdPiece FROM Piece WHERE Categorie='{0}' AND NomPiece='{1}'".format(tup[0], tup[1])
                 print(commandeSQL)
 
                 cur.execute(commandeSQL)
@@ -94,14 +96,30 @@ class PieceManager:
                     print("ERREUR PAS DE PIECE ASSOCIE")
                 else:
                     nombrePiece = int(rows[0][0])
-                    if(nombrePiece >= tup[2]):
-                        nombreRestant = nombrePiece - tup[2]
-                        commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(nombreRestant, tup[0], tup[1])
-                        print(commandeSQL)
-                        cur.execute(commandeSQL)
-                        con.commit()
+                    idPiece = rows[0][1]
+                    if modification:
+                        nombreUtilisee = self.rechercherNombrePieceUtilisee(idBDt, idPiece)
+                        if (nombrePiece + nombreUtilisee >= tup[2]):
+                            nombreRestant = nombrePiece - tup[2] + nombreUtilisee
+                            commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(
+                                nombreRestant, tup[0], tup[1])
+                            print(commandeSQL)
+                            cur.execute(commandeSQL)
+                            con.commit()
+                            self.selectionnerPiece(idBDt, idPiece, tup[2], modification)
+                        else:
+                            print("Nombre de piece insuffisante")
+
                     else:
-                        print("Nombre  de piece insuffisante")
+                        if(nombrePiece >= tup[2]):
+                            nombreRestant = nombrePiece - tup[2]
+                            commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(nombreRestant, tup[0], tup[1])
+                            print(commandeSQL)
+                            cur.execute(commandeSQL)
+                            con.commit()
+                            self.selectionnerPiece(idBDt, idPiece, tup[2])
+                        else:
+                            print("Nombre  de piece insuffisante")
 
                     dict_renvoi['Reussite'] = True
         except lite.Error as e:
@@ -175,32 +193,68 @@ class PieceManager:
                 con.close()
             return listeCategorie
 
-    def _ActualiserPiece(self, pieces):
+    def selectionnerPiece(self, id, idPiece, quantity, modification = False):
+        print("METHODE SELECTIONNE PIECE")
+        print(id, quantity)
+        dict_renvoi = {'Reussite': False}
         try:
-            if not os.path.exists(self.piece_file):  # vérifie si le fichier de configuration existe
-                raise OSError
+            con = lite.connect(self._pathnamePiece)
+            cur = con.cursor()
+            commandeSQL = "SELECT NombreUtilise FROM PieceUtilisee WHERE IdBonTravail={0} AND IdPiece={1}".format(id, idPiece)
+            print(commandeSQL)
+            cur.execute(commandeSQL)
+            rows = cur.fetchall()
+            if len(rows) == 0:
+                commandeSQL = "INSERT INTO PieceUtilisee VALUES({0},{1}, {2})".format(id, idPiece, quantity)
             else:
-                with open(self.piece_file, 'w') as fichierPiece:  # ouvre le fichier et l'actualise
-                    fichierPiece.write(yaml.dump(pieces, default_flow_style=False))
-        except OSError:
-            print("Could not update: ", self.piece_file)
+                if modification:
+                    valeur = quantity
+                else:
+                    valeur = rows[0][0] + quantity
+                commandeSQL = "UPDATE PieceUtilisee SET NombreUtilise={0} WHERE IdBonTravail={1} AND IdPiece={2}".format(
+                valeur, id, idPiece)
+                print(commandeSQL)
+            cur.execute(commandeSQL)
+            dict_renvoi['Reussite'] = True
+            con.commit()
 
-    def _getConf(self):
+        except lite.Error as e:
+            if con:
+                con.rollback()
+
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
+            return dict_renvoi
+
+    def rechercherNombrePieceUtilisee(self, id, idPiece):
+        print("RECHERCHE",id, idPiece)
+        nombrePieceUtilisee = 0
         try:
-            with open(self.conf_file, 'r') as fichierConf:  # try: ouvrir le fichier et le lire
-                conf = yaml.load(fichierConf)
-        except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", self.conf_file)  # définir ce qu'il faut faire pour corriger
+            con = lite.connect(self._pathnamePiece)
+            cur = con.cursor()
+            commandeSQL = "SELECT NombreUtilise FROM PieceUtilisee WHERE IdBonTravail={0} AND IdPiece={1}".format(id, idPiece)
+            print(commandeSQL)
+            cur.execute(commandeSQL)
+            rows = cur.fetchall()
+            if len(rows) == 0:
+                nombrePieceUtilisee = 0
+            else:
+                nombrePieceUtilisee = rows[0][0]
+        except lite.Error as e:
+            if con:
+                con.rollback()
 
-        return conf
+            print("Error %s:" % e.args[0])
 
-    def _getPiece(self):
-        try:
-            with open(self.piece_file, 'r') as fichierPiece:
-                piece = yaml.load(fichierPiece)
-        except IOError:
-            print("Could not read file: ", self.piece_file)
-        return piece
+        finally:
+
+            if con:
+                con.close()
+            return nombrePieceUtilisee
 
 
     def _AfficherBD(self):
@@ -208,6 +262,16 @@ class PieceManager:
         with con:
             cur = con.cursor()
             cur.execute("SELECT * FROM Piece")
+            rows = cur.fetchall()
+            print("BDD contenu")
+            for row in rows:
+                print(row)
+
+    def _AfficherBDPieceUtilisee(self):
+        con = lite.connect(self._pathnamePiece)
+        with con:
+            cur = con.cursor()
+            cur.execute("SELECT * FROM PieceUtilisee")
             rows = cur.fetchall()
             print("BDD contenu")
             for row in rows:
@@ -225,18 +289,30 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
 
     dict_request = {'DescriptionSituation': 'bris'}
     list1 = list()
-    list1.append(("vis", "1", 10, ))
+    list1.append(("vis", "1", 100, ))
     list1.append(("vis", "10mm", 100, ))
+    list2 = list()
+    list2.append(("vis", "1", 5,))
+    list2.append(("vis", "10mm", 5,))
+
     manager.AjouterPiece(list1)
     manager._AfficherBD()
 
 
     print(manager.ObtenirListeCategorie())
     print("Choix pieces")
-    manager.ChoisirPiece(list1)
+    manager.ChoisirPiece(list1, '1')
     manager._AfficherBD()
     print(manager.ObtenirListePiece("vis"))
 
+    print("PIECE UTILISEE")
+    print("AVANT")
+    manager._AfficherBDPieceUtilisee()
+    manager.ChoisirPiece(list2, '1', True)
+    print("PIECE Apres")
+    manager._AfficherBDPieceUtilisee()
+    print("AFFICHAGE BD PIECE")
+    manager._AfficherBD()
     # manager.ModifierNombrePiece({"a": 4})
     # manager.AjouterNombrePiece("a", 10)
     # dic_request = {'AvantLe': datetime.date(2016, 03, 12)}
