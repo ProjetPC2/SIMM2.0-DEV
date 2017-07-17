@@ -32,7 +32,8 @@ class PieceManager:
             cur.execute(
                 "CREATE TABLE IF NOT EXISTS Piece(IdPiece INTEGER PRIMARY KEY, Categorie TEXT, NomPiece TEXT, Nombre Integer)")
             cur.execute(
-                "CREATE TABLE IF NOT EXISTS PieceUtilisee(IdBonTravail INTEGER, IdPiece, NombreUtilise Integer, FOREIGN KEY(idPiece) REFERENCES Piece(IdPiece))")
+                "CREATE TABLE IF NOT EXISTS PieceUtilisee(IdEquipement INTEGER, IdBonTravail INTEGER, IdPiece INTEGER, "
+                "NombreUtilise INTEGER, FOREIGN KEY(IdEquipement) REFERENCES Equipement(Id), FOREIGN KEY(idPiece) REFERENCES Piece(IdPiece))")
             con.commit()
         except lite.Error as e:
             if con:
@@ -79,7 +80,7 @@ class PieceManager:
                 con.close()
             return dict_renvoi
 
-    def ChoisirPiece(self, listeTuple, idBDt, modification = False):
+    def ChoisirPiece(self, listeTuple, idEquipement, idBDt, modification = False):
         print(listeTuple)
         dict_renvoi = {'Reussite': False}
         try:
@@ -98,7 +99,7 @@ class PieceManager:
                     nombrePiece = int(rows[0][0])
                     idPiece = rows[0][1]
                     if modification:
-                        nombreUtilisee = self.rechercherNombrePieceUtilisee(idBDt, idPiece)
+                        nombreUtilisee = self.rechercherNombrePieceUtilisee(idEquipement, idBDt, idPiece)
                         if (nombrePiece + nombreUtilisee >= tup[2]):
                             nombreRestant = nombrePiece - tup[2] + nombreUtilisee
                             commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(
@@ -106,7 +107,7 @@ class PieceManager:
                             print(commandeSQL)
                             cur.execute(commandeSQL)
                             con.commit()
-                            self.selectionnerPiece(idBDt, idPiece, tup[2], modification)
+                            self.selectionnerPiece(idEquipement, idBDt, idPiece, tup[2], modification)
                         else:
                             print("Nombre de piece insuffisante")
 
@@ -117,7 +118,7 @@ class PieceManager:
                             print(commandeSQL)
                             cur.execute(commandeSQL)
                             con.commit()
-                            self.selectionnerPiece(idBDt, idPiece, tup[2])
+                            self.selectionnerPiece(idEquipement, idBDt, idPiece, tup[2])
                         else:
                             print("Nombre  de piece insuffisante")
 
@@ -222,7 +223,7 @@ class PieceManager:
                 con.close()
             return pieces
 
-    def selectionnerPiece(self, id, idPiece, quantity, modification = False):
+    def selectionnerPiece(self, idEq, id, idPiece, quantity, modification = False):
         print("METHODE SELECTIONNE PIECE")
         print(id, quantity)
         dict_renvoi = {'Reussite': False}
@@ -234,14 +235,14 @@ class PieceManager:
             cur.execute(commandeSQL)
             rows = cur.fetchall()
             if len(rows) == 0:
-                commandeSQL = "INSERT INTO PieceUtilisee VALUES({0},{1}, {2})".format(id, idPiece, quantity)
+                commandeSQL = "INSERT INTO PieceUtilisee VALUES({0},{1}, {2}, {3})".format(idEq, id, idPiece, quantity)
             else:
                 if modification:
                     valeur = quantity
                 else:
                     valeur = rows[0][0] + quantity
-                commandeSQL = "UPDATE PieceUtilisee SET NombreUtilise={0} WHERE IdBonTravail={1} AND IdPiece={2}".format(
-                valeur, id, idPiece)
+                commandeSQL = "UPDATE PieceUtilisee SET NombreUtilise={0} WHERE IdBonTravail={1} AND IdPiece={2} AND" \
+                              " AND IdEquipement={3}".format(valeur, id, idPiece, idEq)
                 print(commandeSQL)
             cur.execute(commandeSQL)
             dict_renvoi['Reussite'] = True
@@ -250,22 +251,20 @@ class PieceManager:
         except lite.Error as e:
             if con:
                 con.rollback()
-
             print("Error %s:" % e.args[0])
-
         finally:
-
             if con:
                 con.close()
             return dict_renvoi
 
-    def rechercherNombrePieceUtilisee(self, id, idPiece):
+    def rechercherNombrePieceUtilisee(self, idEquipement, idBdt, idPiece):
         print("RECHERCHE",id, idPiece)
         nombrePieceUtilisee = 0
         try:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
-            commandeSQL = "SELECT NombreUtilise FROM PieceUtilisee WHERE IdBonTravail={0} AND IdPiece={1}".format(id, idPiece)
+            commandeSQL = "SELECT NombreUtilise FROM PieceUtilisee WHERE IdBonTravail={0} AND IdPiece={1 AND " \
+                          "IdEquipement = {2}".format(idBdt, idPiece, idEquipement)
             print(commandeSQL)
             cur.execute(commandeSQL)
             rows = cur.fetchall()
@@ -276,6 +275,32 @@ class PieceManager:
         except lite.Error as e:
             if con:
                 con.rollback()
+            print("Error %s:" % e.args[0])
+        finally:
+            if con:
+                con.close()
+            return nombrePieceUtilisee
+
+    def obtenirPieceAssocieBonTravail(self, idEquipement, idBdT):
+        print("HELLO")
+        rows = list()
+        self._AfficherBDPieceUtilisee()
+        try:
+            con = lite.connect(self._pathnamePiece)
+            cur = con.cursor()
+            commandeSQL = "SELECT Categorie, NomPiece, NombreUtilise FROM Piece INNER JOIN PieceUtilisee" \
+                          " ON Piece.IdPiece = PieceUtilisee.IdPiece WHERE PieceUtilisee.IdBonTravail = {0}" \
+                          " AND PieceUtilisee.IdEquipement = {1}".format(str(idBdT), str(idEquipement))
+            print(commandeSQL)
+            cur.execute(commandeSQL)
+            rows = cur.fetchall()
+            print(len(rows))
+            for row in rows:
+                print(row)
+
+        except lite.Error as e:
+            if con:
+                con.rollback()
 
             print("Error %s:" % e.args[0])
 
@@ -283,7 +308,7 @@ class PieceManager:
 
             if con:
                 con.close()
-            return nombrePieceUtilisee
+            return rows
 
 
     def _AfficherBD(self):
@@ -312,7 +337,7 @@ class PieceManager:
 if __name__ == "__main__":  # Execution lorsque le fichier est lance
     # if True:
     # TESTS
-    manager = PieceManager("test.db")
+    manager = PieceManager("Equipement.db")
 
     data1 = ("ECG", "IRM")
 
@@ -330,18 +355,20 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
 
     print(manager.ObtenirListeCategorie())
     print("Choix pieces")
-    manager.ChoisirPiece(list1, '1')
+    manager.ChoisirPiece(list1, 1, '1')
     manager._AfficherBD()
     print(manager.ObtenirListePiece("vis"))
 
     print("PIECE UTILISEE")
     print("AVANT")
     manager._AfficherBDPieceUtilisee()
-    manager.ChoisirPiece(list2, '1', True)
+    manager.ChoisirPiece(list2, 1, '1', True)
     print("PIECE Apres")
     manager._AfficherBDPieceUtilisee()
     print("AFFICHAGE BD PIECE")
     manager._AfficherBD()
+    print("OBTENTION PIECe")
+    print(manager.obtenirPieceAssocieBonTravail(1, "1"))
     # manager.ModifierNombrePiece({"a": 4})
     # manager.AjouterNombrePiece("a", 10)
     # dic_request = {'AvantLe': datetime.date(2016, 03, 12)}
