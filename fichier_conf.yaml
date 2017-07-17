@@ -27,7 +27,9 @@ CategorieEquipement:
 - Balance
 - Glucometre
 - Autre
-CentreService: []
+CentreService:
+- Inconnu
+- '1'
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -53,8 +55,11 @@ EtatService:
 - En service
 - En maintenance
 - Au rebus
-Provenance: []
-Salle: []
+Provenance:
+- Inconnue
+Salle:
+- Inconnue
+- '1'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -65,7 +70,10 @@ champsAcceptes-BDT:
 - DescriptionIntervention
 - EtatBDT
 - NomTechnicien
-- Assistance
+- Outils
+- Pieces
+- Formation
+- Manuel
 champsAcceptes-Equipement:
 - CategorieEquipement
 - Marque

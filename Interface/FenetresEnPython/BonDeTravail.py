@@ -3,8 +3,8 @@ import datetime
 from threading import Thread
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt, QLocale, QDate
-from PyQt5.QtWidgets import QTableWidgetItem,QCalendarWidget
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
 
 from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
@@ -104,6 +104,14 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeLabelCache.append(self.labelCacheTemps)
         self.listeLabelCache.append(self.labelCacheDescSit)
         self.listeLabelCache.append(self.labelCacheDescInt)
+        self.listeLabelCache.append(self.labelAssistanceCache)
+
+        self.groupeBoutonAssistance = QButtonGroup()
+        self.groupeBoutonAssistance.addButton(self.checkBoxOutil)
+        self.groupeBoutonAssistance.addButton(self.checkBoxPiece)
+        self.groupeBoutonAssistance.addButton(self.checkBoxFormation)
+        self.groupeBoutonAssistance.addButton(self.checkBoxManuel)
+        self.groupeBoutonAssistance.setExclusive(False)
 
         for label in self.listeLabelCache:
             label.hide()
@@ -114,6 +122,8 @@ class BonDeTravail(Ui_BonDeTravail):
         self.listeWidget.append(self.timeEditTempsEstime)
         self.listeWidget.append(self.labelEcritureBonTravail)
         self.listeWidget.append(self.dateEdit)
+        #self.listeWidget.append(self.groupeBoutonAssistance)
+
         #self.listeWidget.append(self.comboBoxNomTech)
 
         self.colonneClique = None
@@ -250,13 +260,34 @@ class BonDeTravail(Ui_BonDeTravail):
         else:
             dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
         #dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
-        dictionnaireDonnees["Assistance"] = "ECI"
+        #dictionnaireDonnees["Assistance"]  = "A"
+
+
+        if(self.checkBoxOutil.isChecked()):
+            dictionnaireDonnees["Outils"] = 1
+        else:
+            dictionnaireDonnees["Outils"] = 0
+        if (self.checkBoxPiece.isChecked()):
+            dictionnaireDonnees["Pieces"] = 1
+        else:
+            dictionnaireDonnees["Pieces"] = 0
+        if (self.checkBoxManuel.isChecked()):
+            dictionnaireDonnees["Manuel"] = 1
+        else:
+            dictionnaireDonnees["Manuel"] = 0
+        if (self.checkBoxFormation.isChecked()):
+            dictionnaireDonnees["Formation"] = 1
+        else:
+            dictionnaireDonnees["Formation"] = 0
+        self.obtenirChoixAssistance()
+
 
         if (len(self.listeBonDeTravail) > 0):
             idBDT = str(int(self.listeBonDeTravail[len(self.listeBonDeTravail) - 1][
                                 "NumeroBonTravail"]) + 1)  # + self.nombreBonAjoute)
         else:
             idBDT = 1
+        print("ID BON TRAVAIL ", idBDT)
         #Decrementation des pieces dans le stock
         if(any(self.equipementDictionnaire)):
             #On ajoute le bon de travail a un equipement existant
@@ -266,15 +297,16 @@ class BonDeTravail(Ui_BonDeTravail):
                 if dicRetour["Reussite"]:
                     print("Reussi")
                     print("bon de travail d'id :", idBDT)
-                    dictionnaireDonnees["NumeroBonTravail"] = idBDT
+                    #dictionnaireDonnees["NumeroBonTravail"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
                     self.nombreBonAjoute += 1
-                    self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, idBDT)
+                    self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, self.equipementDictionnaire["Id"], idBDT)
+                    dictionnaireDonnees["NumeroBonTravail"] = idBDT
                     self.signalFenetreBonTravail.confirmation.emit()
             else:
                 dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["Id"], self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], dictionnaireDonnees))
                 if dicRetour["Reussite"]:
-                    self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, idBDT, True)
+                    self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, self.equipementDictionnaire["Id"] , self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], True)
                     print("Modification Réussie")
                     '''self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = str(dictionnaireDonnees["Date"])
                     self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"] = str(dictionnaireDonnees["TempsEstime"])
@@ -336,20 +368,39 @@ class BonDeTravail(Ui_BonDeTravail):
             idBDT = str(self.equipementDictionnaire["Id"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"])
             print("idBDT", idBDT)
             self.labelEcritureBonTravail.setText(idBDT)
-            if "Pieces" in self.listeBonDeTravail[self.indiceBonDeTravail]:
-                if self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"] is not None:
-                    print(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
-                    self.tableWidgetPiecesAssociees.setRowCount(len(self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]))
-                    ligne = 0
-                    for tuple in self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"]:
-                        print(tuple)
-                        categorie, nomPiece, nombre = tuple
-                        self.tableWidgetPiecesAssociees.setItem(ligne, 0,
+            if (self.listeBonDeTravail[self.indiceBonDeTravail]["Outils"] == 1):
+                self.checkBoxOutil.setChecked(True)
+            else:
+                self.checkBoxOutil.setChecked(False)
+            if (self.listeBonDeTravail[self.indiceBonDeTravail]["Pieces"] == 1):
+                self.checkBoxPiece.setChecked(True)
+            else:
+                self.checkBoxPiece.setChecked(False)
+            if (self.listeBonDeTravail[self.indiceBonDeTravail]["Manuel"] == 1):
+                self.checkBoxManuel.setChecked(True)
+            else:
+                self.checkBoxManuel.setChecked(False)
+            if (self.listeBonDeTravail[self.indiceBonDeTravail]["Formation"] == 1):
+                self.checkBoxFormation.setChecked(True)
+            else:
+                self.checkBoxFormation.setChecked(False)
+
+            idEq = str(self.equipementDictionnaire["Id"])
+            idb = str(self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"])
+            self.listeAjoutPieceReparation = self.pieceManager.obtenirPieceAssocieBonTravail(idEq, idb)
+
+            if len(self.listeAjoutPieceReparation)>0:
+                self.tableWidgetPiecesAssociees.setRowCount(len(self.listeAjoutPieceReparation))
+                ligne = 0
+                for tuple in self.listeAjoutPieceReparation:
+                    print(tuple)
+                    categorie, nomPiece, nombre = tuple
+                    self.tableWidgetPiecesAssociees.setItem(ligne, 0,
                                                          QTableWidgetItem(categorie))
-                        self.tableWidgetPiecesAssociees.setItem(ligne, 1, QTableWidgetItem(nomPiece))
-                        self.tableWidgetPiecesAssociees.setItem(ligne, 2, QTableWidgetItem(str(nombre)))
-                        ligne += 1
-                        self.listPieceReparationUtilise.append((categorie, nomPiece, nombre))
+                    self.tableWidgetPiecesAssociees.setItem(ligne, 1, QTableWidgetItem(nomPiece))
+                    self.tableWidgetPiecesAssociees.setItem(ligne, 2, QTableWidgetItem(str(nombre)))
+                    ligne += 1
+                    self.listPieceReparationUtilise.append((categorie, nomPiece, nombre))
         else:
             self.signalFenetreBonTravail.aucunBon.emit()
 
@@ -433,6 +484,10 @@ class BonDeTravail(Ui_BonDeTravail):
             label.hide()
         self.listeAjoutPieceReparation.clear()
         self.tableWidgetPiecesAssociees.setRowCount(0)
+        self.checkBoxFormation.setChecked(False)
+        self.checkBoxPiece.setChecked(False)
+        self.checkBoxOutil.setChecked(False)
+        self.checkBoxManuel.setChecked(False)
 
     def consulterBonDeTravail(self):
         self.comboBoxNomTech.show()
@@ -501,6 +556,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
         self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
         self.lineEditID.setText(str(self.equipementDictionnaire["Id"]))
+
         self.boutonAjoutBDT.setDisabled(False)
         #A modifier
         # self.rechercherBonTravail()
@@ -565,7 +621,24 @@ class BonDeTravail(Ui_BonDeTravail):
         thread = BonDeTravailThread(self.rechercherBonTravail)
         thread.start()
 
+    def obtenirChoixAssistance(self):
+        "Methode permettan d'obtenir le(s) choix selectionne(s) parmi le groupe de check box"
+        boutons = list()
+        if(self.checkBoxOutil.isChecked()):
+            boutons.append(self.checkBoxOutil.text())
+        if (self.checkBoxPiece.isChecked()):
+            boutons.append(self.checkBoxPiece.text())
+        if (self.checkBoxManuel.isChecked()):
+            boutons.append(self.checkBoxManuel.text())
+        if (self.checkBoxFormation.isChecked()):
+            boutons.append(self.checkBoxFormation.text())
+        print(boutons)
+        self.assistances = boutons
+        return boutons
+
+
 class BonDeTravailThread(Thread):
+
     def __init__(self, fonction):
         Thread.__init__(self)
         self.fonction = fonction

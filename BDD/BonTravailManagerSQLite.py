@@ -33,6 +33,7 @@ class BonTravailManager:
             cur.execute(
                 "CREATE TABLE IF NOT EXISTS BonTravail(IdEquipement INTEGER, NumeroBonTravail INTEGER, DescriptionSituation TEXT,"
                 + " NomTechnicien Text, Date TEXT, TempsEstime TEXT, DescriptionIntervention TEXT, EtatBDT TEXT, Assistance TEXT, "
+                + " Outils INTEGER, Pieces INTEGER, Formation INTEGER, Manuel INTEGER,"
                 + "FOREIGN KEY(idEquipement) REFERENCES Equipement(Id))")
             con.commit()
         except lite.Error as e:
@@ -64,11 +65,13 @@ class BonTravailManager:
                 dictio["NumeroBonTravail"] = str(id_bdt)
                 print(dictio)
                 commandeSQL = "INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, " \
-                              + " Date, TempsEstime, DescriptionIntervention, EtatBDT, Assistance ) VALUES ('" \
+                              + " Date, TempsEstime, DescriptionIntervention, EtatBDT, Outils, Pieces, Formation," \
+                              + " Manuel  ) VALUES ('" \
                               + dictio["IdEquipement"] + "', '" + dictio["NumeroBonTravail"] + "', '"\
                               + dictio["DescriptionSituation"] + "', '" + dictio["NomTechnicien"] + "', '" + str(dictio["Date"]) \
                               + "', '" + str(dictio["TempsEstime"]) + "', '" + dictio["DescriptionIntervention"] + "', '" \
-                              + dictio["EtatBDT"] + "', '" + dictio["Assistance"] + "' );"
+                              + dictio["EtatBDT"] + "', '" + str(dictio["Outils"]) \
+                              + "', '" + str(dictio["Pieces"]) + "', '" + str(dictio["Formation"]) + "', '" + str(dictio["Manuel"]) +" ');"
 
                 '''
                 commandeSQL = "INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, " \
@@ -368,7 +371,10 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
              'DescriptionIntervention': 'Blablabla-modif',
              'EtatBDT': 'Ouvert',
              'NomTechnicien': 'Kerlin',
-             'Assistance': 'Formation'}
+             'Formation': 1,
+             'Outils': 0,
+             'Pieces': 1,
+             'Manuel': 0}
 
     data2 = {'Date': datetime.date(2016, 2, 22),
              'TempsEstime': datetime.time(2, 30),
@@ -376,7 +382,10 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
              'DescriptionIntervention': 'Blablabla-modif',
              'EtatBDT': 'Ouvert',
              'NomTechnicien': 'Kerlin',
-             'Assistance': 'Formation'}
+             'Formation': 1,
+             'Outils': 0,
+             'Pieces': 1,
+             'Manuel': 0}
 
     dic_request = {'IdEquipement': '1'}
 
@@ -386,8 +395,10 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     manager._AfficherBD()
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
+    print("RECHERCHE")
     print((manager.RechercherBonTravail({"IdEquipement" : 1})))
     #print(manager.RechercherBonTravail(dict_request))
+    print("MODIFICATION")
     print(manager.ModifierBonTravail('1', '1', data2))                     # id_modif en int
     manager._AfficherBD()
     print(manager._ObtenirProchainIDdeBDT("1"))

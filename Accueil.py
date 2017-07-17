@@ -493,7 +493,7 @@ class Accueil(Ui_Accueil):
             # self.afficherChargement()
             if(self.ajoutBonDeTravailEquipementUI.equipementDictionnaire["ID"] != equipement["ID"]):
                 self.ajoutBonDeTravailEquipementUI.equipementDictionnaire = equipement
-                self.ajoutBonDeTravailEquipementUI.lineEditID.setText(equipement["ID"])
+                self.ajoutBonDeTravailEquipementUI.lineEditID.setText(str(equipement["ID"]))
                 self.ajoutBonDeTravailEquipementUI.nombreBonAjoute = 0
             self.ajoutBonDeTravailEquipementUI.listeBonDeTravail = listeBonTravail
             self.ajoutBonDeTravailEquipementUI.signalFenetreBonTravail.nouveauBonTravail.emit()
@@ -532,7 +532,7 @@ class Accueil(Ui_Accueil):
             self.consultationBonDeTravail.show()
             if(self.consultationBonDeTravailUI.equipementDictionnaire["ID"] != equipement["ID"]):
                 self.consultationBonDeTravailUI.equipementDictionnaire = equipement
-                self.consultationBonDeTravailUI.lineEditID.setText(equipement["ID"])
+                self.consultationBonDeTravailUI.lineEditID.setText(str(equipement["ID"]))
                 self.consultationBonDeTravailUI.nombreBonAjoute = 0
             self.consultationBonDeTravailUI.listeBonDeTravail = listeBonTravail
             self.consultationBonDeTravailUI.consulterBDT = self.consultationEquipementUI.listeBonDeTravail[self.consultationEquipementUI.comboBoxBons.currentIndex()]
