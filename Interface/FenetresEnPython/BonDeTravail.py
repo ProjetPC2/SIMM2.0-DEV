@@ -258,7 +258,7 @@ class BonDeTravail(Ui_BonDeTravail):
         dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
         dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
         dictionnaireDonnees["NomTechnicien"] = self.comboBoxNomTech.currentText()
-        if(self.comboBoxOuvertFerme.currentText() != "Oui"):
+        if(self.comboBoxOuvertFerme.currentText() != "Non"):
             dictionnaireDonnees["EtatBDT"] = "Ferme"
         else:
             dictionnaireDonnees["EtatBDT"] = "Ouvert"
