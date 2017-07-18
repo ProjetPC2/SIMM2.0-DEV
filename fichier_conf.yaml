@@ -21,15 +21,15 @@ CategorieEquipement:
 - Table chauffante
 - Moniteur
 - Analyseur sanguin
-- Appareil respiratoie
+- Appareil respiratoire
 - Appareil pour la phototherapie
 - Appareil a succion
 - Balance
 - Glucometre
 - Autre
 CentreService:
-- Inconnu
-- '1'
+- Inconnue
+- "P\xE9diatrie"
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -57,9 +57,9 @@ EtatService:
 - Au rebus
 Provenance:
 - Inconnue
+- Konbit Sante
 Salle:
 - Inconnue
-- '1'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement

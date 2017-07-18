@@ -12,8 +12,24 @@ BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
 CategorieEquipement:
-- A Ajouter
-CentreService: []
+- Lit pour bebe
+- Lit
+- Incubateur
+- Echographe
+- Lampe chauffante
+- Concentrateur oxygene
+- Table chauffante
+- Moniteur
+- Analyseur sanguin
+- Appareil respiratoire
+- Appareil pour la phototherapie
+- Appareil a succion
+- Balance
+- Glucometre
+- Autre
+CentreService:
+- Inconnue
+- "P\xE9diatrie"
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -39,7 +55,9 @@ EtatService:
 - En service
 - En maintenance
 - Au rebus
-Provenance: []
+Provenance:
+- Konbit Sante
+- Inconnue
 Salle: []
 StatsAjoutFichier:
 - Provenance
