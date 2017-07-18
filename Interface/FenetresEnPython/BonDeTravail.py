@@ -480,7 +480,7 @@ class BonDeTravail(Ui_BonDeTravail):
             widget.clear()
         self.comboBoxOuvertFerme.setDisabled(False)
         self.comboBoxOuvertFerme.setCurrentIndex(0)
-        self.lineEditID.setDisabled(True)
+        self.lineEditID.setDisabled(False)
         self.boutonActualiser.setDisabled(True)
         self.modificationBon = False
         self.comboBoxNomTech.show()
