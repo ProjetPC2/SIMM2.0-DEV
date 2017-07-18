@@ -78,6 +78,8 @@ class PieceManager:
 
             if con:
                 con.close()
+            print("AJOUT")
+            self._AfficherBD()
             return dict_renvoi
 
     def ChoisirPiece(self, listeTuple, idEquipement, idBDt, modification = False):
@@ -136,6 +138,7 @@ class PieceManager:
             return dict_renvoi
 
     def ObtenirListeCategorie(self):
+        self._AfficherBD()
         try:
             con = lite.connect(self._pathnamePiece)
             listeCategorie = list()
@@ -350,6 +353,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     list2.append(("vis", "10mm", 15,))
 
     manager.AjouterPiece(list1)
+    print("AFFICHAGE DE LA BDDDD")
     manager._AfficherBD()
 
 

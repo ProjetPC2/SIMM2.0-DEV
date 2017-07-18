@@ -74,6 +74,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeBonDeTravail = listeBonTravail
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
             self.listeCategoriePiece.sort()
+            self.comboBoxCategoriePiece.clear()
             self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             self.signalFenetreBonTravail.nouveauBonTravail.emit()
 
@@ -192,6 +193,8 @@ class BonDeTravail(Ui_BonDeTravail):
             self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": self.lineEditID.text()})
             self.indiceBonDeTravail = 0
             self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+            self.listeCategoriePiece.sort()
+            self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             self.signalFenetreBonTravail.chargerEquipement.emit()
             self.rechercherBonTravail()
         else:
@@ -255,10 +258,10 @@ class BonDeTravail(Ui_BonDeTravail):
         dictionnaireDonnees["DescriptionSituation"] = self.textEditDescSituation.toPlainText()
         dictionnaireDonnees["DescriptionIntervention"] = self.textEditDescIntervention.toPlainText()
         dictionnaireDonnees["NomTechnicien"] = self.comboBoxNomTech.currentText()
-        if(self.comboBoxOuvertFerme.currentText() != "Ouvert"):
-            dictionnaireDonnees["EtatBDT"] = "Fermé"
+        if(self.comboBoxOuvertFerme.currentText() != "Oui"):
+            dictionnaireDonnees["EtatBDT"] = "Ferme"
         else:
-            dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
+            dictionnaireDonnees["EtatBDT"] = "Ouvert"
         #dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
         #dictionnaireDonnees["Assistance"]  = "A"
 
@@ -340,6 +343,12 @@ class BonDeTravail(Ui_BonDeTravail):
         self.labelCacheDescSit.setText(self.textEditDescSituation.toPlainText())
         self.labelCacheDescInt.setText(self.textEditDescIntervention.toPlainText())
         self.labelCacheNomTech.setText(self.comboBoxNomTech.currentText())
+        self.labelAssistanceCache.setVisible(False)
+        self.checkBoxManuel.setEnabled(False)
+        self.checkBoxOutil.setEnabled(False)
+        self.checkBoxFormation.setEnabled(False)
+        self.checkBoxPiece.setEnabled(False)
+
 
     def chargerBonTravail(self):
         #Si un bon de travail a ete trouve, on remplit les differents champs associes
@@ -359,12 +368,12 @@ class BonDeTravail(Ui_BonDeTravail):
                 self.boutonFlecheGauche.show()
                 self.boutonFlecheDoubleGauche.show()
             self.pushButtonValider.setDisabled(False)
-            self.listeCategoriePiece.sort()
-            self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
                 self.timeEditTempsEstime.setTime(datetime.datetime.strptime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], "%H-%m"))
             if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
-                self.comboBoxOuvertFerme.setCurrentText("Fermé")
+                self.comboBoxOuvertFerme.setCurrentText("Non")
+            else:
+                self.comboBoxOuvertFerme.setCurrentText("Oui")
             idBDT = str(self.equipementDictionnaire["Id"]) + "-" + str(self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"])
             print("idBDT", idBDT)
             self.labelEcritureBonTravail.setText(idBDT)
@@ -444,16 +453,26 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def editionBonDeTravail(self):
         print("edition")
-        if(self.comboBoxOuvertFerme.currentText() == "Ouvert"):
+        if(self.comboBoxOuvertFerme.currentText() == "Non"):
             self.dateEdit.setDisabled(False)
             self.timeEditTempsEstime.setDisabled(False)
             self.textEditDescSituation.setDisabled(False)
             self.textEditDescIntervention.setDisabled(False)
+            self.checkBoxManuel.setEnabled(True)
+            self.checkBoxOutil.setEnabled(True)
+            self.checkBoxFormation.setEnabled(True)
+            self.checkBoxPiece.setEnabled(True)
+            self.comboBoxNomTech.setDisabled(False)
         else:
             self.dateEdit.setDisabled(True)
             self.timeEditTempsEstime.setDisabled(True)
             self.textEditDescSituation.setDisabled(True)
             self.textEditDescIntervention.setDisabled(True)
+            self.checkBoxManuel.setEnabled(False)
+            self.checkBoxOutil.setEnabled(False)
+            self.checkBoxFormation.setEnabled(False)
+            self.checkBoxPiece.setEnabled(False)
+            self.comboBoxNomTech.setDisabled(True)
 
     def nouveauBondeTravail(self):
         for widget in self.listeWidget:
@@ -484,10 +503,20 @@ class BonDeTravail(Ui_BonDeTravail):
             label.hide()
         self.listeAjoutPieceReparation.clear()
         self.tableWidgetPiecesAssociees.setRowCount(0)
+        self.checkBoxManuel.setEnabled(True)
+        self.checkBoxOutil.setEnabled(True)
+        self.checkBoxFormation.setEnabled(True)
+        self.checkBoxPiece.setEnabled(True)
         self.checkBoxFormation.setChecked(False)
         self.checkBoxPiece.setChecked(False)
         self.checkBoxOutil.setChecked(False)
         self.checkBoxManuel.setChecked(False)
+        self.timeEditTempsEstime.setDisabled(False)
+
+        self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+        self.listeCategoriePiece.sort()
+        self.comboBoxCategoriePiece.clear()
+        self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
 
     def consulterBonDeTravail(self):
         self.comboBoxNomTech.show()
@@ -564,6 +593,9 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def consulterBonTravailSpecifique(self):
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
+        self.listeCategoriePiece.sort()
+        self.comboBoxCategoriePiece.clear()
+        self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
         indice = 0
         while str(self.listeBonDeTravail[indice]["NumeroBonTravail"]) != str(self.consulterBDT["NumeroBonTravail"]):
             print("id dans la liste", self.listeBonDeTravail[indice]["NumeroBonTravail"])

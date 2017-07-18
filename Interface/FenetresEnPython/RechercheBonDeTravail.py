@@ -221,7 +221,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             self.listeResultat.clear()
             if (any(self.dictionnaireRecherche)):
                 print("Affichage dictionnaire de recherche :", self.dictionnaireRecherche)
-                self.listeResultat = self.bonDeTravailManager.RechercherBonTravail(self.dictionnaireRecherche)
+                self.listeResultat = self.bonDeTravailManager.RechercherBonTravaiGenerique(self.dictionnaireRecherche)
                 print(self.listeResultat)
                 self.listeDonnees.clear()
                 indice = 0

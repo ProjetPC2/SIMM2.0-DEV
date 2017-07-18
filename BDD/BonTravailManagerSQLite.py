@@ -207,6 +207,75 @@ class BonTravailManager:
                 con.close()
             return rows
 
+    def RechercherBonTravaiGenerique(self, regex_dict):
+
+        con = lite.connect(self._pathname)
+        rows = list()
+        try:
+            con.row_factory = lite.Row
+
+            cur = con.cursor()
+            commmand_sql = "SELECT IdEquipement, NumeroBonTravail, CategorieEquipement," \
+                           " Modele, CentreService, EtatBDT, Date, DescriptionSituation FROM BonTravail INNER JOIN" \
+                           " Equipement ON Equipement.Id = BonTravail.IdEquipement "
+            compteur = 0
+            list_data = []
+            if(len(regex_dict) > 0):
+                commmand_sql += "WHERE "
+                for key, value in regex_dict.items():
+                    compteur += 1
+                    # Pour chaque champ de la recherche
+                    if (key == 'IdEquipement'):
+                        commmand_sql += key + "= ? "
+                    else:
+                        if not isinstance(value, datetime.date):  # S'il ne s'agit pas d'une date
+                            commmand_sql += key + "=:" + key
+                        else:  # S'il s'agit d'une date
+                            if key == 'ApresLe':  # Chercher après la date
+                                commmand_sql +=  "Date > ? "
+                            if key == 'AvantLe':  # Chercher avant la date
+                                commmand_sql +=  "Date < ? "
+                    list_data.append(str(value))
+
+                    if (compteur < len(regex_dict)):
+                        commmand_sql += " AND "
+
+                print("Commande: ", commmand_sql)
+                print("Recherche Bon Travail en cours")
+                print("REGEX", regex_dict)
+                cur.execute(commmand_sql, list_data)
+            else:
+                cur.execute(commmand_sql)
+            rows = cur.fetchall()
+
+            if(len(rows) > 0):
+                print("Element trouve")
+            else:
+                print("Aucun element trouve")
+            print(type(rows))
+            for row in rows:
+                dictTemp = dict()
+                print("type de row ", row)
+                #ATTENTION : le format de la date contient les heures
+            #    print("%s %s %s" % (row["Id"], row["DateDernierEntretien"], datetime.datetime.strptime(row["DateAcquisition"],"%Y-%m-%d" )))
+            #    print("%s %s %s" % (type(row["Id"]), type(row["DateDernierEntretien"]), type(datetime.datetime.strptime(row["DateAcquisition"],"%Y-%m-%d" ))))
+                print(row)
+            con.close()
+            print("AFFICHAGE DE LA BDD")
+            self._AfficherBD()
+
+        except lite.Error as e:
+            if con:
+                con.rollback()
+
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
+            return rows
+
     def ModifierBonTravail(self, id_eq_modif, id_bdt_modif, dict_modif):
         conf = self._getConf()
 
@@ -396,10 +465,13 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
     print("RECHERCHE")
-    print((manager.RechercherBonTravail({"IdEquipement" : 1})))
+    print((manager.RechercherBonTravaiGenerique({"IdEquipement" : 1})))
     #print(manager.RechercherBonTravail(dict_request))
     print("MODIFICATION")
     print(manager.ModifierBonTravail('1', '1', data2))                     # id_modif en int
     manager._AfficherBD()
     print(manager._ObtenirProchainIDdeBDT("1"))
+    print("Recherche specifique")
+    print((manager.RechercherBonTravaiGenerique({"IdEquipement": 1})))
+
 
