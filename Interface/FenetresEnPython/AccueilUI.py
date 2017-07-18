@@ -17,7 +17,7 @@ class Ui_Accueil(object):
         #Accueil.resize(846, 729)
         width=GetSystemMetrics(0)
         heigth= GetSystemMetrics(1)
-        facteur_grandissement= 0.65
+        facteur_grandissement= 0.80
         Accueil.resize(facteur_grandissement*width, facteur_grandissement*heigth)
         Accueil.setMaximumSize(QtCore.QSize(11111112, 1111111))
         font = QtGui.QFont()
