@@ -294,8 +294,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
             self.listeLabel[indice].hide()
             indice += 1
         self.labelID.setText("")
-        self.fileToSave = ""
-        self.filePath = ""
+        #self.fileToSave = ""
+        #self.filePath = ""
         self.labelPDF.setText("Fichier pdf")
         self.BoutonEnregistrer.hide()
         self.BoutonValider.show()
