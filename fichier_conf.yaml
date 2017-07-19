@@ -27,9 +27,11 @@ CategorieEquipement:
 - Balance
 - Glucometre
 - Autre
+- gghgh
 CentreService:
 - Inconnue
 - "P\xE9diatrie"
+- Inconnu
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
