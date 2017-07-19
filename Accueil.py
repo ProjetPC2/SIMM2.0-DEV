@@ -274,6 +274,7 @@ class Accueil(Ui_Accueil):
             self.modificationEquipementRechercheUI.BoutonEnregistrer.clicked.connect(self.sauvegardeEnCours)
             self.modificationEquipementRechercheUI.sauvegarde.sauvegardeTermine.connect(self.sauvegardeTermine)
             self.modificationEquipementRechercheUI.sauvegarde.sauvegardeTermine.connect(self.modificationTermine)
+            self.modificationEquipementRechercheUI.sauvegarde.sauvegardeTermine.connect(self.rechercheEquipementUI.rechercherEquipement)
             self.listeElementParDefaut.append(self.modificationEquipementRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationEquipementRecherche)
         else:
