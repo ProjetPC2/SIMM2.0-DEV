@@ -161,7 +161,7 @@ class BonTravailManager:
                         commmand_sql += key + "= ? "
                     else:
                         if not isinstance(value, datetime.date):  # S'il ne s'agit pas d'une date
-                            commmand_sql += key + "=:" + key
+                            commmand_sql += key + " = ?"
                         else:  # S'il s'agit d'une date
                             if key == 'ApresLe':  # Chercher après la date
                                 commmand_sql +=  "Date > ? "
@@ -229,7 +229,7 @@ class BonTravailManager:
                         commmand_sql += key + "= ? "
                     else:
                         if not isinstance(value, datetime.date):  # S'il ne s'agit pas d'une date
-                            commmand_sql += key + "=:" + key
+                            commmand_sql += key + " = ?"
                         else:  # S'il s'agit d'une date
                             if key == 'ApresLe':  # Chercher après la date
                                 commmand_sql +=  "Date > ? "

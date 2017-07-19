@@ -41,6 +41,9 @@ class BonDeTravail(Ui_BonDeTravail):
             #Cas ou on consulter un bon de travail
             # self.chercherEquipementThread()
             self.listeBonDeTravail = listeBonTravail
+            if(len(listeBonTravail)):
+                self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement":listeBonTravail[0]["IdEquipement"], "NumeroBonTravail":listeBonTravail[0]["NumeroBonTravail"]})
+
             if(self.equipementDictionnaire is not None):
                 self.equipementDictionnaire = equipement
                 if (any(self.listeBonDeTravail)):
@@ -48,8 +51,11 @@ class BonDeTravail(Ui_BonDeTravail):
 
             else:
                 #id_equipement = str(self.listeBonDeTravail[self.indiceBonDeTravail]["IdEquipement"])
-                #self.equipementDictionnaire = EquipementManager.RechercherEquipement({"Id":id_equipement})
-                self.equipementDictionnaire = equipement
+                #self.equipementDictionnaire = self.equipementManager.RechercherEquipement((self.listeBonDeTravail[0]["IdEquipement"]))[0]
+                if(equipement is None):
+                    self.equipementDictionnaire = self.equipementManager.RechercherEquipement({"Id":str(self.listeBonDeTravail[0]["IdEquipement"])})[0]
+                else:
+                    self.equipementDictionnaire = equipement
             self.lineEditID.setText(str(self.equipementDictionnaire["Id"]))
             self.signalFenetreBonTravail.chargerEquipementAPartirBon.emit()
             self.consulterBonTravailSpecifique()

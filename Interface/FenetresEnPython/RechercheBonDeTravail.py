@@ -117,7 +117,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         for bon in self.listeResultat:
             print((self.tableResultats.item(ligne,0).data(0)))
             print((self.tableResultats.item(ligne,1).data(0)))
-            if(bon["IdEquipement"] == str(self.tableResultats.item(ligne,0).data(0)) and bon["NumeroBonTravail"] == str(self.tableResultats.item(ligne, 1).data(0))):
+            if(str(bon["IdEquipement"]) == str(self.tableResultats.item(ligne,0).data(0)) and str(bon["NumeroBonTravail"]) == str(self.tableResultats.item(ligne, 1).data(0))):
                 self.bonDeTravailSelectionne = bon
         print(self.bonDeTravailSelectionne)
 
