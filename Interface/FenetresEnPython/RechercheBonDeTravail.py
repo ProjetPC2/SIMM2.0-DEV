@@ -84,7 +84,9 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
 
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
-        self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
+        self.listeCleDonneesTemp = list(self.listeCleDonnees)
+        self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
+        self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
         self.tableResultats.resizeColumnsToContents()
         self.tableResultats.setRowCount(0)
 
