@@ -87,6 +87,7 @@ class EquipementManager:
                 dict_renvoi['Reussite'] = True  # ajout du nouvel équipement dans la base de données
                 con.commit()
                 self._AfficherBD()
+                self._miseAJourStats(ancien_dict=None, nouveau_dict=dictio, stats_dict=stats)
                 self._ActualiserConfiguration(conf)
 
         except lite.Error as e:
@@ -214,6 +215,12 @@ class EquipementManager:
         with con:
             cur = con.cursor()
 
+            #commande_sql1 = "Select * FROM Equipement WHERE Id = %d " %id_modif
+            #cur.execute(commande_sql1)
+            #ancien_dict = cur.fetchall()
+            # Il suffirait de rendre la variable ancien_dict dans le même format de Tuple que dict_modif
+            #self._miseAJourStats(ancien_dict=ancien_dict, nouveau_dict=dict_modif, stats_dict=stats)
+
             dict_renvoi = {'Reussite': False}
             commmand_sql = "UPDATE Equipement "
             if (len(dict_modif) > 0):
@@ -235,6 +242,7 @@ class EquipementManager:
             # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
             if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf, stats):
                 cur.execute(commmand_sql, tuple_data)
+                print(commmand_sql, tuple_data)
                 dict_renvoi['Reussite'] = True
                 con.commit()
         if con:
