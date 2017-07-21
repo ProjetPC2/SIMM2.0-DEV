@@ -161,8 +161,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.BoutonModifier.hide()
         # Connexion des boutons
         self.BoutonValider.clicked.connect(self.signalFenetre.signalVerificationEquipement.emit)
-        self.BoutonEnregistrer.clicked.connect(self.signalFenetre.signalNouvelEquipement.emit)
+        #self.BoutonEnregistrer.clicked.connect(self.signalFenetre.signalNouvelEquipement.emit)
         self.BoutonEnregistrer.clicked.connect(self.sauvegarde.sauvegardePDF.emit)
+        self.sauvegarde.sauvegardeTermine.connect(self.signalFenetre.signalNouvelEquipement)
         self.sauvegarde.sauvegardePDF.connect(self.savePDF)
         #self.BoutonEnregistrer.clicked.connect(self.savePDF)
         self.BoutonEnregistrer.clicked.connect(self.sauvegarderEquipementThread)
@@ -233,6 +234,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.equipement.dictionnaire.clear()
         print("EMISSION DES SIGNAUX DE SAUVEGARDE")
         self.sauvegarde.sauvegardeTermine.emit()
+        self.signalFenetre.signalNouvelEquipement.emit
+
 
 
     def verificationEquipement(self):
