@@ -14,24 +14,22 @@ from reportlab.lib.units import cm
 from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Table, Spacer
 from reportlab.rl_config import defaultPageSize
+from PyQt5.QtCore import *
 
 import random
 import sys
 from threading import Thread
 import time
 
-from BDD.EquipementManagerSQLite import EquipementManager
-from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase
-
-
-class PDF():
-    def __init__(self, path, bouton):
+from BDD.BonTravailManagerSQLite import BonTravailManager
+class Rapport():
+    def __init__(self, path):
         # Thread.__init__(self)
         self.PAGE_WIDTH = defaultPageSize[1];
         self.PAGE_HEIGHT = defaultPageSize[0]
 
-        self.Title = "Inventaire - S.I.M.M 2.0"
-        self.pageinfo = "S.I.M.M 2.0"
+        self.Title = "Rapport - S.I.M.M 3.0"
+        self.pageinfo = "S.I.M.M 3.0"
         #On autorise que les pdf
         # self.filter = "PDF (*.pdf)"
         # fileName = QFileDialog.getSaveFileName(None, 'Save file', "/home/SIMM2.0.pdf", filter)
@@ -40,7 +38,7 @@ class PDF():
         # self.fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"), self.filter)
         # print("bouton", bouton.text())
         self.finImpression = Signal()
-        self.creationPDF(path, bouton)
+        self.creationPDF(path)
 
     def myFirstPage(self, canvas, doc):
         """Methode s'occupant de la mise en page du debut de document
@@ -54,7 +52,7 @@ class PDF():
         espace_soulignement = 10
         facteurDivision = 10
         espacement = 130
-        technicien = "XXXXXXXXXXXXXXX"
+        technicien = "Kerlyn Hyppolite"
         canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Saint-Michel')
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
@@ -86,8 +84,8 @@ class PDF():
         canvas.drawString(inch, 0.75 * inch, "Page %d %s" % (doc.page, self.pageinfo))
         canvas.restoreState()
 
-    def creationPDF(self, path, bouton):
-        doc = SimpleDocTemplate(path, pagesize = landscape(A4))
+    def creationPDF(self, path):
+        doc = SimpleDocTemplate(path+".pdf", pagesize = landscape(A4))
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
         # Ajout d'un espacement
         elements = [Spacer(0, 2 * inch)]
@@ -99,7 +97,7 @@ class PDF():
         style = styleSheet["Normal"]
 
         #Recuperation des donnees utiles dans les fichiers de la BDD
-        equipementManager = EquipementManager(pathEquipementDatabase)
+        bonTravailManager = BonTravailManager("Equipement.db")
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
             fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
@@ -109,39 +107,59 @@ class PDF():
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
 
         # récupère la liste des centres de services dans le fichier de configuration
-        listeCentreService = list(conf['CentreService'])
-
+        #listeCentreService = list(conf['CentreService'])
+        l = [1]
         #Creation du tableau avec les informations concernant le centre de service
-        for centreService in listeCentreService:
-            listeEquipement = equipementManager.RechercherEquipement({"CentreService" : centreService})
+        currentDate = (QDate.currentDate().toPyDate())
+        rapport = open(path+".csv", "w")
+        for centreService in l:
+
+            print("DATE AUJOURHDUI ", currentDate)
+            listBon = bonTravailManager.RechercherBonTravailRapport({"AvantLe" : currentDate})
             listeTotal = list()
-            listeColonne = ["ID", "CategorieEquipement", "Marque", "Modele", "CentreService", "EtatService", "Provenance"]
-            listeColonne1 = [Paragraph("<b>ID</b>", style),
-                             Paragraph("<b>Categorie Equipement</b>", style),
-                             Paragraph("<b>Marque</b>", style),
-                             Paragraph("<b>Modele</b>", style),
-                             Paragraph("<b>Centre Service</b>", style),
-                             Paragraph("<b>Etat Service</b>", style),
-                             Paragraph("<b>Provenance</b>", style)]
+            listeColonne1 = [Paragraph("<b>IdEquipement</b>", style),
+                             Paragraph("<b>NumeroBonTravail</b>", style),
+                             Paragraph("<b>DescriptionSituation</b>", style),
+                             Paragraph("<b>NomTechnicien</b>", style),
+                             Paragraph("<b>Date</b>", style),
+                             Paragraph("<b>TempsEstime</b>", style),
+                             Paragraph("<b>DescriptionIntervention</b>", style),
+                             Paragraph("<b>EtatBDT</b>", style),
+                             Paragraph("<b>Assistance</b>", style)]
 
             listeTotal.append(listeColonne1)
-            if (any(listeEquipement)):
+            if (any(listBon)):
                 # Cas ou l'equipement existe
-                for i, dictionnaire in enumerate(listeEquipement):
+                for i, dictionnaire in enumerate(listBon):
                     # Recuperation des donnees sous forme de string
                     print(dictionnaire)
                     listTemp = list()
                     # for element in dictionnaire.values():
                     #     listTemp.append(element)
-                    listTemp.append(Paragraph(str(dictionnaire["ID"]), styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["CategorieEquipement"],styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["Marque"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["Modele"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["CentreService"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["EtatService"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["Provenance"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(str(dictionnaire["IdEquipement"]), styleSheet['Normal']))
+                    listTemp.append(Paragraph(str(dictionnaire["NumeroBonTravail"]),styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["DescriptionSituation"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["NomTechnicien"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["Date"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["TempsEstime"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["EtatBDT"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
 
                     listeTotal.append(listTemp)
+                    rapport.write(str(dictionnaire["IdEquipement"])+",")
+                    rapport.write(str(dictionnaire["NumeroBonTravail"])+",")
+                    rapport.write(dictionnaire["DescriptionSituation"]+",")
+                    rapport.write(dictionnaire["NomTechnicien"]+",")
+                    rapport.write(dictionnaire["Date"]+",")
+                    rapport.write(dictionnaire["TempsEstime"]+",")
+                    rapport.write(dictionnaire["DescriptionIntervention"]+",")
+                    if(dictionnaire["EtatBDT"] == "Ouvert"):
+                        rapport.write("Non" + ",")
+                    else:
+                        rapport.write("Oui" + ",")
+                    rapport.write(dictionnaire["DescriptionIntervention"])
+                    rapport.write("\n")
             else:
                 # Cas ou l'equipement n'existe pas
                 pass
@@ -160,19 +178,18 @@ class PDF():
             # t._argW[3] = 0.5 * inch
 
             #On ajoute les differents elements a la liste contenant les differents elements graphique du pdf
-            Service = ("<b><u>Centre de service %s : </u></b>" % centreService)
+            Service = ("<b><u>Centre de service %s : </u></b>" % "Test")
             titreTableau = Paragraph(Service, style)
             elements.append(titreTableau)
-            elements.append(Spacer(0,10))
+            #elements.append(Spacer(0,10))
             elements.append(tableauCentreService)
             elements.append(Spacer(0, 50))
 
         # Ecriture du document pdf
         doc.build(elements, onFirstPage=self.myFirstPage, onLaterPages= self.myLaterPages)
         print("termine")
+        rapport.close()
         self.finImpression.finImpression.emit()
-        # if(bouton is not None):
-        #     bouton.setDisabled(False)
 
 
     def get_image(self, path, width=1*cm):
@@ -192,12 +209,20 @@ class PDF():
         else:
             print("Sauvegarde annule")
 
+    def writeNewFileCsv(self, donnees):
+        currentDate = str(QDate.currentDate().toPyDate())
+        mon_fichier = open("Rapport_SIMM_" + currentDate + ".csv", "w")
+
+
+
 class Signal(QObject):
     finImpression = pyqtSignal()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    # pdf = PDF(pdf.fileName[0])
+
+    pdf = Rapport(os.path.expanduser("~/Desktop/SIMM_Rapport.pdf"))
+
     # print(pdf.fileName[0])
     # # pdf.creationPDF(pdf.fileName[0])
     # pdf.run()

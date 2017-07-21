@@ -72,7 +72,11 @@ class RechercheEquipement(Ui_RechercheEquipement):
         # on déplace date du dernier entretien à la 2eme colonne
         self.listeCleDonnees.insert(1, self.listeCleDonnees.pop(self.listeCleDonnees.index('DateDernierEntretien')))
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
-        self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
+        self.listeCleDonneesTemp = list(self.listeCleDonnees)
+        self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
+        self.listeCleDonneesTemp[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
+
+        self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
         self.tableResultats.setRowCount(0)
 
         self.signalRechercheEquipement = Communicate()
@@ -238,6 +242,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
                     colonne += 1
                 self.tableResultats.resizeColumnsToContents()
                 #on change le nom du header
+
                 self.listeCleDonneesTemp = list(self.listeCleDonnees)
                 self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
                 self.listeCleDonneesTemp[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'

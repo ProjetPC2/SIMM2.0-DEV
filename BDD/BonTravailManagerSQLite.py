@@ -167,7 +167,7 @@ class BonTravailManager:
                                 commmand_sql +=  "Date > ? "
                             if key == 'AvantLe':  # Chercher avant la date
                                 commmand_sql +=  "Date < ? "
-                    list_data.append(str(value))
+                    list_data.append((value))
 
                     if (compteur < len(regex_dict)):
                         commmand_sql += " AND "
@@ -262,6 +262,73 @@ class BonTravailManager:
                 print(row)
             con.close()
             print("AFFICHAGE DE LA BDD")
+            self._AfficherBD()
+
+        except lite.Error as e:
+            if con:
+                con.rollback()
+
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
+            return rows
+
+    def RechercherBonTravailRapport(self, regex_dict):
+
+        con = lite.connect(self._pathname)
+        rows = list()
+        try:
+            con.row_factory = lite.Row
+
+            cur = con.cursor()
+            commmand_sql = "SELECT * FROM BonTravail INNER JOIN Equipement ON Equipement.Id = BonTravail.IdEquipement "
+            compteur = 0
+            list_data = []
+            if (len(regex_dict) > 0):
+                commmand_sql += "WHERE "
+                for key, value in regex_dict.items():
+                    compteur += 1
+                    # Pour chaque champ de la recherche
+                    if (key == 'IdEquipement'):
+                        commmand_sql += key + "= ? "
+                    else:
+                        if not isinstance(value, datetime.date):  # S'il ne s'agit pas d'une date
+                            commmand_sql += key + " = ?"
+                        else:  # S'il s'agit d'une date
+                            if key == 'ApresLe':  # Chercher après la date
+                                commmand_sql += "Date > ? "
+                            if key == 'AvantLe':  # Chercher avant la date
+                                commmand_sql += "Date < ? "
+                    list_data.append(str(value))
+
+                    if (compteur < len(regex_dict)):
+                        commmand_sql += " AND "
+
+                print("Commande: ", commmand_sql)
+                print("Recherche Bon Travail en cours")
+                print("REGEX", regex_dict)
+                commmand_sql += " ORDER BY EtatBDT DESC, Date DESC"
+                cur.execute(commmand_sql, list_data)
+            else:
+                cur.execute(commmand_sql)
+            rows = cur.fetchall()
+
+            if (len(rows) > 0):
+                print("Element trouve")
+            else:
+                print("Aucun element trouve")
+            print(type(rows))
+            for row in rows:
+                dictTemp = dict()
+                print("type de row ", row)
+                # ATTENTION : le format de la date contient les heures
+                #    print("%s %s %s" % (row["Id"], row["DateDernierEntretien"], datetime.datetime.strptime(row["DateAcquisition"],"%Y-%m-%d" )))
+                #    print("%s %s %s" % (type(row["Id"]), type(row["DateDernierEntretien"]), type(datetime.datetime.strptime(row["DateAcquisition"],"%Y-%m-%d" ))))
+                print(row)
+            con.close()
             self._AfficherBD()
 
         except lite.Error as e:

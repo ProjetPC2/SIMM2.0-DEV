@@ -21,6 +21,7 @@ from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipe
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.PDF2 import PDF
 from Interface.FenetresEnPython.Piece import Piece
+from Interface.FenetresEnPython.Rapport import Rapport
 from Interface.FenetresEnPython.RechercheBonDeTravail import RechercheBonDeTravail
 from Interface.FenetresEnPython.RechercheEquipement import RechercheEquipement
 from Interface.FenetresEnPython.Signaux import Communicate
@@ -97,7 +98,6 @@ class Accueil(Ui_Accueil):
         self.supprimeEquipement = None
         self.supprimeBonDeTravail = None
         self.fenetrePersonnalisee= None
-
         self.connectionBouton()
 
         self.listeNavigation = list()
@@ -387,7 +387,7 @@ class Accueil(Ui_Accueil):
             listeBon = list()
 
             self.modificationBonDeTravailRechercheUI = BonDeTravail(self.modificationBonDeTravailRecherche, consulterBDT= self.rechercheBonDeTravailUI.bonDeTravailSelectionne, listeBonTravail=[self.rechercheBonDeTravailUI.bonDeTravailSelectionne], bonSpecifique=True)
-            self.modificationBonDeTravailResschercheUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.modificationBonDeTravailRechercheUI.boutonActualiser.clicked.connect(self.afficherChargement)
             self.modificationBonDeTravailRechercheUI.lineEditID.returnPressed.connect(self.afficherChargement)
             self.modificationBonDeTravailRechercheUI.chargement.finChargement.connect(self.finChargement)
             self.modificationBonDeTravailRechercheUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
@@ -545,6 +545,15 @@ class Accueil(Ui_Accueil):
 
     def imprimerInventaire(self):
         self.BoutonImprimerInventaire.setDisabled(True)
+
+    def imprimerRapport(self):
+        currentDate = str((QDate.currentDate().toPyDate()))
+        filter = "PDF (*.pdf)"
+        fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/Rapport_SIMM" + currentDate),
+                                               filter)
+        if (fileName[0] != ""):
+            print(fileName[0])
+            rapport = Rapport(fileName[0])
 
     def afficherSupport(self):
         '''
@@ -820,6 +829,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
         self.ui = Accueil(self)
         self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
+        self.ui.BoutonRapport.clicked.connect(self.ui.imprimerRapport)
         self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.setWindowTitle("SIMM 2.0")
