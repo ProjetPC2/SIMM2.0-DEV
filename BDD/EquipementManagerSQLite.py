@@ -343,28 +343,83 @@ class EquipementManager:
 
     # Cette méthode renvoie le nombre d'équipements contenus dans la base de données
     def _statsNbTotalEquipement(self):
-        stats = self._getStats()
-        return stats['nbEquipement']
+        con = lite.connect(self._pathnameEQ)
+        dernier_ID = 0
+        with con:
+            cur = con.cursor()
+            print(type(cur.lastrowid))
+            cur.execute("SELECT COUNT(*) From Equipement")
+
+            rows = cur.fetchall()
+
+        print(rows[0][0])
+        return rows[0][0]
 
     # Cette méthode renvoie un dictionnaire avec comme clées les trois états de service possibles et comme valeur le
     # nombre d'équipements par état de service
     # key: {'En service', 'En maintenance', 'Au rebut'}
     def _statsNbEquipementEtatService(self):
-        stats = self._getStats()
-        return stats['nbEquipementEtatService']
+        con = lite.connect(self._pathnameEQ)
+        dernier_ID = 0
+        with con:
+            cur = con.cursor()
+            print(type(cur.lastrowid))
+            cur.execute("SELECT DISTINCT EtatService From Equipement")
+            rows = cur.fetchall()
+            conf = self._getConf()
+            listeEtatService = conf["EtatService"]
+            dictEtatService =  dict()
+            for etatService in listeEtatService:
+                commandeSQL = "SELECT count(*) FROM Equipement WHERE EtatService = '{0}'".format(etatService)
+                print(commandeSQL)
+                cur.execute(commandeSQL)
+                rows = cur.fetchall()
+                dictEtatService[etatService] = rows[0][0]
+                print(etatService)
+            return dictEtatService
 
     # Cette méthode renvoie un dictionnaire avec comme clées les quatre états de conservation possibles et comme valeur le
     # nombre d'équipements par état de conservation
     # key: {'Quasi neuf', 'Acceptable', 'En fin de vie', 'Desuet'}
     def _statsNbEquipementEtatConservation(self):
-        stats = self._getStats()
-        return stats['nbEquipementEtatConservation']
+        con = lite.connect(self._pathnameEQ)
+        with con:
+            cur = con.cursor()
+            print(type(cur.lastrowid))
+            cur.execute("SELECT DISTINCT EtatConservation From Equipement")
+            rows = cur.fetchall()
+            conf = self._getConf()
+            listeEtatConservation = conf["EtatConservation"]
+            dictEtatConservation = dict()
+            for etatConservation in listeEtatConservation:
+                commandeSQL = "SELECT count(*) FROM Equipement WHERE EtatConservation = '{0}'".format(etatConservation)
+                print(commandeSQL)
+                cur.execute(commandeSQL)
+                rows = cur.fetchall()
+                dictEtatConservation[etatConservation] = rows[0][0]
+                print(etatConservation)
+            return dictEtatConservation
 
     # Cette méthode renvoie un dictionnaire avec comme clées les provenance possibles et comme valeur le
     # nombre d'équipements par provenance
     def _statsNbEquipementProvenance(self):
-        stats = self._getStats()
-        return stats['nbEquipementProvenance']
+        con = lite.connect(self._pathnameEQ)
+        with con:
+            cur = con.cursor()
+            print(type(cur.lastrowid))
+            cur.execute("SELECT DISTINCT Provenance From Equipement")
+            rows = cur.fetchall()
+            conf = self._getConf()
+            listeProvenance = conf["Provenance"]
+            dictProvenance = dict()
+            for provenance in listeProvenance:
+                commandeSQL = "SELECT count(*) FROM Equipement WHERE Provenance = '{0}'".format(provenance)
+                print(commandeSQL)
+                cur.execute(commandeSQL)
+                rows = cur.fetchall()
+                dictProvenance[provenance] = rows[0][0]
+                print(provenance)
+            return dictProvenance
 
     # Cette méthode renvoie un dictionnaire à deux niveaux. Le premier niveau a comme clée les différents centres de
     # de service ('CentreService') qui se trouvent dans le fichier de configuration. Dans le champs des données pour ces clées,
@@ -374,13 +429,31 @@ class EquipementManager:
     def _statsNbEquipementCentreServiceCategorie(self):
         stats = self._getStats()
 
-        dict_renvoi = copy.deepcopy(stats['nbEquipementCentreService'])
+        dict_renvoi = dict()
+        con = lite.connect(self._pathnameEQ)
+        with con:
+            cur = con.cursor()
+            cur.execute("SELECT DISTINCT CentreService From Equipement")
+            rows = cur.fetchall()
+            conf = self._getConf()
+            listeCentreService = list()
+            for row in rows:
+                listeCentreService.append(row[0])
+                dict_renvoi[row[0]] = dict()
+            print(len(rows))
+            print("Liste centre ",listeCentreService)
+            listeCategorieEquipemement = conf["CategorieEquipement"]
+            for centreService in listeCentreService:
+                for categorieEquipement in listeCategorieEquipemement:
+                    commandeSQL = 'SELECT count(*) FROM Equipement WHERE CentreService = "{0}" AND CategorieEquipement = "{1}"'.format(centreService, categorieEquipement)
+                    print(commandeSQL)
+                    cur.execute(commandeSQL)
+                    rows = cur.fetchall()
+                    if rows[0][0] > 0:
+                        dict_renvoi[centreService][categorieEquipement] = rows[0][0]
+            print(dict_renvoi)
+            return dict_renvoi
 
-        for key1, value1 in stats['nbEquipementCentreService'].items():
-            for key2, value2 in value1.items():
-                if value2 == 0:
-                    del dict_renvoi[key1][key2]
-        return dict_renvoi
 
     # Cette méthode permet de mettre à jour self._stats pour refléter les changements à la base de données lors
     # de l'ajout, de la suppression ou de la modification d'un équipement. Il met les champs à jour dans la variable globale
@@ -529,7 +602,7 @@ class EquipementManager:
 if __name__ == "__main__":  # Execution lorsque le fichier est lance
     if True:
         #  TESTS
-        manager = EquipementManager('equipement1.db')
+        manager = EquipementManager('Equipement.db')
 
         data = {'CategorieEquipement': 'Stéthoscope',
                 'Marque': 'Lit de la muerte',
@@ -540,7 +613,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
                 'DateAcquisition': datetime.date(2008, 7, 12),
                 'DateDernierEntretien': datetime.date(2011, 2, 27),
                 'Provenance': 'Poly',
-                'EtatService': 'En service',
+                'EtatService': '',
                 'EtatConservation': 'Quasi neuf',
                 'CodeAsset': '1234',
                 'Commentaires': '',
@@ -570,10 +643,10 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
         print("Derniere requete BDD")
         manager._AfficherBD()
         # Stats
-        # print(manager._statsNbTotalEquipement())
-        # print(manager._statsNbEquipementEtatService())
-        # print(manager._statsNbEquipementEtatConservation())
-        # print(manager._statsNbEquipementProvenance())
-        # print(manager._statsNbEquipementCentreServiceCategorie())
+        print(manager._statsNbTotalEquipement())
+        print(manager._statsNbEquipementEtatService())
+        print(manager._statsNbEquipementEtatConservation())
+        print(manager._statsNbEquipementProvenance())
+        print(manager._statsNbEquipementCentreServiceCategorie())
 
         #manager._recalculStats()

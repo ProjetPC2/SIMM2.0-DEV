@@ -37,7 +37,10 @@ class Rapport():
         #On place le fichier par defaut dans le bureau avec le nom SIMM2.0.pdf
         # self.fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"), self.filter)
         # print("bouton", bouton.text())
+
         self.finImpression = Signal()
+        self.listeCle = ["Date", "NomTechnicien", "IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Marque", "Modele", "Salle",
+                         "DescriptionSituation", "DescriptionIntervention"]
         self.creationPDF(path)
 
     def myFirstPage(self, canvas, doc):
@@ -110,6 +113,7 @@ class Rapport():
         #listeCentreService = list(conf['CentreService'])
         l = [1]
         #Creation du tableau avec les informations concernant le centre de service
+
         currentDate = (QDate.currentDate().toPyDate())
         rapport = open(path+".csv", "w")
         for centreService in l:
@@ -126,12 +130,19 @@ class Rapport():
                              Paragraph("<b>DescriptionIntervention</b>", style),
                              Paragraph("<b>EtatBDT</b>", style),
                              Paragraph("<b>Assistance</b>", style)]
-
             listeTotal.append(listeColonne1)
+            #rapport.write(listeColonne1)
+
             if (any(listBon)):
                 # Cas ou l'equipement existe
                 for i, dictionnaire in enumerate(listBon):
                     # Recuperation des donnees sous forme de string
+                    if(i == 0):
+                        for col in self.listeCle:
+                            rapport.write(str(col) + ",")
+                        rapport.write("Réparé: Oui/Non, Besoins")
+                        rapport.write("\n")
+
                     print(dictionnaire)
                     listTemp = list()
                     # for element in dictionnaire.values():
@@ -147,18 +158,28 @@ class Rapport():
                     listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
 
                     listeTotal.append(listTemp)
-                    rapport.write(str(dictionnaire["IdEquipement"])+",")
-                    rapport.write(str(dictionnaire["NumeroBonTravail"])+",")
-                    rapport.write(dictionnaire["DescriptionSituation"]+",")
-                    rapport.write(dictionnaire["NomTechnicien"]+",")
-                    rapport.write(dictionnaire["Date"]+",")
-                    rapport.write(dictionnaire["TempsEstime"]+",")
-                    rapport.write(dictionnaire["DescriptionIntervention"]+",")
+                    for cle in self.listeCle:
+                        rapport.write(str(dictionnaire[cle]) + ",")
                     if(dictionnaire["EtatBDT"] == "Ouvert"):
                         rapport.write("Non" + ",")
+                        listeAssistance = list()
+                        #Ecriture des donnees d'assistance
+                        if dictionnaire["Outils"] == 1:
+                            listeAssistance.append("Outils")
+                        if dictionnaire["Pieces"] == 1:
+                            listeAssistance.append("Pieces")
+                        if dictionnaire["Formation"] == 1:
+                            listeAssistance.append("Formation")
+                        if dictionnaire["Manuel"] == 1:
+                            listeAssistance.append("Manuel")
+                        for i, assistance in enumerate(listeAssistance):
+                            rapport.write(assistance)
+                            i += 1
+                            if(i < len(listeAssistance)):
+                                rapport.write(";")
                     else:
                         rapport.write("Oui" + ",")
-                    rapport.write(dictionnaire["DescriptionIntervention"])
+
                     rapport.write("\n")
             else:
                 # Cas ou l'equipement n'existe pas
@@ -186,7 +207,7 @@ class Rapport():
             elements.append(Spacer(0, 50))
 
         # Ecriture du document pdf
-        doc.build(elements, onFirstPage=self.myFirstPage, onLaterPages= self.myLaterPages)
+        #doc.build(elements, onFirstPage=self.myFirstPage, onLaterPages= self.myLaterPages)
         print("termine")
         rapport.close()
         self.finImpression.finImpression.emit()

@@ -5,6 +5,9 @@ from PyQt5 import QtWidgets
 
 from PyQt5.QtWidgets import QFileDialog
 
+from Interface.FenetresEnPython.Fichiers import pathFichierConf, pathEquipementDatabase
+
+
 def backUp():
     """ Methode permettant de copier les fichiers de la base de données
     Cette méthode va copier les fichiers dans un dossier SIMMBackUp
@@ -18,14 +21,14 @@ def backUp():
     print(os.path.expanduser(directory))
     if systemOS == "linux":
         os.system("mkdir " + directory)
-        os.system("cp DataBase_Equipement.yaml DataBase_BDT.yaml fichier_conf.yaml fichier_stats.yaml fichier_pieces.yaml   " + os.path.expanduser(directory))
+        os.system("cp " + pathFichierConf + " " + pathEquipementDatabase + os.path.expanduser(directory))
     elif systemOS == "win32":
         print("Ordinateur sous Windows")
         print(os.path.expanduser(directory))
         path = "\"" + os.path.expanduser(directory) + "\""
         #path = os.path.expanduser(directory)
         os.system("mkdir " + path)
-        os.system("robocopy " + "./ " + path + " DataBase_Equipement.yaml DataBase_BDT.yaml fichier_conf.yaml fichier_stats.yaml fichier_pieces.yaml ")
+        os.system("robocopy " + "./ " + path + " " + pathFichierConf + " " + pathEquipementDatabase)
 
     else:
         print("Autre OS")

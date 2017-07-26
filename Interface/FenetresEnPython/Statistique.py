@@ -59,6 +59,7 @@ class Statistique(Ui_Statistique):
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
             print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         # récupère la liste des 'accepted keys' dans le fichier de configuration
+        #self.equipementManager = EquipementManager(pathEquipementDatabase)
 
         self.listeProvenance = list(self._conf['Provenance'])
         self.listeProvenance.sort()
@@ -156,7 +157,7 @@ class Statistique(Ui_Statistique):
             else:
                 if self.comboBoxCentreService.currentText() in self.statsCategorie:
                     dictionnaireResultat = self.statsCategorie[self.comboBoxCentreService.currentText()]
-
+            print(self.statsCategorie)
             self.tableResumeInventaire.setRowCount(len(dictionnaireResultat))
             if (any(dictionnaireResultat)):
                 ligne = 0

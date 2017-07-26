@@ -548,8 +548,19 @@ class Accueil(Ui_Accueil):
 
     def imprimerRapport(self):
         currentDate = str((QDate.currentDate().toPyDate()))
-        filter = "PDF (*.pdf)"
-        fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/Rapport_SIMM" + currentDate),
+
+        directory = os.path.expanduser("~/Desktop/" + "/SIMM_Rapport")
+        systemOS = sys.platform
+        if systemOS == "linux":
+            os.system("mkdir " + directory)
+        elif systemOS == "win32":
+            print("Ordinateur sous Windows")
+            print(os.path.expanduser(directory))
+            path = "\"" + os.path.expanduser(directory) + "\""
+            os.system("mkdir " + path)
+
+        filter = "CSV (*.csv)"
+        fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM_Rapport/Rapport_SIMM" + currentDate),
                                                filter)
         if (fileName[0] != ""):
             print(fileName[0])
