@@ -157,6 +157,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.radioButtonEnService.setChecked(True)
         self.radioButtonQuasiNeuf.setChecked(True)
         # Mise en place de la modification des champs deroulants
+        self.comboBoxCategorie.setEditable(True)
         self.comboBoxSalle.setEditable(True)
         self.comboBoxProvenance.setEditable(True)
         self.comboBoxCentreDeService.setEditable(True)
