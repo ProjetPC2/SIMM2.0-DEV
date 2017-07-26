@@ -1,8 +1,9 @@
-nbEquipement: 0
+nbEquipement: 2
 nbEquipementCentreService:
   Inconnu:
-    Analyseur sanguin: 0
+    Analyseur sanguin: 1
     Appareil a succion: 0
+    Glucometre: 1
   "P\xE9diatrie":
     Lit: 0
 nbEquipementEtatConservation:
@@ -10,11 +11,11 @@ nbEquipementEtatConservation:
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
-  Quasi neuf: 0
+  Quasi neuf: 2
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 0
-  En service: 0
+  En service: 2
 nbEquipementProvenance:
-  Inconnue: 0
+  Inconnue: 2
   Konbit Sante: 0
