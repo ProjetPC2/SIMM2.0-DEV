@@ -628,7 +628,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
                 'PdfPath': ''}
 
 
-        print("PROCHAIN ID, ", manager._ObtenirProchainID())
+        #print("PROCHAIN ID, ", manager._ObtenirProchainID())
         # print(manager._VerifierDict(data))
         # dic_request = {'CategorieEquipement': 'ECG',
         #               'Marque': 'Peter',
@@ -642,19 +642,19 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
         #               'EtatConservation': ''}
 
         # dic_request = {'Marque': 'uerte'}
-        print(manager.AjouterEquipement(data))
+        #print(manager.AjouterEquipement(data))
         #print(manager.SupprimerEquipement(2))
         #  id_supp en int
         # print(dic_request)
-        print(manager.RechercherEquipement({}))
+        #print(manager.RechercherEquipement({}))
 
-        print("Derniere requete BDD")
+        #print("Derniere requete BDD")
         manager._AfficherBD()
         # Stats
-        print(manager._statsNbTotalEquipement())
+        '''print(manager._statsNbTotalEquipement())
         print(manager._statsNbEquipementEtatService())
         print(manager._statsNbEquipementEtatConservation())
         print(manager._statsNbEquipementProvenance())
         print(manager._statsNbEquipementCentreServiceCategorie())
-
+        '''
         #manager._recalculStats()

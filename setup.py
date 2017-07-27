@@ -10,7 +10,10 @@ print(base)
 # Dependencies are automatically detected, but it might need
 # fine tuning.
 buildOptions = dict(packages = ['BDD', 'Interface/FenetresEnPython'], includes = ["BDD"] ,include_files = [
-"fichier_conf.yaml","fichier_fenetre_personnalisable.yaml", "Images/", "PDF/", os.path.join(sys.base_prefix, 'DLLs', 'sqlite3.dll')], excludes = [])
+"fichier_conf.yaml","fichier_fenetre_personnalisable.yaml", "Images/", "PDF/", "fichier_stats.yaml",
+    os.path.join(sys.base_prefix, 'DLLs', 'sqlite3.dll')], excludes = [])
+
+
 
 executables = [
     Executable('Accueil.py', icon = "Images\SIMM2.0.ico", base=base)

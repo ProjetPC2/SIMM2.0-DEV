@@ -499,9 +499,9 @@ class BonTravailManager:
 if __name__ == "__main__":  # Execution lorsque le fichier est lance
 #if True:
     # TESTS
-    manager = BonTravailManager('equipement1.db')
+    manager = BonTravailManager('Equipement.db')
 
-    data1 = {'Date': datetime.date(2016, 2, 22),
+    '''data1 = {'Date': datetime.date(2016, 2, 22),
              'TempsEstime': datetime.time(2, 30),
              'DescriptionSituation': 'Vraiment brisé',
              'DescriptionIntervention': 'Blablabla-modif',
@@ -526,19 +526,19 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     dic_request = {'IdEquipement': '1'}
 
     dic_request = {'AvantLe': datetime.date(2018, 12, 12)}
-
-    print(manager.AjouterBonTravail('1', data1))                       # Ajout de 2 équipements de suite (pour tester...
+    '''
+    #print(manager.AjouterBonTravail('1', data1))                       # Ajout de 2 équipements de suite (pour tester...
     manager._AfficherBD()
     #manager.AjouterBonTravail(1, data2)                        # ... la vérification des champs)
     #print(manager.SupprimerBonTravail('1', '2'))                       # id_supp en int
-    print("RECHERCHE")
-    print((manager.RechercherBonTravaiGenerique({"IdEquipement" : 1})))
+    #print("RECHERCHE")
+    #print((manager.RechercherBonTravaiGenerique({"IdEquipement" : 1})))
     #print(manager.RechercherBonTravail(dict_request))
-    print("MODIFICATION")
-    print(manager.ModifierBonTravail('1', '1', data2))                     # id_modif en int
-    manager._AfficherBD()
-    print(manager._ObtenirProchainIDdeBDT("1"))
-    print("Recherche specifique")
-    print((manager.RechercherBonTravaiGenerique({"IdEquipement": 1})))
+    #print("MODIFICATION")
+    #print(manager.ModifierBonTravail('1', '1', data2))                     # id_modif en int
+    #manager._AfficherBD()
+    #print(manager._ObtenirProchainIDdeBDT("1"))
+    #print("Recherche specifique")
+    #print((manager.RechercherBonTravaiGenerique({"IdEquipement": 1})))
 
 

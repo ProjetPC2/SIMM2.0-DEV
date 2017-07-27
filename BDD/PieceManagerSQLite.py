@@ -342,7 +342,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     # TESTS
     manager = PieceManager("Equipement.db")
 
-    data1 = ("ECG", "IRM")
+    '''data1 = ("ECG", "IRM")
 
     dict_request = {'DescriptionSituation': 'bris'}
     list1 = list()
@@ -372,7 +372,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     print("AFFICHAGE BD PIECE")
     manager._AfficherBD()
     print("OBTENTION PIECe")
-    print(manager.obtenirPieceAssocieBonTravail(1, "1"))
+    print(manager.obtenirPieceAssocieBonTravail(1, "1"))'''
     # manager.ModifierNombrePiece({"a": 4})
     # manager.AjouterNombrePiece("a", 10)
     # dic_request = {'AvantLe': datetime.date(2016, 03, 12)}

@@ -191,6 +191,7 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage de l'element s'il existe deja
             self.consultationEquipement.show()
+
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.listeNavigation.clear()
@@ -259,6 +260,7 @@ class Accueil(Ui_Accueil):
             self.modificationEquipement.show()
             self.modificationEquipementUI.equipementRecherche = equipement
             self.modificationEquipementUI.remplirEquipement()
+            self.modificationEquipementUI.modifierEquipement()
         self.listeNavigation.append(self.modificationEquipement)
 
     def choisirEquipement(self):
