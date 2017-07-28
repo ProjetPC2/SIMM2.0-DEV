@@ -285,6 +285,49 @@ class RechercheEquipement(Ui_RechercheEquipement):
         thread = RechercherEquipement(self.rechercheNumeroSerie)
         thread.start()
 
+    def miseAJourRecherche(self):
+        try:
+            fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
+            with fichierConf:
+                self._conf = yaml.load(fichierConf)
+        except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
+            print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
+        for element in self._conf['champsAcceptes-Equipement']:
+            self.listeCleDonnees.append(element)
+        self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
+        self.listeEtatService = list(self._conf['EtatService'])
+        self.listeCentreService = list(self._conf['CentreService'])
+        self.listeSalle = list(self._conf['Salle'])
+        self.listeProvenance = list(self._conf['Provenance'])
+
+        # Trie des differentes listes pour les comboBox
+
+        self.listeCategorieEquipement.sort()
+        self.listeEtatService.sort()
+        self.listeCentreService.sort()
+        self.listeSalle.sort()
+        self.listeProvenance.sort()
+
+        # Mise a jour des listes avec les bons elements
+        self.comboBoxCategorieEquipement.clear()
+        self.comboBoxCategorieEquipement.addItem("")
+        self.comboBoxCategorieEquipement.addItems(self.listeCategorieEquipement)
+        self.comboBoxEtatService.clear()
+        self.comboBoxEtatService.addItem("")
+        self.comboBoxEtatService.addItems(self.listeEtatService)
+        self.comboBoxCentreService.clear()
+        self.comboBoxCentreService.addItem("")
+        self.comboBoxCentreService.addItems(self.listeCentreService)
+        self.comboBoxSalle.clear()
+        self.comboBoxSalle.addItem("")
+        self.comboBoxSalle.addItems(self.listeSalle)
+        self.comboBoxProvenance.clear()
+        self.comboBoxProvenance.addItem("")
+        self.comboBoxProvenance.addItems(self.listeProvenance)
+
+        fichierConf.close()
+
+
 def verificationTexte(texte):
     print("Verification en cours")
     print(texte)

@@ -75,7 +75,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         # On fait la requete a la BDD
         print("recherche equipement")
         dic_request = dict()
-        dic_request['ID'] = self.lineEditID.text()
+        dic_request['Id'] = self.lineEditID.text()
         listeTrouve = self.equipementManager.RechercherEquipement(dic_request)
         # On efface les bons de travail deja affiche
         self.listeBonDeTravail.clear()
@@ -84,7 +84,8 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
             self.equipementDictionnaire = listeTrouve[0]
             self.signalSuppression.chargerEquipement.emit()
             # On fait la recheche des bons de travail
-            self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"ID-EQ": self.lineEditID.text()})
+            self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": str(self.lineEditID.text())})
+            print("NOMBRE BONS : ", len(self.listeBonDeTravail))
             self.indiceBonDeTravail = 0
             self.rechercherBonDeTravailThread()
         else:
@@ -151,7 +152,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
              :return:
          '''
         # Si un bon de travail a ete trouve, on remplit les differents champs associes
-        self.dateEdit.setDate(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"])
+        self.dateEdit.setDate(datetime.datetime.strptime(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] ,"%Y-%m-%d"))
         self.textEditDescSituation.setText(self.listeBonDeTravail[self.indiceBonDeTravail]["DescriptionSituation"])
         self.textEditDescSituation.wordWrapMode()
         self.textEditDescIntervention.setText(
@@ -159,10 +160,10 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         self.textEditDescIntervention.wordWrapMode()
         # Remplir le temps estime
         if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
-            self.timeEditTempsEstime.setTime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"])
+            self.timeEditTempsEstime.setTime(datetime.datetime.strptime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], "%H-%m"))
         if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
             self.comboBoxOuvertFerme.setCurrentText("Fermé")
-        idBDT = str(self.equipementDictionnaire["ID"]) + "-" + str(self.indiceBonDeTravail + 1)
+        idBDT = str(self.equipementDictionnaire["Id"]) + "-" + str(self.indiceBonDeTravail + 1)
         self.labelEcritureBonTravail.setText(idBDT)
         self.boutonSupprimerBon.setEnabled(True)
 

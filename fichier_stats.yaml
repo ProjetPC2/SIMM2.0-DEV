@@ -1,5 +1,9 @@
-nbEquipement: 2
+nbEquipement: 5
 nbEquipementCentreService:
+  '124':
+    Analyseur sanguin: 2
+  1d2:
+    Analyseur sanguin: 1
   Inconnu:
     Analyseur sanguin: 1
     Appareil a succion: 0
@@ -11,11 +15,13 @@ nbEquipementEtatConservation:
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
-  Quasi neuf: 2
+  Quasi neuf: 5
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 0
-  En service: 2
+  En service: 5
 nbEquipementProvenance:
-  Inconnue: 2
+  1212e: 1
+  '1221': 1
+  Inconnue: 3
   Konbit Sante: 0

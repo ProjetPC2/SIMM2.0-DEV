@@ -109,7 +109,7 @@ class EquipementManager:
         # Renvoyer ID de l'equipement ajoute en plus dans le dictionnaire renvoye a l'interface
 
     def SupprimerEquipement(self, id_supp):  # id_supp en int
-        stats = self._getStats()
+        #stats = self._getStats()
 
         dict_renvoi = {'Reussite': False}
         # ouverture de la base des données contenant les équipements

@@ -10,6 +10,7 @@ from Interface.FenetresEnPython.Signaux import Communicate
 from Interface.FenetresEnPython.SuppressionEquipementUI import Ui_SuppressionEquipement
 
 
+
 class SuppressionEquipement(Ui_SuppressionEquipement):
     #Classe permettant la gestion de la suppression des equipements
     def __init__(self, widget):
@@ -78,7 +79,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         self.signalSuppresion.nouvelleRecherche.emit()
         if (self.lineEditId.text() != ""):
             equipementRecherche = dict()
-            equipementRecherche["ID"] = self.lineEditId.text()
+            equipementRecherche["Id"] = self.lineEditId.text()
             listeEquipement = self.equipementManager.RechercherEquipement(equipementRecherche)
 
             if (any(listeEquipement)):
@@ -97,13 +98,17 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
             print("Champ ID null")
             self.suppression.finChargement.emit()
 
+
     def chargerEquipement(self):
         self.boutonSupprimerEquipement.setEnabled(True)
         self.boutonConsulterBon.setEnabled(False)
         i = 0
         for cle in self.listeCleDonnees:
             # Recuperation des donnees sous forme de string
-            self.listeLabel[i].setText(str(self.equipement[cle]))
+            if cle == "PdfPath":
+                pass
+            else:
+                self.listeLabel[i].setText(str(self.equipement[cle]))
             i += 1
 
     def nouvelleRecherche(self):
@@ -122,7 +127,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         '''
         # Recuperation des bons associees a l'equipement
         dictionnaireBDTRecherche = dict()
-        dictionnaireBDTRecherche["ID-EQ"] = self.lineEditId.text()
+        dictionnaireBDTRecherche["IdEquipement"] = self.lineEditId.text()
         self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail(dictionnaireBDTRecherche)
         if (any(self.listeBonDeTravail)):
             self.signalSuppresion.chargerBonTravail.emit()
@@ -135,11 +140,11 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
             QtGui.QPixmap("Images/view-icon.png"),
             QtGui.QIcon.Normal, QtGui.QIcon.Off)
         for bdt in self.listeBonDeTravail:
-            affichage = self.lineEditId.text() + "-" + bdt["ID-BDT"]
+            affichage = self.lineEditId.text() + "-" + str(bdt["NumeroBonTravail"])
             self.comboBoxBons.addItem(icon2, affichage)
 
     def supprimerEquipement(self):
-        self.equipementManager.SupprimerEquipement(self.equipement["ID"])
+        self.equipementManager.SupprimerEquipement(self.equipement["Id"])
         self.suppression.suppressionTermine.emit()
 
     def rechercherEquipementThread(self):

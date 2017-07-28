@@ -32,6 +32,10 @@ class PDF():
 
         self.Title = "Inventaire - S.I.M.M 2.0"
         self.pageinfo = "S.I.M.M 2.0"
+
+        #TODO : a completer avec le nom de l'hopital
+        self.nomHopital = "Nom_a_completer"
+
         #On autorise que les pdf
         # self.filter = "PDF (*.pdf)"
         # fileName = QFileDialog.getSaveFileName(None, 'Save file', "/home/SIMM2.0.pdf", filter)
@@ -55,7 +59,7 @@ class PDF():
         facteurDivision = 10
         espacement = 130
         technicien = "XXXXXXXXXXXXXXX"
-        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Saint-Michel')
+        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital ' + self.nomHopital)
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         # canvas.setLineWidth(1.2)
@@ -64,7 +68,7 @@ class PDF():
         canvas.drawString(500, 750, "12/12/2010")
         canvas.line(480, 747, 580, 747)
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4,
-                          "Délivré par l'atelier de génie biomédical de Saint-Michel")
+                          "Délivré par l'atelier de génie biomédical de " + self.nomHopital)
         canvas.line(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     6 * self.PAGE_WIDTH / facteurDivision + 295, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         date = time.strftime("%d/%m/%Y")
