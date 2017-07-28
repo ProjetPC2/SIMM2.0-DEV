@@ -1,0 +1,99 @@
+BDT_Ajout_Champ_Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- CentreService
+- Salle
+BDT_ChampAjoutNonPermis:
+- EtatBDT
+BDT_ChampAjoutPermis:
+- null
+BDT_ChampFormatPrecis:
+- Date
+- TempsEstime
+CategorieEquipement:
+- Lit pour bebe
+- Lit
+- Incubateur
+- Echographe
+- Lampe chauffante
+- Concentrateur oxygene
+- Table chauffante
+- Moniteur
+- Analyseur sanguin
+- Appareil respiratoire
+- Appareil pour la phototherapie
+- Appareil a succion
+- Balance
+- Glucometre
+- Autre
+- Appareil respiratoie
+- "Compresseur n\xE9buliseur"
+- Chaise roulante
+CentreService:
+- Inconnue
+- "P\xE9diatrie"
+Equipement_ChampAjoutNonPermis:
+- EtatConservation
+- EtatService
+Equipement_ChampAjoutPermis:
+- CategorieEquipement
+- Salle
+- CentreService
+- Provenance
+Equipement_ChampFormatPrecis:
+- DateAcquisition
+- DateDernierEntretien
+EtatBDT:
+- Ouvert
+- Ferme
+- "Ferm\xE9"
+EtatConservation:
+- Quasi neuf
+- Acceptable
+- En fin de vie
+- Desuet
+- "D\xE9suet"
+EtatService:
+- En service
+- En maintenance
+- Au rebus
+Provenance:
+- Konbit Sante
+- Inconnue
+- USAID
+- UNICEF
+- Phoenix international forwarders inc
+Salle:
+- Inconnue
+- Depot1
+- Depot2
+- Magasin&Stock
+- "Maternit\xE9"
+StatsAjoutFichier:
+- Provenance
+- CategorieEquipement
+champsAcceptes-BDT:
+- Date
+- TempsEstime
+- DescriptionSituation
+- DescriptionIntervention
+- EtatBDT
+- NomTechnicien
+- Assistance
+champsAcceptes-Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- NumeroSerie
+- Salle
+- CentreService
+- DateAcquisition
+- DateDernierEntretien
+- Provenance
+- CodeAsset
+- EtatService
+- EtatConservation
+- Commentaires
+- PdfPath
+dernierID-Equipement: 0
