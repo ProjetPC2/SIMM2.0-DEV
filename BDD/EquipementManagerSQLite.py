@@ -254,6 +254,8 @@ class EquipementManager:
         con = lite.connect(self._pathnameEQ)
 
         with con:
+            con.row_factory = lite.Row
+
             cur = con.cursor()
             cur.execute("SELECT * FROM Equipement")
 
@@ -627,6 +629,8 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
                 'Commentaires': '',
                 'PdfPath': ''}
 
+        manager2 = EquipementManager('Equipement_B.db')
+
 
         #print("PROCHAIN ID, ", manager._ObtenirProchainID())
         # print(manager._VerifierDict(data))
@@ -649,7 +653,11 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
         #print(manager.RechercherEquipement({}))
 
         #print("Derniere requete BDD")
-        manager._AfficherBD()
+        equipements = manager._AfficherBD()
+        for equipement in equipements:
+            print(equipement)
+            print(manager2.AjouterEquipement(equipement))
+
         # Stats
         '''print(manager._statsNbTotalEquipement())
         print(manager._statsNbEquipementEtatService())
