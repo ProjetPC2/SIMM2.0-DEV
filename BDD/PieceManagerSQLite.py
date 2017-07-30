@@ -82,6 +82,36 @@ class PieceManager:
             self._AfficherBD()
             return dict_renvoi
 
+    def AssezDePiece(self, listeTuple, nombreVoulu):
+        print(listeTuple)
+        dict_renvoi = {'Reussite': False}
+        possible = False
+        try:
+            con = lite.connect(self._pathnamePiece)
+            cur = con.cursor()
+            for tup in listeTuple:
+                commandeSQL = "SELECT Nombre FROM Piece WHERE Categorie='{0}' AND NomPiece='{1}'".format(tup[0], tup[1])
+                print(commandeSQL)
+                cur.execute(commandeSQL)
+                rows = cur.fetchall()
+                if(len(rows)):
+                    print("Pas de piece associee")
+                else:
+                    possible = rows[0][0] > nombreVoulu
+                print(commandeSQL)
+
+        except lite.Error as e:
+            if con:
+                con.rollback()
+
+            print("Error %s:" % e.args[0])
+
+        finally:
+
+            if con:
+                con.close()
+            return possible
+
     def ChoisirPiece(self, listeTuple, idEquipement, idBDt, modification = False):
         print(listeTuple)
         dict_renvoi = {'Reussite': False}
@@ -370,9 +400,10 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
     print("PIECE Apres")
     manager._AfficherBDPieceUtilisee()
     print("AFFICHAGE BD PIECE")
-    manager._AfficherBD()
     print("OBTENTION PIECe")
     print(manager.obtenirPieceAssocieBonTravail(1, "1"))'''
+    manager._AfficherBD()
+
     # manager.ModifierNombrePiece({"a": 4})
     # manager.AjouterNombrePiece("a", 10)
     # dic_request = {'AvantLe': datetime.date(2016, 03, 12)}

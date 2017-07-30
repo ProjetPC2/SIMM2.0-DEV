@@ -299,9 +299,9 @@ class BonTravailManager:
                             commmand_sql += key + " = ?"
                         else:  # S'il s'agit d'une date
                             if key == 'ApresLe':  # Chercher après la date
-                                commmand_sql += "Date > ? "
+                                commmand_sql += "Date >= ? "
                             if key == 'AvantLe':  # Chercher avant la date
-                                commmand_sql += "Date < ? "
+                                commmand_sql += "Date <= ? "
                     list_data.append(str(value))
 
                     if (compteur < len(regex_dict)):

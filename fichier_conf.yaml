@@ -27,12 +27,12 @@ CategorieEquipement:
 - Balance
 - Glucometre
 - Autre
+- Appareil respiratoie
+- "Compresseur n\xE9buliseur"
+- Chaise roulante
 CentreService:
 - Inconnue
 - "P\xE9diatrie"
-- Inconnu
-- '124'
-- 1d2
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -59,14 +59,17 @@ EtatService:
 - En maintenance
 - Au rebus
 Provenance:
-- Inconnue
 - Konbit Sante
-- 1212e
-- '1221'
+- Inconnue
+- USAID
+- UNICEF
+- Phoenix international forwarders inc
 Salle:
 - Inconnue
-- '12421'
-- 12d
+- Depot1
+- Depot2
+- Magasin&Stock
+- "Maternit\xE9"
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
