@@ -34,7 +34,7 @@ class PDF():
         self.pageinfo = "S.I.M.M 2.0"
 
         #TODO : a completer avec le nom de l'hopital
-        self.nomHopital = "Nom_a_completer"
+        self.nomHopital = "Hopital Universitaire Justinien"
 
         #On autorise que les pdf
         # self.filter = "PDF (*.pdf)"

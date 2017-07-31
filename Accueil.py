@@ -936,6 +936,8 @@ class MainWindow(QMainWindow, AbstractWindow):
             #p = Process(target=self.imprimer, args=(fileName[0], bouton))
             #p.start()
             self.imprimer(fileName[0])
+        else:
+            self.activeImpression()
 
 
     def imprimer(self, path):

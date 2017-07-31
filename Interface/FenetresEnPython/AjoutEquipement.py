@@ -313,7 +313,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
         self.listeCleDonnees = list(self._conf['champsAcceptes-Equipement'])
 
-        # Recuperation des differents elements des listes deroulantes
+        # Recupedration des differents elements des listes deroulantes
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])

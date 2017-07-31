@@ -19,6 +19,7 @@ class Piece(Ui_Piece):
         self.ajoutPiece()
         self.listeAjoutPiece = list()
         self.nombreLigne  = 0
+        self.signal = Communicate()
 
 
     def ajoutPiece(self):
@@ -61,6 +62,7 @@ class Piece(Ui_Piece):
         nomPiece = self.comboBoxNomPiece.currentText()
         nombre = (self.spinBoxNombreEquipement.text())
         if(int(nombre)>0):
+        #On affiche l'information dans le tableau dans le cas ou il y a assez de piece
             self.tableCategoriePiece.setRowCount(self.tableCategoriePiece.rowCount() + 1)
             self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 0, QTableWidgetItem(categorie))
             self.tableCategoriePiece.setItem(self.tableCategoriePiece.rowCount()-1, 1, QTableWidgetItem(nomPiece))

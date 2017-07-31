@@ -29,7 +29,7 @@ class Rapport():
         self.PAGE_HEIGHT = defaultPageSize[0]
 
         #TODO : a completer avec le nom de l'hopital
-        self.nomHopital = "Nom_a_completer"
+        self.nomHopital = "Hopital Universitaire Justinien"
 
         self.Title = "Rapport - S.I.M.M 3.0"
         self.pageinfo = "S.I.M.M 3.0"

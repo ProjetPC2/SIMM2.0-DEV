@@ -397,7 +397,8 @@ class BonTravailManager:
         dernier_ID = 0
         with con:
             cur = con.cursor()
-            cur.execute("SELECT * FROM BonTravail WHERE IdEquipement = ?", str(id_equip))
+            commandSql = "SELECT * FROM BonTravail WHERE IdEquipement ={0}".format(id_equip)
+            cur.execute(commandSql)
             rows = cur.fetchall()
             dernier_ID = len(rows)
         prochain_ID = int(dernier_ID) + 1
