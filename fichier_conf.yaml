@@ -31,7 +31,7 @@ CategorieEquipement:
 - "Compresseur n\xE9buliseur"
 - Chaise roulante
 CentreService:
-- Inconnue
+- Inconnu
 - "P\xE9diatrie"
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
