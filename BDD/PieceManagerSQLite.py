@@ -82,7 +82,7 @@ class PieceManager:
             self._AfficherBD()
             return dict_renvoi
 
-    def AssezDePiece(self, listeTuple, nombreVoulu):
+    def AssezDePiece(self, listeTuple):
         print(listeTuple)
         dict_renvoi = {'Reussite': False}
         possible = False
@@ -97,7 +97,8 @@ class PieceManager:
                 if(len(rows)):
                     print("Pas de piece associee")
                 else:
-                    possible = rows[0][0] > nombreVoulu
+                    print(rows[0][0])
+                    possible = rows[0][0] > tup[2]
                 print(commandeSQL)
 
         except lite.Error as e:

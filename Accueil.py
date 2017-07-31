@@ -58,6 +58,8 @@ class Accueil(Ui_Accueil):
         self.suppressionTermine.hide()
         self.sauvegardeReussi = AffichageMessage("Sauvegarde réussie", Accueil)
         self.sauvegardeReussi.hide()
+        self.pieceInsuffisant = AffichageMessage("Nombre de piece insuffisant pour le choix selectionné", Accueil)
+        self.pieceInsuffisant.hide()
         self.creation = Communicate()
 
     def ajoutAccueil(self):
@@ -330,6 +332,7 @@ class Accueil(Ui_Accueil):
             self.bonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.bonDeTravailUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
             self.bonDeTravailUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
+            self.bonDeTravailUI.signalFenetreBonTravail.pieceInsuffisant.connect(self.afficherNombrePieceInsufisant)
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
         else:
@@ -395,8 +398,10 @@ class Accueil(Ui_Accueil):
             self.modificationBonDeTravailRechercheUI.chargement.finChargement.connect(self.finChargement)
             self.modificationBonDeTravailRechercheUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
             self.modificationBonDeTravailRechercheUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
+            self.modificationBonDeTravailRechercheUI.signalFenetreBonTravail.pieceInsuffisant.connect(self.afficherNombrePieceInsufisant)
             self.listeElementParDefaut.append(self.modificationBonDeTravailRecherche)
             self.layoutAffichagePrincipal.addWidget(self.modificationBonDeTravailRecherche)
+
         else:
             # Affichage du widget s'il existe deja
             self.modificationBonDeTravailRecherche.show()
@@ -491,7 +496,7 @@ class Accueil(Ui_Accueil):
             self.ajoutBonDeTravailEquipementUI.chargement.finChargement.connect(self.finChargement)
             self.ajoutBonDeTravailEquipementUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
             self.ajoutBonDeTravailEquipementUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
-
+            self.ajoutBonDeTravailEquipementUI.signalFenetreBonTravail.pieceInsuffisant.connect(self.afficherNombrePieceInsufisant)
             self.listeElementParDefaut.append(self.ajoutBonDeTravailEquipement)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravailEquipement)
         else:
@@ -532,6 +537,7 @@ class Accueil(Ui_Accueil):
             self.consultationBonDeTravailUI.chargement.finChargement.connect(self.finChargement)
             self.consultationBonDeTravailUI.boutonSauvegarde.clicked.connect(self.sauvegardeEnCours)
             self.consultationBonDeTravailUI.chargement.sauvegardeTermine.connect(self.sauvegardeTermine)
+            self.consultationBonDeTravailUI.signalFenetreBonTravail.pieceInsuffisant.connect(self.afficherNombrePieceInsufisant)
             self.listeElementParDefaut.append(self.consultationBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.consultationBonDeTravail)
         else:
@@ -763,6 +769,11 @@ class Accueil(Ui_Accueil):
         self.suppressionTermine.raise_()
         self.suppressionTermine.show()
 
+    def afficherNombrePieceInsufisant(self):
+        print("piece insuffisant")
+        self.pieceInsuffisant.raise_()
+        self.pieceInsuffisant.show()
+
     def masquerFenetre(self):
 
         #Méthode qui permet de masquer les fenetres non-utilisées
@@ -863,6 +874,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.enregistrementReussi.resize(event.size())
         self.ui.suppressionTermine.resize(event.size())
         self.ui.sauvegardeReussi.resize(event.size())
+        self.ui.pieceInsuffisant.resize(event.size())
         self.ui.enregistrement.resize(event.size())
         event.accept()
 
