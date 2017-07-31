@@ -850,18 +850,20 @@ class SIMM():
 class MainWindow(QMainWindow, AbstractWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
-        self.mapper = QSignalMapper(self)
-        self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
+        #self.mapper = QSignalMapper(self)
+        #self.mapper.mapped[QtWidgets.QWidget].connect(impressionPDF)
         self.ui = Accueil(self)
-        self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
+        #self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
+        self.ui.BoutonImprimerInventaire.clicked.connect(self.impressionPDF)
         self.ui.BoutonRapport.clicked.connect(self.ui.imprimerRapport)
-        self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
+        #self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.setWindowTitle("SIMM 2.0")
         self.ui.creation.supportCree.connect(self.verrou)
         self.signal = Communicate()
         self.signal.motDePasseCorrect.connect(self.deverouillage)
-
+        self.pdf = PDF()
+        self.pdf.finImpression.finImpression.connect(self.activeImpression)
 
     def resizeEvent(self, event):
         #methode permettant de sur la fenetre entiere le message
@@ -925,25 +927,21 @@ class MainWindow(QMainWindow, AbstractWindow):
     def activeImpression(self):
         self.ui.BoutonImprimerInventaire.setDisabled(False)
 
-def impressionPDF(bouton):
-    print("impression en cours")
-    filter = "PDF (*.pdf)"
-    fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"),
-                                           filter)
-    if(fileName[0] != ""):
-        p = Process(target=imprimer, args=(fileName[0], bouton))
-        p.start()
-    else:
-        bouton.setDisabled(False)
-        bouton.setEnabled(True)
+    def impressionPDF(self):
+        print("impression en cours")
+        filter = "PDF (*.pdf)"
+        fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"),
+                                               filter)
+        if(fileName[0] != ""):
+            #p = Process(target=self.imprimer, args=(fileName[0], bouton))
+            #p.start()
+            self.imprimer(fileName[0])
 
 
-def imprimer(path, bouton):
-
-    print("Impression en cours de chez cours")
-    pdf = PDF(path, bouton)
-    print("finImpression imprimer")
-    pdf.finImpression.finImpression.connect(MainWindow.activeImpression)
+    def imprimer(self, path):
+        print("Impression en cours")
+        self.pdf.creationPDF(path)
+        print("finImpression imprimer")
 
 if __name__ == "__main__":
     SIMM()

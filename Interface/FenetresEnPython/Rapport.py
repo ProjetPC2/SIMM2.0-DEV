@@ -58,7 +58,7 @@ class Rapport():
         espace_soulignement = 10
         facteurDivision = 10
         espacement = 130
-        technicien = "XXXXXXXXXX"
+        technicien = "Techniciens"
         canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital ' + self.nomHopital)
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)

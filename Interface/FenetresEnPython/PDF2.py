@@ -25,7 +25,7 @@ from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase
 
 
 class PDF():
-    def __init__(self, path, bouton):
+    def __init__(self):
         # Thread.__init__(self)
         self.PAGE_WIDTH = defaultPageSize[1];
         self.PAGE_HEIGHT = defaultPageSize[0]
@@ -44,7 +44,6 @@ class PDF():
         # self.fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"), self.filter)
         # print("bouton", bouton.text())
         self.finImpression = Signal()
-        self.creationPDF(path, bouton)
 
     def myFirstPage(self, canvas, doc):
         """Methode s'occupant de la mise en page du debut de document
@@ -58,7 +57,7 @@ class PDF():
         espace_soulignement = 10
         facteurDivision = 10
         espacement = 130
-        technicien = "XXXXXXXXXXXXXXX"
+        technicien = "Techniciens de l'hopital" + self.nomHopital
         canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital ' + self.nomHopital)
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
@@ -90,7 +89,7 @@ class PDF():
         canvas.drawString(inch, 0.75 * inch, "Page %d %s" % (doc.page, self.pageinfo))
         canvas.restoreState()
 
-    def creationPDF(self, path, bouton):
+    def creationPDF(self, path):
         doc = SimpleDocTemplate(path, pagesize = landscape(A4))
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
         # Ajout d'un espacement
@@ -106,9 +105,9 @@ class PDF():
         equipementManager = EquipementManager(pathEquipementDatabase)
         conf_file = 'fichier_conf.yaml'  # pathname du fichier de configuration
         try:
-            fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
-            with fichierConf:
-                conf = yaml.load(fichierConf)
+            self.fichierConf = open(conf_file, 'r')  # try: ouvrir le fichier et le lire
+            with self.fichierConf:
+                conf = yaml.load(self.fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
 
@@ -164,7 +163,8 @@ class PDF():
             # t._argW[3] = 0.5 * inch
 
             #On ajoute les differents elements a la liste contenant les differents elements graphique du pdf
-            Service = ("<b><u>Centre de service %s : </u></b>" % centreService)
+            #Ecriture de l'unite a laquelle appartient les equipements
+            Service = ("<b><u>Unite %s : </u></b>" % centreService)
             titreTableau = Paragraph(Service, style)
             elements.append(titreTableau)
             elements.append(Spacer(0,10))
