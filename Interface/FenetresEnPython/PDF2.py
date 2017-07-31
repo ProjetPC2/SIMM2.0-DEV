@@ -34,7 +34,7 @@ class PDF():
         self.pageinfo = "S.I.M.M 2.0"
 
         #TODO : a completer avec le nom de l'hopital
-        self.nomHopital = "Hopital Universitaire Justinien"
+        self.nomHopital = "Hôpital Universitaire Justinien"
 
         #On autorise que les pdf
         # self.filter = "PDF (*.pdf)"
@@ -57,8 +57,8 @@ class PDF():
         espace_soulignement = 10
         facteurDivision = 10
         espacement = 130
-        technicien = "Techniciens de l'hopital" + self.nomHopital
-        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital ' + self.nomHopital)
+        technicien = "Techniciens de l'Hôpital Universitaire Justinien"
+        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Universitaire Justinien'
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         # canvas.setLineWidth(1.2)
@@ -67,7 +67,7 @@ class PDF():
         canvas.drawString(500, 750, "12/12/2010")
         canvas.line(480, 747, 580, 747)
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4,
-                          "Délivré par l'atelier de génie biomédical de " + self.nomHopital)
+                          "Délivré par l'atelier de génie biomédical de l'HUJ"
         canvas.line(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     6 * self.PAGE_WIDTH / facteurDivision + 295, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         date = time.strftime("%d/%m/%Y")
