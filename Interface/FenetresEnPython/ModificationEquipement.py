@@ -271,7 +271,11 @@ class ModificationEquipement(Ui_AjoutEquipement):
             if type(widget) is QLineEdit:
                 widget.setText(str(equipement[self.listeCleDonnees[indice]]))
             elif type(widget) is QDateEdit:
-                widget.setDate(datetime.datetime.strptime(equipement[self.listeCleDonnees[indice]] ,"%Y-%m-%d"))
+                dateTemp = equipement[self.listeCleDonnees[indice]]
+                index = dateTemp.find(" ")
+                if index > -1:
+                    dateTemp = dateTemp.split(" ")[0]
+                widget.setDate(datetime.datetime.strptime( dateTemp ,"%Y-%m-%d"))
             elif type(widget) is QComboBox:
                 widget.setCurrentText(equipement[self.listeCleDonnees[indice]])
             elif type(widget) is QButtonGroup:
