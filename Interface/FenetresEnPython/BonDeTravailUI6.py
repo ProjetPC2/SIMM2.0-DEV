@@ -949,7 +949,7 @@ class Ui_BonDeTravail(object):
         self.labelAssistance.setText(_translate("BonDeTravail", "Besoin d\'assistance?"))
         self.checkBoxOutil.setText(_translate("BonDeTravail", "Outils"))
         self.checkBoxPiece.setText(_translate("BonDeTravail", "Pièces"))
-        self.checkBoxFormation.setText(_translate("BonDeTravail", "Formation"))
-        self.checkBoxManuel.setText(_translate("BonDeTravail", "Manuel d\'utilisation"))
+        self.checkBoxFormation.setText(_translate("BonDeTravail", "Aide exterieur"))
+        self.checkBoxManuel.setText(_translate("BonDeTravail", "Manuel de service"))
         self.labelAssistanceCache.setText(_translate("BonDeTravail", "Ce que j\'ai écrit"))
 
