@@ -556,7 +556,6 @@ class Accueil(Ui_Accueil):
         self.BoutonImprimerInventaire.setDisabled(True)
 
     def imprimerRapport(self):
-        currentDate = str((QDate.currentDate().toPyDate()))
 
         directory = os.path.expanduser("~/Desktop/" + "/SIMM_Rapport")
         systemOS = sys.platform
@@ -928,9 +927,20 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.BoutonImprimerInventaire.setDisabled(False)
 
     def impressionPDF(self):
+        currentDate = str((QDate.currentDate().toPyDate()))
+        directory = os.path.expanduser("~/Desktop/" + "/SIMM_Inventaire")
+        systemOS = sys.platform
+        if systemOS == "linux":
+            os.system("mkdir " + directory)
+        elif systemOS == "win32":
+            print("Ordinateur sous Windows")
+            print(os.path.expanduser(directory))
+            path = "\"" + os.path.expanduser(directory) + "\""
+            os.system("mkdir " + path)
+
         print("impression en cours")
         filter = "PDF (*.pdf)"
-        fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser("~/Desktop/SIMM2.0.pdf"),
+        fileName = QFileDialog.getSaveFileName(None, 'Save file', os.path.expanduser(directory + "/SIMM2.0_" + currentDate + ".pdf"),
                                                filter)
         if(fileName[0] != ""):
             #p = Process(target=self.imprimer, args=(fileName[0], bouton))

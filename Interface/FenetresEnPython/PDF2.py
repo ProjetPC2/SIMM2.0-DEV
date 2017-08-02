@@ -123,9 +123,9 @@ class PDF():
                              Paragraph("<b>Categorie Equipement</b>", style),
                              Paragraph("<b>Marque</b>", style),
                              Paragraph("<b>Modele</b>", style),
-                             Paragraph("<b>Centre Service</b>", style),
+                             Paragraph("<b>Provenance</b>", style),
                              Paragraph("<b>Etat Service</b>", style),
-                             Paragraph("<b>Provenance</b>", style)]
+                             Paragraph("<b>Commentaires</b>", style)]
 
             listeTotal.append(listeColonne1)
             if (any(listeEquipement)):
@@ -140,9 +140,9 @@ class PDF():
                     listTemp.append(Paragraph(dictionnaire["CategorieEquipement"],styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["Marque"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["Modele"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["CentreService"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["EtatService"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["Provenance"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["EtatService"], styleSheet['Normal']))
+                    listTemp.append(Paragraph(dictionnaire["Commentaires"], styleSheet['Normal']))
 
                     listeTotal.append(listTemp)
             else:

@@ -22,6 +22,9 @@ from threading import Thread
 import time
 
 from BDD.BonTravailManagerSQLite import BonTravailManager
+from Interface.FenetresEnPython.PDF2 import Signal
+
+
 class Rapport():
     def __init__(self, path):
         # Thread.__init__(self)
@@ -42,8 +45,8 @@ class Rapport():
         # print("bouton", bouton.text())
 
         self.finImpression = Signal()
-        self.listeCle = ["Date", "NomTechnicien", "IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Marque", "Modele", "Salle",
-                         "DescriptionSituation", "DescriptionIntervention"]
+        self.listeCle = ["Date", "NomTechnicien", "IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Marque", "CentreService",
+                         "Modele", "Salle", "DescriptionSituation", "DescriptionIntervention"]
         self.creationPDF(path)
 
     def myFirstPage(self, canvas, doc):
@@ -119,22 +122,12 @@ class Rapport():
 
         currentDate = (QDate.currentDate().toPyDate())
         rapport = open(path+".csv", "w")
+        rapport1 = open(path+"_old.csv", "w")
+
         for centreService in l:
 
             print("DATE AUJOURHDUI ", currentDate)
             listBon = bonTravailManager.RechercherBonTravailRapport({"AvantLe" : currentDate})
-            listeTotal = list()
-            listeColonne1 = [Paragraph("<b>IdEquipement</b>", style),
-                             Paragraph("<b>NumeroBonTravail</b>", style),
-                             Paragraph("<b>DescriptionSituation</b>", style),
-                             Paragraph("<b>NomTechnicien</b>", style),
-                             Paragraph("<b>Date</b>", style),
-                             Paragraph("<b>TempsEstime</b>", style),
-                             Paragraph("<b>DescriptionIntervention</b>", style),
-                             Paragraph("<b>EtatBDT</b>", style),
-                             Paragraph("<b>Assistance</b>", style)]
-            listeTotal.append(listeColonne1)
-            #rapport.write(listeColonne1)
 
             if (any(listBon)):
                 # Cas ou l'equipement existe
@@ -142,29 +135,24 @@ class Rapport():
                     # Recuperation des donnees sous forme de string
                     if(i == 0):
                         for col in self.listeCle:
+                            if(col == "CentreService"):
+                                rapport.write(str("Unite") + ",")
                             rapport.write(str(col) + ",")
+                            rapport1.write(str(col) + ";")
                         rapport.write("Réparé: Oui/Non, Besoins")
                         rapport.write("\n")
+                        rapport1.write("Réparé: Oui/Non, Besoins")
+                        rapport1.write("\n")
 
                     print(dictionnaire)
-                    listTemp = list()
-                    # for element in dictionnaire.values():
-                    #     listTemp.append(element)
-                    listTemp.append(Paragraph(str(dictionnaire["IdEquipement"]), styleSheet['Normal']))
-                    listTemp.append(Paragraph(str(dictionnaire["NumeroBonTravail"]),styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["DescriptionSituation"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["NomTechnicien"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["Date"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["TempsEstime"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["EtatBDT"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
 
-                    listeTotal.append(listTemp)
                     for cle in self.listeCle:
                         rapport.write(str(dictionnaire[cle]) + ",")
+                        rapport1.write(str(dictionnaire[cle]) + ";")
+
                     if(dictionnaire["EtatBDT"] == "Ouvert"):
                         rapport.write("Non" + ",")
+                        rapport.write("Non" + ";")
                         listeAssistance = list()
                         #Ecriture des donnees d'assistance
                         if dictionnaire["Outils"] == 1:
@@ -177,42 +165,31 @@ class Rapport():
                             listeAssistance.append("Manuel")
                         for i, assistance in enumerate(listeAssistance):
                             rapport.write(assistance)
+                            rapport1.write(assistance)
                             i += 1
                             if(i < len(listeAssistance)):
                                 rapport.write(";")
+                                rapport1.write(";")
                     else:
                         rapport.write("Oui" + ",")
+                        rapport1.write("Oui" + ",")
 
                     rapport.write("\n")
+                    rapport1.write("\n")
             else:
                 # Cas ou l'equipement n'existe pas
                 pass
 
-            tableauCentreService = Table(listeTotal, style=[('BACKGROUND', (0, 0), (-1, 0), colors.gray),
-                                         ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
-                                         ('BOX', (0, 0), (-1, 0), 2, colors.black),
-                                         ('BOX', (0, 0), (-1, -1), 2, colors.black),
-                                         ('GRID', (0, 0), (-1, -1), 0.5, colors.black),
-                                         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-                                         ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-                                         ('FONTSIZE', (0, 0), (-1, -1), 12),
-                                         ('FONTSIZE', (0, 0), (-1, 0), 14)
-
-                                         ],)
             # t._argW[3] = 0.5 * inch
 
             #On ajoute les differents elements a la liste contenant les differents elements graphique du pdf
             Service = ("<b><u>Centre de service %s : </u></b>" % "Test")
             titreTableau = Paragraph(Service, style)
-            elements.append(titreTableau)
-            #elements.append(Spacer(0,10))
-            elements.append(tableauCentreService)
-            elements.append(Spacer(0, 50))
 
         # Ecriture du document pdf
-        #doc.build(elements, onFirstPage=self.myFirstPage, onLaterPages= self.myLaterPages)
         print("termine")
         rapport.close()
+        rapport1.close()
         self.finImpression.finImpression.emit()
 
 

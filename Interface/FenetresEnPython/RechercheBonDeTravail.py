@@ -237,7 +237,11 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                             dictDonnees["CategorieEquipement"] = bdt["CategorieEquipement"]
                             dictDonnees["Modele"] = bdt["Modele"]
                             dictDonnees["CentreService"] = bdt["CentreService"]
-                            dictDonnees["EtatBDT"] = bdt["EtatBDT"]
+                            #dictDonnees["EtatBDT"] = bdt["EtatBDT"]
+                            if(bdt["EtatBDT"] == "Ouvert"):
+                                dictDonnees["EtatBDT"] = "Non"
+                            else:
+                                dictDonnees["EtatBDT"] = "Oui"
                             dictDonnees["Date"] = bdt["Date"]
                             dictDonnees["NumeroBonTravail"] = bdt["NumeroBonTravail"]
                             dictDonnees["DescriptionSituation"] = bdt["DescriptionSituation"]
