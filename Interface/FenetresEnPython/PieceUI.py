@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Piece.ui'
+# Form implementation generated from reading ui file '../FenetresEnUI/Piece.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Piece(object):
     def setupUi(self, Piece):
         Piece.setObjectName("Piece")
-        Piece.resize(1440, 810)
+        Piece.resize(1746, 836)
         Piece.setMinimumSize(QtCore.QSize(0, 0))
         Piece.setMaximumSize(QtCore.QSize(16777125, 16777125))
         Piece.setStyleSheet("QWidget {\n"
@@ -113,6 +113,23 @@ class Ui_Piece(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         spacerItem1 = QtWidgets.QSpacerItem(40, 50, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
+        self.BoutonAnnuler = QtWidgets.QPushButton(Piece)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BoutonAnnuler.sizePolicy().hasHeightForWidth())
+        self.BoutonAnnuler.setSizePolicy(sizePolicy)
+        self.BoutonAnnuler.setMinimumSize(QtCore.QSize(140, 40))
+        self.BoutonAnnuler.setMaximumSize(QtCore.QSize(140, 40))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BoutonAnnuler.setFont(font)
+        self.BoutonAnnuler.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.BoutonAnnuler.setStyleSheet("")
+        self.BoutonAnnuler.setObjectName("BoutonAnnuler")
+        self.horizontalLayout.addWidget(self.BoutonAnnuler)
         self.BoutonEnregistrerPiece = QtWidgets.QPushButton(Piece)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
@@ -279,6 +296,7 @@ class Ui_Piece(object):
         self.labelSelectionCategorie.setText(_translate("Piece", "Sélectionner la catégorie de la pièce"))
         self.BoutonValider.setText(_translate("Piece", "Valider"))
         self.labelCategorieSelectionnee.setText(_translate("Piece", "Liste des pièces pour la catégorie sélectionnée"))
+        self.BoutonAnnuler.setText(_translate("Piece", "Annuler"))
         self.BoutonEnregistrerPiece.setText(_translate("Piece", "Enregistrer \n"
 " la pièce"))
         self.labelResumePiece.setText(_translate("Piece", "Résumé des pièces pour chaque catégorie"))

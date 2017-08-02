@@ -376,7 +376,8 @@ class BonDeTravail(Ui_BonDeTravail):
             self.pushButtonValider.setDisabled(False)
             if isinstance(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], datetime.time):
                 self.timeEditTempsEstime.setTime(datetime.datetime.strptime(self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"], "%H-%m"))
-            if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] != "Ouvert":
+            if self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] == "Ouvert":
+                print("ETAT BDT:", self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"])
                 self.comboBoxOuvertFerme.setCurrentText("Non")
             else:
                 self.comboBoxOuvertFerme.setCurrentText("Oui")
@@ -627,6 +628,7 @@ class BonDeTravail(Ui_BonDeTravail):
         nombre = self.spinBoxNombrePiece.text()
         if (int(nombre) > 0):
             nombreSuffisant = self.pieceManager.AssezDePiece([(categorie, nomPiece, int(nombre))])
+            print("NOMBRE SUFFISANT", nombreSuffisant)
             if (nombreSuffisant):
                 #On ne comptabilise les pièces que s'il y a un nombre non nul
                 self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)

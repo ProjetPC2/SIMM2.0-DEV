@@ -46,7 +46,7 @@ class Piece(Ui_Piece):
         self.tableResume.setHorizontalHeaderLabels(self.listeCleResume)
         self.BoutonValider.clicked.connect(self.ajouterPiece)
         self.BoutonEnregistrerPiece.clicked.connect(self.enregistrerPieceThread)
-
+        self.BoutonAnnuler.clicked.connect(self.annulerEntree)
         self.tableCategoriePiece.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableCategoriePiece.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableCategoriePiece.horizontalHeader().sectionClicked.connect(self.trier)
@@ -74,7 +74,9 @@ class Piece(Ui_Piece):
         print("enregistrerPiece")
         print(self.listeAjoutPiece)
         self.tableCategoriePiece.setRowCount(0)
-        self.pieceManager.AjouterPiece(self.listeAjoutPiece)
+        if(len(self.listeAjoutPiece)):
+            self.pieceManager.AjouterPiece(self.listeAjoutPiece)
+            self.enregistrement.enregistrementTermine.emit()
         self.listeAjoutPiece.clear()
         print("Obtention de la liste de categorie")
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
@@ -86,7 +88,7 @@ class Piece(Ui_Piece):
         self.comboBoxNomPiece.setCurrentText("")
         self.comboBoxCategorieSelectionnee.addItems(self.listeCategoriePiece)
         self.comboBoxSelectionCategoriePiece.addItems(self.listeCategoriePiece)
-        self.enregistrement.enregistrementTermine.emit()
+
 
 
 
@@ -142,6 +144,12 @@ class Piece(Ui_Piece):
     def enregistrerPieceThread(self):
         thread = fonctionPiece(self.enregistrerPiece)
         thread.start()
+
+
+    def annulerEntree(self):
+        self.tableCategoriePiece.setRowCount(0)
+        self.listeAjoutPiece.clear()
+
 
 class fonctionPiece(Thread):
     def __init__(self, fonction):

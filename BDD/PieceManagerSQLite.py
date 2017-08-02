@@ -94,7 +94,7 @@ class PieceManager:
                 print(commandeSQL)
                 cur.execute(commandeSQL)
                 rows = cur.fetchall()
-                if(len(rows)):
+                if(len(rows) > 0):
                     print("Pas de piece associee")
                 else:
                     print(rows[0][0])
