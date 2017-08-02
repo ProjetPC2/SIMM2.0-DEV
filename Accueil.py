@@ -556,8 +556,8 @@ class Accueil(Ui_Accueil):
         self.BoutonImprimerInventaire.setDisabled(True)
 
     def imprimerRapport(self):
-
-        directory = os.path.expanduser("~/Desktop/" + "/SIMM_Rapport")
+        currentDate = str((QDate.currentDate().toPyDate()))
+        directory = os.path.expanduser("~/Desktop/SIMM_Rapport")
         systemOS = sys.platform
         if systemOS == "linux":
             os.system("mkdir " + directory)

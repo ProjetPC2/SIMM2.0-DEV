@@ -94,11 +94,11 @@ class PieceManager:
                 print(commandeSQL)
                 cur.execute(commandeSQL)
                 rows = cur.fetchall()
-                if(len(rows) > 0):
+                if(len(rows) == 0):
                     print("Pas de piece associee")
                 else:
-                    print(rows[0][0])
-                    possible = rows[0][0] > tup[2]
+                    print("NOMRE RESTANT ", rows[0][0])
+                    possible = rows[0][0] >= tup[2]
                 print(commandeSQL)
 
         except lite.Error as e:
