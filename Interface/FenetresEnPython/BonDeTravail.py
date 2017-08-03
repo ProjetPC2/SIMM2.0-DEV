@@ -306,6 +306,7 @@ class BonDeTravail(Ui_BonDeTravail):
                 if dicRetour["Reussite"]:
                     print("Reussi")
                     print("bon de travail d'id :", idBDT)
+                    self.equipementManager.MiseAJourDateEquipement(self.equipementDictionnaire["Id"] ,str(dictionnaireDonnees["Date"]))
                     #dictionnaireDonnees["NumeroBonTravail"] = idBDT
                     self.listeBonDeTravail.append(dictionnaireDonnees)
                     self.nombreBonAjoute += 1
@@ -315,6 +316,7 @@ class BonDeTravail(Ui_BonDeTravail):
             else:
                 dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["Id"], self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], dictionnaireDonnees))
                 if dicRetour["Reussite"]:
+                    self.equipementManager.MiseAJourDateEquipement(self.equipementDictionnaire["Id"], str(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"]))
                     self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, self.equipementDictionnaire["Id"] , self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], True)
                     print("Modification Réussie")
                     '''self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = str(dictionnaireDonnees["Date"])
@@ -519,7 +521,7 @@ class BonDeTravail(Ui_BonDeTravail):
         self.checkBoxOutil.setChecked(False)
         self.checkBoxManuel.setChecked(False)
         self.timeEditTempsEstime.setDisabled(False)
-
+        self.dateEdit.setDate(QDate.currentDate())
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.sort()
         self.comboBoxCategoriePiece.clear()

@@ -40,15 +40,6 @@ class Statistique(Ui_Statistique):
         self.auRebus = 0
 
         self.miseAJourDonnees()
-        self.textBrowserNombreTotalEquipements.setText(str(self.nombreEquipement))
-        self.textBrowserEnMaintenance.setText(str(self.enMaintenance))
-        self.textBrowserEnService.setText(str(self.enService))
-        self.textBrowserAuRebus.setText(str(self.auRebus))
-
-        self.textBrowserQuasiNeuf.setText(str(self.nombreQuasiNeuf))
-        self.textBrowserAcceptable.setText(str(self.nombreAcceptable))
-        self.textBrowserEnFinDeVie.setText(str(self.nombreEnFinVie))
-        self.textBrowserDesuet.setText(str(self.nombreDesuet))
 
         self.nombreEquipementProvenance = 0
 
@@ -112,6 +103,15 @@ class Statistique(Ui_Statistique):
         self.nombreEnFinVie = dictionnaire["En fin de vie"]
         self.nombreAcceptable = dictionnaire["Acceptable"]
         self.nombreDesuet = dictionnaire["D\xE9suet"]
+        self.textBrowserNombreTotalEquipements.setText(str(self.nombreEquipement))
+        self.textBrowserEnMaintenance.setText(str(self.enMaintenance))
+        self.textBrowserEnService.setText(str(self.enService))
+        self.textBrowserAuRebus.setText(str(self.auRebus))
+
+        self.textBrowserQuasiNeuf.setText(str(self.nombreQuasiNeuf))
+        self.textBrowserAcceptable.setText(str(self.nombreAcceptable))
+        self.textBrowserEnFinDeVie.setText(str(self.nombreEnFinVie))
+        self.textBrowserDesuet.setText(str(self.nombreDesuet))
 
         print(self.nombreEquipement)
 

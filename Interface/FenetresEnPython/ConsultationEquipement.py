@@ -91,7 +91,12 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                 i = 0
                 for cle in self.listeCleDonnees:
                     #Recuperation des donnees sous forme de string
+                    if(cle == "DateAcquisition" or cle == "DateDernierEntretien"):
+                        index = self.equipement[cle].find(" ")
+                        if index > -1:
+                            self.equipement[cle] = self.equipement[cle].split(" ")[0]
                     self.listeLabel[i].setText(str(self.equipement[cle]))
+
                     i += 1
                 if (self.equipement["PdfPath"] != ""):
                     self.BoutonPDF.setEnabled(True)

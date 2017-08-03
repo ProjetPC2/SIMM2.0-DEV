@@ -249,6 +249,32 @@ class EquipementManager:
             con.close()
         return dict_renvoi
 
+    def MiseAJourDateEquipement(self, id, date):
+        conf = self._getConf()
+        stats = self._getStats()
+
+        con = lite.connect(self._pathnameEQ)
+        with con:
+            cur = con.cursor()
+
+            # commande_sql1 = "Select * FROM Equipement WHERE Id = %d " %id_modif
+            # cur.execute(commande_sql1)
+            # ancien_dict = cur.fetchall()
+            # Il suffirait de rendre la variable ancien_dict dans le même format de Tuple que dict_modif
+            # self._miseAJourStats(ancien_dict=ancien_dict, nouveau_dict=dict_modif, stats_dict=stats)
+            command_sql = "SELECT DateDernierEntretien FROM Equipement WHERE Id = {0}".format(id)
+            cur.execute(command_sql)
+            rows = cur.fetchall()
+            print("SELECTION,", rows)
+
+
+            command_sql = "UPDATE Equipement SET DateDernierEntretien = '{0}'".format(date)
+            command_sql += " WHERE Id = {0}".format(id)
+            print("Command: ", command_sql)
+            cur.execute(command_sql)
+            con.commit()
+        if con:
+            con.close()
 
     def _AfficherBD(self):
         con = lite.connect(self._pathnameEQ)
