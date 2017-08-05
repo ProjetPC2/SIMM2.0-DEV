@@ -64,25 +64,32 @@ class BonTravailManager:
                 dictio["IdEquipement"] = str(id_equipement)
                 dictio["NumeroBonTravail"] = str(id_bdt)
                 print(dictio)
-                commandeSQL = "INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, " \
-                              + " Date, TempsEstime, DescriptionIntervention, EtatBDT, Outils, Pieces, Formation," \
-                              + " Manuel  ) VALUES ('" \
-                              + dictio["IdEquipement"] + "', '" + dictio["NumeroBonTravail"] + "', '"\
-                              + dictio["DescriptionSituation"] + "', '" + dictio["NomTechnicien"] + "', '" + str(dictio["Date"]) \
-                              + "', '" + str(dictio["TempsEstime"]) + "', '" + dictio["DescriptionIntervention"] + "', '" \
-                              + dictio["EtatBDT"] + "', '" + str(dictio["Outils"]) \
-                              + "', '" + str(dictio["Pieces"]) + "', '" + str(dictio["Formation"]) + "', '" + str(dictio["Manuel"]) +" ');"
-
+                '''commandeSQL = 'INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, ' \
+                              + ' Date, TempsEstime, DescriptionIntervention, EtatBDT, Outils, Pieces, Formation,' \
+                              + ' Manuel  ) VALUES ("' \
+                              + dictio["IdEquipement"] + '", "' + dictio["NumeroBonTravail"] + '", "'\
+                              + dictio["DescriptionSituation"] + '", "' + dictio["NomTechnicien"] + '", "' + str(dictio["Date"]) \
+                              + '", ""' + str(dictio["TempsEstime"]) + '"", "' + dictio["DescriptionIntervention"] + '", "' \
+                              + dictio["EtatBDT"] + '", "' + str(dictio["Outils"]) \
+                              + '", "' + str(dictio["Pieces"]) + '", "' + str(dictio["Formation"]) + '", "' + str(dictio["Manuel"]) + '");'
+                '''
                 '''
                 commandeSQL = "INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, " \
                               + "Date, TempEstime, DescriptionIntervention, Etat, Assistance) VALUES ('" \
-                              + dictio["IdEquipement"] + "', '" + dictio["NumeroBonTravail"] + "', '"\
-                              + dictio["DescriptionSituation"] + "', '" + dictio["NomTechnicien"] + "', '" + str(dictio["Date"]) \
-                              + "', '" + str(dictio["TempEstime"]) + "', '" + dictio["DescriptionIntervention"] + "', '" + dictio["Etat"] + "', '" \
+                              + dictio["IdEquipement"] + '", "' + dictio["NumeroBonTravail"] + '", "'\
+                              + dictio["DescriptionSituation"] + '", "' + dictio["NomTechnicien"] + '", "' + str(dictio["Date"]) \
+                              + '", "' + str(dictio["TempEstime"]) + '", "' + dictio["DescriptionIntervention"] + '", "' + dictio["Etat"] + '", "' \
                               + dictio["Assistance"] + "' );"
                 '''
+
+                commandeSQL = 'INSERT INTO BonTravail(IdEquipement, NumeroBonTravail, DescriptionSituation, NomTechnicien, ' \
+                              + ' Date, TempsEstime, DescriptionIntervention, EtatBDT, Outils, Pieces, Formation,' \
+                              + ' Manuel  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? );'
                 print(commandeSQL)
-                cur.execute(commandeSQL)
+                tupleData = (dictio["IdEquipement"], dictio["NumeroBonTravail"], dictio["DescriptionSituation"], dictio["NomTechnicien"],
+                             str(dictio["Date"]), str(dictio["TempsEstime"]), dictio["DescriptionIntervention"], dictio["EtatBDT"],
+                             dictio["Outils"], dictio["Pieces"], dictio["Formation"], dictio["Manuel"])
+                cur.execute(commandeSQL, tupleData)
 
                 dict_renvoi['Reussite'] = True  # ajout du nouvel équipement dans la base de données
                 con.commit()

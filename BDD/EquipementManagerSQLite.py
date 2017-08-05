@@ -73,7 +73,7 @@ class EquipementManager:
                               + "', '" + dictio["Provenance"] + "', '" + dictio["CodeAsset"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"]\
                               + "', '" + dictio["Commentaires"] + "' );"
                 '''
-                commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
+                '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
                               + "DateAcquisition, DateDernierEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
                               + " Commentaires, PdfPath)" \
                               + " VALUES ('" + dictio["CategorieEquipement"]  \
@@ -82,7 +82,14 @@ class EquipementManager:
                               + "', '" + str(dictio["DateDernierEntretien"]) + "', '" + dictio["Provenance"] \
                               + "', '" + dictio["CodeAsset"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"] \
                               + "', '" + dictio["Commentaires"] + "', '" + dictio["PdfPath"] + "');"
-                cur.execute(commandeSQL)
+                '''
+                commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
+                              + "DateAcquisition, DateDernierEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
+                              + " Commentaires, PdfPath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                tupleData = (dictio["CategorieEquipement"], dictio["Marque"], dictio["Modele"], dictio["NumeroSerie"], dictio["Salle"], dictio["CentreService"],
+                             str(dictio["DateAcquisition"]), str(dictio["DateDernierEntretien"]), dictio["Provenance"], dictio["CodeAsset"], dictio["EtatService"],
+                             dictio["EtatConservation"], dictio["Commentaires"], dictio["PdfPath"])
+                cur.execute(commandeSQL, tupleData)
 
                 dict_renvoi['Reussite'] = True  # ajout du nouvel équipement dans la base de données
                 con.commit()
@@ -236,9 +243,7 @@ class EquipementManager:
             commmand_sql += " WHERE Id = ?"
             print("Command: ", commmand_sql)
             data.append(id_modif)
-            print(data)
             tuple_data = tuple(data)
-            print(tuple_data)
             # Verifier que tout ce qui est dans dict_modif est conforme à la forme d'un équipement et COMPLET
             if self._verifierChamps(dict_modif, conf) and self._verifierDict(dict_modif, conf, stats):
                 cur.execute(commmand_sql, tuple_data)
@@ -295,7 +300,6 @@ class EquipementManager:
         dernier_ID = 0
         with con:
             cur = con.cursor()
-            print(type(cur.lastrowid))
             cur.execute("SELECT * From Equipement")
 
             rows = cur.fetchall()

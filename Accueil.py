@@ -214,13 +214,14 @@ class Accueil(Ui_Accueil):
             # Creation du widget s'il n'existe pas
             self.rechercheEquipement = QtWidgets.QWidget(self.Accueil)
             self.rechercheEquipementUI = RechercheEquipement(self.rechercheEquipement)
-            self.rechercheEquipementUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
-            self.rechercheEquipementUI.comboBoxProvenance.currentTextChanged.connect(self.afficherChargement)
-            self.rechercheEquipementUI.comboBoxSalle.currentTextChanged.connect(self.afficherChargement)
-            self.rechercheEquipementUI.comboBoxCentreService.currentTextChanged.connect(self.afficherChargement)
-            self.rechercheEquipementUI.comboBoxEtatService.currentTextChanged.connect(self.afficherChargement)
-            self.rechercheEquipementUI.lineEditNumeroSerie.returnPressed.connect(self.afficherChargement)
-            self.rechercheEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            #self.rechercheEquipementUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
+            #self.rechercheEquipementUI.comboBoxProvenance.currentTextChanged.connect(self.afficherChargement)
+            #self.rechercheEquipementUI.comboBoxSalle.currentTextChanged.connect(self.afficherChargement)
+            #self.rechercheEquipementUI.comboBoxCentreService.currentTextChanged.connect(self.afficherChargement)
+            #self.rechercheEquipementUI.comboBoxEtatService.currentTextChanged.connect(self.afficherChargement)
+            #self.rechercheEquipementUI.lineEditNumeroSerie.returnPressed.connect(self.afficherChargement)
+            #self.rechercheEquipementUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            self.rechercheEquipementUI.chargement.chargerEquipement.connect(self.afficherChargement)
             self.rechercheEquipementUI.tableResultats.doubleClicked.connect(self.choisirEquipement)
             self.rechercheEquipementUI.chargement.finChargement.connect(self.finChargement)
             self.rechercheEquipementUI.chargement.aucunResultat.connect(self.afficherAucunResultat)
@@ -722,6 +723,7 @@ class Accueil(Ui_Accueil):
             self.boutonSelectionne.setStyleSheet("background: white;  border-radius: 0px ")
 
     def afficherChargement(self):
+        print("afficherChargement")
         self.attente.raise_()
         self.attente.show()
 

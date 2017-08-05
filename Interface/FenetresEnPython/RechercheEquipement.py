@@ -85,13 +85,13 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.dictionnaireRecherche = dict()
 
         #Connexion des differents champs de selections
-        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieThread)
-        self.comboBoxEtatService.currentTextChanged.connect(self.rechercheEtatDeServiceThread)
-        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreServiceThread)
-        self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalleThread)
-        self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenanceThread)
-        self.lineEditNumeroSerie.returnPressed.connect(self.rechercheNumeroSerieThread)
-        self.boutonActualiser.clicked.connect(self.rechercheNumeroSerieThread)
+        self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipement)
+        self.comboBoxEtatService.currentTextChanged.connect(self.rechercheEtatDeService)
+        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
+        self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
+        self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
+        self.lineEditNumeroSerie.returnPressed.connect(self.rechercheNumeroSerie)
+        self.boutonActualiser.clicked.connect(self.rechercheNumeroSerie)
         self.boutonNouvelleRecherche.clicked.connect(self.signalRechercheEquipement.nouvelleRecherche.emit)
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.tableResultats.sortItems)
 
@@ -150,7 +150,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.rechercherEquipement()
-        self.chargement.finChargement.emit()
 
 
     def rechercheEtatDeService(self):
@@ -162,7 +161,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("EtatService")
         self.rechercherEquipement()
-        self.chargement.finChargement.emit()
 
 
     def rechercheCentreService(self):
@@ -174,7 +172,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("CentreService")
         self.rechercherEquipement()
-        self.chargement.finChargement.emit()
 
 
     def rechercheSalle(self):
@@ -185,7 +182,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("Salle")
         self.rechercherEquipement()
-        self.chargement.finChargement.emit()
 
 
     def rechercheProvenance(self):
@@ -196,7 +192,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         else:
             self.dictionnaireRecherche.pop("Provenance")
         self.rechercherEquipement()
-        self.chargement.finChargement.emit()
 
 
     def rechercheNumeroSerie(self):
@@ -210,17 +205,18 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if "NumeroSerie" in self.dictionnaireRecherche:
                 self.dictionnaireRecherche.pop("NumeroSerie")
         self.rechercherEquipement()
-        self.chargement.finChargement.emit()
 
 
     def rechercherEquipement(self):
         """Methode permettant de remplir la table des resultats
         Le remplissage se fait avec le resultat des donnees"""
         if(any(self.dictionnaireRecherche)):
+            self.chargement.chargerEquipement.emit()
             self.listeResultat = self.equipementManager.RechercherEquipement(self.dictionnaireRecherche)
             self.signalRechercheEquipement.remplirTableau.emit()
         else:
             print("dictionnaire de recherche vide")
+        self.chargement.finChargement.emit()
 
 
     def remplirTableau(self):
