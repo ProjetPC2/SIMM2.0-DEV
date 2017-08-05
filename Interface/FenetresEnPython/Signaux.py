@@ -41,6 +41,7 @@ class Communicate(QObject):
     remplirTableau = pyqtSignal()
     nouvelleRecherche = pyqtSignal()
     pieceInsuffisant = pyqtSignal()
+    ajoutPiece = pyqtSignal()
 
     #Statistique
     affichageProvenance = pyqtSignal()

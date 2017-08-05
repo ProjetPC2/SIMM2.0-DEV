@@ -313,11 +313,13 @@ class BonDeTravail(Ui_BonDeTravail):
                     self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, self.equipementDictionnaire["Id"], idBDT)
                     dictionnaireDonnees["NumeroBonTravail"] = idBDT
                     self.signalFenetreBonTravail.confirmation.emit()
+                    self.signalFenetreBonTravail.ajoutPiece.emit()
             else:
                 dicRetour = (self.bonDeTravailManager.ModifierBonTravail(self.equipementDictionnaire["Id"], self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], dictionnaireDonnees))
                 if dicRetour["Reussite"]:
                     self.equipementManager.MiseAJourDateEquipement(self.equipementDictionnaire["Id"], str(self.listeBonDeTravail[self.indiceBonDeTravail]["Date"]))
                     self.pieceManager.ChoisirPiece(self.listeAjoutPieceReparation, self.equipementDictionnaire["Id"] , self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"], True)
+                    self.signalFenetreBonTravail.ajoutPiece.emit()
                     print("Modification Réussie")
                     '''self.listeBonDeTravail[self.indiceBonDeTravail]["Date"] = str(dictionnaireDonnees["Date"])
                     self.listeBonDeTravail[self.indiceBonDeTravail]["TempsEstime"] = str(dictionnaireDonnees["TempsEstime"])

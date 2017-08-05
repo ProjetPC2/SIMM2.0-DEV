@@ -77,8 +77,11 @@ class Piece(Ui_Piece):
         if(len(self.listeAjoutPiece)):
             self.pieceManager.AjouterPiece(self.listeAjoutPiece)
             self.enregistrement.enregistrementTermine.emit()
-        self.listeAjoutPiece.clear()
         print("Obtention de la liste de categorie")
+        self.viderTableau()
+
+    def viderTableau(self):
+        self.listeAjoutPiece.clear()
         self.listeCategoriePiece = list(self.pieceManager.ObtenirListeCategorie())
         self.listeCategoriePiece.sort()
         self.listeCategoriePiece.insert(0,"")

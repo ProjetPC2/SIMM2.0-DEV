@@ -307,6 +307,8 @@ class Accueil(Ui_Accueil):
             self.pieceUI.enregistrement.enregistrementTermine.connect(self.enregistrementTermine)
             self.listeElementParDefaut.append(self.ajoutPiece)
             self.layoutAffichagePrincipal.addWidget(self.ajoutPiece)
+            self.bonDeTravailUI.signalFenetreBonTravail.ajoutPiece.connect(self.pieceUI.viderTableau)
+
         else:
             self.ajoutPiece.show()
         self.BoutonFlecheNavigation.hide()
@@ -336,6 +338,7 @@ class Accueil(Ui_Accueil):
             self.bonDeTravailUI.signalFenetreBonTravail.pieceInsuffisant.connect(self.afficherNombrePieceInsufisant)
             self.listeElementParDefaut.append(self.ajoutBonDeTravail)
             self.layoutAffichagePrincipal.addWidget(self.ajoutBonDeTravail)
+
         else:
             # Affichage de l'element s'il existe deja
             self.ajoutBonDeTravail.show()
