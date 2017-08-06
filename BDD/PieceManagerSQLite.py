@@ -53,19 +53,19 @@ class PieceManager:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
             for tup in listeTuple:
-                commandeSQL = "SELECT Nombre FROM Piece WHERE Categorie='{0}' AND NomPiece='{1}'".format(tup[0],tup[1])
+                commandeSQL = 'SELECT Nombre FROM Piece WHERE Categorie=? AND NomPiece=?'
                 print(commandeSQL)
-                cur.execute(commandeSQL)
+                cur.execute(commandeSQL, (tup[0], tup[1]))
                 rows = cur.fetchall()
                 if len(rows) == 0:
-                    commandeSQL= "INSERT INTO Piece(Categorie, NomPiece, Nombre) VALUES('{0}','{1}',{2})".format(tup[0],tup[1], tup[2])
+                    commandeSQL= 'INSERT INTO Piece(Categorie, NomPiece, Nombre) VALUES(?,?,?)'
                 else:
                     valeur = rows[0][0] + tup[2]
                     print(rows[0][0], tup[2])
-                    commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(valeur,tup[0],tup[1])
+                    commandeSQL = 'UPDATE Piece SET Nombre=? WHERE Categorie=? AND NomPiece=?'
                 print(commandeSQL)
 
-                cur.execute(commandeSQL)
+                cur.execute(commandeSQL,tup)
                 dict_renvoi['Reussite'] = True
                 con.commit()
         except lite.Error as e:
@@ -90,9 +90,9 @@ class PieceManager:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
             for tup in listeTuple:
-                commandeSQL = "SELECT Nombre FROM Piece WHERE Categorie='{0}' AND NomPiece='{1}'".format(tup[0], tup[1])
+                commandeSQL = 'SELECT Nombre FROM Piece WHERE Categorie=? AND NomPiece=?'
                 print(commandeSQL)
-                cur.execute(commandeSQL)
+                cur.execute(commandeSQL, (tup[0], tup[1]))
                 rows = cur.fetchall()
                 if(len(rows) == 0):
                     print("Pas de piece associee")
@@ -120,10 +120,10 @@ class PieceManager:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
             for tup in listeTuple:
-                commandeSQL = "SELECT Nombre, IdPiece FROM Piece WHERE Categorie='{0}' AND NomPiece='{1}'".format(tup[0], tup[1])
+                commandeSQL = 'SELECT Nombre, IdPiece FROM Piece WHERE Categorie=? AND NomPiece=?'
                 print(commandeSQL)
 
-                cur.execute(commandeSQL)
+                cur.execute(commandeSQL, (tup[0], tup[1]))
                 rows = cur.fetchall()
 
                 if len(rows) == 0:
@@ -135,10 +135,9 @@ class PieceManager:
                         nombreUtilisee = self.rechercherNombrePieceUtilisee(idEquipement, idBDt, idPiece)
                         if (nombrePiece + nombreUtilisee >= tup[2]):
                             nombreRestant = nombrePiece - tup[2] + nombreUtilisee
-                            commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(
-                                nombreRestant, tup[0], tup[1])
+                            commandeSQL = 'UPDATE Piece SET Nombre=? WHERE Categorie=? AND NomPiece=?'
                             print(commandeSQL)
-                            cur.execute(commandeSQL)
+                            cur.execute(commandeSQL, (nombreRestant, tup[0], tup[1]))
                             con.commit()
                             self.selectionnerPiece(idEquipement, idBDt, idPiece, tup[2], modification)
                         else:
@@ -147,9 +146,9 @@ class PieceManager:
                     else:
                         if(nombrePiece >= tup[2]):
                             nombreRestant = nombrePiece - tup[2]
-                            commandeSQL = "UPDATE Piece SET Nombre={0} WHERE Categorie='{1}' AND NomPiece='{2}'".format(nombreRestant, tup[0], tup[1])
+                            commandeSQL = 'UPDATE Piece SET Nombre=? WHERE Categorie=? AND NomPiece=?'
                             print(commandeSQL)
-                            cur.execute(commandeSQL)
+                            cur.execute(commandeSQL, (nombreRestant, tup[0], tup[1]))
                             con.commit()
                             self.selectionnerPiece(idEquipement, idBDt, idPiece, tup[2])
                         else:
@@ -204,10 +203,10 @@ class PieceManager:
             con = lite.connect(self._pathnamePiece)
             listeCategorie = list()
             cur = con.cursor()
-            commandeSQL = "SELECT DISTINCT NomPiece FROM Piece WHERE Categorie ='{0}'".format(categorie)
+            commandeSQL =  'SELECT DISTINCT NomPiece FROM Piece WHERE Categorie =?'
             print(commandeSQL)
 
-            cur.execute(commandeSQL)
+            cur.execute(commandeSQL,(categorie,))
             rows = cur.fetchall()
 
             if len(rows) == 0:
@@ -234,10 +233,10 @@ class PieceManager:
             con.row_factory = lite.Row
             cur = con.cursor()
 
-            commandeSQL = "SELECT NomPiece, Nombre FROM Piece WHERE Categorie ='{0}'".format(categorie)
+            commandeSQL = 'SELECT NomPiece, Nombre FROM Piece WHERE Categorie = ?'
             print(commandeSQL)
 
-            cur.execute(commandeSQL)
+            cur.execute(commandeSQL, (categorie,))
             rows = cur.fetchall()
 
             if len(rows) == 0:
@@ -269,16 +268,16 @@ class PieceManager:
             cur.execute(commandeSQL)
             rows = cur.fetchall()
             if len(rows) == 0:
-                commandeSQL = "INSERT INTO PieceUtilisee VALUES({0},{1}, {2}, {3})".format(idEq, id, idPiece, quantity)
+                commandeSQL = "INSERT INTO PieceUtilisee VALUES(?, ?, ?, ?)"
             else:
                 if modification:
                     valeur = quantity
                 else:
                     valeur = rows[0][0] + quantity
-                commandeSQL = "UPDATE PieceUtilisee SET NombreUtilise={0} WHERE IdBonTravail={1} AND IdPiece={2} AND" \
-                              " AND IdEquipement={3}".format(valeur, id, idPiece, idEq)
+                commandeSQL = "UPDATE PieceUtilisee SET NombreUtilise=? WHERE IdBonTravail=? AND IdPiece=? AND" \
+                              " AND IdEquipement=?"
                 print(commandeSQL)
-            cur.execute(commandeSQL)
+            cur.execute(commandeSQL,(idEq, id, idPiece, quantity))
             dict_renvoi['Reussite'] = True
             con.commit()
 
@@ -297,10 +296,10 @@ class PieceManager:
         try:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
-            commandeSQL = "SELECT NombreUtilise FROM PieceUtilisee WHERE IdBonTravail={0} AND IdPiece={1 AND " \
-                          "IdEquipement = {2}".format(idBdt, idPiece, idEquipement)
+            commandeSQL = "SELECT NombreUtilise FROM PieceUtilisee WHERE IdBonTravail=? AND IdPiece=? AND " \
+                          "IdEquipement = ?"
             print(commandeSQL)
-            cur.execute(commandeSQL)
+            cur.execute(commandeSQL, (idBdt, idPiece, idEquipement))
             rows = cur.fetchall()
             if len(rows) == 0:
                 nombrePieceUtilisee = 0
@@ -323,10 +322,10 @@ class PieceManager:
             con = lite.connect(self._pathnamePiece)
             cur = con.cursor()
             commandeSQL = "SELECT Categorie, NomPiece, NombreUtilise FROM Piece INNER JOIN PieceUtilisee" \
-                          " ON Piece.IdPiece = PieceUtilisee.IdPiece WHERE PieceUtilisee.IdBonTravail = {0}" \
-                          " AND PieceUtilisee.IdEquipement = {1}".format(str(idBdT), str(idEquipement))
+                          " ON Piece.IdPiece = PieceUtilisee.IdPiece WHERE PieceUtilisee.IdBonTravail = ?" \
+                          " AND PieceUtilisee.IdEquipement = ?"
             print(commandeSQL)
-            cur.execute(commandeSQL)
+            cur.execute(commandeSQL, (str(idBdT), str(idEquipement)))
             rows = cur.fetchall()
             print(len(rows))
             for row in rows:

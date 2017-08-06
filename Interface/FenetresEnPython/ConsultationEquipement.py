@@ -93,6 +93,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                     #Recuperation des donnees sous forme de string
 
                     if(cle == "DateAcquisition" or cle == "DateDernierEntretien"):
+                        newDate = self.equipement[cle]
                         index = self.equipement[cle].find(" ")
                         if index > -1:
                             newDate = self.equipement[cle].split(" ")[0]

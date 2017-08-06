@@ -230,7 +230,9 @@ class Accueil(Ui_Accueil):
         else:
             # Affichage du widget s'il existe deja
             self.rechercheEquipement.show()
+        if(self.ajoutEquipement is not None):
             self.rechercheEquipementUI.miseAJourRecherche()
+
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.listeNavigation.clear()
@@ -307,10 +309,14 @@ class Accueil(Ui_Accueil):
             self.pieceUI.enregistrement.enregistrementTermine.connect(self.enregistrementTermine)
             self.listeElementParDefaut.append(self.ajoutPiece)
             self.layoutAffichagePrincipal.addWidget(self.ajoutPiece)
-            self.bonDeTravailUI.signalFenetreBonTravail.ajoutPiece.connect(self.pieceUI.viderTableau)
 
         else:
             self.ajoutPiece.show()
+
+        if(self.ajoutBonDeTravail is not None):
+            print("Bonjour")
+            self.bonDeTravailUI.signalFenetreBonTravail.ajoutPiece.connect(self.pieceUI.viderTableau)
+
         self.BoutonFlecheNavigation.hide()
         self.frameFleche.hide()
         self.listeNavigation.clear()

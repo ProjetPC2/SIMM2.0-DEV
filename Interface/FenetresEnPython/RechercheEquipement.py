@@ -142,55 +142,60 @@ class RechercheEquipement(Ui_RechercheEquipement):
     def rechercheCategorieEquipement(self):
         """Methode permettant la recherche par rapport au champ de recherche
         de categorie d'equipement"""
-        if(self.comboBoxCategorieEquipement.currentText() != ""):
+        if(self.comboBoxCategorieEquipement.currentText() != "" and self.comboBoxCategorieEquipement.count() > 0):
             recherche = verificationTexte(self.comboBoxCategorieEquipement.currentText())
             print("recherche", recherche)
             self.dictionnaireRecherche["CategorieEquipement"] = recherche
 
         else:
-            self.dictionnaireRecherche.pop("CategorieEquipement")
+            if "CategorieEquipement" in self.dictionnaireRecherche:
+                self.dictionnaireRecherche.pop("CategorieEquipement")
         self.rechercherEquipement()
 
 
     def rechercheEtatDeService(self):
         """Methode permettant la recherche par rapport au champ de recherche
             d'etat de service d'equipement"""
-        if (self.comboBoxEtatService.currentText() != ""):
+        if (self.comboBoxEtatService.currentText() != "" and self.comboBoxEtatService.count() >0):
             self.dictionnaireRecherche["EtatService"] = self.comboBoxEtatService.currentText()
 
         else:
-            self.dictionnaireRecherche.pop("EtatService")
+            if "EtatService" in self.dictionnaireRecherche:
+                self.dictionnaireRecherche.pop("EtatService")
         self.rechercherEquipement()
 
 
     def rechercheCentreService(self):
         """Methode permettant la recherche par rapport au champ de recherche
             d'etat de centre de service d'equipement"""
-        if (self.comboBoxCentreService.currentText() != ""):
+        if (self.comboBoxCentreService.currentText() != "" and self.comboBoxCentreService.count() >0):
             self.dictionnaireRecherche["CentreService"] = self.comboBoxCentreService.currentText()
 
         else:
-            self.dictionnaireRecherche.pop("CentreService")
+            if "CentreService" in self.dictionnaireRecherche:
+                self.dictionnaireRecherche.pop("CentreService")
         self.rechercherEquipement()
 
 
     def rechercheSalle(self):
         """Methode permettant la recherche par rapport au champ de recherche
             de salle """
-        if (self.comboBoxSalle.currentText() != ""):
+        if (self.comboBoxSalle.currentText() != "" and self.comboBoxSalle.count() >0):
             self.dictionnaireRecherche["Salle"] = self.comboBoxSalle.currentText()
         else:
-            self.dictionnaireRecherche.pop("Salle")
+            if "Salle" in self.dictionnaireRecherche:
+                self.dictionnaireRecherche.pop("Salle")
         self.rechercherEquipement()
 
 
     def rechercheProvenance(self):
         """Methode permettant la recherche par rapport au champ de recherche
            Provenance"""
-        if (self.comboBoxProvenance.currentText() != ""):
+        if (self.comboBoxProvenance.currentText() != "" and self.comboBoxProvenance.count() >0):
             self.dictionnaireRecherche["Provenance"] = self.comboBoxProvenance.currentText()
         else:
-            self.dictionnaireRecherche.pop("Provenance")
+            if "Provenance" in self.dictionnaireRecherche:
+                self.dictionnaireRecherche.pop("Provenance")
         self.rechercherEquipement()
 
 
