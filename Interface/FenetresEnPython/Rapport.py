@@ -169,8 +169,18 @@ class Rapport():
                     listTemp.append(Paragraph(dictionnaire["Date"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["TempsEstime"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["EtatBDT"], styleSheet['Normal']))
-
+                    if (dictionnaire["EtatBDT"] == "Ouvert"):
+                        listTemp.append("Non")
+                        if dictionnaire["Outils"] == 1:
+                           listTemp.append("Outils")
+                        if dictionnaire["Pieces"] == 1:
+                           listTemp.append("Pieces")
+                        if dictionnaire["Formation"] == 1:
+                           listTemp.append("Aide exterieur")
+                        if dictionnaire["Manuel"] == 1:
+                           listTemp.append("Manuel")
+                    else:
+                        listTemp.append("Oui")
 
                     #FIN
 
@@ -229,7 +239,7 @@ class Rapport():
             # t._argW[3] = 0.5 * inch
 
             #On ajoute les differents elements a la liste contenant les differents elements graphique du pdf
-            Service = ("<b><u>Centre de service %s : </u></b>" % "Test")
+            Service = ("<b><u> Rapport des bons de travail </u></b>")
             titreTableau = Paragraph(Service, style)
             elements.append(titreTableau)
             #elements.append(Spacer(0,10))
