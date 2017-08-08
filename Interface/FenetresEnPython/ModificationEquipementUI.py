@@ -7,11 +7,15 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from win32api import GetSystemMetrics
 
 class Ui_ModificationEquipement(object):
     def setupUi(self, ModificationEquipement):
         ModificationEquipement.setObjectName("ModificationEquipement")
-        ModificationEquipement.resize(1440, 810)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement = 0.80
+        ModificationEquipement.resize(facteur_grandissement*width, facteur_grandissement*heigth)
         ModificationEquipement.setMinimumSize(QtCore.QSize(0, 800))
         ModificationEquipement.setMaximumSize(QtCore.QSize(11111111, 1111111))
         ModificationEquipement.setStyleSheet("QWidget{\n"
