@@ -47,7 +47,8 @@ class Rapport():
         self.finImpression = Signal()
         self.listeCle = ["Date", "NomTechnicien", "IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Marque", "CentreService",
                          "Modele", "Salle", "DescriptionSituation", "DescriptionIntervention"]
-        self.creationPDF(path)
+        print(path)
+        self.creationPDF(path.split(".csv")[0])
 
     def myFirstPage(self, canvas, doc):
         """Methode s'occupant de la mise en page du debut de document
@@ -170,7 +171,6 @@ class Rapport():
                     listTemp.append(Paragraph(dictionnaire["TempsEstime"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
 
-
                     #FIN
 
                     for cle in self.listeCle:
@@ -232,7 +232,7 @@ class Rapport():
             # t._argW[3] = 0.5 * inch
 
             #On ajoute les differents elements a la liste contenant les differents elements graphique du pdf
-            Service = ("<b><u>Centre de service %s : </u></b>" % "Test")
+            Service = ("<b><u> Rapport des bons de travail </u></b>")
             titreTableau = Paragraph(Service, style)
             elements.append(titreTableau)
             #elements.append(Spacer(0,10))
