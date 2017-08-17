@@ -130,8 +130,8 @@ class Rapport():
             print("DATE AUJOURHDUI ", currentDate)
             listBon = bonTravailManager.RechercherBonTravailRapport({"AvantLe" : currentDate})
             listeTotal = list()
-            listeColonne1 = [Paragraph("<b>IdEquipement</b>", style),
-                             Paragraph("<b>NumeroBonTravail</b>", style),
+            listeColonne1 = [Paragraph("<b>IdEq</b>", style),
+                             Paragraph("<b>BonTravai</b>", style),
                              Paragraph("<b>DescriptionSituation</b>", style),
                              Paragraph("<b>NomTechnicien</b>", style),
                              Paragraph("<b>Date</b>", style),
@@ -169,7 +169,6 @@ class Rapport():
                     listTemp.append(Paragraph(dictionnaire["Date"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["TempsEstime"], styleSheet['Normal']))
                     listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["EtatBDT"], styleSheet['Normal']))
 
 
                     #FIN
@@ -179,9 +178,11 @@ class Rapport():
                         rapport1.write(str(dictionnaire[cle]) + ";")
                     assistanceString = ""
 
-                    if(dictionnaire["EtatBDT"] == "Ouvert"):
-                        rapport.write("Non" + ",")
-                        rapport.write("Non" + ";")
+                    if(dictionnaire["EtatBDT"] != "Ouvert"):
+                        listTemp.append(Paragraph("Oui", styleSheet['Normal']))
+
+                        rapport.write("Oui" + ",")
+                        rapport1.write("Oui" + ";")
                         listeAssistance = list()
                         #Ecriture des donnees d'assistance
                         if dictionnaire["Outils"] == 1:
@@ -192,19 +193,21 @@ class Rapport():
                             listeAssistance.append("Aide exterieur")
                         if dictionnaire["Manuel"] == 1:
                             listeAssistance.append("Manuel")
+                        #Creation de la chaine de caractere pour l'assistance
                         for i, assistance in enumerate(listeAssistance):
-                            assistance += assistance
+                            assistanceString += assistance
                             rapport.write(assistance)
                             rapport1.write(assistance)
                             i += 1
                             if(i < len(listeAssistance)):
-                                assistance += ", "
+                                assistanceString += ", "
                                 rapport.write(";")
                                 rapport1.write(";")
 
                     else:
-                        rapport.write("Oui" + ",")
-                        rapport1.write("Oui" + ",")
+                        listTemp.append(Paragraph("Non", styleSheet['Normal']))
+                        rapport.write("Non" + ",")
+                        rapport1.write("Non" + ",")
 
                     listTemp.append(Paragraph(assistanceString, styleSheet['Normal']))
                     listeTotal.append(listTemp)
