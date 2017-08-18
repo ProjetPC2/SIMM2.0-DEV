@@ -16,6 +16,7 @@ class Ui_Statistique(object):
         heigth= GetSystemMetrics(1)
         facteur_grandissement= 0.80
         Statistique.resize(facteur_grandissement*width, facteur_grandissement*heigth)
+        #TODO modifier la taille maximale pour la ligne suivante
         Statistique.setMaximumSize(QtCore.QSize(11111112, 1111111))
         Statistique.setStyleSheet("QWidget{\n"
 "background:white;\n"

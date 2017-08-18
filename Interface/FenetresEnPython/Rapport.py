@@ -95,7 +95,7 @@ class Rapport():
         canvas.restoreState()
 
     def creationPDF(self, path):
-        doc = SimpleDocTemplate(path+".pdf", pagesize = landscape(A4))
+        doc = SimpleDocTemplate(path, pagesize = landscape(A4))
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
         # Ajout d'un espacement
         elements = [Spacer(0, 2 * inch)]
@@ -122,8 +122,6 @@ class Rapport():
         #Creation du tableau avec les informations concernant le centre de service
 
         currentDate = (QDate.currentDate().toPyDate())
-        rapport = open(path+".csv", "w")
-        rapport1 = open(path+"_old.csv", "w")
         listeCentreService = list(conf['CentreService'])
 
         for centreService in l:
@@ -146,16 +144,6 @@ class Rapport():
                 # Cas ou l'equipement existe
                 for i, dictionnaire in enumerate(listBon):
                     # Recuperation des donnees sous forme de string
-                    if(i == 0):
-                        for col in self.listeCle:
-                            if(col == "CentreService"):
-                                rapport.write(str("Unite") + ",")
-                            rapport.write(str(col) + ",")
-                            rapport1.write(str(col) + ";")
-                        rapport.write("Réparé: Oui/Non, Besoins")
-                        rapport.write("\n")
-                        rapport1.write("Réparé: Oui/Non, Besoins")
-                        rapport1.write("\n")
 
                     print(dictionnaire)
 
@@ -173,16 +161,11 @@ class Rapport():
 
                     #FIN
 
-                    for cle in self.listeCle:
-                        rapport.write(str(dictionnaire[cle]) + ",")
-                        rapport1.write(str(dictionnaire[cle]) + ";")
                     assistanceString = ""
 
                     if(dictionnaire["EtatBDT"] != "Ouvert"):
                         listTemp.append(Paragraph("Oui", styleSheet['Normal']))
 
-                        rapport.write("Oui" + ",")
-                        rapport1.write("Oui" + ";")
                         listeAssistance = list()
                         #Ecriture des donnees d'assistance
                         if dictionnaire["Outils"] == 1:
@@ -196,23 +179,15 @@ class Rapport():
                         #Creation de la chaine de caractere pour l'assistance
                         for i, assistance in enumerate(listeAssistance):
                             assistanceString += assistance
-                            rapport.write(assistance)
-                            rapport1.write(assistance)
                             i += 1
                             if(i < len(listeAssistance)):
                                 assistanceString += ", "
-                                rapport.write(";")
-                                rapport1.write(";")
 
                     else:
                         listTemp.append(Paragraph("Non", styleSheet['Normal']))
-                        rapport.write("Non" + ",")
-                        rapport1.write("Non" + ",")
 
                     listTemp.append(Paragraph(assistanceString, styleSheet['Normal']))
                     listeTotal.append(listTemp)
-                    rapport.write("\n")
-                    rapport1.write("\n")
             else:
                 # Cas ou l'equipement n'existe pas
                 pass
@@ -244,8 +219,6 @@ class Rapport():
         doc.build(elements, onFirstPage=self.myFirstPage, onLaterPages= self.myLaterPages)
 
         print("termine")
-        rapport.close()
-        rapport1.close()
         self.finImpression.finImpression.emit()
 
 
