@@ -29,9 +29,14 @@ CategorieEquipement:
 - Autre
 - "Compresseur n\xE9buliseur"
 - Chaise roulante
+- 'Microscope '
+- sterilisateur
+- Apparei sonographie
 CentreService:
 - Inconnue
 - "P\xE9diatrie"
+- Maternite
+- SOP
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -69,6 +74,7 @@ Salle:
 - Depot2
 - Magasin&Stock
 - "Maternit\xE9"
+- KS
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
