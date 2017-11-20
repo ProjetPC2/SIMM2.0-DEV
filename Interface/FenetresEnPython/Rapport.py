@@ -21,6 +21,8 @@ import sys
 from threading import Thread
 import time
 
+from BDD.EquipementManagerSQLite import EquipementManager
+from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase
 from BDD.BonTravailManagerSQLite import BonTravailManager
 from Interface.FenetresEnPython.PDF2 import Signal
 
@@ -130,11 +132,11 @@ class Rapport():
             listBon = bonTravailManager.RechercherBonTravailRapport({"AvantLe" : currentDate})
             listeTotal = list()
             listeColonne1 = [Paragraph("<b>IdEq</b>", style),
-                             Paragraph("<b>BonTravai</b>", style),
+                             Paragraph("<b>Categorie</b>", style),
+                             Paragraph("<b>Marque // Modele</b>", style),
                              Paragraph("<b>DescriptionSituation</b>", style),
-                             Paragraph("<b>NomTechnicien</b>", style),
                              Paragraph("<b>Date</b>", style),
-                             Paragraph("<b>TempsEstime</b>", style),
+                             Paragraph("<b>NomTechnicien</b>", style),
                              Paragraph("<b>DescriptionIntervention</b>", style),
                              Paragraph("<b>Repare</b>", style),
                              Paragraph("<b>Assistance</b>", style)]
@@ -142,52 +144,61 @@ class Rapport():
 
             if (any(listBon)):
                 # Cas ou l'equipement existe
+
                 for i, dictionnaire in enumerate(listBon):
                     # Recuperation des donnees sous forme de string
 
                     print(dictionnaire)
+                    idbdt = "{0}-{1}".format(str(dictionnaire["IdEquipement"]), str(dictionnaire["NumeroBonTravail"]))
 
-                    #PARTIE RAPPORT EN FORMAT PDF
-                    listTemp = list()
-                    # for element in dictionnaire.values():
-                    #     listTemp.append(element)
-                    listTemp.append(Paragraph(str(dictionnaire["IdEquipement"]), styleSheet['Normal']))
-                    listTemp.append(Paragraph(str(dictionnaire["NumeroBonTravail"]),styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["DescriptionSituation"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["NomTechnicien"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["Date"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["TempsEstime"], styleSheet['Normal']))
-                    listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
+                    equipementManager = EquipementManager(pathEquipementDatabase)
+                    listeEquipement = equipementManager.RechercherEquipement({"ID": dictionnaire["IdEquipement"]})
+                    if (any(listeEquipement)):
+                        # Cas ou l'equipement existe
+                        for i, dictionnaire2 in enumerate(listeEquipement):
 
-                    #FIN
+                            MM = "{0} // {1}".format(str(dictionnaire2["Marque"]),str(dictionnaire["Modele"]))
+                            #PARTIE RAPPORT EN FORMAT PDF
+                            listTemp = list()
+                            # for element in dictionnaire.values():
+                            #     listTemp.append(element)
+                            listTemp.append(Paragraph(idbdt, styleSheet['Normal']))
+                            listTemp.append(Paragraph(dictionnaire2["CategorieEquipement"],styleSheet['Normal']))
+                            listTemp.append(Paragraph(MM, styleSheet['Normal']))
+                            listTemp.append(Paragraph(dictionnaire["DescriptionSituation"], styleSheet['Normal']))
+                            listTemp.append(Paragraph(dictionnaire["Date"], styleSheet['Normal']))
+                            listTemp.append(Paragraph(dictionnaire["NomTechnicien"], styleSheet['Normal']))
+                            listTemp.append(Paragraph(dictionnaire["DescriptionIntervention"], styleSheet['Normal']))
 
-                    assistanceString = ""
+                            #FIN
 
-                    if(dictionnaire["EtatBDT"] != "Ouvert"):
-                        listTemp.append(Paragraph("Oui", styleSheet['Normal']))
+                            assistanceString = ""
 
-                        listeAssistance = list()
-                        #Ecriture des donnees d'assistance
-                        if dictionnaire["Outils"] == 1:
-                            listeAssistance.append("Outils")
-                        if dictionnaire["Pieces"] == 1:
-                            listeAssistance.append("Pieces")
-                        if dictionnaire["Formation"] == 1:
-                            listeAssistance.append("Aide exterieur")
-                        if dictionnaire["Manuel"] == 1:
-                            listeAssistance.append("Manuel")
-                        #Creation de la chaine de caractere pour l'assistance
-                        for i, assistance in enumerate(listeAssistance):
-                            assistanceString += assistance
-                            i += 1
-                            if(i < len(listeAssistance)):
-                                assistanceString += ", "
+                            if(dictionnaire["EtatBDT"] != "Ferme"):
+                                listTemp.append(Paragraph("Non", styleSheet['Normal']))
 
-                    else:
-                        listTemp.append(Paragraph("Non", styleSheet['Normal']))
+                                listeAssistance = list()
+                                #Ecriture des donnees d'assistance
+                                if dictionnaire["Outils"] == 1:
+                                    listeAssistance.append("Outils")
+                                if dictionnaire["Pieces"] == 1:
+                                    listeAssistance.append("Pieces")
+                                if dictionnaire["Formation"] == 1:
+                                    listeAssistance.append("Aide exterieur")
+                                if dictionnaire["Manuel"] == 1:
+                                    listeAssistance.append("Manuel")
+                                #Creation de la chaine de caractere pour l'assistance
+                                for i, assistance in enumerate(listeAssistance):
+                                    assistanceString += assistance
+                                    i += 1
+                                    if(i < len(listeAssistance)):
+                                        assistanceString += ", "
 
-                    listTemp.append(Paragraph(assistanceString, styleSheet['Normal']))
-                    listeTotal.append(listTemp)
+                            else:
+                                listTemp.append(Paragraph("Oui", styleSheet['Normal']))
+
+                            listTemp.append(Paragraph(assistanceString, styleSheet['Normal']))
+                            listeTotal.append(listTemp)
             else:
                 # Cas ou l'equipement n'existe pas
                 pass
