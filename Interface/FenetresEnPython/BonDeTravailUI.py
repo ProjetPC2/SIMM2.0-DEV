@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit
 
 class Ui_BonDeTravail(object):
     def setupUi(self, BonDeTravail):
@@ -686,7 +687,7 @@ class Ui_BonDeTravail(object):
         self.comboBoxNomTech.setFont(font)
         self.comboBoxNomTech.setStyleSheet("")
         self.comboBoxNomTech.setObjectName("comboBoxNomTech")
-        self.comboBoxNomTech.addItem("")
+        # self.comboBoxNomTech.addItem("")
         self.verticalLayout.addWidget(self.comboBoxNomTech)
         self.labelCacheNomTech = QtWidgets.QLabel(BonDeTravail)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
@@ -849,8 +850,50 @@ class Ui_BonDeTravail(object):
         self.horizontalLayout_6.addItem(spacerItem15)
         self.verticalLayout_3.addLayout(self.horizontalLayout_6)
 
+        self.pushButtonGestionTech = QtWidgets.QPushButton(BonDeTravail)
+        self.pushButtonGestionTech.setMinimumSize(QtCore.QSize(220, 20))
+        self.pushButtonGestionTech.setMaximumSize(QtCore.QSize(220, 20))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButtonGestionTech.setFont(font)
+        self.pushButtonGestionTech.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButtonGestionTech.clicked.connect(self.addTechDialog)
+        self.verticalLayout.addWidget(self.pushButtonGestionTech)
         self.retranslateUi(BonDeTravail)
         QtCore.QMetaObject.connectSlotsByName(BonDeTravail)
+
+    def addTechDialog(self):
+        # Methode ouvrant la fenetre pop-up pour demander le mot de passe
+        self.addTech = QInputDialog()
+        self.addTech.setStyleSheet("QPushButton {\n"
+                                   "color: black;\n"
+                                   "background-color:rgb(245, 245, 245);\n"
+                                   "border-width: 1px;\n"
+                                   "border-color: grey;\n"
+                                   "border-style: solid;\n"
+                                   "border-radius: 4px;\n"
+                                   "padding: 3px;\n"
+                                   "font: bold 12px;\n"
+                                   "padding-left: 5px;\n"
+                                   "padding-right: 5px;\n"
+                                   "min-width: 80px;\n"
+                                   "max-width:220px;\n"
+                                   "min-height: 30px;\n"
+                                   "max-height: 30px;\n"
+                                   "}\n")
+        self.addTech.setCancelButtonText("Annuler")
+        self.addTech.setLabelText("Veuillez entrer le nom et prénom du technicien :")
+        self.addTech.setWindowTitle("SIMM 2.0")
+        retour = self.addTech.exec()
+        if (retour == QInputDialog.Accepted):
+                if (self.addTech.textValue() != ""):
+                        print(str(self.addTech.textValue()))
+                        self.comboBoxNomTech.addItem(self.addTech.textValue())
+                else:
+                        pass
+
 
     def retranslateUi(self, BonDeTravail):
         _translate = QtCore.QCoreApplication.translate
@@ -868,6 +911,7 @@ class Ui_BonDeTravail(object):
         self.labelNomPiece.setText(_translate("BonDeTravail", "Nom de la pièce"))
         self.labelNomPiece_2.setText(_translate("BonDeTravail", "Nombre de pièces"))
         self.pushButtonValider.setText(_translate("BonDeTravail", "Valider"))
+        self.pushButtonGestionTech.setText(_translate("BonDeTravail", "Ajouter technicien"))
         item = self.tableWidgetPiecesAssociees.horizontalHeaderItem(0)
         item.setText(_translate("BonDeTravail", "Categorie"))
         item = self.tableWidgetPiecesAssociees.horizontalHeaderItem(1)
@@ -876,7 +920,7 @@ class Ui_BonDeTravail(object):
         item.setText(_translate("BonDeTravail", "Nombre"))
         self.labelBonTravail.setText(_translate("BonDeTravail", "ID bon de travail"))
         self.labelNomTechnicien.setText(_translate("BonDeTravail", "Nom du technicien"))
-        self.comboBoxNomTech.setItemText(0, _translate("BonDeTravail", "Kerlin Hyppolite"))
+        # self.comboBoxNomTech.setItemText(0, _translate("BonDeTravail", "Kerlin Hyppolite"))
         self.labelCacheNomTech.setText(_translate("BonDeTravail", "Ce que j\'ai écrit"))
         self.labelDate.setText(_translate("BonDeTravail", "Date"))
         self.dateEdit.setDisplayFormat(_translate("BonDeTravail", "dd-MM-yyyy"))
@@ -890,4 +934,3 @@ class Ui_BonDeTravail(object):
         self.labelCacheDescInt.setText(_translate("BonDeTravail", "Description Intervention"))
         self.comboBoxOuvertFerme.setItemText(0, _translate("BonDeTravail", "Ouvert"))
         self.comboBoxOuvertFerme.setItemText(1, _translate("BonDeTravail", "Fermé"))
-
