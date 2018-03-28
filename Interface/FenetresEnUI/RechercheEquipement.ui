@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0" idbasedtr="false">
  <class>Form</class>
  <widget class="QWidget" name="Form">
   <property name="windowModality">
@@ -68,7 +68,37 @@ background-color: rgb(193, 213, 243);
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="2" column="1">
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelEtatService">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
+         <property name="text">
+          <string>État de service</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelNumeroSerie">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
+         <property name="text">
+          <string>Numéro de série</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
         <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -84,58 +114,7 @@ background-color: rgb(193, 213, 243);
          </property>
         </spacer>
        </item>
-       <item row="3" column="2">
-        <widget class="QComboBox" name="comboBoxCentreService">
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QLabel" name="labelCentreService">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background: white;</string>
-         </property>
-         <property name="text">
-          <string>Centre de service</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QComboBox" name="comboBoxEtatService">
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>250</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="2">
+       <item row="7" column="2">
         <widget class="QComboBox" name="comboBoxProvenance">
          <property name="minimumSize">
           <size>
@@ -166,8 +145,8 @@ background-color: rgb(193, 213, 243);
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="labelEtatService">
+       <item row="3" column="2">
+        <widget class="QLabel" name="labelCentreService">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -177,11 +156,11 @@ background-color: rgb(193, 213, 243);
           <string notr="true">background: white;</string>
          </property>
          <property name="text">
-          <string>État de service</string>
+          <string>Centre de service</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="2">
+       <item row="6" column="2">
         <widget class="QLabel" name="labelProvenance">
          <property name="font">
           <font>
@@ -193,6 +172,21 @@ background-color: rgb(193, 213, 243);
          </property>
          <property name="text">
           <string>Provenance</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QComboBox" name="comboBoxCentreService">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
          </property>
         </widget>
        </item>
@@ -222,6 +216,72 @@ background-color: rgb(193, 213, 243);
           </font>
          </property>
         </widget>
+       </item>
+       <item row="1" column="6">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="0">
+        <widget class="QComboBox" name="comboBoxSalle">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="3">
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item row="1" column="5">
         <widget class="QPushButton" name="boutonNouvelleRecherche">
@@ -253,100 +313,7 @@ recherche</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
-        <widget class="QLineEdit" name="lineEditNumeroSerie">
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>250</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">padding: 1px;
-border-style: solid;
-border: 1px solid gray;
-border-radius: 4px;
-background:rgb(247,247,247);</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="labelNumeroSerie">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background: white;</string>
-         </property>
-         <property name="text">
-          <string>Numéro de série</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="6">
-        <spacer name="horizontalSpacer_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="3">
-        <spacer name="horizontalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="5" column="0">
-        <widget class="QComboBox" name="comboBoxSalle">
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>250</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
+       <item row="6" column="0">
         <widget class="QLabel" name="labelSalle">
          <property name="font">
           <font>
@@ -361,55 +328,7 @@ background:rgb(247,247,247);</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="4">
-        <widget class="QPushButton" name="boutonActualiser">
-         <property name="minimumSize">
-          <size>
-           <width>47</width>
-           <height>43</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>47</width>
-           <height>43</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png</normaloff>SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="7" column="0">
+       <item row="9" column="0">
         <widget class="QTextEdit" name="lineEditNombreDeResultats">
          <property name="enabled">
           <bool>true</bool>
@@ -446,6 +365,87 @@ background:rgb(247,247,247);</string>
          </property>
          <property name="tabStopWidth">
           <number>80</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QComboBox" name="comboBoxEtatService">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLineEdit" name="lineEditNumeroSerie">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 4px;
+background:rgb(247,247,247);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="5">
+        <widget class="QPushButton" name="boutonActualiser">
+         <property name="minimumSize">
+          <size>
+           <width>47</width>
+           <height>43</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>47</width>
+           <height>43</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png</normaloff>SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -575,6 +575,11 @@ background:rgb(247,247,247);</string>
      </column>
      <column>
       <property name="text">
+       <string>État de service</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
        <string>Marque</string>
       </property>
      </column>
@@ -611,11 +616,6 @@ background:rgb(247,247,247);</string>
      <column>
       <property name="text">
        <string>Provenance</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>État de service</string>
       </property>
      </column>
      <column>
