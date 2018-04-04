@@ -1,5 +1,5 @@
 _default:
-  1: !!python/object/new:tinydb.database.Element
+  1: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
@@ -20,8 +20,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 1
-  2: !!python/object/new:tinydb.database.Element
+      doc_id: 1
+  2: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
@@ -41,8 +41,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 2
-  3: !!python/object/new:tinydb.database.Element
+      doc_id: 2
+  3: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
@@ -63,8 +63,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 3
-  4: !!python/object/new:tinydb.database.Element
+      doc_id: 3
+  4: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Inconnu
@@ -84,8 +84,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 4
-  6: !!python/object/new:tinydb.database.Element
+      doc_id: 4
+  6: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Radiologie
@@ -105,8 +105,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 6
-  7: !!python/object/new:tinydb.database.Element
+      doc_id: 6
+  7: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Appareil de radiographie
       CentreService: Radiologie
@@ -127,8 +127,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 7
-  8: !!python/object/new:tinydb.database.Element
+      doc_id: 7
+  8: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "N\xE9gatoscope (moniteur de radiographie)"
       CentreService: Radiologie
@@ -147,8 +147,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 8
-  9: !!python/object/new:tinydb.database.Element
+      doc_id: 8
+  9: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Appareil de radiographie
       CentreService: Radiologie
@@ -168,8 +168,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 9
-  10: !!python/object/new:tinydb.database.Element
+      doc_id: 9
+  10: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
@@ -197,8 +197,8 @@ _default:
       - !!binary |
         AAkAAAAA
     state:
-      eid: 10
-  11: !!python/object/new:tinydb.database.Element
+      doc_id: 10
+  11: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Microscope
       CentreService: Laboratoire
@@ -217,8 +217,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 11
-  12: !!python/object/new:tinydb.database.Element
+      doc_id: 11
+  12: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Microscope
       CentreService: Laboratoire
@@ -237,8 +237,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 12
-  13: !!python/object/new:tinydb.database.Element
+      doc_id: 12
+  13: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Microscope
       CentreService: Laboratoire
@@ -257,8 +257,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 13
-  14: !!python/object/new:tinydb.database.Element
+      doc_id: 13
+  14: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Microscope
       CentreService: Laboratoire
@@ -278,8 +278,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 14
-  15: !!python/object/new:tinydb.database.Element
+      doc_id: 14
+  15: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
@@ -298,8 +298,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 15
-  16: !!python/object/new:tinydb.database.Element
+      doc_id: 15
+  16: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
@@ -323,8 +323,8 @@ _default:
       - !!binary |
         AAQAAAAA
     state:
-      eid: 16
-  17: !!python/object/new:tinydb.database.Element
+      doc_id: 16
+  17: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
@@ -347,8 +347,8 @@ _default:
       - !!binary |
         AAMAAAAA
     state:
-      eid: 17
-  18: !!python/object/new:tinydb.database.Element
+      doc_id: 17
+  18: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table de chirurgie
       CentreService: "Bloc op\xE9ratoire"
@@ -369,8 +369,8 @@ _default:
       - !!binary |
         AAMAAAAA
     state:
-      eid: 18
-  19: !!python/object/new:tinydb.database.Element
+      doc_id: 18
+  19: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: "Bloc op\xE9ratoire"
@@ -389,8 +389,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 19
-  20: !!python/object/new:tinydb.database.Element
+      doc_id: 19
+  20: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lit
       CentreService: "Bloc op\xE9ratoire"
@@ -409,8 +409,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 20
-  21: !!python/object/new:tinydb.database.Element
+      doc_id: 20
+  21: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Appareil d'anesth\xE9sie"
       CentreService: "Bloc op\xE9ratoire"
@@ -430,8 +430,8 @@ _default:
       - !!binary |
         AA0AAAAA
     state:
-      eid: 21
-  22: !!python/object/new:tinydb.database.Element
+      doc_id: 21
+  22: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -455,8 +455,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 22
-  23: !!python/object/new:tinydb.database.Element
+      doc_id: 22
+  23: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -481,8 +481,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 23
-  24: !!python/object/new:tinydb.database.Element
+      doc_id: 23
+  24: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -504,8 +504,8 @@ _default:
       - !!binary |
         AAMAAAAA
     state:
-      eid: 24
-  25: !!python/object/new:tinydb.database.Element
+      doc_id: 24
+  25: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: "Bloc op\xE9ratoire"
@@ -534,8 +534,8 @@ _default:
       - !!binary |
         AAgAAAAA
     state:
-      eid: 25
-  26: !!python/object/new:tinydb.database.Element
+      doc_id: 25
+  26: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: "Bloc op\xE9ratoire"
@@ -556,8 +556,8 @@ _default:
       - !!binary |
         AAgAAAAA
     state:
-      eid: 26
-  28: !!python/object/new:tinydb.database.Element
+      doc_id: 26
+  28: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -586,8 +586,8 @@ _default:
       - !!binary |
         AAMAAAAA
     state:
-      eid: 28
-  29: !!python/object/new:tinydb.database.Element
+      doc_id: 28
+  29: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -608,8 +608,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 29
-  30: !!python/object/new:tinydb.database.Element
+      doc_id: 29
+  30: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: Urgences
@@ -628,8 +628,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 30
-  31: !!python/object/new:tinydb.database.Element
+      doc_id: 30
+  31: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Analyseur h\xE9matologie"
       CentreService: Urgences
@@ -648,8 +648,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 31
-  32: !!python/object/new:tinydb.database.Element
+      doc_id: 31
+  32: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "Centre Pr\xE9natal"
@@ -668,8 +668,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 32
-  33: !!python/object/new:tinydb.database.Element
+      doc_id: 32
+  33: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: "Centre Pr\xE9natal"
@@ -688,8 +688,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 33
-  34: !!python/object/new:tinydb.database.Element
+      doc_id: 33
+  34: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: "Centre Pr\xE9natal"
@@ -708,8 +708,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 34
-  35: !!python/object/new:tinydb.database.Element
+      doc_id: 34
+  35: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: "P\xE9diatrie"
@@ -729,8 +729,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 35
-  36: !!python/object/new:tinydb.database.Element
+      doc_id: 35
+  36: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Chaise dentiste
       CentreService: Clinique externe
@@ -750,8 +750,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 36
-  37: !!python/object/new:tinydb.database.Element
+      doc_id: 36
+  37: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Clinique externe
@@ -770,8 +770,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 37
-  38: !!python/object/new:tinydb.database.Element
+      doc_id: 37
+  38: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "R\xE9frig\xE9rateur"
       CentreService: Don de sang
@@ -790,8 +790,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 38
-  39: !!python/object/new:tinydb.database.Element
+      doc_id: 38
+  39: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Autre
       CentreService: Don de sang
@@ -810,8 +810,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 39
-  40: !!python/object/new:tinydb.database.Element
+      doc_id: 39
+  40: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "R\xE9frig\xE9rateur"
       CentreService: Don de sang
@@ -831,8 +831,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 40
-  41: !!python/object/new:tinydb.database.Element
+      doc_id: 40
+  41: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: "P\xE9diatrie"
@@ -858,8 +858,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 41
-  42: !!python/object/new:tinydb.database.Element
+      doc_id: 41
+  42: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: "P\xE9diatrie"
@@ -881,8 +881,8 @@ _default:
       - !!binary |
         AAQAAAAA
     state:
-      eid: 42
-  43: !!python/object/new:tinydb.database.Element
+      doc_id: 42
+  43: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Incubateur
       CentreService: Laboratoire
@@ -905,8 +905,8 @@ _default:
       - !!binary |
         AAgAAAAA
     state:
-      eid: 43
-  45: !!python/object/new:tinydb.database.Element
+      doc_id: 43
+  45: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
@@ -926,8 +926,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 45
-  46: !!python/object/new:tinydb.database.Element
+      doc_id: 45
+  46: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "D\xE9fibrilateur"
       CentreService: Urgences
@@ -946,8 +946,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 46
-  48: !!python/object/new:tinydb.database.Element
+      doc_id: 46
+  48: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Inconnu
@@ -966,8 +966,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 48
-  49: !!python/object/new:tinydb.database.Element
+      doc_id: 48
+  49: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Inconnu
@@ -986,8 +986,8 @@ _default:
       - !!binary |
         AAMAAAAA
     state:
-      eid: 49
-  50: !!python/object/new:tinydb.database.Element
+      doc_id: 49
+  50: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Thermom\xE8tre"
       CentreService: Inconnu
@@ -1007,8 +1007,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 50
-  52: !!python/object/new:tinydb.database.Element
+      doc_id: 50
+  52: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
       CentreService: Urgences
@@ -1028,8 +1028,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 52
-  53: !!python/object/new:tinydb.database.Element
+      doc_id: 52
+  53: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
       CentreService: Urgences
@@ -1050,8 +1050,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 53
-  54: !!python/object/new:tinydb.database.Element
+      doc_id: 53
+  54: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "N\xE9bulisateur"
       CentreService: Inconnu
@@ -1070,8 +1070,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 54
-  55: !!python/object/new:tinydb.database.Element
+      doc_id: 54
+  55: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Balance
       CentreService: Don de sang
@@ -1091,8 +1091,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 55
-  56: !!python/object/new:tinydb.database.Element
+      doc_id: 55
+  56: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Centrifugeuse
       CentreService: Don de sang
@@ -1112,8 +1112,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 56
-  57: !!python/object/new:tinydb.database.Element
+      doc_id: 56
+  57: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -1135,8 +1135,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 57
-  58: !!python/object/new:tinydb.database.Element
+      doc_id: 57
+  58: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "Centre Pr\xE9natal"
@@ -1155,8 +1155,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 58
-  59: !!python/object/new:tinydb.database.Element
+      doc_id: 58
+  59: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "Centre Pr\xE9natal"
@@ -1175,8 +1175,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 59
-  60: !!python/object/new:tinydb.database.Element
+      doc_id: 59
+  60: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -1196,8 +1196,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 60
-  61: !!python/object/new:tinydb.database.Element
+      doc_id: 60
+  61: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -1217,8 +1217,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 61
-  62: !!python/object/new:tinydb.database.Element
+      doc_id: 61
+  62: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -1238,8 +1238,8 @@ _default:
       - !!binary |
         AAQAAAAA
     state:
-      eid: 62
-  63: !!python/object/new:tinydb.database.Element
+      doc_id: 62
+  63: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -1261,8 +1261,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 63
-  64: !!python/object/new:tinydb.database.Element
+      doc_id: 63
+  64: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -1288,8 +1288,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 64
-  66: !!python/object/new:tinydb.database.Element
+      doc_id: 64
+  66: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Incubateur n\xE9onatal"
       CentreService: "P\xE9diatrie"
@@ -1313,8 +1313,8 @@ _default:
       - !!binary |
         AAYAAAAA
     state:
-      eid: 66
-  67: !!python/object/new:tinydb.database.Element
+      doc_id: 66
+  67: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Incubateur n\xE9onatal"
       CentreService: "P\xE9diatrie"
@@ -1337,8 +1337,8 @@ _default:
       - !!binary |
         AAgAAAAA
     state:
-      eid: 67
-  70: !!python/object/new:tinydb.database.Element
+      doc_id: 67
+  70: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Inconnu
@@ -1364,8 +1364,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 70
-  71: !!python/object/new:tinydb.database.Element
+      doc_id: 70
+  71: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
       CentreService: Urgences
@@ -1391,8 +1391,8 @@ _default:
       - !!binary |
         AAMAAAAA
     state:
-      eid: 71
-  72: !!python/object/new:tinydb.database.Element
+      doc_id: 71
+  72: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: "P\xE9diatrie"
@@ -1412,8 +1412,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 72
-  73: !!python/object/new:tinydb.database.Element
+      doc_id: 72
+  73: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: "P\xE9diatrie"
@@ -1432,8 +1432,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 73
-  75: !!python/object/new:tinydb.database.Element
+      doc_id: 73
+  75: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Table de soins n\xE9onataux"
       CentreService: "Maternit\xE9"
@@ -1453,8 +1453,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 75
-  77: !!python/object/new:tinydb.database.Element
+      doc_id: 75
+  77: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -1476,8 +1476,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 77
-  79: !!python/object/new:tinydb.database.Element
+      doc_id: 77
+  79: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
@@ -1498,8 +1498,8 @@ _default:
       - !!binary |
         AAkAAAAA
     state:
-      eid: 79
-  80: !!python/object/new:tinydb.database.Element
+      doc_id: 79
+  80: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
@@ -1519,8 +1519,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 80
-  82: !!python/object/new:tinydb.database.Element
+      doc_id: 80
+  82: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: "Maternit\xE9"
@@ -1540,8 +1540,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 82
-  83: !!python/object/new:tinydb.database.Element
+      doc_id: 82
+  83: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -1561,8 +1561,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 83
-  84: !!python/object/new:tinydb.database.Element
+      doc_id: 83
+  84: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -1583,8 +1583,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 84
-  85: !!python/object/new:tinydb.database.Element
+      doc_id: 84
+  85: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
@@ -1603,8 +1603,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 85
-  86: !!python/object/new:tinydb.database.Element
+      doc_id: 85
+  86: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
@@ -1625,8 +1625,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 86
-  87: !!python/object/new:tinydb.database.Element
+      doc_id: 86
+  87: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
@@ -1645,8 +1645,8 @@ _default:
       - !!binary |
         AAQAAAAA
     state:
-      eid: 87
-  88: !!python/object/new:tinydb.database.Element
+      doc_id: 87
+  88: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
@@ -1665,8 +1665,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 88
-  89: !!python/object/new:tinydb.database.Element
+      doc_id: 88
+  89: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
@@ -1685,8 +1685,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 89
-  90: !!python/object/new:tinydb.database.Element
+      doc_id: 89
+  90: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
@@ -1708,8 +1708,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 90
-  91: !!python/object/new:tinydb.database.Element
+      doc_id: 90
+  91: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -1728,8 +1728,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 91
-  92: !!python/object/new:tinydb.database.Element
+      doc_id: 91
+  92: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -1748,8 +1748,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 92
-  93: !!python/object/new:tinydb.database.Element
+      doc_id: 92
+  93: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Medecine interne
@@ -1769,8 +1769,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 93
-  94: !!python/object/new:tinydb.database.Element
+      doc_id: 93
+  94: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: "P\xE9diatrie"
@@ -1789,8 +1789,8 @@ _default:
       - !!binary |
         AAQAAAAA
     state:
-      eid: 94
-  95: !!python/object/new:tinydb.database.Element
+      doc_id: 94
+  95: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
@@ -1809,8 +1809,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 95
-  96: !!python/object/new:tinydb.database.Element
+      doc_id: 95
+  96: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Urgences
@@ -1830,8 +1830,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 96
-  97: !!python/object/new:tinydb.database.Element
+      doc_id: 96
+  97: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
@@ -1850,30 +1850,30 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 97
-  99: !!python/object/new:tinydb.database.Element
+      doc_id: 97
+  99: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
       CentreService: "Bloc op\xE9ratoire"
-      Date: 2015-08-25
+      Date: 2016-08-25
       DescriptionIntervention: "\"La pompe est d\xE9fectueuse,  la carte \xE9lectronique\
         \ aussi,  rien a faire pour cet appareil\""
       DescriptionSituation: "V\xE9rification et diagnostic avec les techniciens de\
         \ sainte justine"
-      EtatBDT: "Ferm\xE9"
+      EtatBDT: Ouvert
       ID-BDT: '1'
       ID-EQ: '180'
       Marque: GOMCO
       Modele: '6003'
-      NomTechnicien: Kerlin Hyppolite
+      NomTechnicien: ''
       Pieces: []
       Salle: SOP
       TempsEstime: !!python/object/apply:datetime.time
       - !!binary |
         AAIAAAAA
     state:
-      eid: 99
-  100: !!python/object/new:tinydb.database.Element
+      doc_id: 99
+  100: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Incubateur
       CentreService: Laboratoire
@@ -1893,8 +1893,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 100
-  101: !!python/object/new:tinydb.database.Element
+      doc_id: 100
+  101: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Centrifugeuse
       CentreService: Inconnu
@@ -1915,8 +1915,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 101
-  102: !!python/object/new:tinydb.database.Element
+      doc_id: 101
+  102: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Incubateur n\xE9onatal"
       CentreService: "P\xE9diatrie"
@@ -1939,8 +1939,8 @@ _default:
       - !!binary |
         AAYAAAAA
     state:
-      eid: 102
-  103: !!python/object/new:tinydb.database.Element
+      doc_id: 102
+  103: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Incubateur n\xE9onatal"
       CentreService: "P\xE9diatrie"
@@ -1961,8 +1961,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 103
-  105: !!python/object/new:tinydb.database.Element
+      doc_id: 103
+  105: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: "Maternit\xE9"
@@ -1983,8 +1983,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 105
-  106: !!python/object/new:tinydb.database.Element
+      doc_id: 105
+  106: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Medecine interne
@@ -2003,8 +2003,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 106
-  107: !!python/object/new:tinydb.database.Element
+      doc_id: 106
+  107: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
@@ -2023,8 +2023,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 107
-  108: !!python/object/new:tinydb.database.Element
+      doc_id: 107
+  108: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
@@ -2043,8 +2043,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 108
-  109: !!python/object/new:tinydb.database.Element
+      doc_id: 108
+  109: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2063,8 +2063,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 109
-  111: !!python/object/new:tinydb.database.Element
+      doc_id: 109
+  111: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Inconnu
@@ -2084,8 +2084,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 111
-  112: !!python/object/new:tinydb.database.Element
+      doc_id: 111
+  112: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Otoscope
       CentreService: "Maternit\xE9"
@@ -2106,8 +2106,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 112
-  113: !!python/object/new:tinydb.database.Element
+      doc_id: 112
+  113: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Incubateur
       CentreService: Don de sang
@@ -2126,8 +2126,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 113
-  114: !!python/object/new:tinydb.database.Element
+      doc_id: 113
+  114: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Plaque chauffante
       CentreService: Laboratoire
@@ -2146,8 +2146,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 114
-  115: !!python/object/new:tinydb.database.Element
+      doc_id: 114
+  115: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Bain chauffant
       CentreService: Laboratoire
@@ -2168,8 +2168,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 115
-  116: !!python/object/new:tinydb.database.Element
+      doc_id: 115
+  116: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
@@ -2188,8 +2188,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 116
-  117: !!python/object/new:tinydb.database.Element
+      doc_id: 116
+  117: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2208,8 +2208,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 117
-  118: !!python/object/new:tinydb.database.Element
+      doc_id: 117
+  118: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2230,8 +2230,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 118
-  119: !!python/object/new:tinydb.database.Element
+      doc_id: 118
+  119: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2252,8 +2252,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 119
-  120: !!python/object/new:tinydb.database.Element
+      doc_id: 119
+  120: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
@@ -2273,8 +2273,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 120
-  121: !!python/object/new:tinydb.database.Element
+      doc_id: 120
+  121: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
@@ -2293,8 +2293,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 121
-  122: !!python/object/new:tinydb.database.Element
+      doc_id: 121
+  122: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
@@ -2314,8 +2314,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 122
-  123: !!python/object/new:tinydb.database.Element
+      doc_id: 122
+  123: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Bain chauffant
       CentreService: Laboratoire
@@ -2336,8 +2336,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 123
-  124: !!python/object/new:tinydb.database.Element
+      doc_id: 123
+  124: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Support \xE0 solut\xE9s"
       CentreService: "P\xE9diatrie"
@@ -2356,8 +2356,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 124
-  125: !!python/object/new:tinydb.database.Element
+      doc_id: 124
+  125: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "P\xE9diatrie"
@@ -2378,8 +2378,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 125
-  126: !!python/object/new:tinydb.database.Element
+      doc_id: 125
+  126: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "P\xE9diatrie"
@@ -2399,8 +2399,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 126
-  127: !!python/object/new:tinydb.database.Element
+      doc_id: 126
+  127: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Bain chauffant
       CentreService: Laboratoire
@@ -2420,8 +2420,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 127
-  128: !!python/object/new:tinydb.database.Element
+      doc_id: 127
+  128: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Balance p\xE9diatrique"
       CentreService: "P\xE9diatrie"
@@ -2440,8 +2440,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 128
-  129: !!python/object/new:tinydb.database.Element
+      doc_id: 128
+  129: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table d'examen
       CentreService: "R\xE9adaptation"
@@ -2460,8 +2460,8 @@ _default:
       - !!binary |
         AAUAAAAA
     state:
-      eid: 129
-  130: !!python/object/new:tinydb.database.Element
+      doc_id: 129
+  130: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Concentrateur d'oxyg\xE8ne"
       CentreService: Urgences
@@ -2482,8 +2482,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 130
-  132: !!python/object/new:tinydb.database.Element
+      doc_id: 130
+  132: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Centrifugeuse
       CentreService: Laboratoire
@@ -2502,8 +2502,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 132
-  133: !!python/object/new:tinydb.database.Element
+      doc_id: 132
+  133: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: "Maternit\xE9"
@@ -2526,8 +2526,8 @@ _default:
       - !!binary |
         AAMAAAAA
     state:
-      eid: 133
-  134: !!python/object/new:tinydb.database.Element
+      doc_id: 133
+  134: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "P\xE9diatrie"
@@ -2546,8 +2546,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 134
-  135: !!python/object/new:tinydb.database.Element
+      doc_id: 134
+  135: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2567,8 +2567,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 135
-  136: !!python/object/new:tinydb.database.Element
+      doc_id: 135
+  136: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2587,8 +2587,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 136
-  137: !!python/object/new:tinydb.database.Element
+      doc_id: 136
+  137: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: "Bloc op\xE9ratoire"
@@ -2610,8 +2610,8 @@ _default:
       - !!binary |
         AAYAAAAA
     state:
-      eid: 137
-  138: !!python/object/new:tinydb.database.Element
+      doc_id: 137
+  138: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: "Bloc op\xE9ratoire"
@@ -2633,8 +2633,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 138
-  139: !!python/object/new:tinydb.database.Element
+      doc_id: 138
+  139: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "St\xE9rilisateur \xE0 vapeur"
       CentreService: "Bloc op\xE9ratoire"
@@ -2660,8 +2660,8 @@ _default:
       - !!binary |
         ABEAAAAA
     state:
-      eid: 139
-  140: !!python/object/new:tinydb.database.Element
+      doc_id: 139
+  140: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Ordinateur
       CentreService: Pharmacie
@@ -2680,8 +2680,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 140
-  141: !!python/object/new:tinydb.database.Element
+      doc_id: 140
+  141: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2700,8 +2700,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 141
-  142: !!python/object/new:tinydb.database.Element
+      doc_id: 141
+  142: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -2720,8 +2720,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 142
-  143: !!python/object/new:tinydb.database.Element
+      doc_id: 142
+  143: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur PNI
       CentreService: Urgences
@@ -2740,8 +2740,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 143
-  144: !!python/object/new:tinydb.database.Element
+      doc_id: 143
+  144: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Saturom\xE8tre (Oxym\xE8tre)"
       CentreService: "P\xE9diatrie"
@@ -2760,8 +2760,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 144
-  145: !!python/object/new:tinydb.database.Element
+      doc_id: 144
+  145: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Thermom\xE8tre"
       CentreService: Urgences
@@ -2782,8 +2782,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 145
-  146: !!python/object/new:tinydb.database.Element
+      doc_id: 145
+  146: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Table de chirurgie
       CentreService: "Bloc op\xE9ratoire"
@@ -2804,8 +2804,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 146
-  147: !!python/object/new:tinydb.database.Element
+      doc_id: 146
+  147: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lit
       CentreService: "Maternit\xE9"
@@ -2824,8 +2824,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 147
-  148: !!python/object/new:tinydb.database.Element
+      doc_id: 147
+  148: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Medecine interne
@@ -2844,8 +2844,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 148
-  150: !!python/object/new:tinydb.database.Element
+      doc_id: 148
+  150: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -2864,8 +2864,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 150
-  151: !!python/object/new:tinydb.database.Element
+      doc_id: 150
+  151: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: "Maternit\xE9"
@@ -2884,8 +2884,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 151
-  152: !!python/object/new:tinydb.database.Element
+      doc_id: 151
+  152: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Lampe d'examen
       CentreService: Urgences
@@ -2904,8 +2904,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 152
-  153: !!python/object/new:tinydb.database.Element
+      doc_id: 152
+  153: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "N\xE9bulisateur"
       CentreService: "Bloc op\xE9ratoire"
@@ -2925,8 +2925,8 @@ _default:
       - !!binary |
         AAAAAAAA
     state:
-      eid: 153
-  154: !!python/object/new:tinydb.database.Element
+      doc_id: 153
+  154: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Medecine interne
@@ -2945,8 +2945,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 154
-  155: !!python/object/new:tinydb.database.Element
+      doc_id: 154
+  155: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Thermom\xE8tre"
       CentreService: Urgences
@@ -2967,8 +2967,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 155
-  156: !!python/object/new:tinydb.database.Element
+      doc_id: 155
+  156: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
@@ -2990,8 +2990,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 156
-  157: !!python/object/new:tinydb.database.Element
+      doc_id: 156
+  157: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Tensiom\xE8tre"
       CentreService: Urgences
@@ -3011,8 +3011,8 @@ _default:
       - !!binary |
         AAIAAAAA
     state:
-      eid: 157
-  158: !!python/object/new:tinydb.database.Element
+      doc_id: 157
+  158: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Appareil de radiographie
       CentreService: Radiologie
@@ -3032,8 +3032,8 @@ _default:
       - !!binary |
         AAgAAAAA
     state:
-      eid: 158
-  159: !!python/object/new:tinydb.database.Element
+      doc_id: 158
+  159: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Appareil d'\xE9lectrochirurgie"
       CentreService: "Bloc op\xE9ratoire"
@@ -3053,8 +3053,8 @@ _default:
       - !!binary |
         AAQAAAAA
     state:
-      eid: 159
-  160: !!python/object/new:tinydb.database.Element
+      doc_id: 159
+  160: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "Appareil \xE0 succion"
       CentreService: "Bloc op\xE9ratoire"
@@ -3075,8 +3075,8 @@ _default:
       - !!binary |
         AAgAAAAA
     state:
-      eid: 160
-  161: !!python/object/new:tinydb.database.Element
+      doc_id: 160
+  161: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Moniteur physiologique
       CentreService: Urgences
@@ -3096,8 +3096,8 @@ _default:
       - !!binary |
         AAgAAAAA
     state:
-      eid: 161
-  162: !!python/object/new:tinydb.database.Element
+      doc_id: 161
+  162: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "R\xE9frig\xE9rateur"
       CentreService: Don de sang
@@ -3118,8 +3118,8 @@ _default:
       - !!binary |
         AAEAAAAA
     state:
-      eid: 162
-  163: !!python/object/new:tinydb.database.Element
+      doc_id: 162
+  163: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: "R\xE9frig\xE9rateur"
       CentreService: Don de sang
@@ -3138,8 +3138,8 @@ _default:
       - !!binary |
         AB4AAAAA
     state:
-      eid: 163
-  164: !!python/object/new:tinydb.database.Element
+      doc_id: 163
+  164: !!python/object/new:tinydb.database.Document
     dictitems:
       CategorieEquipement: Balance
       CentreService: Don de sang
@@ -3159,21 +3159,44 @@ _default:
       - !!binary |
         AB4AAAAA
     state:
-      eid: 164
-  165:
-    CategorieEquipement: "R\xE9frig\xE9rateur"
-    CentreService: Don de sang
-    Date: 2016-08-08
-    DescriptionIntervention: 'On essaie de trouver du gaz propane. '
-    DescriptionSituation: Il ne fonctionne pas
-    EtatBDT: Ouvert
-    ID-BDT: '1'
-    ID-EQ: '495'
-    Marque: SIBIR
-    Modele: ''
-    NomTechnicien: Kerlin Hyppolite
-    Pieces: []
-    Salle: Inconnue
-    TempsEstime: !!python/object/apply:datetime.time
-    - !!binary |
-      AB4AAAAA
+      doc_id: 164
+  165: !!python/object/new:tinydb.database.Document
+    dictitems:
+      CategorieEquipement: "R\xE9frig\xE9rateur"
+      CentreService: Don de sang
+      Date: 2016-08-08
+      DescriptionIntervention: 'On essaie de trouver du gaz propane. '
+      DescriptionSituation: Il ne fonctionne pas
+      EtatBDT: Ouvert
+      ID-BDT: '1'
+      ID-EQ: '495'
+      Marque: SIBIR
+      Modele: ''
+      NomTechnicien: Kerlin Hyppolite
+      Pieces: []
+      Salle: Inconnue
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        AB4AAAAA
+    state:
+      doc_id: 165
+  166: !!python/object/new:tinydb.database.Document
+    dictitems:
+      CategorieEquipement: "Appareil \xE0 succion"
+      CentreService: "Bloc op\xE9ratoire"
+      Date: 2018-04-04
+      DescriptionIntervention: ''
+      DescriptionSituation: "Fictif : changer les batteries de l'appareil \xE0 succion"
+      EtatBDT: "Ferm\xE9"
+      ID-BDT: '1'
+      ID-EQ: '178'
+      Marque: Sorensen
+      Modele: 2150x
+      NomTechnicien: ''
+      Pieces: []
+      Salle: SOP
+      TempsEstime: !!python/object/apply:datetime.time
+      - !!binary |
+        AAIAAAAA
+    state:
+      doc_id: 166

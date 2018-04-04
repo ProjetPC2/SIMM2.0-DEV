@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0" idbasedtr="false">
  <class>AjoutEquipement</class>
  <widget class="QWidget" name="AjoutEquipement">
   <property name="geometry">
@@ -34,6 +34,59 @@
    <string notr="true">background:white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="layoutTitre">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background:white;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>Images/add1.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="titreModificationEquipement">
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: white;</string>
+       </property>
+       <property name="text">
+        <string>Ajout d'équipement</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
    <item row="2" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
@@ -416,65 +469,18 @@ background-color: rgb(193, 213, 243);
      </item>
     </layout>
    </item>
-   <item row="0" column="0" colspan="2">
-    <layout class="QHBoxLayout" name="layoutTitre">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="styleSheet">
-        <string notr="true">background:white;</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>Images/add1.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="titreModificationEquipement">
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <italic>false</italic>
-         <bold>true</bold>
-         <underline>false</underline>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: white;</string>
-       </property>
-       <property name="text">
-        <string>Ajout d'équipement</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </item>
    <item row="1" column="1">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <layout class="QVBoxLayout" name="layoutTitreLables">
        <item>
         <widget class="QLabel" name="label_34">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -493,6 +499,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_37">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -511,6 +523,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_36">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -529,6 +547,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_35">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -547,6 +571,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_30">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -565,6 +595,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_31">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -583,6 +619,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_33">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -601,6 +643,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_29">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -619,6 +667,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_27">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -628,7 +682,28 @@ background-color: rgb(193, 213, 243);
           <string notr="true">background: white;</string>
          </property>
          <property name="text">
-          <string>Date du dernier entretien : </string>
+          <string>Date dernier entretien : </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Fréquence d'entretien (jours): </string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -637,6 +712,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_26">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -655,6 +736,12 @@ background-color: rgb(193, 213, 243);
        </item>
        <item>
         <widget class="QLabel" name="label_2">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -674,6 +761,12 @@ background-color: rgb(193, 213, 243);
       <layout class="QVBoxLayout" name="layoutChampsModifiables">
        <item>
         <widget class="QLabel" name="labelVide">
+         <property name="maximumSize">
+          <size>
+           <width>370</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -697,7 +790,7 @@ background-color: rgb(193, 213, 243);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -746,7 +839,7 @@ background-color: rgb(193, 213, 243);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -778,7 +871,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -810,7 +903,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -842,7 +935,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -895,7 +988,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -948,7 +1041,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>109</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -990,7 +1083,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>109</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1020,6 +1113,28 @@ background:rgb(247, 247, 247);
         </widget>
        </item>
        <item>
+        <widget class="QLineEdit" name="lineEditFreqEntretien">
+         <property name="maximumSize">
+          <size>
+           <width>370</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 8em;
+background:rgb(247, 247, 247);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QComboBox" name="comboBoxProvenance">
          <property name="minimumSize">
           <size>
@@ -1029,7 +1144,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1063,7 +1178,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>450</width>
+           <width>370</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1217,6 +1332,18 @@ background:rgb(247, 247, 247);</string>
          </property>
          <property name="text">
           <string>Ici Date du dernier entretien</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ici Fréquence d'entretien</string>
          </property>
         </widget>
        </item>
