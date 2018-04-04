@@ -57,6 +57,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
+#       Tenter de réparer ça ici (fréq entretien)
+
 
         #Creation des calendriers pour qu'ils soient dans la langue desiree
         calendrierAcquisition = QCalendarWidget()
