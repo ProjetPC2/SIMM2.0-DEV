@@ -1041,7 +1041,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>370</width>
+           <width>109</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1083,7 +1083,7 @@ background:rgb(247, 247, 247);
          </property>
          <property name="maximumSize">
           <size>
-           <width>370</width>
+           <width>109</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1336,7 +1336,7 @@ background:rgb(247, 247, 247);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="labelFreqEntretien">
          <property name="font">
           <font>
            <pointsize>10</pointsize>

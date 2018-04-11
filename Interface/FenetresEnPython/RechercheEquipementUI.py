@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'RechercheEquipement.ui'
 #
@@ -192,7 +192,7 @@ class Ui_RechercheEquipement(object):
         self.boutonActualiser.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.boutonActualiser.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("SIMM2.0-DEV-master (1)/SIMM2.0-DEV-master/Interface/FenetresEnUI/Images/refresh-button-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Desktop\SIMM2.0-DEV\Interface\Images/refresh-button-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.boutonActualiser.setIcon(icon)
         self.boutonActualiser.setIconSize(QtCore.QSize(32, 32))
         self.boutonActualiser.setObjectName("boutonActualiser")
@@ -318,7 +318,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
-    ui = Ui_Form()
+    ui = Ui_RechercheEquipement()
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
