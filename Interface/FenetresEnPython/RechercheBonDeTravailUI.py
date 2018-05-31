@@ -7,15 +7,17 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from win32api import GetSystemMetrics
+# from win32api import GetSystemMetrics
 
 class Ui_RechercheBonDeTravail(object):
     def setupUi(self, RechercheBonDeTravail):
         RechercheBonDeTravail.setObjectName("RechercheBonDeTravail")
+        '''
         width = GetSystemMetrics(0)
         heigth = GetSystemMetrics(1)
         facteur_grandissement = 0.80
         RechercheBonDeTravail.resize(facteur_grandissement*width, facteur_grandissement*heigth)
+        '''
         RechercheBonDeTravail.setMaximumSize(QtCore.QSize(11111112, 1111111))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../../../SIMM2.0-DEV/Interface/Images/PC2_logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)

@@ -98,7 +98,7 @@
             </property>
            </spacer>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonAccueil">
             <property name="maximumSize">
              <size>
@@ -150,7 +150,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
            </spacer>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonAjouterEquipement">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -203,7 +203,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonModifierConsulterEquipement">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -252,7 +252,7 @@ un équipement</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonRechercherEquipement">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -332,7 +332,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
         </item>
         <item>
          <layout class="QVBoxLayout" name="layoutBoutonBdT">
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonAjouterPiece">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -381,7 +381,7 @@ pièce</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonAjouterBonTravail">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -429,7 +429,7 @@ de travail</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonRechercherBonTravail">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -508,7 +508,7 @@ bon de travail</string>
             </property>
            </spacer>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonImprimerInventaire">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -557,7 +557,7 @@ l'inventaire</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonStatistiques">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -609,7 +609,7 @@ statistiques</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonRapport">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -678,7 +678,7 @@ QPushButton:pressed{ background-color: #cccccc; }</string>
         </item>
         <item>
          <layout class="QVBoxLayout" name="layoutBoutonSupport">
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="BoutonSupportTecnique">
             <property name="maximumSize">
              <size>

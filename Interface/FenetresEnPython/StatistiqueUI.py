@@ -7,15 +7,17 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from win32api import GetSystemMetrics
+# from win32api import GetSystemMetrics
 
 class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
+        '''
         width=GetSystemMetrics(0)
         heigth= GetSystemMetrics(1)
         facteur_grandissement= 0.80
         Statistique.resize(facteur_grandissement*width, facteur_grandissement*heigth)
+        '''
         #TODO modifier la taille maximale pour la ligne suivante
         Statistique.setMaximumSize(QtCore.QSize(11111112, 1111111))
         Statistique.setStyleSheet("QWidget{\n"
