@@ -21879,3 +21879,20 @@ _default:
       Salle: Inconnue
     state:
       doc_id: 1157
+  1158:
+    CategorieEquipement: Analyseur CD4 (VIH)
+    CentreService: Inconnu
+    CodeAsset: ''
+    Commentaires: ''
+    DateAcquisition: 2018-06-05
+    DateDernierEntretien: 2018-06-05
+    EtatConservation: Quasi neuf
+    EtatService: En service
+    FreqEntretien: '30'
+    ID: '1204'
+    Marque: qqeqweqwe
+    Modele: ''
+    NbBonTravail: 0
+    NumeroSerie: ''
+    Provenance: Inconnue
+    Salle: Inconnue

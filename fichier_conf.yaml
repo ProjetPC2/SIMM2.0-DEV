@@ -169,6 +169,8 @@ Provenance:
 - PNS
 - Croix-Rouge Canadienne
 - JICA
+- '30'
+- ''
 Salle:
 - 1110 - Salle d'accouchement 1 JICA
 - 1112 - Salle d'ablution JICA
@@ -281,9 +283,10 @@ champsAcceptes-Equipement:
 - CentreService
 - DateAcquisition
 - DateDernierEntretien
+- FreqEntretien
 - Provenance
 - CodeAsset
 - EtatService
 - EtatConservation
 - Commentaires
-dernierID-Equipement: 1203
+dernierID-Equipement: 1204

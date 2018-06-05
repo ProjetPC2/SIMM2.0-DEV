@@ -81,6 +81,8 @@ class Equipement():
         def modifierCommentaire(self, commentaire):
             self.dictionnaire["Commentaires"] = commentaire
 
+        def modifierFreqEntretien(self, freqEntretien):
+            self.dictionnaire["FreqEntretien"] = freqEntretien
 
         def ajoutListeMethodes(self):
             self.listeMethodes = list()
@@ -92,11 +94,13 @@ class Equipement():
             self.listeMethodes.append(self.modifierCentreService)
             self.listeMethodes.append(self.modifierDateAcquisition)
             self.listeMethodes.append(self.modifierDateEntretien)
+            self.listeMethodes.append(self.modifierFreqEntretien)
             self.listeMethodes.append(self.modifierProvenance)
             self.listeMethodes.append(self.modifierCodeASSET)
             self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierEtatConversation)
             self.listeMethodes.append(self.modifierCommentaire)
+            # ajout methode pour modifier frequence entretien
 
 
 class BonDeTravail():

@@ -47,6 +47,7 @@ class EquipementManager:
 
         dict_renvoi = {'Reussite': False}
         if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf, stats):   # ARRANGER FONCTION AVANT
+            print('dans la fonction')
             id_eq = self._ObtenirProchainID()               # id du nouvel équipement
             dictio['ID'] = str(id_eq)                       # ajout de l'ID au dictionnaire
             dictio['NbBonTravail'] = 0                      # ajout du nombre de bon de travail qui est toujours 0 pour un nouvel équipement
@@ -147,6 +148,7 @@ class EquipementManager:
         conforme = True
         list_accepted_key_temp = list(conf['champsAcceptes-Equipement'])  # récupère la liste des 'accepted keys' dans le fichier de configuration
         for key, value in dictio.items():
+            print(key)
             if key in list_accepted_key_temp:
                 list_accepted_key_temp.remove(key)          # retire la clée du dictionnaire si elle est présente
             else:
