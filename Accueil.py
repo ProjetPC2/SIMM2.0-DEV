@@ -67,7 +67,7 @@ class Accueil(Ui_Accueil):
         # Creation d'une liste contenant les elements destines
         # A l'affichage dans la partie centrale
         self.listeElementParDefaut = list()
-        self.listeElementParDefaut.append(self.LabelSIMM20HopitalSaintMichel)
+        self.listeElementParDefaut.append(self.LabelSIMM)
         # Rajouter le logo de SIMM
         self.listeElementParDefaut.append(self.logo)
         self.listeElementParDefaut.append(self.LabelDefinitionSIMM)
@@ -427,7 +427,7 @@ class Accueil(Ui_Accueil):
         # On masque les autres elements
         self.selectionnerBouton(self.BoutonAccueil)
         self.masquerElementGraphique()
-        self.LabelSIMM20HopitalSaintMichel.show()
+        self.LabelSIMM.show()
         self.logo.show()
         self.LabelDefinitionSIMM.show()
         self.BoutonFlecheNavigation.hide()
@@ -726,7 +726,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.BoutonImprimerInventaire.clicked.connect(self.mapper.map)
         self.mapper.setMapping(self.ui.BoutonImprimerInventaire, self.ui.BoutonImprimerInventaire)
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
-        self.setWindowTitle("SIMM 2.0")
+        self.setWindowTitle("SIMM 2.1")
         self.ui.creation.supportCree.connect(self.verrou)
         self.signal = Communicate()
         self.signal.motDePasseCorrect.connect(self.deverouillage)
@@ -770,7 +770,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.fenetreMDP.setCancelButtonText("Annuler")
         self.fenetreMDP.setTextEchoMode(QLineEdit.Password)
         self.fenetreMDP.setLabelText("Veuillez entrer le mot de passe :")
-        self.fenetreMDP.setWindowTitle("SIMM 2.0")
+        self.fenetreMDP.setWindowTitle("SIMM 2.1")
         self.fenetreMDP.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         retour = self.fenetreMDP.exec()
         if(retour == QInputDialog.Accepted):

@@ -27,7 +27,7 @@ class AbstractWindow(QWidget):
                                         "max-height: 30px;\n"
                                         "}\n")
         self.messageBox.setText("Etes-vous sûr de vouloir quitter ?")
-        self.messageBox.setWindowTitle("SIMM 2.0")
+        self.messageBox.setWindowTitle("SIMM 2.1")
         self.messageBox.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.boutonOk = QPushButton("Oui")
         self.boutonAnnuler = QPushButton("Annuler")

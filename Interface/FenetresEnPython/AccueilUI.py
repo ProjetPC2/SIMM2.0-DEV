@@ -289,22 +289,21 @@ class Ui_Accueil(object):
         self.layoutAffichagePrincipal.setObjectName("layoutAffichagePrincipal")
         spacerItem10 = QtWidgets.QSpacerItem(40, 0, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.layoutAffichagePrincipal.addItem(spacerItem10)
-        self.LabelSIMM20HopitalSaintMichel = QtWidgets.QLabel(self.centralwidget)
-        font = QtGui.QFont()
+        self.LabelSIMM = QtWidgets.QLabel(self.centralwidget)
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
-        self.LabelSIMM20HopitalSaintMichel.setFont(font)
-        self.LabelSIMM20HopitalSaintMichel.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.LabelSIMM20HopitalSaintMichel.setStyleSheet("\n"
+        self.LabelSIMM.setFont(font)
+        self.LabelSIMM.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.LabelSIMM.setStyleSheet("\n"
 "color: white;\n"
 "\n"
 " background-color: transparent ;")
-        self.LabelSIMM20HopitalSaintMichel.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.LabelSIMM20HopitalSaintMichel.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
-        self.LabelSIMM20HopitalSaintMichel.setObjectName("LabelSIMM20HopitalSaintMichel")
-        self.layoutAffichagePrincipal.addWidget(self.LabelSIMM20HopitalSaintMichel)
+        self.LabelSIMM.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.LabelSIMM.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.LabelSIMM.setObjectName("LabelSIMM")
+        self.layoutAffichagePrincipal.addWidget(self.LabelSIMM)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -346,6 +345,7 @@ class Ui_Accueil(object):
         self.logo.setText("")
         self.logo.setPixmap(QtGui.QPixmap("Images/Logo_SIMM.png"))
         self.logo.setScaledContents(True)
+        self.logo.setAlignment(QtCore.Qt.AlignBottom | QtCore.Qt.AlignCenter)
         self.logo.setObjectName("logo")
         self.horizontalLayout_2.addWidget(self.logo)
         spacerItem12 = QtWidgets.QSpacerItem(40, 0, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -393,7 +393,5 @@ class Ui_Accueil(object):
 "statistiques"))
         self.BoutonSupportTecnique.setText(_translate("Accueil", "Support\n"
 "technique"))
-        self.LabelSIMM20HopitalSaintMichel.setText(_translate("Accueil", "S.I.M.M. 2.0\n"
-"Hôpital Saint-Michel "))
         self.LabelDefinitionSIMM.setText(_translate("Accueil", "S.I.M.M. : Système d\'Inventorisation du Matériel Médical "))
 

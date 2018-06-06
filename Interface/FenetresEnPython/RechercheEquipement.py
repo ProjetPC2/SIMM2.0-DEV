@@ -70,7 +70,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
 
         #Mise en forme de la page d'accueil
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
-        self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
+        #self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonnees)
         self.tableResultats.setRowCount(0)
 
         self.signalRechercheEquipement = Communicate()

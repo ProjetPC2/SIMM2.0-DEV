@@ -1,4 +1,4 @@
-nbEquipement: 1150
+nbEquipement: 1151
 nbEquipementCentreService:
   Archives:
     Ordinateur: 3
@@ -295,16 +295,18 @@ nbEquipementCentreService:
     Table de chevet: 5
     "Tensiom\xE8tre": 10
     "Thermom\xE8tre": 2
+  test:
+    Bain chauffant: 1
 nbEquipementEtatConservation:
   Acceptable: 449
   Desuet: 4
   "D\xE9suet": 13
   En fin de vie: 47
-  Quasi neuf: 637
+  Quasi neuf: 638
 nbEquipementEtatService:
   Au rebus: 18
   En maintenance: 58
-  En service: 1074
+  En service: 1075
 nbEquipementProvenance:
   ? ''
   : 0
@@ -323,3 +325,4 @@ nbEquipementProvenance:
   UGP: 44
   UNFPA: 4
   UNICEF: 1
+  test: 1

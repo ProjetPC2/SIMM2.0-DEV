@@ -236,7 +236,7 @@ class Ui_RechercheEquipement(object):
 "border-radius: 4px;\n"
 "background:rgb(247,247,247);")
         self.tableResultats.setLineWidth(1)
-        self.tableResultats.setColumnCount(13)
+        self.tableResultats.setColumnCount(14)
         self.tableResultats.setObjectName("tableResultats")
         self.tableResultats.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
@@ -265,6 +265,8 @@ class Ui_RechercheEquipement(object):
         self.tableResultats.setHorizontalHeaderItem(11, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableResultats.setHorizontalHeaderItem(12, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableResultats.setHorizontalHeaderItem(13, item)
         self.tableResultats.horizontalHeader().setDefaultSectionSize(200)
         self.tableResultats.horizontalHeader().setMinimumSectionSize(150)
         self.tableResultats.verticalHeader().setDefaultSectionSize(30)
@@ -307,10 +309,12 @@ class Ui_RechercheEquipement(object):
         item = self.tableResultats.horizontalHeaderItem(9)
         item.setText(_translate("Form", "Date du dernier entretien"))
         item = self.tableResultats.horizontalHeaderItem(10)
-        item.setText(_translate("Form", "Provenance"))
+        item.setText(_translate("Form", "Fréquence d'entretien"))
         item = self.tableResultats.horizontalHeaderItem(11)
-        item.setText(_translate("Form", "État de conservation"))
+        item.setText(_translate("Form", "Provenance"))
         item = self.tableResultats.horizontalHeaderItem(12)
+        item.setText(_translate("Form", "État de conservation"))
+        item = self.tableResultats.horizontalHeaderItem(13)
         item.setText(_translate("Form", "Commentaires"))
 
 
