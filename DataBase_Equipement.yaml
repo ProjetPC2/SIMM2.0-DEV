@@ -389,6 +389,7 @@ _default:
       DateDernierEntretien: 2016-07-26
       EtatConservation: Quasi neuf
       EtatService: En service
+      FreqEntretien: '30'
       ID: '62'
       Marque: BD FACSCOUNT
       Modele: BDB FACSCOUNT

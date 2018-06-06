@@ -121,8 +121,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        # self.listeLabel.append(self.labelID)
+        #self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
@@ -133,7 +134,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelCodeASSET)
-        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
 
         # Masquage des differents labels

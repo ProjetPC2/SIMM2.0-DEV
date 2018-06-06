@@ -279,6 +279,7 @@ champsAcceptes-BDT:
 - Pieces
 champsAcceptes-Equipement:
 - CategorieEquipement
+- EtatService
 - Marque
 - Modele
 - NumeroSerie
@@ -289,7 +290,6 @@ champsAcceptes-Equipement:
 - FreqEntretien
 - Provenance
 - CodeAsset
-- EtatService
 - EtatConservation
 - Commentaires
 dernierID-Equipement: 1205
