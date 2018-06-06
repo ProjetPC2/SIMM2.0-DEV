@@ -412,6 +412,7 @@ class Ui_Accueil(object):
         self.logo.setPixmap(QtGui.QPixmap("Images/Logo_SIMM.png"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
+        self.logo.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignHCenter)
         self.horizontalLayout_2.addWidget(self.logo)
         spacerItem12 = QtWidgets.QSpacerItem(40, 0, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem12)

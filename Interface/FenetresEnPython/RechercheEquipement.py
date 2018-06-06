@@ -76,7 +76,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
         self.listeCleDonneesTemp[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
 
-        self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
+        # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
         self.tableResultats.setRowCount(0)
 
         self.signalRechercheEquipement = Communicate()
@@ -247,7 +247,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 self.listeCleDonneesTemp = list(self.listeCleDonnees)
                 self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
                 self.listeCleDonneesTemp[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
-                self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
+                # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
 
         else:
             self.chargement.aucunResultat.emit()
