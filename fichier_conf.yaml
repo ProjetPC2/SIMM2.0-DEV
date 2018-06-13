@@ -37,6 +37,7 @@ CentreService:
 - "P\xE9diatrie"
 - Maternite
 - SOP
+- Inconnu
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -68,6 +69,7 @@ Provenance:
 - USAID
 - UNICEF
 - Phoenix international forwarders inc
+- '30'
 Salle:
 - Inconnue
 - Depot1
@@ -98,6 +100,7 @@ champsAcceptes-Equipement:
 - CentreService
 - DateAcquisition
 - DateDernierEntretien
+- FreqEntretien
 - Provenance
 - CodeAsset
 - EtatService

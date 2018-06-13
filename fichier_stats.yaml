@@ -7,6 +7,7 @@ nbEquipementCentreService:
   Inconnu:
     Analyseur sanguin: 1
     Appareil a succion: 0
+    Chaise roulante: 0
     Glucometre: 1
   "P\xE9diatrie":
     Lit: 0
@@ -23,5 +24,6 @@ nbEquipementEtatService:
 nbEquipementProvenance:
   1212e: 1
   '1221': 1
+  '30': 0
   Inconnue: 3
   Konbit Sante: 0

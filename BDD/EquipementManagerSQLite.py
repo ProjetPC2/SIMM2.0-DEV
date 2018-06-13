@@ -45,7 +45,7 @@ class EquipementManager:
             cur = con.cursor()
             cur.execute(
                 "CREATE TABLE IF NOT EXISTS Equipement(Id INTEGER PRIMARY KEY, CategorieEquipement TEXT, Marque TEXT, Modele TEXT, "
-                + " NumeroSerie TEXT, Salle TEXT, CentreService TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, "
+                + " NumeroSerie TEXT, Salle TEXT, CentreService TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, FreqEntretien INTEGER "
                 + " Provenance TEXT, CodeAsset TEXT, EtatService TEXT, EtatConservation TEXT, Commentaires TEXT, PdfPath TEXT)")
         except lite.Error as e:
             if con:
@@ -74,20 +74,20 @@ class EquipementManager:
                               + "', '" + dictio["Commentaires"] + "' );"
                 '''
                 '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
-                              + "DateAcquisition, DateDernierEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
+                              + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
                               + " Commentaires, PdfPath)" \
                               + " VALUES ('" + dictio["CategorieEquipement"]  \
                               + "', '" + dictio["Marque"] + "', '" + dictio["Modele"] + "', '" + dictio["NumeroSerie"] \
                               + "', '" + dictio["Salle"] + "', '" + dictio["CentreService"] + "', '" + str(dictio["DateAcquisition"]) \
-                              + "', '" + str(dictio["DateDernierEntretien"]) + "', '" + dictio["Provenance"] \
+                              + "', '" + str(dictio["DateDernierEntretien"]) + "', '" + dictio["FreqEntretien"] + "', '" + dictio["Provenance"] \
                               + "', '" + dictio["CodeAsset"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"] \
                               + "', '" + dictio["Commentaires"] + "', '" + dictio["PdfPath"] + "');"
                 '''
                 commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
-                              + "DateAcquisition, DateDernierEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
+                              + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
                               + " Commentaires, PdfPath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
                 tupleData = (dictio["CategorieEquipement"], dictio["Marque"], dictio["Modele"], dictio["NumeroSerie"], dictio["Salle"], dictio["CentreService"],
-                             str(dictio["DateAcquisition"]), str(dictio["DateDernierEntretien"]), dictio["Provenance"], dictio["CodeAsset"], dictio["EtatService"],
+                             str(dictio["DateAcquisition"]), str(dictio["DateDernierEntretien"]), dictio["FreqEntretien"], dictio["Provenance"], dictio["CodeAsset"], dictio["EtatService"],
                              dictio["EtatConservation"], dictio["Commentaires"], dictio["PdfPath"])
                 cur.execute(commandeSQL, tupleData)
 
@@ -652,6 +652,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
                 'CentreService': 'Urgence',
                 'DateAcquisition': datetime.date(2008, 7, 12),
                 'DateDernierEntretien': datetime.date(2011, 2, 27),
+                'FreqEntretien': 30,
                 'Provenance': 'Poly',
                 'EtatService': '',
                 'EtatConservation': 'Quasi neuf',
