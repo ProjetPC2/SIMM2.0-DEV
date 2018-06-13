@@ -93,6 +93,7 @@ champsAcceptes-BDT:
 - Manuel
 champsAcceptes-Equipement:
 - CategorieEquipement
+- EtatService
 - Marque
 - Modele
 - NumeroSerie
@@ -103,7 +104,6 @@ champsAcceptes-Equipement:
 - FreqEntretien
 - Provenance
 - CodeAsset
-- EtatService
 - EtatConservation
 - Commentaires
 - PdfPath
