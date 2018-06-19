@@ -24,17 +24,23 @@ class RechercheEquipement(Ui_RechercheEquipement):
         #Recuperation des differents attributs d'un equipement
         self.equipementManager = EquipementManager(pathEquipementDatabase)
         self.listeCleDonnees = list()
+        self.listeHeaders = list()
+
         try:
             fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
             with fichierConf:
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
             print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
-        # récupère la liste des 'accepted keys' dans le fichier de configuration
-        self.listeCleDonnees.append("Id")
 
+        # récupère la liste des 'accepted keys' dans le fichier de configuration
         for element in self._conf['champsAcceptes-Equipement']:
             self.listeCleDonnees.append(element)
+
+        for element in self._conf['champsAcceptesAffiches-Equipement']:
+            self.listeHeaders.append(element)
+
+        print(self.listeHeaders)
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeCentreService = list(self._conf['CentreService'])
@@ -42,7 +48,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.listeProvenance = list(self._conf['Provenance'])
 
         #Trie des differentes listes pour les comboBox
-
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
         self.listeCentreService.sort()
@@ -69,14 +74,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         fichierConf.close()
 
         #Mise en forme de la page d'accueil
-        # on déplace date du dernier entretien à la 2eme colonne
-        self.listeCleDonnees.insert(1, self.listeCleDonnees.pop(self.listeCleDonnees.index('DateDernierEntretien')))
-        self.tableResultats.setColumnCount(len(self.listeCleDonnees))
-        self.listeCleDonneesTemp = list(self.listeCleDonnees)
-        self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
-        self.listeCleDonneesTemp[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
-
-        # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
+        self.tableResultats.setHorizontalHeaderLabels(self.listeHeaders)
         self.tableResultats.setRowCount(0)
 
         self.signalRechercheEquipement = Communicate()
@@ -98,6 +96,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.tableResultats.horizontalHeader().sectionClicked.connect(self.trier)
         self.colonneClique = None
         self.nombreClique = 0
+
         #Empeche la modification de la table
         self.tableResultats.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers );
         self.tableResultats.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
@@ -116,7 +115,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if(cle == "Id"):
                 self.equipementSelectionne[cle] = (self.tableResultats.item(ligne,indice).data(0))
             elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
-                #self.equipementSelectionne[cle] = str(datetime.datetime.strptime(self.tableResultats.item(ligne,indice).data(0) , '%Y-%m-%d'))
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             else:
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
@@ -152,7 +150,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 self.dictionnaireRecherche.pop("CategorieEquipement")
         self.rechercherEquipement()
 
-
     def rechercheEtatDeService(self):
         """Methode permettant la recherche par rapport au champ de recherche
             d'etat de service d'equipement"""
@@ -163,7 +160,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if "EtatService" in self.dictionnaireRecherche:
                 self.dictionnaireRecherche.pop("EtatService")
         self.rechercherEquipement()
-
 
     def rechercheCentreService(self):
         """Methode permettant la recherche par rapport au champ de recherche
@@ -176,7 +172,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 self.dictionnaireRecherche.pop("CentreService")
         self.rechercherEquipement()
 
-
     def rechercheSalle(self):
         """Methode permettant la recherche par rapport au champ de recherche
             de salle """
@@ -186,7 +181,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
             if "Salle" in self.dictionnaireRecherche:
                 self.dictionnaireRecherche.pop("Salle")
         self.rechercherEquipement()
-
 
     def rechercheProvenance(self):
         """Methode permettant la recherche par rapport au champ de recherche
@@ -198,19 +192,16 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 self.dictionnaireRecherche.pop("Provenance")
         self.rechercherEquipement()
 
-
     def rechercheNumeroSerie(self):
         """Methode permettant la recherche par rapport au champ de recherche
             Numero de Serie"""
         print("recherche numero de serie")
         if (self.lineEditNumeroSerie.text() != ""):
             self.dictionnaireRecherche["NumeroSerie"] = self.lineEditNumeroSerie.text()
-
         else:
             if "NumeroSerie" in self.dictionnaireRecherche:
                 self.dictionnaireRecherche.pop("NumeroSerie")
         self.rechercherEquipement()
-
 
     def rechercherEquipement(self):
         """Methode permettant de remplir la table des resultats
@@ -223,16 +214,13 @@ class RechercheEquipement(Ui_RechercheEquipement):
             print("dictionnaire de recherche vide")
         self.chargement.finChargement.emit()
 
-
     def remplirTableau(self):
         self.tableResultats.setRowCount(len(self.listeResultat))
         if(any(self.listeResultat)):
-
             for i, dictionnaire in enumerate(self.listeResultat):
                 # Creation des QTableWidgetItem
                 colonne = 0
-                #print(dictionnaire)
-                #print(self.listeCleDonnees)
+                print(self.listeCleDonnees)
                 for cle in self.listeCleDonnees:
                     if(cle == "Id"):
                         item = QTableWidgetItem()
@@ -242,13 +230,9 @@ class RechercheEquipement(Ui_RechercheEquipement):
                         self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                     colonne += 1
                 self.tableResultats.resizeColumnsToContents()
+
                 #on change le nom du header
-
-                self.listeCleDonneesTemp = list(self.listeCleDonnees)
-                self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
-                self.listeCleDonneesTemp[self.listeCleDonnees.index('CodeAsset')] = 'Voltage'
-                # self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
-
+                self.tableResultats.setHorizontalHeaderLabels(self.listeHeaders)
         else:
             self.chargement.aucunResultat.emit()
 
@@ -302,7 +286,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.listeProvenance = list(self._conf['Provenance'])
 
         # Trie des differentes listes pour les comboBox
-
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
         self.listeCentreService.sort()
@@ -347,12 +330,10 @@ def verificationTexte(texte):
     return copie
 
 
-
 class RechercherEquipement (Thread):
     def __init__(self, fonction):
         Thread.__init__(self)
         self.fonction = fonction
-
 
     def run(self):
         self.fonction()

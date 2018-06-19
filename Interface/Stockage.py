@@ -65,6 +65,8 @@ class Equipement():
             self.dictionnaire["DateDernierEntretien"] = dateEntretien
             print(type(dateEntretien))
 
+        def modifierFreqEntretien(self, FreqEntretien):
+            self.dictionnaire["FreqEntretien"] = FreqEntretien
 
         def modifierProvenance(self, provenance):
             self.dictionnaire["Provenance"] = provenance
@@ -94,6 +96,7 @@ class Equipement():
             self.listeMethodes.append(self.modifierCentreService)
             self.listeMethodes.append(self.modifierDateAcquisition)
             self.listeMethodes.append(self.modifierDateEntretien)
+            self.listeMethodes.append(self.modifierFreqEntretien)
             self.listeMethodes.append(self.modifierProvenance)
             self.listeMethodes.append(self.modifierCodeASSET)
             self.listeMethodes.append(self.modifierEtatService)

@@ -193,7 +193,6 @@ class EquipementManager:
             print(type(rows))
             for row in rows:
                 dictTemp = dict()
-                print("OHEQJOQIJD")
                 print("type de row ", row)
                 #ATTENTION : le format de la date contient les heures
             #    print("%s %s %s" % (row["Id"], row["DateDernierEntretien"], datetime.datetime.strptime(row["DateAcquisition"],"%Y-%m-%d" )))

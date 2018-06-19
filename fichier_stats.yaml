@@ -10,6 +10,7 @@ nbEquipementCentreService:
     Chaise roulante: 0
     Glucometre: 1
   "P\xE9diatrie":
+    Analyseur sanguin: 0
     Lit: 0
 nbEquipementEtatConservation:
   Acceptable: 0

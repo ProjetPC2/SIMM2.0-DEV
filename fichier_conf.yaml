@@ -92,6 +92,7 @@ champsAcceptes-BDT:
 - Formation
 - Manuel
 champsAcceptes-Equipement:
+- Id
 - CategorieEquipement
 - EtatService
 - Marque
@@ -107,4 +108,21 @@ champsAcceptes-Equipement:
 - EtatConservation
 - Commentaires
 - PdfPath
+champsAcceptesAffiches-Equipement:
+- Id
+- Catégorie d'équipement
+- État de service
+- Marque
+- Modèle
+- Numéro de Série
+- Salle
+- Unité
+- Date d'aquisition
+- Date du dernier Entretien
+- Fréquence d'entretien
+- Provenance
+- Voltage
+- État de conservation
+- Commentaires
+- Chemin PDF 
 dernierID-Equipement: 0

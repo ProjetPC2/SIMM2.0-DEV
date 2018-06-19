@@ -232,6 +232,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             self.equipement.listeMethodes[i](donnees)
             i += 1
         self.equipement.dictionnaire["PdfPath"] = self.filePath
+        print(self.equipement.dictionnaire)
         self.equipementManager.AjouterEquipement(self.equipement.dictionnaire)
         self.equipement.dictionnaire.clear()
         print("EMISSION DES SIGNAUX DE SAUVEGARDE")
