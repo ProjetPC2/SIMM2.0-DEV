@@ -20,7 +20,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.ajoutRechercheBonDeTravail()
         self.chargement = Communicate()
 
-
     def ajoutRechercheBonDeTravail(self):
         # Recuperation des differents attributs
         self.bonDeTravailManager = BonTravailManager(pathBonTravailDatabase)
@@ -55,6 +54,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.signalRechercheBon.aucunResultat.connect(self.aucunResultat)
         self.signalRechercheBon.remplirTableau.connect(self.remplirTableau)
         self.signalRechercheBon.nouvelleRecherche.connect(self.nouvelleRecherche)
+
         #modification calendrier
         calendrierApres = QCalendarWidget()
         calendrierApres.setStyleSheet("background :#F5F5F5;\n color: black;")
@@ -73,25 +73,18 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.calendrierApres.setDate(QDate.currentDate())
 
         #Creation des differents colonnes pour le tableau de resultat
-        # self.listeCleDonnees = list(["IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
         self.listeCleDonnees = list(["IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
-
-
+        
         #liste contenant les bons résultant de la recherche
         self.listeResultat = list()
         #liste contenant les informations des bons a afficher
         self.listeDonnees = list()
 
-
         self.tableResultats.setColumnCount(len(self.listeCleDonnees))
-        self.listeCleDonneesTemp = list(self.listeCleDonnees)
-        self.listeCleDonneesTemp[self.listeCleDonnees.index('CentreService')] = 'Unite'
-        self.listeCleDonneesTemp[self.listeCleDonnees.index('EtatBDT')] = 'Repare'
-
-        self.tableResultats.setHorizontalHeaderLabels(self.listeCleDonneesTemp)
+        self.listeHeaders = ["Id de l'équipement", "Numero du bon de travail", "Catégorie d'équipement", "Modèle", "Unité", "État BDT", "Date", "Description de la situation"]
+        self.tableResultats.setHorizontalHeaderLabels(self.listeHeaders)
         self.tableResultats.resizeColumnsToContents()
         self.tableResultats.setRowCount(0)
-
         self.dictionnaireRecherche = dict()
 
         #Connexion des differentes recherches pour la mise a jour automatique
@@ -152,9 +145,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             self.dictionnaireRecherche.pop("CategorieEquipement")
         self.rechercherBonTravailThread()
 
-
-
-
     def rechercheDateAvant(self):
         '''
             Recuperation des bons de travails qui sont anterieurs a la date indique
@@ -163,7 +153,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         '''
         self.dictionnaireRecherche["AvantLe"] = self.calendrierAvant.date().toPyDate()
         self.rechercherBonTravailThread()
-
 
     def rechercheDateApres(self):
         '''
@@ -174,7 +163,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.dictionnaireRecherche["ApresLe"] = self.calendrierApres.date().toPyDate()
         self.rechercherBonTravailThread()
 
-
     def rechercheDescriptionSituation(self):
         '''
             Recuperation des bons de travails correspondant a la description
@@ -184,8 +172,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         if (self.lineEditDescriptionSituation.text() != ""):
             self.dictionnaireRecherche["DescriptionSituation"] = self.lineEditDescriptionSituation.text()
         self.rechercherBonTravailThread()
-
-
 
     def rechercheEtatDeService(self):
         '''
@@ -200,7 +186,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             self.dictionnaireRecherche.pop("EtatService")
         self.rechercherBonTravailThread()
 
-
     def rechercheCentreService(self):
         '''
             Recuperation des bons de travails associe a un centre de service
@@ -213,7 +198,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         else:
             self.dictionnaireRecherche.pop("CentreService")
         self.rechercherBonTravailThread()
-
 
     def rechercherBonTravail(self):
             '''
@@ -237,7 +221,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                             dictDonnees["CategorieEquipement"] = bdt["CategorieEquipement"]
                             dictDonnees["Modele"] = bdt["Modele"]
                             dictDonnees["CentreService"] = bdt["CentreService"]
-                            #dictDonnees["EtatBDT"] = bdt["EtatBDT"]
                             if(bdt["EtatBDT"] == "Ouvert"):
                                 dictDonnees["EtatBDT"] = "Non"
                             else:
@@ -277,7 +260,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.tableResultats.clearContents()
         self.tableResultats.setRowCount(0)
 
-
     def nouvelleRecherche(self):
         self.comboBoxCategorieEquipement.setCurrentText("")
         self.comboBoxCentreService.setCurrentText("")
@@ -285,7 +267,6 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.lineEditDescriptionSituation.setText("")
         self.tableResultats.setRowCount(0)
         self.dictionnaireRecherche.clear()
-
 
     def rechercherBonTravailThread(self):
         thread = RechercherBonDeTravail(self.rechercherBonTravail)
@@ -314,7 +295,6 @@ class RechercherBonDeTravail (Thread):
     def __init__(self, fonction):
         Thread.__init__(self)
         self.fonction = fonction
-
 
     def run(self):
         self.fonction()
