@@ -368,7 +368,7 @@ class Accueil(Ui_Accueil):
             self.rechercheBonDeTravail = QtWidgets.QWidget(self.Accueil)
             self.rechercheBonDeTravailUI = RechercheBonDeTravail(self.rechercheBonDeTravail)
             self.rechercheBonDeTravailUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
-            self.rechercheBonDeTravailUI.comboBoxCentreService.currentTextChanged.connect(self.afficherChargement)
+            self.rechercheBonDeTravailUI.comboBoxUnite.currentTextChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.comboBoxEtat.currentTextChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.calendrierApres.dateChanged.connect(self.afficherChargement)
             self.rechercheBonDeTravailUI.calendrierAvant.dateChanged.connect(self.afficherChargement)

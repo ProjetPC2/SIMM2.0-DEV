@@ -54,16 +54,16 @@ class Statistique(Ui_Statistique):
 
         self.listeProvenance = list(self._conf['Provenance'])
         self.listeProvenance.sort()
-        self.listeCentreService = list(self._conf['CentreService'])
-        self.listeCentreService.sort()
+        self.listeUnite = list(self._conf['Unite'])
+        self.listeUnite.sort()
         print(self.listeProvenance)
         self.comboBoxProvenance.addItem("")
         self.comboBoxProvenance.addItem("Tous")
         self.comboBoxProvenance.addItems(self.listeProvenance)
-        self.comboBoxCentreService.clear()
-        self.comboBoxCentreService.addItem("")
-        self.comboBoxCentreService.addItem("Tous")
-        self.comboBoxCentreService.addItems(self.listeCentreService)
+        self.comboBoxUnite.clear()
+        self.comboBoxUnite.addItem("")
+        self.comboBoxUnite.addItem("Tous")
+        self.comboBoxUnite.addItems(self.listeUnite)
         fichierConf.close()
         self.tableResumeInventaire.clear()
         self.tableResumeInventaire.setHorizontalHeaderLabels(["Categorie equipement", "Quantite"])
@@ -74,15 +74,15 @@ class Statistique(Ui_Statistique):
         self.tableResumeInventaire.setRowCount(0)
 
         self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
-        self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
+        self.statsCategorie = self.equipementManager._statsNbEquipementUniteCategorie()
         print(self.statsCategorie)
 
         self.signalStatistique = Communicate()
         self.signalStatistique.affichageProvenance.connect(self.affichageProvenance)
-        self.signalStatistique.affichageCentreService.connect(self.affichageCentreService)
+        self.signalStatistique.affichageUnite.connect(self.affichageUnite)
 
         self.comboBoxProvenance.currentTextChanged.connect(self.signalStatistique.affichageProvenance.emit)
-        self.comboBoxCentreService.currentTextChanged.connect(self.signalStatistique.affichageCentreService.emit)
+        self.comboBoxUnite.currentTextChanged.connect(self.signalStatistique.affichageUnite.emit)
         self.tableResumeInventaire.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers);
         self.tableResumeInventaire.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.ButtonBackUp.clicked.connect(backUp)
@@ -144,10 +144,10 @@ class Statistique(Ui_Statistique):
             self.nombreEquipementProvenance = 0
         self.textBrowserEquipementProvenance.setText(str(self.nombreEquipementProvenance))
 
-    def affichageCentreService(self):
-        if (self.comboBoxCentreService.currentText() != ""):
+    def affichageUnite(self):
+        if (self.comboBoxUnite.currentText() != ""):
             dictionnaireResultat = dict()
-            if self.comboBoxCentreService.currentText() == "Tous":
+            if self.comboBoxUnite.currentText() == "Tous":
                 for dictionnaire in self.statsCategorie.values():
                     for cle, valeur in dictionnaire.items():
                                 if cle in dictionnaireResultat:
@@ -155,8 +155,8 @@ class Statistique(Ui_Statistique):
                                 else:
                                     dictionnaireResultat[cle] = valeur
             else:
-                if self.comboBoxCentreService.currentText() in self.statsCategorie:
-                    dictionnaireResultat = self.statsCategorie[self.comboBoxCentreService.currentText()]
+                if self.comboBoxUnite.currentText() in self.statsCategorie:
+                    dictionnaireResultat = self.statsCategorie[self.comboBoxUnite.currentText()]
             print(self.statsCategorie)
             self.tableResumeInventaire.setRowCount(len(dictionnaireResultat))
             if (any(dictionnaireResultat)):
@@ -171,7 +171,7 @@ class Statistique(Ui_Statistique):
 
     def miseAJourStats(self):
         self.statsProvenance = self.equipementManager._statsNbEquipementProvenance()
-        self.statsCategorie = self.equipementManager._statsNbEquipementCentreServiceCategorie()
+        self.statsCategorie = self.equipementManager._statsNbEquipementUniteCategorie()
         self.miseAJourDonnees()
 
 

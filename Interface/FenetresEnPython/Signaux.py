@@ -45,6 +45,6 @@ class Communicate(QObject):
 
     #Statistique
     affichageProvenance = pyqtSignal()
-    affichageCentreService = pyqtSignal()
+    affichageUnite = pyqtSignal()
     #Fenetre support
     motDePasseCorrect = pyqtSignal()

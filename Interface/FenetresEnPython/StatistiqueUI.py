@@ -410,18 +410,18 @@ class Ui_Statistique(object):
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
-        self.LabelCentreDeService = QtWidgets.QLabel(Statistique)
+        self.LabelUnite = QtWidgets.QLabel(Statistique)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.LabelCentreDeService.setFont(font)
-        self.LabelCentreDeService.setStyleSheet("background:white;")
-        self.LabelCentreDeService.setObjectName("LabelCentreDeService")
-        self.horizontalLayout_10.addWidget(self.LabelCentreDeService)
-        self.comboBoxCentreService = QtWidgets.QComboBox(Statistique)
+        self.LabelUnite.setFont(font)
+        self.LabelUnite.setStyleSheet("background:white;")
+        self.LabelUnite.setObjectName("LabelUnite")
+        self.horizontalLayout_10.addWidget(self.LabelUnite)
+        self.comboBoxUnite = QtWidgets.QComboBox(Statistique)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.comboBoxCentreService.setFont(font)
-        self.comboBoxCentreService.setStyleSheet("QComboBox {\n"
+        self.comboBoxUnite.setFont(font)
+        self.comboBoxUnite.setStyleSheet("QComboBox {\n"
 "    border: 1px solid gray;\n"
 "    border-radius: 3px;\n"
 "    padding: 1px 18px 1px 3px;\n"
@@ -430,8 +430,8 @@ class Ui_Statistique(object):
 "background: rgb(247, 247, 247);\n"
 "}\n"
 "    ")
-        self.comboBoxCentreService.setObjectName("comboBoxCentreService")
-        self.horizontalLayout_10.addWidget(self.comboBoxCentreService)
+        self.comboBoxUnite.setObjectName("comboBoxUnite")
+        self.horizontalLayout_10.addWidget(self.comboBoxUnite)
         spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_10.addItem(spacerItem6)
         self.verticalLayout_5.addLayout(self.horizontalLayout_10)
@@ -587,7 +587,7 @@ class Ui_Statistique(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">400</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
-        self.LabelCentreDeService.setText(_translate("Statistique", "Résumé de l\'inventaire par centre de service"))
+        self.LabelUnite.setText(_translate("Statistique", "Résumé de l\'inventaire par centre de service"))
         self.tableResumeInventaire.setSortingEnabled(True)
         item = self.tableResumeInventaire.verticalHeaderItem(0)
         item.setText(_translate("Statistique", "1"))

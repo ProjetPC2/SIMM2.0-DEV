@@ -32,8 +32,8 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeCategorieEquipement.sort()
-        self.listeCentreService = list(self._conf['CentreService'])
-        self.listeCentreService.sort()
+        self.listeUnite = list(self._conf['Unite'])
+        self.listeUnite.sort()
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeEtatService.sort()
 
@@ -44,9 +44,9 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.comboBoxEtat.clear()
         self.comboBoxEtat.addItem("")
         self.comboBoxEtat.addItems(self.listeEtatService)
-        self.comboBoxCentreService.clear()
-        self.comboBoxCentreService.addItem("")
-        self.comboBoxCentreService.addItems(self.listeCentreService)
+        self.comboBoxUnite.clear()
+        self.comboBoxUnite.addItem("")
+        self.comboBoxUnite.addItems(self.listeUnite)
 
         fichierConf.close()
 
@@ -73,7 +73,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         self.calendrierApres.setDate(QDate.currentDate())
 
         #Creation des differents colonnes pour le tableau de resultat
-        self.listeCleDonnees = list(["IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Modele", "CentreService", "EtatBDT", "Date", "DescriptionSituation"])
+        self.listeCleDonnees = list(["IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Modele", "Unite", "EtatBDT", "Date", "DescriptionSituation"])
         
         #liste contenant les bons résultant de la recherche
         self.listeResultat = list()
@@ -90,7 +90,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
         #Connexion des differentes recherches pour la mise a jour automatique
         self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipement)
         self.comboBoxEtat.currentTextChanged.connect(self.rechercheEtatDeService)
-        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
+        self.comboBoxUnite.currentTextChanged.connect(self.rechercheUnite)
         self.calendrierAvant.dateChanged.connect(self.rechercheDateAvant)
         self.lineEditDescriptionSituation.returnPressed.connect(self.rechercheDescriptionSituation)
         self.calendrierApres.dateChanged.connect(self.rechercheDateApres)
@@ -186,17 +186,17 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
             self.dictionnaireRecherche.pop("EtatService")
         self.rechercherBonTravailThread()
 
-    def rechercheCentreService(self):
+    def rechercheUnite(self):
         '''
             Recuperation des bons de travails associe a un centre de service
             :param: None
             :return:
         '''
-        if (self.comboBoxCentreService.currentText() != ""):
-            self.dictionnaireRecherche["CentreService"] = self.comboBoxCentreService.currentText()
+        if (self.comboBoxUnite.currentText() != ""):
+            self.dictionnaireRecherche["Unite"] = self.comboBoxUnite.currentText()
 
         else:
-            self.dictionnaireRecherche.pop("CentreService")
+            self.dictionnaireRecherche.pop("Unite")
         self.rechercherBonTravailThread()
 
     def rechercherBonTravail(self):
@@ -220,7 +220,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
                             dictDonnees["IdEquipement"] = bdt["IdEquipement"]
                             dictDonnees["CategorieEquipement"] = bdt["CategorieEquipement"]
                             dictDonnees["Modele"] = bdt["Modele"]
-                            dictDonnees["CentreService"] = bdt["CentreService"]
+                            dictDonnees["Unite"] = bdt["Unite"]
                             if(bdt["EtatBDT"] == "Ouvert"):
                                 dictDonnees["EtatBDT"] = "Non"
                             else:
@@ -262,7 +262,7 @@ class RechercheBonDeTravail(Ui_RechercheBonDeTravail):
 
     def nouvelleRecherche(self):
         self.comboBoxCategorieEquipement.setCurrentText("")
-        self.comboBoxCentreService.setCurrentText("")
+        self.comboBoxUnite.setCurrentText("")
         self.comboBoxEtat.setCurrentText("")
         self.lineEditDescriptionSituation.setText("")
         self.tableResultats.setRowCount(0)
