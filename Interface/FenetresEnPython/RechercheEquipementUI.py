@@ -296,7 +296,7 @@ class Ui_RechercheEquipement(object):
         item = self.tableResultats.horizontalHeaderItem(0)
         item.setText(_translate("RechercheEquipement", "Id"))
         item = self.tableResultats.horizontalHeaderItem(1)
-        item.setText(_translate("RechercheEquipement", "Catégorie d\'équipement"))
+        item.setText(_translate("RechercheEquipement", "Categorie d\'equipement"))
         item = self.tableResultats.horizontalHeaderItem(2)
         item.setText(_translate("RechercheEquipement", "État de service"))
         item = self.tableResultats.horizontalHeaderItem(3)
