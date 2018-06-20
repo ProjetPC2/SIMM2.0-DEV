@@ -919,7 +919,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.fenetreMDP.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         retour = self.fenetreMDP.exec()
         if(retour == QInputDialog.Accepted):
-            if(self.fenetreMDP.textValue() == "hopitalstmichel123" ):
+            if(self.fenetreMDP.textValue() == "projetpc2" ):
                 print(str(self.fenetreMDP.textValue()))
                 self.signal.motDePasseCorrect.emit()
             else:
