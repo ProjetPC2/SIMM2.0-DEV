@@ -54,11 +54,12 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.lineEditModele)
         self.listeWidgets.append(self.lineEditNoDeSerie)
         self.listeWidgets.append(self.comboBoxSalle)
-        self.listeWidgets.append(self.comboBoxCentreDeService)
+        self.listeWidgets.append(self.comboBoxUnite)
         self.listeWidgets.append(self.dateEditDateDaquisition)
         self.listeWidgets.append(self.dateEditDateDuDernierEntretien)
+        self.listeWidgets.append(self.lineEditFreqEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
-        self.listeWidgets.append(self.lineEditCodeASSET)
+        self.listeWidgets.append(self.lineEditVoltage)
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
@@ -95,13 +96,13 @@ class ModificationEquipement(Ui_AjoutEquipement):
         # Recuperation des differents elements des listes deroulantes
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
-        self.listeCentreService = list(self._conf['CentreService'])
+        self.listeUnite = list(self._conf['Unite'])
         self.listeSalle = list(self._conf['Salle'])
         self.listeProvenance = list(self._conf['Provenance'])
 
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
-        self.listeCentreService.sort()
+        self.listeUnite.sort()
         self.listeSalle.sort()
         self.listeProvenance.sort()
 
@@ -110,8 +111,8 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.comboBoxCategorie.addItems(self.listeCategorieEquipement)
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItems(self.listeSalle)
-        self.comboBoxCentreDeService.clear()
-        self.comboBoxCentreDeService.addItems(self.listeCentreService)
+        self.comboBoxUnite.clear()
+        self.comboBoxUnite.addItems(self.listeUnite)
         self.comboBoxProvenance.clear()
         self.comboBoxProvenance.addItems(self.listeProvenance)
 
@@ -125,11 +126,12 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
         self.listeLabel.append(self.labelSalle)
-        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelUnite)
         self.listeLabel.append(self.labelDateDAquisition)
         self.listeLabel.append(self.labelDateDernierEntretien)
+        self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelProvenance)
-        self.listeLabel.append(self.labelCodeASSET)
+        self.listeLabel.append(self.labelVoltage)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
 
@@ -160,7 +162,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.comboBoxCategorie.setEditable(True)
         self.comboBoxSalle.setEditable(True)
         self.comboBoxProvenance.setEditable(True)
-        self.comboBoxCentreDeService.setEditable(True)
+        self.comboBoxUnite.setEditable(True)
 
         self.BoutonPDF.clicked.connect(self.ouvrirPDF)
         self.fileToSave = ""
@@ -366,11 +368,12 @@ if __name__ == "__main__":
                        "Modele":"modele",
                        "NumeroSerie":"3",
                        "Salle":"",
-                       "CentreService":"5",
+                       "Unite":"5",
                        "DateAcquisition":QDate.currentDate (),
                        "DateDernierEntretien":QDate.currentDate (),
+                       "FreqEntretien": "30",
                        "Provenance":"6",
-                       "CodeAsset":"6",
+                       "Voltage":"6",
                        "EtatService":"ok",
                        "EtatConservation":"ok",
                        "Commentaires":"Bonjour",})

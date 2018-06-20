@@ -45,8 +45,8 @@ class EquipementManager:
             cur = con.cursor()
             cur.execute(
                 "CREATE TABLE IF NOT EXISTS Equipement(Id INTEGER PRIMARY KEY, CategorieEquipement TEXT, Marque TEXT, Modele TEXT, "
-                + " NumeroSerie TEXT, Salle TEXT, CentreService TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, FreqEntretien INTEGER "
-                + " Provenance TEXT, CodeAsset TEXT, EtatService TEXT, EtatConservation TEXT, Commentaires TEXT, PdfPath TEXT)")
+                + " NumeroSerie TEXT, Salle TEXT, Unite TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, FreqEntretien INTEGER "
+                + " Provenance TEXT, Voltage TEXT, EtatService TEXT, EtatConservation TEXT, Commentaires TEXT, PdfPath TEXT)")
         except lite.Error as e:
             if con:
                 con.rollback()
@@ -66,28 +66,28 @@ class EquipementManager:
             con = lite.connect(self._pathnameEQ)
             cur = con.cursor()
             if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf,stats):  # ARRANGER FONCTION AVANT
-                '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService," \
-                              + " Provenance, CodeAsset, EtatService, EtatConservation,"\
+                '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite," \
+                              + " Provenance, Voltage, EtatService, EtatConservation,"\
                               + " Commentaires ) VALUES ('" + dictio["CategorieEquipement"] + "', '" + dictio["Marque"] + "', '"\
-                              + dictio["Modele"] + "', '" + dictio["NumeroSerie"] + "', '" + dictio["Salle"] + "', '" + dictio["CentreService"]\
-                              + "', '" + dictio["Provenance"] + "', '" + dictio["CodeAsset"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"]\
+                              + dictio["Modele"] + "', '" + dictio["NumeroSerie"] + "', '" + dictio["Salle"] + "', '" + dictio["Unite"]\
+                              + "', '" + dictio["Provenance"] + "', '" + dictio["Voltage"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"]\
                               + "', '" + dictio["Commentaires"] + "' );"
                 '''
-                '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
-                              + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
+                '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite, " \
+                              + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, Voltage, EtatService, EtatConservation," \
                               + " Commentaires, PdfPath)" \
                               + " VALUES ('" + dictio["CategorieEquipement"]  \
                               + "', '" + dictio["Marque"] + "', '" + dictio["Modele"] + "', '" + dictio["NumeroSerie"] \
-                              + "', '" + dictio["Salle"] + "', '" + dictio["CentreService"] + "', '" + str(dictio["DateAcquisition"]) \
+                              + "', '" + dictio["Salle"] + "', '" + dictio["Unite"] + "', '" + str(dictio["DateAcquisition"]) \
                               + "', '" + str(dictio["DateDernierEntretien"]) + "', '" + dictio["FreqEntretien"] + "', '" + dictio["Provenance"] \
-                              + "', '" + dictio["CodeAsset"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"] \
+                              + "', '" + dictio["Voltage"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"] \
                               + "', '" + dictio["Commentaires"] + "', '" + dictio["PdfPath"] + "');"
                 '''
-                commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, CentreService, " \
-                              + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, CodeAsset, EtatService, EtatConservation," \
-                              + " Commentaires, PdfPath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
-                tupleData = (dictio["CategorieEquipement"], dictio["Marque"], dictio["Modele"], dictio["NumeroSerie"], dictio["Salle"], dictio["CentreService"],
-                             str(dictio["DateAcquisition"]), str(dictio["DateDernierEntretien"]), dictio["FreqEntretien"], dictio["Provenance"], dictio["CodeAsset"], dictio["EtatService"],
+                commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite, " \
+                              + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, Voltage, EtatService, EtatConservation," \
+                              + " Commentaires, PdfPath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                tupleData = (dictio["CategorieEquipement"], dictio["Marque"], dictio["Modele"], dictio["NumeroSerie"], dictio["Salle"], dictio["Unite"],
+                             str(dictio["DateAcquisition"]), str(dictio["DateDernierEntretien"]), dictio["FreqEntretien"], dictio["Provenance"], dictio["Voltage"], dictio["EtatService"],
                              dictio["EtatConservation"], dictio["Commentaires"], dictio["PdfPath"])
                 cur.execute(commandeSQL, tupleData)
 
@@ -318,7 +318,7 @@ class EquipementManager:
             else:
                 conforme = False  # si on rencontre une clée non-attendue, le dictionnaire n'est pas conforme
         if (not conforme) or (len(
-                list_accepted_key_temp) != 0):  # on renvoit Faux si la liste n'est pas vide (tous les champs attendus ne
+                list_accepted_key_temp) - 1 != 0):  # on renvoit Faux si la liste n'est pas vide (tous les champs attendus ne
             return False  # sont pas présents) ou si on a un champ en trop
         else:
             return True
@@ -357,13 +357,13 @@ class EquipementManager:
                             value not in stats['nbEquipementProvenance']):  # ajoute la provenance au fichier de stats
                     stats['nbEquipementProvenance'][value] = 0
                 if key == 'CategorieEquipement':
-                    if dictio['CentreService'] not in stats[
-                        'nbEquipementCentreService']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
-                        stats['nbEquipementCentreService'][
-                            dictio['CentreService']] = dict()  # si non, ajout du centre de service
-                    if value not in stats['nbEquipementCentreService'][
-                        dictio['CentreService']]:  # vérifie si l'équipement est dans le centre de service associé
-                        stats['nbEquipementCentreService'][dictio['CentreService']][
+                    if dictio['Unite'] not in stats[
+                        'nbEquipementUnite']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
+                        stats['nbEquipementUnite'][
+                            dictio['Unite']] = dict()  # si non, ajout du centre de service
+                    if value not in stats['nbEquipementUnite'][
+                        dictio['Unite']]:  # vérifie si l'équipement est dans le centre de service associé
+                        stats['nbEquipementUnite'][dictio['Unite']][
                             value] = 0  # si non, ajout de l'éq. dans le centre de service associé
         self._ActualiserConfiguration(
             conf)  # actualise le fichier de configuration et de stats pour qu'il contienne la nouvelle entrée
@@ -460,36 +460,36 @@ class EquipementManager:
                 print(provenance)
             return dictProvenance
 
-    # Cette méthode renvoie un dictionnaire à deux niveaux. Le premier niveau a comme clée les différents centres de
-    # de service ('CentreService') qui se trouvent dans le fichier de configuration. Dans le champs des données pour ces clées,
+    # Cette méthode renvoie un dictionnaire à deux niveaux. Le premier niveau a comme clée les différents entres de
+    # de service ('Unite') qui se trouvent dans le fichier de configuration. Dans le champs des données pour ces clées,
     # on retrouve un dictionnaire (2e niveau) qui lui a comme clée les catégories d'équipements ('CategorieEquipement') que l'on
     # retrouve dans le fichier de configuration. Il est à noter que lorsqu'un centre de service ne possède pas d'équipements
     # d'un type X (ex. IRM), le champ contenant la clée X et la valeur 0 au deuxième niveau est retiré du dictionnaire.
-    def _statsNbEquipementCentreServiceCategorie(self):
+    def _statsNbEquipementUniteCategorie(self):
         stats = self._getStats()
 
         dict_renvoi = dict()
         con = lite.connect(self._pathnameEQ)
         with con:
             cur = con.cursor()
-            cur.execute("SELECT DISTINCT CentreService From Equipement")
+            cur.execute("SELECT DISTINCT Unite From Equipement")
             rows = cur.fetchall()
             conf = self._getConf()
-            listeCentreService = list()
+            listeUnite = list()
             for row in rows:
-                listeCentreService.append(row[0])
+                listeUnite.append(row[0])
                 dict_renvoi[row[0]] = dict()
             print(len(rows))
-            print("Liste centre ",listeCentreService)
+            print("Liste centre ",listeUnite)
             listeCategorieEquipemement = conf["CategorieEquipement"]
-            for centreService in listeCentreService:
+            for Unite in listeUnite:
                 for categorieEquipement in listeCategorieEquipemement:
-                    commandeSQL = 'SELECT count(*) FROM Equipement WHERE CentreService = "{0}" AND CategorieEquipement = "{1}"'.format(centreService, categorieEquipement)
+                    commandeSQL = 'SELECT count(*) FROM Equipement WHERE Unite = "{0}" AND CategorieEquipement = "{1}"'.format(Unite, categorieEquipement)
                     print(commandeSQL)
                     cur.execute(commandeSQL)
                     rows = cur.fetchall()
                     if rows[0][0] > 0:
-                        dict_renvoi[centreService][categorieEquipement] = rows[0][0]
+                        dict_renvoi[Unite][categorieEquipement] = rows[0][0]
             print(dict_renvoi)
             return dict_renvoi
 
@@ -504,7 +504,7 @@ class EquipementManager:
             stats_dict['nbEquipement'] += 1
             stats_dict['nbEquipementEtatConservation'][nouveau_dict['EtatConservation']] += 1
             stats_dict['nbEquipementEtatService'][nouveau_dict['EtatService']] += 1
-            stats_dict['nbEquipementCentreService'][nouveau_dict['CentreService']][
+            stats_dict['nbEquipementUnite'][nouveau_dict['Unite']][
                 nouveau_dict['CategorieEquipement']] += 1
             stats_dict['nbEquipementProvenance'][nouveau_dict['Provenance']] += 1
         elif nouveau_dict is None and ancien_dict is not None:  # cas où on supprime un équipement
@@ -512,7 +512,7 @@ class EquipementManager:
             stats_dict['nbEquipement'] -= 1
             stats_dict['nbEquipementEtatConservation'][ancien_dict['EtatConservation']] -= 1
             stats_dict['nbEquipementEtatService'][ancien_dict['EtatService']] -= 1
-            stats_dict['nbEquipementCentreService'][ancien_dict['CentreService']][
+            stats_dict['nbEquipementUnite'][ancien_dict['Unite']][
                 ancien_dict['CategorieEquipement']] -= 1
             stats_dict['nbEquipementProvenance'][ancien_dict['Provenance']] -= 1
         elif nouveau_dict is not None and ancien_dict is not None:  # cas où on modifie un équipement
@@ -526,11 +526,11 @@ class EquipementManager:
             if ancien_dict['Provenance'] != nouveau_dict['Provenance']:
                 stats_dict['nbEquipementProvenance'][ancien_dict['Provenance']] -= 1
                 stats_dict['nbEquipementProvenance'][nouveau_dict['Provenance']] += 1
-            if ancien_dict['CentreService'] != nouveau_dict['CentreService'] or ancien_dict['CategorieEquipement'] != \
+            if ancien_dict['Unite'] != nouveau_dict['Unite'] or ancien_dict['CategorieEquipement'] != \
                     nouveau_dict['CategorieEquipement']:
-                stats_dict['nbEquipementCentreService'][ancien_dict['CentreService']][
+                stats_dict['nbEquipementUnite'][ancien_dict['Unite']][
                     ancien_dict['CategorieEquipement']] -= 1
-                stats_dict['nbEquipementCentreService'][nouveau_dict['CentreService']][
+                stats_dict['nbEquipementUnite'][nouveau_dict['Unite']][
                     nouveau_dict['CategorieEquipement']] += 1
         self._ActualiserStats(stats_dict)
 
@@ -550,7 +550,7 @@ class EquipementManager:
         # récupère les champs possibles pour la provenance
         list_Provenance = list(conf['Provenance'])
         # récupère les champs possibles pour le centre de service
-        list_CentreService = list(conf['CentreService'])
+        list_Unite = list(conf['Unite'])
         # récupère les champs possibles pour la CategorieEquipement
         list_CategorieEquipement = list(conf['CategorieEquipement'])
         print("Fin recuperation des differents listes")
@@ -566,7 +566,7 @@ class EquipementManager:
             stats['nbEquipementEtatConservation'][element] = db.count(Equipement['EtatConservation'] == element)
 
         stats['nbEquipementProvenance'] = dict()
-        stats['nbEquipementCentreService'] = dict()
+        stats['nbEquipementUnite'] = dict()
         print("Debut comptage selon provenance")
         # Nombre d'équipement selon la provenance
         for element in list_Provenance:
@@ -578,20 +578,20 @@ class EquipementManager:
             stats['nbEquipementProvenance'][element] = db.count(Equipement['Provenance'] == element)
         print("Debut comptage selon categorie par centre de service")
         # Nombre d'équipement de chaque catégorie par centre de service
-        print(list_CentreService)
-        for centre in list_CentreService:
+        print(list_Unite)
+        for centre in list_Unite:
             print("Calcul pour le centre : ", centre)
-            if stats['nbEquipementCentreService'] is None:
-                stats['nbEquipementCentreService'] = dict()
+            if stats['nbEquipementUnite'] is None:
+                stats['nbEquipementUnite'] = dict()
             if centre not in stats[
-                'nbEquipementCentreService']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
-                stats['nbEquipementCentreService'][centre] = dict()  # si non, ajout du centre de service
+                'nbEquipementUnite']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
+                stats['nbEquipementUnite'][centre] = dict()  # si non, ajout du centre de service
             for categorie in list_CategorieEquipement:
                 print("recherche pour la categorie : ", categorie)
-                recherche_temp = db.count((Equipement['CentreService'] == centre) &
+                recherche_temp = db.count((Equipement['Unite'] == centre) &
                                           (Equipement['CategorieEquipement'] == categorie))
                 if recherche_temp != 0:
-                    stats['nbEquipementCentreService'][centre][categorie] = recherche_temp
+                    stats['nbEquipementUnite'][centre][categorie] = recherche_temp
         print("Fin comptage")
         self._ActualiserStats(stats)
         print("Actualisation des stats finie")
@@ -648,14 +648,14 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
                 'Modele': 'E432',
                 'NumeroSerie': '1134',
                 'Salle': 'A867',
-                'CentreService': 'Urgence',
+                'Unite': 'Urgence',
                 'DateAcquisition': datetime.date(2008, 7, 12),
                 'DateDernierEntretien': datetime.date(2011, 2, 27),
                 'FreqEntretien': 30,
                 'Provenance': 'Poly',
                 'EtatService': '',
                 'EtatConservation': 'Quasi neuf',
-                'CodeAsset': '1234',
+                'Voltage': '1234',
                 'Commentaires': '',
                 'PdfPath': ''}
 
@@ -669,7 +669,7 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
         #               'Modele': 'blabla'}
         #dic_request = {'CategorieEquipement': 'Analyseur CD4 \(VIH\)'}
         #               'Salle': 'B',
-        #               'CentreService': '',
+        #               'Unite': '',
         #               'NumeroSerie': '',
         #               'Provenance': '',
         #               'EtatService': '',
@@ -693,6 +693,6 @@ if __name__ == "__main__":  # Execution lorsque le fichier est lance
         print(manager._statsNbEquipementEtatService())
         print(manager._statsNbEquipementEtatConservation())
         print(manager._statsNbEquipementProvenance())
-        print(manager._statsNbEquipementCentreServiceCategorie())
+        print(manager._statsNbEquipementUniteCategorie())
         '''
         #manager._recalculStats()

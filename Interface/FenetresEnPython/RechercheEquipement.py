@@ -43,14 +43,14 @@ class RechercheEquipement(Ui_RechercheEquipement):
         print(self.listeHeaders)
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
-        self.listeCentreService = list(self._conf['CentreService'])
         self.listeSalle = list(self._conf['Salle'])
+        self.listeUnite = list(self._conf['Unite'])
         self.listeProvenance = list(self._conf['Provenance'])
 
         #Trie des differentes listes pour les comboBox
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
-        self.listeCentreService.sort()
+        self.listeUnite.sort()
         self.listeSalle.sort()
         self.listeProvenance.sort()
 
@@ -61,12 +61,12 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxEtatService.clear()
         self.comboBoxEtatService.addItem("")
         self.comboBoxEtatService.addItems(self.listeEtatService)
-        self.comboBoxCentreService.clear()
-        self.comboBoxCentreService.addItem("")
-        self.comboBoxCentreService.addItems(self.listeCentreService)
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItem("")
         self.comboBoxSalle.addItems(self.listeSalle)
+        self.comboBoxUnite.clear()
+        self.comboBoxUnite.addItem("")
+        self.comboBoxUnite.addItems(self.listeUnite)
         self.comboBoxProvenance.clear()
         self.comboBoxProvenance.addItem("")
         self.comboBoxProvenance.addItems(self.listeProvenance)
@@ -85,7 +85,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         #Connexion des differents champs de selections
         self.comboBoxCategorieEquipement.currentTextChanged.connect(self.rechercheCategorieEquipement)
         self.comboBoxEtatService.currentTextChanged.connect(self.rechercheEtatDeService)
-        self.comboBoxCentreService.currentTextChanged.connect(self.rechercheCentreService)
+        self.comboBoxUnite.currentTextChanged.connect(self.rechercheUnite)
         self.comboBoxSalle.currentTextChanged.connect(self.rechercheSalle)
         self.comboBoxProvenance.currentTextChanged.connect(self.rechercheProvenance)
         self.lineEditNumeroSerie.returnPressed.connect(self.rechercheNumeroSerie)
@@ -161,15 +161,15 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 self.dictionnaireRecherche.pop("EtatService")
         self.rechercherEquipement()
 
-    def rechercheCentreService(self):
+    def rechercheUnite(self):
         """Methode permettant la recherche par rapport au champ de recherche
             d'etat de centre de service d'equipement"""
-        if (self.comboBoxCentreService.currentText() != "" and self.comboBoxCentreService.count() >0):
-            self.dictionnaireRecherche["CentreService"] = self.comboBoxCentreService.currentText()
+        if (self.comboBoxUnite.currentText() != "" and self.comboBoxUnite.count() >0):
+            self.dictionnaireRecherche["Unite"] = self.comboBoxUnite.currentText()
 
         else:
-            if "CentreService" in self.dictionnaireRecherche:
-                self.dictionnaireRecherche.pop("CentreService")
+            if "Unite" in self.dictionnaireRecherche:
+                self.dictionnaireRecherche.pop("Unite")
         self.rechercherEquipement()
 
     def rechercheSalle(self):
@@ -240,7 +240,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxProvenance.setCurrentText("")
         self.comboBoxSalle.setCurrentText("")
         self.comboBoxCategorieEquipement.setCurrentText("")
-        self.comboBoxCentreService.setCurrentText("")
+        self.comboBoxUnite.setCurrentText("")
         self.comboBoxEtatService.setCurrentText("")
         self.lineEditNumeroSerie.setText("")
         self.tableResultats.setRowCount(0)
@@ -254,8 +254,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
         thread = RechercherEquipement(self.rechercheEtatDeService)
         thread.start()
 
-    def rechercheCentreServiceThread(self):
-        thread = RechercherEquipement(self.rechercheCentreService)
+    def rechercheUniteThread(self):
+        thread = RechercherEquipement(self.rechercheUnite)
         thread.start()
 
     def rechercheSalleThread(self):
@@ -281,14 +281,14 @@ class RechercheEquipement(Ui_RechercheEquipement):
             self.listeCleDonnees.append(element)
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
-        self.listeCentreService = list(self._conf['CentreService'])
         self.listeSalle = list(self._conf['Salle'])
+        self.listeUnite = list(self._conf['Unite'])
         self.listeProvenance = list(self._conf['Provenance'])
 
         # Trie des differentes listes pour les comboBox
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
-        self.listeCentreService.sort()
+        self.listeUnite.sort()
         self.listeSalle.sort()
         self.listeProvenance.sort()
 
@@ -299,9 +299,9 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxEtatService.clear()
         self.comboBoxEtatService.addItem("")
         self.comboBoxEtatService.addItems(self.listeEtatService)
-        self.comboBoxCentreService.clear()
-        self.comboBoxCentreService.addItem("")
-        self.comboBoxCentreService.addItems(self.listeCentreService)
+        self.comboBoxUnite.clear()
+        self.comboBoxUnite.addItem("")
+        self.comboBoxUnite.addItems(self.listeUnite)
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItem("")
         self.comboBoxSalle.addItems(self.listeSalle)

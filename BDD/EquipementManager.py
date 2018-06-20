@@ -190,10 +190,10 @@ class EquipementManager:
                 if (key == 'Provenance') and (value not in stats['nbEquipementProvenance']):         # ajoute la provenance au fichier de stats
                     stats['nbEquipementProvenance'][value] = 0
                 if key == 'CategorieEquipement':
-                    if dictio['CentreService'] not in stats['nbEquipementCentreService']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
-                        stats['nbEquipementCentreService'][dictio['CentreService']] = dict()   # si non, ajout du centre de service
-                    if value not in stats['nbEquipementCentreService'][dictio['CentreService']]: # vérifie si l'équipement est dans le centre de service associé
-                        stats['nbEquipementCentreService'][dictio['CentreService']][value] = 0    # si non, ajout de l'éq. dans le centre de service associé
+                    if dictio['Unite'] not in stats['nbEquipementUnite']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
+                        stats['nbEquipementUnite'][dictio['Unite']] = dict()   # si non, ajout du centre de service
+                    if value not in stats['nbEquipementUnite'][dictio['Unite']]: # vérifie si l'équipement est dans le centre de service associé
+                        stats['nbEquipementUnite'][dictio['Unite']][value] = 0    # si non, ajout de l'éq. dans le centre de service associé
         self._ActualiserConfiguration(conf)       # actualise le fichier de configuration et de stats pour qu'il contienne la nouvelle entrée
         self._ActualiserStats(stats)
         return conforme                       # retourne un booléen qui indique si le dictionnaire est conforme ou non
@@ -240,16 +240,16 @@ class EquipementManager:
 
 
     # Cette méthode renvoie un dictionnaire à deux niveaux. Le premier niveau a comme clée les différents centres de
-    # de service ('CentreService') qui se trouvent dans le fichier de configuration. Dans le champs des données pour ces clées,
+    # de service ('Unite') qui se trouvent dans le fichier de configuration. Dans le champs des données pour ces clées,
     # on retrouve un dictionnaire (2e niveau) qui lui a comme clée les catégories d'équipements ('CategorieEquipement') que l'on
     # retrouve dans le fichier de configuration. Il est à noter que lorsqu'un centre de service ne possède pas d'équipements
     # d'un type X (ex. IRM), le champ contenant la clée X et la valeur 0 au deuxième niveau est retiré du dictionnaire.
-    def _statsNbEquipementCentreServiceCategorie(self):
+    def _statsNbEquipementUniteCategorie(self):
         stats = self._getStats()
 
-        dict_renvoi = copy.deepcopy(stats['nbEquipementCentreService'])
+        dict_renvoi = copy.deepcopy(stats['nbEquipementUnite'])
 
-        for key1, value1 in stats['nbEquipementCentreService'].items():
+        for key1, value1 in stats['nbEquipementUnite'].items():
             for key2, value2 in value1.items():
                 if value2 == 0:
                     del dict_renvoi[key1][key2]
@@ -266,14 +266,14 @@ class EquipementManager:
             stats_dict['nbEquipement'] += 1
             stats_dict['nbEquipementEtatConservation'][nouveau_dict['EtatConservation']] += 1
             stats_dict['nbEquipementEtatService'][nouveau_dict['EtatService']] += 1
-            stats_dict['nbEquipementCentreService'][nouveau_dict['CentreService']][nouveau_dict['CategorieEquipement']] += 1
+            stats_dict['nbEquipementUnite'][nouveau_dict['Unite']][nouveau_dict['CategorieEquipement']] += 1
             stats_dict['nbEquipementProvenance'][nouveau_dict['Provenance']] += 1
         elif nouveau_dict is None and ancien_dict is not None:          # cas où on supprime un équipement
             print('cas de la suppression')
             stats_dict['nbEquipement'] -= 1
             stats_dict['nbEquipementEtatConservation'][ancien_dict['EtatConservation']] -= 1
             stats_dict['nbEquipementEtatService'][ancien_dict['EtatService']] -= 1
-            stats_dict['nbEquipementCentreService'][ancien_dict['CentreService']][ancien_dict['CategorieEquipement']] -= 1
+            stats_dict['nbEquipementUnite'][ancien_dict['Unite']][ancien_dict['CategorieEquipement']] -= 1
             stats_dict['nbEquipementProvenance'][ancien_dict['Provenance']] -= 1
         elif nouveau_dict is not None and ancien_dict is not None:      # cas où on modifie un équipement
             print('cas de la modification')
@@ -286,9 +286,9 @@ class EquipementManager:
             if ancien_dict['Provenance'] != nouveau_dict['Provenance']:
                 stats_dict['nbEquipementProvenance'][ancien_dict['Provenance']] -= 1
                 stats_dict['nbEquipementProvenance'][nouveau_dict['Provenance']] += 1
-            if ancien_dict['CentreService'] != nouveau_dict['CentreService'] or ancien_dict['CategorieEquipement'] != nouveau_dict['CategorieEquipement']:
-                stats_dict['nbEquipementCentreService'][ancien_dict['CentreService']][ancien_dict['CategorieEquipement']] -= 1
-                stats_dict['nbEquipementCentreService'][nouveau_dict['CentreService']][nouveau_dict['CategorieEquipement']] += 1
+            if ancien_dict['Unite'] != nouveau_dict['Unite'] or ancien_dict['CategorieEquipement'] != nouveau_dict['CategorieEquipement']:
+                stats_dict['nbEquipementUnite'][ancien_dict['Unite']][ancien_dict['CategorieEquipement']] -= 1
+                stats_dict['nbEquipementUnite'][nouveau_dict['Unite']][nouveau_dict['CategorieEquipement']] += 1
         self._ActualiserStats(stats_dict)
 
     # Cette fonction parcoure la base de données et recalcule les statistiques en cas de bug du logiciel. On s'assure
@@ -307,7 +307,7 @@ class EquipementManager:
         # récupère les champs possibles pour la provenance
         list_Provenance = list(conf['Provenance'])
         # récupère les champs possibles pour le centre de service
-        list_CentreService = list(conf['CentreService'])
+        list_Unite = list(conf['Unite'])
         # récupère les champs possibles pour la CategorieEquipement
         list_CategorieEquipement = list(conf['CategorieEquipement'])
         print("Fin recuperation des differents listes")
@@ -323,7 +323,7 @@ class EquipementManager:
             stats['nbEquipementEtatConservation'][element] = db.count(Equipement['EtatConservation'] == element)
 
         stats['nbEquipementProvenance'] = dict()
-        stats['nbEquipementCentreService'] = dict()
+        stats['nbEquipementUnite'] = dict()
         print("Debut comptage selon provenance")
         # Nombre d'équipement selon la provenance
         for element in list_Provenance:
@@ -335,19 +335,19 @@ class EquipementManager:
             stats['nbEquipementProvenance'][element] = db.count(Equipement['Provenance'] == element)
         print("Debut comptage selon categorie par centre de service")
         # Nombre d'équipement de chaque catégorie par centre de service
-        print(list_CentreService)
-        for centre in list_CentreService:
+        print(list_Unite)
+        for centre in list_Unite:
             print("Calcul pour le centre : ", centre)
-            if stats['nbEquipementCentreService'] is None:
-                stats['nbEquipementCentreService'] = dict()
-            if centre not in stats['nbEquipementCentreService']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
-                stats['nbEquipementCentreService'][centre] = dict()  # si non, ajout du centre de service
+            if stats['nbEquipementUnite'] is None:
+                stats['nbEquipementUnite'] = dict()
+            if centre not in stats['nbEquipementUnite']:  # vérifie si le centre de service associé à l'éq. est dans le fichier de stats
+                stats['nbEquipementUnite'][centre] = dict()  # si non, ajout du centre de service
             for categorie in list_CategorieEquipement:
                 print("recherche pour la categorie : ", categorie)
-                recherche_temp = db.count((Equipement['CentreService'] == centre) &
+                recherche_temp = db.count((Equipement['Unite'] == centre) &
                                           (Equipement['CategorieEquipement'] == categorie))
                 if recherche_temp != 0:
-                    stats['nbEquipementCentreService'][centre][categorie] = recherche_temp
+                    stats['nbEquipementUnite'][centre][categorie] = recherche_temp
         print("Fin comptage")
         self._ActualiserStats(stats)
         print("Actualisation des stats finie")
@@ -416,9 +416,10 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
                 'Modele': 'E432',
                 'NumeroSerie': '1134',
                 'Salle': 'A867',
-                'CentreService': 'Urgence',
+                'Unite': 'Urgence',
                 'DateAcquisition': datetime.date(2008, 7, 12),
                 'DateDernierEntretien': datetime.date(2011, 2, 27),
+                'FreqEntretien': '30',
                 'Provenance': 'Poly',
                 'EtatService': 'En service',
                 'EtatConservation': 'Quasi neuf',
@@ -431,7 +432,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #               'Modele': 'blabla'}
         dic_request = {'CategorieEquipement': 'Analyseur CD4 \(VIH\)'}
         #               'Salle': 'B',
-        #               'CentreService': '',
+        #               'Unite': '',
         #               'NumeroSerie': '',
         #               'Provenance': '',
         #               'EtatService': '',
@@ -450,7 +451,7 @@ if __name__ == "__main__":#Execution lorsque le fichier est lance
         #print(manager._statsNbEquipementEtatService())
         #print(manager._statsNbEquipementEtatConservation())
         #print(manager._statsNbEquipementProvenance())
-        #print(manager._statsNbEquipementCentreServiceCategorie())
+        #print(manager._statsNbEquipementUniteCategorie())
 
         manager._recalculStats()
 

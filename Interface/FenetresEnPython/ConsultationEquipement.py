@@ -22,17 +22,19 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         #Creation de la liste pour manipuler les labels
         self.listeBonDeTravail = list()
         self.listeLabel = list()
+        self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
         self.listeLabel.append(self.labelSalle)
-        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelUnite)
         self.listeLabel.append(self.labelDateDaquisition)
         self.listeLabel.append(self.labelDateDuDernierEntretien)
+        self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelProvenance)
-        self.listeLabel.append(self.labelCodeASSET)
-        self.listeLabel.append(self.labelEtatDeService)
+        self.listeLabel.append(self.labelVoltage)
         self.listeLabel.append(self.labelEtatDeConservation)
 
 
@@ -99,6 +101,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                             newDate = self.equipement[cle].split(" ")[0]
                         self.listeLabel[i].setText(str(newDate))
                     else:
+                        print(i)
                         self.listeLabel[i].setText(str(self.equipement[cle]))
 
                     i += 1

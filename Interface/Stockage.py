@@ -18,8 +18,8 @@ class Equipement():
         listeCategorieEquipement= ["Categorie1", "Categorie2", "Categorie3"]
         global listeSalle
         listeSalle= ["Chambre patient", "Salle d'operation", "salle de reunion"]
-        global listeCentreService
-        listeCentreService= ["Centre de service 1", "Centre de service 2", "Centre de service 3"]
+        global listeUnite
+        listeUnite= ["Centre de service 1", "Centre de service 2", "Centre de service 3"]
         global listeBonsDeTravail
         listeBonsDeTravail = ["Bon 1", "Bon 2", "Bon 3", "Bon 4", "Bon 5"]
         def __init__(self):  # Définition de la méthode de création d'un objet de la classe
@@ -54,8 +54,8 @@ class Equipement():
         def modifierSalle(self, salle):
             self.dictionnaire["Salle"] = salle
 
-        def modifierCentreService(self, centreService):
-            self.dictionnaire["CentreService"] = centreService
+        def modifierUnite(self, Unite):
+            self.dictionnaire["Unite"] = Unite
 
         def modifierDateAcquisition(self, dateAcquisition):
             self.dictionnaire["DateAcquisition"] = dateAcquisition
@@ -71,7 +71,7 @@ class Equipement():
         def modifierProvenance(self, provenance):
             self.dictionnaire["Provenance"] = provenance
 
-        def modifierCodeASSET(self, codeAssset):
+        def modifierVoltage(self, codeAssset):
             self.dictionnaire["CodeAsset"] = codeAssset
 
         def modifierEtatService(self, etatService):
@@ -93,12 +93,12 @@ class Equipement():
             self.listeMethodes.append(self.modifierModele)
             self.listeMethodes.append(self.modifierNumSerie)
             self.listeMethodes.append(self.modifierSalle)
-            self.listeMethodes.append(self.modifierCentreService)
+            self.listeMethodes.append(self.modifierUnite)
             self.listeMethodes.append(self.modifierDateAcquisition)
             self.listeMethodes.append(self.modifierDateEntretien)
             self.listeMethodes.append(self.modifierFreqEntretien)
             self.listeMethodes.append(self.modifierProvenance)
-            self.listeMethodes.append(self.modifierCodeASSET)
+            self.listeMethodes.append(self.modifierVoltage)
             self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierEtatConversation)
             self.listeMethodes.append(self.modifierCommentaire)
@@ -135,7 +135,7 @@ class BonDeTravail():
         self.dictionnaire["marque"] = equipement.dictionnaire["marque"]
         self.dictionnaire["modele"] = equipement.dictionnaire["modele"]
         self.dictionnaire["salle"] = equipement.dictionnaire["salle"]
-        self.dictionnaire["centreService"] = equipement.dictionnaire["centreService"]
+        self.dictionnaire["unite"] = equipement.dictionnaire["Unite"]
         self.dictionnaire["numeroBonDeTravail"] = ""
         self.dictionnaire["DescriptionSituation"] = ""
         self.dictionnaire["date"] = ""

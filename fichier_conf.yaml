@@ -2,7 +2,6 @@ BDT_Ajout_Champ_Equipement:
 - CategorieEquipement
 - Marque
 - Modele
-- CentreService
 - Salle
 BDT_ChampAjoutNonPermis:
 - EtatBDT
@@ -32,7 +31,7 @@ CategorieEquipement:
 - 'Microscope '
 - sterilisateur
 - Appareil sonographie
-CentreService:
+Unite:
 - Inconnue
 - "P\xE9diatrie"
 - Maternite
@@ -44,7 +43,7 @@ Equipement_ChampAjoutNonPermis:
 Equipement_ChampAjoutPermis:
 - CategorieEquipement
 - Salle
-- CentreService
+- Unite
 - Provenance
 Equipement_ChampFormatPrecis:
 - DateAcquisition
@@ -99,12 +98,12 @@ champsAcceptes-Equipement:
 - Modele
 - NumeroSerie
 - Salle
-- CentreService
+- Unite
 - DateAcquisition
 - DateDernierEntretien
 - FreqEntretien
 - Provenance
-- CodeAsset
+- Voltage
 - EtatConservation
 - Commentaires
 - PdfPath

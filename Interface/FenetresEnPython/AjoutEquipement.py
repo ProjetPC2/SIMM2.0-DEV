@@ -54,12 +54,12 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.lineEditModele)
         self.listeWidgets.append(self.lineEditNoDeSerie)
         self.listeWidgets.append(self.comboBoxSalle)
-        self.listeWidgets.append(self.comboBoxCentreDeService)
+        self.listeWidgets.append(self.comboBoxUnite)
         self.listeWidgets.append(self.dateEditDateDaquisition)
         self.listeWidgets.append(self.dateEditDateDuDernierEntretien)
         self.listeWidgets.append(self.lineEditFreqEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
-        self.listeWidgets.append(self.lineEditCodeASSET)
+        self.listeWidgets.append(self.lineEditVoltage)
         self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
@@ -100,13 +100,13 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Recuperation des differents elements des listes deroulantes
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
-        self.listeCentreService = list(self._conf['CentreService'])
+        self.listeUnite = list(self._conf['Unite'])
         self.listeSalle = list(self._conf['Salle'])
         self.listeProvenance = list(self._conf['Provenance'])
         #Tri des differentes listes
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
-        self.listeCentreService.sort()
+        self.listeUnite.sort()
         self.listeSalle.sort()
         self.listeProvenance.sort()
 
@@ -116,9 +116,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItem("")
         self.comboBoxSalle.addItems(self.listeSalle)
-        self.comboBoxCentreDeService.clear()
-        self.comboBoxCentreDeService.addItem("")
-        self.comboBoxCentreDeService.addItems(self.listeCentreService)
+        self.comboBoxUnite.clear()
+        self.comboBoxUnite.addItem("")
+        self.comboBoxUnite.addItems(self.listeUnite)
         self.comboBoxProvenance.clear()
         self.comboBoxProvenance.addItem("")
         self.comboBoxProvenance.addItems(self.listeProvenance)
@@ -132,12 +132,12 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
         self.listeLabel.append(self.labelSalle)
-        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelUnite)
         self.listeLabel.append(self.labelDateDAquisition)
         self.listeLabel.append(self.labelDateDernierEntretien)
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelFreqEntretien)
-        self.listeLabel.append(self.labelCodeASSET)
+        self.listeLabel.append(self.labelVoltage)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
         #self.listeLabel.append(self.labelPDF)
@@ -178,7 +178,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxCategorie.setEditable(True)
         self.comboBoxSalle.setEditable(True)
         self.comboBoxProvenance.setEditable(True)
-        self.comboBoxCentreDeService.setEditable(True)
+        self.comboBoxUnite.setEditable(True)
 
         #connexion du bouton de sauvegarde du pdf
         self.BoutonPDF.clicked.connect(self.ouvrirPDF)
@@ -209,7 +209,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
                     print("probleme avec format date")
             elif type(widget) is QComboBox:
                 if(widget.currentText() == ''):
-                    if(widget == self.comboBoxCentreDeService):
+                    if(widget == self.comboBoxUnite):
                         self.listeDonnees.append("Inconnu")
                     else:
                         self.listeDonnees.append("Inconnue")
@@ -319,13 +319,13 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Recupedration des differents elements des listes deroulantes
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
-        self.listeCentreService = list(self._conf['CentreService'])
+        self.listeUnite = list(self._conf['Unite'])
         self.listeSalle = list(self._conf['Salle'])
         self.listeProvenance = list(self._conf['Provenance'])
         # Tri des differentes listes
         self.listeCategorieEquipement.sort()
         self.listeEtatService.sort()
-        self.listeCentreService.sort()
+        self.listeUnite.sort()
         self.listeSalle.sort()
         self.listeProvenance.sort()
 
@@ -335,9 +335,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.comboBoxSalle.clear()
         self.comboBoxSalle.addItem("")
         self.comboBoxSalle.addItems(self.listeSalle)
-        self.comboBoxCentreDeService.clear()
-        self.comboBoxCentreDeService.addItem("")
-        self.comboBoxCentreDeService.addItems(self.listeCentreService)
+        self.comboBoxUnite.clear()
+        self.comboBoxUnite.addItem("")
+        self.comboBoxUnite.addItems(self.listeUnite)
         self.comboBoxProvenance.clear()
         self.comboBoxProvenance.addItem("")
         self.comboBoxProvenance.addItems(self.listeProvenance)
