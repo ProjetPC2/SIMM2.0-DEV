@@ -148,13 +148,13 @@ class Ui_SuppressionBonDeTravail(object):
         self.labelSalle.setStyleSheet("background:white;")
         self.labelSalle.setObjectName("labelSalle")
         self.gridLayout_3.addWidget(self.labelSalle, 3, 2, 1, 1)
-        self.labelCentreService = QtWidgets.QLabel(SuppressionBonDeTravail)
+        self.labelUnite = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelCentreService.setFont(font)
-        self.labelCentreService.setStyleSheet("background:white;")
-        self.labelCentreService.setObjectName("labelCentreService")
-        self.gridLayout_3.addWidget(self.labelCentreService, 3, 1, 1, 1)
+        self.labelUnite.setFont(font)
+        self.labelUnite.setStyleSheet("background:white;")
+        self.labelUnite.setObjectName("labelUnite")
+        self.gridLayout_3.addWidget(self.labelUnite, 3, 1, 1, 1)
         self.labelModele = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -201,11 +201,11 @@ class Ui_SuppressionBonDeTravail(object):
         self.labelMarque.setStyleSheet("background:white;")
         self.labelMarque.setObjectName("labelMarque")
         self.gridLayout_3.addWidget(self.labelMarque, 0, 1, 1, 1)
-        self.labelEcritureCentreService = QtWidgets.QLabel(SuppressionBonDeTravail)
+        self.labelEcritureUnite = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelEcritureCentreService.setFont(font)
-        self.labelEcritureCentreService.setStyleSheet(" QLabel{\n"
+        self.labelEcritureUnite.setFont(font)
+        self.labelEcritureUnite.setStyleSheet(" QLabel{\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
@@ -214,9 +214,9 @@ class Ui_SuppressionBonDeTravail(object):
 "color: rgb(81, 81, 81);\n"
 "}\n"
 "")
-        self.labelEcritureCentreService.setText("")
-        self.labelEcritureCentreService.setObjectName("labelEcritureCentreService")
-        self.gridLayout_3.addWidget(self.labelEcritureCentreService, 4, 1, 1, 1)
+        self.labelEcritureUnite.setText("")
+        self.labelEcritureUnite.setObjectName("labelEcritureUnite")
+        self.gridLayout_3.addWidget(self.labelEcritureUnite, 4, 1, 1, 1)
         self.labelEcritureSalle = QtWidgets.QLabel(SuppressionBonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -654,7 +654,7 @@ class Ui_SuppressionBonDeTravail(object):
         self.label_ID.setText(_translate("SuppressionBonDeTravail", "ID équipement"))
         self.labelCategorieEquip.setText(_translate("SuppressionBonDeTravail", "Catégorie d\'équipement"))
         self.labelSalle.setText(_translate("SuppressionBonDeTravail", "Salle"))
-        self.labelCentreService.setText(_translate("SuppressionBonDeTravail", "Centre de service"))
+        self.labelUnite.setText(_translate("SuppressionBonDeTravail", "Centre de service"))
         self.labelModele.setText(_translate("SuppressionBonDeTravail", "Modèle"))
         self.labelMarque.setText(_translate("SuppressionBonDeTravail", "Marque"))
         self.boutonSupprimerBon.setText(_translate("SuppressionBonDeTravail", "Supprimer le Bon"))

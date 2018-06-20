@@ -212,7 +212,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def aucunEquipementTrouve(self):
         self.labelEcritureCatEquip.clear()
-        self.labelEcritureCentreService.clear()
+        self.labelEcritureUnite.clear()
         self.labelEcritureMarque.clear()
         self.labelEcritureSalle.clear()
         self.labelEcritureModele.clear()
@@ -577,7 +577,7 @@ class BonDeTravail(Ui_BonDeTravail):
     def chargerEquipement(self):
         #Methode permettant le chargement d'un equipement
         self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
-        self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
+        self.labelEcritureUnite.setText(self.equipementDictionnaire["Unite"])
         self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
         self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
         self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
@@ -591,7 +591,7 @@ class BonDeTravail(Ui_BonDeTravail):
     def chargerEquipementAPartirBon(self):
         #Methode permettant le chargement d'un equipement
         self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
-        self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
+        self.labelEcritureUnite.setText(self.equipementDictionnaire["Unite"])
         self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
         self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
         self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])

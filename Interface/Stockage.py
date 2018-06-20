@@ -155,8 +155,8 @@ class BonDeTravail():
     def modifierSalle(self, salle):
         self.dictionnaire["salle"] = salle
 
-    def modifierCentreService(self, centreService):
-        self.dictionnaire["centreService"] = centreService
+    def modifierUnite(self, unite):
+        self.dictionnaire["unite"] = unite
 
     def modifierNumeroBonDeTravail(self, numeroBonDeTravail):
         self.dictionnaire["numeroBonDeTravail"] = numeroBonDeTravail

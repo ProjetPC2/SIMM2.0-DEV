@@ -223,7 +223,7 @@ class BonTravailManager:
 
             cur = con.cursor()
             commmand_sql = "SELECT IdEquipement, NumeroBonTravail, CategorieEquipement," \
-                           " Modele, CentreService, EtatBDT, Date, DescriptionSituation FROM BonTravail INNER JOIN" \
+                           " Modele, Unite, EtatBDT, Date, DescriptionSituation FROM BonTravail INNER JOIN" \
                            " Equipement ON Equipement.Id = BonTravail.IdEquipement "
             compteur = 0
             list_data = []

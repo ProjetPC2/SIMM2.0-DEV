@@ -26,7 +26,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
         self.listeLabel.append(self.labelSalle)
-        self.listeLabel.append(self.labelCentreDeService)
+        self.listeLabel.append(self.labelUnite)
         self.listeLabel.append(self.labelDateDaquisition)
         self.listeLabel.append(self.labelDateDuDernierEntretien)
         self.listeLabel.append(self.labelProvenance)

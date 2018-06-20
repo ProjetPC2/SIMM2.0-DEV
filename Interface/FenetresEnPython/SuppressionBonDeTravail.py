@@ -96,14 +96,14 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
 
     def chargerEquipement(self):
         self.labelEcritureCatEquip.setText(self.equipementDictionnaire["CategorieEquipement"])
-        self.labelEcritureCentreService.setText(self.equipementDictionnaire["CentreService"])
+        self.labelEcritureUnite.setText(self.equipementDictionnaire["Unite"])
         self.labelEcritureMarque.setText(self.equipementDictionnaire["Marque"])
         self.labelEcritureSalle.setText(self.equipementDictionnaire["Salle"])
         self.labelEcritureModele.setText(self.equipementDictionnaire["Modele"])
 
     def aucunEquipement(self):
         self.labelEcritureCatEquip.clear()
-        self.labelEcritureCentreService.clear()
+        self.labelEcritureUnite.clear()
         self.labelEcritureMarque.clear()
         self.labelEcritureSalle.clear()
         self.labelEcritureModele.clear()

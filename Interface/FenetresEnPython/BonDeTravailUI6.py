@@ -240,13 +240,13 @@ class Ui_BonDeTravail(object):
         self.labelSalle.setStyleSheet("background: white;")
         self.labelSalle.setObjectName("labelSalle")
         self.gridLayout_3.addWidget(self.labelSalle, 3, 2, 1, 1)
-        self.labelCentreService = QtWidgets.QLabel(BonDeTravail)
+        self.labelUnite = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelCentreService.setFont(font)
-        self.labelCentreService.setStyleSheet("background: white;")
-        self.labelCentreService.setObjectName("labelCentreService")
-        self.gridLayout_3.addWidget(self.labelCentreService, 3, 1, 1, 1)
+        self.labelUnite.setFont(font)
+        self.labelUnite.setStyleSheet("background: white;")
+        self.labelUnite.setObjectName("labelUnite")
+        self.gridLayout_3.addWidget(self.labelUnite, 3, 1, 1, 1)
         self.labelModele = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -293,11 +293,11 @@ class Ui_BonDeTravail(object):
         self.labelMarque.setStyleSheet("background: white;")
         self.labelMarque.setObjectName("labelMarque")
         self.gridLayout_3.addWidget(self.labelMarque, 0, 1, 1, 1)
-        self.labelEcritureCentreService = QtWidgets.QLabel(BonDeTravail)
+        self.labelEcritureUnite = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.labelEcritureCentreService.setFont(font)
-        self.labelEcritureCentreService.setStyleSheet(" QLabel{\n"
+        self.labelEcritureUnite.setFont(font)
+        self.labelEcritureUnite.setStyleSheet(" QLabel{\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 1px solid gray;\n"
@@ -306,9 +306,9 @@ class Ui_BonDeTravail(object):
 "color: rgb(81, 81, 81);\n"
 "}\n"
 "")
-        self.labelEcritureCentreService.setText("")
-        self.labelEcritureCentreService.setObjectName("labelEcritureCentreService")
-        self.gridLayout_3.addWidget(self.labelEcritureCentreService, 4, 1, 1, 1)
+        self.labelEcritureUnite.setText("")
+        self.labelEcritureUnite.setObjectName("labelEcritureUnite")
+        self.gridLayout_3.addWidget(self.labelEcritureUnite, 4, 1, 1, 1)
         self.labelEcritureSalle = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -913,7 +913,7 @@ class Ui_BonDeTravail(object):
         self.boutonConsultation.setText(_translate("BonDeTravail", "Consultation d\'un bon de travail"))
         self.labelCategorieEquip.setText(_translate("BonDeTravail", "Catégorie d\'équipement"))
         self.labelSalle.setText(_translate("BonDeTravail", "Salle"))
-        self.labelCentreService.setText(_translate("BonDeTravail", "Centre de service"))
+        self.labelUnite.setText(_translate("BonDeTravail", "Centre de service"))
         self.labelModele.setText(_translate("BonDeTravail", "Modèle"))
         self.labelMarque.setText(_translate("BonDeTravail", "Marque"))
         self.labelPieceAssociees.setText(_translate("BonDeTravail", "Pièces associées à la réparation"))

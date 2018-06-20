@@ -31,12 +31,6 @@ CategorieEquipement:
 - 'Microscope '
 - sterilisateur
 - Appareil sonographie
-Unite:
-- Inconnue
-- "P\xE9diatrie"
-- Maternite
-- SOP
-- Inconnu
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -79,6 +73,12 @@ Salle:
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
+Unite:
+- Inconnue
+- "P\xE9diatrie"
+- Maternite
+- SOP
+- Inconnu
 champsAcceptes-BDT:
 - Date
 - TempsEstime
@@ -123,5 +123,5 @@ champsAcceptesAffiches-Equipement:
 - Voltage
 - Etat de conservation
 - Commentaires
-- Chemin PDF 
+- Chemin PDF
 dernierID-Equipement: 0
