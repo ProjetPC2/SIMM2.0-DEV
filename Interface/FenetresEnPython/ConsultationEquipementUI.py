@@ -222,7 +222,7 @@ class Ui_ConsultationEquipement(object):
         self.labelFreqEntretien.setStyleSheet("background:white;")
         self.labelFreqEntretien.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.labelFreqEntretien.setObjectName("labelFreqEntretien")
-        self.verticalLayout_2.addWidget(self.labelNoDeSerie)
+        self.verticalLayout_2.addWidget(self.labelFreqEntretien)
         self.labelProvenance = QtWidgets.QLabel(ConsultationEquipement)
         font = QtGui.QFont()
         font.setPointSize(10)
