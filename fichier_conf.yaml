@@ -71,6 +71,8 @@ Salle:
 - "Maternit\xE9"
 - KS
 - test
+- ''
+- '2'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -94,7 +96,6 @@ champsAcceptes-BDT:
 champsAcceptes-Equipement:
 - Id
 - CategorieEquipement
-- EtatService
 - Marque
 - Modele
 - NumeroSerie
@@ -105,13 +106,13 @@ champsAcceptes-Equipement:
 - FreqEntretien
 - Provenance
 - Voltage
+- EtatService
 - EtatConservation
 - Commentaires
 - PdfPath
 champsAcceptesAffiches-Equipement:
 - Id
 - Categorie d'equipement
-- Etat de service
 - Marque
 - Modele
 - Numero de Serie
@@ -122,6 +123,7 @@ champsAcceptesAffiches-Equipement:
 - Frequence d'entretien
 - Provenance
 - Voltage
+- Etat de service
 - Etat de conservation
 - Commentaires
 - Chemin PDF

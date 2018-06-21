@@ -24,7 +24,6 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeLabel = list()
         self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
-        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
@@ -35,6 +34,7 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
         self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelVoltage)
+        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
 
 

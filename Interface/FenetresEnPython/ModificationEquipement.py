@@ -50,7 +50,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         # Recuperation des differents elements utiles de la fenetre dans une liste
         self.listeWidgets = list()
         self.listeWidgets.append(self.comboBoxCategorie)
-        self.listeWidgets.append(self.groupeBoutonEtatService)
+
         self.listeWidgets.append(self.lineEditMarque)
         self.listeWidgets.append(self.lineEditModele)
         self.listeWidgets.append(self.lineEditNoDeSerie)
@@ -61,6 +61,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.lineEditFreqEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
         self.listeWidgets.append(self.lineEditVoltage)
+        self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
 
@@ -120,9 +121,9 @@ class ModificationEquipement(Ui_AjoutEquipement):
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        # ==self.listeLabel.append(self.labelID)
+        #self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
-        self.listeLabel.append(self.labelEtatDeService)
+
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
@@ -133,6 +134,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelVoltage)
+        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
 
         # Masquage des differents labels
@@ -210,7 +212,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
             self.equipement.listeMethodes[i](donnees)
             i += 1
         self.equipement.dictionnaire["PdfPath"] = self.filePath
-        self.equipementManager.ModifierEquipement(self. equipementRecherche["Id"], self.equipement.dictionnaire)
+        self.equipementManager.ModifierEquipement(self.equipementRecherche["Id"], self.equipement.dictionnaire)
         self.sauvegarde.sauvegardeTermine.emit()
 
     def verificationEquipement(self):
