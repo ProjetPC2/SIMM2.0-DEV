@@ -65,7 +65,7 @@ class EquipementManager:
         try:
             con = lite.connect(self._pathnameEQ)
             cur = con.cursor()
-            if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf,stats):  # ARRANGER FONCTION AVANT
+            if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf, stats):  # ARRANGER FONCTION AVANT
                 '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite," \
                               + " Provenance, Voltage, EtatService, EtatConservation,"\
                               + " Commentaires ) VALUES ('" + dictio["CategorieEquipement"] + "', '" + dictio["Marque"] + "', '"\

@@ -13,7 +13,7 @@ class Ui_Accueil(object):
         Accueil.setObjectName("Accueil")
         Accueil.setWindowModality(QtCore.Qt.NonModal)
         Accueil.setEnabled(True)
-        Accueil.resize(1710, 803)
+        Accueil.resize(1355, 689)
         # Accueil.resize(846, 729)
         Accueil.setMaximumSize(QtCore.QSize(11111112, 1111111))
         font = QtGui.QFont()
