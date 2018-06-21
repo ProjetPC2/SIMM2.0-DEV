@@ -50,6 +50,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
         # Recuperation des differents elements utiles de la fenetre dans une liste
         self.listeWidgets = list()
         self.listeWidgets.append(self.comboBoxCategorie)
+        self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.lineEditMarque)
         self.listeWidgets.append(self.lineEditModele)
         self.listeWidgets.append(self.lineEditNoDeSerie)
@@ -60,7 +61,6 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.lineEditFreqEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
         self.listeWidgets.append(self.lineEditVoltage)
-        self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
 
@@ -120,8 +120,9 @@ class ModificationEquipement(Ui_AjoutEquipement):
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        # self.listeLabel.append(self.labelID)
+        # ==self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
@@ -132,7 +133,6 @@ class ModificationEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelVoltage)
-        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
 
         # Masquage des differents labels
@@ -267,7 +267,7 @@ class ModificationEquipement(Ui_AjoutEquipement):
          """
         equipement = self.equipementRecherche
         self.labelVide.setText(str(equipement["Id"]))
-        indice = 0
+        indice = 1
         for widget in self.listeWidgets:
             # self.stockage.dictionnaire
             if type(widget) is QLineEdit:
@@ -277,9 +277,10 @@ class ModificationEquipement(Ui_AjoutEquipement):
                 index = dateTemp.find(" ")
                 if index > -1:
                     dateTemp = dateTemp.split(" ")[0]
-                widget.setDate(datetime.datetime.strptime( dateTemp ,"%Y-%m-%d"))
+
+                widget.setDate(datetime.datetime.strptime(dateTemp, "%Y-%m-%d"))
             elif type(widget) is QComboBox:
-                widget.setCurrentText(equipement[self.listeCleDonnees[indice]])
+                widget.setCurrentText(str(equipement[self.listeCleDonnees[indice]]))
             elif type(widget) is QButtonGroup:
                 for radioBouton in widget.buttons():
                     if radioBouton.text() == equipement[self.listeCleDonnees[indice]]:

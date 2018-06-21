@@ -112,13 +112,13 @@ class PDF():
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
 
         # récupère la liste des centres de services dans le fichier de configuration
-        listeCentreService = list(conf['CentreService'])
+        listeUnite = list(conf['Unite'])
 
         #Creation du tableau avec les informations concernant le centre de service
-        for centreService in listeCentreService:
-            listeEquipement = equipementManager.RechercherEquipement({"CentreService" : centreService})
+        for Unite in listeUnite:
+            listeEquipement = equipementManager.RechercherEquipement({"Unite" : Unite})
             listeTotal = list()
-            listeColonne = ["ID", "CategorieEquipement", "Marque", "Modele", "CentreService", "EtatService", "Provenance"]
+            listeColonne = ["ID", "CategorieEquipement", "Marque", "Modele", "Unite", "EtatService", "Provenance"]
             listeColonne1 = [Paragraph("<b>ID</b>", style),
                              Paragraph("<b>Categorie Equipement</b>", style),
                              Paragraph("<b>Marque</b>", style),
@@ -149,7 +149,7 @@ class PDF():
                 # Cas ou l'equipement n'existe pas
                 pass
 
-            tableauCentreService = Table(listeTotal, style=[('BACKGROUND', (0, 0), (-1, 0), colors.gray),
+            tableauUnite = Table(listeTotal, style=[('BACKGROUND', (0, 0), (-1, 0), colors.gray),
                                          ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
                                          ('BOX', (0, 0), (-1, 0), 2, colors.black),
                                          ('BOX', (0, 0), (-1, -1), 2, colors.black),
@@ -164,11 +164,11 @@ class PDF():
 
             #On ajoute les differents elements a la liste contenant les differents elements graphique du pdf
             #Ecriture de l'unite a laquelle appartient les equipements
-            Service = ("<b><u>Unite %s : </u></b>" % centreService)
+            Service = ("<b><u>Unite %s : </u></b>" % Unite)
             titreTableau = Paragraph(Service, style)
             elements.append(titreTableau)
             elements.append(Spacer(0,10))
-            elements.append(tableauCentreService)
+            elements.append(tableauUnite)
             elements.append(Spacer(0, 50))
 
         # Ecriture du document pdf

@@ -71,8 +71,8 @@ class Equipement():
         def modifierProvenance(self, provenance):
             self.dictionnaire["Provenance"] = provenance
 
-        def modifierVoltage(self, codeAssset):
-            self.dictionnaire["CodeAsset"] = codeAssset
+        def modifierVoltage(self, Voltage):
+            self.dictionnaire["Voltage"] = Voltage
 
         def modifierEtatService(self, etatService):
             self.dictionnaire["EtatService"] = etatService
@@ -89,6 +89,7 @@ class Equipement():
         def ajoutListeMethodes(self):
             self.listeMethodes = list()
             self.listeMethodes.append(self.modifierCategorieEquipement)
+            self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierMarque)
             self.listeMethodes.append(self.modifierModele)
             self.listeMethodes.append(self.modifierNumSerie)
@@ -99,7 +100,6 @@ class Equipement():
             self.listeMethodes.append(self.modifierFreqEntretien)
             self.listeMethodes.append(self.modifierProvenance)
             self.listeMethodes.append(self.modifierVoltage)
-            self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierEtatConversation)
             self.listeMethodes.append(self.modifierCommentaire)
             self.listeMethodes.append(self.modifierPDF)

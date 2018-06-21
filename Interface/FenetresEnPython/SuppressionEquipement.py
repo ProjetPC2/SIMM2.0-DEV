@@ -32,7 +32,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
-        self.listeLabel.append(self.labelCodeASSET)
+        self.listeLabel.append(self.labelVoltage)
 
         # A voir pour les bons de travaux
         self.listeLabel.append(self.labelCommentaires)

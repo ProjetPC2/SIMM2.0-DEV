@@ -50,6 +50,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Recuperation des differents elements utiles de la fenetre dans une liste
         self.listeWidgets = list()
         self.listeWidgets.append(self.comboBoxCategorie)
+        self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.lineEditMarque)
         self.listeWidgets.append(self.lineEditModele)
         self.listeWidgets.append(self.lineEditNoDeSerie)
@@ -60,7 +61,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.lineEditFreqEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
         self.listeWidgets.append(self.lineEditVoltage)
-        self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
         #self.listeWidgets.append(self.BoutonPDF)
@@ -126,8 +126,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        # self.listeLabel.append(self.labelID)
+        self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
+        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
@@ -138,9 +139,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelVoltage)
-        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
-        #self.listeLabel.append(self.labelPDF)
+        self.listeLabel.append(self.labelPDF)
 
         # Masquage des differents labels
         for label in self.listeLabel:
