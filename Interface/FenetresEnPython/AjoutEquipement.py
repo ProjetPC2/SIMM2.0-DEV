@@ -50,7 +50,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Recuperation des differents elements utiles de la fenetre dans une liste
         self.listeWidgets = list()
         self.listeWidgets.append(self.comboBoxCategorie)
-        self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.lineEditMarque)
         self.listeWidgets.append(self.lineEditModele)
         self.listeWidgets.append(self.lineEditNoDeSerie)
@@ -61,9 +60,10 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.lineEditFreqEntretien)
         self.listeWidgets.append(self.comboBoxProvenance)
         self.listeWidgets.append(self.lineEditVoltage)
+        self.listeWidgets.append(self.groupeBoutonEtatService)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
-        self.listeWidgets.append(self.BoutonPDF)
+        #self.listeWidgets.append(self.BoutonPDF)
 
         #Creation des calendriers pour qu'ils soient dans la langue desiree
         calendrierAcquisition = QCalendarWidget()
@@ -128,7 +128,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel = list()
         #self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
-        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
         self.listeLabel.append(self.labelNoDeSerie)
@@ -139,8 +138,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelVoltage)
+        self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
-        self.listeLabel.append(self.labelPDF)
+        #self.listeLabel.append(self.labelPDF)
 
         # Masquage des differents labels
         for label in self.listeLabel:
@@ -210,7 +210,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
             elif type(widget) is QComboBox:
                 if(widget.currentText() == ''):
                     if(widget == self.comboBoxUnite):
-                        self.listeDonnees.append("Inconnu")
+                        self.listeDonnees.append("Inconnue")
                     else:
                         self.listeDonnees.append("Inconnue")
                 else:
