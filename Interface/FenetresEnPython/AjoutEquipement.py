@@ -63,7 +63,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeWidgets.append(self.lineEditVoltage)
         self.listeWidgets.append(self.groupeBoutonEtatConservation)
         self.listeWidgets.append(self.textEditCommentaires)
-        #self.listeWidgets.append(self.BoutonPDF)
+        self.listeWidgets.append(self.BoutonPDF)
 
         #Creation des calendriers pour qu'ils soient dans la langue desiree
         calendrierAcquisition = QCalendarWidget()
@@ -126,7 +126,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         # Creation du liste pour manipuler plus facilement ces differents labels
         # --ATTETION-- L'ordre est donc important
         self.listeLabel = list()
-        self.listeLabel.append(self.labelID)
+        #self.listeLabel.append(self.labelID)
         self.listeLabel.append(self.labelCategorie)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelMarque)

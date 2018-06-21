@@ -66,9 +66,9 @@ class EquipementManager:
             con = lite.connect(self._pathnameEQ)
             cur = con.cursor()
             if self._verifierChamps(dictio, conf) and self._verifierDict(dictio, conf, stats):  # ARRANGER FONCTION AVANT
-                '''commandeSQL = "INSERT INTO Equipement(Id, CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite," \
+                '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite," \
                               + " Provenance, Voltage, EtatService, EtatConservation, PdfPath"\
-                              + " Commentaires ) VALUES ('"dictio["Id"] + "', '" + dictio["CategorieEquipement"] + "', '" + dictio["Marque"] + "', '"\
+                              + " Commentaires ) VALUES (' dictio["CategorieEquipement"] + "', '" + dictio["Marque"] + "', '"\
                               + dictio["Modele"] + "', '" + dictio["NumeroSerie"] + "', '" + dictio["Salle"] + "', '" + dictio["Unite"]\
                               + "', '" + dictio["Provenance"] + "', '" + dictio["Voltage"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"]\
                               + "', '" + dictio["Commentaires"] + "', '" + dictio["PdfPath"]  "' );"
@@ -76,17 +76,17 @@ class EquipementManager:
                 '''commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite, " \
                               + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, Voltage, EtatService, EtatConservation," \
                               + " Commentaires, PdfPath)" \
-                              + " VALUES ('"dictio["Id"]+ "', '"  + dictio["CategorieEquipement"]  \
+                              + " VALUES ('dictio["CategorieEquipement"]  \
                               + "', '" + dictio["Marque"] + "', '" + dictio["Modele"] + "', '" + dictio["NumeroSerie"] \
                               + "', '" + dictio["Salle"] + "', '" + dictio["Unite"] + "', '" + str(dictio["DateAcquisition"]) \
                               + "', '" + str(dictio["DateDernierEntretien"]) + "', '" + dictio["FreqEntretien"] + "', '" + dictio["Provenance"] \
                               + "', '" + dictio["Voltage"] + "', '" + dictio["EtatService"] + "', '" + dictio["EtatConservation"] \
                               + "', '" + dictio["Commentaires"] + "', '" + dictio["PdfPath"] "');"
                 '''
-                commandeSQL = "INSERT INTO Equipement(Id, CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite, " \
+                commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite, " \
                               + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, Voltage, EtatService, EtatConservation," \
                               + " Commentaires, PdfPath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
-                tupleData = (dictio["Id"], dictio["CategorieEquipement"], dictio["Marque"], dictio["Modele"], dictio["NumeroSerie"], dictio["Salle"], dictio["Unite"],
+                tupleData = (dictio["CategorieEquipement"], dictio["Marque"], dictio["Modele"], dictio["NumeroSerie"], dictio["Salle"], dictio["Unite"],
                              str(dictio["DateAcquisition"]), str(dictio["DateDernierEntretien"]), dictio["FreqEntretien"], dictio["Provenance"], dictio["Voltage"], dictio["EtatService"],
                              dictio["EtatConservation"], dictio["Commentaires"], dictio["PdfPath"])
                 cur.execute(commandeSQL, tupleData)
