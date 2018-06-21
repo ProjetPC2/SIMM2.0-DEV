@@ -1,5 +1,23 @@
-nbEquipement: 5
-nbEquipementCentreService:
+nbEquipement: 6
+nbEquipementEtatConservation:
+  Acceptable: 0
+  Desuet: 0
+  "D\xE9suet": 0
+  En fin de vie: 0
+  Quasi neuf: 6
+nbEquipementEtatService:
+  Au rebus: 0
+  En maintenance: 0
+  En service: 6
+nbEquipementProvenance:
+  ? ''
+  : 0
+  1212e: 1
+  '1221': 1
+  '30': 0
+  Inconnue: 4
+  Konbit Sante: 0
+nbEquipementUnite:
   '124':
     Analyseur sanguin: 2
   1d2:
@@ -9,22 +27,8 @@ nbEquipementCentreService:
     Appareil a succion: 0
     Chaise roulante: 0
     Glucometre: 1
+  Inconnue:
+    Analyseur sanguin: 1
   "P\xE9diatrie":
     Analyseur sanguin: 0
     Lit: 0
-nbEquipementEtatConservation:
-  Acceptable: 0
-  Desuet: 0
-  "D\xE9suet": 0
-  En fin de vie: 0
-  Quasi neuf: 5
-nbEquipementEtatService:
-  Au rebus: 0
-  En maintenance: 0
-  En service: 5
-nbEquipementProvenance:
-  1212e: 1
-  '1221': 1
-  '30': 0
-  Inconnue: 3
-  Konbit Sante: 0

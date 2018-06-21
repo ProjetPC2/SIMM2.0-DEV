@@ -62,6 +62,7 @@ Provenance:
 - USAID
 - UNICEF
 - Phoenix international forwarders inc
+- ''
 Salle:
 - Inconnue
 - Depot1
@@ -69,6 +70,7 @@ Salle:
 - Magasin&Stock
 - "Maternit\xE9"
 - KS
+- test
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement

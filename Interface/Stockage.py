@@ -19,7 +19,7 @@ class Equipement():
         global listeSalle
         listeSalle= ["Chambre patient", "Salle d'operation", "salle de reunion"]
         global listeUnite
-        listeUnite= ["Centre de service 1", "Centre de service 2", "Centre de service 3"]
+        listeUnite= ["Unite 1", "Unite 2", "Unite 3"]
         global listeBonsDeTravail
         listeBonsDeTravail = ["Bon 1", "Bon 2", "Bon 3", "Bon 4", "Bon 5"]
         def __init__(self):  # Définition de la méthode de création d'un objet de la classe
@@ -89,7 +89,6 @@ class Equipement():
         def ajoutListeMethodes(self):
             self.listeMethodes = list()
             self.listeMethodes.append(self.modifierCategorieEquipement)
-            self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierMarque)
             self.listeMethodes.append(self.modifierModele)
             self.listeMethodes.append(self.modifierNumSerie)
@@ -100,6 +99,7 @@ class Equipement():
             self.listeMethodes.append(self.modifierFreqEntretien)
             self.listeMethodes.append(self.modifierProvenance)
             self.listeMethodes.append(self.modifierVoltage)
+            self.listeMethodes.append(self.modifierEtatService)
             self.listeMethodes.append(self.modifierEtatConversation)
             self.listeMethodes.append(self.modifierCommentaire)
             self.listeMethodes.append(self.modifierPDF)

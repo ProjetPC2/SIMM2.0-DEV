@@ -85,7 +85,7 @@ class EquipementManager:
                 '''
                 commandeSQL = "INSERT INTO Equipement(CategorieEquipement, Marque, Modele, NumeroSerie, Salle, Unite, " \
                               + "DateAcquisition, DateDernierEntretien, FreqEntretien, Provenance, Voltage, EtatService, EtatConservation," \
-                              + " Commentaires, PdfPath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                              + " Commentaires, PdfPath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
                 tupleData = (dictio["CategorieEquipement"], dictio["Marque"], dictio["Modele"], dictio["NumeroSerie"], dictio["Salle"], dictio["Unite"],
                              str(dictio["DateAcquisition"]), str(dictio["DateDernierEntretien"]), dictio["FreqEntretien"], dictio["Provenance"], dictio["Voltage"], dictio["EtatService"],
                              dictio["EtatConservation"], dictio["Commentaires"], dictio["PdfPath"])
@@ -480,7 +480,7 @@ class EquipementManager:
                 listeUnite.append(row[0])
                 dict_renvoi[row[0]] = dict()
             print(len(rows))
-            print("Liste centre ",listeUnite)
+            print("Liste centre ", listeUnite)
             listeCategorieEquipemement = conf["CategorieEquipement"]
             for Unite in listeUnite:
                 for categorieEquipement in listeCategorieEquipemement:
