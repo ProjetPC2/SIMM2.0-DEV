@@ -1,6 +1,6 @@
-nbEquipement: 8
+nbEquipement: 9
 nbEquipementEtatConservation:
-  Acceptable: 0
+  Acceptable: 1
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
@@ -8,7 +8,7 @@ nbEquipementEtatConservation:
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 1
-  En service: 7
+  En service: 8
 nbEquipementProvenance:
   ? ''
   : 0
@@ -16,7 +16,7 @@ nbEquipementProvenance:
   '1221': 1
   '30': 0
   Inconnue: 5
-  Konbit Sante: 1
+  Konbit Sante: 2
 nbEquipementUnite:
   '124':
     Analyseur sanguin: 2
@@ -30,6 +30,8 @@ nbEquipementUnite:
   Inconnue:
     Analyseur sanguin: 2
     En service: 0
+  Maternite:
+    Analyseur sanguin: 1
   "P\xE9diatrie":
     Analyseur sanguin: 1
     Lit: 0

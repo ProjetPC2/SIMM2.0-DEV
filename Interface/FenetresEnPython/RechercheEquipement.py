@@ -113,7 +113,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         indice = 0
         for cle in self.listeCleDonnees:
             if(cle == "Id"):
-                self.equipementSelectionne[cle] = (self.tableResultats.item(ligne,indice).data(0))
+                   self.equipementSelectionne[cle] = (self.tableResultats.item(ligne,indice).data(0))
             elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             else:
