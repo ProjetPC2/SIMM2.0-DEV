@@ -39,10 +39,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         for element in self._conf['champsAcceptes-Equipement']:
             self.listeCleDonnees.append(element)
 
-        # for element in self._conf['champsAcceptesAffiches-Equipement']:
-            # self.listeHeaders.append(element)
-
-        # print(self.listeHeaders)
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeSalle = list(self._conf['Salle'])
@@ -232,9 +228,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
                         self.tableResultats.setItem(i, colonne, QTableWidgetItem(str(dictionnaire[cle])))
                     colonne += 1
                 self.tableResultats.resizeColumnsToContents()
-
-                #on change le nom du header
-                self.tableResultats.setHorizontalHeaderLabels(self.listeHeaders)
         else:
             self.chargement.aucunResultat.emit()
 
