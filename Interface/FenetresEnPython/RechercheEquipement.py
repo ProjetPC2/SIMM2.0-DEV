@@ -24,7 +24,9 @@ class RechercheEquipement(Ui_RechercheEquipement):
         #Recuperation des differents attributs d'un equipement
         self.equipementManager = EquipementManager(pathEquipementDatabase)
         self.listeCleDonnees = list()
-        self.listeHeaders = list()
+        self.listeHeaders = ['Id', "Catégorie d'équipement", 'Marque', 'Modèle', 'Numéro de Série', 'Salle', 'Unité', "Date d'aquisition", 
+        'Date du dernier Entretien', "Fréquence d'entretien", 'Provenance', 'Voltage', 'État de service', 'État de conservation', 'Commentaires', 
+        'Chemin PDF']
 
         try:
             fichierConf = open(pathFichierConf, 'r')  # try: ouvrir le fichier et le lire
@@ -37,10 +39,10 @@ class RechercheEquipement(Ui_RechercheEquipement):
         for element in self._conf['champsAcceptes-Equipement']:
             self.listeCleDonnees.append(element)
 
-        for element in self._conf['champsAcceptesAffiches-Equipement']:
-            self.listeHeaders.append(element)
+        # for element in self._conf['champsAcceptesAffiches-Equipement']:
+            # self.listeHeaders.append(element)
 
-        print(self.listeHeaders)
+        # print(self.listeHeaders)
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeSalle = list(self._conf['Salle'])
