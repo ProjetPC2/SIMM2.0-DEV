@@ -112,19 +112,19 @@ champsAcceptes-Equipement:
 - PdfPath
 champsAcceptesAffiches-Equipement:
 - Id
-- Catégorie d'équipement
+- Categorie d'equipement
 - Marque
-- Modèle
-- Numéro de Série
+- Modele
+- Numero de Série
 - Salle
-- Unité
+- Unite
 - Date d'aquisition
 - Date du dernier Entretien
-- Fréquence d'entretien
+- Frequence d'entretien
 - Provenance
 - Voltage
-- État de service
-- État de conservation
+- Etat de service
+- Etat de conservation
 - Commentaires
 - Chemin PDF
 dernierID-Equipement: 0
