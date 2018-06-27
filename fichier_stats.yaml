@@ -1,6 +1,6 @@
-nbEquipement: 9
+nbEquipement: 25
 nbEquipementEtatConservation:
-  Acceptable: 1
+  Acceptable: 17
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
@@ -8,15 +8,16 @@ nbEquipementEtatConservation:
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 1
-  En service: 8
+  En service: 24
 nbEquipementProvenance:
   ? ''
   : 0
   1212e: 1
   '1221': 1
   '30': 0
-  Inconnue: 5
-  Konbit Sante: 2
+  Inconnue: 6
+  Konbit Sante: 15
+  Phoenix international forwarders inc: 2
 nbEquipementUnite:
   '124':
     Analyseur sanguin: 2
@@ -28,7 +29,7 @@ nbEquipementUnite:
     Chaise roulante: 0
     Glucometre: 1
   Inconnue:
-    Analyseur sanguin: 2
+    Analyseur sanguin: 18
     En service: 0
   Maternite:
     Analyseur sanguin: 1

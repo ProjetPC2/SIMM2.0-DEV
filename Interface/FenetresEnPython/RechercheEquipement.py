@@ -109,9 +109,13 @@ class RechercheEquipement(Ui_RechercheEquipement):
         print(self.tableResultats.item(ligne,0).data(0))
         self.equipementSelectionne = dict()
         indice = 0
+        print(self.listeCleDonnees)
         for cle in self.listeCleDonnees:
             if(cle == "Id"):
-                   self.equipementSelectionne[cle] = (self.tableResultats.item(ligne,indice).data(0))
+                print("ligne", ligne)
+                print("colonne", colonne)
+                print(type(self.tableResultats.item(ligne, indice)))
+                self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             elif cle == "DateAcquisition" or cle == "DateDernierEntretien":
                 self.equipementSelectionne[cle] = self.tableResultats.item(ligne,indice).data(0)
             else:
@@ -218,7 +222,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
             for i, dictionnaire in enumerate(self.listeResultat):
                 # Creation des QTableWidgetItem
                 colonne = 0
-                print(self.listeCleDonnees)
                 for cle in self.listeCleDonnees:
                     if(cle == "Id"):
                         item = QTableWidgetItem()
@@ -272,8 +275,8 @@ class RechercheEquipement(Ui_RechercheEquipement):
                 self._conf = yaml.load(fichierConf)
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
             print("Could not read file: ", pathFichierConf)  # définir ce qu'il faut faire pour corriger
-        for element in self._conf['champsAcceptes-Equipement']:
-            self.listeCleDonnees.append(element)
+        # for element in self._conf['champsAcceptes-Equipement']:
+            # self.listeCleDonnees.append(element)
         self.listeCategorieEquipement = list(self._conf['CategorieEquipement'])
         self.listeEtatService = list(self._conf['EtatService'])
         self.listeSalle = list(self._conf['Salle'])
@@ -305,7 +308,6 @@ class RechercheEquipement(Ui_RechercheEquipement):
         self.comboBoxProvenance.addItems(self.listeProvenance)
 
         fichierConf.close()
-
 
 def verificationTexte(texte):
     print("Verification en cours")
