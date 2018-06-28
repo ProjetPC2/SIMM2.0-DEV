@@ -7,16 +7,17 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-# from win32api import GetSystemMetrics
+from win32api import GetSystemMetrics
 
 class Ui_RechercheBonDeTravail(object):
     def setupUi(self, RechercheBonDeTravail):
         RechercheBonDeTravail.setObjectName("RechercheBonDeTravail")
 
-        #width = GetSystemMetrics(0)
-        #heigth = GetSystemMetrics(1)
-        #facteur_grandissement = 0.80
-        #RechercheBonDeTravail.resize(1355, 689)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        RechercheBonDeTravail.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
 
         RechercheBonDeTravail.setMaximumSize(QtCore.QSize(11111112, 1111111))
         icon = QtGui.QIcon()
@@ -71,7 +72,7 @@ class Ui_RechercheBonDeTravail(object):
         self.verticalLayout_11.setSpacing(20)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
         self.tableResultats = QtWidgets.QTableWidget(RechercheBonDeTravail)
-        self.tableResultats.setMinimumSize(QtCore.QSize(200, 500))
+        self.tableResultats.setMinimumSize(QtCore.QSize(200, 400))
         self.tableResultats.setMaximumSize(QtCore.QSize(2000, 16777215))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")

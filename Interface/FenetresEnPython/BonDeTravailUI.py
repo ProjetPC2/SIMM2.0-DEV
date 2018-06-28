@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui
-
+from win32api import GetSystemMetrics
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -25,7 +25,12 @@ except AttributeError:
 class Ui_BonDeTravail(object):
     def setupUi(self, BonDeTravail):
         BonDeTravail.setObjectName(_fromUtf8("BonDeTravail"))
-        BonDeTravail.resize(1440, 921)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        BonDeTravail.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #BonDeTravail.resize(1440, 921)
         BonDeTravail.setMaximumSize(QtCore.QSize(16777125, 16777125))
         BonDeTravail.setStyleSheet(_fromUtf8("QWidget\n"
 " {\n"

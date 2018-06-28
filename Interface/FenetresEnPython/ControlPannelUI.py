@@ -7,13 +7,19 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from win32api import GetSystemMetrics
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.setEnabled(True)
-        MainWindow.resize(1571, 703)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        MainWindow.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #MainWindow.resize(1571, 703)
         font = QtGui.QFont()
         font.setFamily("Cambria")
         MainWindow.setFont(font)

@@ -7,11 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from win32api import GetSystemMetrics
 class Ui_SupportPC2(object):
     def setupUi(self, SupportPC2):
         SupportPC2.setObjectName("SupportPC2")
-        SupportPC2.resize(1572, 800)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        SupportPC2.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #SupportPC2.resize(1572, 800)
         SupportPC2.setMaximumSize(QtCore.QSize(16777215, 16777215))
         SupportPC2.setStyleSheet("background: white;")
         self.verticalLayout = QtWidgets.QVBoxLayout(SupportPC2)

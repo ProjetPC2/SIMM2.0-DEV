@@ -7,11 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from win32api import GetSystemMetrics
 class Ui_BonDeTravail(object):
     def setupUi(self, BonDeTravail):
         BonDeTravail.setObjectName("BonDeTravail")
-        BonDeTravail.resize(1168, 839)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        BonDeTravail.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #BonDeTravail.resize(1168, 839)
         BonDeTravail.setMinimumSize(QtCore.QSize(0, 0))
         BonDeTravail.setMaximumSize(QtCore.QSize(16777215, 16777215))
         BonDeTravail.setStyleSheet("QWidget\n"

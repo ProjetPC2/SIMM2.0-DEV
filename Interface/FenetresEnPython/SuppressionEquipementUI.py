@@ -7,11 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from win32api import GetSystemMetrics
 class Ui_SuppressionEquipement(object):
     def setupUi(self, SuppressionEquipement):
         SuppressionEquipement.setObjectName("SuppressionEquipement")
-        SuppressionEquipement.resize(1016, 800)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.8
+        facteur_grandissement_heigth = 0.7
+        SuppressionEquipement.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #SuppressionEquipement.resize(1016, 800)
         SuppressionEquipement.setMinimumSize(QtCore.QSize(0, 800))
         SuppressionEquipement.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(SuppressionEquipement)

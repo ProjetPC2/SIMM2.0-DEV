@@ -7,11 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from win32api import GetSystemMetrics
 class Ui_FenetrePersonnalisable(object):
     def setupUi(self, FenetrePersonnalisable):
         FenetrePersonnalisable.setObjectName("FenetrePersonnalisable")
-        FenetrePersonnalisable.resize(979, 598)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        FenetrePersonnalisable.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #FenetrePersonnalisable.resize(979, 598)
         FenetrePersonnalisable.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(FenetrePersonnalisable)
         self.gridLayout.setObjectName("gridLayout")

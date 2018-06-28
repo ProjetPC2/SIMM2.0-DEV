@@ -7,11 +7,17 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from win32api import GetSystemMetrics
 
 class Ui_ConsultationEquipement(object):
     def setupUi(self, ConsultationEquipement):
         ConsultationEquipement.setObjectName("ConsultationEquipement")
-        ConsultationEquipement.resize(1557, 1269)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        ConsultationEquipement.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #ConsultationEquipement.resize(1557, 1269)
         ConsultationEquipement.setMinimumSize(QtCore.QSize(0, 0))
         ConsultationEquipement.setMaximumSize(QtCore.QSize(16777125, 16777125))
         ConsultationEquipement.setStyleSheet("background:white;")

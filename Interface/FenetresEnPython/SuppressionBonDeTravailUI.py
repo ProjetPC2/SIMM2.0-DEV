@@ -7,11 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from win32api import GetSystemMetrics
 class Ui_SuppressionBonDeTravail(object):
     def setupUi(self, SuppressionBonDeTravail):
         SuppressionBonDeTravail.setObjectName("SuppressionBonDeTravail")
-        SuppressionBonDeTravail.resize(1710, 800)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        SuppressionBonDeTravail.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #SuppressionBonDeTravail.resize(1710, 800)
         SuppressionBonDeTravail.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(SuppressionBonDeTravail)
         self.gridLayout.setObjectName("gridLayout")

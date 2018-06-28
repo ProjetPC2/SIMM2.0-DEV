@@ -7,17 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-# from win32api import GetSystemMetrics
+from win32api import GetSystemMetrics
 
 class Ui_Statistique(object):
     def setupUi(self, Statistique):
         Statistique.setObjectName("Statistique")
-        '''
-        width=GetSystemMetrics(0)
-        heigth= GetSystemMetrics(1)
-        facteur_grandissement= 0.80
-        Statistique.resize(facteur_grandissement*width, facteur_grandissement*heigth)
-        '''
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        Statistique.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
         #TODO modifier la taille maximale pour la ligne suivante
         Statistique.setMaximumSize(QtCore.QSize(11111112, 1111111))
         Statistique.setStyleSheet("QWidget{\n"
@@ -438,8 +437,8 @@ class Ui_Statistique(object):
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
         self.tableResumeInventaire = QtWidgets.QTableWidget(Statistique)
-        self.tableResumeInventaire.setMinimumSize(QtCore.QSize(293, 400))
-        self.tableResumeInventaire.setMaximumSize(QtCore.QSize(1000, 500))
+        self.tableResumeInventaire.setMinimumSize(QtCore.QSize(293, 250))
+        self.tableResumeInventaire.setMaximumSize(QtCore.QSize(1000, 250))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)

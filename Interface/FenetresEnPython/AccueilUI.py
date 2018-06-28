@@ -7,13 +7,19 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from win32api import GetSystemMetrics
 
 class Ui_Accueil(object):
     def setupUi(self, Accueil):
         Accueil.setObjectName("Accueil")
         Accueil.setWindowModality(QtCore.Qt.NonModal)
         Accueil.setEnabled(True)
-        Accueil.resize(1355, 689)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        Accueil.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
+        #Accueil.resize(1355, 689)
         # Accueil.resize(846, 729)
         Accueil.setMaximumSize(QtCore.QSize(11111112, 1111111))
         font = QtGui.QFont()

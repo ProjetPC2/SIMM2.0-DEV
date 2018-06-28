@@ -7,11 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from win32api import GetSystemMetrics
 class Ui_RechercheEquipement(object):
     def setupUi(self, RechercheEquipement):
         RechercheEquipement.setObjectName("RechercheEquipement")
         RechercheEquipement.setWindowModality(QtCore.Qt.NonModal)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.8
+        facteur_grandissement_heigth = 0.7
+        RechercheEquipement.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
         RechercheEquipement.resize(1440, 810)
         RechercheEquipement.setMinimumSize(QtCore.QSize(0, 0))
         RechercheEquipement.setMaximumSize(QtCore.QSize(16777215, 16777215))

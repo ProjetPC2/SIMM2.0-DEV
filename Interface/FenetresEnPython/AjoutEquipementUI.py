@@ -7,11 +7,15 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from win32api import GetSystemMetrics
 class Ui_AjoutEquipement(object):
     def setupUi(self, AjoutEquipement):
         AjoutEquipement.setObjectName("AjoutEquipement")
-        AjoutEquipement.resize(1440, 810)
+        width = GetSystemMetrics(0)
+        heigth = GetSystemMetrics(1)
+        facteur_grandissement_width = 0.9
+        facteur_grandissement_heigth = 0.7
+        AjoutEquipement.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
         AjoutEquipement.setMinimumSize(QtCore.QSize(0, 0))
         AjoutEquipement.setMaximumSize(QtCore.QSize(16777125, 16777125))
         font = QtGui.QFont()
