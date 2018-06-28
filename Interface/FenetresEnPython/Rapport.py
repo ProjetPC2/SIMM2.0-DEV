@@ -47,7 +47,7 @@ class Rapport():
         # print("bouton", bouton.text())
 
         self.finImpression = Signal()
-        self.listeCle = ["Date", "NomTechnicien", "IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Marque", "CentreService",
+        self.listeCle = ["Date", "NomTechnicien", "IdEquipement", "NumeroBonTravail", "CategorieEquipement", "Marque", "Unite",
                          "Modele", "Salle", "DescriptionSituation", "DescriptionIntervention"]
         print(path)
         self.creationPDF(path.split(".csv")[0])
@@ -119,14 +119,14 @@ class Rapport():
             print("Could not read file: ", conf_file)  # définir ce qu'il faut faire pour corriger
 
         # récupère la liste des centres de services dans le fichier de configuration
-        #listeCentreService = list(conf['CentreService'])
+        #listeUnite = list(conf['Unite'])
         l = [1]
         #Creation du tableau avec les informations concernant le centre de service
 
         currentDate = (QDate.currentDate().toPyDate())
-        listeCentreService = list(conf['CentreService'])
+        listeUnite = list(conf['Unite'])
 
-        for centreService in l:
+        for Unite in l:
 
             print("DATE AUJOURHDUI ", currentDate)
             listBon = bonTravailManager.RechercherBonTravailRapport({"AvantLe" : currentDate})
@@ -203,7 +203,7 @@ class Rapport():
                 # Cas ou l'equipement n'existe pas
                 pass
 
-            tableauCentreService = Table(listeTotal, style=[('BACKGROUND', (0, 0), (-1, 0), colors.gray),
+            tableauUnite = Table(listeTotal, style=[('BACKGROUND', (0, 0), (-1, 0), colors.gray),
                                          ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
                                          ('BOX', (0, 0), (-1, 0), 2, colors.black),
                                          ('BOX', (0, 0), (-1, -1), 2, colors.black),
@@ -222,7 +222,7 @@ class Rapport():
             titreTableau = Paragraph(Service, style)
             elements.append(titreTableau)
             #elements.append(Spacer(0,10))
-            elements.append(tableauCentreService)
+            elements.append(tableauUnite)
             elements.append(Spacer(0, 50))
 
 

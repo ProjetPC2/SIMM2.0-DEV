@@ -1,6 +1,6 @@
-nbEquipement: 25
+nbEquipement: 26
 nbEquipementEtatConservation:
-  Acceptable: 17
+  Acceptable: 18
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
@@ -8,14 +8,14 @@ nbEquipementEtatConservation:
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 1
-  En service: 24
+  En service: 25
 nbEquipementProvenance:
   ? ''
   : 0
   1212e: 1
   '1221': 1
   '30': 0
-  Inconnue: 6
+  Inconnue: 7
   Konbit Sante: 15
   Phoenix international forwarders inc: 2
 nbEquipementUnite:
@@ -31,6 +31,7 @@ nbEquipementUnite:
   Inconnue:
     Analyseur sanguin: 18
     En service: 0
+    IRM: 1
   Maternite:
     Analyseur sanguin: 1
   "P\xE9diatrie":
