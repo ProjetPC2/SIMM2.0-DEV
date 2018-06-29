@@ -25,8 +25,8 @@ class PDF(Thread):
         self.PAGE_WIDTH = defaultPageSize[1];
         self.PAGE_HEIGHT = defaultPageSize[0]
 
-        self.Title = "Inventaire - S.I.M.M 2.0"
-        self.pageinfo = "S.I.M.M 2.0"
+        self.Title = "Inventaire - S.I.M.M 2.1"
+        self.pageinfo = "S.I.M.M 2.1"
         #On autorise que les pdf
         self.filter = "PDF (*.pdf)"
         # fileName = QFileDialog.getSaveFileName(None, 'Save file', "/home/SIMM2.0.pdf", filter)
@@ -84,7 +84,7 @@ class PDF(Thread):
         # Ajout d'un espacement
         elements = [Spacer(0, 2 * inch)]
         # Ajout du logo de SIMM 2.0
-        elements.append(self.get_image(os.path.join("Images","SIMM2.0.png"), width=5 * cm))
+        elements.append(self.get_image(os.path.join("Images","Logo_SIMM.png"), width=5 * cm))
         elements.append(Spacer(0, 1 * inch))
         #Creation du style par defaut
         styleSheet = getSampleStyleSheet()

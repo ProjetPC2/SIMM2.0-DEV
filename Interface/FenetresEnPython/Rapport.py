@@ -36,8 +36,8 @@ class Rapport():
         #TODO : a completer avec le nom de l'hopital
         self.nomHopital = "Hopital Universitaire Justinien"
 
-        self.Title = "Rapport - S.I.M.M 3.0"
-        self.pageinfo = "S.I.M.M 3.0"
+        self.Title = "Rapport - S.I.M.M 2.1"
+        self.pageinfo = "S.I.M.M 2.1"
         #On autorise que les pdf
         # self.filter = "PDF (*.pdf)"
         # fileName = QFileDialog.getSaveFileName(None, 'Save file', "/home/SIMM2.0.pdf", filter)
@@ -101,8 +101,8 @@ class Rapport():
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
         # Ajout d'un espacement
         elements = [Spacer(0, 2 * inch)]
-        # Ajout du logo de SIMM 2.0
-        elements.append(self.get_image(os.path.join("Images","SIMM2.0.png"), width=5 * cm))
+        # Ajout du logo de SIMM
+        elements.append(self.get_image(os.path.join("Images","Logo_SIMM.png"), width=5 * cm))
         elements.append(Spacer(0, 1 * inch))
         #Creation du style par defaut
         styleSheet = getSampleStyleSheet()
