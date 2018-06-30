@@ -10,6 +10,7 @@ from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManagerSQLite import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI6 import Ui_BonDeTravail
+from Interface.FenetresEnPython.ReqPieceUI import Ui_ReqPiece
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathPieceDatabase
 from Interface.FenetresEnPython.Signaux import Communicate
 
@@ -140,6 +141,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
         #Connexion des differents boutons
         self.boutonSauvegarde.clicked.connect(self.sauvegarderBonDeTravailThread)
+        # self.boutonSauvegarde.clicked.connect(self.afficherReqPiecesFormThread)
         self.boutonFlecheGauche.clicked.connect(self.bonTravailPrecedent)
         self.boutonFlecheDroite.clicked.connect(self.bonTravailSuivant)
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
@@ -173,6 +175,18 @@ class BonDeTravail(Ui_BonDeTravail):
         self.tableWidgetPiecesAssociees.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidgetPiecesAssociees.horizontalHeader().sectionClicked.connect(self.trier)
 
+    def activer_cbs_assistance(self):
+        self.checkBoxOutil.setEnabled(True)
+        self.checkBoxPiece.setEnabled(True)
+        self.checkBoxFormation.setEnabled(True)
+        self.checkBoxManuel.setEnabled(True)
+
+    def desactiver_cbs_assistance(self):
+        self.checkBoxOutil.setEnabled(False)
+        self.checkBoxPiece.setEnabled(False)
+        self.checkBoxFormation.setEnabled(False)
+        self.checkBoxManuel.setEnabled(False)
+
     def chercherEquipement(self):
         '''
             Recuperation de l'equipement associe a l'ID dans le cas ou il existe
@@ -203,11 +217,13 @@ class BonDeTravail(Ui_BonDeTravail):
             self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             self.signalFenetreBonTravail.chargerEquipement.emit()
             self.rechercherBonTravail()
+            self.activer_cbs_assistance()
         else:
             #Dans le cas ou on ne trouve pas d'equipement associe a cet ID
             self.equipementDictionnaire = None
             self.listeBonDeTravail.clear()
             self.signalFenetreBonTravail.aucunEquipement.emit()
+            self.desactiver_cbs_assistance()
         self.chargement.finChargement.emit()
 
     def aucunEquipementTrouve(self):
@@ -329,6 +345,10 @@ class BonDeTravail(Ui_BonDeTravail):
                     self.listeBonDeTravail[self.indiceBonDeTravail]["EtatBDT"] = dictionnaireDonnees["EtatBDT"]'''
                     self.listeBonDeTravail = self.bonDeTravailManager.RechercherBonTravail({"IdEquipement": self.lineEditID.text()})
         self.chargement.sauvegardeTermine.emit()
+
+    def afficherReqPiecesForm(self):
+        if (self.checkBoxPiece.isChecked()):
+            req_piece = Ui_ReqPiece()
 
     def rechercherBonTravail(self):
         '''
@@ -665,6 +685,12 @@ class BonDeTravail(Ui_BonDeTravail):
         print("Lancement du Thread de sauvegarde")
         thread = BonDeTravailThread(self.sauvegarderBonDeTravail)
         thread.start()
+    
+    def afficherReqPiecesFormThread(self):
+        print("Lancement du Thread de la fenetre de requisition de piece")
+        thread = BonDeTravailThread(self.sauvegarderBonDeTravail)
+        thread.start()
+        pass
 
     def rechercherBonDeTravailThread(self):
         thread = BonDeTravailThread(self.rechercherBonTravail)

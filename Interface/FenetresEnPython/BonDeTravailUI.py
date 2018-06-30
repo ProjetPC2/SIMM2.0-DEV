@@ -560,6 +560,7 @@ class Ui_BonDeTravail(object):
         font.setPointSize(10)
         self.checkBox_2.setFont(font)
         self.checkBox_2.setObjectName(_fromUtf8("checkBox_2"))
+        # self.checkBox_2.setEnabled(False)
         self.verticalLayout_5.addWidget(self.checkBox_2)
         self.checkBox_3 = QtGui.QCheckBox(BonDeTravail)
         font = QtGui.QFont()
