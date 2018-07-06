@@ -786,7 +786,9 @@ class Accueil(Ui_Accueil):
 
     def masquerFenetre(self):
 
+
         #Méthode qui permet de masquer les fenetres non-utilisées
+        #fichierConf = 'fichier_fenetre_personnalisable.yaml'
         try:
 
             with open('fichier_fenetre_personnalisable.yaml', 'r') as fichierConf:  #  ouvrir le fichier et le lire
@@ -838,8 +840,9 @@ class Accueil(Ui_Accueil):
                             self.BoutonSupportTecnique.show()
                         else:
                             self.BoutonSupportTecnique.hide()
+
         except IOError:  # attrape l'erreur IOError si elle se présente et renvoie
-            print("Could not read file: ", self.fichierConf)  # définir ce qu'il faut faire pour corriger
+            print("Could not read file: ", fichierConf)  # définir ce qu'il faut faire pour corriger
 
 
 class SIMM():

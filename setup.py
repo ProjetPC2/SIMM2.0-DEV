@@ -20,7 +20,7 @@ executables = [
 ]
 
 setup(name='SIMM',
-      version = '2.0',
+      version = '2.1',
       description = "Logiciel d'inventorisation pour les equipements medicaux",
       options = dict(build_exe = buildOptions),
       executables = executables)
