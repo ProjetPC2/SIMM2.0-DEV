@@ -10,8 +10,8 @@ from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManagerSQLite import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI6 import Ui_BonDeTravail
-from Interface.FenetresEnPython.ReqPieceUI import Ui_ReqPiece
-from Interface.FenetresEnPython.ReqPiece import ReqPiece
+# from Interface.FenetresEnPython.ReqPieceUI import Ui_ReqPiece
+# from Interface.FenetresEnPython.ReqPiece import ReqPiece
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathPieceDatabase
 from Interface.FenetresEnPython.Signaux import Communicate
 
@@ -349,12 +349,15 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def afficherReqPiecesForm(self):
         if (self.checkBoxPiece.isChecked()):
+            pass
+            '''
             import sys
             app = QtWidgets.QApplication(sys.argv)
             reqPiece = QtWidgets.QWidget()
             reqPieceUI = ReqPiece(reqPiece)
             reqPiece.show()
             sys.exit(app.exec_())
+            '''
             # self.reqPieceForm = QtWidgets.QWidget()
             
             # self.reqPieceFormUI = ReqPiece(self.reqPieceForm)
