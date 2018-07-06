@@ -11,6 +11,7 @@ from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManagerSQLite import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI6 import Ui_BonDeTravail
 from Interface.FenetresEnPython.ReqPieceUI import Ui_ReqPiece
+from Interface.FenetresEnPython.ReqPiece import ReqPiece
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathPieceDatabase
 from Interface.FenetresEnPython.Signaux import Communicate
 
@@ -141,7 +142,7 @@ class BonDeTravail(Ui_BonDeTravail):
 
         #Connexion des differents boutons
         self.boutonSauvegarde.clicked.connect(self.sauvegarderBonDeTravailThread)
-        # self.boutonSauvegarde.clicked.connect(self.afficherReqPiecesFormThread)
+        # self.boutonSauvegarde.clicked.connect(self.afficherReqPiecesForm)
         self.boutonFlecheGauche.clicked.connect(self.bonTravailPrecedent)
         self.boutonFlecheDroite.clicked.connect(self.bonTravailSuivant)
         self.boutonFlecheDoubleDroite.clicked.connect(self.bonTravailDernier)
@@ -348,7 +349,27 @@ class BonDeTravail(Ui_BonDeTravail):
 
     def afficherReqPiecesForm(self):
         if (self.checkBoxPiece.isChecked()):
-            req_piece = Ui_ReqPiece()
+            import sys
+            app = QtWidgets.QApplication(sys.argv)
+            reqPiece = QtWidgets.QWidget()
+            reqPieceUI = ReqPiece(reqPiece)
+            reqPiece.show()
+            sys.exit(app.exec_())
+            # self.reqPieceForm = QtWidgets.QWidget()
+            
+            # self.reqPieceFormUI = ReqPiece(self.reqPieceForm)
+            '''
+            self.reqPieceFormUI.comboBoxCategorieEquipement.currentTextChanged.connect(self.afficherChargement)
+            self.reqPieceFormUI.comboBoxUnite.currentTextChanged.connect(self.afficherChargement)
+            self.reqPieceFormUI.comboBoxEtat.currentTextChanged.connect(self.afficherChargement)
+            self.reqPieceFormUI.calendrierApres.dateChanged.connect(self.afficherChargement)
+            self.reqPieceFormUI.calendrierAvant.dateChanged.connect(self.afficherChargement)
+            self.reqPieceFormUI.chargement.finChargement.connect(self.finChargement)
+            self.reqPieceFormUI.chargement.aucunResultat.connect(self.afficherAucunResultat)
+            self.reqPieceFormUI.tableResultats.doubleClicked.connect(self.choisirBonDeTravailTableau)
+            self.reqPieceFormUI.boutonActualiser.clicked.connect(self.afficherChargement)
+            '''
+            # self.reqPieceFormUI.show()
 
     def rechercherBonTravail(self):
         '''
@@ -688,9 +709,8 @@ class BonDeTravail(Ui_BonDeTravail):
     
     def afficherReqPiecesFormThread(self):
         print("Lancement du Thread de la fenetre de requisition de piece")
-        thread = BonDeTravailThread(self.sauvegarderBonDeTravail)
+        thread = BonDeTravailThread(self.afficherReqPiecesForm)
         thread.start()
-        pass
 
     def rechercherBonDeTravailThread(self):
         thread = BonDeTravailThread(self.rechercherBonTravail)

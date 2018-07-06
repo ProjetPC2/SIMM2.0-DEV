@@ -32,6 +32,7 @@ CategorieEquipement:
 - sterilisateur
 - Appareil sonographie
 - IRM
+- test
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
