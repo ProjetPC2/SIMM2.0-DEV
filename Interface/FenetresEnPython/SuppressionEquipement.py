@@ -21,6 +21,7 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
     def ajoutSuppressionEquipement(self):
         # Creation de la liste pour manipuler les labels
         self.listeLabel = list()
+        self.listeLabel.append(self.labelId)
         self.listeLabel.append(self.labelCategorie)
         self.listeLabel.append(self.labelMarque)
         self.listeLabel.append(self.labelModele)
@@ -29,13 +30,15 @@ class SuppressionEquipement(Ui_SuppressionEquipement):
         self.listeLabel.append(self.labelUnite)
         self.listeLabel.append(self.labelDateDaquisition)
         self.listeLabel.append(self.labelDateDuDernierEntretien)
+        self.listeLabel.append(self.labelFreqEntretien)
         self.listeLabel.append(self.labelProvenance)
+        self.listeLabel.append(self.labelVoltage)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
-        self.listeLabel.append(self.labelVoltage)
 
         # A voir pour les bons de travaux
         self.listeLabel.append(self.labelCommentaires)
+ #       self.listeLabel.append(self.labelPDFPath)
         # Efface le contenu des differents champs par defaut
         for label in self.listeLabel:
             label.clear()
