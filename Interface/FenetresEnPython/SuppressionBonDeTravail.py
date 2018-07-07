@@ -130,7 +130,7 @@ class SuppressionBonDeTravail(Ui_SuppressionBonDeTravail):
         dictionnaireDonnees["EtatBDT"] = self.comboBoxOuvertFerme.currentText()
         if (any(self.equipementDictionnaire)):
             # On ajoute le bon de travail a un equipement existant
-            self.bonDeTravailManager.SupprimerBonTravail(self.equipementDictionnaire["ID"], self.listeBonDeTravail[self.indiceBonDeTravail]["ID-BDT"])
+            self.bonDeTravailManager.SupprimerBonTravail(self.equipementDictionnaire["Id"], self.listeBonDeTravail[self.indiceBonDeTravail]["NumeroBonTravail"])
             self.chargement.suppressionTermine.emit()
 
     def rechercherBonTravail(self):

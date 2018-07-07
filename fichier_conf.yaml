@@ -11,27 +11,7 @@ BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
 CategorieEquipement:
-- Lit pour bebe
-- Lit
-- Incubateur
-- Echographe
-- Lampe chauffante
-- Concentrateur oxygene
-- Table chauffante
-- Moniteur
-- Analyseur sanguin
-- Appareil respiratoire
-- Appareil pour la phototherapie
-- Appareil a succion
-- Balance
-- Glucometre
-- Autre
-- "Compresseur n\xE9buliseur"
-- Chaise roulante
-- 'Microscope '
-- sterilisateur
-- Appareil sonographie
-- IRM
+- Inconnue
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -58,31 +38,15 @@ EtatService:
 - En maintenance
 - Au rebus
 Provenance:
-- Konbit Sante
 - Inconnue
-- USAID
-- UNICEF
-- Phoenix international forwarders inc
-- ''
 Salle:
 - Inconnue
-- Depot1
-- Depot2
-- Magasin&Stock
-- "Maternit\xE9"
-- KS
-- test
-- ''
-- '2'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
 Unite:
 - Inconnue
-- "P\xE9diatrie"
-- Maternite
-- SOP
-- Inconnu
+- Pediatrie
 champsAcceptes-BDT:
 - Date
 - TempsEstime

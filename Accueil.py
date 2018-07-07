@@ -414,8 +414,8 @@ class Accueil(Ui_Accueil):
 
         else:
             # Affichage du widget s'il existe deja
-            self.modificationBonDeTravailRecherche.show()
-            # self.modificationBonDeTravailRechercheUI.consulterBonTravailSpecifique(self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
+            #self.modificationBonDeTravailRecherche.show()
+            #self.modificationBonDeTravailRechercheUI.consulterBonTravailSpecifique(self.rechercheBonDeTravailUI.bonDeTravailSelectionne)
             self.modificationBonDeTravailRechercheUI.equipementDictionnaire = {"ID":self.rechercheBonDeTravailUI.bonDeTravailSelectionne["IdEquipement"]}
             self.modificationBonDeTravailRechercheUI.listeBonDeTravail = [self.rechercheBonDeTravailUI.bonDeTravailSelectionne]
             self.modificationBonDeTravailRechercheUI.lineEditID.setText(self.rechercheBonDeTravailUI.bonDeTravailSelectionne["IdEquipement"])
