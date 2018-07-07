@@ -17,7 +17,7 @@ class Ui_SuppressionEquipement(object):
         facteur_grandissement_heigth = 0.7
         SuppressionEquipement.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
         #SuppressionEquipement.resize(1016, 800)
-        SuppressionEquipement.setMinimumSize(QtCore.QSize(0, 800))
+        SuppressionEquipement.setMinimumSize(QtCore.QSize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth))
         SuppressionEquipement.setStyleSheet("background: white;")
         self.gridLayout = QtWidgets.QGridLayout(SuppressionEquipement)
         self.gridLayout.setObjectName("gridLayout")
@@ -42,10 +42,10 @@ class Ui_SuppressionEquipement(object):
         self.labelTitreConsultationEquipement.setStyleSheet("background:white;")
         self.labelTitreConsultationEquipement.setObjectName("labelTitreConsultationEquipement")
         self.titreLayout.addWidget(self.labelTitreConsultationEquipement)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(4, 2, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.titreLayout.addItem(spacerItem)
         self.gridLayout.addLayout(self.titreLayout, 0, 0, 1, 5)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 54, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem1 = QtWidgets.QSpacerItem(2, 5, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout.addItem(spacerItem1, 1, 2, 1, 1)
 
         self.idLayout = QtWidgets.QHBoxLayout()
