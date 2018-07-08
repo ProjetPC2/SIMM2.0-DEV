@@ -34,7 +34,7 @@ class Rapport():
         self.PAGE_HEIGHT = defaultPageSize[0]
 
         #TODO : a completer avec le nom de l'hopital
-        self.nomHopital = "Hopital Universitaire Justinien"
+        self.nomHopital = "Hopital Convention Baptiste"
 
         self.Title = "Rapport - S.I.M.M 2.1"
         self.pageinfo = "S.I.M.M 2.1"
@@ -63,9 +63,9 @@ class Rapport():
         canvas.drawString(inch, 0.75 * inch, "Page %d / %s" % (doc.page, self.pageinfo))
         espace_soulignement = 10
         facteurDivision = 10
-        espacement = 130
-        technicien = "Techniciens de l'Hôpital Universitaire Justinien"
-        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Universitaire Justinien')
+        espacement = 70
+        technicien = "Techniciens de l'Hôpital"
+        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Convention Baptiste')
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         # canvas.setLineWidth(1.2)
@@ -74,7 +74,7 @@ class Rapport():
         canvas.drawString(500, 750, "12/12/2010")
         canvas.line(480, 747, 580, 747)
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4,
-                          "Délivré par l'atelier de génie biomédical de l'HUJ")
+                          "Délivré par l'atelier de génie biomédical")
         canvas.line(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     6 * self.PAGE_WIDTH / facteurDivision + 295, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         date = time.strftime("%d/%m/%Y")
@@ -82,7 +82,7 @@ class Rapport():
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
                           "Date : %s" % date)
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision + espacement, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
-                          "Technicien : %s" % technicien)
+                          "  Techniciens : %s" % technicien)
         # canvas.drawImage(ImageReader(os.path.join("Images","SIMM2.0.png")), 100, 100)#, width=None, height=None, mask=None)
 
         # canvas.save()
