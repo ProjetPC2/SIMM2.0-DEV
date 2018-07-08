@@ -934,8 +934,8 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.ui.supportPC2UI.BoutonVerrou.setEnabled(False)
         self.ui.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
         self.ui.supportPC2UI.boutonSupprimerBon.setEnabled(True)
-        self.ui.supportPC2UI.boutonFenetrePersonnalisable.setEnabled(True)
-        self.ui.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(True)
+        self.ui.supportPC2UI.boutonFenetrePersonnalisable.setEnabled(False)
+        self.ui.supportPC2UI.boutonRinitialiserStatistiques.setEnabled(False)
 
     def activeImpression(self):
         self.ui.BoutonImprimerInventaire.setDisabled(False)
