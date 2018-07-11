@@ -1,1 +1,1 @@
-pythonw.exe Accueil.py
+start pythonw.exe Accueil.py
