@@ -6,8 +6,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
-# from Interface.FenetresEnPython.ReqPieceUI import Ui_ReqPiece
-from ReqPieceUI import Ui_ReqPiece
+from Interface.FenetresEnPython.ReqPieceUI import Ui_ReqPiece
+# from ReqPieceUI import Ui_ReqPiece
 
 class ReqPiece(Ui_ReqPiece):
 
@@ -15,6 +15,7 @@ class ReqPiece(Ui_ReqPiece):
         self.setupUi(widget)
 
 
+'''
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -22,3 +23,4 @@ if __name__ == "__main__":
     ui = ReqPiece(MainFrame)
     MainFrame.show()
     sys.exit(app.exec_())
+'''

@@ -10,8 +10,10 @@ from BDD.BonTravailManagerSQLite import BonTravailManager
 from BDD.EquipementManagerSQLite import EquipementManager
 from BDD.PieceManagerSQLite import PieceManager
 from Interface.FenetresEnPython.BonDeTravailUI6 import Ui_BonDeTravail
+from Interface.FenetresEnPython.ReqPiece import ReqPiece
 from Interface.FenetresEnPython.Fichiers import pathEquipementDatabase, pathBonTravailDatabase, pathPieceDatabase
 from Interface.FenetresEnPython.Signaux import Communicate
+from Interface.FenetresEnPython import Shared 
 
 class BonDeTravail(Ui_BonDeTravail):
     '''
@@ -83,7 +85,7 @@ class BonDeTravail(Ui_BonDeTravail):
             self.comboBoxCategoriePiece.clear()
             self.comboBoxCategoriePiece.addItems(self.listeCategoriePiece)
             self.signalFenetreBonTravail.nouveauBonTravail.emit()
-
+     
     def ajoutBonDeTravail(self):
 
         #Creation des differents elements utiles pour la sauvegarde
@@ -256,6 +258,9 @@ class BonDeTravail(Ui_BonDeTravail):
             :param: None
             :return:
         '''
+        Shared.reqPieceSignal.requisitionPiece.emit()
+        
+        print('passed')
         #Recuperation des differentes informations dans les champs de BDT
         #if(self.equipementDictionnaire is not None):
         dictionnaireDonnees = dict()
@@ -270,7 +275,6 @@ class BonDeTravail(Ui_BonDeTravail):
             dictionnaireDonnees["EtatBDT"] = "Ouvert"
         #dictionnaireDonnees["Pieces"] = self.listeAjoutPieceReparation
         #dictionnaireDonnees["Assistance"]  = "A"
-
 
         if(self.checkBoxOutil.isChecked()):
             dictionnaireDonnees["Outils"] = 1

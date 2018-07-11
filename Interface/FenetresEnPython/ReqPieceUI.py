@@ -181,7 +181,7 @@ class Ui_ReqPiece(object):
         self.envoyer_courriel_checkbox.setFont(font)
         self.envoyer_courriel_checkbox.setObjectName("envoyer_courriel_checkbox")
         self.equipement_title_label = QtWidgets.QLabel(ReqPiece)
-        self.equipement_title_label.setGeometry(QtCore.QRect(30, 80, 121, 31))
+        self.equipement_title_label.setGeometry(QtCore.QRect(30, 80, 181, 31))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setUnderline(True)

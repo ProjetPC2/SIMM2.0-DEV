@@ -13,7 +13,6 @@ class Communicate(QObject):
 
 
     #Fenetre Ajout Equipement
-
     sauvegardePDF = pyqtSignal()
     signalVerificationEquipement = pyqtSignal()
     signalNouvelEquipement = pyqtSignal()
@@ -36,8 +35,9 @@ class Communicate(QObject):
     trier = pyqtSignal()
     chargerEquipementAPartirBon = pyqtSignal()
     aucunBon = pyqtSignal()
-    #Fenetre Recherche Bon De Travail
+    requisitionPiece = pyqtSignal()
 
+    #Fenetre Recherche Bon De Travail
     remplirTableau = pyqtSignal()
     nouvelleRecherche = pyqtSignal()
     pieceInsuffisant = pyqtSignal()

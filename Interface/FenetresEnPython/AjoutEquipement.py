@@ -135,8 +135,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.listeLabel.append(self.labelUnite)
         self.listeLabel.append(self.labelDateDAquisition)
         self.listeLabel.append(self.labelDateDernierEntretien)
-        self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelFreqEntretien)
+        self.listeLabel.append(self.labelProvenance)
         self.listeLabel.append(self.labelVoltage)
         self.listeLabel.append(self.labelEtatDeService)
         self.listeLabel.append(self.labelEtatDeConservation)
@@ -237,7 +237,7 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.equipement.dictionnaire.clear()
         print("EMISSION DES SIGNAUX DE SAUVEGARDE")
         self.sauvegarde.sauvegardeTermine.emit()
-        self.signalFenetre.signalNouvelEquipement.emit
+        self.signalFenetre.signalNouvelEquipement.emit()
 
 
 
@@ -251,8 +251,8 @@ class AjoutEquipement(Ui_AjoutEquipement):
                 if type(self.listeWidgets[indice]) is QButtonGroup:
                     for radioBouton in self.listeWidgets[indice].buttons():
                             radioBouton.hide()
-                    self.listeLabel[indice].setText(str(text))
-                    self.listeLabel[indice].show()
+                    # self.listeLabel[indice].setText(str(text))
+                    # self.listeLabel[indice].show()
                 else:
                     self.listeLabel[indice].setText(str(text))
                     self.listeLabel[indice].show()

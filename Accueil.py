@@ -6,7 +6,7 @@ import sys
 import yaml
 from multiprocessing import Process
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -17,6 +17,8 @@ from Interface.FenetresEnPython.AffichageMessage import AffichageMessage
 from Interface.FenetresEnPython.AjoutEquipement import AjoutEquipement
 from Interface.FenetresEnPython.Attente import Attente
 from Interface.FenetresEnPython.BonDeTravail import BonDeTravail
+from Interface.FenetresEnPython.BonDeTravailUI6 import Ui_BonDeTravail
+from Interface.FenetresEnPython.ReqPiece import ReqPiece
 from Interface.FenetresEnPython.ConsultationEquipement import ConsultationEquipement
 from Interface.FenetresEnPython.ModificationEquipement import ModificationEquipement
 from Interface.FenetresEnPython.PDF2 import PDF
@@ -30,6 +32,7 @@ from Interface.FenetresEnPython.SupportPC2 import SupportPC2
 from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeTravail
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
 from Interface.FenetresEnPython.FenetrePersonnalisable import FenetrePersonnalisable
+from Interface.FenetresEnPython import Shared
 
 
 class Accueil(Ui_Accueil):
@@ -873,8 +876,10 @@ class MainWindow(QMainWindow, AbstractWindow):
         self.setWindowIcon(QIcon('Images/SIMM2.0.png'))
         self.setWindowTitle("SIMM 2.1")
         self.ui.creation.supportCree.connect(self.verrou)
-        self.signal = Communicate()
-        self.signal.motDePasseCorrect.connect(self.deverouillage)
+        Shared.reqPieceSignal.requisitionPiece.connect(self.reqPieceForm)
+        self.signals = Communicate()
+        self.signals.motDePasseCorrect.connect(self.deverouillage)
+        
         self.pdf = PDF()
         self.pdf.finImpression.finImpression.connect(self.activeImpression)
 
@@ -924,11 +929,26 @@ class MainWindow(QMainWindow, AbstractWindow):
         if(retour == QInputDialog.Accepted):
             if(self.fenetreMDP.textValue() == "projetpc2" ):
                 print(str(self.fenetreMDP.textValue()))
-                self.signal.motDePasseCorrect.emit()
+                self.signals.motDePasseCorrect.emit()
             else:
                 print("erreur de mot de passe")
 
-
+    def reqPieceForm(self):
+        pass
+        '''
+        dialog = QDialog()
+        dialog.ui = Ui_MyDialog()
+        dialog.ui.setupUi(dialog)
+        dialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        dialog.exec_()
+       
+        # app = QtWidgets.QApplication(sys.argv)
+        MainFrame = QtWidgets.QDialog()
+        ReqPiece(MainFrame)
+        MainFrame.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        MainFrame.exec_()
+        # sys.exit(app.exec_())
+        '''
 
     def deverouillage(self):
         self.ui.supportPC2UI.BoutonVerrou.setEnabled(False)

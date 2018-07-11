@@ -1,6 +1,6 @@
-nbEquipement: 38
+nbEquipement: 39
 nbEquipementEtatConservation:
-  Acceptable: 18
+  Acceptable: 19
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
@@ -8,7 +8,7 @@ nbEquipementEtatConservation:
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 1
-  En service: 37
+  En service: 38
 nbEquipementProvenance:
   ? ''
   : 0
@@ -17,6 +17,7 @@ nbEquipementProvenance:
   '30': 0
   Inconnue: 18
   Konbit Sante: 16
+  "Konbit Sant\xE9": 1
   Phoenix international forwarders inc: 2
 nbEquipementUnite:
   '124':
@@ -34,6 +35,7 @@ nbEquipementUnite:
     IRM: 2
     Inconnue: 4
     Microscope: 1
+    "p\xE9diatrie": 1
   Maternite:
     Analyseur sanguin: 1
   Pediatrie:
