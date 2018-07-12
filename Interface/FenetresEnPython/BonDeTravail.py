@@ -259,8 +259,8 @@ class BonDeTravail(Ui_BonDeTravail):
             :return:
         '''
         if self.checkBoxPiece.isChecked():
-            Shared.reqPieceSignal.requisitionPiece.emit()
-        
+            Shared.reqPieceSignal.requisitionPiece.emit(self)
+
         print('passed')
         #Recuperation des differentes informations dans les champs de BDT
         #if(self.equipementDictionnaire is not None):

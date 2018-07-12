@@ -1,6 +1,5 @@
 from PyQt5.QtCore import pyqtSignal, QObject
 
-
 class Communicate(QObject):
     #classe permettant la gestion des differents signaux
     aucunResultat = pyqtSignal()
@@ -35,7 +34,7 @@ class Communicate(QObject):
     trier = pyqtSignal()
     chargerEquipementAPartirBon = pyqtSignal()
     aucunBon = pyqtSignal()
-    requisitionPiece = pyqtSignal()
+    requisitionPiece = pyqtSignal(object)
 
     #Fenetre Recherche Bon De Travail
     remplirTableau = pyqtSignal()

@@ -933,10 +933,14 @@ class MainWindow(QMainWindow, AbstractWindow):
             else:
                 print("erreur de mot de passe")
 
-    def reqPieceForm(self):
+    def fill_reqPiece_labels(self, ui_reqPiece, bonDeTravailWidget):
+        ui_reqPiece.cat_equip_label.setText(bonDeTravailWidget.labelEcritureCatEquip.text())
+
+    def reqPieceForm(self, bonDeTravailWidget):
         reqPieceDialog = QtWidgets.QDialog()
-        ReqPiece(reqPieceDialog)
+        ui_reqPiece = ReqPiece(reqPieceDialog)
         reqPieceDialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        self.fill_reqPiece_labels(ui_reqPiece, bonDeTravailWidget)
         reqPieceDialog.exec_()
         
     def deverouillage(self):
