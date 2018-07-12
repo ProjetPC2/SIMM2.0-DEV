@@ -1,0 +1,133 @@
+BDT_Ajout_Champ_Equipement:
+- CategorieEquipement
+- Marque
+- Modele
+- Salle
+BDT_ChampAjoutNonPermis:
+- EtatBDT
+BDT_ChampAjoutPermis:
+- null
+BDT_ChampFormatPrecis:
+- Date
+- TempsEstime
+CategorieEquipement:
+- Lit pour bebe
+- Lit
+- Incubateur
+- Echographe
+- Lampe chauffante
+- Concentrateur oxygene
+- Table chauffante
+- Moniteur
+- Analyseur sanguin
+- Appareil respiratoire
+- Appareil pour la phototherapie
+- Appareil a succion
+- Balance
+- Glucometre
+- Autre
+- "Compresseur n\xE9buliseur"
+- Chaise roulante
+- 'Microscope '
+- sterilisateur
+- Appareil sonographie
+- IRM
+- test
+Equipement_ChampAjoutNonPermis:
+- EtatConservation
+- EtatService
+Equipement_ChampAjoutPermis:
+- CategorieEquipement
+- Salle
+- Unite
+- Provenance
+Equipement_ChampFormatPrecis:
+- DateAcquisition
+- DateDernierEntretien
+EtatBDT:
+- Ouvert
+- Ferme
+- "Ferm\xE9"
+EtatConservation:
+- Quasi neuf
+- Acceptable
+- En fin de vie
+- Desuet
+- "D\xE9suet"
+EtatService:
+- En service
+- En maintenance
+- Au rebus
+Provenance:
+- Konbit Sante
+- Inconnue
+- USAID
+- UNICEF
+- Phoenix international forwarders inc
+- ''
+- "Konbit Sant\xE9"
+Salle:
+- Inconnue
+- Depot1
+- Depot2
+- Magasin&Stock
+- "Maternit\xE9"
+- KS
+- test
+- ''
+- '2'
+StatsAjoutFichier:
+- Provenance
+- CategorieEquipement
+Unite:
+- Inconnue
+- "P\xE9diatrie"
+- Maternite
+- SOP
+- Inconnu
+champsAcceptes-BDT:
+- Date
+- TempsEstime
+- DescriptionSituation
+- DescriptionIntervention
+- EtatBDT
+- NomTechnicien
+- Outils
+- Pieces
+- Formation
+- Manuel
+champsAcceptes-Equipement:
+- Id
+- CategorieEquipement
+- Marque
+- Modele
+- NumeroSerie
+- Salle
+- Unite
+- DateAcquisition
+- DateDernierEntretien
+- FreqEntretien
+- Provenance
+- Voltage
+- EtatService
+- EtatConservation
+- Commentaires
+- PdfPath
+champsAcceptesAffiches-Equipement:
+- Id
+- Categorie d'equipement
+- Marque
+- Modele
+- Numero de Serie
+- Salle
+- Unite
+- Date d'aquisition
+- Date du dernier Entretien
+- Frequence d'entretien
+- Provenance
+- Voltage
+- Etat de service
+- Etat de conservation
+- Commentaires
+- Chemin PDF
+dernierID-Equipement: 0

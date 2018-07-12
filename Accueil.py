@@ -934,22 +934,11 @@ class MainWindow(QMainWindow, AbstractWindow):
                 print("erreur de mot de passe")
 
     def reqPieceForm(self):
-        pass
-        '''
-        dialog = QDialog()
-        dialog.ui = Ui_MyDialog()
-        dialog.ui.setupUi(dialog)
-        dialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        dialog.exec_()
-       
-        # app = QtWidgets.QApplication(sys.argv)
-        MainFrame = QtWidgets.QDialog()
-        ReqPiece(MainFrame)
-        MainFrame.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        MainFrame.exec_()
-        # sys.exit(app.exec_())
-        '''
-
+        reqPieceDialog = QtWidgets.QDialog()
+        ReqPiece(reqPieceDialog)
+        reqPieceDialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        reqPieceDialog.exec_()
+        
     def deverouillage(self):
         self.ui.supportPC2UI.BoutonVerrou.setEnabled(False)
         self.ui.supportPC2UI.boutonSupprimerEquipement.setEnabled(True)
