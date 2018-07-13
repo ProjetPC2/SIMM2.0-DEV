@@ -788,8 +788,6 @@ class Accueil(Ui_Accueil):
         self.pieceInsuffisant.show()
 
     def masquerFenetre(self):
-
-
         #Méthode qui permet de masquer les fenetres non-utilisées
         #fichierConf = 'fichier_fenetre_personnalisable.yaml'
         try:
@@ -934,7 +932,20 @@ class MainWindow(QMainWindow, AbstractWindow):
                 print("erreur de mot de passe")
 
     def fill_reqPiece_labels(self, ui_reqPiece, bonDeTravailWidget):
+        ui_reqPiece.ID_label.setText(bonDeTravailWidget.lineEditID.text())
         ui_reqPiece.cat_equip_label.setText(bonDeTravailWidget.labelEcritureCatEquip.text())
+        ui_reqPiece.marque_label.setText(bonDeTravailWidget.labelEcritureMarque.text())
+        ui_reqPiece.modele_label.setText(bonDeTravailWidget.labelEcritureModele.text())
+        ui_reqPiece.unite_label.setText(bonDeTravailWidget.labelEcritureModele.text())
+        ui_reqPiece.salle_label.setText(bonDeTravailWidget.labelEcritureSalle.text())
+        ui_reqPiece.nom_tech_label.setText(bonDeTravailWidget.comboBoxNomTech.currentText())
+        ui_reqPiece.date_label.setText(bonDeTravailWidget.dateEdit.text())
+        ui_reqPiece.date_label.setText(bonDeTravailWidget.dateEdit.text())
+        ui_reqPiece.cat_piece_label.setText(bonDeTravailWidget.comboBoxCategoriePiece.currentText())
+        ui_reqPiece.nom_piece_label.setText(bonDeTravailWidget.comboBoxNomPiece.currentText())
+        ui_reqPiece.nbr_unites_label.setText(bonDeTravailWidget.spinBoxNombrePiece.text())
+        ui_reqPiece.desc_situation_label.setText(bonDeTravailWidget.textEditDescSituation.toPlainText())
+        ui_reqPiece.desc_intervention_label.setText(bonDeTravailWidget.textEditDescIntervention.toPlainText())
 
     def reqPieceForm(self, bonDeTravailWidget):
         reqPieceDialog = QtWidgets.QDialog()
