@@ -1,5 +1,6 @@
 import os
-
+import sqlite3
+import csv
 import sys
 from PyQt5 import QtWidgets
 
@@ -19,6 +20,18 @@ def backUp():
     directory = directory + "/SIMMBackUp"
     systemOS = sys.platform
     print(os.path.expanduser(directory))
+
+    conn = sqlite3.connect("Equipement.db")
+    c = conn.cursor()
+
+    data = c.execute("SELECT * FROM Equipement")
+
+    with open('output.csv', 'w') as f:
+        writer = csv.writer(f)
+        #writer.writerows(["ID", "CategorieEquipement", "Marque", "Modele", "NumeroSerie", "Salle", "Unite", "DateAcquisition", "DateDernierEntretien", "FreqEntretien", "Provenance", "Voltage", "EtatService", "EtatConservation", "Commentaires"])
+        writer.writerows(data)
+
+
     if systemOS == "linux":
         os.system("mkdir " + directory)
         os.system("cp " + pathFichierConf + " " + pathEquipementDatabase + os.path.expanduser(directory))
