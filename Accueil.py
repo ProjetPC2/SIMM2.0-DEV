@@ -4,12 +4,14 @@ import locale
 import os
 import sys
 import yaml
+import random
 from multiprocessing import Process
 
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+from PIL.ImageQt import *
 
 from Interface.FenetresEnPython.AbstractWindow import AbstractWindow
 from Interface.FenetresEnPython.AccueilUI import Ui_Accueil
@@ -33,6 +35,7 @@ from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeT
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
 from Interface.FenetresEnPython.FenetrePersonnalisable import FenetrePersonnalisable
 from Interface.FenetresEnPython import Shared
+from Interface.FenetresEnPython import ReqPiece2PDF
 
 
 class Accueil(Ui_Accueil):
@@ -931,12 +934,12 @@ class MainWindow(QMainWindow, AbstractWindow):
             else:
                 print("erreur de mot de passe")
 
-    def fill_reqPiece_labels(self, ui_reqPiece, bonDeTravailWidget):
+    def fillReqPieceLabels(self, ui_reqPiece, bonDeTravailWidget):
         ui_reqPiece.ID_label.setText(bonDeTravailWidget.lineEditID.text())
         ui_reqPiece.cat_equip_label.setText(bonDeTravailWidget.labelEcritureCatEquip.text())
         ui_reqPiece.marque_label.setText(bonDeTravailWidget.labelEcritureMarque.text())
         ui_reqPiece.modele_label.setText(bonDeTravailWidget.labelEcritureModele.text())
-        ui_reqPiece.unite_label.setText(bonDeTravailWidget.labelEcritureModele.text())
+        ui_reqPiece.unite_label.setText(bonDeTravailWidget.labelEcritureUnite.text())
         ui_reqPiece.salle_label.setText(bonDeTravailWidget.labelEcritureSalle.text())
         ui_reqPiece.nom_tech_label.setText(bonDeTravailWidget.comboBoxNomTech.currentText())
         ui_reqPiece.date_label.setText(bonDeTravailWidget.dateEdit.text())
@@ -947,12 +950,33 @@ class MainWindow(QMainWindow, AbstractWindow):
         ui_reqPiece.desc_situation_label.setText(bonDeTravailWidget.textEditDescSituation.toPlainText())
         ui_reqPiece.desc_intervention_label.setText(bonDeTravailWidget.textEditDescIntervention.toPlainText())
 
+    def recupererImagePiece(self, photo_label):
+        file_name = QFileDialog.getOpenFileName(None, 'Select Image', 'C:\\',
+                   "Image files (*.PNG *.png *.jpg *.gif)")
+        self.part_im_path = file_name[0]
+        image_piece = Image.open(file_name[0])
+        qimage = ImageQt(image_piece)
+        self.pixmap = QPixmap.fromImage(qimage)
+        self.pixmap = self.pixmap.scaledToWidth(photo_label.width())
+        photo_label.setPixmap(self.pixmap)
+        photo_label.show()
+    
+    def enregisterReqPiecePDF(self, ui_reqPiece):
+        pdf_gen = ui_reqPiece.generate_reqPiece_PDF(self.part_im_path)
+
+    def validerReqPiece(self, ui_reqPiece):
+        if ui_reqPiece.enregistrer_pdf_checkBox.isChecked():
+            self.enregisterReqPiecePDF(ui_reqPiece)
+        self.reqPieceDialog.close()
+
     def reqPieceForm(self, bonDeTravailWidget):
-        reqPieceDialog = QtWidgets.QDialog()
-        ui_reqPiece = ReqPiece(reqPieceDialog)
-        reqPieceDialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        self.fill_reqPiece_labels(ui_reqPiece, bonDeTravailWidget)
-        reqPieceDialog.exec_()
+        self.reqPieceDialog = QtWidgets.QDialog()
+        ui_reqPiece = ReqPiece(self.reqPieceDialog)
+        ui_reqPiece.parcourir_pushButton.clicked.connect(lambda: self.recupererImagePiece(ui_reqPiece.photo_label))
+        ui_reqPiece.valider_pushButton.clicked.connect(lambda: self.validerReqPiece(ui_reqPiece))
+        self.reqPieceDialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        self.fillReqPieceLabels(ui_reqPiece, bonDeTravailWidget)
+        self.reqPieceDialog.exec_()
         
     def deverouillage(self):
         self.ui.supportPC2UI.BoutonVerrou.setEnabled(False)

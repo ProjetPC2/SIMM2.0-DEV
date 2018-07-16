@@ -180,8 +180,11 @@ class BonTravailManager:
         return conforme
 
     def _ActualiserConfiguration(self, conf):
+        pass
+        '''
         with open('fichier_conf.yaml', 'w') as fichierConf:
             fichierConf.write(yaml.dump(conf, default_flow_style=False))
+        '''
 
     def _ActualiserPiece(self, pieces):
         try:

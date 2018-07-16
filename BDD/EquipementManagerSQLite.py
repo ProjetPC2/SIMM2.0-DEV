@@ -45,7 +45,7 @@ class EquipementManager:
             cur = con.cursor()
             cur.execute(
                 "CREATE TABLE IF NOT EXISTS Equipement(Id INTEGER PRIMARY KEY, CategorieEquipement TEXT, Marque TEXT, Modele TEXT, "
-                + " NumeroSerie TEXT, Salle TEXT, Unite TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, FreqEntretien INTEGER "
+                + " NumeroSerie TEXT, Salle TEXT, Unite TEXT, DateAcquisition TEXT, DateDernierEntretien TEXT, FreqEntretien INTEGER, "
                 + " Provenance TEXT, Voltage TEXT, EtatService TEXT, EtatConservation TEXT, Commentaires TEXT, PdfPath TEXT)")
         except lite.Error as e:
             if con:

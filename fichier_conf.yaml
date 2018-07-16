@@ -72,9 +72,6 @@ Salle:
 - Magasin&Stock
 - "Maternit\xE9"
 - KS
-- test
-- ''
-- '2'
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -83,7 +80,6 @@ Unite:
 - "P\xE9diatrie"
 - Maternite
 - SOP
-- Inconnu
 champsAcceptes-BDT:
 - Date
 - TempsEstime
