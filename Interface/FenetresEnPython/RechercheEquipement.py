@@ -24,7 +24,7 @@ class RechercheEquipement(Ui_RechercheEquipement):
         #Recuperation des differents attributs d'un equipement
         self.equipementManager = EquipementManager(pathEquipementDatabase)
         self.listeCleDonnees = list()
-        self.listeHeaders = ['Id', "Catégorie d'équipement", 'Marque', 'Modèle', 'Numéro de Série', 'Salle', 'Unité', "Date d'aquisition", 
+        self.listeHeaders= ['Id', "Catégorie d'équipement", 'Marque', 'Modèle', 'Numéro de Série', 'Salle', 'Unité', "Date d'aquisition",
         'Date du dernier Entretien', "Fréquence d'entretien", 'Provenance', 'Voltage', 'État de service', 'État de conservation', 'Commentaires', 
         'Chemin PDF']
 
