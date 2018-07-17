@@ -100,15 +100,22 @@ class ConsultationEquipement(Ui_ConsultationEquipement):
                         if index > -1:
                             newDate = self.equipement[cle].split(" ")[0]
                         self.listeLabel[i].setText(str(newDate))
+                    if(cle == "PdfPath" ):
+                        if (self.equipement["PdfPath"] != ""):
+                            self.listeLabel[i].setText("Manuel existant")
+                            self.BoutonPDF.setEnabled(True)
+                        else:
+                            self.BoutonPDF.setEnabled(False)
+
                     else:
                         print(i)
                         self.listeLabel[i].setText(str(self.equipement[cle]))
 
                     i += 1
-                if (self.equipement["PdfPath"] != ""):
-                    self.BoutonPDF.setEnabled(True)
-                else:
-                    self.BoutonPDF.setEnabled(False)
+                #if (self.equipement["PdfPath"] != ""):
+                #    self.BoutonPDF.setEnabled(True)
+                #else:
+                #    self.BoutonPDF.setEnabled(False)
                 self.boutonModifierEquipement.setEnabled(True)
                 self.boutonAjouterUnBon.setEnabled(True)
                 self.boutonConsulterBon.setEnabled(False)

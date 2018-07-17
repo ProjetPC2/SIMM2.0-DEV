@@ -17,7 +17,6 @@ class Ui_ConsultationEquipement(object):
         facteur_grandissement_width = 0.9
         facteur_grandissement_heigth = 0.7
         ConsultationEquipement.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
-        #ConsultationEquipement.resize(1557, 1269)
         ConsultationEquipement.setMinimumSize(QtCore.QSize(0, 0))
         ConsultationEquipement.setMaximumSize(QtCore.QSize(16777125, 16777125))
         ConsultationEquipement.setStyleSheet("background:white;")
@@ -257,7 +256,6 @@ class Ui_ConsultationEquipement(object):
         spacerItem = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.gridLayout.addItem(spacerItem, 1, 2, 1, 1)
 
-        #commentaire d'Antoine : Je ne comprends pas ce que cette partie de code fait...
         self.idLayout = QtWidgets.QHBoxLayout()
         self.idLayout.setObjectName("idLayout")
         self.labelId = QtWidgets.QLabel(ConsultationEquipement)
@@ -283,7 +281,6 @@ class Ui_ConsultationEquipement(object):
         self.lineEditId.setObjectName("lineEditId")
         self.idLayout.addWidget(self.lineEditId)
         self.gridLayout.addLayout(self.idLayout, 2, 0, 1, 3)
-        # Jusqu'ici!
 
         self.buttonsLayout = QtWidgets.QHBoxLayout()
         self.buttonsLayout.setObjectName("buttonsLayout")

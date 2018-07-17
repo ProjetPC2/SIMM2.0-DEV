@@ -17,7 +17,6 @@ class Ui_RechercheEquipement(object):
         facteur_grandissement_width = 0.8
         facteur_grandissement_heigth = 0.7
         RechercheEquipement.resize(width * facteur_grandissement_width, heigth * facteur_grandissement_heigth)
-        RechercheEquipement.resize(1440, 810)
         RechercheEquipement.setMinimumSize(QtCore.QSize(0, 0))
         RechercheEquipement.setMaximumSize(QtCore.QSize(16777215, 16777215))
         RechercheEquipement.setStyleSheet("QWidget{\n"
