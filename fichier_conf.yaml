@@ -2,6 +2,7 @@ BDT_Ajout_Champ_Equipement:
 - CategorieEquipement
 - Marque
 - Modele
+- CentreService
 - Salle
 BDT_ChampAjoutNonPermis:
 - EtatBDT
@@ -30,6 +31,17 @@ CategorieEquipement:
 - Chaise roulante
 - Microscope
 - sterilisateur
+- Apparei sonographie
+- ventilateur pulmonaire
+- Desfibrilateur
+- ECG
+- 'Lampe '
+- Hematologie blood analyzer
+- Centrifuge
+- Analyseur D'urine
+- X-Ray
+- ROTATEUR
+- Apparel sonographie
 - Appareil sonographie
 - IRM
 Equipement_ChampAjoutNonPermis:
@@ -38,7 +50,7 @@ Equipement_ChampAjoutNonPermis:
 Equipement_ChampAjoutPermis:
 - CategorieEquipement
 - Salle
-- Unite
+- CentreService
 - Provenance
 Equipement_ChampFormatPrecis:
 - DateAcquisition
@@ -61,7 +73,9 @@ Provenance:
 - USAID
 - UNICEF
 - Phoenix international forwarders inc
-- ''
+- MSPP
+- 'Inconnue            '
+- HUJ
 Salle:
 - Inconnue
 - Depot1
@@ -69,6 +83,14 @@ Salle:
 - Magasin & Stock
 - Maternite
 - KS
+- '1'
+- neonatologie
+- pathologie
+- REI
+- Urgence pediatrique
+- 142 Neonatal
+- Conference - 2e etage
+- Sterilisation-2e etage
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -89,37 +111,18 @@ champsAcceptes-BDT:
 - Formation
 - Manuel
 champsAcceptes-Equipement:
-- Id
 - CategorieEquipement
 - Marque
 - Modele
 - NumeroSerie
 - Salle
-- Unite
+- CentreService
 - DateAcquisition
 - DateDernierEntretien
-- FreqEntretien
 - Provenance
-- Voltage
+- CodeAsset
 - EtatService
 - EtatConservation
 - Commentaires
 - PdfPath
-champsAcceptesAffiches-Equipement:
-- Id
-- Categorie d'equipement
-- Marque
-- Modele
-- Numero de Serie
-- Salle
-- Unite
-- Date d'aquisition
-- Date du dernier Entretien
-- Frequence d'entretien
-- Provenance
-- Voltage
-- Etat de service
-- Etat de conservation
-- Commentaires
-- Chemin PDF
 dernierID-Equipement: 0
