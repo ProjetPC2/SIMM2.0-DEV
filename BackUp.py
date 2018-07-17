@@ -19,20 +19,7 @@ def backUp():
     directory = directory + "/SIMMBackUp"
     systemOS = sys.platform
     print(os.path.expanduser(directory))
-    listeHeaders = ["Id", "CategorieEquipement", "Marque", "Modèle", "NuméroSérie", "Salle", "Unité",
-                    "DateAcquisition",
-                    "DateDernierEntretien", "FréquenceEntretien", "Provenance", "Voltage", "ÉtatService",
-                    "ÉtatConservation", "Commentaires",
-                    "CheminPDF"]
-    conn = sqlite3.connect("Equipement.db")
-    c = conn.cursor()
 
-    data = c.execute("SELECT * FROM Equipement")
-
-    with open(directory + "/database.csv", 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(listeHeaders)
-        writer.writerows(data)
 
     if systemOS == "linux":
         os.system("mkdir " + directory)
@@ -47,6 +34,21 @@ def backUp():
 
     else:
         print("Autre OS")
+
+    listeHeaders = ["Id", "CategorieEquipement", "Marque", "Modèle", "NuméroSérie", "Salle", "Unité",
+                    "DateAcquisition",
+                    "DateDernierEntretien", "FréquenceEntretien", "Provenance", "Voltage", "ÉtatService",
+                    "ÉtatConservation", "Commentaires",
+                    "CheminPDF"]
+    conn = sqlite3.connect("Equipement.db")
+    c = conn.cursor()
+
+    data = c.execute("SELECT * FROM Equipement")
+
+    with open(directory + "/database.csv", 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(listeHeaders)
+        writer.writerows(data)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
