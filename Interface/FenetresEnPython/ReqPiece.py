@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from PyQt5 import QtWidgets
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER, TA_LEFT, TA_RIGHT
@@ -43,8 +43,24 @@ class ReqPiece(Ui_ReqPiece):
         self.messageBox.addButton(self.boutonOk, QMessageBox.AcceptRole)
         retour = self.messageBox.exec()
         print(retour)
+    
+    def populate(self, pics, imagesPerRow=2, flags=Qt.KeepAspectRatioByExpanding):
+        row = col = 0
+        for pic in pics:
+            pic_label =  QtWidgets.QLabel()
+            pixmap = QPixmap(pic)
+            pic_width, pic_height = 120, 120
+            pic_size = QSize(pic_width, pic_height)
+            pixmap = pixmap.scaled(pic_size, flags)
+            pic_label.setPixmap(pixmap)
+            self.gridLayout.addWidget(pic_label, row, col)
+            pic_label.show()
+            col +=1
+            if col % imagesPerRow == 0:
+                row += 1
+                col = 0
 
-    def generate_reqPiece_PDF(self, part_im_path):
+    def generate_reqPiece_PDF(self, part_im_paths):
         doc = SimpleDocTemplate("requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf", pagesize=letter,
                         rightMargin=72, leftMargin=72, 
                         topMargin=72, bottomMargin=18)
@@ -111,13 +127,15 @@ class ReqPiece(Ui_ReqPiece):
         ptext = '<font size=12>%s</font>' % self.photo_piece_title_label.text()
         Story.append(Paragraph(ptext, style=sub_title))
         Story.append(Spacer(1, 12))
-        if not part_im_path:
+        if not part_im_paths:
             doc.build(Story)
         else:
             try:
-                part_im = Image(part_im_path, 2.5*inch, 2.5*inch)
-                part_im.hAlign = 'LEFT'
-                Story.append(part_im)
+                for path in part_im_paths:
+                    part_im = Image(path, 4*inch, 3*inch)
+                    part_im.hAlign = 'LEFT'
+                    Story.append(part_im)
+                    Story.append(Spacer(1, 12))
                 doc.build(Story)
             except IOError:
                 self.notify_file_opened()

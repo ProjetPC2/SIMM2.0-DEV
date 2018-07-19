@@ -292,9 +292,9 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>30</y>
+     <y>10</y>
      <width>371</width>
-     <height>31</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -610,19 +610,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="photo_label">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>510</y>
-     <width>421</width>
-     <height>371</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="photo_piece_title_label">
    <property name="geometry">
     <rect>
@@ -654,6 +641,17 @@
    <property name="text">
     <string>Parcourir</string>
    </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>500</y>
+     <width>431</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout"/>
   </widget>
  </widget>
  <resources/>

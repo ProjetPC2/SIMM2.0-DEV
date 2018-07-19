@@ -950,42 +950,39 @@ class MainWindow(QMainWindow, AbstractWindow):
         ui_reqPiece.desc_situation_label.setText(bonDeTravailWidget.textEditDescSituation.toPlainText())
         ui_reqPiece.desc_intervention_label.setText(bonDeTravailWidget.textEditDescIntervention.toPlainText())
 
-    def recupererImagePiece(self, photo_label):
-        file_name = QFileDialog.getOpenFileName(None, 'Select Image', 'C:\\',
+    def recupererImagePiece(self, ui_reqPiece):
+        file_names = QFileDialog.getOpenFileNames(None, 'Select Images', 'C:\\',
                    "Image files (*.PNG *.png *.jpg *.gif)")
-        self.part_im_path = file_name[0]
         extensions = {".jpg", ".png", ".gif", ".PNG"}
+        file_paths = []
+        self.pics_paths = []
+
+        for i in range(len(file_names[0])):
+            file_paths.append(file_names[0][i])
 
         for ext in extensions:
-            if self.part_im_path.endswith(ext):
-                image_piece = Image.open(self.part_im_path)
-                qimage = ImageQt(image_piece)
-                self.pixmap = QPixmap.fromImage(qimage)
-                self.pixmap = self.pixmap.scaledToWidth(photo_label.width())
-                photo_label.setPixmap(self.pixmap)
-                photo_label.show()
-                return True
-        else:
-            self.part_im_path = ''
-            return False
-    
+            for path in file_paths:
+                if path.endswith(ext):
+                    self.pics_paths.append(path)
+        ui_reqPiece.populate(self.pics_paths)
+
     def enregisterReqPiecePDF(self, ui_reqPiece):
-        ui_reqPiece.generate_reqPiece_PDF(self.part_im_path)
+        ui_reqPiece.generate_reqPiece_PDF(self.pics_paths)
 
     def validerReqPiece(self, ui_reqPiece):
         if ui_reqPiece.enregistrer_pdf_checkBox.isChecked():
             self.enregisterReqPiecePDF(ui_reqPiece)
         self.reqPieceDialog.close()
     
-    def annulerReqPiece(self, ui_reqPiece):
+    def annulerReqPiece(self):
         self.reqPieceDialog.close()
 
     def reqPieceForm(self, bonDeTravailWidget):
         self.reqPieceDialog = QtWidgets.QDialog()
         ui_reqPiece = ReqPiece(self.reqPieceDialog)
-        ui_reqPiece.parcourir_pushButton.clicked.connect(lambda: self.recupererImagePiece(ui_reqPiece.photo_label))
+        ui_reqPiece.parcourir_pushButton.clicked.connect(lambda: self.recupererImagePiece(ui_reqPiece))
         ui_reqPiece.valider_pushButton.clicked.connect(lambda: self.validerReqPiece(ui_reqPiece))
-        ui_reqPiece.annuler_pushButton.clicked.connect(lambda: self.annulerReqPiece(ui_reqPiece))
+        ui_reqPiece.annuler_pushButton.clicked.connect(lambda: self.annulerReqPiece())
         self.reqPieceDialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.fillReqPieceLabels(ui_reqPiece, bonDeTravailWidget)
         self.reqPieceDialog.exec_()
