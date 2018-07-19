@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-import datetime
-from threading import Thread
-
 from PyQt5 import QtWidgets
+from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER, TA_LEFT
+from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER, TA_LEFT, TA_RIGHT
 from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 
@@ -18,13 +16,41 @@ class ReqPiece(Ui_ReqPiece):
     def __init__(self, widget):
         self.setupUi(widget)
 
+    def notify_file_opened(self):
+        """Fonction gerant la creation d'une fenetre de verification
+        lors de la fermeture de la fenetre"""
+        self.messageBox = QMessageBox()
+        self.messageBox.setStyleSheet("QPushButton {\n"
+                                        "color: black;\n"
+                                        "background-color:rgb(245, 245, 245);\n"
+                                        "border-width: 1px;\n"
+                                        "border-color: grey;\n"
+                                        "border-style: solid;\n"
+                                        "border-radius: 4px;\n"
+                                        "padding: 3px;\n"
+                                        "font: bold 12px;\n"
+                                        "padding-left: 5px;\n"
+                                        "padding-right: 5px;\n"
+                                        "min-width: 80px;\n"
+                                        "max-width:220px;\n"
+                                        "min-height: 30px;\n"
+                                        "max-height: 30px;\n"
+                                        "}\n")
+        self.messageBox.setText("Fermer le fichier pour permettre toute modification")
+        self.messageBox.setWindowTitle("SIMM 2.1")
+        self.messageBox.setWindowIcon(QIcon('Images/SIMM2.0.png'))
+        self.boutonOk = QPushButton("OK")
+        self.messageBox.addButton(self.boutonOk, QMessageBox.AcceptRole)
+        retour = self.messageBox.exec()
+        print(retour)
+
     def generate_reqPiece_PDF(self, part_im_path):
         doc = SimpleDocTemplate("requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf", pagesize=letter,
                         rightMargin=72, leftMargin=72, 
                         topMargin=72, bottomMargin=18)
         Story = []
 
-        Logo_SIMM = "Images\Logo_SIMM.png"
+        Logo_SIMM = "Images\\Logo_SIMM.png"
         im = Image(Logo_SIMM, 2*inch, 2*inch)
         im.hAlign = 'CENTER'
         Story.append(im)
@@ -85,9 +111,15 @@ class ReqPiece(Ui_ReqPiece):
         ptext = '<font size=12>%s</font>' % self.photo_piece_title_label.text()
         Story.append(Paragraph(ptext, style=sub_title))
         Story.append(Spacer(1, 12))
-        part_im_path = part_im_path
-        part_im = Image(part_im_path, 2.5*inch, 2.5*inch)
-        part_im.hAlign = 'LEFT'
-        Story.append(part_im)
+        if not part_im_path:
+            doc.build(Story)
+        else:
+            try:
+                part_im = Image(part_im_path, 2.5*inch, 2.5*inch)
+                part_im.hAlign = 'LEFT'
+                Story.append(part_im)
+                doc.build(Story)
+            except IOError:
+                self.notify_file_opened()
 
-        doc.build(Story)
+        

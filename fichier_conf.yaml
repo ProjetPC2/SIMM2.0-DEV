@@ -26,13 +26,12 @@ CategorieEquipement:
 - Balance
 - Glucometre
 - Autre
-- "Compresseur n\xE9buliseur"
+- Compresseur Ebuliseur
 - Chaise roulante
-- 'Microscope '
+- Microscope
 - sterilisateur
 - Appareil sonographie
 - IRM
-- test
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -47,13 +46,11 @@ Equipement_ChampFormatPrecis:
 EtatBDT:
 - Ouvert
 - Ferme
-- "Ferm\xE9"
 EtatConservation:
 - Quasi neuf
 - Acceptable
 - En fin de vie
 - Desuet
-- "D\xE9suet"
 EtatService:
 - En service
 - En maintenance
@@ -69,15 +66,15 @@ Salle:
 - Inconnue
 - Depot1
 - Depot2
-- Magasin&Stock
-- "Maternit\xE9"
+- Magasin & Stock
+- Maternite
 - KS
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
 Unite:
 - Inconnue
-- "P\xE9diatrie"
+- Pediatrie
 - Maternite
 - SOP
 champsAcceptes-BDT:
