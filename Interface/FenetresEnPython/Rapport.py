@@ -16,6 +16,8 @@ from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Table, Space
 from reportlab.rl_config import defaultPageSize
 from PyQt5.QtCore import *
 
+from datetime import date
+from dateutil.relativedelta import relativedelta
 import random
 import sys
 from threading import Thread
@@ -34,9 +36,9 @@ class Rapport():
         self.PAGE_HEIGHT = defaultPageSize[0]
 
         #TODO : a completer avec le nom de l'hopital
-        self.nomHopital = "Hopital Convention Baptiste"
+        self.nomHopital = "Hopital Universitaire Justinien"
 
-        self.Title = "Rapport - S.I.M.M 2.1"
+        self.Title = "Rapport mensuel - S.I.M.M 2.1"
         self.pageinfo = "S.I.M.M 2.1"
         #On autorise que les pdf
         # self.filter = "PDF (*.pdf)"
@@ -64,25 +66,23 @@ class Rapport():
         espace_soulignement = 10
         facteurDivision = 10
         espacement = 70
-        technicien = "Techniciens de l'Hôpital"
-        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Convention Baptiste')
+        technicien = ""
+        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Universitaire Justinien')
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         # canvas.setLineWidth(1.2)
-        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
-                          "Inventaire du parc d'équipements médicaux")
+
         canvas.drawString(500, 750, "12/12/2010")
         canvas.line(480, 747, 580, 747)
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4,
-                          "Délivré par l'atelier de génie biomédical")
+                          "Délivré par l'atelier de génie biomédical de l'HUJ")
         canvas.line(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     6 * self.PAGE_WIDTH / facteurDivision + 295, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         date = time.strftime("%d/%m/%Y")
         # datetime.datetime.now()#datetime.time.strftime("%d/%m/%Y")
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
                           "Date : %s" % date)
-        canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision + espacement, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
-                          "  Techniciens : %s" % technicien)
+
         # canvas.drawImage(ImageReader(os.path.join("Images","SIMM2.0.png")), 100, 100)#, width=None, height=None, mask=None)
 
         # canvas.save()
@@ -100,10 +100,10 @@ class Rapport():
         doc = SimpleDocTemplate(path, pagesize = landscape(A4))
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
         # Ajout d'un espacement
-        elements = [Spacer(0, 2 * inch)]
+        elements = [Spacer(0, 2 * cm)]
         # Ajout du logo de SIMM
-        elements.append(self.get_image(os.path.join("Images","Logo_SIMM.png"), width=5 * cm))
-        elements.append(Spacer(0, 1 * inch))
+        elements.append(self.get_image(os.path.join("Images","Logo_SIMM.png"), width=2 * cm))
+        elements.append(Spacer(0, 1 * cm))
         #Creation du style par defaut
         styleSheet = getSampleStyleSheet()
         style = styleSheet["Normal"]
@@ -123,13 +123,13 @@ class Rapport():
         l = [1]
         #Creation du tableau avec les informations concernant le centre de service
 
-        currentDate = (QDate.currentDate().toPyDate())
+        currentDate = date.today() + relativedelta(months = -2)
         listeUnite = list(conf['Unite'])
 
         for Unite in l:
 
             print("DATE AUJOURHDUI ", currentDate)
-            listBon = bonTravailManager.RechercherBonTravailRapport({"AvantLe" : currentDate})
+            listBon = bonTravailManager.RechercherBonTravailRapport({'ApresLe': currentDate})
             listeTotal = list()
             listeColonne1 = [Paragraph("<b>IdEq</b>", style),
                              Paragraph("<b>Categorie</b>", style),

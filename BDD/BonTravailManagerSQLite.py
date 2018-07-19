@@ -317,7 +317,7 @@ class BonTravailManager:
                 print("Commande: ", commmand_sql)
                 print("Recherche Bon Travail en cours")
                 print("REGEX", regex_dict)
-                commmand_sql += " ORDER BY EtatBDT DESC, Date DESC"
+                commmand_sql += " ORDER BY IdEquipement DESC, Date DESC"
                 cur.execute(commmand_sql, list_data)
             else:
                 cur.execute(commmand_sql)

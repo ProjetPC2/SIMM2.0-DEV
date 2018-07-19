@@ -1,10 +1,10 @@
-nbEquipement: 41
+nbEquipement: 42
 nbEquipementEtatConservation:
   Acceptable: 21
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
-  Quasi neuf: 20
+  Quasi neuf: 21
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 1
@@ -15,7 +15,7 @@ nbEquipementProvenance:
   1212e: 1
   '1221': 1
   '30': 0
-  Inconnue: 18
+  Inconnue: 19
   Konbit Sante: 18
   "Konbit Sant\xE9": 1
   Phoenix international forwarders inc: 2
@@ -30,6 +30,7 @@ nbEquipementUnite:
     Chaise roulante: 0
     Glucometre: 1
   Inconnue:
+    Analyseur D'urine: 1
     Analyseur sanguin: 22
     En service: 0
     IRM: 2

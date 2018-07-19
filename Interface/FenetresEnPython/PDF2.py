@@ -34,7 +34,7 @@ class PDF():
         self.pageinfo = "S.I.M.M 2.1"
 
         #TODO : a completer avec le nom de l'hopital
-        self.nomHopital = "Hôpital Convention Baptiste"
+        self.nomHopital = "Hôpital Universitaire Justinien"
 
         #On autorise que les pdf
         # self.filter = "PDF (*.pdf)"
@@ -57,8 +57,7 @@ class PDF():
         espace_soulignement = 10
         facteurDivision = 10
         espacement = 70
-        technicien = "Techniciens de l'Hôpital"
-        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Convention Baptiste')
+        canvas.drawString(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4, 'Hôpital Universitaire Justinien')
         canvas.line(self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement,
                     self.PAGE_WIDTH / facteurDivision + 230, 3 * self.PAGE_HEIGHT / 4 - espace_soulignement)
         # canvas.setLineWidth(1.2)
@@ -74,8 +73,6 @@ class PDF():
         # datetime.datetime.now()#datetime.time.strftime("%d/%m/%Y")
         canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
                           "Date : %s" % date)
-        canvas.drawString(6 * self.PAGE_WIDTH / facteurDivision + espacement, 3 * self.PAGE_HEIGHT / 4 - 3 * espace_soulignement,
-                          "  Techniciens :   %s" % technicien)
         # canvas.drawImage(ImageReader(os.path.join("Images","SIMM2.0.png")), 100, 100)#, width=None, height=None, mask=None)
 
         # canvas.save()
@@ -93,10 +90,10 @@ class PDF():
         doc = SimpleDocTemplate(path, pagesize = landscape(A4))
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
         # Ajout d'un espacement
-        elements = [Spacer(0, 2 * inch)]
+        elements = [Spacer(0, 2 * cm)]
         # Ajout du logo de SIMM 2.0
-        elements.append(self.get_image(os.path.join("Images","Logo_SIMM.png"), width=5 * cm))
-        elements.append(Spacer(0, 1 * inch))
+        elements.append(self.get_image(os.path.join("Images","Logo_SIMM.png"), width=2 * cm))
+        elements.append(Spacer(0, 1 * cm))
         #Creation du style par defaut
         styleSheet = getSampleStyleSheet()
         style = styleSheet["Normal"]
