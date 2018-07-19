@@ -99,7 +99,7 @@ class Rapport():
     def creationPDF(self, path):
         doc = SimpleDocTemplate(path, pagesize = landscape(A4))
         # Conteneur elements pour les objets qui vont etre dessines sur le pdf
-        # Ajout d'un espacement
+        # Ajout d'un espacementpyt
         elements = [Spacer(0, 2 * cm)]
         # Ajout du logo de SIMM
         elements.append(self.get_image(os.path.join("Images","Logo_SIMM.png"), width=2 * cm))
