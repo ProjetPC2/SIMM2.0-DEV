@@ -1,6 +1,6 @@
 nbEquipement: 42
 nbEquipementEtatConservation:
-  Acceptable: 21
+  Acceptable: 22
   Desuet: 0
   "D\xE9suet": 0
   En fin de vie: 0
@@ -8,7 +8,7 @@ nbEquipementEtatConservation:
 nbEquipementEtatService:
   Au rebus: 0
   En maintenance: 1
-  En service: 40
+  En service: 41
 nbEquipementProvenance:
   ? ''
   : 0
