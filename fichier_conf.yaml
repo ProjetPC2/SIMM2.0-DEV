@@ -91,6 +91,7 @@ Salle:
 - 142 Neonatal
 - Conference - 2e etage
 - Sterilisation-2e etage
+- Magasin&Stock
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
@@ -99,6 +100,7 @@ Unite:
 - Pediatrie
 - Maternite
 - SOP
+- Laboratoire
 champsAcceptes-BDT:
 - Date
 - TempsEstime

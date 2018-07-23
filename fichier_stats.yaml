@@ -38,6 +38,8 @@ nbEquipementUnite:
     Inconnue: 4
     Microscope: 1
     "p\xE9diatrie": 1
+  Laboratoire:
+    Analyseur D'urine: 0
   Maternite:
     Analyseur sanguin: 1
   Pediatrie:

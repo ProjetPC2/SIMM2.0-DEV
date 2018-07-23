@@ -35,7 +35,8 @@ from Interface.FenetresEnPython.SuppressionBonDeTravail import SuppressionBonDeT
 from Interface.FenetresEnPython.SuppressionEquipement import SuppressionEquipement
 from Interface.FenetresEnPython.FenetrePersonnalisable import FenetrePersonnalisable
 from Interface.FenetresEnPython import Shared
-from Interface.FenetresEnPython import ReqPiece2PDF
+
+QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
 
 
 class Accueil(Ui_Accueil):
@@ -858,6 +859,7 @@ class SIMM():
     # On masque les autres elements
     def __init__(self):
         app = QtWidgets.QApplication(sys.argv)
+        app.setAttribute(Qt.AA_DisableHighDpiScaling)
         MainFrame = MainWindow()
         MainFrame.show()
         sys.exit(app.exec_())
@@ -983,7 +985,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         ui_reqPiece.parcourir_pushButton.clicked.connect(lambda: self.recupererImagePiece(ui_reqPiece))
         ui_reqPiece.valider_pushButton.clicked.connect(lambda: self.validerReqPiece(ui_reqPiece))
         ui_reqPiece.annuler_pushButton.clicked.connect(lambda: self.annulerReqPiece())
-        self.reqPieceDialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        self.reqPieceDialog.setAttribute(Qt.WA_DeleteOnClose)
         self.fillReqPieceLabels(ui_reqPiece, bonDeTravailWidget)
         self.reqPieceDialog.exec_()
         
