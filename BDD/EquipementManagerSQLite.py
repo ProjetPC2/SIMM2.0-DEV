@@ -299,13 +299,9 @@ class EquipementManager:
         dernier_ID = 0
         with con:
             cur = con.cursor()
-            cur.execute("SELECT * From Equipement")
-
-            rows = cur.fetchall()
-            dernier_ID = len(rows)
-
-        prochain_ID = int(dernier_ID) + 1
-
+            cur = cur.execute('SELECT max(id) FROM Equipement')
+            dernier_ID = cur.fetchone()[0]
+        prochain_ID = dernier_ID + 1
         return prochain_ID
 
     def _verifierChamps(self, dictio, conf):

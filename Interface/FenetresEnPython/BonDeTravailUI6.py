@@ -334,6 +334,9 @@ class Ui_BonDeTravail(object):
         self.horizontalLayout_2.addLayout(self.verticalLayout_6)
         spacerItem3 = QtWidgets.QSpacerItem(100, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem3)
+
+
+        # labels categorie piece et nom piece
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.labelPieceAssociees = QtWidgets.QLabel(BonDeTravail)
@@ -353,14 +356,20 @@ class Ui_BonDeTravail(object):
         self.labelCategoriePiece.setFont(font)
         self.labelCategoriePiece.setObjectName("labelCategoriePiece")
         self.horizontalLayout_4.addWidget(self.labelCategoriePiece)
+
+        # combobox categorie de piece
         self.comboBoxCategoriePiece = QtWidgets.QComboBox(BonDeTravail)
-        self.comboBoxCategoriePiece.setMinimumSize(QtCore.QSize(225, 20))
-        self.comboBoxCategoriePiece.setMaximumSize(QtCore.QSize(225, 20))
+        self.comboBoxCategoriePiece.setMinimumSize(QtCore.QSize(225, 25))
+        self.comboBoxCategoriePiece.setMaximumSize(QtCore.QSize(225, 25))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.comboBoxCategoriePiece.setFont(font)
         self.comboBoxCategoriePiece.setObjectName("comboBoxCategoriePiece")
+        self.comboBoxCategoriePiece.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.comboBoxCategoriePiece.addItem("")
+        self.comboBoxCategoriePiece.setEditable(True)
         self.horizontalLayout_4.addWidget(self.comboBoxCategoriePiece)
+
         spacerItem4 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem4)
         self.verticalLayout_4.addLayout(self.horizontalLayout_4)
@@ -375,20 +384,29 @@ class Ui_BonDeTravail(object):
         self.horizontalLayout_5.addWidget(self.labelNomPiece)
         spacerItem5 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem5)
+
+        # combobox nom piece 
         self.comboBoxNomPiece = QtWidgets.QComboBox(BonDeTravail)
-        self.comboBoxNomPiece.setMinimumSize(QtCore.QSize(225, 20))
-        self.comboBoxNomPiece.setMaximumSize(QtCore.QSize(225, 20))
+        self.comboBoxNomPiece.setMinimumSize(QtCore.QSize(225, 25))
+        self.comboBoxNomPiece.setMaximumSize(QtCore.QSize(225, 25))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.comboBoxNomPiece.setFont(font)
         self.comboBoxNomPiece.setObjectName("comboBoxNomPiece")
+        self.comboBoxNomPiece.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.comboBoxNomPiece.addItem("")
+        self.comboBoxNomPiece.setEditable(True)
         self.horizontalLayout_5.addWidget(self.comboBoxNomPiece)
+
+        # label nombre de pieces
         self.labelNomPiece_2 = QtWidgets.QLabel(BonDeTravail)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.labelNomPiece_2.setFont(font)
         self.labelNomPiece_2.setObjectName("labelNomPiece_2")
         self.horizontalLayout_5.addWidget(self.labelNomPiece_2)
+
+        # spin box nombre de piece
         self.spinBoxNombrePiece = QtWidgets.QSpinBox(BonDeTravail)
         self.spinBoxNombrePiece.setMaximumSize(QtCore.QSize(60, 16777215))
         self.spinBoxNombrePiece.setMaximum(999)
@@ -396,6 +414,8 @@ class Ui_BonDeTravail(object):
         self.horizontalLayout_5.addWidget(self.spinBoxNombrePiece)
         spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem6)
+
+        # push button valider
         self.pushButtonValider = QtWidgets.QPushButton(BonDeTravail)
         self.pushButtonValider.setMinimumSize(QtCore.QSize(110, 20))
         self.pushButtonValider.setMaximumSize(QtCore.QSize(110, 20))
@@ -413,6 +433,8 @@ class Ui_BonDeTravail(object):
         self.verticalLayout_4.addLayout(self.horizontalLayout_5)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+
+        # Qtable pour afficher les pieces
         self.tableWidgetPiecesAssociees = QtWidgets.QTableWidget(BonDeTravail)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -433,6 +455,7 @@ class Ui_BonDeTravail(object):
         self.verticalLayout_4.addLayout(self.horizontalLayout_8)
         self.horizontalLayout_2.addLayout(self.verticalLayout_4)
         self.verticalLayout_3.addLayout(self.horizontalLayout_2)
+
         spacerItem7 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.verticalLayout_3.addItem(spacerItem7)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()

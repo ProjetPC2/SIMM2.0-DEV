@@ -635,19 +635,21 @@ class BonDeTravail(Ui_BonDeTravail):
         categorie = self.comboBoxCategoriePiece.currentText()
         nomPiece = self.comboBoxNomPiece.currentText()
         nombre = self.spinBoxNombrePiece.text()
+        
         if (int(nombre) > 0):
-            nombreSuffisant = self.pieceManager.AssezDePiece([(categorie, nomPiece, int(nombre))])
-            print("NOMBRE SUFFISANT", nombreSuffisant)
-            if (nombreSuffisant):
+            # nombreSuffisant = self.pieceManager.AssezDePiece([(categorie, nomPiece, int(nombre))])
+            # print("NOMBRE SUFFISANT", nombreSuffisant)
+            # if (nombreSuffisant):
                 #On ne comptabilise les pièces que s'il y a un nombre non nul
-                self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
-                self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 0, QTableWidgetItem(categorie))
-                self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 1, QTableWidgetItem(nomPiece))
-                self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 2, QTableWidgetItem((nombre)))
-                self.listeAjoutPieceReparation.append((categorie, nomPiece, int(nombre)))
-            else:
+            self.tableWidgetPiecesAssociees.setRowCount(self.tableWidgetPiecesAssociees.rowCount() + 1)
+            self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 0, QTableWidgetItem(categorie))
+            self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 1, QTableWidgetItem(nomPiece))
+            self.tableWidgetPiecesAssociees.setItem(self.tableWidgetPiecesAssociees.rowCount() - 1, 2, QTableWidgetItem((nombre)))
+            self.listeAjoutPieceReparation.append((categorie, nomPiece, int(nombre)))
+            # else:
                 #On affiche un message pour indiquer qu'il n'y a pas assez de piece
-                self.signalFenetreBonTravail.pieceInsuffisant.emit()
+                # self.signalFenetreBonTravail.pieceInsuffisant.emit()
+        
         print(self.listeAjoutPieceReparation)
 
     def trier(self, numeroColonne):

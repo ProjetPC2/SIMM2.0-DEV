@@ -882,7 +882,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         Shared.reqPieceSignal.requisitionPiece.connect(self.reqPieceForm)
         self.signals = Communicate()
         self.signals.motDePasseCorrect.connect(self.deverouillage)
-        
+        self.pics_paths = []
         self.pdf = PDF()
         self.pdf.finImpression.finImpression.connect(self.activeImpression)
 
@@ -957,23 +957,18 @@ class MainWindow(QMainWindow, AbstractWindow):
                    "Image files (*.PNG *.png *.jpg *.gif)")
         extensions = {".jpg", ".png", ".gif", ".PNG"}
         file_paths = []
-        self.pics_paths = []
-
         for i in range(len(file_names[0])):
             file_paths.append(file_names[0][i])
-
+            
         for ext in extensions:
             for path in file_paths:
                 if path.endswith(ext):
                     self.pics_paths.append(path)
         ui_reqPiece.populate(self.pics_paths)
 
-    def enregisterReqPiecePDF(self, ui_reqPiece):
-        ui_reqPiece.generate_reqPiece_PDF(self.pics_paths)
-
     def validerReqPiece(self, ui_reqPiece):
         if ui_reqPiece.enregistrer_pdf_checkBox.isChecked():
-            self.enregisterReqPiecePDF(ui_reqPiece)
+            ui_reqPiece.generate_reqPiece_PDF(self.pics_paths)
         self.reqPieceDialog.close()
     
     def annulerReqPiece(self):

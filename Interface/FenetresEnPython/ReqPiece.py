@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import os
+
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
@@ -61,7 +63,8 @@ class ReqPiece(Ui_ReqPiece):
                 col = 0
 
     def generate_reqPiece_PDF(self, part_im_paths):
-        doc = SimpleDocTemplate("requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf", pagesize=letter,
+        outfilename = "requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf"
+        doc = SimpleDocTemplate(outfilename, pagesize=letter,
                         rightMargin=72, leftMargin=72, 
                         topMargin=72, bottomMargin=18)
         Story = []
