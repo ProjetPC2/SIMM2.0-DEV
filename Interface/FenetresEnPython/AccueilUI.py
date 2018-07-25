@@ -182,6 +182,7 @@ class Ui_Accueil(object):
         self.BoutonAjouterPiece.setIconSize(QtCore.QSize(40, 40))
         self.BoutonAjouterPiece.setObjectName("BoutonAjouterPiece")
         self.layoutBoutonBdT.addWidget(self.BoutonAjouterPiece, 0, QtCore.Qt.AlignLeft)
+        self.BoutonAjouterPiece.setEnabled(False)
         self.BoutonAjouterBonTravail = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)

@@ -271,7 +271,6 @@ class EquipementManager:
             rows = cur.fetchall()
             print("SELECTION,", rows)
 
-
             command_sql = "UPDATE Equipement SET DateDernierEntretien = '{0}'".format(date)
             command_sql += " WHERE Id = {0}".format(id)
             print("Command: ", command_sql)
