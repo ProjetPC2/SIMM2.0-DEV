@@ -296,11 +296,16 @@ class EquipementManager:
     def _ObtenirProchainID(self):
         con = lite.connect(self._pathnameEQ)
         dernier_ID = 0
+
         with con:
             cur = con.cursor()
             cur = cur.execute('SELECT max(id) FROM Equipement')
             dernier_ID = cur.fetchone()[0]
-        prochain_ID = dernier_ID + 1
+
+        if dernier_ID is None: # verifying if the DB is empty to set first ID to 1
+            prochain_ID = 1
+        else:
+            prochain_ID = dernier_ID + 1
         return prochain_ID
 
     def _verifierChamps(self, dictio, conf):

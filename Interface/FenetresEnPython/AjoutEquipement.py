@@ -188,14 +188,16 @@ class AjoutEquipement(Ui_AjoutEquipement):
 
     def obtenirEtatDeService(self, groupeBoutton):
         """Methode permettant d'obtenir le choix selectionne parmi le groupe
-        de radio bouton"""
+        de radio bouton
+        """
         bouton = self.groupeBoutonEtatService.checkedButton()
         self.etatDeService = bouton.text()
 
     def donnees(self):
         """Methode permettant la recuperation des donnees dans les differents widgets
         On parcours la liste des widgets et on recupere les differentes informations utiles
-        Les informations sont recuperees de facon specifique selon le type du widget"""
+        Les informations sont recuperees de facon specifique selon le type du widget
+        """
         self.listeDonnees.clear()
         for widget in self.listeWidgets:
             # self.stockage.dictionnaire

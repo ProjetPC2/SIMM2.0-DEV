@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
+from reportlab.lib import utils
 from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER, TA_LEFT, TA_RIGHT
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table
@@ -61,6 +62,14 @@ class ReqPiece(Ui_ReqPiece):
             if col % imagesPerRow == 0:
                 row += 1
                 col = 0
+
+    def get_image(self, path, width=3*inch):
+        img = utils.ImageReader(path)
+        iw, ih = img.getSize()
+        aspect = ih / float(iw)
+        final_im = Image(path, width=width, height=(width * aspect))
+        final_im.hAlign = 'LEFT'
+        return final_im
 
     def generate_reqPiece_PDF(self, part_im_paths):
         outfilename = "requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf"
@@ -135,9 +144,12 @@ class ReqPiece(Ui_ReqPiece):
         else:
             try:
                 for path in part_im_paths:
+                    Story.append(self.get_image(path, width=5*inch))
+                    '''
                     part_im = Image(path, 4*inch, 3*inch)
                     part_im.hAlign = 'LEFT'
                     Story.append(part_im)
+                    '''
                     Story.append(Spacer(1, 12))
                 doc.build(Story)
             except IOError:
