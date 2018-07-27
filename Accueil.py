@@ -6,6 +6,7 @@ import sys
 import yaml
 import random
 from multiprocessing import Process
+from copy import deepcopy
 
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import *
@@ -957,6 +958,7 @@ class MainWindow(QMainWindow, AbstractWindow):
                    "Image files (*.PNG *.png *.jpg *.gif)")
         extensions = {".jpg", ".png", ".gif", ".PNG"}
         file_paths = []
+        self.pics_paths = []
         for i in range(len(file_names[0])):
             file_paths.append(file_names[0][i])
             
