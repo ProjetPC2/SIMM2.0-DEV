@@ -133,6 +133,8 @@ class ReqPiece(Ui_ReqPiece):
         Story.append(Paragraph(ptext, styles["Normal"]))
         ptext = '<font size=10>%s</font>' % self.desc_intervention_title_label.text() + ' ' + self.desc_intervention_label.text()
         Story.append(Paragraph(ptext, styles["Normal"]))
+        ptext = '<font size=10>%s</font>' % self.pages_manuel_label.text() + ' ' + self.pages_manuel_lineEdit.text()
+        Story.append(Paragraph(ptext, styles["Normal"]))
         Story.append(Spacer(2, 12))
 
         # image
@@ -145,11 +147,6 @@ class ReqPiece(Ui_ReqPiece):
             try:
                 for path in part_im_paths:
                     Story.append(self.get_image(path, width=5*inch))
-                    '''
-                    part_im = Image(path, 4*inch, 3*inch)
-                    part_im.hAlign = 'LEFT'
-                    Story.append(part_im)
-                    '''
                     Story.append(Spacer(1, 12))
                 doc.build(Story)
             except IOError:

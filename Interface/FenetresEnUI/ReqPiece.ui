@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1341</width>
+    <width>1238</width>
     <height>601</height>
    </rect>
   </property>
@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="valider_pushButton">
    <property name="geometry">
     <rect>
-     <x>890</x>
+     <x>790</x>
      <y>530</y>
      <width>191</width>
      <height>51</height>
@@ -34,7 +34,7 @@
   <widget class="QPushButton" name="annuler_pushButton">
    <property name="geometry">
     <rect>
-     <x>1100</x>
+     <x>1000</x>
      <y>530</y>
      <width>191</width>
      <height>51</height>
@@ -176,7 +176,7 @@
     <rect>
      <x>200</x>
      <y>100</y>
-     <width>251</width>
+     <width>201</width>
      <height>341</height>
     </rect>
    </property>
@@ -316,7 +316,7 @@
   <widget class="QCheckBox" name="enregistrer_pdf_checkBox">
    <property name="geometry">
     <rect>
-     <x>890</x>
+     <x>790</x>
      <y>490</y>
      <width>171</width>
      <height>23</height>
@@ -335,7 +335,7 @@
   <widget class="QCheckBox" name="envoyer_courriel_checkbox">
    <property name="geometry">
     <rect>
-     <x>1100</x>
+     <x>1000</x>
      <y>490</y>
      <width>181</width>
      <height>23</height>
@@ -373,7 +373,7 @@
   <widget class="QLabel" name="piece_associee_title_label">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>420</x>
      <y>60</y>
      <width>181</width>
      <height>31</height>
@@ -392,7 +392,7 @@
   <widget class="QWidget" name="verticalLayoutWidget_3">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>420</x>
      <y>100</y>
      <width>160</width>
      <height>141</height>
@@ -449,9 +449,9 @@
   <widget class="QWidget" name="verticalLayoutWidget_4">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>580</x>
      <y>100</y>
-     <width>251</width>
+     <width>191</width>
      <height>141</height>
     </rect>
    </property>
@@ -506,7 +506,7 @@
   <widget class="QLabel" name="desc_situation_title_label">
    <property name="geometry">
     <rect>
-     <x>461</x>
+     <x>421</x>
      <y>280</y>
      <width>221</width>
      <height>17</height>
@@ -525,7 +525,7 @@
   <widget class="QLabel" name="desc_intervention_title_label">
    <property name="geometry">
     <rect>
-     <x>461</x>
+     <x>421</x>
      <y>440</y>
      <width>231</width>
      <height>17</height>
@@ -544,9 +544,9 @@
   <widget class="QWidget" name="verticalLayoutWidget_5">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>420</x>
      <y>300</y>
-     <width>411</width>
+     <width>351</width>
      <height>131</height>
     </rect>
    </property>
@@ -581,9 +581,9 @@
   <widget class="QWidget" name="verticalLayoutWidget_6">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>420</x>
      <y>460</y>
-     <width>411</width>
+     <width>351</width>
      <height>131</height>
     </rect>
    </property>
@@ -618,7 +618,7 @@
   <widget class="QLabel" name="photo_piece_title_label">
    <property name="geometry">
     <rect>
-     <x>890</x>
+     <x>790</x>
      <y>70</y>
      <width>131</width>
      <height>17</height>
@@ -631,13 +631,13 @@
     </font>
    </property>
    <property name="text">
-    <string>Photo de la pièce:</string>
+    <string>Photo(s) de la pièce:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="parcourir_pushButton">
    <property name="geometry">
     <rect>
-     <x>1030</x>
+     <x>930</x>
      <y>70</y>
      <width>151</width>
      <height>25</height>
@@ -650,13 +650,87 @@
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>890</x>
+     <x>790</x>
      <y>100</y>
      <width>431</width>
      <height>381</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout"/>
+  </widget>
+  <widget class="QCheckBox" name="manuel_entretien_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>460</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Manuel d'entretien</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pages_manuel_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>500</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Pages du manuel pertinente à la réparation: </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="pages_manuel_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>500</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="Line" name="separation_line_1">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>60</y>
+     <width>20</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="separation_line_2">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>60</y>
+     <width>20</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
   </widget>
  </widget>
  <resources/>

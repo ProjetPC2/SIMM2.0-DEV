@@ -969,10 +969,17 @@ class MainWindow(QMainWindow, AbstractWindow):
     def validerReqPiece(self, ui_reqPiece):
         if ui_reqPiece.enregistrer_pdf_checkBox.isChecked():
             ui_reqPiece.generate_reqPiece_PDF(self.pics_paths)
+            self.pics_paths = []
         self.reqPieceDialog.close()
     
     def annulerReqPiece(self):
         self.reqPieceDialog.close()
+
+    def gererManuelEntretien(self, ui_reqPiece):
+        if ui_reqPiece.manuel_entretien_checkBox.isChecked():
+            ui_reqPiece.pages_manuel_lineEdit.setEnabled(True)
+        else:
+            ui_reqPiece.pages_manuel_lineEdit.setEnabled(False)
 
     def reqPieceForm(self, bonDeTravailWidget):
         self.reqPieceDialog = QtWidgets.QDialog()
@@ -980,6 +987,7 @@ class MainWindow(QMainWindow, AbstractWindow):
         ui_reqPiece.parcourir_pushButton.clicked.connect(lambda: self.recupererImagePiece(ui_reqPiece))
         ui_reqPiece.valider_pushButton.clicked.connect(lambda: self.validerReqPiece(ui_reqPiece))
         ui_reqPiece.annuler_pushButton.clicked.connect(lambda: self.annulerReqPiece())
+        ui_reqPiece.manuel_entretien_checkBox.clicked.connect(lambda: self.gererManuelEntretien(ui_reqPiece))
         self.reqPieceDialog.setAttribute(Qt.WA_DeleteOnClose)
         self.fillReqPieceLabels(ui_reqPiece, bonDeTravailWidget)
         self.reqPieceDialog.exec_()
