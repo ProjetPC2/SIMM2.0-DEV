@@ -72,8 +72,13 @@ class ReqPiece(Ui_ReqPiece):
         return final_im
 
     def generate_reqPiece_PDF(self, part_im_paths):
-        outfilename = "requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf"
-        doc = SimpleDocTemplate(outfilename, pagesize=letter,
+        directory = 'Requisitions'
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+        outfilename = "requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+"_"+self.ID_label.text()+".pdf"
+        outfilepath = os.path.join(directory, outfilename)
+        doc = SimpleDocTemplate(outfilepath, pagesize=letter,
                         rightMargin=72, leftMargin=72, 
                         topMargin=72, bottomMargin=18)
         Story = []

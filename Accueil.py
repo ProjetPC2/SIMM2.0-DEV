@@ -6,7 +6,6 @@ import sys
 import yaml
 import random
 from multiprocessing import Process
-from copy import deepcopy
 
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import *
