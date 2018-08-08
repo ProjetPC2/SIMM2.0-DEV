@@ -241,8 +241,6 @@ class AjoutEquipement(Ui_AjoutEquipement):
         self.sauvegarde.sauvegardeTermine.emit()
         self.signalFenetre.signalNouvelEquipement.emit()
 
-
-
     def verificationEquipement(self):
         """Methode affichant le recapitulatif de l'equipement """
         if (self.verificationChamps()):
@@ -252,9 +250,9 @@ class AjoutEquipement(Ui_AjoutEquipement):
             for text in self.listeDonnees:
                 if type(self.listeWidgets[indice]) is QButtonGroup:
                     for radioBouton in self.listeWidgets[indice].buttons():
-                            radioBouton.hide()
-                    # self.listeLabel[indice].setText(str(text))
-                    # self.listeLabel[indice].show()
+                        radioBouton.hide()
+                    self.listeLabel[indice].setText(str(text))
+                    self.listeLabel[indice].show()
                 else:
                     self.listeLabel[indice].setText(str(text))
                     self.listeLabel[indice].show()
