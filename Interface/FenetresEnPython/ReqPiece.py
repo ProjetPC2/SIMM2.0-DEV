@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import glob
 
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
@@ -8,9 +9,10 @@ from PyQt5.QtWidgets import *
 from reportlab.lib import utils
 from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER, TA_LEFT, TA_RIGHT
 from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
+from PyPDF2 import PdfFileReader, PdfFileWriter, PdfFileMerger
 
 from Interface.FenetresEnPython.ReqPieceUI import Ui_ReqPiece
 
@@ -58,37 +60,52 @@ class ReqPiece(Ui_ReqPiece):
             pic_label.setPixmap(pixmap)
             self.gridLayout.addWidget(pic_label, row, col)
             pic_label.show()
-            col +=1
+            col += 1
             if col % imagesPerRow == 0:
                 row += 1
                 col = 0
 
-    def get_image(self, path, width=3*inch):
+    def get_image(self, path, width=3*inch, alignement='LEFT'):
         img = utils.ImageReader(path)
         iw, ih = img.getSize()
         aspect = ih / float(iw)
         final_im = Image(path, width=width, height=(width * aspect))
-        final_im.hAlign = 'LEFT'
+        final_im.hAlign = alignement
         return final_im
 
     def generate_reqPiece_PDF(self, part_im_paths):
-        directory = 'Requisitions'
-        if not os.path.exists(directory):
-            os.makedirs(directory)
+        self.reqforms_directory = os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions")
+        # directory =  os.path.join(os.path.expandvars('$HOME'), 'Desktop', 'Réquisitions')
+        if not os.path.exists(self.reqforms_directory):
+            os.makedirs(self.reqforms_directory)
 
         outfilename = "requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+"_"+self.ID_label.text()+".pdf"
-        outfilepath = os.path.join(directory, outfilename)
+        outfilepath = os.path.join(self.reqforms_directory, outfilename)
         doc = SimpleDocTemplate(outfilepath, pagesize=letter,
                         rightMargin=72, leftMargin=72, 
-                        topMargin=72, bottomMargin=18)
+                        topMargin=36, bottomMargin=18)
         Story = []
 
-        Logo_SIMM = "Images\\Logo_SIMM.png"
-        im = Image(Logo_SIMM, 2*inch, 2*inch)
-        im.hAlign = 'CENTER'
-        Story.append(im)
+        Logo_HHA = self.get_image("Images\\Logo_HHA.jpg",  width=2.5*inch, alignement='LEFT')
         
-        styles=getSampleStyleSheet()
+        # dead code to test again, do not remove
+        '''
+        table_style = TableStyle([
+            ('ALIGN', (0, 0), (0, 0), 'LEFT')
+            # ('ALIGN', (1, 0), (1, 0), 'RIGHT')
+        ])
+
+        # Logo_PC2 = self.get_image("Images\\Logo_PC2_extended.png", width=1.5*inch, alignement='RIGHT')
+        tbl_data = [
+            [Logo_HHA]
+        ]
+        tbl = Table(tbl_data)
+        # tbl.setStyle(table_style)
+        '''
+        
+        Story.append(Logo_HHA)
+        
+        styles = getSampleStyleSheet()
         styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
 
         # title
@@ -156,5 +173,19 @@ class ReqPiece(Ui_ReqPiece):
                 doc.build(Story)
             except IOError:
                 self.notify_file_opened()
+        self.merge_reqForms()
 
-        
+    # refactor!
+    # remove logos everywhere beside the first 
+    def merge_reqForms(self):
+        output_path = os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions", "Requisitions.pdf")
+        pdf_merger = PdfFileMerger()
+    
+        for path in glob.glob(os.path.join(self.reqforms_directory, '*.pdf')):
+            pdf_merger.append(os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions", path))
+    
+        with open(output_path, 'wb') as fileobj:
+            pdf_merger.write(fileobj)
+
+    def compress_pdf(self, pdf_path):
+        pass
