@@ -2,7 +2,6 @@ BDT_Ajout_Champ_Equipement:
 - CategorieEquipement
 - Marque
 - Modele
-- Unite
 - Salle
 BDT_ChampAjoutNonPermis:
 - EtatBDT
@@ -12,38 +11,48 @@ BDT_ChampFormatPrecis:
 - Date
 - TempsEstime
 CategorieEquipement:
-- Lit pour bebe
-- Lit
-- Incubateur
-- Echographe
-- Lampe chauffante
-- Concentrateur oxygene
-- Table chauffante
-- Moniteur
-- Analyseur sanguin
-- Appareil respiratoire
-- Appareil pour la phototherapie
-- Appareil a succion
+- Inconnue
+- Appareil d'echographie
+- Moniteur de patient
+- Appareil d'ECG
+- Baladeuse
+- Lit General
+- Otoscope
 - Balance
+- Saturometre
 - Glucometre
-- Autre
-- Compresseur Ebuliseur
+- Centrifugeuse
+- Moniteur de CO2
+- Diathermie chirurgicale
+- Lit pour bebe
 - Chaise roulante
+- Concentrateur d'oxygene
+- Lit SOP
+- Machine anesthesie
+- Autoclave
+- Table chauffante Bebe
+- Lampe
+- Lit d'accouchement
+- Lit enfant
+- Phototherapie
+- Incubateur
+- Pompe a succion
+- "Tensiom\xE8tre"
 - Microscope
-- sterilisateur
-- Apparei sonographie
-- ventilateur pulmonaire
-- Desfibrilateur
-- ECG
-- 'Lampe '
-- Hematologie blood analyzer
-- Centrifuge
-- Analyseur D'urine
-- X-Ray
-- ROTATEUR
-- Apparel sonographie
-- Appareil sonographie
-- IRM
+- Master incubateur
+- Bainmary
+- Rotateur
+- Simulateur
+- Bicyclette
+- Tapis roulant
+- Spectrophotometre
+- Projecteur
+- Pompe a fluide
+- Pompe anesthesie
+- Chauffeur de microplaque
+- Nebulisateur
+- Defibrillateur
+- Four pasteur
 Equipement_ChampAjoutNonPermis:
 - EtatConservation
 - EtatService
@@ -58,49 +67,61 @@ Equipement_ChampFormatPrecis:
 EtatBDT:
 - Ouvert
 - Ferme
+- "Ferm\xE9"
 EtatConservation:
 - Quasi neuf
 - Acceptable
 - En fin de vie
+- Desuet
 - "D\xE9suet"
 EtatService:
 - En service
 - En maintenance
 - Au rebus
 Provenance:
-- Konbit Sante
 - Inconnue
-- USAID
-- UNICEF
-- Phoenix international forwarders inc
-- MSPP
-- 'Inconnue            '
-- HUJ
+- HHA
 Salle:
 - Inconnue
-- Depot1
-- Depot2
-- Magasin & Stock
-- Maternite
-- KS
-- '1'
-- neonatologie
-- pathologie
-- REI
-- Urgence pediatrique
-- 142 Neonatal
-- Conference - 2e etage
-- Sterilisation-2e etage
-- Magasin&Stock
+- Urgence majeure
+- Salle de reception
+- Salle d'urgence mineure
+- Atelier biomed
+- Medecine interne
+- SOP
+- SOP chirurgie
+- "SOP maternit\xE9"
+- "Maternit\xE9 public"
+- Salle d'accouchement
+- Salle d'accouchement privee
+- Neonatologie
+- Signes vitaux
+- Signes vitaux cpn
+- Laboratoire
+- Grande salle
+- "Th\xE9rapie"
+- Maison de benediction
+- Pediatrie
+- Pediatrie fille
+- Chirurgie
 StatsAjoutFichier:
 - Provenance
 - CategorieEquipement
 Unite:
 - Inconnue
 - Pediatrie
-- Maternite
-- SOP
+- Urgence
+- Atelier biomed
 - Laboratoire
+- Medecine interne
+- SOP chirurgie
+- "Maternit\xE9"
+- Clinique externe
+- Rehabilitation
+- Sport
+- SOP
+- Maison de benediction
+- Chirurgie
 champsAcceptes-BDT:
 - Date
 - TempsEstime
@@ -129,4 +150,21 @@ champsAcceptes-Equipement:
 - EtatConservation
 - Commentaires
 - PdfPath
+champsAcceptesAffiches-Equipement:
+- Id
+- Categorie d'equipement
+- Marque
+- Modele
+- Numero de Serie
+- Salle
+- Unite
+- Date d'aquisition
+- Date du dernier Entretien
+- Frequence d'entretien
+- Provenance
+- Voltage
+- Etat de service
+- Etat de conservation
+- Commentaires
+- Chemin PDF
 dernierID-Equipement: 0
