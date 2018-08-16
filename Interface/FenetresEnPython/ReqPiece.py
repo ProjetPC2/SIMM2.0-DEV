@@ -79,7 +79,8 @@ class ReqPiece(Ui_ReqPiece):
         if not os.path.exists(self.reqforms_directory):
             os.makedirs(self.reqforms_directory)
 
-        outfilename = "requisition_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+"_"+self.ID_label.text()+".pdf"
+        outfilename = "requisition_"+"ID_"+self.ID_label.text()+"_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf"
+
         outfilepath = os.path.join(self.reqforms_directory, outfilename)
         doc = SimpleDocTemplate(outfilepath, pagesize=letter,
                         rightMargin=72, leftMargin=72, 
@@ -179,10 +180,15 @@ class ReqPiece(Ui_ReqPiece):
     # remove logos everywhere beside the first 
     def merge_reqForms(self):
         output_path = os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions", "Requisitions.pdf")
+        if os.path.isfile(output_path):
+            print('removed')
+            os.remove(output_path)
+
         pdf_merger = PdfFileMerger()
     
         for path in glob.glob(os.path.join(self.reqforms_directory, '*.pdf')):
-            pdf_merger.append(os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions", path))
+            with open(path, 'rb') as pdf_file: 
+                pdf_merger.append(PdfFileReader(pdf_file))
     
         with open(output_path, 'wb') as fileobj:
             pdf_merger.write(fileobj)
