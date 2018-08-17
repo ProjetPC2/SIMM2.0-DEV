@@ -1,0 +1,54 @@
+{
+    "parts": [
+        {
+            "ID": "33",
+            "Cat. Equipement": "Lit pour bebe",
+            "Marque": "",
+            "Modele": "",
+            "Cat. Piece": "ampoule",
+            "Nom. Piece": "pour spectrophotometrie",
+            "nbr d'unites": "2",
+            "Date": "17-08-2018"
+        },
+        {
+            "ID": "3",
+            "Cat. Equipement": "Incubateur",
+            "Marque": "Atom",
+            "Modele": "Incu i",
+            "Cat. Piece": "bouton",
+            "Nom. Piece": "pour spectrophotometre",
+            "nbr d'unites": "1",
+            "Date": "17-08-2018"
+        },
+        {
+            "ID": "23",
+            "Cat. Equipement": "Lit pour bebe",
+            "Marque": "",
+            "Modele": "",
+            "Cat. Piece": "connecteur  ",
+            "Nom. Piece": "pour appareil a succion",
+            "nbr d'unites": "2",
+            "Date": "17-08-2018"
+        },
+        {
+            "ID": "23",
+            "Cat. Equipement": "Lit pour bebe",
+            "Marque": "",
+            "Modele": "",
+            "Cat. Piece": "fan",
+            "Nom. Piece": "115V",
+            "nbr d'unites": "1",
+            "Date": "17-08-2018"
+        },
+        {
+            "ID": "34",
+            "Cat. Equipement": "Lit pour bebe",
+            "Marque": "",
+            "Modele": "",
+            "Cat. Piece": "fan",
+            "Nom. Piece": "115V",
+            "nbr d'unites": "0",
+            "Date": "17-08-2018"
+        }
+    ]
+}

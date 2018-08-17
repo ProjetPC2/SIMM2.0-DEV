@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import glob
+import json
 
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
@@ -74,12 +75,13 @@ class ReqPiece(Ui_ReqPiece):
         return final_im
 
     def generate_reqPiece_PDF(self, part_im_paths):
-        self.reqforms_directory = os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions")
-        # directory =  os.path.join(os.path.expandvars('$HOME'), 'Desktop', 'Réquisitions')
+        # self.reqforms_directory = os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions")
+        self.reqforms_directory =  os.path.join(os.path.expandvars('$HOME'), 'Desktop', 'Requisitions')
         if not os.path.exists(self.reqforms_directory):
             os.makedirs(self.reqforms_directory)
 
-        outfilename = "requisition_"+"ID_"+self.ID_label.text()+"_"+self.cat_equip_label.text()+"_"+self.cat_piece_label.text()+".pdf"
+        outfilename = "".join(["requisition_", "ID_", self.ID_label.text(), "_", 
+                              self.cat_equip_label.text(), "_", self.cat_piece_label.text(), ".pdf"])
 
         outfilepath = os.path.join(self.reqforms_directory, outfilename)
         doc = SimpleDocTemplate(outfilepath, pagesize=letter,
@@ -89,7 +91,7 @@ class ReqPiece(Ui_ReqPiece):
 
         Logo_HHA = self.get_image("Images\\Logo_HHA.jpg",  width=2.5*inch, alignement='LEFT')
         
-        # dead code to test again, do not remove
+        # code to test again, do not remove
         '''
         table_style = TableStyle([
             ('ALIGN', (0, 0), (0, 0), 'LEFT')
@@ -123,7 +125,7 @@ class ReqPiece(Ui_ReqPiece):
         Story.append(Paragraph(ptext, style=sub_title))
         Story.append(Spacer(1, 12))
 
-        ptext = '<font size=10>%s</font>' % self.ID_title_label.text() + ' ' + self.ID_label.text()
+        ptext = '<font size=10>%s</font>' % (" ".join([self.ID_title_label.text(), self.ID_label.text()]))
         Story.append(Paragraph(ptext, styles["Normal"]))
         ptext = '<font size=10>%s</font>' % self.cat_equip_title_label.text() + ' ' + self.cat_equip_label.text()
         Story.append(Paragraph(ptext, styles["Normal"]))
@@ -176,22 +178,108 @@ class ReqPiece(Ui_ReqPiece):
                 self.notify_file_opened()
         self.merge_reqForms()
 
+        # json part requsitions history
+        # beware code deuplication here!
+        self.json_file_path = os.path.join('BDD', 'req_parts_history.json')
+        if os.stat(self.json_file_path).st_size == 0:
+            data = {}  
+            data['parts'] = []
+            data['parts'].append({  
+                'ID': self.ID_label.text(),
+                'Cat. Equipement': self.cat_equip_label.text(),
+                'Marque': self.marque_label.text(),
+                'Modele': self.modele_label.text(),
+                'Cat. Piece': self.cat_piece_label.text(),
+                "Nom. Piece": self.nom_piece_label.text(),
+                "nbr d'unites": self.nbr_unites_label.text(),
+                'Date': self.date_label.text()
+            })
+            with open(self.json_file_path, 'w') as outfile:  
+                json.dump(data, outfile, indent=4)
+        else:
+            with open(self.json_file_path) as outfile:
+                    content = json.load(outfile)
+
+            content['parts'].append({
+                'ID': self.ID_label.text(),
+                'Cat. Equipement': self.cat_equip_label.text(),
+                'Marque': self.marque_label.text(),
+                'Modele': self.modele_label.text(),
+                'Cat. Piece': self.cat_piece_label.text(),
+                "Nom. Piece": self.nom_piece_label.text(),
+                "nbr d'unites": self.nbr_unites_label.text(),
+                'Date': self.date_label.text()
+            })
+            with open(self.json_file_path, 'w') as outfile:
+                json.dump(content, outfile, indent=4)
+
+        values_list = self.retrieve_table_data()
+        self.generate_minimal_reqForm(values_list)
+
+    def retrieve_table_data(self):
+        titles = ['ID',
+                'Cat. Equipement',
+                'Marque',
+                'Modele',
+                'Cat. Piece',
+                "Nom. Piece",
+                "nbr d'unites",
+                'Date'
+        ]
+        tbl_data = [
+            titles
+        ]
+
+        with open(self.json_file_path) as outfile:
+            content = json.load(outfile)
+
+        for index in range(len(content['parts'])):
+            values_list = list((content['parts'][index]).values())
+            tbl_data.append(values_list)
+            index += 1
+        
+        return tbl_data
+
+    def generate_minimal_reqForm(self, content_list):
+        minimal_reqForm_path = os.path.join(os.path.expandvars('$HOME'), 'Desktop', 'Requisitions', "Requisitions_abrege.pdf")
+        if os.path.isfile(minimal_reqForm_path):
+            os.remove(minimal_reqForm_path)
+
+        doc = SimpleDocTemplate(minimal_reqForm_path, pagesize=letter,
+                        rightMargin=72, leftMargin=72, 
+                        topMargin=36, bottomMargin=18)
+        Story = []
+
+        Logo_HHA = self.get_image("Images\\Logo_HHA.jpg",  width=2.5*inch, alignement='LEFT')
+        
+        Story.append(Logo_HHA)
+        
+        styles = getSampleStyleSheet()
+        styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
+
+        # title
+        centered_title = ParagraphStyle(name="centeredStyle", alignment=TA_CENTER, fontName="Helvetica-Bold")
+        Story.append(Spacer(4, 12))
+        ptext = '<font size=16>%s</font>' % "Formulaire abrégé des réquisitions de pièces"
+        Story.append(Paragraph(ptext, style=centered_title))
+        Story.append(Spacer(4, 12))
+
+        tbl = Table(content_list)
+        Story.append(tbl)
+        doc.build(Story)
+        
     # refactor!
     # remove logos everywhere beside the first 
     def merge_reqForms(self):
-        output_path = os.path.join(os.environ["HOMEPATH"], "Desktop", "Requisitions", "Requisitions.pdf")
-        if os.path.isfile(output_path):
-            print('removed')
-            os.remove(output_path)
+        self.output_path = os.path.join(os.path.expandvars('$HOME'), 'Desktop', 'Requisitions', "Requisitions.pdf")
+        if os.path.isfile(self.output_path):
+            os.remove(self.output_path)
 
         pdf_merger = PdfFileMerger()
-    
         for path in glob.glob(os.path.join(self.reqforms_directory, '*.pdf')):
             with open(path, 'rb') as pdf_file: 
                 pdf_merger.append(PdfFileReader(pdf_file))
     
-        with open(output_path, 'wb') as fileobj:
+        with open(self.output_path, 'wb') as fileobj:
             pdf_merger.write(fileobj)
 
-    def compress_pdf(self, pdf_path):
-        pass
